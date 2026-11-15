@@ -514,6 +514,9 @@ func _show_title() -> void:
 		_label(row, tr("ui.best") % _clock_text(int(_prefs.get_value("best", "secs", 0))), 17, Color(Art.CREAM, 0.8)).autowrap_mode = TextServer.AUTOWRAP_OFF
 		_stars(row, best, 11)
 	_languages(box, _show_title)
+	var window := DisplayServer.window_get_size()
+	if window.y > window.x:
+		_label(box, tr("ui.rotate"), 22, Art.AMBER)
 
 
 func _show_intro() -> void:
