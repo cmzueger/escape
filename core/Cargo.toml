@@ -1,0 +1,7 @@
+[package]
+name = "hut-core"
+version = "0.1.0"
+description = "Hut 2847: the room, its puzzles, hints and score"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true

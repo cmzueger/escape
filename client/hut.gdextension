@@ -1,0 +1,15 @@
+; The room's rules (crate godot/). Build with client/build.sh.
+[configuration]
+
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.5
+reloadable = true
+
+[libraries]
+
+linux.debug.x86_64 = "res://bin/libhut_godot.so"
+linux.release.x86_64 = "res://bin/libhut_godot.so"
+windows.debug.x86_64 = "res://bin/hut_godot.dll"
+windows.release.x86_64 = "res://bin/hut_godot.dll"
+macos.debug = "res://bin/libhut_godot.dylib"
+macos.release = "res://bin/libhut_godot.dylib"

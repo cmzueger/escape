@@ -1,0 +1,12 @@
+[workspace]
+members = ["core", "web", "godot"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "UNLICENSED"
+publish = false
+
+[profile.release]
+opt-level = "s"
+lto = true

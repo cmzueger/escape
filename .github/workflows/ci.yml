@@ -1,0 +1,108 @@
+name: CI and deploy
+
+# Every push is tested; a green push to main (or a session's claude/ branch)
+# is then published to GitHub Pages.
+on:
+  push:
+    branches: [main, "claude/**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  GODOT_VERSION: "4.5"
+
+jobs:
+  rust:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --all --check
+      - run: cargo clippy --all-targets -- -D warnings
+      - run: cargo test
+      - name: Rules as WebAssembly (web build)
+        run: cargo clippy -p hut-web --target wasm32-unknown-unknown -- -D warnings
+      - name: Every text in five languages
+        run: python3 client/tests/strings_check.py
+
+  client:
+    # Playwright 1.56 installs Chromium only up to Ubuntu 24.04.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - name: Godot and its web export templates
+        uses: actions/cache@v5
+        with:
+          path: |
+            ~/godot
+            ~/.local/share/godot/export_templates
+          key: godot-${{ env.GODOT_VERSION }}-web
+      - name: Install Godot
+        run: |
+          if [ ! -x ~/godot/godot ]; then
+            mkdir -p ~/godot && cd ~/godot
+            curl -sSL -o g.zip https://github.com/godotengine/godot/releases/download/$GODOT_VERSION-stable/Godot_v$GODOT_VERSION-stable_linux.x86_64.zip
+            unzip -q g.zip && mv Godot_v$GODOT_VERSION-stable_linux.x86_64 godot && rm g.zip
+            curl -sSL -o t.tpz https://github.com/godotengine/godot/releases/download/$GODOT_VERSION-stable/Godot_v$GODOT_VERSION-stable_export_templates.tpz
+            dir=~/.local/share/godot/export_templates/$GODOT_VERSION.stable
+            mkdir -p "$dir"
+            unzip -q -j t.tpz 'templates/web_nothreads_*' 'templates/version.txt' -d "$dir"
+            rm t.tpz
+          fi
+      - name: Play the whole room through the client (headless)
+        run: |
+          client/build.sh debug
+          ~/godot/godot --headless --path client --import || true
+          ~/godot/godot --headless --path client --script res://tests/smoke_test.gd | tee smoke.log
+          grep -q "RESULT: PASS" smoke.log
+      - name: Build the web client
+        run: GODOT=~/godot/godot client/build-web.sh
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Playwright with Chromium
+        run: |
+          npm install -g playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Web smoke test
+        run: |
+          (cd client/export/web && python3 -m http.server 8799 >/dev/null 2>&1 &)
+          for i in $(seq 100); do (echo > /dev/tcp/127.0.0.1/8799) 2>/dev/null && break; sleep 0.1; done
+          NODE_PATH=$(npm root -g) node client/tests/web_smoke.js http://localhost:8799/ | tee web_smoke.log
+          grep -q "RESULT: PASS" web_smoke.log
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: client/export/web
+          retention-days: 1
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: [rust, client]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

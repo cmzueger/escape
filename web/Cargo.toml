@@ -1,0 +1,13 @@
+[package]
+name = "hut-web"
+version = "0.1.0"
+description = "The room as WebAssembly for the Godot web export (called from JavaScript)"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+hut-core = { path = "../core" }
