@@ -9,7 +9,7 @@
 The game is then at https://cmzueger.github.io/escape/.
 
 If the deploy job says the branch is not allowed: **Settings → Environments →
-github-pages → Deployment branches** and allow `main` and `claude/*`.
+github-pages → Deployment branches** and allow `main`.
 
 ## Later
 - A custom domain: Settings → Pages → Custom domain, and a CNAME record at

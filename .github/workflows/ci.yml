@@ -1,7 +1,6 @@
 name: CI and deploy
 
-# Every push is tested; a green push to main (or a session's claude/ branch)
-# is then published to GitHub Pages.
+# Every push is tested; a green push to main is then published to GitHub Pages.
 on:
   push:
     branches: [main, "claude/**"]
@@ -93,7 +92,7 @@ jobs:
           retention-days: 1
 
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: [rust, client]
     runs-on: ubuntu-latest
     timeout-minutes: 10

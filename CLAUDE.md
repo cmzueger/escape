@@ -11,11 +11,14 @@ An escape room in an alpine hut ("Hut 2847"), landscape, point and click.
 - `client/` Godot 4.5: `scripts/main.gd` (screens, bar, panels), `views.gd`
   (hotspots, navigation, light per view), `art.gd` (every picture, drawn in
   code from the rules' `clues`), `light.gdshader` (darkness and light pools).
-- Hosted on GitHub Pages by `.github/workflows/ci.yml` (push to `main` or a
-  `claude/…` branch: tests, then deploy).
+- Hosted on GitHub Pages by `.github/workflows/ci.yml` (every push is tested;
+  a push to `main` is then deployed to https://cmzueger.github.io/escape/).
 - `docs/SPEC.md` has the decision log.
 
 ## How we work
+- Work on `main`. Sessions may start on a `claude/…` branch: push with
+  `git push origin HEAD:main` (and the branch), after checking it is a
+  fast-forward.
 - **The owner plays the room unspoiled.** Never put solutions, codes or the
   clue chains in chat messages, commit messages, screenshots sent to the
   owner, README or SPEC. They belong only in `docs/PUZZLES.md`, the code and
