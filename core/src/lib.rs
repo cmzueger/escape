@@ -17,20 +17,28 @@
 //! - `hint <view>`: reveals the next hint for that puzzle (costs half a star)
 //! - `save`: `{"ok":true,"save":"…"}`; `load <save>` (of the current room)
 //!
-//! Each room adds commands for its mechanisms (see [`hut`], [`light`], [`obs`]).
+//! Each room adds commands for its mechanisms (see [`hut`], [`light`], [`obs`];
+//! the rooms of the second set are described as data for [`kit`]).
 //! Answers are `{"ok":true,"msg":"…","state":{…}}` (`msg` is a translation
 //! key or empty) or `{"ok":false,"error":"…"}`.
 
+pub mod chess;
 pub mod hut;
+pub mod kit;
 pub mod light;
 pub mod obs;
+pub mod orangery;
+pub mod theatre;
 
 /// The catalogue: id, difficulty (1 easy, 2 medium, 3 hard), target minutes
 /// for three stars, number of puzzles.
-pub const ROOMS: [(&str, u8, u32, usize); 3] = [
+pub const ROOMS: [(&str, u8, u32, usize); 6] = [
     ("hut", 1, hut::PAR_MINUTES, 9),
     ("light", 2, light::PAR_MINUTES, 10),
     ("obs", 3, obs::PAR_MINUTES, 10),
+    ("orangery", 1, 15, 8),
+    ("theatre", 2, 25, 8),
+    ("chess", 3, 35, 7),
 ];
 
 /// A further 10 minutes over the target cost half a star each.
@@ -91,6 +99,7 @@ pub enum Room {
     Hut(hut::Hut),
     Light(light::Light),
     Obs(obs::Obs),
+    Kit(kit::State),
 }
 
 impl Default for Room {
@@ -109,6 +118,7 @@ impl Room {
             Room::Hut(_) => "hut",
             Room::Light(_) => "light",
             Room::Obs(_) => "obs",
+            Room::Kit(room) => room.id(),
         }
     }
 
@@ -131,6 +141,9 @@ impl Room {
                     Some("hut") => *self = Room::Hut(hut::Hut::new()),
                     Some("light") => *self = Room::Light(light::Light::new()),
                     Some("obs") => *self = Room::Obs(obs::Obs::new()),
+                    Some("orangery") => *self = Room::Kit(kit::State::new(&orangery::SPEC)),
+                    Some("theatre") => *self = Room::Kit(kit::State::new(&theatre::SPEC)),
+                    Some("chess") => *self = Room::Kit(kit::State::new(&chess::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -141,6 +154,7 @@ impl Room {
                 Room::Hut(room) => room.call(command),
                 Room::Light(room) => room.call(command),
                 Room::Obs(room) => room.call(command),
+                Room::Kit(room) => room.call(command),
             },
         }
     }
@@ -161,6 +175,13 @@ mod tests {
         assert_eq!(r.id(), "light");
         assert!(r.call("tap coat").starts_with("{\"ok\":false"));
         assert!(r.call("room obs").contains("\"room\":\"obs\""));
+        for id in ["orangery", "theatre", "chess"] {
+            assert!(r
+                .call(&format!("room {id}"))
+                .contains(&format!("\"room\":\"{id}\"")));
+            assert_eq!(r.id(), id);
+            assert!(r.call("clues").starts_with("{\"ok\":true"));
+        }
         assert!(r.call("room cellar").starts_with("{\"ok\":false"));
         assert!(r.call("room hut").contains("\"inv\":[]"));
     }
