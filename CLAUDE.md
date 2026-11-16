@@ -1,16 +1,25 @@
-# Hut 2847: notes for Claude
+# Locked In: notes for Claude
 
 Read automatically by Claude Code sessions on this repository. Owner: Christoph
 Züger (Switzerland). Sister project of Pawnkick (`cmzueger/pawn-kick`), same
 tech stack and habits, but offline only: no server, no accounts.
 
 ## The project
-An escape room in an alpine hut ("Hut 2847"), landscape, point and click.
-- `core/` rules in Rust (text commands in, JSON out; all solutions live here),
-  `web/` the same as WASM, `godot/` as GDExtension (class `HutRoom`).
-- `client/` Godot 4.5: `scripts/main.gd` (screens, bar, panels), `views.gd`
-  (hotspots, navigation, light per view), `art.gd` (every picture, drawn in
-  code from the rules' `clues`), `light.gdshader` (darkness and light pools).
+"Locked In": a catalogue of escape rooms, landscape, point and click. Rooms:
+Hut 2847 (`hut`, easy, 15 min) and Gale Rock Light (`light`, medium, 25 min).
+- `core/` rules in Rust (text commands in, JSON out; all solutions live here):
+  `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
+  `light.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
+- `client/` Godot 4.5: `scripts/main.gd` (catalogue, bar, panels, sound
+  cues), `views.gd` + `views_light.gd` (hotspots, navigation, light per
+  view), `art.gd` + `art_light.gd` (every picture, drawn in code from the
+  rules' `clues`), `light.gdshader` (darkness, light pools, lightning),
+  `sound.gd` and `audio/` (sounds synthesised by `audio/generate.py`, needs
+  numpy and ffmpeg; the .ogg files are committed).
+- A new room: a module in `core`, an entry in `ROOMS` and `Room`, a views and
+  an art script, texts with their own key prefix (the lighthouse uses
+  `lmsg.`, `lhint.`, `lintro.`, `lend.`), a card picture, a play-through in
+  `smoke_test.gd`, and its solutions in `docs/PUZZLES.md`.
 - Hosted on GitHub Pages by `.github/workflows/ci.yml` (every push is tested;
   a push to `main` is then deployed to https://cmzueger.github.io/escape/).
 - `docs/SPEC.md` has the decision log.
@@ -19,7 +28,9 @@ An escape room in an alpine hut ("Hut 2847"), landscape, point and click.
 - Work on `main`. Sessions may start on a `claude/…` branch: push with
   `git push origin HEAD:main` (and the branch), after checking it is a
   fast-forward.
-- **The owner plays the room unspoiled.** Never put solutions, codes or the
+- Every code change gets a new version in `client/project.godot`
+  (`config/version`).
+- **The owner plays the rooms unspoiled.** Never put solutions, codes or the
   clue chains in chat messages, commit messages, screenshots sent to the
   owner, README or SPEC. They belong only in `docs/PUZZLES.md`, the code and
   the tests. Describe puzzles to the owner by object and type at most.
@@ -39,10 +50,16 @@ An escape room in an alpine hut ("Hut 2847"), landscape, point and click.
   (hotspots) and, for the title and intro buttons, in `web_smoke.js`.
 
 ## History (latest first)
+- **0.2.0** (2026-11-16): the catalogue "Locked In" with a card per room
+  (difficulty, target time, best stars); second room Gale Rock Light (storm
+  green look with lightning); sound (atmospheres and effects, mute); a target
+  time per room. The owner, playing as a couple, finished the hut in 10
+  minutes without hints, so it is listed as easy; medium was asked for next.
 - **0.1.0** (2026-11-15): first version. Setting, structure, score, tech,
   hosting, art style, format, languages and name chosen by the owner from
   proposals (see SPEC). Web only, no sound yet.
 
 ## Open
-- Sound (wind, fire, radio), an Android build, a custom domain.
-- The owner's play test: where it was too easy, too hard or unclear.
+- An Android build, a custom domain, more rooms (a hard one is still missing).
+- The owner's play test of the lighthouse (time, what was unclear) and an
+  opinion on the sounds, which were made without anyone hearing them.

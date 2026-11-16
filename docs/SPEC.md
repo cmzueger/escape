@@ -1,4 +1,4 @@
-# Hut 2847: design
+# Locked In: design
 
 No spoilers here; the solutions are in PUZZLES.md.
 
@@ -19,16 +19,42 @@ No spoilers here; the solutions are in PUZZLES.md.
 | Difficulty | Medium: 25 to 40 minutes for a first-time adult, one or two hints |
 | Name | Hut 2847 |
 
-## The room
+## Decisions (owner, 2026-11-16, second iteration)
+| Question | Choice |
+|---|---|
+| Catalogue | Cards in one game: picture, name, difficulty, target time, best stars |
+| Name of the catalogue | Locked In |
+| Second room | Lighthouse in a gale, "Gale Rock Light" |
+| Its difficulty | Medium (the hut, played in 10 minutes without hints, is "easy") |
+| Its layout | Four floors, climb up; hatches are the gates |
+| Its look | Storm green, with lightning (which can matter for a puzzle) |
+| Targets | One per room: hut 15 minutes, lighthouse 25 minutes |
+| Sound | Effects and atmospheres, generated in code, no music |
+
+## Hut 2847
 - Main room (three walls): stove wall, bunk wall, kitchen wall. Act 1: light,
   warmth, the way into the warden's room.
 - Warden's room (two walls): desk wall, map wall. Act 2: three finds. Act 3:
   the radio.
 - It starts dark; light is part of the first act and of the look.
 
+## Gale Rock Light
+- Four floors, one wide view each: store room, keeper's room, watch room,
+  lamp room. Each hatch needs something from its floor; the lamp room needs
+  things from every floor, so you walk down again.
+- New mechanisms: two carried items can be combined, lightning shows what the
+  dark hides, a measuring puzzle, gears, valves.
+
+## Sound
+Atmospheres per place (wind at the hut, fire once it burns, ticking, radio
+static; sea, wind and rain at the lighthouse, louder the higher you climb)
+and effects for what you do (clicks, locks, pick-ups, a chime for each solved
+puzzle, thunder after lightning). One switch, sound on or off.
+
 ## Score
-Three stars (six halves) for finishing within 30 minutes without hints. Each
-hint costs half a star, each started 10 minutes over 30 another half; never
+Three stars (six halves) for finishing within the room's target time without
+hints. Each hint costs half a star, each started 10 minutes over the target
+another half; never
 less than one star. Every puzzle has three hints (nudge, clue, solution);
 asking which hint is next is free, and revealed hints can be read again.
 The best result and the running game are kept on the device.
@@ -47,4 +73,4 @@ The best result and the running game are kept on the device.
   the web build and reloads it.
 
 ## Not in the first version
-Sound, Android, a custom domain, more rooms.
+Android, a custom domain, music, a hard room.

@@ -25,14 +25,19 @@ for row in rows[1:]:
     if row[1].count("%") != min(cell.count("%") for cell in row[1:]):
         problems.append("placeholders differ: %s" % row[0])
 
-wanted = set(re.findall(r'"(msg\.\w+)"', (root / "core/src/lib.rs").read_text()))
+hut = (root / "core/src/hut.rs").read_text()
+light = (root / "core/src/light.rs").read_text()
+wanted = set(re.findall(r'"(l?msg\.\w+)"', hut + light))
 for script in (root / "client/scripts").glob("*.gd"):
     wanted |= set(re.findall(r'tr\("([a-z_]+\.[a-z_0-9.]+)"\)', script.read_text()))
-core = (root / "core/src/lib.rs").read_text()
-items = re.search(r"pub const ITEMS[^=]*=\s*\[(.*?)\];", core, re.S).group(1)
-wanted |= {"item." + name for name in re.findall(r'"(\w+)"', items)}
+for core in (hut, light):
+    items = re.search(r"pub const ITEMS[^=]*=\s*\[(.*?)\];", core, re.S).group(1)
+    wanted |= {"item." + name for name in re.findall(r'"(\w+)"', items)}
 wanted |= {"hint.%d.%d" % (p, level) for p in range(1, 10) for level in range(1, 4)}
-wanted |= {"intro.1", "intro.2", "intro.3"}
+wanted |= {"lhint.%d.%d" % (p, level) for p in range(1, 11) for level in range(1, 4)}
+wanted |= {pre + "intro.%d" % i for pre in ("", "l") for i in (1, 2, 3)}
+wanted |= {pre + key for pre in ("", "l") for key in ("end.title", "end.text")}
+wanted |= {"diff.1", "diff.2", "diff.3"}
 for key in sorted(wanted - keys):
     problems.append("missing: %s" % key)
 

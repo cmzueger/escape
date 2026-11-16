@@ -1,6 +1,7 @@
 // Browser smoke test for the web build (client/build-web.sh): loads it in
-// headless Chromium, starts a game by tapping, takes the matches and lights
-// the lamp, and checks the room through the page's copy of the rules.
+// headless Chromium, starts the first room by tapping its card, takes the
+// matches and lights the lamp, reloads and continues, starts the second room,
+// and checks the rooms through the page's copy of the rules.
 //   (cd client/export/web && python3 -m http.server 8799) &
 //   NODE_PATH=$(npm root -g) node client/tests/web_smoke.js http://localhost:8799/ [screenshot.png]
 // Needs Playwright with Chromium.
@@ -16,12 +17,30 @@ function check(ok, what) {
 }
 
 (async () => {
-  console.log("Hut 2847 web smoke test");
+  console.log("Locked In web smoke test");
   const browser = await chromium.launch({ args: ["--use-angle=swiftshader", "--enable-unsafe-swiftshader"] });
   // The game's own size, so the taps below are in its coordinates.
   const page = await browser.newPage({ viewport: { width: 960, height: 540 } });
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
+  // Tap everything that reaches the speakers, to check that sound is heard.
+  await page.addInitScript(() => {
+    window.__peak = 0;
+    const connect = AudioNode.prototype.connect;
+    AudioNode.prototype.connect = function (dest, ...rest) {
+      if (dest instanceof AudioDestinationNode && !dest.context.__tap) {
+        const tap = dest.context.createAnalyser();
+        const buf = new Float32Array(tap.fftSize);
+        dest.context.__tap = tap;
+        setInterval(() => {
+          tap.getFloatTimeDomainData(buf);
+          for (const v of buf) window.__peak = Math.max(window.__peak, Math.abs(v));
+        }, 20);
+      }
+      if (dest instanceof AudioDestinationNode) connect.call(this, dest.context.__tap);
+      return connect.call(this, dest, ...rest);
+    };
+  });
   await page.goto(url);
   const state = async () => JSON.parse(await page.evaluate(() => window.hut.call("state"))).state;
   const mode = () => page.evaluate(() => window.hut && window.hut.mode);
@@ -31,25 +50,35 @@ function check(ok, what) {
   };
 
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
-  check(true, "the title screen appears");
-  await tap(480, 308); // Play
+  check(true, "the catalogue appears");
+  await tap(411, 416); // Play on the first card (Hut 2847)
   check((await mode()) === "play", "Play starts a game");
-  await tap(480, 380); // Begin (the story panel)
+  await tap(480, 406); // Begin (the story panel)
   await tap(281, 210); // the coat
   check((await state()).inv.includes("matches"), "matches taken from the coat");
-  await tap(227, 506); // the first inventory slot
+  await tap(178, 506); // the first inventory slot
   await tap(640, 266); // the lamp
   check((await state()).flags.includes("lamp_lit"), "the lamp is lit");
   await page.waitForTimeout(1500);
   check((await state()).secs >= 1, "the clock runs");
+  const peak = await page.evaluate(() => window.__peak);
+  check(peak > 0.01, "sound is heard (peak " + peak.toFixed(3) + ")");
   await tap(928, 236); // right: the kitchen wall
   check((await page.evaluate(() => window.hut.view)) === "B", "the arrow turns to the next wall");
   if (shot) await page.screenshot({ path: shot });
-  // The game is saved in the browser: a reload offers to continue.
+  // The game is saved in the browser: after a reload the card offers to continue.
   await page.waitForTimeout(5000);
   await page.reload();
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
-  check((await state()).flags.includes("lamp_lit"), "the saved game is loaded after a reload");
+  await page.waitForTimeout(500);
+  await tap(420, 416); // Continue on the first card
+  check((await mode()) === "play" && (await state()).flags.includes("lamp_lit"), "the saved game continues after a reload");
+  // The second room.
+  await page.reload();
+  await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
+  await page.waitForTimeout(500);
+  await tap(823, 416); // Play on the second card (Gale Rock Light)
+  check((await page.evaluate(() => window.hut.room)) === "light" && (await state()).room === "light", "the lighthouse starts");
   check(errors.length === 0, "no page errors " + JSON.stringify(errors));
 
   await browser.close();

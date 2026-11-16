@@ -11,6 +11,9 @@ uniform vec4 warm1 = vec4(0.0);
 uniform vec4 warm2 = vec4(0.0);
 uniform vec4 warm3 = vec4(0.0);
 uniform vec4 cold = vec4(0.0);
+// The colour of the dark, and lightning (0..1) that lifts it for a moment.
+uniform vec3 tint = vec3(0.0);
+uniform float flash = 0.0;
 
 float pool(vec4 l, vec2 p) {
 	if (l.w <= 0.0) {
@@ -33,7 +36,9 @@ void fragment() {
 	vec2 q = UV - vec2(0.5);
 	float vignette = smoothstep(0.35, 0.85, length(q * vec2(1.0, 0.8)));
 	float a = clamp(dark * (1.0 - lit) + 0.35 * vignette * dark, 0.0, 0.97);
+	a *= 1.0 - 0.7 * flash;
 	a += (grain(p) - 0.5) * 0.03 * a;
 	vec3 glow = vec3(1.0, 0.6, 0.22) * min(w, 1.2) * 0.13 + vec3(0.4, 0.55, 0.9) * c * 0.10;
-	COLOR = vec4(glow * (1.0 - a * 0.5), a);
+	glow += vec3(0.55, 0.8, 0.75) * flash * 0.14;
+	COLOR = vec4(glow * (1.0 - a * 0.5) + tint * a, a);
 }

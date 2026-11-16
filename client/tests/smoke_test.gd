@@ -1,5 +1,5 @@
-## Plays the whole room through the client's hotspots and checks that it can
-## be escaped, the hints, the score and the saved game.
+## Plays both rooms through the client's hotspots and checks that they can
+## be escaped, the hints, the score, the saved games and the sounds.
 ##   godot --headless --path client --script res://tests/smoke_test.gd
 ## With a display, "-- shots <folder>" also saves a picture of every view:
 ##   xvfb-run -a godot --path client --script res://tests/smoke_test.gd -- shots /tmp/shots
@@ -28,6 +28,7 @@ func _initialize() -> void:
 	DirAccess.remove_absolute(ProjectSettings.globalize_path("user://hut2847.cfg"))
 	main = load("res://scenes/main.tscn").instantiate()
 	root.add_child(main)
+	main.storm = false
 	_run()
 
 
@@ -57,12 +58,12 @@ func tap(spot: String, times: int = 1) -> void:
 
 
 func _run() -> void:
-	print("Hut 2847 smoke test")
+	print("Locked In smoke test")
 	for i in range(10):
 		await process_frame
-	check(main.mode == "title", "title screen (mode %s)" % main.mode)
+	check(main.mode == "title" and main.rooms.size() == 2, "the catalogue with two rooms (mode %s)" % main.mode)
 	await shot("title")
-	main.start_new()
+	main.start_new("hut")
 	await shot("intro")
 	main._close_panel()
 	check(main.mode == "play" and main.view == "A", "a new game starts at the stove wall")
@@ -163,10 +164,10 @@ func _run() -> void:
 	# Save and continue: back to the title, then on.
 	main._save()
 	var before: Dictionary = main.st.duplicate(true)
-	main.st = main.link.send("new")["state"]
-	main._boot()
-	check(main.mode == "title" and main._has_game(), "a saved game is offered")
-	main.continue_game()
+	main._show_title()
+	check(main.mode == "title" and main._has_game("hut") and not main._has_game("light"), "a saved game is offered")
+	await shot("title_saved")
+	main.continue_game("hut")
 	check(main.st["flags"] == before["flags"] and main.st["inv"] == before["inv"], "the saved game is restored")
 
 	# Act 3.
@@ -196,16 +197,155 @@ func _run() -> void:
 	check(main.mode == "end", "end screen")
 	check(int(main.st["halves"]) == 6, "three stars without hints")
 	await shot("end")
-	check(int(main._prefs.get_value("best", "halves", 0)) == 6, "best result kept")
+	check(main._best("hut")[0] == 6 and not main._has_game("hut"), "best result kept, saved game gone")
+	for name in ["match", "unlock", "pick", "chime", "cuckoo", "hum", "beep_l", "win", "step"]:
+		check(main.sound.history.has(name), "sound: " + name)
+	await _lighthouse()
 
 	# Every text exists in every language.
 	for lang in main.LANGS:
 		TranslationServer.set_locale(lang)
 		var missing := []
-		for key in ["ui.play", "msg.too_dark", "msg.antenna", "hint.9.3", "item.crank", "end.title"]:
+		for key in ["ui.play", "msg.too_dark", "msg.antenna", "hint.9.3", "item.crank", "end.title", "lhint.10.3", "lmsg.pressure", "lend.text", "diff.2"]:
 			if tr(key) == key:
 				missing.append(key)
 		check(missing.is_empty(), "texts in %s %s" % [lang, missing])
 
 	print("RESULT: %s" % ("PASS" if failures == 0 else "FAIL (%d)" % failures))
 	quit(0 if failures == 0 else 1)
+
+
+func dial(lock: String, code: Array, from: Array, size: int = 10) -> void:
+	for i in range(code.size()):
+		tap("%s_up%d" % [lock, i], (int(code[i]) - int(from[i]) + size) % size)
+
+
+## Gale Rock Light, floor by floor.
+func _lighthouse() -> void:
+	main._show_title()
+	main.start_new("light")
+	main._close_panel()
+	check(main.room == "light" and main.view == "L1", "the lighthouse starts in the store room")
+	await shot("L1")
+	tap("hatch1")
+	check(main.view == "L1", "the first hatch is locked")
+	tap("magnet")
+	tap("rope")
+	tap("gear_b")
+	main.tap_item("magnet")
+	main.tap_item("rope")
+	check(main.st["inv"].has("line"), "magnet and rope tied together")
+	use("line", "grating")
+	use("key", "hatch1")
+	tap("hatch1")
+	check(main.view == "L2", "up to the keeper's room")
+	await shot("L2")
+	tap("chest")
+	await shot("chest")
+	dial("chest", [3, 5, 2, 0], [0, 0, 0, 0], 6)
+	check(flag("chest_open"), "sea chest open")
+	tap("chest")
+	main.go_view("L2")
+	tap("matches")
+	tap("tidebook")
+	await shot("tide")
+	main.go_view("L2")
+	tap("hatch2")
+	check(main.view == "hatch2", "the second hatch has a lock")
+	await shot("hatch2")
+	dial("hatch2", [2, 2, 0, 5], [0, 0, 0, 0])
+	check(flag("hatch2_open"), "second hatch open")
+	main.go_view("L2")
+	check(Views.up("L2", main.st) == "L3", "the way up is shown")
+	tap("hatch2")
+	await shot("L3")
+	tap("flagchart")
+	await shot("flags")
+	main.go_view("L3")
+	tap("slate")
+	await shot("slate")
+	main.go_view("L3")
+	tap("chart")
+	await shot("chart")
+	main.go_view("L3")
+	tap("window")
+	await shot("window_dark")
+	main.strike()
+	await create_timer(0.05).timeout
+	check(main.art.flash > 0.9, "lightning")
+	await shot("window_flash")
+	main.go_view("L3")
+	tap("locker")
+	await shot("locker")
+	dial("locker", [7, 3, 0, 5], [0, 0, 0, 0])
+	tap("locker")
+	check(main.st["inv"].has("handle") and main.st["inv"].has("gear_a"), "handle and gear from the locker")
+	main.go_view("L3")
+	use("handle", "hatch3")
+	tap("hatch3")
+	check(main.view == "L4", "the lamp room")
+	await shot("L4")
+	tap("gear_d")
+	use("matches", "lamp")
+	check(main._message == tr("lmsg.lamp_not_ready"), "the lamp is not ready")
+
+	# Save and continue on the top floor.
+	main._save()
+	main._show_title()
+	check(main._has_game("light"), "the lighthouse's saved game is offered")
+	main.continue_game("light")
+	check(main.view == "L4" and main.st["inv"].size() == 6, "back in the lamp room with everything")
+
+	# Oil: 4 litres in the big can.
+	for v in ["L3", "L2", "L1"]:
+		main.go_view(v)
+	tap("barrel")
+	await shot("oil")
+	for spot in ["fill_a", "pour_a", "empty_b", "pour_a", "fill_a", "pour_a"]:
+		tap(spot)
+	check(main.st["cans"] == [4.0, 3.0], "4 litres measured")
+	await shot("oil_4")
+	tap("can")
+	for v in ["L1", "L2", "L3", "L4"]:
+		main.go_view(v)
+	use("can", "reservoir")
+	check(flag("oil_in"), "oil in the reservoir")
+	tap("clockwork")
+	await shot("gears")
+	use("gear_c", "peg0")
+	use("gear_a", "peg1")
+	use("gear_d", "peg2")
+	use("crank", "crank_slot")
+	check(flag("wound"), "clockwork wound")
+	await shot("gears_done")
+	main.go_view("L4")
+	tap("valves")
+	await shot("valves")
+	tap("valve_a")
+	tap("valve_b", 3)
+	tap("valve_c", 2)
+	check(main.st["pressure"], "pressure in the green")
+	main.go_view("L4")
+	tap("drum")
+	for pin in [4, 6, 7]:
+		tap("pin%d" % pin)
+	await shot("drum")
+	main.go_view("L4")
+	use("matches", "lamp")
+	check(main._message == tr("lmsg.lamp_wrong") and not main.st["done"], "wrong direction: the ship holds its course")
+	tap("bearing")
+	dial("bearing", [2, 3, 5], main.st["bearing"])
+	await shot("bearing")
+	main.go_view("L4")
+	await shot("L4_ready")
+	use("matches", "lamp")
+	check(main.st["done"], "the lamp burns")
+	await shot("L4_lit")
+	await create_timer(3.6).timeout
+	check(main.mode == "end", "end screen")
+	check(int(main.st["halves"]) == 6 and main._best("light")[0] == 6, "three stars for the lighthouse")
+	await shot("light_end")
+	for name in ["pour", "gear", "thud"]:
+		check(main.sound.history.has(name), "sound: " + name)
+	main._show_title()
+	await shot("title_played")

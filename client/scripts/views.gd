@@ -14,6 +14,8 @@ const PARENT := {
 
 
 static func is_closeup(view: String) -> bool:
+	if LightViews.has(view):
+		return not view in LightViews.FLOORS
 	return not (view in MAIN_ROOM or view in WARDEN_ROOM)
 
 
@@ -27,12 +29,38 @@ static func beside(view: String, dir: int) -> String:
 
 
 static func back(view: String) -> String:
+	if LightViews.has(view):
+		return LightViews.PARENT.get(view, "")
 	return PARENT.get(view, "")
+
+
+## The floor above (lighthouse), or "".
+static func up(view: String, st: Dictionary) -> String:
+	return LightViews.up(view, st)
+
+
+## Where a room starts.
+static func first(room: String) -> String:
+	return "L1" if room == "light" else "A"
+
+
+## Whether a saved view can be shown again in this state.
+static func reachable(view: String, st: Dictionary) -> bool:
+	var flags: Array = st.get("flags", [])
+	var at := view
+	while PARENT.has(at) or LightViews.PARENT.has(at):
+		if at in ["D", "E"]:
+			return "door2_open" in flags
+		if at in LightViews.FLOORS:
+			var below: String = LightViews.PARENT[at]
+			return LightViews.up(below, st) == at and reachable(below, st)
+		at = PARENT.get(at, LightViews.PARENT.get(at, ""))
+	return at in MAIN_ROOM or at == "L1"
 
 
 ## Views that move even when nothing is tapped.
 static func animated(view: String) -> bool:
-	return view in ["A", "radio", "baro"]
+	return view in ["A", "radio", "baro"] or LightViews.has(view)
 
 
 static func _wheels(lock: String, count: int, x0: float, y0: float) -> Array:
@@ -45,7 +73,9 @@ static func _wheels(lock: String, count: int, x0: float, y0: float) -> Array:
 	return spots
 
 
-static func spots(view: String, st: Dictionary) -> Array:
+static func spots(view: String, st: Dictionary, art: ArtLight = null) -> Array:
+	if LightViews.has(view):
+		return LightViews.spots(view, st, art)
 	var flags: Array = st.get("flags", [])
 	match view:
 		"A":
@@ -137,6 +167,8 @@ static func spots(view: String, st: Dictionary) -> Array:
 
 ## {"dark": 0..1, "warm": [Vector4 x4 at most], "cold": Vector4}
 static func lights(view: String, st: Dictionary) -> Dictionary:
+	if LightViews.has(view):
+		return LightViews.lights(view, st)
 	var flags: Array = st.get("flags", [])
 	var lamp: bool = "lamp_lit" in flags
 	var stove: bool = "stove_lit" in flags
