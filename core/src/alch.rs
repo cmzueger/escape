@@ -1,7 +1,7 @@
 //! The Alchemist's Cellar (hard): six puzzles about doing things in the
 //! right way and order. Views: `A1` the workbench, `A2` the vault wall.
 
-use crate::kit::{Check, Dial, Lock, Look, Pick, Puzzle, Reply, Spec, State, Use};
+use crate::kit::{Check, Dial, Look, Pick, Puzzle, Reply, Spec, State, Use};
 use crate::{bad, nums_json, strs_json};
 
 /// The six signs: the four elements, sun and moon.

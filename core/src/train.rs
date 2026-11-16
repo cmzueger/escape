@@ -92,7 +92,7 @@ pub static SPEC: Spec = Spec {
         "handle_in",
         "done",
     ],
-    items: &["ticket", "punch", "holes", "handle"],
+    items: &["punch", "handle"],
     locks: &[
         Lock {
             name: "case",
@@ -128,7 +128,7 @@ pub static SPEC: Spec = Spec {
             needs: "case_open",
             locked_msg: "nmsg.case_locked",
             got: "got_case",
-            give: &["ticket", "punch"],
+            give: &["punch"],
             msg: "nmsg.case_take",
         },
         Pick {
@@ -148,18 +148,8 @@ pub static SPEC: Spec = Spec {
             fail: "",
             keep: false,
             set: "punched",
-            give: &["holes"],
-            msg: "nmsg.punched",
-        },
-        Use {
-            item: "ticket",
-            spot: "punch",
-            needs: "",
-            fail: "",
-            keep: true,
-            set: "",
             give: &[],
-            msg: "nmsg.other_way",
+            msg: "nmsg.punched",
         },
         Use {
             item: "handle",
