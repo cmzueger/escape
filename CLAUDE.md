@@ -27,9 +27,9 @@ Col Sidereal (`obs`, hard, 35 min).
 - `docs/SPEC.md` has the decision log.
 
 ## How we work
-- Work on `main`. Sessions may start on a `claude/…` branch: push with
-  `git push origin HEAD:main` (and the branch), after checking it is a
-  fast-forward.
+- Work directly on `main` (owner, 2026-11-16): commit there and push with
+  `git push origin HEAD:main` after checking it is a fast-forward. Do not
+  create or push `claude/…` branches, even if a session starts on one.
 - Every code change gets a new version in `client/project.godot`
   (`config/version`).
 - **The owner plays the rooms unspoiled.** Never put solutions, codes or the
