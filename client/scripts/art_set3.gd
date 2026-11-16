@@ -72,7 +72,7 @@ func item(name: String, x: float, y: float, s: float = 1.0) -> void:
 			poly([-16, -4, 10, -10, 14, -4, -16, 2], STEEL)
 			poly([-16, 4, 10, 10, 14, 4, -16, -2], STEEL.darkened(0.2))
 			c(8, 0, 4, IRON_D)
-		"handle":
+		"brake":
 			at(x, y, 0.0, s)
 			rr(-5, -18, 10, 30, RED, 4)
 			rr(-12, 10, 24, 8, IRON_D, 3)
@@ -134,8 +134,8 @@ func card(room: String, w: float, h: float) -> void:
 			poly([w * 0.38, h * 0.62, w * 0.62, h * 0.62, w * 0.72, h * 0.88, w * 0.28, h * 0.88], Color("4fd07a"))
 			for k in range(3):
 				c(w * 0.44 + k * w * 0.06, h * 0.5 - fmod(t * 14.0 + k * 9.0, h * 0.3), 3, Color(0.5, 0.95, 0.6, 0.7))
-			sign("sun", w * 0.16, h * 0.3, h / 90.0, GOLD)
-			sign("moon", w * 0.84, h * 0.3, h / 90.0, SILVER)
+			sign_of("sun", w * 0.16, h * 0.3, h / 90.0, GOLD)
+			sign_of("moon", w * 0.84, h * 0.3, h / 90.0, SILVER)
 		_:
 			super.card(room, w, h)
 
@@ -303,7 +303,7 @@ func _kites() -> void:
 	var kites: Array = clues.get("kites", [])
 	for i in range(kites.size()):
 		var hook_x := 300.0 + i * 180.0
-		var kite_x := 300.0 + KITE_AT[i] * 180.0
+		var kite_x: float = 300.0 + KITE_AT[i] * 180.0
 		var string := PackedVector2Array()
 		for k in range(13):
 			var f := k / 12.0
@@ -405,10 +405,6 @@ func sign_of(name: String, x: float, y: float, s: float, col: Color) -> void:
 			if name == "earth":
 				ln(-12, 1, 12, 1, col, 3)
 	home()
-
-
-func sign(name: String, x: float, y: float, s: float, col: Color) -> void:
-	sign_of(name, x, y, s, col)
 
 
 func _carriage() -> void:
@@ -556,7 +552,7 @@ func _nbrief() -> void:
 	if flag("brief_open"):
 		rr(170, 110, 620, 290, Color("0a0a10"), 8)
 		if not flag("got_brief"):
-			item("handle", 480, 250, 4.0)
+			item("brake", 480, 250, 4.0)
 	else:
 		# A ticket marks what opens it.
 		rr(410, 76, 140, 50, Color("f0d8a0"), 4)
@@ -730,9 +726,11 @@ func _abook() -> void:
 	ln(96, 236, 456, 236, INK.lightened(0.5), 2)
 	var today: Array = clues.get("today", [])
 	for i in range(today.size()):
-		ring(170, 340, 30.0 + i * 26.0, INK.lightened(0.3), 3)
-		sign_of(today[i], 320.0 + i * 0.0, 400.0 - (30.0 + i * 26.0) - 28, 1.0, INK)
-		ln(206.0 + i * 26.0 - 6, 340, 290, 400.0 - (30.0 + i * 26.0) - 28, INK.lightened(0.5), 1.5)
+		# The first sign belongs to the outer ring.
+		var rad := 82.0 - i * 26.0
+		ring(170, 340, rad, INK.lightened(0.3), 3)
+		sign_of(today[i], 340, 270.0 + i * 56.0, 1.0, INK)
+		ln(170 + rad, 340, 316, 270.0 + i * 56.0, INK.lightened(0.5), 1.5)
 	poly([170, 250, 160, 232, 180, 232], RED)
 	# Right: the furnace's steps, then the bellows as often as the metal weighs.
 	var steps: Array = clues.get("steps", [])
@@ -776,17 +774,21 @@ func _scales() -> void:
 	for side in [-1.0, 1.0]:
 		ln(side * 280, 0, side * 280, 120, BRASS_D, 3)
 		ci.draw_arc(Vector2(side * 280, 120), 90, 0, PI, 16, BRASS, 6, true)
+	home()
+	# What lies in the pans (the left one sinks when it is heavier).
+	var drop := -tilt * 34.0
 	if flag("got_cab"):
-		ci.draw_set_transform(Vector2(480 - 280 - 44, 150 + 176 - tilt * 30), 0.0, Vector2.ONE)
-		item("nugget", 0, 0, 2.6)
+		item("nugget", 152, 326 + drop, 2.6)
 	for i in range(weights.size()):
 		if int(pans[i]) == 0:
 			continue
-		var side2 := -1.0 if int(pans[i]) == 1 else 1.0
-		ci.draw_set_transform(Vector2(480 + side2 * 280 + (i - 1) * 44.0 + (26 if side2 < 0 else 0), 150 + 190 + side2 * tilt * 30), 0.0, Vector2.ONE)
-		rr(-18, -30.0 - float(weights[i]) * 2.0, 36, 30.0 + float(weights[i]) * 2.0, IRON_D, 4)
-		txt(0, -8, str(int(weights[i])), 20, CREAM)
-	home()
+		var left: bool = int(pans[i]) == 1
+		var wx := (214.0 + i * 46.0) if left else (714.0 + i * 46.0)
+		var wy := 352.0 + (drop if left else -drop)
+		var tall := 34.0 + float(weights[i]) * 3.0
+		rr(wx - 20, wy - tall, 40, tall, STEEL, 5)
+		r(wx - 6, wy - tall - 8, 12, 9, STEEL.darkened(0.2))
+		txt(wx, wy - 8, str(int(weights[i])), 22, INK)
 	c(480, 150, 14, IRON_D)
 	c(480, 250, 9, Color("69d06a") if flag("balanced") else Color("3a2c22"))
 	# The weights on the bench; a tap moves each: off, left, right.
@@ -794,8 +796,9 @@ func _scales() -> void:
 		var x := 380.0 + i * 100.0
 		rr(x - 40, 384, 80, 70, Color(0, 0, 0, 0.3), 8)
 		if int(pans[i]) == 0:
-			rr(x - 20, 440 - 30.0 - float(weights[i]) * 2.0, 40, 30.0 + float(weights[i]) * 2.0, IRON_D, 4)
-			txt(x, 434, str(int(weights[i])), 22, CREAM)
+			var tall2 := 30.0 + float(weights[i]) * 2.0
+			rr(x - 20, 446 - tall2, 40, tall2, STEEL, 5)
+			txt(x, 440, str(int(weights[i])), 22, INK)
 	rr(700, 384, 200, 70, WOOD_D, 6)
 	if flag("balanced"):
 		rr(710, 392, 180, 54, Color("14100c"), 4)

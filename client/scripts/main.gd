@@ -9,10 +9,12 @@ const LANGS := ["en", "de", "fr", "it", "es"]
 const TITLES := {
 	"hut": "Hut 2847", "light": "Gale Rock Light", "obs": "Col Sidereal",
 	"orangery": "The Orangery", "theatre": "Curtain Call", "chess": "The Grandmaster's Study",
+	"beach": "Low Tide", "train": "Night Train", "alch": "The Alchemist's Cellar",
 }
 ## Texts of the lighthouse have their keys with an "l" in front, those of
 ## the observatory with an "o".
-const PREFIX := {"hut": "", "light": "l", "obs": "o", "orangery": "g", "theatre": "t", "chess": "c"}
+const PREFIX := {"hut": "", "light": "l", "obs": "o", "orangery": "g", "theatre": "t", "chess": "c",
+	"beach": "b", "train": "n", "alch": "a"}
 const SLOTS := 8
 const HINT_RECT := Rect2(800, 484, 136, 44)
 const MENU_RECT := Rect2(908, 8, 44, 44)
@@ -25,15 +27,20 @@ const UNLOCKS := ["msg.cup_open", "msg.door2_unlocked", "msg.drawer_open", "msg.
 	"omsg.drawer_open", "omsg.cabinet_open", "omsg.box_open", "omsg.gate_open", "omsg.atlas_open", "omsg.orrery_open", "omsg.door_open",
 	"gmsg.cab_open", "gmsg.shed_open", "gmsg.door_open", "tmsg.trunk_open", "tmsg.trap_open", "tmsg.masks_open",
 	"tmsg.door_open", "tmsg.key_in", "cmsg.drawer_open", "cmsg.safe_open", "cmsg.clock_open", "cmsg.cab_open",
-	"cmsg.king_safe", "cmsg.king_down", "cmsg.door_open", "cmsg.key_in"]
+	"cmsg.king_safe", "cmsg.king_down", "cmsg.door_open", "cmsg.key_in",
+	"bmsg.box_open", "bmsg.locker_open", "bmsg.clock_open", "bmsg.tin_open", "bmsg.door_open", "bmsg.kite_down",
+	"nmsg.case_open", "nmsg.brief_open", "nmsg.panel_open", "nmsg.seat_up", "nmsg.handle_in",
+	"amsg.cab_open", "amsg.balanced", "amsg.rings_ok", "amsg.gold", "amsg.door_open"]
 const WRONG := ["msg.no_use", "lmsg.no_use", "msg.signal_wrong", "lmsg.lamp_wrong", "lmsg.lamp_not_ready",
 	"lmsg.oil_little", "lmsg.oil_much", "lmsg.crank_free", "msg.stove_need", "msg.bucket_cold", "msg.key_wrong",
 	"omsg.no_use", "omsg.wheel_dead", "omsg.board_dead", "omsg.scope_sags", "omsg.see_dome", "omsg.see_stars", "omsg.bar_empty",
 	"gmsg.no_use", "tmsg.no_use", "cmsg.no_use", "gmsg.can_empty", "gmsg.pot_hard", "gmsg.valves_stuck",
-	"tmsg.desk_dead", "tmsg.masks_wrong", "tmsg.spot_high", "cmsg.king_attacked", "cmsg.square_taken"]
+	"tmsg.desk_dead", "tmsg.masks_wrong", "tmsg.spot_high", "cmsg.king_attacked", "cmsg.square_taken",
+	"bmsg.no_use", "nmsg.no_use", "amsg.no_use", "bmsg.kite_wrong", "bmsg.no_slot", "nmsg.seat_empty",
+	"nmsg.no_socket", "amsg.step_wrong", "amsg.too_hot", "amsg.too_cold", "amsg.bellows_torn", "amsg.bellows_early"]
 
 var link := RoomLink.new()
-var art := ArtSet2.new()
+var art := ArtSet3.new()
 var sound := Sound.new()
 var rooms: Array = []
 var room := "hut"
@@ -223,6 +230,13 @@ func _ambience() -> void:
 		levels["amb_sea"] = 0.55 + 0.15 * LightViews.FLOORS.find(floor_of)
 		if view == "L2":
 			levels["amb_fire"] = 0.25
+	elif mode != "load" and room == "beach":
+		levels["amb_sea"] = 0.3
+	elif mode != "load" and room == "train":
+		levels["amb_wind"] = 0.3
+		levels["amb_tick"] = 0.5
+	elif mode != "load" and room == "alch":
+		levels["amb_fire"] = 0.6 if view in ["A1", "furnace"] else 0.25
 	elif mode != "load" and room == "orangery":
 		levels["amb_wind"] = 0.12
 	elif mode != "load" and room == "theatre":
@@ -504,6 +518,10 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 		sound.play("hum")
 	elif msg == "omsg.exposed":
 		sound.play("unlock")
+	elif word == "mix":
+		sound.play("pour")
+	elif word == "bellows":
+		sound.play("step")
 	elif word == "dome":
 		sound.play("gear")
 	elif msg in ["lmsg.wind", "lmsg.gear_on", "lmsg.gear_off"]:
@@ -515,7 +533,7 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 	elif word in ["wire", "valve"]:
 		sound.play("gear")
 	elif word in ["dial", "clock", "baro", "tune", "pin", "lamp", "planet", "weight", "ra", "dec", "plani",
-			"turn", "flip", "mask", "bulb", "king"]:
+			"turn", "flip", "mask", "bulb", "king", "pull", "seat", "empty"]:
 		sound.play("tick")
 	elif st.get("inv", []).size() > before.get("inv", []).size():
 		sound.play("pick")
@@ -741,12 +759,12 @@ func _show_title() -> void:
 	page.alignment = BoxContainer.ALIGNMENT_CENTER
 	page.add_theme_constant_override("separation", 6)
 	_panels.add_child(page)
-	_label(page, "LOCKED IN", 38, Art.AMBER, false)
-	_label(page, tr("title.tagline"), 15, Color(Art.CREAM, 0.75), false)
+	page.add_theme_constant_override("separation", 5)
+	_label(page, "LOCKED IN", 30, Art.AMBER, false)
 	var cards: HBoxContainer = null
 	for i in range(rooms.size()):
 		if i % 3 == 0:
-			cards = _row(page, 12)
+			cards = _row(page, 10)
 		_card(cards, rooms[i])
 	_languages(page, _show_title)
 	var window := DisplayServer.window_get_size()
@@ -764,29 +782,29 @@ func _card(row: Container, entry: Dictionary) -> void:
 	style.border_color = Color(Art.BRASS, 0.5)
 	style.set_border_width_all(2)
 	style.set_corner_radius_all(14)
-	style.set_content_margin_all(9)
+	style.set_content_margin_all(7)
 	card.add_theme_stylebox_override("panel", style)
 	row.add_child(card)
 	var box := VBoxContainer.new()
 	box.custom_minimum_size.x = 278
-	box.add_theme_constant_override("separation", 6)
+	box.add_theme_constant_override("separation", 4)
 	card.add_child(box)
 	var top := HBoxContainer.new()
 	top.add_theme_constant_override("separation", 9)
 	box.add_child(top)
-	_picture(top, Vector2(104, 82), func(p: Control) -> void: art.card(id, p.size.x, p.size.y), true)
+	_picture(top, Vector2(96, 66), func(p: Control) -> void: art.card(id, p.size.x, p.size.y), true)
 	var facts := VBoxContainer.new()
 	facts.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	facts.add_theme_constant_override("separation", 2)
+	facts.add_theme_constant_override("separation", 0)
 	top.add_child(facts)
 	var title: String = TITLES.get(id, id)
 	if title.length() > 16:
 		# A long name takes two lines instead of being cut.
-		var long_name := _label(facts, title, 16, Art.AMBER, true)
+		var long_name := _label(facts, title, 15, Art.AMBER, true)
 		long_name.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 		long_name.add_theme_constant_override("line_spacing", -3)
 	else:
-		_fit(_label(facts, title, 19, Art.AMBER, false))
+		_fit(_label(facts, title, 18, Art.AMBER, false))
 	var level := int(entry.get("difficulty", 1))
 	var line := HBoxContainer.new()
 	line.add_theme_constant_override("separation", 6)
@@ -794,8 +812,7 @@ func _card(row: Container, entry: Dictionary) -> void:
 	_picture(line, Vector2(72, 24), func(_p: Control) -> void:
 		for i in range(3):
 			art.padlock(11.0 + i * 24.0, 11, i < level))
-	_fit(_label(line, tr("ui.minutes") % int(entry.get("minutes", 30)), 15, Art.CREAM, false))
-	_fit(_label(facts, tr("diff.%d" % level), 15, Color(Art.CREAM, 0.8), false))
+	_fit(_label(line, "%s · %s" % [tr("diff.%d" % level), tr("ui.minutes") % int(entry.get("minutes", 30))], 13, Art.CREAM, false))
 	var result := HBoxContainer.new()
 	result.add_theme_constant_override("separation", 6)
 	facts.add_child(result)
@@ -809,7 +826,7 @@ func _card(row: Container, entry: Dictionary) -> void:
 		_slim(_button(buttons, "%s  %s" % [tr("ui.continue"), _clock_text(int(_prefs.get_value(_key(id), "secs", 0)))], func() -> void: continue_game(id)), 15, 2.4)
 		_slim(_button(buttons, tr("ui.new_short"), func() -> void: start_new(id)), 13, 1.0)
 	else:
-		_slim(_button(buttons, tr("ui.play"), func() -> void: start_new(id)), 16, 1.0)
+		_slim(_button(buttons, tr("ui.play"), func() -> void: start_new(id)), 15, 1.0)
 
 
 ## A low button that shares its row and never widens the card.
@@ -820,8 +837,8 @@ func _slim(button: Button, size: int, share: float) -> void:
 	button.size_flags_stretch_ratio = share
 	for state in ["normal", "hover", "pressed"]:
 		var slim: StyleBoxFlat = theme.get_stylebox(state, "Button").duplicate()
-		slim.content_margin_top = 5
-		slim.content_margin_bottom = 5
+		slim.content_margin_top = 2
+		slim.content_margin_bottom = 2
 		slim.content_margin_left = 6
 		slim.content_margin_right = 6
 		button.add_theme_stylebox_override(state, slim)

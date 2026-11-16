@@ -10,6 +10,9 @@ Escape rooms played in the browser. Offline, no accounts.
 | The Orangery | easy | 15 min | A greenhouse in the evening sun, latched from outside. Eight puzzles with water, plants and colours. |
 | Curtain Call | medium | 25 min | Backstage after the last performance. Eight puzzles with stage lights, masks and costumes. |
 | The Grandmaster's Study | hard | 35 min | Seven problems about how chess pieces move; a chart in the room teaches the moves. |
+| Low Tide | easy | 15 min | A bathing hut whose door has swollen shut. Six puzzles with shells, kites and the tide. |
+| Night Train | medium | 25 min | A sealed sleeping compartment. Six puzzles with a timetable, a ticket and luggage. |
+| The Alchemist's Cellar | hard | 35 min | Make a golden key. Six puzzles about doing things in the right way and order. |
 
 Play: https://cmzueger.github.io/escape/
 
@@ -27,6 +30,6 @@ Play: https://cmzueger.github.io/escape/
 cargo test                                   # the rules
 client/build.sh debug                        # the extension for Godot
 godot --headless --path client --import
-godot --headless --path client --script res://tests/smoke_test.gd   # plays all six rooms
+godot --headless --path client --script res://tests/smoke_test.gd   # plays all nine rooms
 GODOT=godot client/build-web.sh              # the web build in client/export/web
 ```

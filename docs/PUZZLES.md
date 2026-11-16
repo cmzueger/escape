@@ -202,3 +202,48 @@ falls on the plaque opposite the slit and shows a digit there:
 6. **Big board.** All three pieces must attack the black king on e5:
    **rook e1, bishop h8, knight c4** → the king falls, steel key under him.
 7. **Door.** Both keys.
+
+# Low Tide
+1. **Shell box** (three digits; plaque: spiral shell, fan shell, starfish).
+   Count them on both walls and the floor: 4, 2, 6 → **426**. Inside:
+   corkscrew.
+2. **Ship in a bottle.** Corkscrew → a paper showing a green kite.
+3. **Kites.** Three kites, three crossing strings: the green kite's string
+   ends at the **right-hand hook**; pull it → the kite brings a key.
+4. **Tide clock.** Key opens the locker (spade, clock hand). Hand onto the
+   tide clock; through the window the water stands at mark 4 of the tide
+   post → set the clock to **4** → its box gives a brass token.
+5. **Sand.** Dig at the little red flag with the spade → a tin box; the
+   token opens it → the spare key.
+6. **Door.** The key.
+
+# Night Train
+1. **Suitcase** (three digits). Its tag shows the tower; the timetable gives
+   the tower 07:42 → **742**. Inside: the conductor's punch; a ticket is put
+   on the table.
+2. **Seat.** The ticket says seat 23: lift seat **23** → a briefcase.
+3. **Briefcase** (four wheels of station signs). The ticket's journey is
+   bridge → peak; in the timetable's order with the stops between:
+   **bridge, tower, mill, peak**. Inside: a red handle.
+4. **Punch** the ticket (punch on the ticket in its close-up) → a pattern of
+   holes.
+5. **Conductor's panel** (three by three). Light the buttons of the holes:
+   top left, top right; middle; bottom left, bottom middle → a flap opens.
+6. **Handle** onto the socket → the door.
+
+# The Alchemist's Cellar
+1. **Vials.** The book: three vials under air, water, fire. The wall chart:
+   air violet, water green, fire orange. Only red, yellow, blue exist: vial
+   1 red + blue, vial 2 yellow + blue, vial 3 red + yellow → the cabinet
+   unlocks (lead inside); take the third vial as the elixir.
+2. **Scales.** The lead lies left. Weights 1, 3, 9; each tap moves one: off,
+   left, right. **9 right, 1 and 3 left** → balance (the lead weighs 5) → a
+   drawer with the bellows.
+3. **Floor disc.** The book shows three rings with moon, sun, earth (outer
+   ring first): turn each ring until that sign is under the red mark → a
+   hatch with the crucible.
+4. **Furnace, order.** As the book numbers them: crucible, lead, elixir.
+5. **Furnace, heat.** Bellows as often as the lead weighs: **5** strokes,
+   then tap the furnace. A sixth stroke boils over, looking in too early
+   lets the fire die; both start the count again. → the golden key.
+6. **Door.** The golden key.

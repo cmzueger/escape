@@ -48,6 +48,18 @@ No spoilers here; the solutions are in PUZZLES.md.
 | Catalogue | Two rows of three |
 | Tuning | Build now, adjust targets and hints after the owner's play tests |
 
+## Third set (2026-11-16)
+The owner asked for three more rooms at once, without a proposal round. The
+settings come from earlier proposals not chosen at the time; looks and names
+are Claude's and open to change:
+| Room | Setting | Look |
+|---|---|---|
+| Low Tide (easy) | Beach hut at low tide | Bright daylight, white and blue stripes |
+| Night Train (medium) | Night train compartment | Warm wood and brass, the night passing outside |
+| The Alchemist's Cellar (hard) | Alchemist's laboratory | Stone vault, green glow, gold |
+
+The catalogue shows three rows of three smaller cards.
+
 ## Hut 2847
 - Main room (three walls): stove wall, bunk wall, kitchen wall. Act 1: light,
   warmth, the way into the warden's room.

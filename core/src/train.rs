@@ -92,7 +92,7 @@ pub static SPEC: Spec = Spec {
         "handle_in",
         "done",
     ],
-    items: &["punch", "handle"],
+    items: &["punch", "brake"],
     locks: &[
         Lock {
             name: "case",
@@ -136,7 +136,7 @@ pub static SPEC: Spec = Spec {
             needs: "brief_open",
             locked_msg: "nmsg.brief_locked",
             got: "got_brief",
-            give: &["handle"],
+            give: &["brake"],
             msg: "nmsg.handle",
         },
     ],
@@ -152,7 +152,7 @@ pub static SPEC: Spec = Spec {
             msg: "nmsg.punched",
         },
         Use {
-            item: "handle",
+            item: "brake",
             spot: "socket|panel",
             needs: "panel_open",
             fail: "nmsg.no_socket",
@@ -188,7 +188,7 @@ pub static SPEC: Spec = Spec {
             unset: "nmsg.panel",
         },
     ],
-    flavour: &["window", "lamp", "coat", "blind", "bags"],
+    flavour: &["window", "lamp", "coat", "blind", "bags", "ticket"],
     puzzles: &[
         Puzzle {
             solved: |s| s.flag("case_open"),
@@ -250,7 +250,7 @@ mod tests {
         assert_eq!(msg(&mut r, "seat 2"), "nmsg.seat_up");
         assert_eq!(msg(&mut r, "turn brief 0 -1"), "nmsg.brief_open");
         msg(&mut r, "tap briefcase");
-        assert_eq!(msg(&mut r, "use handle socket"), "nmsg.no_socket");
+        assert_eq!(msg(&mut r, "use brake socket"), "nmsg.no_socket");
         assert_eq!(msg(&mut r, "use punch ticket"), "nmsg.punched");
         for (i, hole) in PUNCH.iter().enumerate() {
             if *hole == 1 {
@@ -258,7 +258,7 @@ mod tests {
             }
         }
         assert!(r.flag("panel_open"));
-        msg(&mut r, "use handle socket");
+        msg(&mut r, "use brake socket");
         assert!(r.done && r.solved().iter().all(|s| *s));
         assert_eq!(State::load(&SPEC, &r.save()).unwrap(), r);
     }

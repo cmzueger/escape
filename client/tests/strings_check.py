@@ -28,11 +28,14 @@ for row in rows[1:]:
 hut = (root / "core/src/hut.rs").read_text()
 light = (root / "core/src/light.rs").read_text()
 obs = (root / "core/src/obs.rs").read_text()
-kits = {"g": "orangery", "t": "theatre", "c": "chess"}
+kits = {"g": "orangery", "t": "theatre", "c": "chess", "b": "beach", "n": "train", "a": "alch"}
 kit_text = {pre: (root / ("core/src/%s.rs" % name)).read_text() for pre, name in kits.items()}
 wanted = set(re.findall(r'"([lo]?msg\.\w+)"', hut + light + obs))
 for pre, text in kit_text.items():
     wanted |= set(re.findall(r'"(%smsg\.\w+)"' % pre, text))
+    if pre == "a":
+        wanted.discard("amsg.step_")
+        wanted |= {"amsg.step_crucible", "amsg.step_nugget", "amsg.step_elixir"}
     wanted |= {pre + "msg.nothing", pre + "msg.no_use"}
     flavour = re.search(r"flavour: &\[(.*?)\]", text, re.S).group(1)
     wanted |= {pre + "msg." + spot for spot in re.findall(r'"(\w+)"', flavour)}

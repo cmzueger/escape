@@ -9,7 +9,8 @@ tech stack and habits, but offline only: no server, no accounts.
 first set Hut 2847 (`hut`, easy, 15 min), Gale Rock Light (`light`, medium,
 25 min), Col Sidereal (`obs`, hard, 35 min); second set The Orangery
 (`orangery`, easy), Curtain Call (`theatre`, medium), The Grandmaster's Study
-(`chess`, hard).
+(`chess`, hard); third set Low Tide (`beach`, easy), Night Train (`train`,
+medium), The Alchemist's Cellar (`alch`, hard).
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
   `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
@@ -22,8 +23,11 @@ first set Hut 2847 (`hut`, easy, 15 min), Gale Rock Light (`light`, medium,
   numpy and ffmpeg; the .ogg files are committed).
 - The second set's rules are **data for `core/src/kit.rs`** (flags, items,
   locks, dials, picks, uses, latching checks, a hook for the odd mechanism):
-  see `orangery.rs`, `theatre.rs`, `chess.rs`. Write new rooms this way. Their
-  pictures are in `art_set2.gd`, hotspots in `views_set2.gd`; kit locks and
+  see `orangery.rs`, `theatre.rs`, `chess.rs`, `beach.rs`, `train.rs`,
+  `alch.rs`. Write new rooms this way. Their pictures are in `art_set2.gd` and
+  `art_set3.gd` (each art script extends the one before), hotspots in
+  `views_set2.gd` and `views_set3.gd`. Item names are global (`item.<name>`
+  in the texts): pick names no other room uses. Kit locks and
   dials are moved with `turn` and `flip`.
 - A new room: a kit spec in `core`, an entry in `ROOMS` and `Room::call`, views and
   art, texts with their own key prefix (the lighthouse uses
@@ -62,6 +66,11 @@ first set Hut 2847 (`hut`, easy, 15 min), Gale Rock Light (`light`, medium,
   (hotspots) and, for the title and intro buttons, in `web_smoke.js`.
 
 ## History (latest first)
+- **0.5.0** (2026-11-16): third set, built straight away at the owner's
+  request without a proposal round (settings taken from earlier proposals the
+  owner had seen but not picked; looks and names chosen by Claude): Low Tide,
+  Night Train, The Alchemist's Cellar. The catalogue shows three rows of
+  three; a tenth room needs a new catalogue layout (ask the owner).
 - **0.4.0** (2026-11-16): second set of three rooms (settings, looks and names
   chosen by the owner in three rounds, then built in one go): The Orangery,
   Curtain Call, The Grandmaster's Study (no chess knowledge needed). The
@@ -84,6 +93,6 @@ first set Hut 2847 (`hut`, easy, 15 min), Gale Rock Light (`light`, medium,
 
 ## Open
 - An Android build, a custom domain.
-- The owner's play test of the lighthouse and the observatory (time, what was
-  unclear) and an
+- The owner's play test of every room but the hut (time, what was
+  unclear), whether the third set's settings, looks and names are liked, and an
   opinion on the sounds, which were made without anyone hearing them.
