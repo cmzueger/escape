@@ -272,8 +272,10 @@ func _lighthouse() -> void:
 	tap("window")
 	await shot("window_dark")
 	main.strike()
-	await create_timer(0.05).timeout
-	check(main.art.flash > 0.9, "lightning")
+	await process_frame
+	await process_frame
+	# However slow the frames are: the flash lasts 1.7 seconds.
+	check(main.art.flash > 0.2, "lightning")
 	await shot("window_flash")
 	main.go_view("L3")
 	tap("locker")
