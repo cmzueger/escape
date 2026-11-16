@@ -22,6 +22,8 @@
 //! Answers are `{"ok":true,"msg":"…","state":{…}}` (`msg` is a translation
 //! key or empty) or `{"ok":false,"error":"…"}`.
 
+pub mod alch;
+pub mod beach;
 pub mod chess;
 pub mod hut;
 pub mod kit;
@@ -29,16 +31,20 @@ pub mod light;
 pub mod obs;
 pub mod orangery;
 pub mod theatre;
+pub mod train;
 
 /// The catalogue: id, difficulty (1 easy, 2 medium, 3 hard), target minutes
 /// for three stars, number of puzzles.
-pub const ROOMS: [(&str, u8, u32, usize); 6] = [
+pub const ROOMS: [(&str, u8, u32, usize); 9] = [
     ("hut", 1, hut::PAR_MINUTES, 9),
     ("light", 2, light::PAR_MINUTES, 10),
     ("obs", 3, obs::PAR_MINUTES, 10),
     ("orangery", 1, 15, 8),
     ("theatre", 2, 25, 8),
     ("chess", 3, 35, 7),
+    ("beach", 1, 15, 6),
+    ("train", 2, 25, 6),
+    ("alch", 3, 35, 6),
 ];
 
 /// A further 10 minutes over the target cost half a star each.
@@ -144,6 +150,9 @@ impl Room {
                     Some("orangery") => *self = Room::Kit(kit::State::new(&orangery::SPEC)),
                     Some("theatre") => *self = Room::Kit(kit::State::new(&theatre::SPEC)),
                     Some("chess") => *self = Room::Kit(kit::State::new(&chess::SPEC)),
+                    Some("beach") => *self = Room::Kit(kit::State::new(&beach::SPEC)),
+                    Some("train") => *self = Room::Kit(kit::State::new(&train::SPEC)),
+                    Some("alch") => *self = Room::Kit(kit::State::new(&alch::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -175,7 +184,7 @@ mod tests {
         assert_eq!(r.id(), "light");
         assert!(r.call("tap coat").starts_with("{\"ok\":false"));
         assert!(r.call("room obs").contains("\"room\":\"obs\""));
-        for id in ["orangery", "theatre", "chess"] {
+        for id in ["orangery", "theatre", "chess", "beach", "train", "alch"] {
             assert!(r
                 .call(&format!("room {id}"))
                 .contains(&format!("\"room\":\"{id}\"")));
