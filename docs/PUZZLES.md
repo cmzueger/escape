@@ -94,3 +94,60 @@ this walkthrough.
   two logic puzzles (oil, valves), one observation puzzle (lightning).
 - Nothing on the lamp tells whether drum and bearing are right; only the
   three physical parts have lights.
+
+# Col Sidereal
+
+The decoder: around the dome hang eight plaques, each with a constellation
+figure; under each the rail shows an hour (0 h, 3 h, … 21 h). The moonbeam
+falls on the plaque opposite the slit and shows a digit there:
+
+| Position | Figure | Hour | Digit | Atlas angle |
+|---|---|---|---|---|
+| 0 | arc | 0 h | 4 | +40° |
+| 1 | W | 3 h | 9 | +60° |
+| 2 | kite | 6 h | 1 | −10° |
+| 3 | hook | 9 h | 6 | +20° |
+| 4 | cross | 12 h | 3 | −30° |
+| 5 | Y | 15 h | 8 | +10° |
+| 6 | triangle | 18 h | 2 | +50° |
+| 7 | arrow | 21 h | 7 | 0° |
+
+1. **Desk drawer** (three wheels of figures). The note over the desk shows
+   green, red, white; the coloured books in the library carry figures on
+   their spines: **triangle, hook, Y**. Inside: the gate key and a torn page
+   (use it on the notebook).
+2. **Instrument cabinet** (four digits). Its plaque: sun clock minus star
+   clock. The stopped clocks by the door show 10:25 and 4:50 → **0535**.
+   Inside: eyepiece and fuse.
+3. **Switchboard** (chart wall). Fuse in; each switch flips its lamp and
+   both neighbours; all six must burn. From the start (lamps 4 and 5 on):
+   switches **1, 4 and 5**. The dome wheel now works.
+4. **Wall box in the dome** (four digits, a comet engraved). The wall map in
+   the study shows the comet's path: kite, Y, arc, cross → digits from the
+   plaques → **1843**. Inside: photographic plate and the atlas case's key.
+5. **Orrery.** The notebook's second page: red planet 6, ringed planet 2,
+   grey planet 7. Read the plaques backwards: **red to the hook, ringed to
+   the triangle, grey to the arrow**. The base's drawer gives the
+   counterweights.
+6. **Balance.** Eyepiece into the telescope, counterweights onto the bar.
+   Camera 15 + eyepiece 8 = 23 → hang **4, 7 and 12**.
+7. **Setting circles.** The notebook says 14. 11., 23 h and sketches the
+   planisphere on the desk: turn its disc until hour 23 stands at month 11
+   (8 steps left from the start); the figure under the red mark is the
+   **hook**. The atlas gives the hook 9 h and +20° → set the telescope's two
+   counters to **9 h, +20°**.
+8. **Slit.** Turn the dome until the slit stands over the hook's plaque
+   (9 h; position 3, three steps left from where the test leaves it).
+9. **Photograph.** The eyepiece now shows the comet (it says what is wrong
+   otherwise: out of balance, the dome in the way, or only stars). Plate
+   into the camera on the telescope.
+10. **Door** (four digits). Tap the camera to see the plate: W, triangle,
+    hook, arrow beside the comet → **9267**. The lock only accepts it once
+    the plate is exposed.
+
+## Balance notes (observatory)
+- Built before the owner had played the lighthouse; the 35 minute target is
+  a guess to be corrected by their time.
+- The decoder is used forwards twice (box, door) and backwards once
+  (orrery); the planisphere is the only clue that is a tool with no lock.
+- The intro recommends paper and pencil: eight figure-digit pairs to keep.

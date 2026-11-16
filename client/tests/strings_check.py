@@ -27,16 +27,18 @@ for row in rows[1:]:
 
 hut = (root / "core/src/hut.rs").read_text()
 light = (root / "core/src/light.rs").read_text()
-wanted = set(re.findall(r'"(l?msg\.\w+)"', hut + light))
+obs = (root / "core/src/obs.rs").read_text()
+wanted = set(re.findall(r'"([lo]?msg\.\w+)"', hut + light + obs))
 for script in (root / "client/scripts").glob("*.gd"):
     wanted |= set(re.findall(r'tr\("([a-z_]+\.[a-z_0-9.]+)"\)', script.read_text()))
-for core in (hut, light):
+for core in (hut, light, obs):
     items = re.search(r"pub const ITEMS[^=]*=\s*\[(.*?)\];", core, re.S).group(1)
     wanted |= {"item." + name for name in re.findall(r'"(\w+)"', items)}
 wanted |= {"hint.%d.%d" % (p, level) for p in range(1, 10) for level in range(1, 4)}
 wanted |= {"lhint.%d.%d" % (p, level) for p in range(1, 11) for level in range(1, 4)}
-wanted |= {pre + "intro.%d" % i for pre in ("", "l") for i in (1, 2, 3)}
-wanted |= {pre + key for pre in ("", "l") for key in ("end.title", "end.text")}
+wanted |= {"ohint.%d.%d" % (p, level) for p in range(1, 11) for level in range(1, 4)}
+wanted |= {pre + "intro.%d" % i for pre in ("", "l", "o") for i in (1, 2, 3)}
+wanted |= {pre + key for pre in ("", "l", "o") for key in ("end.title", "end.text")}
 wanted |= {"diff.1", "diff.2", "diff.3"}
 for key in sorted(wanted - keys):
     problems.append("missing: %s" % key)

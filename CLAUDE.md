@@ -6,19 +6,21 @@ tech stack and habits, but offline only: no server, no accounts.
 
 ## The project
 "Locked In": a catalogue of escape rooms, landscape, point and click. Rooms:
-Hut 2847 (`hut`, easy, 15 min) and Gale Rock Light (`light`, medium, 25 min).
+Hut 2847 (`hut`, easy, 15 min), Gale Rock Light (`light`, medium, 25 min) and
+Col Sidereal (`obs`, hard, 35 min).
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
-  `light.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
+  `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
 - `client/` Godot 4.5: `scripts/main.gd` (catalogue, bar, panels, sound
-  cues), `views.gd` + `views_light.gd` (hotspots, navigation, light per
-  view), `art.gd` + `art_light.gd` (every picture, drawn in code from the
+  cues), `views.gd` + `views_light.gd` + `views_obs.gd` (hotspots, navigation, light
+  per view), `art.gd` → `art_light.gd` → `art_obs.gd` (each extends the one
+  before; every picture, drawn in code from the
   rules' `clues`), `light.gdshader` (darkness, light pools, lightning),
   `sound.gd` and `audio/` (sounds synthesised by `audio/generate.py`, needs
   numpy and ffmpeg; the .ogg files are committed).
 - A new room: a module in `core`, an entry in `ROOMS` and `Room`, a views and
   an art script, texts with their own key prefix (the lighthouse uses
-  `lmsg.`, `lhint.`, `lintro.`, `lend.`), a card picture, a play-through in
+  `lmsg.`, `lhint.`, `lintro.`, `lend.`; the observatory `omsg.` and so on), a card picture, a play-through in
   `smoke_test.gd`, and its solutions in `docs/PUZZLES.md`.
 - Hosted on GitHub Pages by `.github/workflows/ci.yml` (every push is tested;
   a push to `main` is then deployed to https://cmzueger.github.io/escape/).
@@ -50,6 +52,10 @@ Hut 2847 (`hut`, easy, 15 min) and Gale Rock Light (`light`, medium, 25 min).
   (hotspots) and, for the title and intro buttons, in `web_smoke.js`.
 
 ## History (latest first)
+- **0.3.0** (2026-11-16): third room Col Sidereal (hard, moonlight look, a
+  study and a dome): layered clues, one decoder used three times. Built
+  before the owner had played the lighthouse, so its difficulty is untested.
+  The catalogue's cards are narrower so that three fit.
 - **0.2.0** (2026-11-16): the catalogue "Locked In" with a card per room
   (difficulty, target time, best stars); second room Gale Rock Light (storm
   green look with lightning); sound (atmospheres and effects, mute); a target
@@ -60,6 +66,8 @@ Hut 2847 (`hut`, easy, 15 min) and Gale Rock Light (`light`, medium, 25 min).
   proposals (see SPEC). Web only, no sound yet.
 
 ## Open
-- An Android build, a custom domain, more rooms (a hard one is still missing).
-- The owner's play test of the lighthouse (time, what was unclear) and an
+- An Android build, a custom domain, more rooms (a fourth card needs the
+  catalogue to scroll or wrap).
+- The owner's play test of the lighthouse and the observatory (time, what was
+  unclear) and an
   opinion on the sounds, which were made without anyone hearing them.

@@ -6,9 +6,10 @@ extends Control
 const SAVE_PATH := "user://hut2847.cfg"
 const SCENE_H := 472.0
 const LANGS := ["en", "de", "fr", "it", "es"]
-const TITLES := {"hut": "Hut 2847", "light": "Gale Rock Light"}
-## Texts of the lighthouse have these keys with an "l" in front.
-const PREFIX := {"hut": "", "light": "l"}
+const TITLES := {"hut": "Hut 2847", "light": "Gale Rock Light", "obs": "Col Sidereal"}
+## Texts of the lighthouse have their keys with an "l" in front, those of
+## the observatory with an "o".
+const PREFIX := {"hut": "", "light": "l", "obs": "o"}
 const SLOTS := 8
 const HINT_RECT := Rect2(800, 484, 136, 44)
 const MENU_RECT := Rect2(908, 8, 44, 44)
@@ -17,12 +18,14 @@ const RIGHT_RECT := Rect2(902, 200, 52, 72)
 const BACK_RECT := Rect2(10, 414, 100, 52)
 const UP_RECT := Rect2(490, 6, 100, 50)
 const UNLOCKS := ["msg.cup_open", "msg.door2_unlocked", "msg.drawer_open", "msg.safe_open", "msg.baro_open",
-	"lmsg.hatch1_open", "lmsg.chest_open", "lmsg.hatch2_open", "lmsg.locker_open", "lmsg.hatch3_open"]
+	"lmsg.hatch1_open", "lmsg.chest_open", "lmsg.hatch2_open", "lmsg.locker_open", "lmsg.hatch3_open",
+	"omsg.drawer_open", "omsg.cabinet_open", "omsg.box_open", "omsg.gate_open", "omsg.atlas_open", "omsg.orrery_open", "omsg.door_open"]
 const WRONG := ["msg.no_use", "lmsg.no_use", "msg.signal_wrong", "lmsg.lamp_wrong", "lmsg.lamp_not_ready",
-	"lmsg.oil_little", "lmsg.oil_much", "lmsg.crank_free", "msg.stove_need", "msg.bucket_cold", "msg.key_wrong"]
+	"lmsg.oil_little", "lmsg.oil_much", "lmsg.crank_free", "msg.stove_need", "msg.bucket_cold", "msg.key_wrong",
+	"omsg.no_use", "omsg.wheel_dead", "omsg.board_dead", "omsg.scope_sags", "omsg.see_dome", "omsg.see_stars", "omsg.bar_empty"]
 
 var link := RoomLink.new()
-var art := ArtLight.new()
+var art := ArtObs.new()
 var sound := Sound.new()
 var rooms: Array = []
 var room := "hut"
@@ -209,6 +212,11 @@ func _ambience() -> void:
 		levels["amb_sea"] = 0.55 + 0.15 * LightViews.FLOORS.find(floor_of)
 		if view == "L2":
 			levels["amb_fire"] = 0.25
+	elif mode != "load" and room == "obs":
+		var up: bool = Views.reachable(view, {"flags": []}) == false
+		levels["amb_wind"] = 0.3 if up else 0.14
+		if view in ["S1", "clocks", "door"]:
+			levels["amb_tick"] = 0.6 if view == "S1" else 1.0
 	elif mode != "load":
 		var inner: bool = not (view in Views.MAIN_ROOM or view == "lock")
 		levels["amb_wind"] = 0.55 if inner else 0.85
@@ -474,8 +482,12 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 		sound.play("match")
 	elif msg == "msg.clock_open":
 		sound.play("cuckoo")
-	elif msg == "msg.power":
+	elif msg in ["msg.power", "omsg.power"]:
 		sound.play("hum")
+	elif msg == "omsg.exposed":
+		sound.play("unlock")
+	elif word == "dome":
+		sound.play("gear")
 	elif msg in ["lmsg.wind", "lmsg.gear_on", "lmsg.gear_off"]:
 		sound.play("gear")
 	elif msg in ["msg.bucket_melt", "lmsg.oil_in"] or word == "oil":
@@ -484,7 +496,7 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 		sound.play("beep_l" if command.ends_with("l") else "beep_s", 0.0, 0.0)
 	elif word in ["wire", "valve"]:
 		sound.play("gear")
-	elif word in ["dial", "clock", "baro", "tune", "pin"]:
+	elif word in ["dial", "clock", "baro", "tune", "pin", "lamp", "planet", "weight", "ra", "dec", "plani"]:
 		sound.play("tick")
 	elif st.get("inv", []).size() > before.get("inv", []).size():
 		sound.play("pick")
@@ -712,7 +724,7 @@ func _show_title() -> void:
 	_panels.add_child(page)
 	_label(page, "LOCKED IN", 46, Art.AMBER, false)
 	_label(page, tr("title.tagline"), 17, Color(Art.CREAM, 0.75), false)
-	var cards := _row(page, 28)
+	var cards := _row(page, 14)
 	for entry in rooms:
 		_card(cards, entry)
 	_languages(page, _show_title)
@@ -733,11 +745,11 @@ func _card(row: Container, entry: Dictionary) -> void:
 	card.add_theme_stylebox_override("panel", style)
 	row.add_child(card)
 	var box := VBoxContainer.new()
-	box.custom_minimum_size.x = 340
+	box.custom_minimum_size.x = 270
 	box.add_theme_constant_override("separation", 7)
 	card.add_child(box)
-	_picture(box, Vector2(340, 124), func(p: Control) -> void: art.card(id, p.size.x, p.size.y), true)
-	var name := _label(box, TITLES.get(id, id), 27, Art.AMBER, false)
+	_picture(box, Vector2(270, 108), func(p: Control) -> void: art.card(id, p.size.x, p.size.y), true)
+	var name := _label(box, TITLES.get(id, id), 25, Art.AMBER, false)
 	name.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	var level := int(entry.get("difficulty", 1))
 	var facts := HBoxContainer.new()
@@ -746,7 +758,7 @@ func _card(row: Container, entry: Dictionary) -> void:
 	_picture(facts, Vector2(76, 26), func(_p: Control) -> void:
 		for i in range(3):
 			art.padlock(12.0 + i * 26.0, 12, i < level))
-	_label(facts, "%s · %s" % [tr("diff.%d" % level), tr("ui.minutes") % int(entry.get("minutes", 30))], 18, Art.CREAM, false)
+	_label(facts, "%s · %s" % [tr("diff.%d" % level), tr("ui.minutes") % int(entry.get("minutes", 30))], 17, Art.CREAM, false)
 	var result := HBoxContainer.new()
 	result.add_theme_constant_override("separation", 10)
 	box.add_child(result)
@@ -757,8 +769,8 @@ func _card(row: Container, entry: Dictionary) -> void:
 	var buttons := _row(box)
 	buttons.alignment = BoxContainer.ALIGNMENT_END
 	if _has_game(id):
-		_button(buttons, tr("ui.new"), func() -> void: start_new(id)).add_theme_font_size_override("font_size", 17)
-		_button(buttons, "%s  %s" % [tr("ui.continue"), _clock_text(int(_prefs.get_value(_key(id), "secs", 0)))], func() -> void: continue_game(id))
+		_button(buttons, tr("ui.new"), func() -> void: start_new(id)).add_theme_font_size_override("font_size", 15)
+		_button(buttons, "%s %s" % [tr("ui.continue"), _clock_text(int(_prefs.get_value(_key(id), "secs", 0)))], func() -> void: continue_game(id)).add_theme_font_size_override("font_size", 15)
 	else:
 		_button(buttons, tr("ui.play"), func() -> void: start_new(id))
 

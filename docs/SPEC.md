@@ -31,6 +31,14 @@ No spoilers here; the solutions are in PUZZLES.md.
 | Targets | One per room: hut 15 minutes, lighthouse 25 minutes |
 | Sound | Effects and atmospheres, generated in code, no music |
 
+## Decisions (owner, 2026-11-16, third iteration)
+| Question | Choice |
+|---|---|
+| Third room | Observatory on the pass, "Col Sidereal", hard, target 35 minutes |
+| What makes it hard | Layered clues: answers need two or three sources and a step of reasoning; things learned early come back |
+| Its look | Moonlight, silver and violet; where the moonlight falls matters |
+| Its layout | A study below and the dome above, three walls each |
+
 ## Hut 2847
 - Main room (three walls): stove wall, bunk wall, kitchen wall. Act 1: light,
   warmth, the way into the warden's room.
@@ -44,6 +52,15 @@ No spoilers here; the solutions are in PUZZLES.md.
   things from every floor, so you walk down again.
 - New mechanisms: two carried items can be combined, lightning shows what the
   dark hides, a measuring puzzle, gears, valves.
+
+## Col Sidereal
+- Study (desk wall, library, chart wall) and dome (telescope, dome wheel,
+  orrery), joined by a stair behind a gate. Clues in one room explain
+  machines in the other, so you go up and down.
+- The dome turns; the slit and the moonbeam move with it.
+- New mechanisms: a tool that is not a lock, a switch puzzle, a balance, and
+  a final check that needs several things right at once, with feedback on
+  what is still wrong.
 
 ## Sound
 Atmospheres per place (wind at the hut, fire once it burns, ticking, radio

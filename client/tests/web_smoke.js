@@ -1,6 +1,6 @@
 // Browser smoke test for the web build (client/build-web.sh): loads it in
 // headless Chromium, starts the first room by tapping its card, takes the
-// matches and lights the lamp, reloads and continues, starts the second room,
+// matches and lights the lamp, reloads and continues, starts the other rooms,
 // and checks the rooms through the page's copy of the rules.
 //   (cd client/export/web && python3 -m http.server 8799) &
 //   NODE_PATH=$(npm root -g) node client/tests/web_smoke.js http://localhost:8799/ [screenshot.png]
@@ -51,7 +51,7 @@ function check(ok, what) {
 
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
   check(true, "the catalogue appears");
-  await tap(411, 416); // Play on the first card (Hut 2847)
+  await tap(264, 407); // Play on the first card (Hut 2847)
   check((await mode()) === "play", "Play starts a game");
   await tap(480, 406); // Begin (the story panel)
   await tap(281, 210); // the coat
@@ -71,14 +71,20 @@ function check(ok, what) {
   await page.reload();
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
   await page.waitForTimeout(500);
-  await tap(420, 416); // Continue on the first card
+  await tap(240, 407); // Continue on the first card
   check((await mode()) === "play" && (await state()).flags.includes("lamp_lit"), "the saved game continues after a reload");
   // The second room.
   await page.reload();
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
   await page.waitForTimeout(500);
-  await tap(823, 416); // Play on the second card (Gale Rock Light)
+  await tap(572, 407); // Play on the second card (Gale Rock Light)
   check((await page.evaluate(() => window.hut.room)) === "light" && (await state()).room === "light", "the lighthouse starts");
+  // The third room.
+  await page.reload();
+  await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
+  await page.waitForTimeout(500);
+  await tap(880, 407); // Play on the third card (Col Sidereal)
+  check((await page.evaluate(() => window.hut.room)) === "obs" && (await state()).room === "obs", "the observatory starts");
   check(errors.length === 0, "no page errors " + JSON.stringify(errors));
 
   await browser.close();
