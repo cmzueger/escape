@@ -748,9 +748,9 @@ func _card(row: Container, entry: Dictionary) -> void:
 	box.custom_minimum_size.x = 270
 	box.add_theme_constant_override("separation", 7)
 	card.add_child(box)
-	_picture(box, Vector2(270, 108), func(p: Control) -> void: art.card(id, p.size.x, p.size.y), true)
+	_picture(box, Vector2(270, 96), func(p: Control) -> void: art.card(id, p.size.x, p.size.y), true)
 	var name := _label(box, TITLES.get(id, id), 25, Art.AMBER, false)
-	name.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	_fit(name)
 	var level := int(entry.get("difficulty", 1))
 	var facts := HBoxContainer.new()
 	facts.add_theme_constant_override("separation", 10)
@@ -758,21 +758,38 @@ func _card(row: Container, entry: Dictionary) -> void:
 	_picture(facts, Vector2(76, 26), func(_p: Control) -> void:
 		for i in range(3):
 			art.padlock(12.0 + i * 26.0, 12, i < level))
-	_label(facts, "%s · %s" % [tr("diff.%d" % level), tr("ui.minutes") % int(entry.get("minutes", 30))], 17, Art.CREAM, false)
+	_fit(_label(facts, "%s · %s" % [tr("diff.%d" % level), tr("ui.minutes") % int(entry.get("minutes", 30))], 17, Art.CREAM, false))
 	var result := HBoxContainer.new()
 	result.add_theme_constant_override("separation", 10)
 	box.add_child(result)
 	var best := _best(id)
 	_stars(result, best[0], 11)
 	var note: String = tr("ui.best") % _clock_text(best[1]) if best[0] > 0 else tr("ui.unplayed")
-	_label(result, note, 16, Color(Art.CREAM, 0.8 if best[0] > 0 else 0.5), false)
+	_fit(_label(result, note, 16, Color(Art.CREAM, 0.8 if best[0] > 0 else 0.5), false))
 	var buttons := _row(box)
 	buttons.alignment = BoxContainer.ALIGNMENT_END
 	if _has_game(id):
-		_button(buttons, tr("ui.new"), func() -> void: start_new(id)).add_theme_font_size_override("font_size", 15)
-		_button(buttons, "%s %s" % [tr("ui.continue"), _clock_text(int(_prefs.get_value(_key(id), "secs", 0)))], func() -> void: continue_game(id)).add_theme_font_size_override("font_size", 15)
+		# One under the other: both fit the card in every language.
+		buttons.queue_free()
+		_button(box, "%s  %s" % [tr("ui.continue"), _clock_text(int(_prefs.get_value(_key(id), "secs", 0)))], func() -> void: continue_game(id)).add_theme_font_size_override("font_size", 17)
+		var again := _button(box, tr("ui.new"), func() -> void: start_new(id))
+		again.add_theme_font_size_override("font_size", 14)
+		again.add_theme_constant_override("h_separation", 0)
+		for state in ["normal", "hover", "pressed"]:
+			var slim: StyleBoxFlat = theme.get_stylebox(state, "Button").duplicate()
+			slim.content_margin_top = 4
+			slim.content_margin_bottom = 4
+			again.add_theme_stylebox_override(state, slim)
 	else:
 		_button(buttons, tr("ui.play"), func() -> void: start_new(id))
+
+
+## A label that is cut short with "…" instead of widening its card.
+func _fit(label: Label) -> void:
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	label.clip_text = true
+	label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 
 
 func _show_intro() -> void:

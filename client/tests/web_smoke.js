@@ -71,7 +71,7 @@ function check(ok, what) {
   await page.reload();
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
   await page.waitForTimeout(500);
-  await tap(240, 407); // Continue on the first card
+  await tap(172, 384); // Continue on the first card
   check((await mode()) === "play" && (await state()).flags.includes("lamp_lit"), "the saved game continues after a reload");
   // The second room.
   await page.reload();

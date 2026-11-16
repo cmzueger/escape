@@ -48,10 +48,15 @@ Col Sidereal (`obs`, hard, 35 min).
 - Tests: `cargo test`; `client/tests/strings_check.py`; the client play-through
   `client/tests/smoke_test.gd` (headless Godot, needs `client/build.sh debug`);
   the browser test `client/tests/web_smoke.js` (see the workflow).
+- After a change to the catalogue: `client/tests/title_shots.gd` (under
+  `xvfb-run`) renders it in all five languages with the widest cards and
+  fails if a card leaves the screen.
 - A change to a drawing's position needs the same change in `views.gd`
   (hotspots) and, for the title and intro buttons, in `web_smoke.js`.
 
 ## History (latest first)
+- **0.3.1** (2026-11-16): cards keep their width in every language (texts
+  are cut with "…", Continue and New game stand one under the other).
 - **0.3.0** (2026-11-16): third room Col Sidereal (hard, moonlight look, a
   study and a dome): layered clues, one decoder used three times. Built
   before the owner had played the lighthouse, so its difficulty is untested.
