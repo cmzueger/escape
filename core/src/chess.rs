@@ -167,7 +167,7 @@ fn clues() -> String {
             .join(",")
     };
     format!(
-        "{{\"ok\":true,\"travel\":[{}],\"sheet\":[{}],\"shelf\":[{}],\"clock_squares\":[{}],\"tiles\":[{}],\"knight_start\":[{},{}],\"jumps\":[{}],\"mini\":[{}],\"black_king\":[{},{}],\"marked\":[{}]}}",
+        "{{\"ok\":true,\"travel\":[{}],\"sheet\":[{}],\"shelf\":[{}],\"clock_squares\":[{}],\"tiles\":[{}],\"knight_start\":[{},{}],\"jumps\":[{}],\"mini\":[{}],\"black_king\":[{},{}],\"marked\":[{}],\"king_home\":[{},{}]}}",
         squares_json(&TRAVEL),
         squares_json(&SHEET),
         rows(&SHELF.iter().map(|r| &r[..]).collect::<Vec<_>>()),
@@ -179,7 +179,9 @@ fn clues() -> String {
         squares_json(&MINI),
         BLACK_KING.0,
         BLACK_KING.1,
-        pairs(&MARKED)
+        pairs(&MARKED),
+        safe_squares()[0].0,
+        safe_squares()[0].1
     )
 }
 

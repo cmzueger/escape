@@ -59,7 +59,7 @@ pub static SPEC: Spec = Spec {
         "got_bottle",
         "done",
     ],
-    items: &["can", "fullcan", "skey", "trowel", "gnomon", "bulb", "wheel"],
+    items: &["wcan", "fullcan", "skey", "trowel", "gnomon", "bulb", "wheel"],
     locks: &[
         Lock {
             name: "cab",
@@ -91,11 +91,11 @@ pub static SPEC: Spec = Spec {
     }],
     picks: &[
         Pick {
-            spot: "can",
+            spot: "wcan",
             needs: "",
             locked_msg: "",
             got: "got_can",
-            give: &["can"],
+            give: &["wcan"],
             msg: "gmsg.can",
         },
         Pick {
@@ -125,7 +125,7 @@ pub static SPEC: Spec = Spec {
     ],
     uses: &[
         Use {
-            item: "can",
+            item: "wcan",
             spot: "tap",
             needs: "",
             fail: "",
@@ -141,11 +141,11 @@ pub static SPEC: Spec = Spec {
             fail: "",
             keep: false,
             set: "bloomed",
-            give: &["can", "skey"],
+            give: &["wcan", "skey"],
             msg: "gmsg.bloomed",
         },
         Use {
-            item: "can",
+            item: "wcan",
             spot: "wilted|pot",
             needs: "nothing",
             fail: "gmsg.can_empty",
@@ -201,7 +201,7 @@ pub static SPEC: Spec = Spec {
             fail: "gmsg.pot_empty",
             keep: false,
             set: "grown",
-            give: &["can"],
+            give: &["wcan"],
             msg: "gmsg.grown",
         },
         Use {
@@ -311,9 +311,9 @@ mod tests {
     fn the_orangery_can_be_left() {
         let mut r = State::new(&SPEC);
         assert_eq!(msg(&mut r, "tap shed"), "gmsg.shed_locked");
-        msg(&mut r, "tap can");
-        assert_eq!(msg(&mut r, "use can wilted"), "gmsg.can_empty");
-        assert_eq!(msg(&mut r, "use can tap"), "gmsg.can_full");
+        msg(&mut r, "tap wcan");
+        assert_eq!(msg(&mut r, "use wcan wilted"), "gmsg.can_empty");
+        assert_eq!(msg(&mut r, "use wcan tap"), "gmsg.can_full");
         assert_eq!(msg(&mut r, "use fullcan wilted"), "gmsg.bloomed");
         assert_eq!(msg(&mut r, "use skey shed"), "gmsg.shed_open");
         assert_eq!(msg(&mut r, "tap shed"), "gmsg.shed_take");
@@ -323,7 +323,7 @@ mod tests {
         assert_eq!(msg(&mut r, "use bulb pot"), "gmsg.pot_hard");
         msg(&mut r, "use trowel pot");
         msg(&mut r, "use bulb pot");
-        msg(&mut r, "use can tap");
+        msg(&mut r, "use wcan tap");
         assert_eq!(msg(&mut r, "use fullcan pot"), "gmsg.grown");
         assert_eq!(msg(&mut r, "flip valves 0"), "gmsg.valves_stuck");
         msg(&mut r, "use wheel pipes");

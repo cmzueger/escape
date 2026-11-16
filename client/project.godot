@@ -5,8 +5,8 @@ config_version=5
 [application]
 
 config/name="Locked In"
-config/description="Escape rooms: Hut 2847, Gale Rock Light, Col Sidereal."
-config/version="0.3.1"
+config/description="Six escape rooms, easy to hard."
+config/version="0.4.0"
 config/quit_on_go_back=false
 config/icon="res://icon.svg"
 run/main_scene="res://scenes/main.tscn"

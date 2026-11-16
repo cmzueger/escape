@@ -6,8 +6,10 @@ tech stack and habits, but offline only: no server, no accounts.
 
 ## The project
 "Locked In": a catalogue of escape rooms, landscape, point and click. Rooms:
-Hut 2847 (`hut`, easy, 15 min), Gale Rock Light (`light`, medium, 25 min) and
-Col Sidereal (`obs`, hard, 35 min).
+first set Hut 2847 (`hut`, easy, 15 min), Gale Rock Light (`light`, medium,
+25 min), Col Sidereal (`obs`, hard, 35 min); second set The Orangery
+(`orangery`, easy), Curtain Call (`theatre`, medium), The Grandmaster's Study
+(`chess`, hard).
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
   `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
@@ -18,8 +20,13 @@ Col Sidereal (`obs`, hard, 35 min).
   rules' `clues`), `light.gdshader` (darkness, light pools, lightning),
   `sound.gd` and `audio/` (sounds synthesised by `audio/generate.py`, needs
   numpy and ffmpeg; the .ogg files are committed).
-- A new room: a module in `core`, an entry in `ROOMS` and `Room`, a views and
-  an art script, texts with their own key prefix (the lighthouse uses
+- The second set's rules are **data for `core/src/kit.rs`** (flags, items,
+  locks, dials, picks, uses, latching checks, a hook for the odd mechanism):
+  see `orangery.rs`, `theatre.rs`, `chess.rs`. Write new rooms this way. Their
+  pictures are in `art_set2.gd`, hotspots in `views_set2.gd`; kit locks and
+  dials are moved with `turn` and `flip`.
+- A new room: a kit spec in `core`, an entry in `ROOMS` and `Room::call`, views and
+  art, texts with their own key prefix (the lighthouse uses
   `lmsg.`, `lhint.`, `lintro.`, `lend.`; the observatory `omsg.` and so on), a card picture, a play-through in
   `smoke_test.gd`, and its solutions in `docs/PUZZLES.md`.
 - Hosted on GitHub Pages by `.github/workflows/ci.yml` (every push is tested;
@@ -55,6 +62,11 @@ Col Sidereal (`obs`, hard, 35 min).
   (hotspots) and, for the title and intro buttons, in `web_smoke.js`.
 
 ## History (latest first)
+- **0.4.0** (2026-11-16): second set of three rooms (settings, looks and names
+  chosen by the owner in three rounds, then built in one go): The Orangery,
+  Curtain Call, The Grandmaster's Study (no chess knowledge needed). The
+  catalogue shows two rows of three compact cards. Difficulty: "build now,
+  tune later".
 - **0.3.1** (2026-11-16): cards keep their width in every language (texts
   are cut with "…", Continue and New game stand one under the other).
 - **0.3.0** (2026-11-16): third room Col Sidereal (hard, moonlight look, a
@@ -71,8 +83,7 @@ Col Sidereal (`obs`, hard, 35 min).
   proposals (see SPEC). Web only, no sound yet.
 
 ## Open
-- An Android build, a custom domain, more rooms (a fourth card needs the
-  catalogue to scroll or wrap).
+- An Android build, a custom domain.
 - The owner's play test of the lighthouse and the observatory (time, what was
   unclear) and an
   opinion on the sounds, which were made without anyone hearing them.

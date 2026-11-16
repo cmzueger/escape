@@ -39,6 +39,15 @@ No spoilers here; the solutions are in PUZZLES.md.
 | Its look | Moonlight, silver and violet; where the moonlight falls matters |
 | Its layout | A study below and the dome above, three walls each |
 
+## Decisions (owner, 2026-11-16, second set)
+| Question | Choice |
+|---|---|
+| Easy | Gardener's greenhouse, "The Orangery", look: evening sun |
+| Medium | Theatre backstage, "Curtain Call", look: coloured stage lights |
+| Hard | Chess master's study, "The Grandmaster's Study", look: library green and wood; no chess knowledge needed, the room teaches the moves |
+| Catalogue | Two rows of three |
+| Tuning | Build now, adjust targets and hints after the owner's play tests |
+
 ## Hut 2847
 - Main room (three walls): stove wall, bunk wall, kitchen wall. Act 1: light,
   warmth, the way into the warden's room.

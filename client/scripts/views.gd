@@ -14,6 +14,8 @@ const PARENT := {
 
 
 static func is_closeup(view: String) -> bool:
+	if Set2Views.has(view):
+		return not Set2Views.is_wall(view)
 	if ObsViews.has(view):
 		return not (view in ObsViews.STUDY or view in ObsViews.DOME)
 	if LightViews.has(view):
@@ -23,7 +25,7 @@ static func is_closeup(view: String) -> bool:
 
 ## The view to the left (-1) or right (+1), or "" in a close-up.
 static func beside(view: String, dir: int) -> String:
-	for ring in [MAIN_ROOM, WARDEN_ROOM, ObsViews.STUDY, ObsViews.DOME]:
+	for ring in [MAIN_ROOM, WARDEN_ROOM, ObsViews.STUDY, ObsViews.DOME] + Set2Views.RINGS:
 		var i: int = ring.find(view)
 		if i >= 0:
 			return ring[posmod(i + dir, ring.size())]
@@ -31,6 +33,8 @@ static func beside(view: String, dir: int) -> String:
 
 
 static func back(view: String) -> String:
+	if Set2Views.has(view):
+		return Set2Views.PARENT.get(view, "")
 	if ObsViews.has(view):
 		return ObsViews.PARENT.get(view, "")
 	if LightViews.has(view):
@@ -45,12 +49,14 @@ static func up(view: String, st: Dictionary) -> String:
 
 ## Where a room starts.
 static func first(room: String) -> String:
-	return {"light": "L1", "obs": "S1"}.get(room, "A")
+	return {"light": "L1", "obs": "S1"}.get(room, Set2Views.FIRST.get(room, "A"))
 
 
 ## Whether a saved view can be shown again in this state.
 static func reachable(view: String, st: Dictionary) -> bool:
 	var flags: Array = st.get("flags", [])
+	if Set2Views.has(view):
+		return true
 	if ObsViews.has(view):
 		var place := view
 		while not (place in ObsViews.STUDY or place in ObsViews.DOME):
@@ -69,7 +75,7 @@ static func reachable(view: String, st: Dictionary) -> bool:
 
 ## Views that move even when nothing is tapped.
 static func animated(view: String) -> bool:
-	return view in ["A", "radio", "baro"] or LightViews.has(view) or view in ObsViews.DOME
+	return view in ["A", "radio", "baro"] or LightViews.has(view) or view in ObsViews.DOME or view in ["G1", "G2", "pond", "C1", "T3", "mirror"]
 
 
 static func _wheels(lock: String, count: int, x0: float, y0: float) -> Array:
@@ -83,6 +89,8 @@ static func _wheels(lock: String, count: int, x0: float, y0: float) -> Array:
 
 
 static func spots(view: String, st: Dictionary, art: ArtLight = null) -> Array:
+	if Set2Views.has(view):
+		return Set2Views.spots(view, st, art as ArtSet2)
 	if ObsViews.has(view):
 		return ObsViews.spots(view, st)
 	if LightViews.has(view):
@@ -178,6 +186,8 @@ static func spots(view: String, st: Dictionary, art: ArtLight = null) -> Array:
 
 ## {"dark": 0..1, "warm": [Vector4 x4 at most], "cold": Vector4}
 static func lights(view: String, st: Dictionary) -> Dictionary:
+	if Set2Views.has(view):
+		return Set2Views.lights(view, st)
 	if ObsViews.has(view):
 		return ObsViews.lights(view, st)
 	if LightViews.has(view):

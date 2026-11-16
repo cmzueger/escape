@@ -151,3 +151,54 @@ falls on the plaque opposite the slit and shows a digit there:
 - The decoder is used forwards twice (box, door) and backwards once
   (orrery); the planisphere is the only clue that is a tool with no lock.
 - The intro recommends paper and pencil: eight figure-digit pairs to keep.
+
+# The Orangery
+1. **Wilted flower.** Watering can (floor) on the tap (pond wall), then on the
+   drooping flower at the end of the bench → it blooms, a key hangs on it.
+2. **Green cupboard.** Key → trowel and brass pointer.
+3. **Sundial.** Pointer on the sundial → the shadow falls on **7**.
+4. **Seed cabinet** (three digits; plaque: sundial, lily, butterfly):
+   7, 5 lilies on the pond, 3 butterflies over the bench → **753**. Inside:
+   bulb and valve wheel.
+5. **The big pot.** Trowel, bulb, then a full can → a tall flower with four
+   blossoms (from the top: white, red, violet, yellow).
+6. **Pipes.** Wheel on the bare valve; open the first and third valve, close
+   the middle one (it leads to the drain) → the fountain runs.
+7. **Bottle.** It drifts to the pond's edge: tap the pond, then the bottle.
+   Its note: read the flower from the bottom up.
+8. **Door** (four colours): **yellow, violet, red, white**.
+
+# Curtain Call
+1. **Lighting desk.** Plug (props table, wings) into the desk (stage).
+2. **Prop trunk** (three digits). Call sheet in the wings: magenta, yellow,
+   cyan. Mix two lamps for each; the backdrop then shows a digit: red + blue
+   → 8, red + green → 4, green + blue → 2 → **842**. Inside: crank; the
+   prompt book stays in the trunk.
+3. **Winch.** Crank → the lighting bar comes down, the follow spot can move.
+4. **Trap.** Prompt book: the stage from above, a cross at the back right.
+   On the desk move the spot fully right and fully up → trap opens → mask.
+5. **Masks.** Hang the mask on the empty hook; press in the order of the
+   poster's acts: **angry, happy, sleepy, sad** → niche → stage door key.
+6. **Mirror.** Each switch flips its bulb and the next clockwise; from the
+   start press switches **1, 3 and 4** (clockwise from the top) → the glass
+   shows four dots: blue, red, white, yellow.
+7. **Key** into the stage door.
+8. **Door code.** Costume tags: blue 1, red 3, white 5, yellow 6 → **1356**.
+
+# The Grandmaster's Study
+1. **Desk drawer** (letter and number). Travel board: the one empty square
+   both the rook (b6) and the bishop (g2) can reach, the pawn on b7 blocking
+   → **c6**. Inside: rook; a score sheet appears on the desk.
+2. **Wall safe** behind the portrait (four digits). Score sheet: c3, f1, a2,
+   h3; the bookshelf is a board a to h by 1 to 3 with a digit on every book
+   → **2958**. Inside: bishop.
+3. **Mantel clock.** Five named squares, each to be set light or dark:
+   **b4 dark, e4 light, g1 dark, c8 light, h5 light**. Inside: knight.
+4. **Trophy cabinet** (four digits). Tile panel: start on the ringed tile,
+   make the three jumps as drawn, read the digits → **2239**. Inside: white
+   king.
+5. **Small board.** The only square not attacked by queen, rook and bishop:
+   top row, third from the left. Drawer: brass key.
+6. **Big board.** All three pieces must attack the black king on e5:
+   **rook e1, bishop h8, knight c4** → the king falls, steel key under him.
+7. **Door.** Both keys.

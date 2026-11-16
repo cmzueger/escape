@@ -6,10 +6,13 @@ extends Control
 const SAVE_PATH := "user://hut2847.cfg"
 const SCENE_H := 472.0
 const LANGS := ["en", "de", "fr", "it", "es"]
-const TITLES := {"hut": "Hut 2847", "light": "Gale Rock Light", "obs": "Col Sidereal"}
+const TITLES := {
+	"hut": "Hut 2847", "light": "Gale Rock Light", "obs": "Col Sidereal",
+	"orangery": "The Orangery", "theatre": "Curtain Call", "chess": "The Grandmaster's Study",
+}
 ## Texts of the lighthouse have their keys with an "l" in front, those of
 ## the observatory with an "o".
-const PREFIX := {"hut": "", "light": "l", "obs": "o"}
+const PREFIX := {"hut": "", "light": "l", "obs": "o", "orangery": "g", "theatre": "t", "chess": "c"}
 const SLOTS := 8
 const HINT_RECT := Rect2(800, 484, 136, 44)
 const MENU_RECT := Rect2(908, 8, 44, 44)
@@ -19,13 +22,18 @@ const BACK_RECT := Rect2(10, 414, 100, 52)
 const UP_RECT := Rect2(490, 6, 100, 50)
 const UNLOCKS := ["msg.cup_open", "msg.door2_unlocked", "msg.drawer_open", "msg.safe_open", "msg.baro_open",
 	"lmsg.hatch1_open", "lmsg.chest_open", "lmsg.hatch2_open", "lmsg.locker_open", "lmsg.hatch3_open",
-	"omsg.drawer_open", "omsg.cabinet_open", "omsg.box_open", "omsg.gate_open", "omsg.atlas_open", "omsg.orrery_open", "omsg.door_open"]
+	"omsg.drawer_open", "omsg.cabinet_open", "omsg.box_open", "omsg.gate_open", "omsg.atlas_open", "omsg.orrery_open", "omsg.door_open",
+	"gmsg.cab_open", "gmsg.shed_open", "gmsg.door_open", "tmsg.trunk_open", "tmsg.trap_open", "tmsg.masks_open",
+	"tmsg.door_open", "tmsg.key_in", "cmsg.drawer_open", "cmsg.safe_open", "cmsg.clock_open", "cmsg.cab_open",
+	"cmsg.king_safe", "cmsg.king_down", "cmsg.door_open", "cmsg.key_in"]
 const WRONG := ["msg.no_use", "lmsg.no_use", "msg.signal_wrong", "lmsg.lamp_wrong", "lmsg.lamp_not_ready",
 	"lmsg.oil_little", "lmsg.oil_much", "lmsg.crank_free", "msg.stove_need", "msg.bucket_cold", "msg.key_wrong",
-	"omsg.no_use", "omsg.wheel_dead", "omsg.board_dead", "omsg.scope_sags", "omsg.see_dome", "omsg.see_stars", "omsg.bar_empty"]
+	"omsg.no_use", "omsg.wheel_dead", "omsg.board_dead", "omsg.scope_sags", "omsg.see_dome", "omsg.see_stars", "omsg.bar_empty",
+	"gmsg.no_use", "tmsg.no_use", "cmsg.no_use", "gmsg.can_empty", "gmsg.pot_hard", "gmsg.valves_stuck",
+	"tmsg.desk_dead", "tmsg.masks_wrong", "tmsg.spot_high", "cmsg.king_attacked", "cmsg.square_taken"]
 
 var link := RoomLink.new()
-var art := ArtObs.new()
+var art := ArtSet2.new()
 var sound := Sound.new()
 var rooms: Array = []
 var room := "hut"
@@ -184,6 +192,9 @@ func _has_game(id: String) -> bool:
 # --- Drawing -----------------------------------------------------------------
 
 func _refresh() -> void:
+	# The hotspots of some views depend on the clues.
+	art.st = st
+	art.clues = clues
 	var lights := Views.lights(view, st) if mode != "title" and mode != "load" else {"dark": 0.0, "warm": [], "cold": Vector4.ZERO}
 	var material: ShaderMaterial = _light.material
 	material.set_shader_parameter("dark", lights["dark"])
@@ -212,6 +223,13 @@ func _ambience() -> void:
 		levels["amb_sea"] = 0.55 + 0.15 * LightViews.FLOORS.find(floor_of)
 		if view == "L2":
 			levels["amb_fire"] = 0.25
+	elif mode != "load" and room == "orangery":
+		levels["amb_wind"] = 0.12
+	elif mode != "load" and room == "theatre":
+		levels["amb_static"] = 0.05 if st.get("mix", "") != "" else 0.0
+	elif mode != "load" and room == "chess":
+		levels["amb_fire"] = 0.7 if view == "C1" else 0.3
+		levels["amb_tick"] = 1.0 if view == "cclock" else 0.35
 	elif mode != "load" and room == "obs":
 		var up: bool = Views.reachable(view, {"flags": []}) == false
 		levels["amb_wind"] = 0.3 if up else 0.14
@@ -490,13 +508,14 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 		sound.play("gear")
 	elif msg in ["lmsg.wind", "lmsg.gear_on", "lmsg.gear_off"]:
 		sound.play("gear")
-	elif msg in ["msg.bucket_melt", "lmsg.oil_in"] or word == "oil":
+	elif msg in ["msg.bucket_melt", "lmsg.oil_in", "gmsg.can_full", "gmsg.bloomed", "gmsg.grown", "gmsg.fountain"] or word == "oil":
 		sound.play("pour")
 	elif word == "key":
 		sound.play("beep_l" if command.ends_with("l") else "beep_s", 0.0, 0.0)
 	elif word in ["wire", "valve"]:
 		sound.play("gear")
-	elif word in ["dial", "clock", "baro", "tune", "pin", "lamp", "planet", "weight", "ra", "dec", "plani"]:
+	elif word in ["dial", "clock", "baro", "tune", "pin", "lamp", "planet", "weight", "ra", "dec", "plani",
+			"turn", "flip", "mask", "bulb", "king"]:
 		sound.play("tick")
 	elif st.get("inv", []).size() > before.get("inv", []).size():
 		sound.play("pick")
@@ -711,7 +730,7 @@ func _languages(box: Container, again: Callable) -> void:
 	mute.add_theme_font_size_override("font_size", 16)
 
 
-## The catalogue: one card per room.
+## The catalogue: a card per room, three to a row.
 func _show_title() -> void:
 	mode = "title"
 	_refresh()
@@ -720,19 +739,23 @@ func _show_title() -> void:
 	var page := VBoxContainer.new()
 	page.set_anchors_preset(Control.PRESET_FULL_RECT)
 	page.alignment = BoxContainer.ALIGNMENT_CENTER
-	page.add_theme_constant_override("separation", 8)
+	page.add_theme_constant_override("separation", 6)
 	_panels.add_child(page)
-	_label(page, "LOCKED IN", 46, Art.AMBER, false)
-	_label(page, tr("title.tagline"), 17, Color(Art.CREAM, 0.75), false)
-	var cards := _row(page, 14)
-	for entry in rooms:
-		_card(cards, entry)
+	_label(page, "LOCKED IN", 38, Art.AMBER, false)
+	_label(page, tr("title.tagline"), 15, Color(Art.CREAM, 0.75), false)
+	var cards: HBoxContainer = null
+	for i in range(rooms.size()):
+		if i % 3 == 0:
+			cards = _row(page, 12)
+		_card(cards, rooms[i])
 	_languages(page, _show_title)
 	var window := DisplayServer.window_get_size()
 	if window.y > window.x:
-		_label(page, tr("ui.rotate"), 20, Art.AMBER)
+		_label(page, tr("ui.rotate"), 18, Art.AMBER)
 
 
+## One room: picture on the left, name, difficulty and best result on the
+## right, the buttons below.
 func _card(row: Container, entry: Dictionary) -> void:
 	var id: String = entry["id"]
 	var card := PanelContainer.new()
@@ -740,48 +763,68 @@ func _card(row: Container, entry: Dictionary) -> void:
 	style.bg_color = Color(0.085, 0.058, 0.045, 0.96)
 	style.border_color = Color(Art.BRASS, 0.5)
 	style.set_border_width_all(2)
-	style.set_corner_radius_all(16)
-	style.set_content_margin_all(12)
+	style.set_corner_radius_all(14)
+	style.set_content_margin_all(9)
 	card.add_theme_stylebox_override("panel", style)
 	row.add_child(card)
 	var box := VBoxContainer.new()
-	box.custom_minimum_size.x = 270
-	box.add_theme_constant_override("separation", 7)
+	box.custom_minimum_size.x = 278
+	box.add_theme_constant_override("separation", 6)
 	card.add_child(box)
-	_picture(box, Vector2(270, 96), func(p: Control) -> void: art.card(id, p.size.x, p.size.y), true)
-	var name := _label(box, TITLES.get(id, id), 25, Art.AMBER, false)
-	_fit(name)
-	var level := int(entry.get("difficulty", 1))
-	var facts := HBoxContainer.new()
-	facts.add_theme_constant_override("separation", 10)
-	box.add_child(facts)
-	_picture(facts, Vector2(76, 26), func(_p: Control) -> void:
-		for i in range(3):
-			art.padlock(12.0 + i * 26.0, 12, i < level))
-	_fit(_label(facts, "%s · %s" % [tr("diff.%d" % level), tr("ui.minutes") % int(entry.get("minutes", 30))], 17, Art.CREAM, false))
-	var result := HBoxContainer.new()
-	result.add_theme_constant_override("separation", 10)
-	box.add_child(result)
-	var best := _best(id)
-	_stars(result, best[0], 11)
-	var note: String = tr("ui.best") % _clock_text(best[1]) if best[0] > 0 else tr("ui.unplayed")
-	_fit(_label(result, note, 16, Color(Art.CREAM, 0.8 if best[0] > 0 else 0.5), false))
-	var buttons := _row(box)
-	buttons.alignment = BoxContainer.ALIGNMENT_END
-	if _has_game(id):
-		# One under the other: both fit the card in every language.
-		buttons.queue_free()
-		_button(box, "%s  %s" % [tr("ui.continue"), _clock_text(int(_prefs.get_value(_key(id), "secs", 0)))], func() -> void: continue_game(id)).add_theme_font_size_override("font_size", 17)
-		var again := _button(box, tr("ui.new"), func() -> void: start_new(id))
-		again.add_theme_font_size_override("font_size", 14)
-		again.add_theme_constant_override("h_separation", 0)
-		for state in ["normal", "hover", "pressed"]:
-			var slim: StyleBoxFlat = theme.get_stylebox(state, "Button").duplicate()
-			slim.content_margin_top = 4
-			slim.content_margin_bottom = 4
-			again.add_theme_stylebox_override(state, slim)
+	var top := HBoxContainer.new()
+	top.add_theme_constant_override("separation", 9)
+	box.add_child(top)
+	_picture(top, Vector2(104, 82), func(p: Control) -> void: art.card(id, p.size.x, p.size.y), true)
+	var facts := VBoxContainer.new()
+	facts.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	facts.add_theme_constant_override("separation", 2)
+	top.add_child(facts)
+	var title: String = TITLES.get(id, id)
+	if title.length() > 16:
+		# A long name takes two lines instead of being cut.
+		var long_name := _label(facts, title, 16, Art.AMBER, true)
+		long_name.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+		long_name.add_theme_constant_override("line_spacing", -3)
 	else:
-		_button(buttons, tr("ui.play"), func() -> void: start_new(id))
+		_fit(_label(facts, title, 19, Art.AMBER, false))
+	var level := int(entry.get("difficulty", 1))
+	var line := HBoxContainer.new()
+	line.add_theme_constant_override("separation", 6)
+	facts.add_child(line)
+	_picture(line, Vector2(72, 24), func(_p: Control) -> void:
+		for i in range(3):
+			art.padlock(11.0 + i * 24.0, 11, i < level))
+	_fit(_label(line, tr("ui.minutes") % int(entry.get("minutes", 30)), 15, Art.CREAM, false))
+	_fit(_label(facts, tr("diff.%d" % level), 15, Color(Art.CREAM, 0.8), false))
+	var result := HBoxContainer.new()
+	result.add_theme_constant_override("separation", 6)
+	facts.add_child(result)
+	var best := _best(id)
+	_stars(result, best[0], 8)
+	_fit(_label(result, _clock_text(best[1]) if best[0] > 0 else "", 14, Color(Art.CREAM, 0.8), false))
+	var buttons := HBoxContainer.new()
+	buttons.add_theme_constant_override("separation", 6)
+	box.add_child(buttons)
+	if _has_game(id):
+		_slim(_button(buttons, "%s  %s" % [tr("ui.continue"), _clock_text(int(_prefs.get_value(_key(id), "secs", 0)))], func() -> void: continue_game(id)), 15, 2.4)
+		_slim(_button(buttons, tr("ui.new_short"), func() -> void: start_new(id)), 13, 1.0)
+	else:
+		_slim(_button(buttons, tr("ui.play"), func() -> void: start_new(id)), 16, 1.0)
+
+
+## A low button that shares its row and never widens the card.
+func _slim(button: Button, size: int, share: float) -> void:
+	button.add_theme_font_size_override("font_size", size)
+	button.clip_text = true
+	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	button.size_flags_stretch_ratio = share
+	for state in ["normal", "hover", "pressed"]:
+		var slim: StyleBoxFlat = theme.get_stylebox(state, "Button").duplicate()
+		slim.content_margin_top = 5
+		slim.content_margin_bottom = 5
+		slim.content_margin_left = 6
+		slim.content_margin_right = 6
+		button.add_theme_stylebox_override(state, slim)
 
 
 ## A label that is cut short with "…" instead of widening its card.

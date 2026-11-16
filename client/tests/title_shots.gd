@@ -12,21 +12,26 @@ func _initialize() -> void:
 	root.add_child(main)
 	for i in range(10):
 		await process_frame
-	for id in ["hut", "light", "obs"]:
+	for id in ["hut", "light", "obs", "orangery", "theatre", "chess"]:
 		main.start_new(id)
 		main._close_panel()
 		main.seconds = 754.0
 		main._save()
 	var widest := 0.0
+	var lowest := 0.0
 	for lang in main.LANGS:
 		TranslationServer.set_locale(lang)
 		main._show_title()
 		await process_frame
 		await process_frame
-		for card in main._panels.get_child(0).get_child(2).get_children():
-			widest = maxf(widest, card.get_global_rect().end.x)
+		for row in main._panels.get_child(0).get_children():
+			if row is HBoxContainer:
+				for card in row.get_children():
+					widest = maxf(widest, card.get_global_rect().end.x)
+					lowest = maxf(lowest, card.get_global_rect().end.y)
 		await RenderingServer.frame_post_draw
 		root.get_texture().get_image().save_png("%s/title_%s.png" % [folder, lang])
-	print("cards end at x = %d (screen: 960)" % int(widest))
-	print("RESULT: %s" % ("PASS" if widest <= 960.0 else "FAIL"))
-	quit(0 if widest <= 960.0 else 1)
+	print("cards end at x = %d, rows at y = %d (screen: 960 x 540)" % [int(widest), int(lowest)])
+	var fits := widest <= 960.0 and lowest <= 540.0
+	print("RESULT: %s" % ("PASS" if fits else "FAIL"))
+	quit(0 if fits else 1)

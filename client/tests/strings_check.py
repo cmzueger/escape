@@ -28,7 +28,19 @@ for row in rows[1:]:
 hut = (root / "core/src/hut.rs").read_text()
 light = (root / "core/src/light.rs").read_text()
 obs = (root / "core/src/obs.rs").read_text()
+kits = {"g": "orangery", "t": "theatre", "c": "chess"}
+kit_text = {pre: (root / ("core/src/%s.rs" % name)).read_text() for pre, name in kits.items()}
 wanted = set(re.findall(r'"([lo]?msg\.\w+)"', hut + light + obs))
+for pre, text in kit_text.items():
+    wanted |= set(re.findall(r'"(%smsg\.\w+)"' % pre, text))
+    wanted |= {pre + "msg.nothing", pre + "msg.no_use"}
+    flavour = re.search(r"flavour: &\[(.*?)\]", text, re.S).group(1)
+    wanted |= {pre + "msg." + spot for spot in re.findall(r'"(\w+)"', flavour)}
+    items = re.search(r"items: &\[(.*?)\]", text, re.S).group(1)
+    wanted |= {"item." + name for name in re.findall(r'"(\w+)"', items)}
+    puzzles = len(re.findall(r"Puzzle \{", text))
+    wanted |= {"%shint.%d.%d" % (pre, n, level) for n in range(1, puzzles + 1) for level in range(1, 4)}
+    wanted |= {pre + "intro.%d" % i for i in (1, 2, 3)} | {pre + "end.title", pre + "end.text"}
 for script in (root / "client/scripts").glob("*.gd"):
     wanted |= set(re.findall(r'tr\("([a-z_]+\.[a-z_0-9.]+)"\)', script.read_text()))
 for core in (hut, light, obs):
