@@ -75,6 +75,13 @@ easy), The Watchmaker (`watch`, medium), The Night Gallery (`museum`, hard).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.6.2** (2026-11-17): a hint asked at a puzzle that is not ready yet
+  (or already solved) said nothing and gave another puzzle's hint; the owner
+  took it for the puzzle in view (chess room, small board). The hint panel
+  now says when a hint is for another puzzle (`where` in the rules' answer:
+  here, later, done; one `pick_hint` in `lib.rs` for every room).
+  `views_check.py` also checks that the views named in hint lists exist in
+  the room's own module (the lighthouse chart had lost its hint).
 - **0.6.1** (2026-11-17): fixes from the owner's first play tests. The
   lighthouse's chart close-up shared its view name with the chess room's and
   led into it; the observatory's dome stopped turning after the photograph

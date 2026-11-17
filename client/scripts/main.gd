@@ -930,6 +930,9 @@ func _hint_panel(info: Dictionary) -> void:
 	st = info.get("state", st)
 	var box := _open_panel(620.0)
 	_label(box, tr("hint.title"), 28, Art.AMBER)
+	var note := str(info.get("where", ""))
+	if note in ["later", "done"]:
+		_label(box, tr("hint." + note), 17, Art.AMBER)
 	if level == 0:
 		_label(box, tr("hint.ask"), 20)
 	for i in range(1, level + 1):

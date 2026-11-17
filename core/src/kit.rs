@@ -213,9 +213,8 @@ impl State {
         format!("{}msg.{what}", self.spec.prefix)
     }
 
-    fn hint_puzzle(&self, view: &str) -> usize {
-        let solved = self.solved();
-        let open = |p: usize| (self.spec.puzzles[p].available)(self) && !solved[p];
+    fn hint_puzzle(&self, view: &str) -> (usize, &'static str) {
+        let available: Vec<bool> = self.spec.puzzles.iter().map(|p| (p.available)(self)).collect();
         let wanted = self
             .spec
             .hint_views
@@ -223,12 +222,7 @@ impl State {
             .find(|(v, _)| *v == view)
             .map(|(_, p)| *p)
             .unwrap_or(&[]);
-        wanted
-            .iter()
-            .copied()
-            .find(|p| open(*p))
-            .or_else(|| (0..solved.len()).find(|p| open(*p)))
-            .unwrap_or(solved.len() - 1)
+        crate::pick_hint(wanted, &available, &self.solved())
     }
 
     fn tap(&mut self, spot: &str) -> Reply {
@@ -453,16 +447,11 @@ impl State {
                     String::new()
                 }),
             Some(kind @ ("hint" | "hintinfo")) => {
-                let p = self.hint_puzzle(w.next().unwrap_or(""));
+                let (p, note) = self.hint_puzzle(w.next().unwrap_or(""));
                 if kind == "hint" && self.hints[p] < 3 && !self.done {
                     self.hints[p] += 1;
                 }
-                return format!(
-                    "{{\"ok\":true,\"puzzle\":{},\"level\":{},\"state\":{}}}",
-                    p + 1,
-                    self.hints[p],
-                    self.state_json()
-                );
+                return crate::hint_json(p, note, self.hints[p], &self.state_json());
             }
             Some(_) if self.done => Ok(String::new()),
             Some("tap") => w.next().ok_or_else(|| bad("tap")).and_then(|s| self.tap(s)),

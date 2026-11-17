@@ -41,6 +41,27 @@ for name in arts:
             helpers[f].add(name)
 
 failures = 0
+# Every view a room's hint list names must exist (a renamed view loses its hints).
+core = here.parent.parent / "core" / "src"
+for rs in sorted(core.glob("*.rs")):
+    text = rs.read_text()
+    names = []
+    m = re.search(r"hint_views: &\[(.*?)\n    \],", text, re.S)
+    if m:
+        names += re.findall(r'\("(\w+)", &\[', m.group(1))
+    m = re.search(r"fn hint_puzzle.*?let wanted: &\[usize\] = match view \{(.*?)\n        \};", text, re.S)
+    if m:
+        for arm in re.findall(r'^\s+((?:"\w+"(?: \| )?)+) =>', m.group(1), re.M):
+            names += re.findall(r'"(\w+)"', arm)
+    module = {"hut": "views.gd", "light": "views_light.gd", "obs": "views_obs.gd"}.get(rs.stem)
+    for name in views[3:]:
+        m = re.search(r"const FIRST := \{(.*?)\}", (here / name).read_text())
+        if m and '"%s"' % rs.stem in m.group(1):
+            module = name
+    for v in names:
+        if module not in owner.get(v, set()):
+            print("FAIL hint view %s in %s is no view of %s" % (v, rs.name, module))
+            failures += 1
 for kind, table in (("view", owner), ("picture", drawn), ("art helper", helpers)):
     for v, where in sorted(table.items()):
         if len(where) > 1:

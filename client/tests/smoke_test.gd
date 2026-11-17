@@ -283,6 +283,15 @@ func _run() -> void:
 	await _museum()
 
 	check(main.errors.is_empty(), "no refused commands in the play-throughs %s" % [main.errors])
+	# A hint asked at a puzzle that is not ready yet says it is for another one.
+	main.start_new("chess")
+	main._close_panel()
+	main.go_view("mini")
+	var info: Dictionary = main.link.send("hintinfo mini")
+	check(info.get("where", "") == "later" and int(info.get("puzzle", 0)) == 1, "the small board's hint says it is not ready (%s)" % info.get("where", ""))
+	main._show_hint()
+	await shot("hint_later")
+	main._close_panel()
 	# A lighthouse game saved in another room's view continues in the lighthouse.
 	main.start_new("light")
 	main._close_panel()

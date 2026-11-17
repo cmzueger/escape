@@ -282,10 +282,9 @@ impl Hut {
     }
 
     /// The puzzle (0..9) a hint asked for in `view` is about.
-    fn hint_puzzle(&self, view: &str) -> usize {
+    fn hint_puzzle(&self, view: &str) -> (usize, &'static str) {
         let solved = self.solved();
         let available = self.available();
-        let open = |p: usize| available[p] && !solved[p];
         let wanted: &[usize] = match view {
             "lock" | "C" => &[1, 2],
             "A" => &[0, 2],
@@ -299,12 +298,7 @@ impl Hut {
             "radio" => &[6, 7, 8],
             _ => &[],
         };
-        wanted
-            .iter()
-            .copied()
-            .find(|p| open(*p))
-            .or_else(|| (0..9).find(|p| open(*p)))
-            .unwrap_or(8)
+        crate::pick_hint(wanted, &available, &solved)
     }
 
     fn tap(&mut self, spot: &str) -> Reply {
@@ -811,16 +805,11 @@ impl Hut {
                     ""
                 }),
             Some(kind @ ("hint" | "hintinfo")) => {
-                let p = self.hint_puzzle(w.next().unwrap_or(""));
+                let (p, note) = self.hint_puzzle(w.next().unwrap_or(""));
                 if kind == "hint" && self.hints[p] < 3 && !self.done {
                     self.hints[p] += 1;
                 }
-                return format!(
-                    "{{\"ok\":true,\"puzzle\":{},\"level\":{},\"state\":{}}}",
-                    p + 1,
-                    self.hints[p],
-                    self.state_json()
-                );
+                return crate::hint_json(p, note, self.hints[p], &self.state_json());
             }
             Some(_) if self.done => Ok(""),
             Some("tap") => w.next().ok_or_else(|| bad("tap")).and_then(|s| self.tap(s)),

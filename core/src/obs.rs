@@ -327,10 +327,9 @@ impl Obs {
         crate::halves(&self.hints, self.secs, PAR_MINUTES)
     }
 
-    fn hint_puzzle(&self, view: &str) -> usize {
+    fn hint_puzzle(&self, view: &str) -> (usize, &'static str) {
         let solved = self.solved();
         let available = self.available();
-        let open = |p: usize| available[p] && !solved[p];
         let wanted: &[usize] = match view {
             "S1" => &[0, 1, 9],
             "notes" => &[0, 4, 6],
@@ -350,12 +349,7 @@ impl Obs {
             "plate" | "door" => &[9],
             _ => &[],
         };
-        wanted
-            .iter()
-            .copied()
-            .find(|p| open(*p))
-            .or_else(|| (0..10).find(|p| open(*p)))
-            .unwrap_or(9)
+        crate::pick_hint(wanted, &available, &solved)
     }
 
     fn tap(&mut self, spot: &str) -> Reply {
@@ -773,16 +767,11 @@ impl Obs {
                     ""
                 }),
             Some(kind @ ("hint" | "hintinfo")) => {
-                let p = self.hint_puzzle(w.next().unwrap_or(""));
+                let (p, note) = self.hint_puzzle(w.next().unwrap_or(""));
                 if kind == "hint" && self.hints[p] < 3 && !self.done {
                     self.hints[p] += 1;
                 }
-                return format!(
-                    "{{\"ok\":true,\"puzzle\":{},\"level\":{},\"state\":{}}}",
-                    p + 1,
-                    self.hints[p],
-                    self.state_json()
-                );
+                return crate::hint_json(p, note, self.hints[p], &self.state_json());
             }
             Some(_) if self.done => Ok(""),
             Some("tap") => w.next().ok_or_else(|| bad("tap")).and_then(|s| self.tap(s)),

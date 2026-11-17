@@ -278,10 +278,9 @@ impl Light {
         crate::halves(&self.hints, self.secs, PAR_MINUTES)
     }
 
-    fn hint_puzzle(&self, view: &str) -> usize {
+    fn hint_puzzle(&self, view: &str) -> (usize, &'static str) {
         let solved = self.solved();
         let available = self.available();
-        let open = |p: usize| available[p] && !solved[p];
         let wanted: &[usize] = match view {
             "L1" => &[0, 5],
             "oil" => &[5],
@@ -291,7 +290,7 @@ impl Light {
             "L3" => &[3, 4, 7],
             "flags" | "slate" | "locker" => &[3],
             "window" => &[4],
-            "chart" => &[7],
+            "seachart" => &[7],
             "L4" => &[6, 8, 5, 7, 4, 9],
             "gears" => &[6],
             "drum" => &[7],
@@ -299,13 +298,7 @@ impl Light {
             "bearing" => &[4],
             _ => &[],
         };
-        // The last puzzle (light the lamp) only once the others are done.
-        wanted
-            .iter()
-            .copied()
-            .find(|p| open(*p))
-            .or_else(|| (0..10).find(|p| open(*p)))
-            .unwrap_or(9)
+        crate::pick_hint(wanted, &available, &solved)
     }
 
     fn pick(&mut self, flag: &'static str, item: &'static str, msg: &'static str) -> &'static str {
@@ -734,16 +727,11 @@ impl Light {
                     ""
                 }),
             Some(kind @ ("hint" | "hintinfo")) => {
-                let p = self.hint_puzzle(w.next().unwrap_or(""));
+                let (p, note) = self.hint_puzzle(w.next().unwrap_or(""));
                 if kind == "hint" && self.hints[p] < 3 && !self.done {
                     self.hints[p] += 1;
                 }
-                return format!(
-                    "{{\"ok\":true,\"puzzle\":{},\"level\":{},\"state\":{}}}",
-                    p + 1,
-                    self.hints[p],
-                    self.state_json()
-                );
+                return crate::hint_json(p, note, self.hints[p], &self.state_json());
             }
             Some(_) if self.done => Ok(""),
             Some("tap") => w.next().ok_or_else(|| bad("tap")).and_then(|s| self.tap(s)),

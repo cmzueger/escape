@@ -93,6 +93,34 @@ pub(crate) fn digits<const N: usize>(s: &str, max: u8) -> Option<[u8; N]> {
     a.iter().all(|d| *d <= max).then_some(a)
 }
 
+/// The puzzle a hint is for, asked in a view whose puzzles are `wanted`:
+/// the first open one there, else the first open one in the room. The note
+/// says why: `here`, `later` (the view's puzzle is not ready yet), `done`
+/// (everything in this view is solved) or empty (the view names no puzzle).
+pub(crate) fn pick_hint(wanted: &[usize], available: &[bool], solved: &[bool]) -> (usize, &'static str) {
+    let open = |p: usize| available[p] && !solved[p];
+    if let Some(p) = wanted.iter().copied().find(|p| open(*p)) {
+        return (p, "here");
+    }
+    let p = (0..solved.len()).find(|p| open(*p)).unwrap_or(solved.len() - 1);
+    let note = if wanted.is_empty() {
+        ""
+    } else if wanted.iter().all(|p| solved[*p]) {
+        "done"
+    } else {
+        "later"
+    };
+    (p, note)
+}
+
+/// The answer to `hint` and `hintinfo`.
+pub(crate) fn hint_json(puzzle: usize, note: &str, level: u8, state: &str) -> String {
+    format!(
+        "{{\"ok\":true,\"puzzle\":{},\"level\":{level},\"where\":\"{note}\",\"state\":{state}}}",
+        puzzle + 1
+    )
+}
+
 pub(crate) fn bad(what: &str) -> String {
     format!("bad command: {what}")
 }
@@ -204,6 +232,23 @@ mod tests {
         }
         assert!(r.call("room cellar").starts_with("{\"ok\":false"));
         assert!(r.call("room hut").contains("\"inv\":[]"));
+    }
+
+    #[test]
+    fn hints_say_why() {
+        let mut r = Room::new();
+        r.call("room chess");
+        // The small board needs a piece found later: the hint is for another
+        // puzzle, and says so.
+        let info = r.call("hintinfo mini");
+        assert!(
+            info.contains("\"where\":\"later\"") && info.contains("\"puzzle\":1,"),
+            "{info}"
+        );
+        assert!(r.call("hintinfo travel").contains("\"where\":\"here\""));
+        assert!(r.call("hintinfo nowhere").contains("\"where\":\"\""));
+        r.call("room light");
+        assert!(r.call("hintinfo seachart").contains("\"where\":\"later\""));
     }
 
     #[test]

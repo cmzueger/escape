@@ -462,7 +462,6 @@ pub static SPEC: Spec = Spec {
         ("mini", &[4]),
         ("bigboard", &[5]),
         ("chart", &[0, 5, 4]),
-        ("cdoor", &[6]),
     ],
     done_flag: "done",
     clues,
