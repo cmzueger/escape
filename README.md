@@ -8,18 +8,18 @@ Escape rooms played in the browser. Offline, no accounts.
 | Gale Rock Light | medium | 15 min | A dark lighthouse in a gale and a ship heading for the rocks. Ten puzzles on four floors. |
 | Col Sidereal | hard | 30 min | An observatory on a pass whose door only opens once the night's observation is recorded. Ten layered puzzles in a study and a dome. |
 | The Orangery | easy | 5 min | A greenhouse in the evening sun, latched from outside. Eight puzzles with water, plants and colours. |
-| Curtain Call | medium | 10 min | Backstage after the last performance. Eight puzzles with stage lights, masks and costumes. |
+| Curtain Call | easy | 10 min | Backstage after the last performance. Eight puzzles with stage lights, masks and costumes. |
 | The Grandmaster's Study | hard | 25 min | Seven problems about how chess pieces move; a chart in the room teaches the moves. |
 | Low Tide | easy | 5 min | A bathing hut whose door has swollen shut. Six puzzles with shells, kites and the tide. |
-| Night Train | medium | 10 min | A sealed sleeping compartment. Six puzzles with a timetable, a ticket and luggage. |
-| The Alchemist's Cellar | hard | 20 min | Make a golden key. Six puzzles about doing things in the right way and order. |
+| Night Train | easy | 10 min | A sealed sleeping compartment. Six puzzles with a timetable, a ticket and luggage. |
+| The Alchemist's Cellar | easy | 20 min | Make a golden key. Six puzzles about doing things in the right way and order. |
 | The Attic | easy | 5 min | Grandmother's attic, and the trapdoor has fallen shut. Six puzzles with old toys and photographs. |
-| The Watchmaker | medium | 10 min | Locked in a watchmaker's workshop over lunch. Five puzzles with clocks and a watch to mend. |
-| The Night Gallery | hard | 20 min | A museum's Egyptian wing after closing. Six puzzles in a sign language the room teaches. |
-| Lookout | medium | 10 min | A kids' club treehouse in autumn, locked from above. Five puzzles with a mirror board and a periscope. |
-| Gondola 12 | medium | 12 min | A cable car stopped halfway on a snowy morning. Six puzzles; shadows matter. |
-| Praline Works | medium | 15 min | A 1920s chocolate factory at night. Six puzzles with a torn recipe and a tilting tray. |
-| Tinker & Sons | hard | 16 min | A toy shop on Christmas Eve, with a dollhouse copy of itself. Seven puzzles, a labyrinth and a deduction. |
+| The Watchmaker | easy | 10 min | Locked in a watchmaker's workshop over lunch. Five puzzles with clocks and a watch to mend. |
+| The Night Gallery | medium | 20 min | A museum's Egyptian wing after closing. Six puzzles in a sign language the room teaches. |
+| Lookout | easy | 10 min | A kids' club treehouse in autumn, locked from above. Five puzzles with a mirror board and a periscope. |
+| Gondola 12 | easy | 12 min | A cable car stopped halfway on a snowy morning. Six puzzles; shadows matter. |
+| Praline Works | easy | 15 min | A 1920s chocolate factory at night. Six puzzles with a torn recipe and a tilting tray. |
+| Tinker & Sons | medium | 16 min | A toy shop on Christmas Eve, with a dollhouse copy of itself. Seven puzzles, a labyrinth and a deduction. |
 
 Play: https://cmzueger.github.io/escape/
 

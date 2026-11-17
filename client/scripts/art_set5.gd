@@ -9,7 +9,6 @@ const PLANK_D := Color("7a5230")
 const AUTUMN := Color("d9822b")
 const AUTUMN_D := Color("b5521f")
 const CLUB := Color("f08a24")
-const RIVAL := Color("3f6fd0")
 const CABIN := Color("d8dde4")
 const CABIN_D := Color("aeb6c0")
 const CABIN_RED := Color("c23b2e")
@@ -398,11 +397,12 @@ func _peri_scene(d: int, cx: float, cy: float, rad: float) -> void:
 	var decoy: Array = clues.get("decoy", [1, 1, 1, 1])
 	match d:
 		0:
-			ci.draw_set_transform(Vector2(cx, cy + 40), 0.0, Vector2(1.0, 0.35))
-			c(0, 0, 150, Color("4a8ab8"))
+			ci.draw_set_transform(Vector2(cx - 80, cy + 50), 0.0, Vector2(1.0, 0.35))
+			c(0, 0, 120, Color("4a8ab8"))
 			home()
 			for k in range(6):
-				ln(cx - 120 + k * 12, cy + 50, cx - 124 + k * 12, cy + 10, LEAF_D, 3)
+				ln(cx - 150 + k * 12, cy + 50, cx - 154 + k * 12, cy + 10, LEAF_D, 3)
+			_peri_treehouse(cx - 10, cy, clues.get("lake", [1, 1, 1, 1]))
 		1:
 			r(cx - 40, cy - 70, 80, 90, Color("e8e0d0"))
 			poly([cx - 50, cy - 70, cx, cy - 110, cx + 50, cy - 70], RED)
@@ -413,14 +413,7 @@ func _peri_scene(d: int, cx: float, cy: float, rad: float) -> void:
 			var px := cx - 80.0
 			var ph := 200.0 if big else 110.0
 			poly([px, cy - ph, px - ph * 0.3, cy + 10, px + ph * 0.3, cy + 10], FIR)
-			# The treehouse in the next tree, with its board.
-			r(cx + 40, cy - 30, 14, 50, PLANK_D)
-			rr(cx - 10, cy - 100, 120, 70, PLANK, 4)
-			poly([cx - 20, cy - 100, cx + 50, cy - 140, cx + 120, cy - 100], AUTUMN_D)
-			_club_flag(cx + 96, cy - 176, 1.0, CLUB if big else RIVAL)
-			var vals: Array = dice if big else decoy
-			for k in range(4):
-				_dice(int(vals[k]), cx - 4 + k * 28, cy - 88, 24, CREAM, INK)
+			_peri_treehouse(cx, cy, dice if big else decoy)
 		3:
 			for k in range(5):
 				r(cx - 150, cy + 10 + k * 18, 300, 8, Color("b08a3a"))
@@ -449,6 +442,16 @@ func _peri_scene(d: int, cx: float, cy: float, rad: float) -> void:
 				c(cx - 50 + k * 90, cy + 36, 5, INK)
 
 
+## A treehouse with the club's flag and a board of four dice.
+func _peri_treehouse(cx: float, cy: float, vals: Array) -> void:
+	r(cx + 40, cy - 30, 14, 50, PLANK_D)
+	rr(cx - 10, cy - 100, 120, 70, PLANK, 4)
+	poly([cx - 20, cy - 100, cx + 50, cy - 140, cx + 120, cy - 100], AUTUMN_D)
+	_club_flag(cx + 96, cy - 176, 1.0, CLUB)
+	for k in range(4):
+		_dice(int(vals[k]), cx - 4 + k * 28, cy - 88, 24, CREAM, INK)
+
+
 func _eperi() -> void:
 	board(Color("1c1c1c"))
 	var d := int(st.get("peri", [6])[0])
@@ -474,9 +477,11 @@ func _emap() -> void:
 		var p := Vector2(cx + cos(a) * 170, cy + sin(a) * 150)
 		match k:
 			0:
-				ci.draw_set_transform(p, 0.0, Vector2(1.6, 0.7))
+				ci.draw_set_transform(p + Vector2(-20, 0), 0.0, Vector2(1.6, 0.7))
 				c(0, 0, 26, Color("4a8ab8"))
 				home()
+				rr(p.x + 26, p.y - 8, 34, 22, PLANK, 3)
+				_club_flag(p.x + 50, p.y - 38, 0.7, CLUB)
 			1:
 				r(p.x - 14, p.y - 10, 28, 26, Color("d0c8b8"))
 				poly([p.x - 6, p.y - 10, p.x + 2, p.y - 34, p.x + 10, p.y - 10], RED)
@@ -498,9 +503,7 @@ func _emap() -> void:
 			5:
 				poly([p.x - 34, p.y + 20, p.x - 24, p.y - 16, p.x - 14, p.y + 20], FIR)
 				rr(p.x - 6, p.y - 6, 36, 22, PLANK, 3)
-				_club_flag(p.x + 20, p.y - 34, 0.7, RIVAL)
-				ln(p.x - 10, p.y - 40, p.x + 40, p.y + 20, RED, 4)
-				ln(p.x + 40, p.y - 40, p.x - 10, p.y + 20, RED, 4)
+				_club_flag(p.x + 20, p.y - 34, 0.7, CLUB)
 			6:
 				r(p.x - 18, p.y - 8, 36, 22, Color("e8d8b8"))
 				poly([p.x - 22, p.y - 8, p.x, p.y - 26, p.x + 22, p.y - 8], Color("8a3a24"))

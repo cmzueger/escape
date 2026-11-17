@@ -152,3 +152,11 @@ deduction. `tools/estimate.py` fits minutes per kind to the owner's times
 its kinds. The easy and medium rooms have no E puzzles; the hard ones three
 or four, which is the jump the owner noticed. A real medium room needs one
 or two E puzzles among C and D ones.
+
+## Difficulty labels (owner, 2026-11-17)
+Rooms stay as they are; the labels follow their puzzles. Difficulty is how
+hard the thinking is, not how long it takes (the target time is shown
+separately): hard with two or more deductions, medium with one deduction or
+three or more mechanisms, easy otherwise. Result: hard Col Sidereal and The
+Grandmaster's Study; medium Gale Rock Light, The Night Gallery, Tinker &
+Sons; the others easy.

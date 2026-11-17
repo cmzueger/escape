@@ -301,10 +301,12 @@ reed 2, scarab 4. Everything else is read through it.
    beam goes down, right, up and left along the top into the marble → the
    alarm drawer springs open → periscope handle. (Only this setting works.)
 4. **Periscope.** Handle onto the periscope; now it turns (8 directions).
-5. **Hatch** (four wheels). The club's map marks the friends' treehouse:
-   by the big pine, orange flag (the blue-flag one by the small pine is
-   crossed out). Its board shows dice **5 2 6 4** (the other shows 1 4 4 2;
-   the farmhouse 386 and the bus stop 17 are decoys) → **5264**.
+5. **Hatch** (four wheels). Three treehouses with the club's orange flag
+   show dice: by the lake (3 6 1 2, the first one met turning right), by the
+   big pine (**5 2 6 4**) and by the small pine (1 4 4 2). Only the map's star
+   marks the friends' one, by the big pine → **5264**. (Since 0.7.2; before,
+   the decoy had a blue flag and the right one came first, so the map was
+   never needed. The farmhouse 386 and the bus stop 17 are decoys too.)
 
 # Gondola 12
 1. **Backpack** (wheels framed blue, red, black). The piste map: the blue

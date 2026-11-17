@@ -13,26 +13,29 @@ Kinds (one letter per puzzle, in order):
     python3 tools/estimate.py AABCCDDE   # estimate a planned room
 No spoilers here: only kinds and times.
 """
+import pathlib
+import re
 import sys
 
+# The owner's minutes (as a couple, no hints, no bugs); the kinds come from
+# the catalogue in core/src/lib.rs.
+TIMES = {
+    "hut": (4.85, ""),
+    "light": (11.4, "a bug cost time"),
+    "obs": (None, "39 min with a bug and hints"),
+    "orangery": (2.88, ""),
+    "theatre": (7.25, ""),
+    "chess": (None, "24 min with hints"),
+    "beach": (2.63, ""),
+    "train": (4.73, ""),
+    "attic": (3.13, ""),
+    "tree": (1.1, "before the map mattered"),
+    "gondola": (4.28, ""),
+}
+_LIB = pathlib.Path(__file__).resolve().parent.parent / "core" / "src" / "lib.rs"
 ROOMS = {
-    # room: (kinds, owner's minutes or None, note)
-    "hut": ("ACABCDDBB", 4.85, ""),
-    "light": ("ACCBCDDEDA", 11.4, "a bug cost time"),
-    "obs": ("CCDEEDECAC", None, "39 min with a bug and hints"),
-    "orangery": ("AAACADAC", 2.88, ""),
-    "theatre": ("ADACCDAC", 7.25, ""),
-    "chess": ("ECEDEEA", None, "24 min with hints"),
-    "beach": ("CACCAA", 2.63, ""),
-    "train": ("BBCABA", 4.73, ""),
-    "alch": ("DDCBCA", None, ""),
-    "attic": ("BAABAA", 3.13, ""),
-    "watch": ("CABBB", None, ""),
-    "museum": ("CDCECA", None, ""),
-    "tree": ("BADAC", 1.1, ""),
-    "gondola": ("BCAAAC", 4.28, ""),
-    "praline": ("BCDBBA", None, ""),
-    "toyshop": ("BAADAEA", None, ""),
+    room: (kinds,) + TIMES.get(room, (None, ""))
+    for room, kinds in re.findall(r'\("(\w+)", "([A-E]+)", \w+::PAR_MINUTES\)', _LIB.read_text())
 }
 KINDS = "ABCDE"
 # Prior guesses, kept when the data cannot tell (no played room has them).

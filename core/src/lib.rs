@@ -40,26 +40,45 @@ pub mod train;
 pub mod tree;
 pub mod watch;
 
-/// The catalogue: id, difficulty (1 easy, 2 medium, 3 hard), target minutes
-/// for three stars, number of puzzles.
-pub const ROOMS: [(&str, u8, u32, usize); 16] = [
-    ("hut", 1, hut::PAR_MINUTES, 9),
-    ("light", 2, light::PAR_MINUTES, 10),
-    ("obs", 3, obs::PAR_MINUTES, 10),
-    ("orangery", 1, orangery::PAR_MINUTES, 8),
-    ("theatre", 2, theatre::PAR_MINUTES, 8),
-    ("chess", 3, chess::PAR_MINUTES, 7),
-    ("beach", 1, beach::PAR_MINUTES, 6),
-    ("train", 2, train::PAR_MINUTES, 6),
-    ("alch", 3, alch::PAR_MINUTES, 6),
-    ("attic", 1, attic::PAR_MINUTES, 6),
-    ("watch", 2, watch::PAR_MINUTES, 5),
-    ("museum", 3, museum::PAR_MINUTES, 6),
-    ("tree", 2, tree::PAR_MINUTES, 5),
-    ("gondola", 2, gondola::PAR_MINUTES, 6),
-    ("praline", 2, praline::PAR_MINUTES, 6),
-    ("toyshop", 3, toyshop::PAR_MINUTES, 7),
+/// The catalogue: id, the kind of each puzzle in order, target minutes for
+/// three stars. Kinds: A action (use the obvious item), B lookup (one clue
+/// into a lock), C combine (two sources, an order, a count), D mechanism
+/// (reason about a contraption), E deduction (a logic or decoding chain).
+/// The difficulty shown follows from the kinds ([`difficulty`]); the time
+/// is separate (`tools/estimate.py` estimates it from the kinds).
+pub const ROOMS: [(&str, &str, u32); 16] = [
+    ("hut", "ACABCDDBB", hut::PAR_MINUTES),
+    ("light", "ACCBCDDEDA", light::PAR_MINUTES),
+    ("obs", "CCDEEDECAC", obs::PAR_MINUTES),
+    ("orangery", "AAACADAC", orangery::PAR_MINUTES),
+    ("theatre", "ADACCDAC", theatre::PAR_MINUTES),
+    ("chess", "ECEDEEA", chess::PAR_MINUTES),
+    ("beach", "CACCAA", beach::PAR_MINUTES),
+    ("train", "BBCABA", train::PAR_MINUTES),
+    ("alch", "DDCBCA", alch::PAR_MINUTES),
+    ("attic", "BAABAA", attic::PAR_MINUTES),
+    ("watch", "CABBB", watch::PAR_MINUTES),
+    ("museum", "CDCECA", museum::PAR_MINUTES),
+    ("tree", "BADAC", tree::PAR_MINUTES),
+    ("gondola", "BCAAAC", gondola::PAR_MINUTES),
+    ("praline", "BCDBBA", praline::PAR_MINUTES),
+    ("toyshop", "BAADAEA", toyshop::PAR_MINUTES),
 ];
+
+/// 1 easy, 2 medium, 3 hard: how hard the thinking is, not how long it
+/// takes. Hard: two or more deductions. Medium: one deduction, or three or
+/// more mechanisms. Easy: the rest.
+pub fn difficulty(kinds: &str) -> u8 {
+    let e = kinds.matches('E').count();
+    let d = kinds.matches('D').count();
+    if e >= 2 {
+        3
+    } else if e == 1 || d >= 3 {
+        2
+    } else {
+        1
+    }
+}
 
 /// A further 10 minutes over the target cost half a star each.
 const OVERTIME_STEP: u32 = 10 * 60;
@@ -177,8 +196,12 @@ impl Room {
             Some("rooms") => {
                 let list = ROOMS
                     .iter()
-                    .map(|(id, level, par, puzzles)| {
-                        format!("{{\"id\":\"{id}\",\"difficulty\":{level},\"minutes\":{par},\"puzzles\":{puzzles}}}")
+                    .map(|(id, kinds, par)| {
+                        format!(
+                            "{{\"id\":\"{id}\",\"difficulty\":{},\"minutes\":{par},\"puzzles\":{}}}",
+                            difficulty(kinds),
+                            kinds.len()
+                        )
                     })
                     .collect::<Vec<_>>()
                     .join(",");
@@ -228,6 +251,25 @@ mod tests {
         assert!(r
             .call("rooms")
             .contains("{\"id\":\"light\",\"difficulty\":2,\"minutes\":15,\"puzzles\":10}"));
+        // Every kit room lists one kind per puzzle.
+        for (spec, kinds) in [
+            (&orangery::SPEC, ROOMS[3].1),
+            (&theatre::SPEC, ROOMS[4].1),
+            (&chess::SPEC, ROOMS[5].1),
+            (&beach::SPEC, ROOMS[6].1),
+            (&train::SPEC, ROOMS[7].1),
+            (&alch::SPEC, ROOMS[8].1),
+            (&attic::SPEC, ROOMS[9].1),
+            (&watch::SPEC, ROOMS[10].1),
+            (&museum::SPEC, ROOMS[11].1),
+            (&tree::SPEC, ROOMS[12].1),
+            (&gondola::SPEC, ROOMS[13].1),
+            (&praline::SPEC, ROOMS[14].1),
+            (&toyshop::SPEC, ROOMS[15].1),
+        ] {
+            assert_eq!(spec.puzzles.len(), kinds.len(), "{}", spec.id);
+        }
+        assert_eq!(hut::Hut::new().solved().len(), ROOMS[0].1.len());
         assert!(r.call("tap coat").contains("msg.coat_matches"));
         assert!(r.call("room light").starts_with("{\"ok\":true"));
         assert_eq!(r.id(), "light");

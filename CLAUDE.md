@@ -5,7 +5,9 @@ Züger (Switzerland). Sister project of Pawnkick (`cmzueger/pawn-kick`), same
 tech stack and habits, but offline only: no server, no accounts.
 
 ## The project
-"Locked In": a catalogue of escape rooms, landscape, point and click. Rooms:
+"Locked In": a catalogue of escape rooms, landscape, point and click. Rooms
+(the easy/medium/hard below is where each was meant to sit; the label shown
+now follows its puzzle kinds, see `difficulty` in lib.rs):
 first set Hut 2847 (`hut`, easy), Gale Rock Light (`light`, medium), Col
 Sidereal (`obs`, hard); second set The Orangery
 (`orangery`, easy), Curtain Call (`theatre`, medium), The Grandmaster's Study
@@ -80,6 +82,8 @@ Works (`praline`), Tinker & Sons (`toyshop`).
   fails if a card leaves the screen.
 - Every view name must be unique across all rooms (the dispatch goes by name,
   newest module first): `views_check.py` fails otherwise.
+- Decoys must look like the real thing: the clue that tells them apart is
+  the only way (and the first one met should be a decoy).
 - A decoder a later puzzle needs again (like the observatory's dome) must
   never freeze; freezing is only for a mechanism held in its solved position.
 - A change to a drawing's position needs the same change in `views.gd`
@@ -88,6 +92,13 @@ Works (`praline`), Tinker & Sons (`toyshop`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.7.2** (2026-11-17): the owner keeps the rooms as they are and wants
+  honest labels; difficulty is not length. Each room's puzzle kinds live in
+  `ROOMS` (lib.rs); the label follows from them (`difficulty`: hard two or
+  more deductions, medium one deduction or three mechanisms, easy the rest),
+  the time stays separate; `tools/estimate.py` reads the same kinds. Lookout:
+  the map was never needed (the decoy had another flag and the right
+  treehouse came first); now three alike treehouses, a decoy met first.
 - **0.7.1** (2026-11-17): owner's times: Low Tide 2:38, Night Train 4:44,
   Attic 3:08, Lookout 1:06, Gondola 4:17 ("all rather easy"); targets of the
   played rooms follow (train 7, gondola 6, tree 3). Gondola's first-aid box

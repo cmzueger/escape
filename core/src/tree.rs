@@ -20,11 +20,16 @@ pub const MIRRORS: [(u8, u8); 4] = [(2, 1), (2, 3), (5, 3), (5, 0)];
 pub const MARBLE: (u8, u8) = (1, 0);
 /// The periscope's eight directions; the friends' treehouse (beside the
 /// big pine, with the club's orange flag) is in `FRIENDS`, and its board
-/// shows dice. Another treehouse (small pine, blue flag) shows other dice.
+/// shows dice. Two other treehouses (small pine, lake) show other dice.
 pub const FRIENDS: u8 = 2;
 pub const DICE: [u8; 4] = [5, 2, 6, 4];
 pub const DECOY_DIR: u8 = 5;
 pub const DECOY: [u8; 4] = [1, 4, 4, 2];
+/// A third treehouse by the lake, the first one met when turning right from
+/// the start. All three fly the club's orange flag: only the map's star
+/// (by the big pine) tells the friends' one apart.
+pub const LAKE_DIR: u8 = 0;
+pub const LAKE: [u8; 4] = [3, 6, 1, 2];
 
 /// The beam's cells from the lamp, and whether it reaches the marble.
 /// Mirror 0 is `/`, 1 is `\`.
@@ -55,7 +60,7 @@ fn clues() -> String {
             .join(",")
     };
     format!(
-        "{{\"ok\":true,\"darts\":[{}],\"grid\":[{},{}],\"lamp_row\":{LAMP_ROW},\"mirrors\":[{}],\"marble\":[{},{}],\"friends\":{FRIENDS},\"dice\":[{}],\"decoy_dir\":{DECOY_DIR},\"decoy\":[{}]}}",
+        "{{\"ok\":true,\"darts\":[{}],\"grid\":[{},{}],\"lamp_row\":{LAMP_ROW},\"mirrors\":[{}],\"marble\":[{},{}],\"friends\":{FRIENDS},\"dice\":[{}],\"decoy_dir\":{DECOY_DIR},\"decoy\":[{}],\"lake_dir\":{LAKE_DIR},\"lake\":[{}]}}",
         nums_json(&DARTS),
         GRID.0,
         GRID.1,
@@ -63,7 +68,8 @@ fn clues() -> String {
         MARBLE.0,
         MARBLE.1,
         nums_json(&DICE),
-        nums_json(&DECOY)
+        nums_json(&DECOY),
+        nums_json(&LAKE)
     )
 }
 
