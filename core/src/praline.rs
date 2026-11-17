@@ -185,7 +185,7 @@ pub static SPEC: Spec = Spec {
             code: kettle_code,
             flag: "tempered",
             msg: "pmsg.tempered",
-            needs: "",
+            needs: "recipe_ok",
         },
     ],
     dials: &[

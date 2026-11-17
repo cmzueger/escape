@@ -79,7 +79,7 @@ fn extra(s: &State) -> String {
 }
 
 /// Minutes for three stars (planned with the owner, 2026-11-17).
-pub const PAR_MINUTES: u32 = 10;
+pub const PAR_MINUTES: u32 = 3;
 
 pub static SPEC: Spec = Spec {
     id: "tree",
@@ -112,7 +112,7 @@ pub static SPEC: Spec = Spec {
             code: || DICE.to_vec(),
             flag: "done",
             msg: "emsg.hatch_open",
-            needs: "",
+            needs: "knob_on",
         },
     ],
     dials: &[

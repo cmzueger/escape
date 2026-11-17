@@ -361,3 +361,9 @@ reed 2, scarab 4. Everything else is read through it.
 - Targets from puzzle count and type, between the owner's medium and hard
   times: Lookout 10, Gondola 12, Praline Works 15, Tinker & Sons 16
   minutes. Untested by a person.
+
+## Gates added in 0.7.1 (a known code no longer opens early)
+- Orangery door: needs the grown flower and the bottle. Theatre trunk: the
+  lighting desk powered. Chess safe: the drawer's contents taken. Lookout
+  hatch: the periscope's handle on. Praline kettle: the recipe whole. Night
+  Train panel: the ticket punched.

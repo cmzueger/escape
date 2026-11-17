@@ -164,7 +164,7 @@ pub static SPEC: Spec = Spec {
             code: trunk_code,
             flag: "trunk_open",
             msg: "tmsg.trunk_open",
-            needs: "",
+            needs: "desk_on",
         },
         Lock {
             name: "door",

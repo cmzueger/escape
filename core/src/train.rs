@@ -78,7 +78,7 @@ fn hook(s: &mut State, words: &[&str]) -> Option<Reply> {
 }
 
 /// Minutes for three stars (set from the owner's play tests, 2026-11-17).
-pub const PAR_MINUTES: u32 = 10;
+pub const PAR_MINUTES: u32 = 7;
 
 pub static SPEC: Spec = Spec {
     id: "train",
@@ -168,7 +168,7 @@ pub static SPEC: Spec = Spec {
     checks: &[
         Check {
             flag: "panel_open",
-            cond: |s| s.val("panel") == PUNCH,
+            cond: |s| s.flag("punched") && s.val("panel") == PUNCH,
             msg: "nmsg.panel_open",
         },
         Check {

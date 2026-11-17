@@ -42,7 +42,10 @@ Works (`praline`), Tinker & Sons (`toyshop`).
   a push to `main` is then deployed to https://cmzueger.github.io/escape/).
 - `docs/SPEC.md` has the decision log.
 - Target minutes: one `PAR_MINUTES` per room module (catalogue, score and the
-  intro's `%d` all read it). Set per room from the owner's times.
+  intro's `%d` all read it). Set per room from the owner's times (about 1.3
+  times theirs). Estimate a planned room with `tools/estimate.py` (puzzle
+  kinds A action, B lookup, C combine, D mechanism, E deduction, fitted to
+  the owner's times; add each new time to its table).
 
 ## How we work
 - Work directly on `main` (owner, 2026-11-16): commit there and push with
@@ -63,8 +66,13 @@ Works (`praline`), Tinker & Sons (`toyshop`).
   spelling, no ß], fr, it, es). No solution may depend on a word.
 - No pull requests unless asked. No model names in code or commits. Commits end
   with the Co-Authored-By / Claude-Session lines the session gives.
-- Tests: `cargo test`; `client/tests/strings_check.py`;
-  `client/tests/views_check.py`; the client play-through
+- Tests: `cargo test` (includes `no_shortcuts`: a player who knows every
+  answer may not solve a puzzle before its `available` holds, finish with a
+  puzzle skipped, or carry an item without a use: gate locks and dials with
+  `needs`, `a&b` for several flags; a new kit room goes into its list);
+  `client/tests/strings_check.py`; `client/tests/views_check.py`;
+  `client/tests/layout_check.gd` (under `xvfb-run`: every drawn arrow lies
+  on a hotspot, every wheel hotspot has its arrow); the client play-through
   `client/tests/smoke_test.gd` (headless Godot, needs `client/build.sh debug`);
   the browser test `client/tests/web_smoke.js` (see the workflow).
 - After a change to the catalogue: `client/tests/title_shots.gd` (under
@@ -80,6 +88,15 @@ Works (`praline`), Tinker & Sons (`toyshop`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.7.1** (2026-11-17): owner's times: Low Tide 2:38, Night Train 4:44,
+  Attic 3:08, Lookout 1:06, Gondola 4:17 ("all rather easy"); targets of the
+  played rooms follow (train 7, gondola 6, tree 3). Gondola's first-aid box
+  drew its wheels one place left of their hotspots: new `layout_check.gd`.
+  New `no_shortcuts` test found locks open before their clue could be seen
+  (orangery door, theatre trunk, chess safe, lookout hatch, praline kettle,
+  night train panel): now gated. `tools/estimate.py`: deductions (E) take
+  about 4 minutes each, every other kind under one; the easy and medium rooms
+  have none, the hard ones three or four, hence the gap.
 - **0.7.0** (2026-11-17): fifth set, chosen by the owner in two rounds
   (settings, then names and looks; puzzle types voted on): Lookout,
   Gondola 12, Praline Works, Tinker & Sons, aimed between the owner's medium

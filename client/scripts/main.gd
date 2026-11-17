@@ -71,6 +71,8 @@ var _sent := 0
 var _message := ""
 ## Answers the rules refused and messages without a text (the tests read it).
 var errors: Array = []
+## The arrow buttons the current view drew (for the layout test).
+var scene_arrows: Array = []
 ## The catalogue's scroll area and a finger drag on it (see _input).
 var _scroll: ScrollContainer = null
 var _drag := {"on": false, "y": 0.0, "from": 0, "moved": false}
@@ -306,7 +308,9 @@ func _draw_scene() -> void:
 			for k in range(6):
 				art.c(480, 60, 180.0 + k * 70.0, Color(1, 0.6, 0.23, 0.012))
 		return
+	art.drawn_arrows.clear()
 	art.draw_view(view)
+	scene_arrows = art.drawn_arrows.duplicate()
 
 
 func _rect(rect: Rect2, dir: int) -> void:

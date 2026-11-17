@@ -144,3 +144,11 @@ room; fold the paper, fingerprint dust, memory flash.
 Built as 0.7.0. Targets: Lookout 10, Gondola 12, Praline Works 15, Tinker &
 Sons 16 minutes (Tinker & Sons listed as hard, the others medium). With
 sixteen rooms the catalogue has six rows; the last holds one card, centred.
+
+## Estimating time (2026-11-17)
+Puzzles are classed by kind: A action, B lookup, C combine, D mechanism, E
+deduction. `tools/estimate.py` fits minutes per kind to the owner's times
+(first fit: A 0.2, B 0.7, C 0.9, D 1.0, E 4.2) and estimates any room from
+its kinds. The easy and medium rooms have no E puzzles; the hard ones three
+or four, which is the jump the owner noticed. A real medium room needs one
+or two E puzzles among C and D ones.

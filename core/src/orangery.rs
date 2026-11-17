@@ -80,7 +80,7 @@ pub static SPEC: Spec = Spec {
             code: door_code,
             flag: "done",
             msg: "gmsg.door_open",
-            needs: "",
+            needs: "grown&got_bottle",
         },
     ],
     dials: &[Dial {

@@ -158,9 +158,12 @@ impl State {
         self.spec.id
     }
 
-    /// True for "" (no condition) and for a flag that is set.
+    /// True for "" (no condition) and for a flag that is set; `a&b` needs both.
     pub fn flag(&self, name: &str) -> bool {
-        name.is_empty() || index(self.spec.flags, name).is_some_and(|i| self.flags & (1 << i) != 0)
+        name.is_empty()
+            || name
+                .split('&')
+                .all(|n| index(self.spec.flags, n).is_some_and(|i| self.flags & (1 << i) != 0))
     }
 
     pub fn set(&mut self, name: &str) {
@@ -522,4 +525,115 @@ pub fn turn_to(room: &mut State, name: &str, to: &[u8], size: u8) {
             room.call(&format!("turn {name} {i} +1"));
         }
     }
+}
+
+/// For tests: a player who knows every answer (sets any lock or dial
+/// directly) and otherwise taps, uses and presses at random. Fails when a
+/// puzzle is solved before its prerequisites (`available`) held, when the
+/// room ends with a puzzle unsolved, or when an item is never used.
+/// `commands` are the room's own commands and extra hotspots (`tap x`,
+/// `use x y` targets are built from the spec).
+#[cfg(test)]
+pub fn omniscient_walk(
+    spec: &'static Spec,
+    commands: &[&str],
+    extra_spots: &[&str],
+    hook_items: &[&str],
+) -> Result<(), String> {
+    // Every item must have a use (or be used by the room's own commands).
+    for item in spec.items {
+        if !spec.uses.iter().any(|u| u.item == *item) && !hook_items.contains(item) {
+            return Err(format!("{}: item {item} has no use", spec.id));
+        }
+    }
+    let mut spots: Vec<&str> = spec.picks.iter().map(|p| p.spot).collect();
+    spots.extend(spec.looks.iter().map(|l| l.spot));
+    spots.extend(spec.flavour.iter().copied());
+    for u in spec.uses {
+        spots.extend(u.spot.split('|'));
+    }
+    spots.extend(extra_spots.iter().copied());
+    let mut seed: u64 = 0x9e37_79b9_7f4a_7c15 ^ spec.id.len() as u64;
+    let mut rnd = |n: usize| -> usize {
+        seed ^= seed << 13;
+        seed ^= seed >> 7;
+        seed ^= seed << 17;
+        (seed % n as u64) as usize
+    };
+    let names: Vec<&str> = spec
+        .locks
+        .iter()
+        .map(|l| l.name)
+        .chain(spec.dials.iter().map(|d| d.name))
+        .collect();
+    for run in 0..400 {
+        let mut s = State::new(spec);
+        for _ in 0..(60 + run % 200) {
+            let before_solved = s.solved();
+            let roll = rnd(10);
+            let command = if roll < 3 && !names.is_empty() {
+                // Knows the answer: sets a lock or dial straight to a value.
+                let k = rnd(names.len());
+                if let Some(lock) = spec.locks.get(k) {
+                    let mut code = (lock.code)();
+                    if rnd(3) == 0 {
+                        code[0] = (code[0] + 1) % lock.size;
+                    }
+                    let first = code[0];
+                    code[0] = (first + lock.size - 1) % lock.size;
+                    s.vals[k] = code;
+                    format!("turn {} 0 +1", lock.name)
+                } else {
+                    let d = &spec.dials[k - spec.locks.len()];
+                    if s.flag(d.needs) && (d.freeze.is_empty() || !s.flag(d.freeze)) {
+                        for v in s.vals[k].iter_mut() {
+                            *v = rnd(d.size as usize) as u8;
+                        }
+                    }
+                    "state".to_string()
+                }
+            } else if roll < 6 && !commands.is_empty() {
+                commands[rnd(commands.len())].to_string()
+            } else if roll < 8 && s.inv != 0 {
+                let held: Vec<&str> = spec.items.iter().copied().filter(|i| s.has(i)).collect();
+                let item = held[rnd(held.len())];
+                let target = if rnd(4) == 0 {
+                    spec.items[rnd(spec.items.len())]
+                } else {
+                    spots[rnd(spots.len())]
+                };
+                format!("use {item} {target}")
+            } else {
+                format!("tap {}", spots[rnd(spots.len())])
+            };
+            let answer = s.call(&command);
+            if !answer.starts_with("{\"ok\":true")
+                && !answer.contains("not carried")
+                && !answer.contains("bad command")
+            {
+                return Err(format!("{}: {command} -> {answer}", spec.id));
+            }
+            let after = s.solved();
+            // A puzzle may be solved by the same step that gives its last
+            // prerequisite, never without its prerequisites.
+            let ok_now: Vec<bool> = spec.puzzles.iter().map(|p| (p.available)(&s)).collect();
+            for p in 0..after.len() {
+                if after[p] && !before_solved[p] && !ok_now[p] {
+                    return Err(format!(
+                        "{}: puzzle {} solved before its turn by `{command}` (flags {:?})",
+                        spec.id,
+                        p + 1,
+                        crate::names_json(spec.flags, s.flags as u32)
+                    ));
+                }
+            }
+            if s.done {
+                if let Some(p) = after.iter().position(|x| !x) {
+                    return Err(format!("{}: done with puzzle {} unsolved", spec.id, p + 1));
+                }
+                break;
+            }
+        }
+    }
+    Ok(())
 }

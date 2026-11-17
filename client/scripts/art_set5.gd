@@ -752,9 +752,11 @@ func _qsill() -> void:
 
 func _qkit() -> void:
 	board(CABIN_D)
-	rr(180, 60, 340, 360, CREAM, 14)
-	r(330, 80, 40, 70, RED)
-	r(315, 95, 70, 40, RED)
+	# Closed, the box stands in the middle; open, it moves aside for the card.
+	var bx := 180.0 if flag("kit_open") else 310.0
+	rr(bx, 60, 340, 360, CREAM, 14)
+	r(bx + 150, 80, 40, 70, RED)
+	r(bx + 135, 95, 70, 40, RED)
 	if flag("kit_open"):
 		rr(200, 170, 300, 220, Color("e8e8e0"), 8)
 		if not flag("got_kit"):
@@ -762,8 +764,8 @@ func _qkit() -> void:
 		_card(540, 70)
 	else:
 		for i in range(3):
-			_dots(i + 1, 400 + (i - 1) * 80, 188, 7, INK)
-		kit_wheels(st.get("kit", [0, 0, 0]), 320, 270)
+			_dots(i + 1, 400 + i * 80, 188, 7, INK)
+		kit_wheels(st.get("kit", [0, 0, 0]), 400, 270)
 
 
 ## The emergency card: four steps in pictures.

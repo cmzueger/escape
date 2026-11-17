@@ -32,6 +32,8 @@ var clues: Dictionary = {}
 var t := 0.0
 var font: Font
 var _boxes: Dictionary = {}
+## Where arrow buttons were drawn (tests compare them with the hotspots).
+var drawn_arrows: Array = []
 
 
 func flag(name: String) -> bool:
@@ -122,6 +124,7 @@ func door(x: float, y: float, w: float, h: float) -> void:
 
 
 func arrow_btn(x: float, y: float, w: float, h: float, dir: int) -> void:
+	drawn_arrows.append(Rect2(x, y, w, h))
 	rr(x, y, w, h, Color(0, 0, 0, 0.35), 10)
 	var cx := x + w / 2.0
 	var cy := y + h / 2.0

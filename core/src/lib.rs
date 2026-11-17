@@ -264,6 +264,85 @@ mod tests {
         assert!(r.call("hintinfo seachart").contains("\"where\":\"later\""));
     }
 
+    /// No room can be shortcut by a player who knows every answer: each
+    /// puzzle needs the ones before it, and every item has a use.
+    #[test]
+    fn no_shortcuts() {
+        let digits = |cmd: &str, n: usize| (0..n).map(|i| format!("{cmd} {i}")).collect::<Vec<_>>();
+        let tilts = || {
+            ["n", "e", "s", "w", "reset"]
+                .map(|w| format!("tilt {w}"))
+                .to_vec()
+        };
+        let mut king = vec![];
+        for f in 0..4 {
+            for r in 0..4 {
+                king.push(format!("king {f} {r}"));
+            }
+        }
+        let mut mix = vec!["bellows".to_string()];
+        for v in 0..3 {
+            mix.push(format!("empty {v}"));
+            for p in 0..3 {
+                mix.push(format!("mix {v} {p}"));
+            }
+        }
+        type Room<'a> = (&'static kit::Spec, Vec<String>, Vec<&'a str>, Vec<&'a str>);
+        let rooms: Vec<Room> = vec![
+            (&orangery::SPEC, vec![], vec![], vec![]),
+            (
+                &theatre::SPEC,
+                [digits("mask", 5), digits("bulb", 6)].concat(),
+                vec![],
+                vec![],
+            ),
+            (
+                &chess::SPEC,
+                king,
+                vec!["sq0", "sq1", "sq2"],
+                vec!["rook", "bishop", "knight", "wking"],
+            ),
+            (&beach::SPEC, digits("pull", 3), vec![], vec![]),
+            (&train::SPEC, digits("seat", 4), vec![], vec![]),
+            (
+                &alch::SPEC,
+                mix,
+                vec!["furnace"],
+                vec!["crucible", "nugget", "elixir"],
+            ),
+            (&attic::SPEC, vec![], vec![], vec![]),
+            (
+                &watch::SPEC,
+                vec![],
+                vec!["watch"],
+                vec!["spring", "gearw", "balance"],
+            ),
+            (&museum::SPEC, digits("glyph", 6), vec![], vec![]),
+            (&tree::SPEC, vec![], vec![], vec![]),
+            (&gondola::SPEC, vec!["start".into()], vec![], vec![]),
+            (
+                &praline::SPEC,
+                [tilts(), digits("rotate", 4)].concat(),
+                vec![],
+                vec![],
+            ),
+            (
+                &toyshop::SPEC,
+                [tilts(), digits("drawer", 12)].concat(),
+                vec![],
+                vec![],
+            ),
+        ];
+        let mut problems = vec![];
+        for (spec, commands, spots, hook_items) in rooms {
+            let commands: Vec<&str> = commands.iter().map(|c| c.as_str()).collect();
+            if let Err(e) = kit::omniscient_walk(spec, &commands, &spots, &hook_items) {
+                problems.push(e);
+            }
+        }
+        assert!(problems.is_empty(), "{problems:#?}");
+    }
+
     #[test]
     fn scores() {
         assert_eq!(halves(&[0; 9], 900, 15), 6);

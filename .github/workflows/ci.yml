@@ -73,6 +73,11 @@ jobs:
           ~/godot/godot --headless --path client --import || true
           ~/godot/godot --headless --path client --script res://tests/smoke_test.gd | tee smoke.log
           grep -q "RESULT: PASS" smoke.log
+      - name: Pictures and hotspots agree (every view drawn)
+        run: |
+          command -v xvfb-run || (sudo apt-get update -q && sudo apt-get install -y -q xvfb)
+          xvfb-run -a -s "-screen 0 1280x800x24" ~/godot/godot --path client --resolution 960x540 --script res://tests/layout_check.gd | tee layout.log
+          grep -q "RESULT: PASS" layout.log
       - name: Build the web client
         run: GODOT=~/godot/godot client/build-web.sh
       - uses: actions/setup-node@v5

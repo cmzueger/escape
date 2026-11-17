@@ -291,7 +291,7 @@ pub static SPEC: Spec = Spec {
             code: safe_code,
             flag: "safe_open",
             msg: "cmsg.safe_open",
-            needs: "",
+            needs: "got_drawer",
         },
         Lock {
             name: "cabinet",
