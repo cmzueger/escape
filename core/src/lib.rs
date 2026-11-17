@@ -26,19 +26,23 @@ pub mod alch;
 pub mod attic;
 pub mod beach;
 pub mod chess;
+pub mod gondola;
 pub mod hut;
 pub mod kit;
 pub mod light;
 pub mod museum;
 pub mod obs;
 pub mod orangery;
+pub mod praline;
 pub mod theatre;
+pub mod toyshop;
 pub mod train;
+pub mod tree;
 pub mod watch;
 
 /// The catalogue: id, difficulty (1 easy, 2 medium, 3 hard), target minutes
 /// for three stars, number of puzzles.
-pub const ROOMS: [(&str, u8, u32, usize); 12] = [
+pub const ROOMS: [(&str, u8, u32, usize); 16] = [
     ("hut", 1, hut::PAR_MINUTES, 9),
     ("light", 2, light::PAR_MINUTES, 10),
     ("obs", 3, obs::PAR_MINUTES, 10),
@@ -51,6 +55,10 @@ pub const ROOMS: [(&str, u8, u32, usize); 12] = [
     ("attic", 1, attic::PAR_MINUTES, 6),
     ("watch", 2, watch::PAR_MINUTES, 5),
     ("museum", 3, museum::PAR_MINUTES, 6),
+    ("tree", 2, tree::PAR_MINUTES, 5),
+    ("gondola", 2, gondola::PAR_MINUTES, 6),
+    ("praline", 2, praline::PAR_MINUTES, 6),
+    ("toyshop", 3, toyshop::PAR_MINUTES, 7),
 ];
 
 /// A further 10 minutes over the target cost half a star each.
@@ -190,6 +198,10 @@ impl Room {
                     Some("attic") => *self = Room::Kit(kit::State::new(&attic::SPEC)),
                     Some("watch") => *self = Room::Kit(kit::State::new(&watch::SPEC)),
                     Some("museum") => *self = Room::Kit(kit::State::new(&museum::SPEC)),
+                    Some("tree") => *self = Room::Kit(kit::State::new(&tree::SPEC)),
+                    Some("gondola") => *self = Room::Kit(kit::State::new(&gondola::SPEC)),
+                    Some("praline") => *self = Room::Kit(kit::State::new(&praline::SPEC)),
+                    Some("toyshop") => *self = Room::Kit(kit::State::new(&toyshop::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -222,7 +234,8 @@ mod tests {
         assert!(r.call("tap coat").starts_with("{\"ok\":false"));
         assert!(r.call("room obs").contains("\"room\":\"obs\""));
         for id in [
-            "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum",
+            "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum", "tree",
+            "gondola", "praline", "toyshop",
         ] {
             assert!(r
                 .call(&format!("room {id}"))
