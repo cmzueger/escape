@@ -23,19 +23,22 @@
 //! key or empty) or `{"ok":false,"error":"…"}`.
 
 pub mod alch;
+pub mod attic;
 pub mod beach;
 pub mod chess;
 pub mod hut;
 pub mod kit;
 pub mod light;
+pub mod museum;
 pub mod obs;
 pub mod orangery;
 pub mod theatre;
 pub mod train;
+pub mod watch;
 
 /// The catalogue: id, difficulty (1 easy, 2 medium, 3 hard), target minutes
 /// for three stars, number of puzzles.
-pub const ROOMS: [(&str, u8, u32, usize); 9] = [
+pub const ROOMS: [(&str, u8, u32, usize); 12] = [
     ("hut", 1, hut::PAR_MINUTES, 9),
     ("light", 2, light::PAR_MINUTES, 10),
     ("obs", 3, obs::PAR_MINUTES, 10),
@@ -45,6 +48,9 @@ pub const ROOMS: [(&str, u8, u32, usize); 9] = [
     ("beach", 1, 15, 6),
     ("train", 2, 25, 6),
     ("alch", 3, 35, 6),
+    ("attic", 1, 15, 6),
+    ("watch", 2, 25, 5),
+    ("museum", 3, 35, 6),
 ];
 
 /// A further 10 minutes over the target cost half a star each.
@@ -153,6 +159,9 @@ impl Room {
                     Some("beach") => *self = Room::Kit(kit::State::new(&beach::SPEC)),
                     Some("train") => *self = Room::Kit(kit::State::new(&train::SPEC)),
                     Some("alch") => *self = Room::Kit(kit::State::new(&alch::SPEC)),
+                    Some("attic") => *self = Room::Kit(kit::State::new(&attic::SPEC)),
+                    Some("watch") => *self = Room::Kit(kit::State::new(&watch::SPEC)),
+                    Some("museum") => *self = Room::Kit(kit::State::new(&museum::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -184,7 +193,9 @@ mod tests {
         assert_eq!(r.id(), "light");
         assert!(r.call("tap coat").starts_with("{\"ok\":false"));
         assert!(r.call("room obs").contains("\"room\":\"obs\""));
-        for id in ["orangery", "theatre", "chess", "beach", "train", "alch"] {
+        for id in [
+            "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum",
+        ] {
             assert!(r
                 .call(&format!("room {id}"))
                 .contains(&format!("\"room\":\"{id}\"")));
