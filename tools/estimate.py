@@ -6,8 +6,11 @@ Kinds (one letter per puzzle, in order):
   A action      use the obvious item on the obvious thing
   B lookup      one clue read straight into a lock or setting
   C combine     two sources, a mapping, an order or a count across views
-  D mechanism   reason about a contraption (mirrors, tilting, valves, mixing)
-  E deduction   a logic or decoding chain (several steps, a twist)
+  F find        a clue that is easy to miss (hidden, small, only at a moment)
+  D mechanism   a contraption where trying works (mirrors, switches, mixing)
+  M mechanism   a contraption that needs planning (tilt boards, pouring)
+  E deduction   one twist (read backwards, mirrored, the nearer one)
+  X deduction   a longer chain or a grid (several steps)
 
     python3 tools/estimate.py            # fit, then estimates for every room
     python3 tools/estimate.py AABCCDDE   # estimate a planned room
@@ -35,11 +38,11 @@ TIMES = {
 _LIB = pathlib.Path(__file__).resolve().parent.parent / "core" / "src" / "lib.rs"
 ROOMS = {
     room: (kinds,) + TIMES.get(room, (None, ""))
-    for room, kinds in re.findall(r'\("(\w+)", "([A-E]+)", \w+::PAR_MINUTES\)', _LIB.read_text())
+    for room, kinds in re.findall(r'\("(\w+)", "([A-Z]+)", \w+::PAR_MINUTES\)', _LIB.read_text())
 }
-KINDS = "ABCDE"
+KINDS = "ABCFDMEX"
 # Prior guesses, kept when the data cannot tell (no played room has them).
-PRIOR = {"A": 0.25, "B": 0.6, "C": 1.0, "D": 1.8, "E": 4.0}
+PRIOR = {"A": 0.25, "B": 0.6, "C": 1.0, "F": 1.2, "D": 1.0, "M": 2.5, "E": 2.5, "X": 6.0}
 
 
 def counts(kinds):

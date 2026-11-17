@@ -46,8 +46,10 @@ Works (`praline`), Tinker & Sons (`toyshop`).
 - Target minutes: one `PAR_MINUTES` per room module (catalogue, score and the
   intro's `%d` all read it). Set per room from the owner's times (about 1.3
   times theirs). Estimate a planned room with `tools/estimate.py` (puzzle
-  kinds A action, B lookup, C combine, D mechanism, E deduction, fitted to
-  the owner's times; add each new time to its table).
+  kinds A action, B lookup, C combine, F find, D mechanism, M hard mechanism,
+  E deduction, X hard deduction, fitted to the owner's times; add each new
+  time to its table). The label: points F/D 1, M/E 2, X 4; medium from 4,
+  hard from 8.
 
 ## How we work
 - Work directly on `main` (owner, 2026-11-16): commit there and push with
@@ -92,6 +94,11 @@ Works (`praline`), Tinker & Sons (`toyshop`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.7.3** (2026-11-17): the owner asked for a "find" kind (clues that are
+  easy to miss) and noted mechanisms and deductions vary in difficulty: kinds
+  F, M (hard mechanism) and X (hard deduction) added, the label is now a
+  point score. The Night Gallery becomes easy. Next: proposals for new rooms,
+  medium to hard, with creative mechanisms, deductions and hidden clues.
 - **0.7.2** (2026-11-17): the owner keeps the rooms as they are and wants
   honest labels; difficulty is not length. Each room's puzzle kinds live in
   `ROOMS` (lib.rs); the label follows from them (`difficulty`: hard two or

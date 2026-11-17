@@ -160,3 +160,8 @@ separately): hard with two or more deductions, medium with one deduction or
 three or more mechanisms, easy otherwise. Result: hard Col Sidereal and The
 Grandmaster's Study; medium Gale Rock Light, The Night Gallery, Tinker &
 Sons; the others easy.
+
+## Finer kinds (owner, 2026-11-17)
+Added F find (a clue easy to miss), M hard mechanism (needs planning) and X
+hard deduction (a longer chain or grid) beside D and E. The label is a point
+score: F and D one, M and E two, X four; medium from 4, hard from 8.

@@ -15,7 +15,7 @@ Escape rooms played in the browser. Offline, no accounts.
 | The Alchemist's Cellar | easy | 20 min | Make a golden key. Six puzzles about doing things in the right way and order. |
 | The Attic | easy | 5 min | Grandmother's attic, and the trapdoor has fallen shut. Six puzzles with old toys and photographs. |
 | The Watchmaker | easy | 10 min | Locked in a watchmaker's workshop over lunch. Five puzzles with clocks and a watch to mend. |
-| The Night Gallery | medium | 20 min | A museum's Egyptian wing after closing. Six puzzles in a sign language the room teaches. |
+| The Night Gallery | easy | 20 min | A museum's Egyptian wing after closing. Six puzzles in a sign language the room teaches. |
 | Lookout | easy | 10 min | A kids' club treehouse in autumn, locked from above. Five puzzles with a mirror board and a periscope. |
 | Gondola 12 | easy | 12 min | A cable car stopped halfway on a snowy morning. Six puzzles; shadows matter. |
 | Praline Works | easy | 15 min | A 1920s chocolate factory at night. Six puzzles with a torn recipe and a tilting tray. |

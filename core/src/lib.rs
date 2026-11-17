@@ -42,41 +42,48 @@ pub mod watch;
 
 /// The catalogue: id, the kind of each puzzle in order, target minutes for
 /// three stars. Kinds: A action (use the obvious item), B lookup (one clue
-/// into a lock), C combine (two sources, an order, a count), D mechanism
-/// (reason about a contraption), E deduction (a logic or decoding chain).
+/// into a lock), C combine (two sources, an order, a count), F find (a clue
+/// that is easy to miss: hidden, small, only seen at a moment), D mechanism
+/// (a contraption, trying works), M hard mechanism (needs planning), E
+/// deduction (one twist), X hard deduction (a longer chain or grid).
 /// The difficulty shown follows from the kinds ([`difficulty`]); the time
 /// is separate (`tools/estimate.py` estimates it from the kinds).
 pub const ROOMS: [(&str, &str, u32); 16] = [
     ("hut", "ACABCDDBB", hut::PAR_MINUTES),
-    ("light", "ACCBCDDEDA", light::PAR_MINUTES),
-    ("obs", "CCDEEDECAC", obs::PAR_MINUTES),
+    ("light", "ACCBFMDEDA", light::PAR_MINUTES),
+    ("obs", "CCMEEDXCAC", obs::PAR_MINUTES),
     ("orangery", "AAACADAC", orangery::PAR_MINUTES),
-    ("theatre", "ADACCDAC", theatre::PAR_MINUTES),
-    ("chess", "ECEDEEA", chess::PAR_MINUTES),
+    ("theatre", "ADACCMAC", theatre::PAR_MINUTES),
+    ("chess", "ECEDXXA", chess::PAR_MINUTES),
     ("beach", "CACCAA", beach::PAR_MINUTES),
     ("train", "BBCABA", train::PAR_MINUTES),
-    ("alch", "DDCBCA", alch::PAR_MINUTES),
+    ("alch", "DMCBCA", alch::PAR_MINUTES),
     ("attic", "BAABAA", attic::PAR_MINUTES),
-    ("watch", "CABBB", watch::PAR_MINUTES),
+    ("watch", "FABBB", watch::PAR_MINUTES),
     ("museum", "CDCECA", museum::PAR_MINUTES),
     ("tree", "BADAC", tree::PAR_MINUTES),
-    ("gondola", "BCAAAC", gondola::PAR_MINUTES),
-    ("praline", "BCDBBA", praline::PAR_MINUTES),
-    ("toyshop", "BAADAEA", toyshop::PAR_MINUTES),
+    ("gondola", "BDAAAE", gondola::PAR_MINUTES),
+    ("praline", "BCMDBA", praline::PAR_MINUTES),
+    ("toyshop", "FAAMAEA", toyshop::PAR_MINUTES),
 ];
 
 /// 1 easy, 2 medium, 3 hard: how hard the thinking is, not how long it
-/// takes. Hard: two or more deductions. Medium: one deduction, or three or
-/// more mechanisms. Easy: the rest.
+/// takes. Points: F and D one, M and E two, X four; medium from 4, hard
+/// from 8.
 pub fn difficulty(kinds: &str) -> u8 {
-    let e = kinds.matches('E').count();
-    let d = kinds.matches('D').count();
-    if e >= 2 {
-        3
-    } else if e == 1 || d >= 3 {
-        2
-    } else {
-        1
+    let points: u32 = kinds
+        .chars()
+        .map(|k| match k {
+            'F' | 'D' => 1,
+            'M' | 'E' => 2,
+            'X' => 4,
+            _ => 0,
+        })
+        .sum();
+    match points {
+        8.. => 3,
+        4.. => 2,
+        _ => 1,
     }
 }
 
