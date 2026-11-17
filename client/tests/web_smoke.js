@@ -51,7 +51,7 @@ function check(ok, what) {
 
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
   check(true, "the catalogue appears");
-  await tap(178, 180); // Play on the first card (Hut 2847)
+  await tap(178, 150); // Play on the first card (Hut 2847)
   check((await mode()) === "play", "Play starts a game");
   await tap(480, 406); // Begin (the story panel)
   await tap(281, 210); // the coat
@@ -71,26 +71,32 @@ function check(ok, what) {
   await page.reload();
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
   await page.waitForTimeout(500);
-  await tap(135, 180); // Continue on the first card
+  await tap(135, 155); // Continue on the first card
   check((await mode()) === "play" && (await state()).flags.includes("lamp_lit"), "the saved game continues after a reload");
   // The second room.
   await page.reload();
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
   await page.waitForTimeout(500);
-  await tap(480, 180); // Play on the second card (Gale Rock Light)
+  await tap(475, 155); // Play on the second card (Gale Rock Light)
   check((await page.evaluate(() => window.hut.room)) === "light" && (await state()).room === "light", "the lighthouse starts");
   // The third room.
   await page.reload();
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
   await page.waitForTimeout(500);
-  await tap(782, 180); // Play on the third card (Col Sidereal)
+  await tap(777, 155); // Play on the third card (Col Sidereal)
   check((await page.evaluate(() => window.hut.room)) === "obs" && (await state()).room === "obs", "the observatory starts");
-  // The second and third row.
-  for (const [x, y, id] of [[178, 300, "orangery"], [480, 300, "theatre"], [782, 314, "chess"],
-    [178, 432, "beach"], [480, 432, "train"], [782, 430, "alch"]]) {
+  // The second and third row, then the fourth, which is reached by scrolling.
+  for (const [x, y, id, scroll] of [[173, 274, "orangery"], [475, 274, "theatre"], [777, 289, "chess"],
+    [173, 408, "beach"], [475, 408, "train"], [777, 404, "alch"],
+    [173, 445, "attic", true], [475, 445, "watch", true], [777, 441, "museum", true]]) {
     await page.reload();
     await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
     await page.waitForTimeout(500);
+    if (scroll) {
+      await page.mouse.move(480, 300);
+      await page.mouse.wheel(0, 2000);
+      await page.waitForTimeout(500);
+    }
     await tap(x, y);
     check((await page.evaluate(() => window.hut.room)) === id && (await state()).room === id, id + " starts");
   }

@@ -12,7 +12,7 @@ func _initialize() -> void:
 	root.add_child(main)
 	for i in range(10):
 		await process_frame
-	for id in ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch"]:
+	for id in ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum"]:
 		main.start_new(id)
 		main._close_panel()
 		main.seconds = 754.0
@@ -24,11 +24,12 @@ func _initialize() -> void:
 		main._show_title()
 		await process_frame
 		await process_frame
-		for row in main._panels.get_child(0).get_children():
-			if row is HBoxContainer:
-				for card in row.get_children():
-					widest = maxf(widest, card.get_global_rect().end.x)
-					lowest = maxf(lowest, card.get_global_rect().end.y)
+		for part in main._panels.get_child(0).get_children():
+			lowest = maxf(lowest, part.get_global_rect().end.y)
+			if part is ScrollContainer:
+				for row in part.get_child(0).get_children():
+					for card in row.get_children():
+						widest = maxf(widest, card.get_global_rect().end.x)
 		await RenderingServer.frame_post_draw
 		root.get_texture().get_image().save_png("%s/title_%s.png" % [folder, lang])
 	print("cards end at x = %d, rows at y = %d (screen: 960 x 540)" % [int(widest), int(lowest)])

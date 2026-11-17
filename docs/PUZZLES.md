@@ -247,3 +247,44 @@ falls on the plaque opposite the slit and shows a digit there:
    then tap the furnace. A sixth stroke boils over, looking in too early
    lets the fire die; both start the count again. → the golden key.
 6. **Door.** The golden key.
+
+# The Attic
+1. **Trunk.** The album on the chair: three birthday photos with 5, 8 and 3
+   candles → **583** → a small crank and a toy wagon.
+2. **Music box.** Crank on the music box, tap it → a tiny key.
+3. **Train.** The wagon fills the gap on the shelf's toy train.
+4. **Wardrobe.** The wagons' numbers from the engine: **2794** (the 9 is the
+   wagon from the trunk) → a hooked pole.
+5. **Padlock.** The tiny key on the trapdoor.
+6. **Trapdoor.** The pole on the trapdoor (it opens downwards).
+
+# The Watchmaker
+1. **Drawer.** Four wall clocks (3:50, 8:35, 11:05, 6:20); only the second
+   one's pendulum swings → **0835** → a loupe and a mainspring. A loose
+   wheel lies on the bench.
+2. **Engraving.** Loupe on the pocket watch: a tiny dial showing 4:10.
+3. **Tall clock.** Set its hands to **4:10** → the case opens: a balance
+   wheel.
+4. **The watch.** As the plan on the wall numbers them: mainspring, wheel,
+   balance wheel. A part that is too early does not go in.
+5. **Door.** The running watch opens its lid: **618**.
+
+# The Night Gallery
+The tablet gives each sign a number of dots: eye 3, bird 5, water 1, sun 6,
+reed 2, scarab 4. Everything else is read through it.
+1. **Display case.** Its label: water, reed, bird → **125** → a feather.
+2. **Scales.** The feather's tag shows 7 dots. Jars: eye 3, sun 6, scarab 4,
+   bird 5 → **eye and scarab** on the right pan → a golden disc.
+3. **Dial.** The disc in the dial under the skylight; the frieze's upper band
+   has the sun over the bird → turn the ring until the **bird** is in the
+   beam (two steps back) → a niche with the scarab key.
+4. **Sarcophagus.** The frieze's procession walks to the right, so it is read
+   from the right: **water, scarab, eye, reed** → a papyrus.
+5. **Key.** The scarab key in the door.
+6. **Door.** The papyrus: 4, 6, 3, 5 dots, read backwards through the tablet:
+   **scarab, sun, eye, bird**.
+
+## Balance notes (fourth set)
+- Untested by a person. The attic is meant to be a straight line; the
+  watchmaker's first step (which clock) and the gallery's reading direction
+  are the likely sticking points.

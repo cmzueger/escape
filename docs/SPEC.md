@@ -60,6 +60,20 @@ are Claude's and open to change:
 
 The catalogue shows three rows of three smaller cards.
 
+## Fourth set (2026-11-17)
+Again three rooms at once without a proposal round; settings, looks and names
+are Claude's and open to change:
+| Room | Setting | Look |
+|---|---|---|
+| The Attic (easy) | Grandmother's attic | Warm dusty wood, afternoon light through a dormer |
+| The Watchmaker (medium) | Watchmaker's workshop | Brown and brass, a work lamp |
+| The Night Gallery (hard) | Museum, Egyptian wing at night | Navy and moonlight, sandstone and gold |
+
+With twelve rooms the catalogue scrolls: three rows are in view, a small
+arrow says there is more below, and the position is remembered. Chosen
+without asking as the smallest change; other layouts (pages, sets as tabs)
+are open.
+
 ## Hut 2847
 - Main room (three walls): stove wall, bunk wall, kitchen wall. Act 1: light,
   warmth, the way into the warden's room.

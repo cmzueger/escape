@@ -10,11 +10,12 @@ const TITLES := {
 	"hut": "Hut 2847", "light": "Gale Rock Light", "obs": "Col Sidereal",
 	"orangery": "The Orangery", "theatre": "Curtain Call", "chess": "The Grandmaster's Study",
 	"beach": "Low Tide", "train": "Night Train", "alch": "The Alchemist's Cellar",
+	"attic": "The Attic", "watch": "The Watchmaker", "museum": "The Night Gallery",
 }
 ## Texts of the lighthouse have their keys with an "l" in front, those of
 ## the observatory with an "o".
 const PREFIX := {"hut": "", "light": "l", "obs": "o", "orangery": "g", "theatre": "t", "chess": "c",
-	"beach": "b", "train": "n", "alch": "a"}
+	"beach": "b", "train": "n", "alch": "a", "attic": "k", "watch": "w", "museum": "m"}
 const SLOTS := 8
 const HINT_RECT := Rect2(800, 484, 136, 44)
 const MENU_RECT := Rect2(908, 8, 44, 44)
@@ -30,17 +31,22 @@ const UNLOCKS := ["msg.cup_open", "msg.door2_unlocked", "msg.drawer_open", "msg.
 	"cmsg.king_safe", "cmsg.king_down", "cmsg.door_open", "cmsg.key_in",
 	"bmsg.box_open", "bmsg.locker_open", "bmsg.clock_open", "bmsg.tin_open", "bmsg.door_open", "bmsg.kite_down",
 	"nmsg.case_open", "nmsg.brief_open", "nmsg.panel_open", "nmsg.seat_up", "nmsg.handle_in",
-	"amsg.cab_open", "amsg.balanced", "amsg.rings_ok", "amsg.gold", "amsg.door_open"]
+	"amsg.cab_open", "amsg.balanced", "amsg.rings_ok", "amsg.gold", "amsg.door_open",
+	"kmsg.trunk_open", "kmsg.ward_open", "kmsg.unlocked", "kmsg.trap_open", "wmsg.drawer_open", "wmsg.case_open",
+	"wmsg.door_open", "mmsg.case_open", "mmsg.sarc_open", "mmsg.balanced", "mmsg.niche_open", "mmsg.key_in",
+	"mmsg.door_open"]
 const WRONG := ["msg.no_use", "lmsg.no_use", "msg.signal_wrong", "lmsg.lamp_wrong", "lmsg.lamp_not_ready",
 	"lmsg.oil_little", "lmsg.oil_much", "lmsg.crank_free", "msg.stove_need", "msg.bucket_cold", "msg.key_wrong",
 	"omsg.no_use", "omsg.wheel_dead", "omsg.board_dead", "omsg.scope_sags", "omsg.see_dome", "omsg.see_stars", "omsg.bar_empty",
 	"gmsg.no_use", "tmsg.no_use", "cmsg.no_use", "gmsg.can_empty", "gmsg.pot_hard", "gmsg.valves_stuck",
 	"tmsg.desk_dead", "tmsg.masks_wrong", "tmsg.spot_high", "cmsg.king_attacked", "cmsg.square_taken",
 	"bmsg.no_use", "nmsg.no_use", "amsg.no_use", "bmsg.kite_wrong", "bmsg.no_slot", "nmsg.seat_empty",
-	"nmsg.no_socket", "amsg.step_wrong", "amsg.too_hot", "amsg.too_cold", "amsg.bellows_torn", "amsg.bellows_early"]
+	"nmsg.no_socket", "amsg.step_wrong", "amsg.too_hot", "amsg.too_cold", "amsg.bellows_torn", "amsg.bellows_early",
+	"kmsg.no_use", "wmsg.no_use", "mmsg.no_use", "kmsg.trap_locked", "kmsg.music_still", "wmsg.part_wrong",
+	"mmsg.door_wrong", "mmsg.door_dead", "mmsg.scales_bare", "mmsg.dial_bare"]
 
 var link := RoomLink.new()
-var art := ArtSet3.new()
+var art := ArtSet4.new()
 var sound := Sound.new()
 var rooms: Array = []
 var room := "hut"
@@ -230,6 +236,12 @@ func _ambience() -> void:
 		levels["amb_sea"] = 0.55 + 0.15 * LightViews.FLOORS.find(floor_of)
 		if view == "L2":
 			levels["amb_fire"] = 0.25
+	elif mode != "load" and room == "attic":
+		levels["amb_wind"] = 0.15
+	elif mode != "load" and room == "watch":
+		levels["amb_tick"] = 1.0 if view in ["wclocks", "wtall", "wwatch"] else 0.7
+	elif mode != "load" and room == "museum":
+		levels["amb_wind"] = 0.1
 	elif mode != "load" and room == "beach":
 		levels["amb_sea"] = 0.3
 	elif mode != "load" and room == "train":
@@ -512,6 +524,10 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 		sound.play("unlock")
 	elif msg in ["msg.lamp_lit", "msg.stove_lit"]:
 		sound.play("match")
+	elif msg in ["wmsg.part_in", "wmsg.watch_runs", "kmsg.wagon_on"]:
+		sound.play("gear")
+	elif msg == "kmsg.music_on":
+		sound.play("chime")
 	elif msg == "msg.clock_open":
 		sound.play("cuckoo")
 	elif msg in ["msg.power", "omsg.power"]:
@@ -533,7 +549,7 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 	elif word in ["wire", "valve"]:
 		sound.play("gear")
 	elif word in ["dial", "clock", "baro", "tune", "pin", "lamp", "planet", "weight", "ra", "dec", "plani",
-			"turn", "flip", "mask", "bulb", "king", "pull", "seat", "empty"]:
+			"turn", "flip", "mask", "bulb", "king", "pull", "seat", "empty", "glyph"]:
 		sound.play("tick")
 	elif st.get("inv", []).size() > before.get("inv", []).size():
 		sound.play("pick")
@@ -761,11 +777,31 @@ func _show_title() -> void:
 	_panels.add_child(page)
 	page.add_theme_constant_override("separation", 5)
 	_label(page, "LOCKED IN", 30, Art.AMBER, false)
+	# Three rows are in view; further rooms are reached by scrolling.
+	var scroll := ScrollContainer.new()
+	scroll.custom_minimum_size = Vector2(952, 404)
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	scroll.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	page.add_child(scroll)
+	var rows := VBoxContainer.new()
+	rows.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	rows.add_theme_constant_override("separation", 5)
+	scroll.add_child(rows)
+	scroll.scroll_vertical = int(_prefs.get_value("prefs", "scroll", 0))
+	scroll.get_v_scroll_bar().value_changed.connect(func(v: float) -> void: _prefs.set_value("prefs", "scroll", int(v)))
 	var cards: HBoxContainer = null
 	for i in range(rooms.size()):
 		if i % 3 == 0:
-			cards = _row(page, 10)
+			cards = _row(rows, 10)
 		_card(cards, rooms[i])
+	if rooms.size() > 9:
+		# More rooms below (drawn: the font has no arrow).
+		var more := Control.new()
+		more.custom_minimum_size = Vector2(20, 8)
+		more.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+		more.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		more.draw.connect(func() -> void: more.draw_colored_polygon(PackedVector2Array([Vector2(2, 1), Vector2(18, 1), Vector2(10, 8)]), Color(Art.CREAM, 0.5)))
+		page.add_child(more)
 	_languages(page, _show_title)
 	var window := DisplayServer.window_get_size()
 	if window.y > window.x:

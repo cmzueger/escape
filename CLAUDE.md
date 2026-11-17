@@ -10,7 +10,8 @@ first set Hut 2847 (`hut`, easy, 15 min), Gale Rock Light (`light`, medium,
 25 min), Col Sidereal (`obs`, hard, 35 min); second set The Orangery
 (`orangery`, easy), Curtain Call (`theatre`, medium), The Grandmaster's Study
 (`chess`, hard); third set Low Tide (`beach`, easy), Night Train (`train`,
-medium), The Alchemist's Cellar (`alch`, hard).
+medium), The Alchemist's Cellar (`alch`, hard); fourth set The Attic (`attic`,
+easy), The Watchmaker (`watch`, medium), The Night Gallery (`museum`, hard).
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
   `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
@@ -21,12 +22,13 @@ medium), The Alchemist's Cellar (`alch`, hard).
   rules' `clues`), `light.gdshader` (darkness, light pools, lightning),
   `sound.gd` and `audio/` (sounds synthesised by `audio/generate.py`, needs
   numpy and ffmpeg; the .ogg files are committed).
-- The second set's rules are **data for `core/src/kit.rs`** (flags, items,
+- The rules from the second set on are **data for `core/src/kit.rs`** (flags, items,
   locks, dials, picks, uses, latching checks, a hook for the odd mechanism):
   see `orangery.rs`, `theatre.rs`, `chess.rs`, `beach.rs`, `train.rs`,
-  `alch.rs`. Write new rooms this way. Their pictures are in `art_set2.gd` and
-  `art_set3.gd` (each art script extends the one before), hotspots in
-  `views_set2.gd` and `views_set3.gd`. Item names are global (`item.<name>`
+  `alch.rs`, `attic.rs`, `watch.rs`, `museum.rs`. Write new rooms this way.
+  Their pictures are in `art_set2.gd`, `art_set3.gd` and `art_set4.gd` (each
+  art script extends the one before), hotspots in `views_set2.gd`,
+  `views_set3.gd` and `views_set4.gd`. Item names are global (`item.<name>`
   in the texts): pick names no other room uses. Kit locks and
   dials are moved with `turn` and `flip`.
 - A new room: a kit spec in `core`, an entry in `ROOMS` and `Room::call`, views and
@@ -64,8 +66,14 @@ medium), The Alchemist's Cellar (`alch`, hard).
   fails if a card leaves the screen.
 - A change to a drawing's position needs the same change in `views.gd`
   (hotspots) and, for the title and intro buttons, in `web_smoke.js`.
+- `title_shots.gd` needs its output folder (`-- <folder>`); without it the
+  script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.6.0** (2026-11-17): fourth set, again built straight away at the owner's
+  request (settings, looks and names by Claude): The Attic, The Watchmaker,
+  The Night Gallery. The catalogue scrolls (three rows in view, position
+  remembered); chosen without asking, other layouts are open.
 - **0.5.0** (2026-11-16): third set, built straight away at the owner's
   request without a proposal round (settings taken from earlier proposals the
   owner had seen but not picked; looks and names chosen by Claude): Low Tide,
@@ -94,5 +102,6 @@ medium), The Alchemist's Cellar (`alch`, hard).
 ## Open
 - An Android build, a custom domain.
 - The owner's play test of every room but the hut (time, what was
-  unclear), whether the third set's settings, looks and names are liked, and an
+  unclear), whether the third and fourth sets' settings, looks and names are
+  liked, whether the scrolling catalogue is, and an
   opinion on the sounds, which were made without anyone hearing them.

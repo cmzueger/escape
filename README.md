@@ -13,6 +13,9 @@ Escape rooms played in the browser. Offline, no accounts.
 | Low Tide | easy | 15 min | A bathing hut whose door has swollen shut. Six puzzles with shells, kites and the tide. |
 | Night Train | medium | 25 min | A sealed sleeping compartment. Six puzzles with a timetable, a ticket and luggage. |
 | The Alchemist's Cellar | hard | 35 min | Make a golden key. Six puzzles about doing things in the right way and order. |
+| The Attic | easy | 15 min | Grandmother's attic, and the trapdoor has fallen shut. Six puzzles with old toys and photographs. |
+| The Watchmaker | medium | 25 min | Locked in a watchmaker's workshop over lunch. Five puzzles with clocks and a watch to mend. |
+| The Night Gallery | hard | 35 min | A museum's Egyptian wing after closing. Six puzzles in a sign language the room teaches. |
 
 Play: https://cmzueger.github.io/escape/
 
@@ -30,6 +33,6 @@ Play: https://cmzueger.github.io/escape/
 cargo test                                   # the rules
 client/build.sh debug                        # the extension for Godot
 godot --headless --path client --import
-godot --headless --path client --script res://tests/smoke_test.gd   # plays all nine rooms
+godot --headless --path client --script res://tests/smoke_test.gd   # plays all twelve rooms
 GODOT=godot client/build-web.sh              # the web build in client/export/web
 ```

@@ -28,7 +28,8 @@ for row in rows[1:]:
 hut = (root / "core/src/hut.rs").read_text()
 light = (root / "core/src/light.rs").read_text()
 obs = (root / "core/src/obs.rs").read_text()
-kits = {"g": "orangery", "t": "theatre", "c": "chess", "b": "beach", "n": "train", "a": "alch"}
+kits = {"g": "orangery", "t": "theatre", "c": "chess", "b": "beach", "n": "train", "a": "alch",
+        "k": "attic", "w": "watch", "m": "museum"}
 kit_text = {pre: (root / ("core/src/%s.rs" % name)).read_text() for pre, name in kits.items()}
 wanted = set(re.findall(r'"([lo]?msg\.\w+)"', hut + light + obs))
 for pre, text in kit_text.items():

@@ -5,8 +5,8 @@ config_version=5
 [application]
 
 config/name="Locked In"
-config/description="Nine escape rooms, easy to hard."
-config/version="0.5.0"
+config/description="Twelve escape rooms, easy to hard."
+config/version="0.6.0"
 config/quit_on_go_back=false
 config/icon="res://icon.svg"
 run/main_scene="res://scenes/main.tscn"
