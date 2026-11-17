@@ -6,8 +6,8 @@ tech stack and habits, but offline only: no server, no accounts.
 
 ## The project
 "Locked In": a catalogue of escape rooms, landscape, point and click. Rooms:
-first set Hut 2847 (`hut`, easy, 15 min), Gale Rock Light (`light`, medium,
-25 min), Col Sidereal (`obs`, hard, 35 min); second set The Orangery
+first set Hut 2847 (`hut`, easy), Gale Rock Light (`light`, medium), Col
+Sidereal (`obs`, hard); second set The Orangery
 (`orangery`, easy), Curtain Call (`theatre`, medium), The Grandmaster's Study
 (`chess`, hard); third set Low Tide (`beach`, easy), Night Train (`train`,
 medium), The Alchemist's Cellar (`alch`, hard); fourth set The Attic (`attic`,
@@ -38,6 +38,8 @@ easy), The Watchmaker (`watch`, medium), The Night Gallery (`museum`, hard).
 - Hosted on GitHub Pages by `.github/workflows/ci.yml` (every push is tested;
   a push to `main` is then deployed to https://cmzueger.github.io/escape/).
 - `docs/SPEC.md` has the decision log.
+- Target minutes: one `PAR_MINUTES` per room module (catalogue, score and the
+  intro's `%d` all read it). Set per room from the owner's times.
 
 ## How we work
 - Work directly on `main` (owner, 2026-11-16): commit there and push with
@@ -75,6 +77,15 @@ easy), The Watchmaker (`watch`, medium), The Night Gallery (`museum`, hard).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.6.3** (2026-11-17): target times per room from the owner's times
+  (asked for: "move towards these"): hut 7, light 15, obs 30, orangery 5,
+  theatre 10, chess 25, beach 5, train 10, alch 20, attic 5, watch 10,
+  museum 20 minutes (untested rooms estimated). Intros take the minutes from
+  the catalogue. The catalogue scrolls by swiping anywhere on it (a swipe
+  started on a Play button starts nothing), has a wide scroll bar and a tap
+  strip with an arrow (down to the last row, back up). Owner's times so far:
+  hut 4:51, light 11:23, obs 39:04, orangery 2:53, theatre 7:15, chess 24:00
+  (hints), beach 2:38.
 - **0.6.2** (2026-11-17): a hint asked at a puzzle that is not ready yet
   (or already solved) said nothing and gave another puzzle's hint; the owner
   took it for the puzzle in view (chess room, small board). The hint panel
@@ -124,8 +135,9 @@ easy), The Watchmaker (`watch`, medium), The Night Gallery (`museum`, hard).
 
 ## Open
 - An Android build, a custom domain.
-- Target times: the owner's easy and medium times are far under the targets
-  (see 0.6.1); a retuning is to be proposed, not done unasked.
+- Next: a fifth set of rooms aimed at 10 to 20 minutes each, each with its own
+  time from its puzzle count and difficulty, and new puzzle types; the owner
+  votes on proposals first.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, whether the scrolling catalogue is, and an
   opinion on the sounds, which were made without anyone hearing them.

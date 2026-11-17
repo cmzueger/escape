@@ -4,18 +4,18 @@ Escape rooms played in the browser. Offline, no accounts.
 
 | Room | Difficulty | Target | |
 |---|---|---|---|
-| Hut 2847 | easy | 15 min | Snowed in at an alpine hut; somewhere there is a radio. Nine puzzles. |
-| Gale Rock Light | medium | 25 min | A dark lighthouse in a gale and a ship heading for the rocks. Ten puzzles on four floors. |
-| Col Sidereal | hard | 35 min | An observatory on a pass whose door only opens once the night's observation is recorded. Ten layered puzzles in a study and a dome. |
-| The Orangery | easy | 15 min | A greenhouse in the evening sun, latched from outside. Eight puzzles with water, plants and colours. |
-| Curtain Call | medium | 25 min | Backstage after the last performance. Eight puzzles with stage lights, masks and costumes. |
-| The Grandmaster's Study | hard | 35 min | Seven problems about how chess pieces move; a chart in the room teaches the moves. |
-| Low Tide | easy | 15 min | A bathing hut whose door has swollen shut. Six puzzles with shells, kites and the tide. |
-| Night Train | medium | 25 min | A sealed sleeping compartment. Six puzzles with a timetable, a ticket and luggage. |
-| The Alchemist's Cellar | hard | 35 min | Make a golden key. Six puzzles about doing things in the right way and order. |
-| The Attic | easy | 15 min | Grandmother's attic, and the trapdoor has fallen shut. Six puzzles with old toys and photographs. |
-| The Watchmaker | medium | 25 min | Locked in a watchmaker's workshop over lunch. Five puzzles with clocks and a watch to mend. |
-| The Night Gallery | hard | 35 min | A museum's Egyptian wing after closing. Six puzzles in a sign language the room teaches. |
+| Hut 2847 | easy | 7 min | Snowed in at an alpine hut; somewhere there is a radio. Nine puzzles. |
+| Gale Rock Light | medium | 15 min | A dark lighthouse in a gale and a ship heading for the rocks. Ten puzzles on four floors. |
+| Col Sidereal | hard | 30 min | An observatory on a pass whose door only opens once the night's observation is recorded. Ten layered puzzles in a study and a dome. |
+| The Orangery | easy | 5 min | A greenhouse in the evening sun, latched from outside. Eight puzzles with water, plants and colours. |
+| Curtain Call | medium | 10 min | Backstage after the last performance. Eight puzzles with stage lights, masks and costumes. |
+| The Grandmaster's Study | hard | 25 min | Seven problems about how chess pieces move; a chart in the room teaches the moves. |
+| Low Tide | easy | 5 min | A bathing hut whose door has swollen shut. Six puzzles with shells, kites and the tide. |
+| Night Train | medium | 10 min | A sealed sleeping compartment. Six puzzles with a timetable, a ticket and luggage. |
+| The Alchemist's Cellar | hard | 20 min | Make a golden key. Six puzzles about doing things in the right way and order. |
+| The Attic | easy | 5 min | Grandmother's attic, and the trapdoor has fallen shut. Six puzzles with old toys and photographs. |
+| The Watchmaker | medium | 10 min | Locked in a watchmaker's workshop over lunch. Five puzzles with clocks and a watch to mend. |
+| The Night Gallery | hard | 20 min | A museum's Egyptian wing after closing. Six puzzles in a sign language the room teaches. |
 
 Play: https://cmzueger.github.io/escape/
 

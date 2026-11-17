@@ -18,7 +18,7 @@
 
 use crate::{bad, digits, digits_text, names_json, nums_json, step, strs_json};
 
-pub const PAR_MINUTES: u32 = 35;
+pub const PAR_MINUTES: u32 = 30;
 
 pub const FLAGS: [&str; 15] = [
     "drawer_open",

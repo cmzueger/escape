@@ -102,10 +102,13 @@ fn hook(s: &mut State, words: &[&str]) -> Option<Reply> {
     )
 }
 
+/// Minutes for three stars (set from the owner's play tests, 2026-11-17).
+pub const PAR_MINUTES: u32 = 20;
+
 pub static SPEC: Spec = Spec {
     id: "museum",
     prefix: "m",
-    par_minutes: 35,
+    par_minutes: PAR_MINUTES,
     flags: &[
         "case_open",
         "got_feather",

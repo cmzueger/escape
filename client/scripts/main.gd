@@ -66,6 +66,9 @@ var _sent := 0
 var _message := ""
 ## Answers the rules refused and messages without a text (the tests read it).
 var errors: Array = []
+## The catalogue's scroll area and a finger drag on it (see _input).
+var _scroll: ScrollContainer = null
+var _drag := {"on": false, "y": 0.0, "from": 0, "moved": false}
 var _message_left := 0.0
 var _glint := 0.0
 var _flash_left := 0.0
@@ -608,6 +611,14 @@ func _enter(id: String) -> void:
 	_next_flash = 4.0
 
 
+## The room's target minutes, from the catalogue.
+func _minutes(id: String) -> int:
+	for entry in rooms:
+		if entry["id"] == id:
+			return int(entry["minutes"])
+	return 0
+
+
 ## A room from its beginning.
 func start_new(id: String = "") -> void:
 	_enter(id if id != "" else room)
@@ -666,7 +677,43 @@ func _make_theme() -> Theme:
 	th.set_color("font_pressed_color", "Button", Art.AMBER)
 	th.set_color("font_disabled_color", "Button", Art.AMBER)
 	th.set_color("font_color", "Label", Art.CREAM)
+	# A scroll bar wide enough for a finger.
+	var track := StyleBoxFlat.new()
+	track.bg_color = Color(1, 1, 1, 0.06)
+	track.set_corner_radius_all(7)
+	track.content_margin_left = 7
+	track.content_margin_right = 7
+	th.set_stylebox("scroll", "VScrollBar", track)
+	for state in ["grabber", "grabber_highlight", "grabber_pressed"]:
+		var grab := StyleBoxFlat.new()
+		grab.bg_color = Color(Art.BRASS, {"grabber": 0.55, "grabber_highlight": 0.75, "grabber_pressed": 0.9}[state])
+		grab.set_corner_radius_all(7)
+		grab.content_margin_left = 7
+		grab.content_margin_right = 7
+		th.set_stylebox(state, "VScrollBar", grab)
 	return th
+
+
+## A finger dragged over the catalogue scrolls it, also when it starts on a
+## card; once it has moved, the card's button no longer counts as pressed.
+func _input(event: InputEvent) -> void:
+	if mode != "title" or _scroll == null or not is_instance_valid(_scroll):
+		return
+	if event is InputEventScreenTouch:
+		if event.pressed and _scroll.get_global_rect().has_point(event.position):
+			_drag = {"on": true, "y": event.position.y, "from": _scroll.scroll_vertical, "moved": false}
+		elif not event.pressed:
+			_drag["on"] = false
+	elif event is InputEventScreenDrag and _drag["on"]:
+		var dy: float = event.position.y - _drag["y"]
+		if not _drag["moved"] and absf(dy) > 14.0:
+			_drag["moved"] = true
+			for button in _scroll.find_children("*", "Button", true, false):
+				button.disabled = true
+				button.disabled = false
+		if _drag["moved"]:
+			_scroll.scroll_vertical = int(_drag["from"] - dy)
+			get_viewport().set_input_as_handled()
 
 
 func _close_panel() -> void:
@@ -786,7 +833,8 @@ func _show_title() -> void:
 	_label(page, "LOCKED IN", 30, Art.AMBER, false)
 	# Three rows are in view; further rooms are reached by scrolling.
 	var scroll := ScrollContainer.new()
-	scroll.custom_minimum_size = Vector2(952, 404)
+	_scroll = scroll
+	scroll.custom_minimum_size = Vector2(952, 390)
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	scroll.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	page.add_child(scroll)
@@ -802,12 +850,24 @@ func _show_title() -> void:
 			cards = _row(rows, 10)
 		_card(cards, rooms[i])
 	if rooms.size() > 9:
-		# More rooms below (drawn: the font has no arrow).
-		var more := Control.new()
-		more.custom_minimum_size = Vector2(20, 8)
+		# A wide strip with an arrow (drawn: the font has none): down to the
+		# last row, and from there back up.
+		var more := Button.new()
+		more.flat = true
+		more.focus_mode = Control.FOCUS_NONE
+		more.custom_minimum_size = Vector2(420, 22)
 		more.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-		more.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		more.draw.connect(func() -> void: more.draw_colored_polygon(PackedVector2Array([Vector2(2, 1), Vector2(18, 1), Vector2(10, 8)]), Color(Art.CREAM, 0.5)))
+		var bar := scroll.get_v_scroll_bar()
+		var at_end := func() -> bool: return bar.value >= bar.max_value - bar.page - 2
+		more.draw.connect(func() -> void:
+			var c := more.size / 2
+			var tip := 6.0 if not at_end.call() else -6.0
+			more.draw_colored_polygon(PackedVector2Array([c + Vector2(-14, -tip), c + Vector2(14, -tip), c + Vector2(0, tip)]), Color(Art.CREAM, 0.7)))
+		bar.value_changed.connect(func(_v: float) -> void: more.queue_redraw())
+		more.pressed.connect(func() -> void:
+			sound.play("tap")
+			var to := 0.0 if at_end.call() else bar.max_value
+			create_tween().tween_property(scroll, "scroll_vertical", int(to), 0.35).set_trans(Tween.TRANS_SINE))
 		page.add_child(more)
 	_languages(page, _show_title)
 	var window := DisplayServer.window_get_size()
@@ -850,12 +910,12 @@ func _card(row: Container, entry: Dictionary) -> void:
 		_fit(_label(facts, title, 18, Art.AMBER, false))
 	var level := int(entry.get("difficulty", 1))
 	var line := HBoxContainer.new()
-	line.add_theme_constant_override("separation", 6)
+	line.add_theme_constant_override("separation", 3)
 	facts.add_child(line)
-	_picture(line, Vector2(72, 24), func(_p: Control) -> void:
+	_picture(line, Vector2(64, 24), func(_p: Control) -> void:
 		for i in range(3):
-			art.padlock(11.0 + i * 24.0, 11, i < level))
-	_fit(_label(line, "%s · %s" % [tr("diff.%d" % level), tr("ui.minutes") % int(entry.get("minutes", 30))], 13, Art.CREAM, false))
+			art.padlock(10.0 + i * 21.0, 11, i < level))
+	_fit(_label(line, "%s · %s" % [tr("diff.%d" % level), tr("ui.minutes") % int(entry.get("minutes", 30))], 12, Art.CREAM, false))
 	var result := HBoxContainer.new()
 	result.add_theme_constant_override("separation", 6)
 	facts.add_child(result)
@@ -899,7 +959,10 @@ func _show_intro() -> void:
 	var box := _open_panel(640.0, 0.55)
 	_label(box, TITLES.get(room, ""), 28, Art.AMBER)
 	for i in [1, 2, 3]:
-		_label(box, tr("%sintro.%d" % [PREFIX[room], i]), 20)
+		var text := tr("%sintro.%d" % [PREFIX[room], i])
+		if "%d" in text:
+			text = text % _minutes(room)
+		_label(box, text, 20)
 	_label(box, tr("intro.how"), 16, Color(Art.CREAM, 0.65))
 	_button(box, tr("ui.start"), _close_panel)
 

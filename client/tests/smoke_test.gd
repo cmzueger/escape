@@ -283,6 +283,15 @@ func _run() -> void:
 	await _museum()
 
 	check(main.errors.is_empty(), "no refused commands in the play-throughs %s" % [main.errors])
+	# The intro states the room's own target time.
+	TranslationServer.set_locale("de")
+	main.start_new("orangery")
+	var intro := ""
+	for label in main._panels.find_children("*", "Label", true, false):
+		intro += label.text
+	check(intro.contains("5 Minuten") and not intro.contains("%d"), "the intro names the target time")
+	main._close_panel()
+	TranslationServer.set_locale("en")
 	# A hint asked at a puzzle that is not ready yet says it is for another one.
 	main.start_new("chess")
 	main._close_panel()

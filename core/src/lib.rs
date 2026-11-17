@@ -42,15 +42,15 @@ pub const ROOMS: [(&str, u8, u32, usize); 12] = [
     ("hut", 1, hut::PAR_MINUTES, 9),
     ("light", 2, light::PAR_MINUTES, 10),
     ("obs", 3, obs::PAR_MINUTES, 10),
-    ("orangery", 1, 15, 8),
-    ("theatre", 2, 25, 8),
-    ("chess", 3, 35, 7),
-    ("beach", 1, 15, 6),
-    ("train", 2, 25, 6),
-    ("alch", 3, 35, 6),
-    ("attic", 1, 15, 6),
-    ("watch", 2, 25, 5),
-    ("museum", 3, 35, 6),
+    ("orangery", 1, orangery::PAR_MINUTES, 8),
+    ("theatre", 2, theatre::PAR_MINUTES, 8),
+    ("chess", 3, chess::PAR_MINUTES, 7),
+    ("beach", 1, beach::PAR_MINUTES, 6),
+    ("train", 2, train::PAR_MINUTES, 6),
+    ("alch", 3, alch::PAR_MINUTES, 6),
+    ("attic", 1, attic::PAR_MINUTES, 6),
+    ("watch", 2, watch::PAR_MINUTES, 5),
+    ("museum", 3, museum::PAR_MINUTES, 6),
 ];
 
 /// A further 10 minutes over the target cost half a star each.
@@ -215,7 +215,7 @@ mod tests {
         let mut r = Room::new();
         assert!(r
             .call("rooms")
-            .contains("{\"id\":\"light\",\"difficulty\":2,\"minutes\":25,\"puzzles\":10}"));
+            .contains("{\"id\":\"light\",\"difficulty\":2,\"minutes\":15,\"puzzles\":10}"));
         assert!(r.call("tap coat").contains("msg.coat_matches"));
         assert!(r.call("room light").starts_with("{\"ok\":true"));
         assert_eq!(r.id(), "light");

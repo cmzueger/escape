@@ -88,7 +88,7 @@ function check(ok, what) {
   // The second and third row, then the fourth, which is reached by scrolling.
   for (const [x, y, id, scroll] of [[173, 274, "orangery"], [475, 274, "theatre"], [777, 289, "chess"],
     [173, 408, "beach"], [475, 408, "train"], [777, 404, "alch"],
-    [173, 445, "attic", true], [475, 445, "watch", true], [777, 441, "museum", true]]) {
+    [173, 431, "attic", true], [475, 431, "watch", true], [777, 427, "museum", true]]) {
     await page.reload();
     await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
     await page.waitForTimeout(500);
@@ -99,6 +99,31 @@ function check(ok, what) {
     }
     await tap(x, y);
     check((await page.evaluate(() => window.hut.room)) === id && (await state()).room === id, id + " starts");
+  }
+  // On a phone: a swipe that starts on a Play button scrolls and starts nothing;
+  // a tap still plays.
+  {
+    const ctx = await browser.newContext({ viewport: { width: 960, height: 540 }, hasTouch: true, isMobile: true });
+    const phone = await ctx.newPage();
+    phone.on("pageerror", (e) => errors.push(String(e)));
+    await phone.goto(url);
+    await phone.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
+    await phone.waitForTimeout(500);
+    const cdp = await ctx.newCDPSession(phone);
+    const touch = (type, x, y) => cdp.send("Input.dispatchTouchEvent", { type, touchPoints: type === "touchEnd" ? [] : [{ x, y }] });
+    await touch("touchStart", 173, 400);
+    for (let i = 1; i <= 12; i++) {
+      await touch("touchMove", 173, 400 - i * 20);
+      await phone.waitForTimeout(30);
+    }
+    await touch("touchEnd");
+    await phone.waitForTimeout(500);
+    check((await phone.evaluate(() => window.hut.mode)) === "title", "a swipe over the cards starts no room");
+    await touch("touchStart", 173, 431);
+    await touch("touchEnd");
+    await phone.waitForTimeout(500);
+    check((await phone.evaluate(() => window.hut.room)) === "attic", "after the swipe the fourth row is in reach");
+    await ctx.close();
   }
   check(errors.length === 0, "no page errors " + JSON.stringify(errors));
 
