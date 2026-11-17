@@ -35,6 +35,8 @@ jobs:
         run: cargo clippy -p hut-web --target wasm32-unknown-unknown -- -D warnings
       - name: Every text in five languages
         run: python3 client/tests/strings_check.py
+      - name: Views and pictures
+        run: python3 client/tests/views_check.py
 
   client:
     # Playwright 1.56 installs Chromium only up to Ubuntu 24.04.

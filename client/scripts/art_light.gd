@@ -39,7 +39,7 @@ func draw_view(view: String) -> void:
 		"flags": _flags()
 		"slate": _slate()
 		"locker": _locker()
-		"chart": _chart()
+		"seachart": _chart()
 		"window": _window()
 		"gears": _gears()
 		"drum": _drum()

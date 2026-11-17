@@ -8,7 +8,7 @@ const HATCH := {"L1": "hatch1", "L2": "hatch2", "L3": "hatch3"}
 const PARENT := {
 	"L2": "L1", "L3": "L2", "L4": "L3",
 	"oil": "L1", "chest": "L2", "tide": "L2", "hatch2": "L2",
-	"flags": "L3", "slate": "L3", "locker": "L3", "chart": "L3", "window": "L3",
+	"flags": "L3", "slate": "L3", "locker": "L3", "seachart": "L3", "window": "L3",
 	"gears": "L4", "drum": "L4", "valves": "L4", "bearing": "L4",
 }
 const HATCH_RECT := Rect2(636, 0, 180, 110)
@@ -76,7 +76,7 @@ static func spots(view: String, st: Dictionary, art: ArtLight = null) -> Array:
 				["flagchart", Rect2(330, 70, 140, 150), "go:flags"],
 				["slate", Rect2(492, 86, 110, 124), "go:slate"],
 				["telescope", Rect2(236, 262, 100, 130), "tap"],
-				["chart", Rect2(350, 258, 160, 44), "go:chart"],
+				["chart", Rect2(350, 258, 160, 44), "go:seachart"],
 				["locker", Rect2(852, 212, 96, 180), "go:locker"],
 				["hatch3", HATCH_RECT, "go:L4" if "hatch3_open" in flags else "tap"],
 			])

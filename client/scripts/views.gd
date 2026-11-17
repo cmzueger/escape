@@ -55,6 +55,27 @@ static func up(view: String, st: Dictionary) -> String:
 	return LightViews.up(view, st)
 
 
+## The room a view belongs to, found by stepping back to a wall (a test
+## checks that every view a room can reach answers that room).
+static func room_of(view: String) -> String:
+	var seen := 0
+	while back(view) != "" and seen < 20:
+		view = back(view)
+		seen += 1
+	if view in MAIN_ROOM or view in WARDEN_ROOM:
+		return "hut"
+	if view in LightViews.FLOORS:
+		return "light"
+	if view in ObsViews.STUDY or view in ObsViews.DOME:
+		return "obs"
+	for module in [Set2Views, Set3Views, Set4Views]:
+		for room in module.FIRST:
+			for ring in module.RINGS:
+				if module.FIRST[room] in ring and view in ring:
+					return room
+	return ""
+
+
 ## Where a room starts.
 static func first(room: String) -> String:
 	return {"light": "L1", "obs": "S1"}.get(room, Set2Views.FIRST.get(room, Set3Views.FIRST.get(room, Set4Views.FIRST.get(room, "A"))))

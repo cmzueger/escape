@@ -64,6 +64,8 @@ var storm := true
 var _time := 0.0
 var _sent := 0
 var _message := ""
+## Answers the rules refused and messages without a text (the tests read it).
+var errors: Array = []
 var _message_left := 0.0
 var _glint := 0.0
 var _flash_left := 0.0
@@ -487,10 +489,13 @@ func _solved_count(state: Dictionary) -> int:
 func _apply(answer: Dictionary, command: String = "") -> void:
 	if not answer.get("ok", false):
 		push_warning("room: %s" % answer.get("error", "?"))
+		errors.append("%s %s: %s" % [room, command, answer.get("error", "?")])
 		return
 	var before := st
 	st = answer["state"]
 	var msg: String = answer.get("msg", "")
+	if msg != "" and tr(msg) == msg:
+		errors.append("%s: no text for %s" % [room, msg])
 	if msg != "":
 		_say(tr(msg))
 	if selected != "" and not st.get("inv", []).has(selected):
@@ -625,7 +630,9 @@ func continue_game(id: String = "") -> void:
 	seconds = float(st.get("secs", 0))
 	_sent = int(seconds)
 	var saved_view: String = _prefs.get_value(_key(room), "view", "")
-	view = saved_view if Views.reachable(saved_view, st) and not Views.spots(saved_view, st, art).is_empty() else Views.first(room)
+	# A view of another room (a save from before 0.6.1) starts at the room's first view.
+	var fits := Views.room_of(saved_view) == room and Views.reachable(saved_view, st)
+	view = saved_view if fits and not Views.spots(saved_view, st, art).is_empty() else Views.first(room)
 	mode = "play"
 	_close_panel()
 	_refresh()

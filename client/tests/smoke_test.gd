@@ -55,6 +55,75 @@ func tap(spot: String, times: int = 1) -> void:
 		if not main.tap_spot(spot):
 			check(false, "hotspot %s in view %s" % [spot, main.view])
 			return
+		if main.mode == "play" and Views.room_of(main.view) != main.room:
+			check(false, "hotspot %s leads to view %s of another room (%s)" % [spot, main.view, Views.room_of(main.view)])
+
+
+## Every view this room can reach right now (hotspots, back, left and right,
+## up): each must belong to the room.
+func explore(label: String) -> void:
+	var room: String = main.room
+	var todo := [Views.first(room)]
+	var seen := {}
+	var bad := []
+	while not todo.is_empty():
+		var at: String = todo.pop_back()
+		if seen.has(at):
+			continue
+		seen[at] = true
+		if Views.room_of(at) != room:
+			bad.append("%s (room %s)" % [at, Views.room_of(at)])
+			continue
+		var next := [Views.back(at), Views.beside(at, -1), Views.beside(at, 1), Views.up(at, main.st)]
+		for spot in Views.spots(at, main.st, main.art):
+			var action: String = spot[2]
+			if action.begins_with("go:"):
+				next.append(action.substr(3))
+			elif not (action == "tap" or action.begins_with("cmd:")):
+				bad.append("%s: odd action %s" % [at, action])
+		for n in next:
+			if n != "" and not seen.has(n):
+				todo.append(n)
+	check(bad.is_empty() and seen.size() > 1, "%s, %s: %d views, all in the room %s" % [room, label, seen.size(), bad])
+
+
+## Taps at random (hotspots, items on hotspots and on each other, back,
+## sideways) and checks that the player stays in the room and the rules
+## accept every command and every message has a text.
+func monkey(room: String, steps: int) -> void:
+	var rng := RandomNumberGenerator.new()
+	rng.seed = hash(room)
+	main.start_new(room)
+	main._close_panel()
+	main.errors.clear()
+	var lost := []
+	for i in range(steps):
+		if main.mode != "play":
+			break
+		var roll := rng.randi_range(0, 9)
+		var spots: Array = main._spots()
+		var inv: Array = main.st.get("inv", [])
+		if roll == 0 and Views.back(main.view) != "":
+			main.go_view(Views.back(main.view))
+		elif roll == 1 and Views.beside(main.view, 1) != "":
+			main.go_view(Views.beside(main.view, 1 if rng.randi_range(0, 1) == 0 else -1))
+		elif roll == 2 and Views.up(main.view, main.st) != "":
+			main.go_view(Views.up(main.view, main.st))
+		elif roll == 3 and inv.size() >= 2:
+			main.select_item("")
+			main.tap_item(inv[rng.randi_range(0, inv.size() - 1)])
+			main.tap_item(inv[rng.randi_range(0, inv.size() - 1)])
+			main.select_item("")
+		elif roll <= 5 and inv.size() > 0 and not spots.is_empty():
+			main.select_item(inv[rng.randi_range(0, inv.size() - 1)])
+			main._hit(spots[rng.randi_range(0, spots.size() - 1)])
+			main.select_item("")
+		elif not spots.is_empty():
+			main._hit(spots[rng.randi_range(0, spots.size() - 1)])
+		if main.mode == "play" and Views.room_of(main.view) != room:
+			lost.append(main.view)
+			main.go_view(Views.first(room))
+	check(lost.is_empty() and main.errors.is_empty(), "%s: random tapping stays in the room, no refused commands, every message has a text %s %s" % [room, lost, main.errors])
 
 
 func _run() -> void:
@@ -195,6 +264,7 @@ func _run() -> void:
 	check(main.mode == "ending", "ending")
 	await create_timer(3.0).timeout
 	check(main.mode == "end", "end screen")
+	explore("solved")
 	check(int(main.st["halves"]) == 6, "three stars without hints")
 	await shot("end")
 	check(main._best("hut")[0] == 6 and not main._has_game("hut"), "best result kept, saved game gone")
@@ -211,6 +281,17 @@ func _run() -> void:
 	await _attic()
 	await _watch()
 	await _museum()
+
+	check(main.errors.is_empty(), "no refused commands in the play-throughs %s" % [main.errors])
+	# A lighthouse game saved in another room's view continues in the lighthouse.
+	main.start_new("light")
+	main._close_panel()
+	main.view = "C2"
+	main._save()
+	main.continue_game("light")
+	check(main.view == "L1", "a saved view of another room is not restored (%s)" % main.view)
+	for id in ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum"]:
+		monkey(id, 1500)
 
 	# Every text exists in every language.
 	for lang in main.LANGS:
@@ -238,6 +319,7 @@ func _lighthouse() -> void:
 	main._show_title()
 	main.start_new("light")
 	main._close_panel()
+	explore("start")
 	check(main.room == "light" and main.view == "L1", "the lighthouse starts in the store room")
 	await shot("L1")
 	tap("hatch1")
@@ -358,6 +440,7 @@ func _lighthouse() -> void:
 	await shot("L4_lit")
 	await create_timer(3.6).timeout
 	check(main.mode == "end", "end screen")
+	explore("solved")
 	check(int(main.st["halves"]) == 6 and main._best("light")[0] == 6, "three stars for the lighthouse")
 	await shot("light_end")
 	for name in ["pour", "gear", "thud"]:
@@ -370,6 +453,7 @@ func _lighthouse() -> void:
 func _observatory() -> void:
 	main._show_title()
 	main.start_new("obs")
+	explore("start")
 	await shot("obs_intro")
 	main._close_panel()
 	check(main.room == "obs" and main.view == "S1", "the observatory starts in the study")
@@ -501,6 +585,7 @@ func _observatory() -> void:
 	check(main.st["done"], "the time lock opens")
 	await create_timer(3.2).timeout
 	check(main.mode == "end" and int(main.st["halves"]) == 6, "end screen, three stars for the observatory")
+	explore("solved")
 	await shot("obs_end")
 	main._show_title()
 	await shot("title_three")
@@ -514,6 +599,7 @@ func kit_dial(lock: String, code: Array, size: int = 10) -> void:
 
 func _finish(name: String) -> void:
 	check(main.st["done"], name + ": solved")
+	explore("solved")
 	await create_timer(3.0).timeout
 	check(main.mode == "end" and int(main.st["halves"]) == 6, name + ": end screen with three stars")
 	await shot(name + "_end")
@@ -524,6 +610,7 @@ func _orangery() -> void:
 	main._show_title()
 	main.start_new("orangery")
 	main._close_panel()
+	explore("start")
 	check(main.room == "orangery" and main.view == "G1", "the orangery starts at the bench")
 	await shot("G1")
 	tap("wcan")
@@ -583,6 +670,7 @@ func _theatre() -> void:
 	main._show_title()
 	main.start_new("theatre")
 	main._close_panel()
+	explore("start")
 	check(main.room == "theatre" and main.view == "T1", "the theatre starts in the wings")
 	await shot("T1")
 	tap("callsheet")
@@ -654,6 +742,7 @@ func _chess() -> void:
 	main._show_title()
 	main.start_new("chess")
 	main._close_panel()
+	explore("start")
 	check(main.room == "chess" and main.view == "C1", "the study starts at the table")
 	await shot("C1")
 	main.go_view("C2")
@@ -737,6 +826,7 @@ func _beach() -> void:
 	main._show_title()
 	main.start_new("beach")
 	main._close_panel()
+	explore("start")
 	check(main.room == "beach" and main.view == "B1", "the beach hut starts at the door")
 	await shot("B1")
 	main.go_view("B2")
@@ -788,6 +878,7 @@ func _train() -> void:
 	main._show_title()
 	main.start_new("train")
 	main._close_panel()
+	explore("start")
 	check(main.room == "train" and main.view == "N1", "the train starts in the compartment")
 	await shot("N1")
 	main.go_view("N2")
@@ -834,6 +925,7 @@ func _alch() -> void:
 	main._show_title()
 	main.start_new("alch")
 	main._close_panel()
+	explore("start")
 	check(main.room == "alch" and main.view == "A1", "the cellar starts at the workbench")
 	await shot("A1")
 	main.go_view("A2")
@@ -898,6 +990,7 @@ func _attic() -> void:
 	main._show_title()
 	main.start_new("attic")
 	main._close_panel()
+	explore("start")
 	check(main.room == "attic" and main.view == "K1", "the attic starts at the trunk")
 	await shot("K1")
 	main.go_view("K2")
@@ -947,6 +1040,7 @@ func _attic() -> void:
 func _watch() -> void:
 	main.start_new("watch")
 	main._close_panel()
+	explore("start")
 	check(main.room == "watch" and main.view == "W1", "the workshop starts at the bench")
 	await shot("W1")
 	main.go_view("W2")
@@ -1000,6 +1094,7 @@ func _watch() -> void:
 func _museum() -> void:
 	main.start_new("museum")
 	main._close_panel()
+	explore("start")
 	check(main.room == "museum" and main.view == "M1", "the gallery starts at the tablet")
 	await shot("M1")
 	tap("tablet")

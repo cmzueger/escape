@@ -617,9 +617,8 @@ impl Obs {
         if !self.flag("power") {
             return Ok("omsg.wheel_dead");
         }
-        if self.flag(EXPOSED) {
-            return Ok("");
-        }
+        // The dome keeps turning after the photograph: its moonbeam is the
+        // decoder for the door's code too.
         self.dome = (self.dome as i8 + by).rem_euclid(8) as u8;
         Ok("")
     }
@@ -983,6 +982,11 @@ mod tests {
         assert!(!r.done(), "the door waits for the photograph");
         r.call("dial door 0 +1");
         assert_eq!(msg(&mut r, "use plate camera"), "omsg.exposed");
+        // The moonbeam still reads the plaques for the door's code.
+        let at = r.dome;
+        r.call("dome +1");
+        assert_eq!(r.dome, (at + 1) % 8, "the dome turns after the photograph");
+        r.call("dome -1");
         assert_eq!(msg(&mut r, "dial door 0 -1"), "omsg.door_open");
         assert!(r.done());
         r

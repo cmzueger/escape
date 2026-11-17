@@ -146,6 +146,9 @@ falls on the plaque opposite the slit and shows a digit there:
     the plate is exposed.
 
 ## Balance notes (observatory)
+- The dome keeps turning after the photograph (until 0.6.1 it froze, and the
+  door code could not be read from the plaques any more). Owner's time: 40
+  minutes with several hints, partly because of that.
 - Built before the owner had played the lighthouse; the 35 minute target is
   a guess to be corrected by their time.
 - The decoder is used forwards twice (box, door) and backwards once

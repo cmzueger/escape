@@ -58,18 +58,34 @@ easy), The Watchmaker (`watch`, medium), The Night Gallery (`museum`, hard).
   spelling, no ß], fr, it, es). No solution may depend on a word.
 - No pull requests unless asked. No model names in code or commits. Commits end
   with the Co-Authored-By / Claude-Session lines the session gives.
-- Tests: `cargo test`; `client/tests/strings_check.py`; the client play-through
+- Tests: `cargo test`; `client/tests/strings_check.py`;
+  `client/tests/views_check.py`; the client play-through
   `client/tests/smoke_test.gd` (headless Godot, needs `client/build.sh debug`);
   the browser test `client/tests/web_smoke.js` (see the workflow).
 - After a change to the catalogue: `client/tests/title_shots.gd` (under
   `xvfb-run`) renders it in all five languages with the widest cards and
   fails if a card leaves the screen.
+- Every view name must be unique across all rooms (the dispatch goes by name,
+  newest module first): `views_check.py` fails otherwise.
+- A decoder a later puzzle needs again (like the observatory's dome) must
+  never freeze; freezing is only for a mechanism held in its solved position.
 - A change to a drawing's position needs the same change in `views.gd`
   (hotspots) and, for the title and intro buttons, in `web_smoke.js`.
 - `title_shots.gd` needs its output folder (`-- <folder>`); without it the
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.6.1** (2026-11-17): fixes from the owner's first play tests. The
+  lighthouse's chart close-up shared its view name with the chess room's and
+  led into it; the observatory's dome stopped turning after the photograph
+  though the door code needs it. New checks: `views_check.py` (a view,
+  picture or drawing helper name in one place only) and, in the play-through,
+  every reachable view belongs to its room (at the start and when solved),
+  plus random tapping in every room (stays in the room, no refused command,
+  every message has a text). A saved view of another room is not restored.
+  Play-test times (owner, as a couple): Orangery and Low Tide 3 min each,
+  Curtain Call 8 min, Col Sidereal 40 min with several hints (the dome bug
+  cost time); the lighthouse unfinished because of the bug.
 - **0.6.0** (2026-11-17): fourth set, again built straight away at the owner's
   request (settings, looks and names by Claude): The Attic, The Watchmaker,
   The Night Gallery. The catalogue scrolls (three rows in view, position
@@ -101,7 +117,8 @@ easy), The Watchmaker (`watch`, medium), The Night Gallery (`museum`, hard).
 
 ## Open
 - An Android build, a custom domain.
-- The owner's play test of every room but the hut (time, what was
-  unclear), whether the third and fourth sets' settings, looks and names are
+- Target times: the owner's easy and medium times are far under the targets
+  (see 0.6.1); a retuning is to be proposed, not done unasked.
+- The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, whether the scrolling catalogue is, and an
   opinion on the sounds, which were made without anyone hearing them.
