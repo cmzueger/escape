@@ -16,6 +16,10 @@ Escape rooms played in the browser. Offline, no accounts.
 | The Attic | easy | 5 min | Grandmother's attic, and the trapdoor has fallen shut. Six puzzles with old toys and photographs. |
 | The Watchmaker | medium | 10 min | Locked in a watchmaker's workshop over lunch. Five puzzles with clocks and a watch to mend. |
 | The Night Gallery | hard | 20 min | A museum's Egyptian wing after closing. Six puzzles in a sign language the room teaches. |
+| Lookout | medium | 10 min | A kids' club treehouse in autumn, locked from above. Five puzzles with a mirror board and a periscope. |
+| Gondola 12 | medium | 12 min | A cable car stopped halfway on a snowy morning. Six puzzles; shadows matter. |
+| Praline Works | medium | 15 min | A 1920s chocolate factory at night. Six puzzles with a torn recipe and a tilting tray. |
+| Tinker & Sons | hard | 16 min | A toy shop on Christmas Eve, with a dollhouse copy of itself. Seven puzzles, a labyrinth and a deduction. |
 
 Play: https://cmzueger.github.io/escape/
 
@@ -33,6 +37,6 @@ Play: https://cmzueger.github.io/escape/
 cargo test                                   # the rules
 client/build.sh debug                        # the extension for Godot
 godot --headless --path client --import
-godot --headless --path client --script res://tests/smoke_test.gd   # plays all twelve rooms
+godot --headless --path client --script res://tests/smoke_test.gd   # plays all sixteen rooms
 GODOT=godot client/build-web.sh              # the web build in client/export/web
 ```

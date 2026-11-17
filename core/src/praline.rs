@@ -253,7 +253,7 @@ pub static SPEC: Spec = Spec {
     uses: &[
         Use {
             item: "torn1",
-            spot: "recipe",
+            spot: "recipe|piece0|piece1|piece2|piece3",
             needs: "",
             fail: "",
             keep: false,
@@ -263,7 +263,7 @@ pub static SPEC: Spec = Spec {
         },
         Use {
             item: "torn2",
-            spot: "recipe",
+            spot: "recipe|piece0|piece1|piece2|piece3",
             needs: "",
             fail: "",
             keep: false,
@@ -273,7 +273,7 @@ pub static SPEC: Spec = Spec {
         },
         Use {
             item: "torn3",
-            spot: "recipe",
+            spot: "recipe|piece0|piece1|piece2|piece3",
             needs: "",
             fail: "",
             keep: false,
@@ -283,7 +283,7 @@ pub static SPEC: Spec = Spec {
         },
         Use {
             item: "torn4",
-            spot: "recipe",
+            spot: "recipe|piece0|piece1|piece2|piece3",
             needs: "",
             fail: "",
             keep: false,

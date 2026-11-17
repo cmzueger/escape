@@ -8,8 +8,8 @@ import re
 import sys
 
 here = pathlib.Path(__file__).resolve().parent.parent / "scripts"
-views = ["views.gd", "views_light.gd", "views_obs.gd", "views_set2.gd", "views_set3.gd", "views_set4.gd"]
-arts = ["art.gd", "art_light.gd", "art_obs.gd", "art_set2.gd", "art_set3.gd", "art_set4.gd"]
+views = ["views.gd", "views_light.gd", "views_obs.gd", "views_set2.gd", "views_set3.gd", "views_set4.gd", "views_set5.gd"]
+arts = ["art.gd", "art_light.gd", "art_obs.gd", "art_set2.gd", "art_set3.gd", "art_set4.gd", "art_set5.gd"]
 
 owner = collections.defaultdict(set)
 for name in views:

@@ -200,7 +200,7 @@ pub static SPEC: Spec = Spec {
             unset: "emsg.hatch_locked",
         },
     ],
-    flavour: &["window", "comics", "flag", "leaves", "blanket", "map"],
+    flavour: &["window", "comics", "flag", "leaves", "blanket", "map", "darts"],
     puzzles: &[
         Puzzle {
             solved: |s| s.flag("chest_open"),

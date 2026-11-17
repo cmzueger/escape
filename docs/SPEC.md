@@ -140,3 +140,7 @@ Chosen by the owner in two rounds:
 
 Not chosen: submarine, space capsule, detective's office, magician's dressing
 room; fold the paper, fingerprint dust, memory flash.
+
+Built as 0.7.0. Targets: Lookout 10, Gondola 12, Praline Works 15, Tinker &
+Sons 16 minutes (Tinker & Sons listed as hard, the others medium). With
+sixteen rooms the catalogue has six rows; the last holds one card, centred.

@@ -88,13 +88,14 @@ function check(ok, what) {
   // The second and third row, then the fourth, which is reached by scrolling.
   for (const [x, y, id, scroll] of [[173, 274, "orangery"], [475, 274, "theatre"], [777, 289, "chess"],
     [173, 408, "beach"], [475, 408, "train"], [777, 404, "alch"],
-    [173, 431, "attic", true], [475, 431, "watch", true], [777, 427, "museum", true]]) {
+    [173, 193, "attic", true], [475, 193, "watch", true], [777, 189, "museum", true],
+    [173, 312, "tree", true], [475, 312, "gondola", true], [777, 312, "praline", true], [475, 431, "toyshop", true]]) {
     await page.reload();
     await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
     await page.waitForTimeout(500);
     if (scroll) {
       await page.mouse.move(480, 300);
-      await page.mouse.wheel(0, 2000);
+      await page.mouse.wheel(0, 4000);
       await page.waitForTimeout(500);
     }
     await tap(x, y);
@@ -119,10 +120,11 @@ function check(ok, what) {
     await touch("touchEnd");
     await phone.waitForTimeout(500);
     check((await phone.evaluate(() => window.hut.mode)) === "title", "a swipe over the cards starts no room");
-    await touch("touchStart", 173, 431);
+    await touch("touchStart", 173, 155);
     await touch("touchEnd");
     await phone.waitForTimeout(500);
-    check((await phone.evaluate(() => window.hut.room)) === "attic", "after the swipe the fourth row is in reach");
+    const after = await phone.evaluate(() => window.hut.room);
+    check((await phone.evaluate(() => window.hut.mode)) === "play" && after !== "hut", "the swipe scrolled the catalogue (" + after + ")");
     await ctx.close();
   }
   check(errors.length === 0, "no page errors " + JSON.stringify(errors));

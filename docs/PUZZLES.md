@@ -291,3 +291,73 @@ reed 2, scarab 4. Everything else is read through it.
 - Untested by a person. The attic is meant to be a straight line; the
   watchmaker's first step (which clock) and the gallery's reading direction
   are the likely sticking points.
+
+# Lookout
+1. **Club chest** (three wheels framed red, yellow, blue). The darts in the
+   dartboard: red in 7, yellow in 3, blue in 9 → **739** → battery.
+2. **Signal lamp.** Battery into the lamp: its beam crosses the mirror board.
+3. **Mirror board** (6 by 4, lamp in from the left on row 2, glass marble at
+   the top, second column). Mirrors 1, 2, 4 like `\`, mirror 3 like `/`: the
+   beam goes down, right, up and left along the top into the marble → the
+   alarm drawer springs open → periscope handle. (Only this setting works.)
+4. **Periscope.** Handle onto the periscope; now it turns (8 directions).
+5. **Hatch** (four wheels). The club's map marks the friends' treehouse:
+   by the big pine, orange flag (the blue-flag one by the small pine is
+   crossed out). Its board shows dice **5 2 6 4** (the other shows 1 4 4 2;
+   the farmhouse 386 and the bus stop 17 are decoys) → **5264**.
+
+# Gondola 12
+1. **Backpack** (wheels framed blue, red, black). The piste map: the blue
+   run's round sign 4, the red run's square sign 8, the black run's diamond
+   2 → **482** → pocket knife.
+2. **First-aid box** (wheels marked with 1, 2, 3 dots). The sculpture on
+   the turntable casts a shadow on the wall: at the base mark with one dot a
+   2 (front), two dots a 4 (side), three dots a 5 (the 2 seen from behind,
+   mirrored) → **245** → spare fuse and the emergency card.
+3. **Panel cover.** Pocket knife on the panel.
+4. **Fuse** into the panel.
+5. **Brake** lever up (released), as the card's second step shows.
+6. **Direction.** The card: drive to the nearer station. The cabin was going
+   down; the pylon ahead (downhill) is number 7 of 9 (the map numbers them
+   from the valley) → only 2 spans up, 7 down → lever **up**, green button.
+   Down: the cabin creeps, stops, and the lever goes back to stop.
+
+# Praline Works
+1. **Hat locker** (three wheels). Time cards: cup 6:30, bicycle 8:15, hat
+   7:45, umbrella 7:10 → **745** → torn piece 2. (Piece 1 lies on the floor
+   under the conveyor.)
+2. **Mould cabinet** (four shape wheels). The enamel sign: heart red, star
+   gold, shell green, leaf blue, bean violet, square silver. The wrapping
+   machine's reels: green, red, blue, gold → **shell, heart, leaf, star** →
+   piece 3.
+3. **Tray** (both pralines roll together; a praline over an empty mould
+   drops in). From the start: **right, down, left, down, left, up** (six is
+   the fewest) → piece 4 under the tray.
+4. **Recipe card.** All four pieces into the frame (any corner), then turn
+   each until it is upright (from the start: 3, 1, 2, 3 taps).
+5. **Kettle** (three pairs of wheels, marked 1, 2, 3 dots). The recipe:
+   45°, 27°, 31° → **452731** → the conveyor runs; the gold praline holds the
+   office key.
+6. **Door.** The office key.
+
+# Tinker & Sons
+1. **Drawers.** In the dollhouse's copy of the drawer wall one drawer is
+   ajar: second row, third from the left → winding key.
+2. **Train.** Winding key on the train; the last wagon tips the golden
+   walnut onto the station.
+3. **Nutcracker.** Walnut on the nutcracker → marble.
+4. **Labyrinth** (the marble rolls until a peg or the edge; it drops into the
+   hole when it rolls over it). From the start: **up, right, down, right,
+   down, left, down** (seven is the fewest; the hole stays reachable from
+   everywhere) → tree star.
+5. **Tree.** Star on the tree → the lights come on, the presents can be seen.
+6. **Presents** (deduction). Notes: cap ✗ teddy, cap ✗ horse, glasses ✗
+   teddy, glasses ✗ horse, glasses ✗ kite, bonnet ✗ horse. Glasses → drum;
+   the horse can only go to pigtails; cap → kite; bonnet → teddy → the till
+   opens → shop key.
+7. **Door.** The shop key.
+
+## Balance notes (fifth set)
+- Targets from puzzle count and type, between the owner's medium and hard
+  times: Lookout 10, Gondola 12, Praline Works 15, Tinker & Sons 16
+  minutes. Untested by a person.
