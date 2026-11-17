@@ -126,3 +126,17 @@ The best result and the running game are kept on the device.
 
 ## Not in the first version
 Android, a custom domain, music, a hard room.
+
+## Fifth set (owner, 2026-11-17)
+Rooms between the existing medium and hard ones (10 to 20 minutes), each with
+its own target from its puzzle count and difficulty, and new puzzle types.
+Chosen by the owner in two rounds:
+| Room | Look | Planned | New puzzle types |
+|---|---|---|---|
+| Gondola 12 (stuck cable car) | Snowy winter morning, white and pale blue | ~12 min, 6 puzzles | Shadow play |
+| Tinker & Sons (toy shop after hours) | Christmas: snowy window, red and green, fairy lights | ~18 min, 7 puzzles | Picture deduction, tilt maze, a dollhouse copying the shop |
+| Lookout (kids' treehouse) | Autumn: red and gold leaves, late afternoon, a lantern | ~10 min, 5 puzzles | Light beam and mirrors |
+| Praline Works (chocolate factory) | 1920s: copper kettles, tiled walls, enamel signs | ~15 min, 6 puzzles | Torn pieces, a tilt tray |
+
+Not chosen: submarine, space capsule, detective's office, magician's dressing
+room; fold the paper, fingerprint dust, memory flash.

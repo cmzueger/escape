@@ -135,9 +135,8 @@ easy), The Watchmaker (`watch`, medium), The Night Gallery (`museum`, hard).
 
 ## Open
 - An Android build, a custom domain.
-- Next: a fifth set of rooms aimed at 10 to 20 minutes each, each with its own
-  time from its puzzle count and difficulty, and new puzzle types; the owner
-  votes on proposals first.
+- In progress: the fifth set (Gondola 12, Tinker & Sons, Lookout, Praline
+  Works), chosen by the owner, see SPEC.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, whether the scrolling catalogue is, and an
   opinion on the sounds, which were made without anyone hearing them.
