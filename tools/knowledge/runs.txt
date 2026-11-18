@@ -1,6 +1,8 @@
 # The owner's Stats exports, pasted as they come (newest at the end). Only
 # the "done" and "playing" lines carry per-puzzle times; best times are in
-# tools/estimate.py's TIMES.
+# tools/estimate.py's TIMES. Since 0.11.1 a run may end with
+# "| rated fun F difficulty D length L" (the end screen's ratings: fun and
+# difficulty 1 to 5, length 1 too short, 2 right, 3 too long).
 
 Locked In 0.9.1 stats, 2026-11-18
 hut (target 7 min): best 4:51, stars 3.0

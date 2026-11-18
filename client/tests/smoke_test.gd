@@ -649,6 +649,14 @@ func _finish(name: String) -> void:
 	explore("solved")
 	await create_timer(3.0).timeout
 	check(main.mode == "end" and int(main.st["halves"]) == 6, name + ": end screen with three stars")
+	if name == "mill":
+		# The ratings on the end screen go onto the run.
+		for text in [tr("end.fun4"), tr("end.difficulty3"), tr("end.length1")]:
+			for b in main._panels.find_children("*", "Button", true, false):
+				if (b as Button).text == text:
+					(b as Button).pressed.emit()
+					break
+		check(main.stats_text().contains("rated fun 4 difficulty 3 length 1"), "the end screen's ratings are kept with the run")
 	await shot(name + "_end")
 
 

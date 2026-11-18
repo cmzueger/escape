@@ -76,23 +76,23 @@ answers). Fun: forecast from the elements, then the owner's rating if given.
 
 | Room | Puzzles | Predicted | Owner | Label | Felt | Fun forecast | Fun rated |
 |---|---:|---:|---:|---|---:|---:|---:|
-| hut | 9 | 5.7 | 4.85 | easy | 2.4 | 3.4 | 4 |
-| light | 10 | 11.0 | 11.4 | medium | 2.6 | 3.6 | 3 |
-| obs | 10 | 18.4 | - | hard | 2.9 | 3.7 | 3 |
-| orangery | 8 | 3.1 | 2.88 | easy | 2.1 | 3.4 | 4 |
-| theatre | 8 | 6.6 | 7.25 | easy | 2.2 | 3.4 | 4 |
-| chess | 7 | 19.0 | - | hard | 2.9 | 4.0 | 3 |
-| beach | 6 | 2.7 | 2.63 | easy | 2.1 | 3.6 | 3 |
-| train | 6 | 4.5 | 4.73 | easy | 2.0 | 2.9 | 3 |
+| hut | 9 | 5.7 | 4.85 | easy | 2.4 | 3.4 | 4.0 |
+| light | 10 | 11.0 | 11.4 | medium | 2.6 | 3.6 | 3.0 |
+| obs | 10 | 18.4 | - | hard | 2.9 | 3.7 | 3.0 |
+| orangery | 8 | 3.1 | 2.88 | easy | 2.1 | 3.4 | 4.0 |
+| theatre | 8 | 6.6 | 7.25 | easy | 2.2 | 3.4 | 4.0 |
+| chess | 7 | 19.0 | - | hard | 2.9 | 4.0 | 3.0 |
+| beach | 6 | 2.7 | 2.63 | easy | 2.1 | 3.6 | 3.0 |
+| train | 6 | 4.5 | 4.73 | easy | 2.0 | 2.9 | 3.0 |
 | alch | 6 | 5.3 | - | easy | 2.6 | 3.2 | - |
 | attic | 6 | 2.3 | 3.13 | easy | 1.3 | 2.6 | - |
 | watch | 5 | 3.8 | - | easy | 2.0 | 2.5 | - |
 | museum | 6 | 6.6 | - | easy | 2.2 | 3.2 | - |
-| tree | 5 | 1.8 | 0.8 | easy | 2.0 | 3.1 | 2 |
-| gondola | 6 | 4.7 | 4.28 | easy | 2.2 | 3.3 | 4 |
-| praline | 6 | 5.1 | 4.67 | easy | 2.1 | 2.8 | 4 |
+| tree | 5 | 1.8 | 0.8 | easy | 2.0 | 3.1 | 2.0 |
+| gondola | 6 | 4.7 | 4.28 | easy | 2.2 | 3.3 | 4.0 |
+| praline | 6 | 5.1 | 4.67 | easy | 2.1 | 2.8 | 4.0 |
 | toyshop | 7 | 6.2 | - | medium | 2.1 | 3.5 | - |
-| zeppelin | 5 | 8.1 | - | medium | 3.0 | 3.6 | 4 |
+| zeppelin | 5 | 8.1 | - | medium | 3.0 | 3.6 | 4.0 |
 | ship | 5 | 6.4 | - | medium | 2.8 | 3.4 | - |
 | polar | 6 | 13.1 | - | hard | 2.6 | 3.5 | - |
 | house1905 | 6 | 3.5 | - | easy | 2.4 | 3.7 | - |

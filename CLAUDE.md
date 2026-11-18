@@ -119,6 +119,12 @@ Filter Hall (`filter`), The 8:15 to Nowhere (`railway`), Harvest Moon
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.11.1** (2026-11-18): the end screen asks three quick ratings (fun 1 to
+  5, difficulty 1 to 5, length too short / right / too long), asked for by
+  the owner so they are given while memory is fresh. They are written onto
+  the room's latest run (`| rated fun F difficulty D length L`) and so reach
+  the Stats export; `tools/knowledge.py` reads them (room fun rated, and
+  warnings for rooms rated too short, too long, far too easy or too hard).
 - **0.11.0** (2026-11-18): eighth set, the first planned with the knowledge
   base (owner's questionnaire answered; rooms of 20 to 30 minutes, big
   mechanisms with visible progress, few plain codes), chosen in two rounds:

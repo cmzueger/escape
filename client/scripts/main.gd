@@ -1172,14 +1172,57 @@ func _show_end() -> void:
 		return
 	mode = "end"
 	_refresh()
-	var box := _open_panel(600.0, 0.4)
-	_label(box, tr("%send.title" % PREFIX[room]), 34, Art.AMBER)
-	_label(box, tr("%send.text" % PREFIX[room]), 19)
-	_stars(box, int(st.get("halves", 2)), 30)
+	var box := _open_panel(680.0, 0.4)
+	box.add_theme_constant_override("separation", 6)
+	_label(box, tr("%send.title" % PREFIX[room]), 28, Art.AMBER)
+	_label(box, tr("%send.text" % PREFIX[room]), 16)
 	var hints := 0
 	for h in st.get("hints", []):
 		hints += int(h)
-	_label(box, "%s     %s" % [tr("end.time") % _clock_text(int(st.get("secs", 0))), tr("end.hints") % hints], 22)
+	var result := _row(box, 18)
+	_stars(result, int(st.get("halves", 2)), 18)
+	_label(result, "%s     %s" % [tr("end.time") % _clock_text(int(st.get("secs", 0))), tr("end.hints") % hints], 18, Art.CREAM, false)
 	if _prefs.get_value(_key(room), "new", false):
-		_label(box, tr("end.best"), 20, Art.AMBER)
+		_label(box, tr("end.best"), 16, Art.AMBER)
+	_rating(box)
 	_button(box, tr("end.again"), _show_title)
+
+
+## Three quick ratings while the room is fresh; kept with the run (Stats).
+const RATINGS := [["fun", 5], ["difficulty", 5], ["length", 3]]
+
+
+func _rating(box: Container) -> void:
+	_label(box, tr("end.rate"), 14, Color(Art.CREAM, 0.7))
+	var given: Dictionary = {}
+	for r in RATINGS:
+		var what: String = r[0]
+		var row := _row(box, 6)
+		var name := _label(row, tr("end.rate_" + what), 15, Art.CREAM, false)
+		name.custom_minimum_size.x = 130
+		name.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+		var buttons: Array[Button] = []
+		for i in range(int(r[1])):
+			var value := i + 1
+			var b := _button(row, tr("end.%s%d" % [what, value]), func() -> void:
+				given[what] = value
+				for k in range(buttons.size()):
+					buttons[k].modulate = Color(1, 0.8, 0.3) if k == value - 1 else Color.WHITE
+				_rate_run(given))
+			b.add_theme_font_size_override("font_size", 13)
+			b.custom_minimum_size.y = 34
+			buttons.append(b)
+
+
+## Writes the ratings onto the room's latest run.
+func _rate_run(given: Dictionary) -> void:
+	var runs: Array = _prefs.get_value(_key(room), "runs", [])
+	if runs.is_empty():
+		return
+	var base := str(runs[-1]).split(" | rated ")[0]
+	var parts := []
+	for r in RATINGS:
+		parts.append("%s %s" % [r[0], str(given.get(r[0], "-"))])
+	runs[-1] = base + " | rated " + " ".join(parts)
+	_prefs.set_value(_key(room), "runs", runs)
+	_prefs.save(SAVE_PATH)

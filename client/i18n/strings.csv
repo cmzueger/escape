@@ -35,6 +35,23 @@ end.time,Time: %s,Zeit: %s,Temps : %s,Tempo: %s,Tiempo: %s
 end.hints,Hints: %d,Tipps: %d,Indices : %d,Aiuti: %d,Pistas: %d
 end.best,A new best!,Neue Bestleistung!,Nouveau record !,Nuovo record!,¡Nuevo récord!
 end.again,Play again,Nochmals spielen,Rejouer,Gioca ancora,Jugar otra vez
+end.rate,How was it? (kept with your stats),Wie war es? (wird in der Statistik gespeichert),C'était comment ? (gardé dans les stats),Com'è andata? (salvato nelle statistiche),¿Qué tal? (se guarda en las estadísticas)
+end.rate_fun,Fun,Spass,Plaisir,Divertimento,Diversión
+end.rate_difficulty,Difficulty,Schwierigkeit,Difficulté,Difficoltà,Dificultad
+end.rate_length,Length,Länge,Durée,Durata,Duración
+end.fun1,Dull,Öde,Ennuyeux,Noioso,Aburrido
+end.fun2,Meh,Mässig,Bof,Così così,Regular
+end.fun3,OK,OK,Bien,OK,Bien
+end.fun4,Fun,Lustig,Amusant,Divertente,Divertido
+end.fun5,Loved it,Super,Génial,Bellissimo,Genial
+end.difficulty1,Too easy,Zu leicht,Trop facile,Troppo facile,Muy fácil
+end.difficulty2,Easy,Leicht,Facile,Facile,Fácil
+end.difficulty3,Right,Passend,Juste,Giusto,Justo
+end.difficulty4,Hard,Schwer,Difficile,Difficile,Difícil
+end.difficulty5,Too hard,Zu schwer,Trop difficile,Troppo difficile,Muy difícil
+end.length1,Too short,Zu kurz,Trop court,Troppo corto,Muy corto
+end.length2,Right,Passend,Juste,Giusto,Justo
+end.length3,Too long,Zu lang,Trop long,Troppo lungo,Muy largo
 item.matches,Matches,Streichhölzer,Allumettes,Fiammiferi,Cerillas
 item.kindling,Kindling,Anzündholz,Petit bois,Legnetti,Astillas
 item.log,Log,Holzscheit,Bûche,Ceppo,Leño

@@ -124,8 +124,10 @@ def load_runs():
                 em = re.fullmatch(r"([ph])(\d+)(?:\.\d+)?@(\d+:\d\d)", e)
                 if em:
                     events.append((em.group(1), int(em.group(2)), clock(em.group(3))))
+            rated = dict(re.findall(r"(fun|difficulty|length) (\d)", line.split("| rated ")[1])) if "| rated " in line else {}
             runs.append({"room": room, "total": clock(m.group(1)) / 60, "hints": int(m.group(2)),
-                         "taps": int(m.group(3)), "events": sorted(events, key=lambda e: e[2])})
+                         "taps": int(m.group(3)), "events": sorted(events, key=lambda e: e[2]),
+                         "rated": {k: int(v) for k, v in rated.items()}})
     return runs
 
 
@@ -244,6 +246,16 @@ def room_fun(spec, survey):
     families = {FAMILY.get(t) for p in spec for t in p["tags"] if t in FAMILY}
     variety = min(0.5, 0.08 * len(families))
     return min(5.0, sum(vals) / len(vals) + variety)
+
+
+def rated_fun(room, survey, runs):
+    """The owner's fun rating of a room: the end-screen ratings of its runs
+    and the questionnaire's, averaged."""
+    vals = [r["rated"]["fun"] for r in runs if r["room"] == room and "fun" in r["rated"]]
+    q = survey.get(f"room.{room}.fun")
+    if isinstance(q, (int, float)):
+        vals.append(q)
+    return sum(vals) / len(vals) if vals else None
 
 
 def label(points):
@@ -372,8 +384,8 @@ def report(rooms, runs, survey):
               "| Room | Puzzles | Predicted | Owner | Label | Felt | Fun forecast | Fun rated |",
               "|---|---:|---:|---:|---|---:|---:|---:|"]
     notes = []
-    pairs = [(room_fun(spec, survey), survey.get(f"room.{room}.fun")) for room, spec in rooms.items()]
-    pairs = [(f, r) for f, r in pairs if f and isinstance(r, (int, float))]
+    pairs = [(room_fun(spec, survey), rated_fun(room, survey, runs)) for room, spec in rooms.items()]
+    pairs = [(f, r) for f, r in pairs if f and r]
     offset = sum(r - f for f, r in pairs) / len(pairs) if pairs else 0.0
     for room, spec in rooms.items():
         pred = sum(predict(p, w) for p in spec)
@@ -383,7 +395,9 @@ def report(rooms, runs, survey):
         fun = room_fun(spec, survey)
         if fun:
             fun = max(1.0, min(5.0, fun + offset))
-        rated = survey.get(f"room.{room}.fun")
+        rated = rated_fun(room, survey, runs)
+        if rated:
+            rated = round(rated, 1)
         lines.append(f"| {room} | {len(spec)} | {pred:.1f} | {own if own else '-'} | {label(pts)} | "
                      f"{sum(felt) / len(felt):.1f} | " if felt else f"| {room} | {len(spec)} | {pred:.1f} | "
                      f"{own if own else '-'} | {label(pts)} | - | ")
@@ -398,6 +412,14 @@ def report(rooms, runs, survey):
                 if 1 <= p <= len(spec):
                     observed[p] = (hints.get(p, 0), m / predict(spec[p - 1], w))
         ws = warnings(spec, survey, observed)
+        lengths = [r["rated"]["length"] for r in runs if r["room"] == room and "length" in r["rated"]]
+        if lengths and sum(lengths) / len(lengths) < 1.5:
+            ws.append("rated too short after playing")
+        if lengths and sum(lengths) / len(lengths) > 2.5:
+            ws.append("rated too long after playing")
+        diffs = [r["rated"]["difficulty"] for r in runs if r["room"] == room and "difficulty" in r["rated"]]
+        if diffs and abs(sum(diffs) / len(diffs) - 3) >= 1.5:
+            ws.append("felt " + ("far too easy" if sum(diffs) / len(diffs) < 3 else "far too hard") + " after playing")
         if ws:
             notes.append(f"- **{room}**: " + "; ".join(ws) + ".")
     lines += ["", f"Fun forecasts are shifted by {offset:+.1f} to match the rooms the owner rated ({len(pairs)}).", ""]
