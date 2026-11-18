@@ -235,6 +235,10 @@ pub static SPEC: Spec = Spec {
         "lamp",
         "safe",
         "phone",
+        "readings",
+        "note",
+        "keyhole",
+        "door",
     ],
     puzzles: &[
         Puzzle {

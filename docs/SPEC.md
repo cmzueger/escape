@@ -222,6 +222,9 @@ clues, rooms a little longer. Chosen in two rounds:
 - Text clues of every kind: riddles and poems, statements to cross-check,
   codes in documents, logs with times, and clues printed on a wall that are
   one ingredient of another puzzle or of finding something hidden.
+Built as 0.10.0: kinds and targets The Night Edition FXMFCDAEA (hard, 21
+min), The Great Vaudini FAEFDMCA (medium, 14 min), Rain on Gale Street
+FAEEFEXM (hard, 26 min).
 Not chosen: Station X, Orbital Station Kepler, The Abbey Library; Gutenberg
 & Daughter, The Blue Pencil; Vanishing Act, Smoke & Mirrors; The Last
 Client, Room 4B.

@@ -140,7 +140,7 @@ pub static SPEC: Spec = Spec {
         "got_key",
         "done",
     ],
-    items: &["dforme", "dlantern", "dkey"],
+    items: &["dforme", "dlantern", "dpresskey"],
     locks: &[
         Lock {
             name: "locker",
@@ -229,7 +229,7 @@ pub static SPEC: Spec = Spec {
             needs: "drawer_open",
             locked_msg: "dmsg.drawer_shut",
             got: "got_key",
-            give: &["dkey"],
+            give: &["dpresskey"],
             msg: "dmsg.key",
         },
     ],
@@ -258,7 +258,7 @@ pub static SPEC: Spec = Spec {
             msg: "dmsg.plate_on",
         },
         Use {
-            item: "dkey",
+            item: "dpresskey",
             spot: "press",
             needs: "plate_on&ink_ok",
             fail: "dmsg.not_ready",
@@ -306,7 +306,7 @@ pub static SPEC: Spec = Spec {
     ],
     flavour: &[
         "rules", "cards", "log", "notebook", "monday", "tuesday", "chart", "manual", "case", "lamp", "clock",
-        "door", "reels", "bin",
+        "door", "reels", "bin", "reel0", "reel1", "reel2", "stick", "cylinder",
     ],
     puzzles: &[
         Puzzle {
@@ -422,7 +422,7 @@ mod tests {
         assert!(!r.flag("drawer_open"), "Monday's ad is a decoy");
         turn_to(&mut r, "drawer", &TUESDAY, 10);
         msg(&mut r, "tap pkey");
-        msg(&mut r, "use dkey press");
+        msg(&mut r, "use dpresskey press");
         assert!(r.done && r.solved().iter().all(|s| *s) && r.inv == 0);
     }
 }

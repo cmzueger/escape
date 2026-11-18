@@ -14,6 +14,8 @@ const PARENT := {
 
 
 static func is_closeup(view: String) -> bool:
+	if Set7Views.has(view):
+		return not Set7Views.is_wall(view)
 	if HouseViews.has(view):
 		return not HouseViews.is_wall(view)
 	if Set6Views.has(view):
@@ -35,7 +37,7 @@ static func is_closeup(view: String) -> bool:
 
 ## The view to the left (-1) or right (+1), or "" in a close-up.
 static func beside(view: String, dir: int) -> String:
-	for ring in [MAIN_ROOM, WARDEN_ROOM, ObsViews.STUDY, ObsViews.DOME] + Set2Views.RINGS + Set3Views.RINGS + Set4Views.RINGS + Set5Views.RINGS + Set6Views.RINGS + HouseViews.RINGS:
+	for ring in [MAIN_ROOM, WARDEN_ROOM, ObsViews.STUDY, ObsViews.DOME] + Set2Views.RINGS + Set3Views.RINGS + Set4Views.RINGS + Set5Views.RINGS + Set6Views.RINGS + HouseViews.RINGS + Set7Views.RINGS:
 		var i: int = ring.find(view)
 		if i >= 0:
 			return ring[posmod(i + dir, ring.size())]
@@ -43,6 +45,8 @@ static func beside(view: String, dir: int) -> String:
 
 
 static func back(view: String) -> String:
+	if Set7Views.has(view):
+		return Set7Views.PARENT.get(view, "")
 	if HouseViews.has(view):
 		return HouseViews.PARENT.get(view, "")
 	if Set6Views.has(view):
@@ -80,7 +84,7 @@ static func room_of(view: String) -> String:
 		return "light"
 	if view in ObsViews.STUDY or view in ObsViews.DOME:
 		return "obs"
-	for module in [Set2Views, Set3Views, Set4Views, Set5Views, Set6Views, HouseViews]:
+	for module in [Set2Views, Set3Views, Set4Views, Set5Views, Set6Views, HouseViews, Set7Views]:
 		for room in module.FIRST:
 			for ring in module.RINGS:
 				if module.FIRST[room] in ring and view in ring:
@@ -90,13 +94,13 @@ static func room_of(view: String) -> String:
 
 ## Where a room starts.
 static func first(room: String) -> String:
-	return {"light": "L1", "obs": "S1"}.get(room, Set2Views.FIRST.get(room, Set3Views.FIRST.get(room, Set4Views.FIRST.get(room, Set5Views.FIRST.get(room, Set6Views.FIRST.get(room, HouseViews.FIRST.get(room, "A")))))))
+	return {"light": "L1", "obs": "S1"}.get(room, Set2Views.FIRST.get(room, Set3Views.FIRST.get(room, Set4Views.FIRST.get(room, Set5Views.FIRST.get(room, Set6Views.FIRST.get(room, HouseViews.FIRST.get(room, Set7Views.FIRST.get(room, "A"))))))))
 
 
 ## Whether a saved view can be shown again in this state.
 static func reachable(view: String, st: Dictionary) -> bool:
 	var flags: Array = st.get("flags", [])
-	if Set2Views.has(view) or Set3Views.has(view) or Set4Views.has(view) or Set5Views.has(view) or Set6Views.has(view) or HouseViews.has(view):
+	if Set2Views.has(view) or Set3Views.has(view) or Set4Views.has(view) or Set5Views.has(view) or Set6Views.has(view) or HouseViews.has(view) or Set7Views.has(view):
 		return true
 	if ObsViews.has(view):
 		var place := view
@@ -116,7 +120,7 @@ static func reachable(view: String, st: Dictionary) -> bool:
 
 ## Views that move even when nothing is tapped.
 static func animated(view: String) -> bool:
-	return view in ["A", "radio", "baro"] or LightViews.has(view) or view in ObsViews.DOME or view in ["G1", "G2", "pond", "C1", "T3", "mirror", "B2", "bwindow", "N1", "A1", "furnace", "K1", "K2", "W1", "W2", "wclocks", "wwatch", "Y1", "Y2", "ytrain", "ydoll", "P1", "ebeam", "E2", "V1", "V2", "vwindow", "vballast", "R1", "R2", "Z1", "zcompass", "hbox", "ubox", "xcourt", "xstove", "jcourt"]
+	return view in ["A", "radio", "baro"] or LightViews.has(view) or view in ObsViews.DOME or view in ["G1", "G2", "pond", "C1", "T3", "mirror", "B2", "bwindow", "N1", "A1", "furnace", "K1", "K2", "W1", "W2", "wclocks", "wwatch", "Y1", "Y2", "ytrain", "ydoll", "P1", "ebeam", "E2", "V1", "V2", "vwindow", "vballast", "R1", "R2", "Z1", "zcompass", "hbox", "ubox", "xcourt", "xstove", "jcourt", "O1", "F1", "F2", "fmirror", "fglass"]
 
 
 static func _wheels(lock: String, count: int, x0: float, y0: float) -> Array:
@@ -130,6 +134,8 @@ static func _wheels(lock: String, count: int, x0: float, y0: float) -> Array:
 
 
 static func spots(view: String, st: Dictionary, art: ArtLight = null) -> Array:
+	if Set7Views.has(view):
+		return Set7Views.spots(view, st, art as ArtSet7)
 	if HouseViews.has(view):
 		return HouseViews.spots(view, st, art as ArtHouse)
 	if Set6Views.has(view):
@@ -237,6 +243,8 @@ static func spots(view: String, st: Dictionary, art: ArtLight = null) -> Array:
 
 ## {"dark": 0..1, "warm": [Vector4 x4 at most], "cold": Vector4}
 static func lights(view: String, st: Dictionary) -> Dictionary:
+	if Set7Views.has(view):
+		return Set7Views.lights(view, st)
 	if HouseViews.has(view):
 		return HouseViews.lights(view, st)
 	if Set6Views.has(view):

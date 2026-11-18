@@ -1574,3 +1574,487 @@ xhint.5.3,Dial 0142; ask for C. Laurent; say you are her family.,"Wähle 0142; f
 xhint.6.1,Clara's box opens with her birth year.,Claras Kiste öffnet sich mit ihrem Geburtsjahr.,Le coffret de Clara s'ouvre avec son année de naissance.,La scatola di Clara si apre con il suo anno di nascita.,La caja de Clara se abre con su año de nacimiento.
 xhint.6.2,Her farewell letter of 1905 says how old she was.,"Ihr Abschiedsbrief von 1905 sagt, wie alt sie war.",Sa lettre d'adieu de 1905 dit quel âge elle avait.,La sua lettera d'addio del 1905 dice quanti anni aveva.,Su carta de despedida de 1905 dice cuántos años tenía.
 xhint.6.3,She was twelve in 1905: 1893.,Sie war 1905 zwölf: 1893.,Elle avait douze ans en 1905 : 1893.,Aveva dodici anni nel 1905: 1893.,Tenía doce años en 1905: 1893.
+dintro.1,1890. You are the reporter who found out that Hale's bank is empty. Your story was to be tomorrow's front page.,"1890. Du bist der Reporter, der herausgefunden hat, dass Hales Bank leer ist. Deine Geschichte sollte morgen auf die Titelseite.",1890. Tu es le reporter qui a découvert que la banque de Hale est vide. Ton article devait faire la une de demain.,1890. Sei il cronista che ha scoperto che la banca di Hale è vuota. Il tuo articolo doveva andare in prima pagina domani.,1890. Eres el reportero que descubrió que el banco de Hale está vacío. Tu artículo iba a ser la portada de mañana.
+dintro.2,"Someone swapped the page and locked you into the print works. At midnight the presses will print the harmless one. Print yours instead: when the edition rolls, the delivery door opens for the vans.","Jemand hat die Seite ausgetauscht und dich in der Druckerei eingeschlossen. Um Mitternacht drucken die Pressen die harmlose. Druck stattdessen deine: Wenn die Ausgabe läuft, öffnet sich das Ausliefertor für die Wagen.","Quelqu'un a remplacé la page et t'a enfermé dans l'imprimerie. À minuit, les presses imprimeront l'inoffensive. Imprime la tienne : quand l'édition tourne, la porte de livraison s'ouvre pour les voitures.","Qualcuno ha sostituito la pagina e ti ha chiuso in tipografia. A mezzanotte le rotative stamperanno quella innocua. Stampa la tua: quando l'edizione gira, il portone delle consegne si apre per i carri.","Alguien cambió la página y te encerró en la imprenta. A medianoche las prensas imprimirán la inofensiva. Imprime la tuya: cuando la edición rueda, la puerta de reparto se abre para los carros."
+dintro.3,This one is hard. A good time is %d minutes.,Dieser Raum ist schwer. Eine gute Zeit sind %d Minuten.,Cette salle est difficile. Un bon temps : %d minutes.,Questa stanza è difficile. Un buon tempo: %d minuti.,Esta sala es difícil. Un buen tiempo: %d minutos.
+dend.title,Stop the press!,Stoppt die Presse!,Arrêtez les rotatives !,Fermate le rotative!,¡Paren las prensas!
+dend.text,"The press thunders and your headline comes off it ten thousand times. The delivery door rolls up; you ride out on the first van, a warm paper in your hands. By breakfast, the whole city knows about Hale.","Die Presse donnert, und deine Schlagzeile kommt zehntausendmal heraus. Das Ausliefertor rollt hoch; du fährst auf dem ersten Wagen hinaus, eine warme Zeitung in den Händen. Zum Frühstück weiss die ganze Stadt von Hale.","La presse gronde et ton titre sort dix mille fois. La porte de livraison se lève ; tu pars sur la première voiture, un journal encore chaud dans les mains. Au petit-déjeuner, toute la ville sait tout de Hale.",La rotativa tuona e il tuo titolo esce diecimila volte. Il portone si alza; esci sul primo carro con un giornale ancora caldo in mano. A colazione tutta la città sa di Hale.,"La prensa truena y tu titular sale diez mil veces. La puerta de reparto se levanta; sales en el primer carro con un periódico aún caliente. A la hora del desayuno, toda la ciudad sabe lo de Hale."
+item.dforme,Front-page forme,Satzform der Titelseite,Forme de la une,Forma della prima pagina,Forma de la portada
+item.dlantern,Lantern,Laterne,Lanterne,Lanterna,Farol
+item.dpresskey,Press key,Pressenschlüssel,Clé de la presse,Chiave della rotativa,Llave de la prensa
+dtext.letter,"Mr H.,
+As agreed, the reporter's front page is out of the forme and in my locker. Nobody knows its number but me: it is my clock number, on my time card.
+At midnight the press prints the page I set instead.
+Your instructions for the watchman are in Tuesday's small ads, signed as usual.
+— The foreman","Herr H.,
+Wie abgemacht ist die Titelseite des Reporters aus der Form und in meinem Spind. Niemand kennt seine Nummer ausser mir: Es ist meine Stempelnummer, auf meiner Stempelkarte.
+Um Mitternacht druckt die Presse stattdessen meine Seite.
+Ihre Anweisungen für den Nachtwächter stehen in den Kleinanzeigen vom Dienstag, wie immer gezeichnet.
+— Der Vorarbeiter","Monsieur H.,
+Comme convenu, la une du reporter est sortie de la forme et dans mon casier. Personne n'en connaît le numéro sauf moi : c'est mon numéro de pointage, sur ma carte.
+À minuit la presse imprime à la place la page que j'ai composée.
+Vos consignes pour le veilleur sont dans les petites annonces de mardi, signées comme d'habitude.
+— Le contremaître","Signor H.,
+come d'accordo, la prima pagina del cronista è fuori dalla forma e nel mio armadietto. Nessuno ne conosce il numero tranne me: è il mio numero di matricola, sul mio cartellino.
+A mezzanotte la rotativa stampa invece la pagina che ho composto io.
+Le sue istruzioni per il guardiano sono negli annunci di martedì, firmati come sempre.
+— Il capo reparto","Señor H.:
+Como acordamos, la portada del reportero está fuera de la forma y en mi taquilla. Nadie conoce su número salvo yo: es mi número de fichaje, en mi tarjeta.
+A medianoche la prensa imprime en su lugar la página que compuse.
+Sus instrucciones para el vigilante están en los anuncios del martes, firmadas como siempre.
+— El capataz"
+dtext.log,"Night log, watchman
+21:50  Rain begins.
+22:00  The proofreader comes in, dry under her big umbrella.
+22:05  The foreman arrives, soaked to the skin, and goes straight up to the composing room.
+22:20  Two compositors leave for home.
+22:30  The apprentice comes in for the night shift.
+22:40  All quiet. The foreman says I may take my break.","Nachtbuch, Wächter
+21:50  Regen setzt ein.
+22:00  Die Korrektorin kommt, trocken unter ihrem grossen Schirm.
+22:05  Der Vorarbeiter kommt, nass bis auf die Haut, und geht direkt hinauf in die Setzerei.
+22:20  Zwei Setzer gehen nach Hause.
+22:30  Der Lehrling kommt zur Nachtschicht.
+22:40  Alles ruhig. Der Vorarbeiter sagt, ich darf Pause machen.","Registre de nuit, veilleur
+21:50  Début de la pluie.
+22:00  La correctrice arrive, au sec sous son grand parapluie.
+22:05  Le contremaître arrive, trempé jusqu'aux os, et monte droit à l'atelier de composition.
+22:20  Deux typographes rentrent chez eux.
+22:30  L'apprenti arrive pour l'équipe de nuit.
+22:40  Tout est calme. Le contremaître dit que je peux faire ma pause.","Registro notturno, guardiano
+21:50  Comincia a piovere.
+22:00  Arriva la correttrice, asciutta sotto il suo grande ombrello.
+22:05  Arriva il capo reparto, bagnato fradicio, e sale subito in composizione.
+22:20  Due compositori tornano a casa.
+22:30  Arriva l'apprendista per il turno di notte.
+22:40  Tutto tranquillo. Il capo reparto dice che posso fare pausa.","Registro de noche, vigilante
+21:50  Empieza a llover.
+22:00  Llega la correctora, seca bajo su gran paraguas.
+22:05  Llega el capataz, empapado, y sube directo a la sala de composición.
+22:20  Dos cajistas se van a casa.
+22:30  Llega el aprendiz para el turno de noche.
+22:40  Todo en calma. El capataz dice que puedo tomar mi descanso."
+dtext.notebook,"Notes, Hale's bank:
+The vaults are short by 47520 francs.
+Headline: ""HALE'S BANK: 47520 FRANCS GONE""
+The figure goes in the empty line under the headline.","Notizen, Hales Bank:
+In den Tresoren fehlen 47520 Franken.
+Schlagzeile: «HALES BANK: 47520 FRANKEN WEG»
+Die Zahl kommt in die leere Zeile unter der Schlagzeile.","Notes, banque de Hale :
+Il manque 47520 francs dans les coffres.
+Titre : « BANQUE HALE : 47520 FRANCS DISPARUS »
+Le chiffre va dans la ligne vide sous le titre.","Appunti, banca di Hale:
+Nei caveau mancano 47520 franchi.
+Titolo: «BANCA HALE: SPARITI 47520 FRANCHI»
+La cifra va nella riga vuota sotto il titolo.","Notas, banco de Hale:
+En las cámaras faltan 47520 francos.
+Titular: «BANCO HALE: FALTAN 47520 FRANCOS»
+La cifra va en la línea vacía bajo el titular."
+dtext.rules,"HOUSE RULES
+1. No smoking near the paper.
+2. Every column prints the same grey as the square on this sheet.
+3. Type prints as its mirror image: set it backwards.
+4. Pull a proof before a line goes into the forme.
+5. The night edition prints only on our own paper, watermarked with the crown of five points.
+6. Hold paper to a light to see its mark.","HAUSORDNUNG
+1. Kein Rauchen beim Papier.
+2. Jede Spalte druckt im gleichen Grau wie das Feld auf diesem Blatt.
+3. Lettern drucken spiegelverkehrt: rückwärts setzen.
+4. Erst einen Abzug machen, bevor eine Zeile in die Form kommt.
+5. Die Nachtausgabe druckt nur auf unserem eigenen Papier, mit dem Wasserzeichen der Krone mit fünf Zacken.
+6. Papier gegen ein Licht halten, um sein Zeichen zu sehen.","RÈGLEMENT
+1. Défense de fumer près du papier.
+2. Chaque colonne s'imprime du même gris que le carré de cette feuille.
+3. Les caractères impriment en miroir : composer à l'envers.
+4. Tirer une épreuve avant de mettre une ligne dans la forme.
+5. L'édition de nuit s'imprime seulement sur notre papier, au filigrane de la couronne à cinq pointes.
+6. Tenir le papier devant une lumière pour voir sa marque.","REGOLAMENTO
+1. Vietato fumare vicino alla carta.
+2. Ogni colonna stampa dello stesso grigio del quadrato su questo foglio.
+3. I caratteri stampano a specchio: comporre al contrario.
+4. Tirare una bozza prima di mettere una riga nella forma.
+5. L'edizione notturna si stampa solo sulla nostra carta, con la filigrana della corona a cinque punte.
+6. Tenere la carta contro una luce per vederne il segno.","NORMAS DE LA CASA
+1. Prohibido fumar cerca del papel.
+2. Cada columna imprime del mismo gris que el cuadro de esta hoja.
+3. Los tipos imprimen en espejo: componer al revés.
+4. Sacar una prueba antes de poner una línea en la forma.
+5. La edición de noche se imprime solo en nuestro papel, con la filigrana de la corona de cinco puntas.
+6. Poner el papel a contraluz para ver su marca."
+dtext.ad1,"FOR SALE: a fine bicycle, hardly ridden. Ask at the bakery.","ZU VERKAUFEN: ein schönes Velo, kaum gefahren. Fragen in der Bäckerei.","À VENDRE : belle bicyclette, peu servi. S'adresser à la boulangerie.","VENDESI: bella bicicletta, quasi nuova. Chiedere in panetteria.","SE VENDE: bonita bicicleta, casi nueva. Preguntar en la panadería."
+dtext.ad2,"PIANO LESSONS for beginners, evenings. Miss Ward, Bridge Lane.","KLAVIERSTUNDEN für Anfänger, abends. Fräulein Ward, Brückengasse.","LEÇONS DE PIANO pour débutants, le soir. Mlle Ward, ruelle du Pont.","LEZIONI DI PIANO per principianti, la sera. Signorina Ward, vicolo del Ponte.","CLASES DE PIANO para principiantes, por la tarde. Srta. Ward, callejón del Puente."
+dtext.ad3,"ROOM TO LET, quiet, near the station. — N.","ZIMMER ZU VERMIETEN, ruhig, beim Bahnhof. — N.","CHAMBRE À LOUER, calme, près de la gare. — N.","AFFITTASI CAMERA, tranquilla, vicino alla stazione. — N.","SE ALQUILA HABITACIÓN, tranquila, cerca de la estación. — N."
+dtext.ad_monday,"LOST: a tabby cat. 5 white whiskers on the left, 8 on the right, 1 torn ear, answers to 6 names. — H.","VERMISST: eine getigerte Katze. 5 weisse Schnurrhaare links, 8 rechts, 1 eingerissenes Ohr, hört auf 6 Namen. — H.","PERDU : un chat tigré. 5 moustaches blanches à gauche, 8 à droite, 1 oreille déchirée, répond à 6 noms. — H.","SMARRITO: un gatto tigrato. 5 baffi bianchi a sinistra, 8 a destra, 1 orecchio strappato, risponde a 6 nomi. — H.","PERDIDO: un gato atigrado. 5 bigotes blancos a la izquierda, 8 a la derecha, 1 oreja rota, responde a 6 nombres. — H."
+dtext.ad4,WANTED: a strong boy for the coal yard. Good pay.,GESUCHT: ein kräftiger Bursche für den Kohlenhof. Guter Lohn.,ON DEMANDE : un garçon robuste pour le dépôt de charbon. Bien payé.,CERCASI: ragazzo robusto per il deposito del carbone. Buona paga.,SE BUSCA: muchacho fuerte para la carbonería. Buena paga.
+dtext.ad5,"UMBRELLAS mended while you wait. Market Hall, stand 9.","SCHIRME geflickt, während Sie warten. Markthalle, Stand 9.","PARAPLUIES réparés pendant que vous attendez. Halle du marché, stand 9.","OMBRELLI riparati mentre aspettate. Mercato coperto, banco 9.","PARAGUAS arreglados al momento. Mercado, puesto 9."
+dtext.ad_tuesday,"LOST: a grey parrot. Knows 3 words, has 1 blue feather, 4 toes on each foot, answers to 2 whistles. — H.","VERMISST: ein grauer Papagei. Kann 3 Wörter, hat 1 blaue Feder, 4 Zehen an jedem Fuss, hört auf 2 Pfiffe. — H.","PERDU : un perroquet gris. Connaît 3 mots, a 1 plume bleue, 4 doigts à chaque patte, répond à 2 sifflets. — H.","SMARRITO: un pappagallo grigio. Sa 3 parole, ha 1 piuma blu, 4 dita per zampa, risponde a 2 fischi. — H.","PERDIDO: un loro gris. Sabe 3 palabras, tiene 1 pluma azul, 4 dedos en cada pata, responde a 2 silbidos. — H."
+dtext.ad6,THE CIRCUS is in town until Sunday. Elephants!,DER ZIRKUS ist bis Sonntag in der Stadt. Elefanten!,LE CIRQUE est en ville jusqu'à dimanche. Des éléphants !,IL CIRCO è in città fino a domenica. Elefanti!,EL CIRCO está en la ciudad hasta el domingo. ¡Elefantes!
+dtext.monday,Monday,Montag,Lundi,Lunedì,Lunes
+dtext.tuesday,Tuesday,Dienstag,Mardi,Martedì,Martes
+dtext.in,In,Ein,Entrée,Entrata,Entrada
+dtext.out,Out,Aus,Sortie,Uscita,Salida
+dtext.foreman,Foreman,Vorarbeiter,Contremaître,Capo reparto,Capataz
+dtext.manual,"Press manual: the paper path, rollers 3 and 4","Pressenhandbuch: der Papierweg, Walzen 3 und 4","Manuel de la presse : le chemin du papier, rouleaux 3 et 4","Manuale: il percorso della carta, rulli 3 e 4","Manual de la prensa: el recorrido del papel, rodillos 3 y 4"
+dtext.chart,The paper path through the press,Der Papierweg durch die Presse,Le chemin du papier dans la presse,Il percorso della carta nella rotativa,El recorrido del papel por la prensa
+dtext.mount,Mount,Einsetzen,Monter,Montare,Montar
+dmsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+dmsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+dmsg.letter,Crumpled in the bin: a letter from the foreman.,Zerknüllt im Abfall: ein Brief des Vorarbeiters.,Froissée dans la corbeille : une lettre du contremaître.,Accartocciata nel cestino: una lettera del capo reparto.,Arrugada en la papelera: una carta del capataz.
+dmsg.bin,The waste bin under the type case.,Der Abfallkorb unter dem Setzkasten.,La corbeille sous la casse.,Il cestino sotto la cassa dei caratteri.,La papelera bajo la caja de tipos.
+dmsg.cards,The time cards of tonight's shift.,Die Stempelkarten der heutigen Schicht.,Les cartes de pointage de l'équipe de ce soir.,I cartellini del turno di stasera.,Las tarjetas de fichaje del turno de esta noche.
+dmsg.log,The watchman's night log.,Das Nachtbuch des Wächters.,Le registre de nuit du veilleur.,Il registro notturno del guardiano.,El registro de noche del vigilante.
+dmsg.notebook,Your notebook.,Dein Notizbuch.,Ton carnet.,Il tuo taccuino.,Tu libreta.
+dmsg.monday,Monday's paper.,Die Zeitung vom Montag.,Le journal de lundi.,Il giornale di lunedì.,El periódico del lunes.
+dmsg.tuesday,"Tuesday's paper, the watchman's.","Die Zeitung vom Dienstag, die des Wächters.","Le journal de mardi, celui du veilleur.","Il giornale di martedì, quello del guardiano.","El periódico del martes, el del vigilante."
+dmsg.rules,The house rules.,Die Hausordnung.,Le règlement.,Il regolamento.,Las normas de la casa.
+dmsg.chart,The chart of the paper path. Someone spilled ink on it.,Der Plan des Papierwegs. Jemand hat Tinte darüber geschüttet.,Le schéma du chemin du papier. Quelqu'un a renversé de l'encre dessus.,Lo schema del percorso della carta. Qualcuno ci ha versato inchiostro.,El esquema del recorrido del papel. Alguien derramó tinta encima.
+dmsg.manual,A page of the press manual.,Eine Seite des Pressenhandbuchs.,Une page du manuel de la presse.,Una pagina del manuale della rotativa.,Una página del manual de la prensa.
+dmsg.case,The type case.,Der Setzkasten.,La casse.,La cassa dei caratteri.,La caja de tipos.
+dmsg.lamp,The gas lamp hisses.,Die Gaslampe zischt.,La lampe à gaz siffle.,La lampada a gas sibila.,La lámpara de gas silba.
+dmsg.clock,Twenty to midnight.,Zwanzig vor Mitternacht.,Minuit moins vingt.,Mezzanotte meno venti.,Las doce menos veinte.
+dmsg.door,"Locked, from outside.","Abgeschlossen, von aussen.","Fermée à clé, de l'extérieur.","Chiusa a chiave, da fuori.","Cerrada con llave, desde fuera."
+dmsg.reels,Three reels of paper.,Drei Papierrollen.,Trois bobines de papier.,Tre bobine di carta.,Tres bobinas de papel.
+dmsg.reel0,A reel of paper.,Eine Papierrolle.,Une bobine de papier.,Una bobina di carta.,Una bobina de papel.
+dmsg.reel1,A reel of paper.,Eine Papierrolle.,Une bobine de papier.,Una bobina di carta.,Una bobina de papel.
+dmsg.reel2,A reel of paper.,Eine Papierrolle.,Une bobine de papier.,Una bobina di carta.,Una bobina de papel.
+dmsg.stick,The composing stick.,Der Winkelhaken.,Le composteur.,Il compositoio.,El componedor.
+dmsg.cylinder,"The plate cylinder, empty.","Der Plattenzylinder, leer.","Le cylindre porte-forme, vide.","Il cilindro portaforma, vuoto.","El cilindro portaformas, vacío."
+dmsg.lockers,The compositors' lockers. One has a lock with wheels.,Die Spinde der Setzer. Einer hat ein Zahlenschloss.,Les casiers des typographes. L'un a un cadenas à molettes.,Gli armadietti dei compositori. Uno ha un lucchetto a rotelle.,Las taquillas de los cajistas. Una tiene un candado de ruedas.
+dmsg.locker_inside,"The foreman's locker, open.","Der Spind des Vorarbeiters, offen.","Le casier du contremaître, ouvert.","L'armadietto del capo reparto, aperto.","La taquilla del capataz, abierta."
+dmsg.locker_open,Click. The foreman's locker opens.,Klick. Der Spind des Vorarbeiters geht auf.,Clic. Le casier du contremaître s'ouvre.,Clic. L'armadietto del capo reparto si apre.,Clic. La taquilla del capataz se abre.
+dmsg.locker_shut,The locker is shut.,Der Spind ist zu.,Le casier est fermé.,L'armadietto è chiuso.,La taquilla está cerrada.
+dmsg.forme,"Your front page, set in type. One line is missing.","Deine Titelseite, in Lettern gesetzt. Eine Zeile fehlt.","Ta une, composée en caractères. Il manque une ligne.","La tua prima pagina, composta. Manca una riga.","Tu portada, compuesta en tipos. Falta una línea."
+dmsg.stick_full,The stick is full. Clear it to start again.,"Der Winkelhaken ist voll. Leere ihn, um neu zu beginnen.",Le composteur est plein. Vide-le pour recommencer.,Il compositoio è pieno. Svuotalo per ricominciare.,El componedor está lleno. Vacíalo para empezar de nuevo.
+dmsg.stick_done,The line is already in the forme.,Die Zeile ist schon in der Form.,La ligne est déjà dans la forme.,La riga è già nella forma.,La línea ya está en la forma.
+dmsg.proof_short,The line is not full yet.,Die Zeile ist noch nicht voll.,La ligne n'est pas encore pleine.,La riga non è ancora piena.,La línea aún no está llena.
+dmsg.proof,You pull a proof. It does not read the way you wanted.,"Du machst einen Abzug. Er liest sich nicht so, wie du wolltest.",Tu tires une épreuve. Elle ne se lit pas comme prévu.,Tiri una bozza. Non si legge come volevi.,Sacas una prueba. No se lee como querías.
+dmsg.proof_good,The proof reads exactly right.,Der Abzug liest sich genau richtig.,L'épreuve se lit exactement comme il faut.,La bozza si legge esattamente giusta.,La prueba se lee exactamente bien.
+dmsg.line_wrong,Not this line: pull a proof first.,Nicht diese Zeile: Mach zuerst einen Abzug.,Pas cette ligne : tire d'abord une épreuve.,Non questa riga: tira prima una bozza.,Esta línea no: saca primero una prueba.
+dmsg.forme_full,The line drops into the gap. The front page is complete.,Die Zeile fällt in die Lücke. Die Titelseite ist vollständig.,La ligne tombe dans le vide. La une est complète.,La riga entra nel vuoto. La prima pagina è completa.,La línea cae en el hueco. La portada está completa.
+dmsg.forme_gap,A line is still missing.,Es fehlt noch eine Zeile.,Il manque encore une ligne.,Manca ancora una riga.,Aún falta una línea.
+dmsg.plate_on,The forme locks onto the cylinder.,Die Form rastet auf dem Zylinder ein.,La forme se verrouille sur le cylindre.,La forma si blocca sul cilindro.,La forma se fija en el cilindro.
+dmsg.lantern,The watchman's lantern.,Die Laterne des Wächters.,La lanterne du veilleur.,La lanterna del guardiano.,El farol del vigilante.
+dmsg.mark0,Against the light: a crown in the paper.,Gegen das Licht: eine Krone im Papier.,À contre-jour : une couronne dans le papier.,Controluce: una corona nella carta.,A contraluz: una corona en el papel.
+dmsg.mark1,Against the light: an anchor in the paper.,Gegen das Licht: ein Anker im Papier.,À contre-jour : une ancre dans le papier.,Controluce: un'ancora nella carta.,A contraluz: un ancla en el papel.
+dmsg.mark2,Against the light: a crown in the paper. The lantern's oil is spent.,Gegen das Licht: eine Krone im Papier. Das Öl der Laterne ist aufgebraucht.,À contre-jour : une couronne dans le papier. L'huile de la lanterne est épuisée.,Controluce: una corona nella carta. L'olio della lanterna è finito.,A contraluz: una corona en el papel. El aceite del farol se acabó.
+dmsg.mounted,The reel goes onto the axle.,Die Rolle kommt auf die Achse.,La bobine va sur l'axe.,La bobina va sull'asse.,La bobina va al eje.
+dmsg.reel_ok,The right paper is on the press.,Das richtige Papier ist auf der Presse.,Le bon papier est sur la presse.,La carta giusta è sulla rotativa.,El papel correcto está en la prensa.
+dmsg.reel_fixed,The paper is threaded; the reel stays.,Das Papier ist eingezogen; die Rolle bleibt.,Le papier est engagé ; la bobine reste.,La carta è infilata; la bobina resta.,El papel está enhebrado; la bobina se queda.
+dmsg.web_wait,"No paper to thread yet, or no way to know the path.","Noch kein Papier zum Einziehen, oder kein Weg bekannt.","Pas encore de papier à engager, ou aucun chemin connu.","Ancora nessuna carta da infilare, o nessun percorso noto.","Aún no hay papel que enhebrar, o no se sabe el recorrido."
+dmsg.web_ok,The paper runs cleanly through the press.,Das Papier läuft sauber durch die Presse.,Le papier passe proprement dans la presse.,La carta scorre pulita nella rotativa.,El papel pasa limpio por la prensa.
+dmsg.ink_wait,No paper runs yet.,Noch läuft kein Papier.,Aucun papier ne passe encore.,Non scorre ancora carta.,Aún no corre papel.
+dmsg.ink_ok,Every column the same even grey.,"Jede Spalte im gleichen, gleichmässigen Grau.",Chaque colonne du même gris égal.,Ogni colonna dello stesso grigio uniforme.,Cada columna del mismo gris uniforme.
+dmsg.drawer_open,The watchman's drawer opens.,Die Schublade des Wächters geht auf.,Le tiroir du veilleur s'ouvre.,Il cassetto del guardiano si apre.,El cajón del vigilante se abre.
+dmsg.drawer_shut,The drawer is locked.,Die Schublade ist verschlossen.,Le tiroir est fermé.,Il cassetto è chiuso.,El cajón está cerrado.
+dmsg.key,The key that starts the press.,"Der Schlüssel, der die Presse startet.",La clé qui démarre la presse.,La chiave che avvia la rotativa.,La llave que pone en marcha la prensa.
+dmsg.press,The press. A keyhole on its side.,Die Presse. Seitlich ein Schlüsselloch.,La presse. Une serrure sur le côté.,La rotativa. Una serratura sul fianco.,La prensa. Una cerradura en el lateral.
+dmsg.press_ready,The front page is on the cylinder.,Die Titelseite ist auf dem Zylinder.,La une est sur le cylindre.,La prima pagina è sul cilindro.,La portada está en el cilindro.
+dmsg.not_ready,The press is not ready to run.,Die Presse ist nicht bereit.,La presse n'est pas prête.,La rotativa non è pronta.,La prensa no está lista.
+dmsg.rolls,The press thunders into life!,Die Presse donnert los!,La presse démarre dans un grondement !,La rotativa parte con un tuono!,¡La prensa arranca con estruendo!
+dhint.1.1,Someone threw something away in the composing room.,Jemand hat in der Setzerei etwas weggeworfen.,Quelqu'un a jeté quelque chose dans l'atelier.,Qualcuno ha buttato via qualcosa in composizione.,Alguien tiró algo en la sala de composición.
+dhint.1.2,Look under the type case.,Schau unter den Setzkasten.,Regarde sous la casse.,Guarda sotto la cassa dei caratteri.,Mira bajo la caja de tipos.
+dhint.1.3,The waste bin: take the crumpled letter.,Der Abfallkorb: Nimm den zerknüllten Brief.,La corbeille : prends la lettre froissée.,Il cestino: prendi la lettera accartocciata.,La papelera: coge la carta arrugada.
+dhint.2.1,The locker's number is the foreman's clock number. The time cards have no names: which card is his?,Die Nummer des Spinds ist die Stempelnummer des Vorarbeiters. Die Karten tragen keine Namen: Welche ist seine?,Le numéro du casier est le numéro de pointage du contremaître. Les cartes n'ont pas de noms : laquelle est la sienne ?,Il numero dell'armadietto è la matricola del capo reparto. I cartellini non hanno nomi: qual è il suo?,El número de la taquilla es el de fichaje del capataz. Las tarjetas no tienen nombre: ¿cuál es la suya?
+dhint.2.2,Compare the cards' times with the watchman's log: everybody clocks in just after arriving.,Vergleiche die Zeiten der Karten mit dem Nachtbuch: Alle stempeln kurz nach der Ankunft.,Compare les heures des cartes avec le registre : chacun pointe juste après son arrivée.,Confronta gli orari dei cartellini con il registro: tutti timbrano subito dopo l'arrivo.,Compara las horas de las tarjetas con el registro: todos fichan justo después de llegar.
+dhint.2.3,He came at 22:05 and never left: card 263.,Er kam um 22:05 und ging nie: Karte 263.,Il est arrivé à 22:05 et n'est jamais reparti : carte 263.,È arrivato alle 22:05 e non è mai uscito: cartellino 263.,Llegó a las 22:05 y nunca se fue: tarjeta 263.
+dhint.3.1,The missing line is the figure in your notebook. Set it with the sorts from the case.,Die fehlende Zeile ist die Zahl in deinem Notizbuch. Setze sie mit den Lettern aus dem Kasten.,La ligne manquante est le chiffre de ton carnet. Compose-le avec les caractères de la casse.,La riga mancante è la cifra del tuo taccuino. Componila con i caratteri della cassa.,La línea que falta es la cifra de tu libreta. Compónla con los tipos de la caja.
+dhint.3.2,Type prints as a mirror image: the line goes into the stick backwards. The proof shows what it prints.,"Lettern drucken spiegelverkehrt: Die Zeile kommt rückwärts in den Winkelhaken. Der Abzug zeigt, was gedruckt wird.",Les caractères impriment en miroir : la ligne entre à l'envers dans le composteur. L'épreuve montre le résultat.,I caratteri stampano a specchio: la riga va al contrario nel compositoio. La bozza mostra cosa stampa.,Los tipos imprimen en espejo: la línea va al revés en el componedor. La prueba muestra lo que imprime.
+dhint.3.3,"Set 0, 2, 5, 7, 4, then use the forme on the stick.","Setze 0, 2, 5, 7, 4 und benutze dann die Form am Winkelhaken.","Compose 0, 2, 5, 7, 4, puis utilise la forme sur le composteur.","Componi 0, 2, 5, 7, 4, poi usa la forma sul compositoio.","Compón 0, 2, 5, 7, 4 y usa la forma en el componedor."
+dhint.4.1,The house rules say which paper the night edition uses.,"Die Hausordnung sagt, welches Papier die Nachtausgabe braucht.",Le règlement dit quel papier utilise l'édition de nuit.,Il regolamento dice quale carta usa l'edizione notturna.,Las normas dicen qué papel usa la edición de noche.
+dhint.4.2,Hold the watchman's lantern to each reel to see its watermark. Count the crown's points.,"Halte die Laterne des Wächters an jede Rolle, um ihr Wasserzeichen zu sehen. Zähle die Zacken der Krone.",Approche la lanterne de chaque bobine pour voir son filigrane. Compte les pointes de la couronne.,Avvicina la lanterna a ogni bobina per vederne la filigrana. Conta le punte della corona.,Acerca el farol a cada bobina para ver su filigrana. Cuenta las puntas de la corona.
+dhint.4.3,The third reel has the crown of five points: mount it.,Die dritte Rolle hat die Krone mit fünf Zacken: Setze sie ein.,La troisième bobine porte la couronne à cinq pointes : monte-la.,La terza bobina ha la corona a cinque punte: montala.,La tercera bobina tiene la corona de cinco puntas: móntala.
+dhint.5.1,"The chart shows the paper path, but ink hides rollers 3 and 4.","Der Plan zeigt den Papierweg, aber Tinte verdeckt die Walzen 3 und 4.","Le schéma montre le chemin, mais l'encre cache les rouleaux 3 et 4.","Lo schema mostra il percorso, ma l'inchiostro copre i rulli 3 e 4.","El esquema muestra el recorrido, pero la tinta tapa los rodillos 3 y 4."
+dhint.5.2,The page of the manual in the foreman's locker shows rollers 3 and 4.,Die Handbuchseite im Spind des Vorarbeiters zeigt die Walzen 3 und 4.,La page du manuel dans le casier du contremaître montre les rouleaux 3 et 4.,La pagina del manuale nell'armadietto mostra i rulli 3 e 4.,La página del manual en la taquilla muestra los rodillos 3 y 4.
+dhint.5.3,"Over, under, under, over, over, under.","Über, unter, unter, über, über, unter.","Dessus, dessous, dessous, dessus, dessus, dessous.","Sopra, sotto, sotto, sopra, sopra, sotto.","Encima, debajo, debajo, encima, encima, debajo."
+dhint.6.1,The ink fountain's five keys set how dark each column prints.,"Die fünf Schrauben des Farbkastens bestimmen, wie dunkel jede Spalte druckt.",Les cinq vis de l'encrier règlent la teinte de chaque colonne.,Le cinque viti del calamaio regolano quanto è scura ogni colonna.,Los cinco tornillos del tintero regulan lo oscura que sale cada columna.
+dhint.6.2,The house rules show the grey every column must have.,"Die Hausordnung zeigt das Grau, das jede Spalte haben muss.",Le règlement montre le gris de chaque colonne.,Il regolamento mostra il grigio di ogni colonna.,Las normas muestran el gris de cada columna.
+dhint.6.3,"Every key to 2, the middle.","Jede Schraube auf 2, die Mitte.","Chaque vis sur 2, le milieu.","Ogni vite su 2, il centro.","Cada tornillo en 2, el centro."
+dhint.7.1,A complete front page belongs on the press.,Eine vollständige Titelseite gehört auf die Presse.,Une une complète va sur la presse.,Una prima pagina completa va sulla rotativa.,Una portada completa va en la prensa.
+dhint.7.2,The plate cylinder is empty.,Der Plattenzylinder ist leer.,Le cylindre est vide.,Il cilindro è vuoto.,El cilindro está vacío.
+dhint.7.3,Use the forme on the cylinder.,Benutze die Form am Zylinder.,Utilise la forme sur le cylindre.,Usa la forma sul cilindro.,Usa la forma en el cilindro.
+dhint.8.1,The letter says the watchman's instructions are in Tuesday's small ads.,"Der Brief sagt, die Anweisungen für den Wächter stehen in den Kleinanzeigen vom Dienstag.",La lettre dit que les consignes sont dans les annonces de mardi.,La lettera dice che le istruzioni sono negli annunci di martedì.,La carta dice que las instrucciones están en los anuncios del martes.
+dhint.8.2,Monday's paper is the wrong day. Tuesday's lies on the watchman's desk: the ad signed H.,Die Montagszeitung ist der falsche Tag. Die vom Dienstag liegt auf dem Pult des Wächters: die Anzeige von H.,Le journal de lundi est le mauvais jour. Celui de mardi est sur le bureau du veilleur : l'annonce de H.,Il giornale di lunedì è il giorno sbagliato. Quello di martedì è sulla scrivania: l'annuncio di H.,El periódico del lunes es el día equivocado. El del martes está en la mesa: el anuncio de H.
+dhint.8.3,The numbers in the parrot ad: 3142.,Die Zahlen der Papageien-Anzeige: 3142.,Les nombres de l'annonce du perroquet : 3142.,I numeri dell'annuncio del pappagallo: 3142.,Los números del anuncio del loro: 3142.
+dhint.9.1,The press needs its key.,Die Presse braucht ihren Schlüssel.,La presse a besoin de sa clé.,La rotativa ha bisogno della sua chiave.,La prensa necesita su llave.
+dhint.9.2,It only runs with the page on the cylinder and the ink set.,Sie läuft nur mit der Seite auf dem Zylinder und eingestellter Farbe.,Elle ne tourne qu'avec la page sur le cylindre et l'encre réglée.,Gira solo con la pagina sul cilindro e l'inchiostro regolato.,Solo funciona con la página en el cilindro y la tinta ajustada.
+dhint.9.3,Use the press key on the press.,Benutze den Pressenschlüssel an der Presse.,Utilise la clé sur la presse.,Usa la chiave sulla rotativa.,Usa la llave en la prensa.
+vintro.1,"1925. You are the apprentice of the Great Vaudini, illusionist. Tonight is your test.","1925. Du bist der Lehrling des grossen Vaudini, Illusionist. Heute Abend ist deine Prüfung.","1925. Tu es l'apprenti du Grand Vaudini, illusionniste. Ce soir, c'est ton examen.","1925. Sei l'apprendista del Grande Vaudini, illusionista. Stasera è la tua prova.","1925. Eres el aprendiz del Gran Vaudini, ilusionista. Esta noche es tu examen."
+vintro.2,"""Escape my dressing room before my curtain call,"" he said, and chained the stage door. ""Everything you need is in here. Nothing is quite what it seems.""","«Entkomme aus meiner Garderobe vor meinem Schlussapplaus», sagte er und kettete die Bühnentür zu. «Alles, was du brauchst, ist hier. Nichts ist ganz, wie es scheint.»","« Sors de ma loge avant mon rappel », a-t-il dit en enchaînant la porte de scène. « Tout ce qu'il te faut est ici. Rien n'est tout à fait ce qu'il paraît. »","«Esci dal mio camerino prima della chiamata finale», ha detto, incatenando la porta del palco. «Tutto ciò che ti serve è qui. Niente è proprio come sembra.»","«Escapa de mi camerino antes de mi saludo final», dijo, y encadenó la puerta del escenario. «Todo lo que necesitas está aquí. Nada es del todo lo que parece.»"
+vintro.3,A good time is %d minutes.,Eine gute Zeit sind %d Minuten.,Un bon temps : %d minutes.,Un buon tempo: %d minuti.,Un buen tiempo: %d minutos.
+vend.title,Ta-daa!,Tadaa!,Tadaa !,Tadaa!,¡Tachán!
+vend.text,"The chain slides to the floor and you step onto the stage just as the curtain rises for the call. Vaudini bows, then turns to the audience: ""Ladies and gentlemen, my new assistant!""","Die Kette gleitet zu Boden, und du trittst auf die Bühne, gerade als sich der Vorhang zum Applaus hebt. Vaudini verbeugt sich und wendet sich ans Publikum: «Meine Damen und Herren, mein neuer Assistent!»","La chaîne glisse au sol et tu entres en scène juste quand le rideau se lève pour le rappel. Vaudini s'incline, puis se tourne vers le public : « Mesdames et messieurs, mon nouvel assistant ! »","La catena scivola a terra ed entri in scena proprio mentre si alza il sipario. Vaudini si inchina e si volta verso il pubblico: «Signore e signori, il mio nuovo assistente!»","La cadena cae al suelo y sales al escenario justo cuando sube el telón. Vaudini se inclina y se vuelve al público: «Damas y caballeros, ¡mi nuevo ayudante!»"
+item.vkey,Small brass key,Kleiner Messingschlüssel,Petite clé de laiton,Chiavetta d'ottone,Llavecita de latón
+item.vdeck,Marked deck,Gezinktes Kartenspiel,Jeu marqué,Mazzo segnato,Baraja marcada
+item.vpadkey,Padlock key,Vorhängeschlossschlüssel,Clé du cadenas,Chiave del lucchetto,Llave del candado
+vtext.script_title,The act,Die Nummer,Le numéro,Il numero,El número
+vtext.letter_title,To Mystero,An Mystero,À Mystero,A Mystero,A Mystero
+vtext.script,"THE CABINET OF WONDERS
+The incantation. Touch the panels in this order, and never the one I do not name:
+First, what a king wears and takes off at night.
+Then what shines only once the sun has gone, and changes its face every week.
+Then what turns in a lock but is not the magician.
+Then the brightest of all, which nobody may stare at.
+Last, what is always open on stage and shut in sleep.","DAS KABINETT DER WUNDER
+Die Beschwörung. Berühre die Felder in dieser Reihenfolge, und nie jenes, das ich nicht nenne:
+Zuerst, was ein König trägt und nachts ablegt.
+Dann, was erst leuchtet, wenn die Sonne fort ist, und jede Woche sein Gesicht ändert.
+Dann, was sich in einem Schloss dreht, aber nicht der Zauberer ist.
+Dann das Hellste von allem, in das niemand starren darf.
+Zuletzt, was auf der Bühne immer offen ist und im Schlaf geschlossen.","LE CABINET DES MERVEILLES
+L'incantation. Touche les panneaux dans cet ordre, et jamais celui que je ne nomme pas :
+D'abord, ce qu'un roi porte et ôte la nuit.
+Puis ce qui ne brille qu'une fois le soleil parti, et change de visage chaque semaine.
+Puis ce qui tourne dans une serrure sans être le magicien.
+Puis le plus brillant de tous, que nul ne peut fixer.
+Enfin, ce qui est toujours ouvert sur scène et fermé dans le sommeil.","IL GABINETTO DELLE MERAVIGLIE
+L'incantesimo. Tocca i pannelli in quest'ordine, e mai quello che non nomino:
+Prima, ciò che un re porta e si toglie di notte.
+Poi ciò che brilla solo quando il sole se n'è andato, e cambia volto ogni settimana.
+Poi ciò che gira in una serratura ma non è il mago.
+Poi il più luminoso di tutti, che nessuno può fissare.
+Infine, ciò che in scena è sempre aperto e nel sonno chiuso.","EL GABINETE DE LAS MARAVILLAS
+El conjuro. Toca los paneles en este orden, y nunca el que no nombro:
+Primero, lo que un rey lleva y se quita de noche.
+Luego lo que solo brilla cuando el sol se ha ido, y cambia de cara cada semana.
+Luego lo que gira en una cerradura pero no es el mago.
+Luego lo más brillante de todo, que nadie puede mirar fijamente.
+Por último, lo que en escena siempre está abierto y en el sueño cerrado."
+vtext.letter,"My dear Mystero,
+You ask how my cards speak to me. Very well, since you will never see them: each one I need has a tiny gold dot in one corner. They speak in the order a clock's hand sweeps the corners, beginning at the top left.
+And my padlocks? One of them listens to the cards.
+Good luck at the Alhambra.
+V.","Mein lieber Mystero,
+Du fragst, wie meine Karten zu mir sprechen. Nun gut, du wirst sie ja nie sehen: Jede, die ich brauche, hat einen winzigen Goldpunkt in einer Ecke. Sie sprechen in der Reihenfolge, in der ein Uhrzeiger die Ecken überstreicht, oben links beginnend.
+Und meine Vorhängeschlösser? Eines davon hört auf die Karten.
+Viel Glück im Alhambra.
+V.","Mon cher Mystero,
+Tu demandes comment mes cartes me parlent. Soit, puisque tu ne les verras jamais : chacune de celles qu'il me faut porte un minuscule point doré dans un coin. Elles parlent dans l'ordre où l'aiguille d'une horloge balaie les coins, en commençant en haut à gauche.
+Et mes cadenas ? L'un d'eux écoute les cartes.
+Bonne chance à l'Alhambra.
+V.","Mio caro Mystero,
+mi chiedi come mi parlano le mie carte. Va bene, tanto non le vedrai mai: ognuna di quelle che mi servono ha un minuscolo punto d'oro in un angolo. Parlano nell'ordine in cui la lancetta di un orologio percorre gli angoli, cominciando in alto a sinistra.
+E i miei lucchetti? Uno di essi ascolta le carte.
+Buona fortuna all'Alhambra.
+V.","Mi querido Mystero:
+Preguntas cómo me hablan mis cartas. Bien, ya que nunca las verás: cada una de las que necesito tiene un diminuto punto dorado en una esquina. Hablan en el orden en que la aguja de un reloj recorre las esquinas, empezando arriba a la izquierda.
+¿Y mis candados? Uno de ellos escucha a las cartas.
+Suerte en el Alhambra.
+V."
+vtext.poster,presents his most famous illusion,präsentiert seine berühmteste Illusion,présente sa plus célèbre illusion,presenta la sua illusione più famosa,presenta su ilusión más famosa
+vtext.floating,The Floating Clock,Die schwebende Uhr,L'Horloge flottante,L'orologio fluttuante,El reloj flotante
+vmsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+vmsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+vmsg.vkey,Sewn into the cape's lining: a small brass key.,Ins Futter des Umhangs eingenäht: ein kleiner Messingschlüssel.,Cousue dans la doublure de la cape : une petite clé de laiton.,Cucita nella fodera del mantello: una chiavetta d'ottone.,Cosida en el forro de la capa: una llavecita de latón.
+vmsg.costume,"Vaudini's costumes, smelling of greasepaint.","Vaudinis Kostüme, sie riechen nach Schminke.","Les costumes de Vaudini, qui sentent le fard.","I costumi di Vaudini, odorano di cerone.","Los trajes de Vaudini, huelen a maquillaje."
+vmsg.trunk_locked,A travelling trunk with a small brass lock.,Ein Reisekoffer mit einem kleinen Messingschloss.,Une malle de voyage à petite serrure de laiton.,Un baule da viaggio con una piccola serratura d'ottone.,Un baúl de viaje con una pequeña cerradura de latón.
+vmsg.trunk_open,The trunk opens: a script and a letter.,Der Koffer geht auf: ein Skript und ein Brief.,La malle s'ouvre : un texte et une lettre.,Il baule si apre: un copione e una lettera.,El baúl se abre: un guion y una carta.
+vmsg.trunk_inside,The open trunk.,Der offene Koffer.,La malle ouverte.,Il baule aperto.,El baúl abierto.
+vmsg.script,The script of his act.,Das Skript seiner Nummer.,Le texte de son numéro.,Il copione del suo numero.,El guion de su número.
+vmsg.letter,A letter to his rival.,Ein Brief an seinen Rivalen.,Une lettre à son rival.,Una lettera al suo rivale.,Una carta a su rival.
+vmsg.poster,The poster of Vaudini's show.,Das Plakat von Vaudinis Vorstellung.,L'affiche du spectacle de Vaudini.,Il manifesto dello spettacolo di Vaudini.,El cartel del espectáculo de Vaudini.
+vmsg.mirror,Vaudini's dressing mirror.,Vaudinis Schminkspiegel.,Le miroir de loge de Vaudini.,Lo specchio da trucco di Vaudini.,El espejo de camerino de Vaudini.
+vmsg.table,"His dressing table: powder, combs, a moustache comb.","Sein Schminktisch: Puder, Kämme, ein Schnurrbartkamm.","Sa coiffeuse : poudre, peignes, un peigne à moustache.","La sua toeletta: cipria, pettini, un pettine per baffi.","Su tocador: polvos, peines, un peine de bigote."
+vmsg.spread,You fan the deck out on the table.,Du fächerst die Karten auf dem Tisch auf.,Tu étales le jeu sur la table.,Apri il mazzo a ventaglio sul tavolo.,Extiendes la baraja sobre la mesa.
+vmsg.cards,"Eight cards, face down. Tap one to turn it.","Acht Karten, verdeckt. Tippe eine an, um sie umzudrehen.","Huit cartes, face cachée. Touche-en une pour la retourner.","Otto carte, coperte. Toccane una per girarla.",Ocho cartas boca abajo. Toca una para girarla.
+vmsg.cabinet,"The Cabinet of Wonders, open and empty.","Das Kabinett der Wunder, offen und leer.","Le Cabinet des merveilles, ouvert et vide.","Il Gabinetto delle meraviglie, aperto e vuoto.","El Gabinete de las maravillas, abierto y vacío."
+vmsg.cabinet_inside,The cabinet stands open.,Das Kabinett steht offen.,Le cabinet est ouvert.,Il gabinetto è aperto.,El gabinete está abierto.
+vmsg.panel,"The panel gives a little, but nothing happens. You do not know the incantation yet.","Das Feld gibt etwas nach, aber nichts geschieht. Du kennst die Beschwörung noch nicht.","Le panneau cède un peu, mais rien ne se passe. Tu ne connais pas encore l'incantation.","Il pannello cede un po', ma non succede nulla. Non conosci ancora l'incantesimo.","El panel cede un poco, pero no pasa nada. Aún no conoces el conjuro."
+vmsg.panel_click,Click.,Klick.,Clic.,Clic.,Clic.
+vmsg.panel_back,A clunk: every panel springs back out.,Ein Klonk: Alle Felder springen wieder heraus.,Un bruit sourd : tous les panneaux ressortent.,Un tonfo: tutti i pannelli tornano fuori.,Un golpe: todos los paneles vuelven a salir.
+vmsg.cabinet_open,The cabinet swings open. Inside: a deck of cards.,Das Kabinett schwingt auf. Darin: ein Kartenspiel.,Le cabinet s'ouvre. Dedans : un jeu de cartes.,Il gabinetto si apre. Dentro: un mazzo di carte.,El gabinete se abre. Dentro: una baraja.
+vmsg.glass,"A large sheet of glass, tilted, in front of a painted backdrop.","Eine grosse, schräge Glasscheibe vor einem bemalten Prospekt.",Une grande vitre inclinée devant une toile peinte.,Una grande lastra di vetro inclinata davanti a un fondale dipinto.,Una gran lámina de vidrio inclinada ante un telón pintado.
+vmsg.backdrop,A painted night sky with three windows.,Ein gemalter Nachthimmel mit drei Fenstern.,Un ciel nocturne peint avec trois fenêtres.,Un cielo notturno dipinto con tre finestre.,Un cielo nocturno pintado con tres ventanas.
+vmsg.bell,The curtain bell. Not yet.,Die Vorhangglocke. Noch nicht.,La cloche du rideau. Pas encore.,La campanella del sipario. Non ancora.,La campana del telón. Todavía no.
+vmsg.box,The sawing box.,Die Zersägekiste.,La boîte à scier.,La cassa della donna tagliata.,La caja de serrar.
+vmsg.saw_stuck,The parts slide a little and stop: you do not know how they should sit.,"Die Teile rutschen ein wenig und bleiben stehen: Du weisst nicht, wie sie stehen sollen.",Les parties glissent un peu et s'arrêtent : tu ne sais pas comment les placer.,Le parti scorrono un poco e si fermano: non sai come vanno messe.,Las partes se deslizan un poco y se paran: no sabes cómo deben ir.
+vmsg.saw_ok,A secret drawer springs out of the box.,Eine Geheimschublade springt aus der Kiste.,Un tiroir secret jaillit de la boîte.,Un cassetto segreto salta fuori dalla cassa.,Un cajón secreto sale de la caja.
+vmsg.box_shut,Nothing to take yet.,Noch nichts zu nehmen.,Rien à prendre encore.,Ancora niente da prendere.,Aún no hay nada que coger.
+vmsg.rabbit,"A toy rabbit; in its tummy, a padlock key.",Ein Spielzeughase; in seinem Bauch ein Vorhängeschlossschlüssel.,"Un lapin en peluche ; dans son ventre, une clé de cadenas.","Un coniglio di pezza; nella pancia, la chiave di un lucchetto.","Un conejo de juguete; en la tripa, una llave de candado."
+vmsg.chain,A chain with three padlocks across the stage door.,Eine Kette mit drei Vorhängeschlössern über der Bühnentür.,Une chaîne à trois cadenas sur la porte de scène.,Una catena con tre lucchetti sulla porta del palco.,Una cadena con tres candados en la puerta del escenario.
+vmsg.pad_open,The padlock springs open.,Das Vorhängeschloss springt auf.,Le cadenas s'ouvre d'un coup.,Il lucchetto scatta aperto.,El candado se abre de golpe.
+vmsg.chain_holds,"The key turns, but the other padlocks still hold the chain.","Der Schlüssel dreht, aber die anderen Schlösser halten die Kette noch.","La clé tourne, mais les autres cadenas tiennent encore la chaîne.","La chiave gira, ma gli altri lucchetti tengono ancora la catena.","La llave gira, pero los otros candados aún sujetan la cadena."
+vmsg.chain_falls,The last padlock opens and the chain falls away!,"Das letzte Schloss geht auf, und die Kette fällt!",Le dernier cadenas s'ouvre et la chaîne tombe !,L'ultimo lucchetto si apre e la catena cade!,¡El último candado se abre y la cadena cae!
+vhint.1.1,Vaudini hides things where an audience never looks.,"Vaudini versteckt Dinge, wo das Publikum nie hinschaut.",Vaudini cache les choses là où le public ne regarde jamais.,Vaudini nasconde le cose dove il pubblico non guarda mai.,Vaudini esconde cosas donde el público nunca mira.
+vhint.1.2,Look closely at the costumes on the rack.,Schau dir die Kostüme am Ständer genau an.,Regarde bien les costumes sur le portant.,Guarda bene i costumi sull'appendiabiti.,Mira bien los trajes del perchero.
+vhint.1.3,The red lining of the cape: tap the little lump.,Das rote Futter des Umhangs: Tippe auf die kleine Beule.,La doublure rouge de la cape : touche la petite bosse.,La fodera rossa del mantello: tocca il piccolo rigonfiamento.,El forro rojo de la capa: toca el bultito.
+vhint.2.1,"A small brass key, a small brass lock.","Ein kleiner Messingschlüssel, ein kleines Messingschloss.","Une petite clé de laiton, une petite serrure de laiton.","Una chiavetta d'ottone, una piccola serratura d'ottone.","Una llavecita de latón, una pequeña cerradura de latón."
+vhint.2.2,The travelling trunk.,Der Reisekoffer.,La malle de voyage.,Il baule da viaggio.,El baúl de viaje.
+vhint.2.3,Use the key on the trunk.,Benutze den Schlüssel am Koffer.,Utilise la clé sur la malle.,Usa la chiave sul baule.,Usa la llave en el baúl.
+vhint.3.1,"The script's incantation names five of the cabinet's six panels, in riddles.","Die Beschwörung im Skript nennt fünf der sechs Felder des Kabinetts, in Rätseln.","L'incantation du texte nomme cinq des six panneaux, en énigmes.","L'incantesimo del copione nomina cinque dei sei pannelli, con indovinelli.","El conjuro del guion nombra cinco de los seis paneles, en acertijos."
+vhint.3.2,"A king's head, the night sky, a lock, the daytime sky, a face. The star is never named.","Ein Königskopf, der Nachthimmel, ein Schloss, der Taghimmel, ein Gesicht. Der Stern wird nie genannt.","Une tête de roi, le ciel de nuit, une serrure, le ciel de jour, un visage. L'étoile n'est jamais nommée.","La testa di un re, il cielo notturno, una serratura, il cielo di giorno, un volto. La stella non è mai nominata.","La cabeza de un rey, el cielo de noche, una cerradura, el cielo de día, una cara. La estrella nunca se nombra."
+vhint.3.3,"Crown, moon, key, sun, eye.","Krone, Mond, Schlüssel, Sonne, Auge.","Couronne, lune, clé, soleil, œil.","Corona, luna, chiave, sole, occhio.","Corona, luna, llave, sol, ojo."
+vhint.4.1,Spread the deck on the dressing table. The letter to Mystero tells how the cards speak.,"Fächere die Karten auf dem Schminktisch auf. Der Brief an Mystero sagt, wie die Karten sprechen.",Étale le jeu sur la coiffeuse. La lettre à Mystero dit comment parlent les cartes.,Apri il mazzo sulla toeletta. La lettera a Mystero dice come parlano le carte.,Extiende la baraja en el tocador. La carta a Mystero dice cómo hablan las cartas.
+vhint.4.2,"Four backs have a tiny gold dot, each in a different corner. Read their faces clockwise from the top left.","Vier Rückseiten haben einen winzigen Goldpunkt, jeder in einer anderen Ecke. Lies ihre Werte im Uhrzeigersinn ab oben links.","Quatre dos portent un minuscule point doré, chacun dans un autre coin. Lis leurs valeurs dans le sens des aiguilles depuis le haut à gauche.","Quattro dorsi hanno un minuscolo punto d'oro, ognuno in un angolo diverso. Leggi i valori in senso orario dall'alto a sinistra.","Cuatro dorsos tienen un punto dorado, cada uno en una esquina distinta. Lee sus valores en sentido horario desde arriba a la izquierda."
+vhint.4.3,"2, 7, 5, 8: the padlock with four wheels.","2, 7, 5, 8: das Schloss mit vier Rädchen.","2, 7, 5, 8 : le cadenas à quatre molettes.","2, 7, 5, 8: il lucchetto a quattro rotelle.","2, 7, 5, 8: el candado de cuatro ruedas."
+vhint.5.1,Is the dressing mirror really just a mirror?,Ist der Schminkspiegel wirklich nur ein Spiegel?,Le miroir de loge n'est-il vraiment qu'un miroir ?,Lo specchio da trucco è davvero solo uno specchio?,¿El espejo del camerino es solo un espejo?
+vhint.5.2,A two-way mirror shows what is behind it when it is darker on your side than on the other.,"Ein Spionspiegel zeigt, was dahinter ist, wenn es auf deiner Seite dunkler ist als auf der anderen.",Un miroir sans tain laisse voir derrière lui quand ton côté est plus sombre que l'autre.,Uno specchio a due vie mostra ciò che c'è dietro quando dal tuo lato è più buio che dall'altro.,Un espejo espía deja ver lo de detrás cuando tu lado está más oscuro que el otro.
+vhint.5.3,"Switch the mirror's bulbs off and the alcove lamp in the wings on, then look into the mirror.","Schalte die Lampen am Spiegel aus und die Nischenlampe in der Kulisse ein, dann schau in den Spiegel.","Éteins les ampoules du miroir et allume la lampe de l'alcôve en coulisse, puis regarde le miroir.","Spegni le lampadine dello specchio e accendi la lampada della nicchia tra le quinte, poi guarda lo specchio.","Apaga las bombillas del espejo y enciende la lámpara del nicho entre bastidores, y mira el espejo."
+vhint.6.1,The glass in the wings shows a ghost only when the alcove behind it is lit.,"Das Glas in der Kulisse zeigt nur einen Geist, wenn die Nische dahinter beleuchtet ist.",La vitre en coulisse ne montre un fantôme que si l'alcôve derrière est éclairée.,Il vetro tra le quinte mostra un fantasma solo se la nicchia dietro è illuminata.,El vidrio entre bastidores solo muestra un fantasma si el nicho de detrás está iluminado.
+vhint.6.2,Each tilt of the glass puts other digits into the windows. The poster shows the angle Vaudini uses.,"Jede Neigung des Glases bringt andere Ziffern in die Fenster. Das Plakat zeigt den Winkel, den Vaudini benutzt.",Chaque inclinaison met d'autres chiffres dans les fenêtres. L'affiche montre l'angle de Vaudini.,Ogni inclinazione mette altre cifre nelle finestre. Il manifesto mostra l'angolo di Vaudini.,Cada inclinación pone otras cifras en las ventanas. El cartel muestra el ángulo de Vaudini.
+vhint.6.3,The handle at the 1 o'clock clock: 583 for the padlock with three wheels.,Der Hebel bei der Uhr auf 1 Uhr: 583 für das Schloss mit drei Rädchen.,La poignée sur l'horloge à 1 heure : 583 pour le cadenas à trois molettes.,La leva sull'orologio dell'una: 583 per il lucchetto a tre rotelle.,La palanca en el reloj de la una: 583 para el candado de tres ruedas.
+vhint.7.1,The sawing box's three parts slide. Someone drew how they should sit.,"Die drei Teile der Zersägekiste lassen sich verschieben. Jemand hat gezeichnet, wie sie stehen sollen.",Les trois parties de la boîte glissent. Quelqu'un a dessiné leur position.,Le tre parti della cassa scorrono. Qualcuno ha disegnato come vanno.,Las tres partes de la caja se deslizan. Alguien dibujó cómo deben ir.
+vhint.7.2,The sketch hangs in the alcove; you saw it through the mirror.,Die Skizze hängt in der Nische; du hast sie durch den Spiegel gesehen.,Le croquis est dans l'alcôve ; tu l'as vu à travers le miroir.,Lo schizzo è nella nicchia; l'hai visto attraverso lo specchio.,El boceto está en el nicho; lo viste a través del espejo.
+vhint.7.3,"Shift the parts by 2, 0 and 3.","Verschiebe die Teile um 2, 0 und 3.","Décale les parties de 2, 0 et 3.","Sposta le parti di 2, 0 e 3.","Desplaza las partes 2, 0 y 3."
+vhint.8.1,Three padlocks hold the chain.,Drei Vorhängeschlösser halten die Kette.,Trois cadenas tiennent la chaîne.,Tre lucchetti tengono la catena.,Tres candados sujetan la cadena.
+vhint.8.2,Open the two with wheels first.,Öffne zuerst die beiden mit Rädchen.,Ouvre d'abord les deux à molettes.,Apri prima i due a rotelle.,Abre primero los dos de ruedas.
+vhint.8.3,Then use the rabbit's key on the chain.,Dann benutze den Schlüssel des Hasen an der Kette.,Puis utilise la clé du lapin sur la chaîne.,Poi usa la chiave del coniglio sulla catena.,Luego usa la llave del conejo en la cadena.
+iintro.1,1947. Rain on Gale Street. You are Sam Rook's partner at the Rook agency; Sam is out of town on the Ambassador case.,1947. Regen auf der Gale Street. Du bist Partner von Sam Rook bei der Agentur Rook; Sam ist wegen des Ambassador-Falls verreist.,1947. Pluie sur Gale Street. Tu es l'associé de Sam Rook à l'agence Rook ; Sam est en déplacement pour l'affaire de l'Ambassador.,1947. Pioggia su Gale Street. Sei il socio di Sam Rook all'agenzia Rook; Sam è fuori città per il caso Ambassador.,1947. Lluvia en Gale Street. Eres el socio de Sam Rook en la agencia Rook; Sam está fuera por el caso Ambassador.
+iintro.2,"You dozed off at your desk. When you woke, someone had been through the office, and the door was locked from outside. Somebody wants this case closed.","Du bist am Schreibtisch eingenickt. Als du aufwachtest, hatte jemand das Büro durchsucht, und die Tür war von aussen abgeschlossen. Jemand will, dass dieser Fall geschlossen wird.","Tu t'es assoupi à ton bureau. Au réveil, quelqu'un avait fouillé l'agence et la porte était fermée de l'extérieur. Quelqu'un veut que l'affaire soit classée.",Ti sei appisolato alla scrivania. Al risveglio qualcuno aveva frugato l'ufficio e la porta era chiusa da fuori. Qualcuno vuole chiudere il caso.,"Te quedaste dormido en tu mesa. Al despertar, alguien había registrado la oficina y la puerta estaba cerrada desde fuera. Alguien quiere cerrar el caso."
+iintro.3,This one is hard. A good time is %d minutes.,Dieser Raum ist schwer. Eine gute Zeit sind %d Minuten.,Cette salle est difficile. Un bon temps : %d minutes.,Questa stanza è difficile. Un buon tempo: %d minuti.,Esta sala es difícil. Un buen tiempo: %d minutos.
+iend.title,Case closed,Fall gelöst,Affaire classée,Caso chiuso,Caso cerrado
+iend.text,"The door swings open on a wet, empty corridor. You put the ruby in your coat and the bartender's lie in your notebook. When the rain stops, someone will come for the rock, and find the police waiting instead.","Die Tür schwingt auf, in einen nassen, leeren Flur. Du steckst den Rubin in den Mantel und die Lüge des Barmanns ins Notizbuch. Wenn der Regen aufhört, kommt jemand den Stein holen und findet stattdessen die Polizei.","La porte s'ouvre sur un couloir mouillé et vide. Tu glisses le rubis dans ton manteau et le mensonge du barman dans ton carnet. Quand la pluie cessera, quelqu'un viendra chercher la pierre et trouvera la police.","La porta si apre su un corridoio bagnato e vuoto. Metti il rubino nel cappotto e la bugia del barista nel taccuino. Quando smetterà di piovere, qualcuno verrà per la pietra e troverà la polizia.","La puerta se abre a un pasillo mojado y vacío. Guardas el rubí en el abrigo y la mentira del camarero en tu libreta. Cuando deje de llover, alguien vendrá a por la piedra y encontrará a la policía."
+item.icarbon,Carbon paper,Kohlepapier,Papier carbone,Carta carbone,Papel carbón
+item.iribbon,Typewriter ribbon,Farbband,Ruban de machine,Nastro della macchina,Cinta de máquina
+item.iopener,Letter opener,Brieföffner,Coupe-papier,Tagliacarte,Abrecartas
+item.idoorkey,Office key,Büroschlüssel,Clé du bureau,Chiave dell'ufficio,Llave de la oficina
+itext.carbon,"(copy)
+Boss —
+Locked the gumshoe's filing cabinet with the numbers off his own pad. Good luck reading them: I scribbled them over in red.
+His door is locked from outside, the key still in it.
+I'll come for the rock when the rain stops.
+— R.","(Kopie)
+Boss —
+Habe den Aktenschrank des Schnüfflers mit den Zahlen von seinem eigenen Block verschlossen. Viel Glück beim Lesen: Ich habe sie rot übermalt.
+Seine Tür ist von aussen abgeschlossen, der Schlüssel steckt noch.
+Ich hole den Stein, wenn der Regen aufhört.
+— R.","(copie)
+Patron —
+J'ai fermé le classeur du fouineur avec les chiffres de son propre bloc. Bonne chance pour les lire : je les ai gribouillés en rouge.
+Sa porte est fermée de l'extérieur, la clé encore dedans.
+Je viens chercher la pierre quand la pluie cesse.
+— R.","(copia)
+Capo —
+Ho chiuso lo schedario del ficcanaso con i numeri del suo stesso blocco. Buona fortuna a leggerli: li ho scarabocchiati in rosso.
+La sua porta è chiusa da fuori, la chiave ancora dentro.
+Vengo per la pietra quando smette di piovere.
+— R.","(copia)
+Jefe —
+Cerré el archivador del fisgón con los números de su propio bloc. Suerte para leerlos: los taché en rojo.
+Su puerta está cerrada desde fuera, con la llave puesta.
+Vendré a por la piedra cuando pare de llover.
+— R."
+itext.ribbon,THE DOORMAN'S STATEMENT IS IN THE POCKET OF THE COAT WITH THE RED CARNATION. BURN IT.,DIE AUSSAGE DES PORTIERS STECKT IN DER TASCHE DES MANTELS MIT DER ROTEN NELKE. VERBRENN SIE.,LA DÉPOSITION DU PORTIER EST DANS LA POCHE DU MANTEAU À L'ŒILLET ROUGE. BRÛLE-LA.,LA DEPOSIZIONE DEL PORTIERE È NELLA TASCA DEL CAPPOTTO CON IL GAROFANO ROSSO. BRUCIALA.,LA DECLARACIÓN DEL PORTERO ESTÁ EN EL BOLSILLO DEL ABRIGO DEL CLAVEL ROJO. QUÉMALA.
+itext.bartender,"STATEMENT
+Joe Marsh, bartender, Hotel Ambassador:
+""Miss Vale finished her drink and walked out just as the church clock struck eleven. I'm sure of it; I always count the strokes.""","AUSSAGE
+Joe Marsh, Barmann, Hotel Ambassador:
+«Fräulein Vale trank aus und ging hinaus, gerade als die Kirchenuhr elf schlug. Ich bin sicher; ich zähle die Schläge immer.»","DÉPOSITION
+Joe Marsh, barman, Hôtel Ambassador :
+« Mlle Vale a fini son verre et est sortie juste quand l'horloge de l'église a sonné onze heures. J'en suis sûr ; je compte toujours les coups. »","DEPOSIZIONE
+Joe Marsh, barista, Hotel Ambassador:
+«La signorina Vale ha finito il drink ed è uscita proprio quando l'orologio della chiesa ha battuto le undici. Ne sono sicuro; conto sempre i rintocchi.»","DECLARACIÓN
+Joe Marsh, camarero, Hotel Ambassador:
+«La señorita Vale acabó su copa y salió justo cuando el reloj de la iglesia dio las once. Estoy seguro; siempre cuento las campanadas.»"
+itext.driver,"STATEMENT
+Al Brody, taxi driver:
+""I was waiting outside the Ambassador. She came out and got in at the very moment the rain began: the first drops hit my windscreen as she shut the door.""","AUSSAGE
+Al Brody, Taxifahrer:
+«Ich wartete vor dem Ambassador. Sie kam heraus und stieg genau in dem Moment ein, als der Regen begann: Die ersten Tropfen trafen meine Scheibe, als sie die Tür schloss.»","DÉPOSITION
+Al Brody, chauffeur de taxi :
+« J'attendais devant l'Ambassador. Elle est sortie et montée au moment précis où la pluie a commencé : les premières gouttes ont touché mon pare-brise quand elle a fermé la portière. »","DEPOSIZIONE
+Al Brody, tassista:
+«Aspettavo davanti all'Ambassador. È uscita ed è salita proprio quando ha cominciato a piovere: le prime gocce hanno colpito il parabrezza mentre chiudeva la portiera.»","DECLARACIÓN
+Al Brody, taxista:
+«Esperaba frente al Ambassador. Salió y subió justo cuando empezó la lluvia: las primeras gotas golpearon el parabrisas al cerrar ella la puerta.»"
+itext.doorman,"STATEMENT
+Eddie Kane, doorman:
+""Miss Vale went out as the last tram rang its bell past the hotel. I always wave at the driver of the last tram.""","AUSSAGE
+Eddie Kane, Portier:
+«Fräulein Vale ging hinaus, als das letzte Tram am Hotel vorbeiklingelte. Ich winke immer dem Fahrer des letzten Trams.»","DÉPOSITION
+Eddie Kane, portier :
+« Mlle Vale est sortie quand le dernier tram est passé devant l'hôtel en sonnant. Je salue toujours le conducteur du dernier tram. »","DEPOSIZIONE
+Eddie Kane, portiere:
+«La signorina Vale è uscita mentre l'ultimo tram passava suonando davanti all'hotel. Saluto sempre il conducente dell'ultimo tram.»","DECLARACIÓN
+Eddie Kane, portero:
+«La señorita Vale salió cuando el último tranvía pasó tocando la campana frente al hotel. Siempre saludo al conductor del último tranvía.»"
+itext.board,"Sam's note:
+I got the ruby back and put it in the office safe. The safe is set to the minute she left the Ambassador (hours, minutes). Don't trust all three witnesses.","Sams Notiz:
+Ich habe den Rubin zurück und in den Bürosafe gelegt. Der Safe ist auf die Minute eingestellt, in der sie das Ambassador verliess (Stunden, Minuten). Trau nicht allen drei Zeugen.","Note de Sam :
+J'ai récupéré le rubis et l'ai mis au coffre. Le coffre est réglé sur la minute où elle a quitté l'Ambassador (heures, minutes). Ne te fie pas aux trois témoins.","Nota di Sam:
+Ho recuperato il rubino e l'ho messo in cassaforte. La cassaforte è impostata sul minuto in cui lei ha lasciato l'Ambassador (ore, minuti). Non fidarti di tutti e tre i testimoni.","Nota de Sam:
+Recuperé el rubí y lo guardé en la caja fuerte. La caja está ajustada al minuto en que ella salió del Ambassador (horas, minutos). No te fíes de los tres testigos."
+itext.case,"THE AMBASSADOR RUBY
+Taken from Miss Lola Vale's room at the Hotel Ambassador, the night of the storm, the minute she left the hotel. Three witnesses saw her go.","DER AMBASSADOR-RUBIN
+Aus dem Zimmer von Fräulein Lola Vale im Hotel Ambassador gestohlen, in der Sturmnacht, in der Minute, als sie das Hotel verliess. Drei Zeugen sahen sie gehen.","LE RUBIS DE L'AMBASSADOR
+Volé dans la chambre de Mlle Lola Vale à l'Hôtel Ambassador, la nuit de l'orage, à la minute où elle a quitté l'hôtel. Trois témoins l'ont vue partir.","IL RUBINO DELL'AMBASSADOR
+Rubato dalla stanza della signorina Lola Vale all'Hotel Ambassador, la notte del temporale, nel minuto in cui lasciò l'hotel. Tre testimoni l'hanno vista uscire.","EL RUBÍ DEL AMBASSADOR
+Robado de la habitación de la señorita Lola Vale en el Hotel Ambassador, la noche de la tormenta, en el minuto en que salió del hotel. Tres testigos la vieron irse."
+itext.who0,Lola Vale,Lola Vale,Lola Vale,Lola Vale,Lola Vale
+itext.who1,the bartender,der Barmann,le barman,il barista,el camarero
+itext.who2,the driver,der Fahrer,le chauffeur,il tassista,el taxista
+itext.who3,the doorman,der Portier,le portier,il portiere,el portero
+itext.radio_note,"Police band = our street number.
+— S.","Polizeifunk = unsere Hausnummer.
+— S.","Fréquence de la police = notre numéro de rue.
+— S.","Frequenza della polizia = il nostro numero civico.
+— S.","Frecuencia de la policía = nuestro número de calle.
+— S."
+itext.bulletin,POLICE BAND: The weather office reports the storm broke over the Gale Street district at two minutes to eleven last night.,"POLIZEIFUNK: Das Wetteramt meldet, der Sturm brach gestern Nacht um zwei Minuten vor elf über dem Quartier Gale Street los.",RADIO DE LA POLICE : la météo signale que l'orage a éclaté sur le quartier de Gale Street hier soir à onze heures moins deux.,RADIO DELLA POLIZIA: l'ufficio meteo riferisce che il temporale è scoppiato sul quartiere di Gale Street ieri sera alle undici meno due.,RADIO DE LA POLICÍA: el servicio meteorológico informa de que la tormenta estalló sobre el barrio de Gale Street anoche a las once menos dos.
+itext.timetable,"Tram line 9, night service","Tramlinie 9, Nachtbetrieb","Tram ligne 9, service de nuit","Tram linea 9, servizio notturno","Tranvía línea 9, servicio nocturno"
+itext.depot,Last tram leaves the depot at,Letztes Tram ab Depot um,Dernier tram au départ du dépôt à,Ultimo tram dal deposito alle,Último tranvía sale de cocheras a las
+imsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+imsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+imsg.carbon,In the basket: a used sheet of carbon paper.,Im Korb: ein gebrauchtes Blatt Kohlepapier.,Dans la corbeille : une feuille de carbone usagée.,Nel cestino: un foglio di carta carbone usato.,En la papelera: una hoja de papel carbón usada.
+imsg.bin,The waste basket.,Der Papierkorb.,La corbeille.,Il cestino.,La papelera.
+imsg.lamp,The desk lamp.,Die Schreibtischlampe.,La lampe de bureau.,La lampada da scrivania.,La lámpara de la mesa.
+imsg.lamp_off,The lamp is off.,Die Lampe ist aus.,La lampe est éteinte.,La lampada è spenta.,La lámpara está apagada.
+imsg.carbon_read,"Against the light, the carbon shows a copy of a note.",Gegen das Licht zeigt das Kohlepapier die Kopie einer Notiz.,"À contre-jour, le carbone montre la copie d'un mot.","Controluce, la carta carbone mostra la copia di un biglietto.","A contraluz, el carbón muestra la copia de una nota."
+imsg.carbon_keep,You might still need to read it.,Vielleicht musst du es noch lesen.,Tu pourrais encore avoir besoin de le lire.,Potresti ancora doverlo leggere.,Puede que aún necesites leerlo.
+imsg.pad,"Sam's pad. Something written on it, scribbled over in red.","Sams Block. Etwas steht darauf, rot übermalt.","Le bloc de Sam. Quelque chose d'écrit, gribouillé en rouge.","Il blocco di Sam. Qualcosa di scritto, scarabocchiato in rosso.","El bloc de Sam. Algo escrito, tachado en rojo."
+imsg.readings,What you read against the lamp.,Was du gegen die Lampe gelesen hast.,Ce que tu as lu contre la lampe.,Ciò che hai letto contro la lampada.,Lo que leíste contra la lámpara.
+imsg.window,"Rain, and the red neon of the hotel across the street.",Regen und das rote Neon des Hotels gegenüber.,"La pluie, et le néon rouge de l'hôtel d'en face.",Pioggia e il neon rosso dell'hotel di fronte.,Lluvia y el neón rojo del hotel de enfrente.
+imsg.neon,"HOTEL, in red.","HOTEL, in Rot.","HOTEL, en rouge.","HOTEL, in rosso.","HOTEL, en rojo."
+imsg.cabinet_locked,The filing cabinet: a lock with four wheels.,Der Aktenschrank: ein Schloss mit vier Rädchen.,Le classeur : une serrure à quatre molettes.,Lo schedario: una serratura a quattro rotelle.,El archivador: una cerradura de cuatro ruedas.
+imsg.cabinet_open,The cabinet opens: the Ambassador file.,Der Schrank geht auf: die Akte Ambassador.,Le classeur s'ouvre : le dossier Ambassador.,Lo schedario si apre: il fascicolo Ambassador.,El archivador se abre: el expediente Ambassador.
+imsg.file,Two statements. The third is missing.,Zwei Aussagen. Die dritte fehlt.,Deux dépositions. La troisième manque.,Due deposizioni. Manca la terza.,Dos declaraciones. Falta la tercera.
+imsg.typewriter,Sam's typewriter.,Sams Schreibmaschine.,La machine à écrire de Sam.,La macchina da scrivere di Sam.,La máquina de escribir de Sam.
+imsg.ribbon,You take out the ribbon. The last letters typed are pressed into it.,Du nimmst das Farbband heraus. Die zuletzt getippten Buchstaben sind darin eingedrückt.,Tu sors le ruban. Les dernières lettres tapées y sont imprimées.,Togli il nastro. Le ultime lettere battute vi sono impresse.,Sacas la cinta. Las últimas letras tecleadas están marcadas en ella.
+imsg.ribbon_read,"Against the light, the ribbon shows the last thing typed.",Gegen das Licht zeigt das Farbband das zuletzt Getippte.,"À contre-jour, le ruban montre le dernier texte tapé.","Controluce, il nastro mostra l'ultima cosa battuta.","A contraluz, la cinta muestra lo último que se escribió."
+imsg.board,The case board.,Die Falltafel.,Le tableau de l'affaire.,La lavagna del caso.,El tablero del caso.
+imsg.safe,The office safe.,Der Bürosafe.,Le coffre du bureau.,La cassaforte dell'ufficio.,La caja fuerte de la oficina.
+imsg.safe_open,"The safe opens. The ruby, and Sam's letter opener.",Der Safe geht auf. Der Rubin und Sams Brieföffner.,"Le coffre s'ouvre. Le rubis, et le coupe-papier de Sam.",La cassaforte si apre. Il rubino e il tagliacarte di Sam.,La caja fuerte se abre. El rubí y el abrecartas de Sam.
+imsg.safe_shut,The safe is shut.,Der Safe ist zu.,Le coffre est fermé.,La cassaforte è chiusa.,La caja fuerte está cerrada.
+imsg.opener,"A long, thin letter opener.","Ein langer, dünner Brieföffner.",Un long coupe-papier fin.,Un tagliacarte lungo e sottile.,Un abrecartas largo y fino.
+imsg.ruby,The Ambassador ruby. Not yours to keep.,Der Ambassador-Rubin. Nicht für dich.,Le rubis de l'Ambassador. Pas pour toi.,Il rubino dell'Ambassador. Non è tuo.,El rubí del Ambassador. No es para ti.
+imsg.coat,Rain-wet coat. Nothing you are looking for.,"Ein regennasser Mantel. Nichts, was du suchst.",Un manteau mouillé. Rien de ce que tu cherches.,Un cappotto bagnato. Niente di ciò che cerchi.,Un abrigo mojado. Nada de lo que buscas.
+imsg.coat0,A grey coat with a pink carnation. Empty pockets.,Ein grauer Mantel mit einer rosa Nelke. Leere Taschen.,Un manteau gris à l'œillet rose. Poches vides.,Un cappotto grigio con un garofano rosa. Tasche vuote.,Un abrigo gris con un clavel rosa. Bolsillos vacíos.
+imsg.coat2,A black coat. Empty pockets.,Ein schwarzer Mantel. Leere Taschen.,Un manteau noir. Poches vides.,Un cappotto nero. Tasche vuote.,Un abrigo negro. Bolsillos vacíos.
+imsg.statement,"In the pocket: the doorman's statement, folded small.","In der Tasche: die Aussage des Portiers, klein gefaltet.","Dans la poche : la déposition du portier, pliée.","In tasca: la deposizione del portiere, piegata.","En el bolsillo: la declaración del portero, doblada."
+imsg.radio,The radio. Two wheels set the band.,Das Radio. Zwei Rädchen stellen das Band ein.,La radio. Deux molettes règlent la fréquence.,La radio. Due rotelle scelgono la frequenza.,La radio. Dos ruedas fijan la frecuencia.
+imsg.bulletin,"Through the crackle, the police band.",Durchs Knistern der Polizeifunk.,"Dans les grésillements, la radio de la police.","Tra i fruscii, la radio della polizia.","Entre chasquidos, la radio de la policía."
+imsg.note,A note stuck to the radio.,Ein Zettel am Radio.,Un mot collé sur la radio.,Un biglietto attaccato alla radio.,Una nota pegada a la radio.
+imsg.glass,"The door's frosted glass, lettered on the outside.","Das Milchglas der Tür, aussen beschriftet.","La vitre dépolie de la porte, lettrée de l'extérieur.","Il vetro smerigliato della porta, scritto all'esterno.","El cristal esmerilado de la puerta, rotulado por fuera."
+imsg.timetable,The tram timetable.,Der Tramfahrplan.,L'horaire du tram.,L'orario del tram.,El horario del tranvía.
+imsg.phone,The line is dead. Cut.,Die Leitung ist tot. Durchgeschnitten.,La ligne est morte. Coupée.,La linea è morta. Tagliata.,La línea está muerta. Cortada.
+imsg.door,"Locked from outside. The key is still in the lock, on the other side.","Von aussen abgeschlossen. Der Schlüssel steckt noch, auf der anderen Seite.","Fermée de l'extérieur. La clé est encore dans la serrure, de l'autre côté.","Chiusa da fuori. La chiave è ancora nella toppa, dall'altra parte.","Cerrada desde fuera. La llave sigue en la cerradura, al otro lado."
+imsg.keyhole,Through the keyhole: the end of a key.,Durchs Schlüsselloch: das Ende eines Schlüssels.,Par le trou de la serrure : le bout d'une clé.,Dal buco della serratura: la punta di una chiave.,Por el ojo de la cerradura: la punta de una llave.
+imsg.sheet_under,"You slide the carbon paper under the door, to the other side.",Du schiebst das Kohlepapier unter der Tür hindurch auf die andere Seite.,"Tu glisses le carbone sous la porte, de l'autre côté.","Fai scivolare la carta carbone sotto la porta, dall'altra parte.","Deslizas el papel carbón bajo la puerta, al otro lado."
+imsg.no_sheet,"If you push the key out now, it falls out of reach. Put something under the door first.","Wenn du den Schlüssel jetzt hinausstösst, fällt er ausser Reichweite. Leg zuerst etwas unter die Tür.","Si tu pousses la clé maintenant, elle tombera hors de portée. Glisse d'abord quelque chose sous la porte.","Se spingi fuori la chiave ora, cade lontano. Metti prima qualcosa sotto la porta.","Si empujas la llave ahora, caerá fuera de tu alcance. Pon antes algo bajo la puerta."
+imsg.key_drops,Push... clink. The key drops on the other side.,Stoss... klirr. Der Schlüssel fällt auf der anderen Seite.,Pousse... cling. La clé tombe de l'autre côté.,Spingi... clin. La chiave cade dall'altra parte.,Empuja... clinc. La llave cae al otro lado.
+imsg.sheet_empty,Nothing on the sheet yet.,Noch nichts auf dem Blatt.,Rien encore sur la feuille.,Ancora niente sul foglio.,Aún nada en la hoja.
+imsg.doorkey,"You draw the sheet back under the door, and the key with it.","Du ziehst das Blatt unter der Tür zurück, und den Schlüssel mit.","Tu retires la feuille sous la porte, et la clé avec.","Ritiri il foglio sotto la porta, e la chiave con lui.","Tiras de la hoja bajo la puerta, y de la llave con ella."
+imsg.door_open,The key turns. The door opens.,Der Schlüssel dreht. Die Tür geht auf.,La clé tourne. La porte s'ouvre.,La chiave gira. La porta si apre.,La llave gira. La puerta se abre.
+ihint.1.1,The intruder left something behind.,Der Eindringling hat etwas zurückgelassen.,L'intrus a laissé quelque chose.,L'intruso ha lasciato qualcosa.,El intruso dejó algo.
+ihint.1.2,Look into the waste basket beside the desk.,Schau in den Papierkorb neben dem Schreibtisch.,Regarde dans la corbeille près du bureau.,Guarda nel cestino accanto alla scrivania.,Mira en la papelera junto a la mesa.
+ihint.1.3,Take the carbon paper.,Nimm das Kohlepapier.,Prends le papier carbone.,Prendi la carta carbone.,Coge el papel carbón.
+ihint.2.1,Carbon paper keeps what was typed through it.,"Kohlepapier behält, was durch es getippt wurde.",Le carbone garde ce qui a été tapé à travers.,La carta carbone conserva ciò che vi è stato battuto sopra.,El papel carbón guarda lo que se escribió a través de él.
+ihint.2.2,Hold it against a light.,Halte es gegen ein Licht.,Tiens-le devant une lumière.,Tienila controluce.,Ponlo a contraluz.
+ihint.2.3,Use the carbon paper on the lit desk lamp.,Benutze das Kohlepapier an der brennenden Schreibtischlampe.,Utilise le carbone sur la lampe allumée.,Usa la carta carbone sulla lampada accesa.,Usa el papel carbón en la lámpara encendida.
+ihint.3.1,"The pad's numbers are scribbled over in red. Under red light, red ink disappears.",Die Zahlen auf dem Block sind rot übermalt. Unter rotem Licht verschwindet rote Tinte.,"Les chiffres du bloc sont gribouillés en rouge. Sous une lumière rouge, l'encre rouge disparaît.","I numeri del blocco sono scarabocchiati in rosso. Sotto la luce rossa, l'inchiostro rosso sparisce.","Los números del bloc están tachados en rojo. Bajo luz roja, la tinta roja desaparece."
+ihint.3.2,The neon outside is red. Let only its light into the room.,Das Neon draussen ist rot. Lass nur sein Licht ins Zimmer.,Le néon dehors est rouge. Ne laisse entrer que sa lumière.,Il neon fuori è rosso. Lascia entrare solo la sua luce.,El neón de fuera es rojo. Deja entrar solo su luz.
+ihint.3.3,"Desk lamp off, blinds fully open: 6047 for the filing cabinet.","Lampe aus, Storen ganz offen: 6047 für den Aktenschrank.","Lampe éteinte, stores grands ouverts : 6047 pour le classeur.","Lampada spenta, veneziane tutte aperte: 6047 per lo schedario.","Lámpara apagada, persianas abiertas del todo: 6047 para el archivador."
+ihint.4.1,A typewriter ribbon remembers the last letters typed.,Ein Farbband merkt sich die zuletzt getippten Buchstaben.,Un ruban garde les dernières lettres tapées.,Un nastro ricorda le ultime lettere battute.,Una cinta recuerda las últimas letras tecleadas.
+ihint.4.2,Take the ribbon out of the typewriter.,Nimm das Farbband aus der Schreibmaschine.,Sors le ruban de la machine.,Togli il nastro dalla macchina.,Saca la cinta de la máquina.
+ihint.4.3,Hold it to the lit lamp; it reads backwards.,Halte es an die brennende Lampe; es liest sich rückwärts.,Tiens-le contre la lampe allumée ; il se lit à l'envers.,Tienilo contro la lampada accesa; si legge al contrario.,Ponlo contra la lámpara encendida; se lee al revés.
+ihint.5.1,The ribbon names a coat.,Das Farbband nennt einen Mantel.,Le ruban désigne un manteau.,Il nastro indica un cappotto.,La cinta nombra un abrigo.
+ihint.5.2,Look closely at the carnations on the coats in the reception.,Schau dir die Nelken an den Mänteln im Empfang genau an.,Regarde bien les œillets des manteaux de l'accueil.,Guarda bene i garofani dei cappotti all'ingresso.,Mira bien los claveles de los abrigos de la recepción.
+ihint.5.3,Pink is not red: the middle coat.,Rosa ist nicht rot: der mittlere Mantel.,Le rose n'est pas le rouge : le manteau du milieu.,Il rosa non è rosso: il cappotto di mezzo.,El rosa no es rojo: el abrigo del medio.
+ihint.6.1,The note on the radio: the police band is the office's street number.,Der Zettel am Radio: Der Polizeifunk ist die Hausnummer des Büros.,Le mot sur la radio : la fréquence est le numéro de rue du bureau.,Il biglietto sulla radio: la frequenza è il numero civico dell'ufficio.,La nota de la radio: la frecuencia es el número de calle de la oficina.
+ihint.6.2,"The number is on the door's glass, which you see from inside.","Die Nummer steht auf dem Türglas, das du von innen siehst.","Le numéro est sur la vitre de la porte, que tu vois de l'intérieur.","Il numero è sul vetro della porta, che vedi da dentro.","El número está en el cristal de la puerta, que ves desde dentro."
+ihint.6.3,Read from outside it is 47.,Von aussen gelesen ist es 47.,"Lu de l'extérieur, c'est 47.",Letto da fuori è 47.,Leído desde fuera es 47.
+ihint.7.1,The safe is set to the minute Miss Vale left the hotel. One of the three witnesses lies.,"Der Safe steht auf der Minute, in der Fräulein Vale das Hotel verliess. Einer der drei Zeugen lügt.",Le coffre est réglé sur la minute où Mlle Vale a quitté l'hôtel. L'un des trois témoins ment.,La cassaforte è sul minuto in cui la signorina Vale ha lasciato l'hotel. Uno dei tre testimoni mente.,La caja está en el minuto en que la señorita Vale salió del hotel. Uno de los tres testigos miente.
+ihint.7.2,The timetable gives the last tram at the hotel; the radio gives when the rain began. Two witnesses agree.,"Der Fahrplan nennt das letzte Tram beim Hotel; das Radio, wann der Regen begann. Zwei Zeugen stimmen überein.","L'horaire donne le dernier tram à l'hôtel ; la radio, le début de la pluie. Deux témoins concordent.","L'orario dà l'ultimo tram all'hotel; la radio, l'inizio della pioggia. Due testimoni concordano.","El horario da el último tranvía en el hotel; la radio, cuándo empezó la lluvia. Dos testigos coinciden."
+ihint.7.3,22:41 + 17 minutes = 22:58: 2258.,22:41 + 17 Minuten = 22:58: 2258.,22:41 + 17 minutes = 22:58 : 2258.,22:41 + 17 minuti = 22:58: 2258.,22:41 + 17 minutos = 22:58: 2258.
+ihint.8.1,The key is in the lock outside. You need to bring it to your side.,Der Schlüssel steckt aussen. Du musst ihn auf deine Seite holen.,La clé est dans la serrure dehors. Il faut l'amener de ton côté.,La chiave è nella toppa fuori. Devi portarla dalla tua parte.,La llave está fuera. Tienes que traerla a tu lado.
+ihint.8.2,"Something flat under the door, something thin through the keyhole.","Etwas Flaches unter der Tür, etwas Dünnes durchs Schlüsselloch.","Quelque chose de plat sous la porte, quelque chose de fin dans la serrure.","Qualcosa di piatto sotto la porta, qualcosa di sottile nella toppa.","Algo plano bajo la puerta, algo fino por la cerradura."
+ihint.8.3,"Carbon paper under the door, letter opener into the keyhole, then pull the sheet back.","Kohlepapier unter die Tür, Brieföffner ins Schlüsselloch, dann das Blatt zurückziehen.","Carbone sous la porte, coupe-papier dans la serrure, puis retire la feuille.","Carta carbone sotto la porta, tagliacarte nella toppa, poi tira indietro il foglio.","Papel carbón bajo la puerta, abrecartas en la cerradura y tira de la hoja."

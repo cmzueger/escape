@@ -17,7 +17,9 @@ easy), The Watchmaker (`watch`, medium), The Night Gallery (`museum`, hard);
 fifth set (owner's choice) Lookout (`tree`), Gondola 12 (`gondola`), Praline
 Works (`praline`), Tinker & Sons (`toyshop`); sixth set (owner's choice) Graf
 Alpina (`zeppelin`), Albatross (`ship`), Base 70° South (`polar`); the series
-The Quiet House (`house1905`, `house1938`, `house1969`, `housenow`).
+The Quiet House (`house1905`, `house1938`, `house1969`, `housenow`); seventh
+set (owner's choice) The Night Edition (`press`), The Great Vaudini
+(`magic`), Rain on Gale Street (`noir`).
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
   `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
@@ -32,10 +34,12 @@ The Quiet House (`house1905`, `house1938`, `house1969`, `housenow`).
   locks, dials, picks, uses, latching checks, a hook for the odd mechanism):
   see `orangery.rs`, `theatre.rs`, `chess.rs`, `beach.rs`, `train.rs`,
   `alch.rs`, `attic.rs`, `watch.rs`, `museum.rs`, `tree.rs`, `gondola.rs`,
-  `praline.rs`, `toyshop.rs`, `zeppelin.rs`, `ship.rs`, `polar.rs`. Write new
-  rooms this way. Their pictures are in `art_set2.gd` … `art_set6.gd` (each art script extends the one before;
+  `praline.rs`, `toyshop.rs`, `zeppelin.rs`, `ship.rs`, `polar.rs`, the
+  house rooms, `press.rs`, `magic.rs`, `noir.rs`. Write new
+  rooms this way. Their pictures are in `art_set2.gd` … `art_set6.gd`, `art_house.gd`,
+  `art_set7.gd` (each art script extends the one before;
   constants and helpers must not reuse a parent's name), hotspots in
-  `views_set2.gd` … `views_set6.gd`. Item names are global (`item.<name>`
+  `views_set2.gd` … `views_set6.gd`, `views_house.gd`, `views_set7.gd`. Item names are global (`item.<name>`
   in the texts): pick names no other room uses. Kit locks and
   dials are moved with `turn` and `flip`.
 - A new room: a kit spec in `core`, an entry in `ROOMS` and `Room::call`, views and
@@ -96,6 +100,17 @@ The Quiet House (`house1905`, `house1938`, `house1969`, `housenow`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.10.0** (2026-11-18): seventh set, chosen by the owner in two rounds
+  (asked for: more text clues, creative mechanisms, slightly hidden clues,
+  a little longer): The Night Edition (print works, 1890), The Great Vaudini
+  (illusionist's dressing room, 1925), Rain on Gale Street (detective's
+  office, 1947). Text prefixes d, v, i (texts drawn in the pictures:
+  `dtext.`, `vtext.`, `itext.`); views O, F, I (close-ups d…, f…, i…).
+  New mechanisms: setting mirrored type, watermarks against a lantern, a
+  paper path and ink keys, a two-way mirror and Pepper's ghost lit from an
+  alcove between the rooms, red light hiding red ink, a typewriter ribbon
+  read backwards, the key pushed out onto a sheet under the door.
+  Catalogue: 26 rooms in nine rows.
 - **0.9.1** (2026-11-18): play statistics for tuning, asked for by the owner:
   every finished run keeps its date, time, hints, taps, stars and a log of
   when each puzzle was solved and each hint asked (`p3@4:10`, `h3.1@5:00`;
@@ -210,6 +225,7 @@ The Quiet House (`house1905`, `house1938`, `house1969`, `housenow`).
 - The owner's play test of the fifth set (built 0.7.0) and its targets.
 - The owner's play test of the sixth set (built 0.8.0) and its targets.
 - The owner's play test of the series The Quiet House (built 0.9.0) and its targets.
+- The owner's play test of the seventh set (built 0.10.0) and its targets.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, whether the scrolling catalogue is, and an
   opinion on the sounds, which were made without anyone hearing them.

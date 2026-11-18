@@ -89,10 +89,11 @@ function check(ok, what) {
   for (const [x, y, id, scroll] of [[173, 274, "orangery"], [475, 274, "theatre"], [777, 289, "chess"],
     [173, 408, "beach"], [475, 408, "train"], [777, 404, "alch"],
     [173, 381, "attic", 100], [475, 381, "watch", 100], [777, 377, "museum", 100],
-    [173, 206, "tree", [4000, -100]], [475, 206, "gondola", [4000, -100]], [777, 206, "praline", [4000, -100]],
-    [173, 178, "toyshop", 4000], [475, 178, "zeppelin", 4000], [777, 178, "ship", 4000],
-    [173, 297, "polar", 4000], [475, 293, "house1905", 4000], [777, 293, "house1938", 4000],
-    [321, 412, "house1969", 4000], [623, 431, "housenow", 4000]]) {
+    [173, 238, "tree", [4000, -200]], [475, 238, "gondola", [4000, -200]], [777, 238, "praline", [4000, -200]],
+    [173, 210, "toyshop", [4000, -100]], [475, 210, "zeppelin", [4000, -100]], [777, 210, "ship", [4000, -100]],
+    [173, 182, "polar", 4000], [475, 178, "house1905", 4000], [777, 178, "house1938", 4000],
+    [173, 297, "house1969", 4000], [475, 316, "housenow", 4000], [777, 297, "press", 4000],
+    [321, 431, "magic", 4000], [623, 431, "noir", 4000]]) {
     await page.reload();
     await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
     await page.waitForTimeout(500);
