@@ -73,9 +73,9 @@ LABEL = {
     "combo_precise": "planning, or it resets", "combo_finale": "a finale that uses the whole room",
 }
 # The survey's frustrations (general.frustration.N) and the tags they touch.
-FRUSTRATION_TAGS = {1: ["find_tiny"], 2: [], 3: ["read_letter", "read_log", "read_witness", "read_rules", "read_riddle"],
-                    4: [], 5: ["code_math"], 6: [], 7: ["combo_trial"], 8: ["space_split", "space_remote"],
-                    9: ["decoy", "combo_decoy_twist"], 10: [], 11: ["combo_precise"]}
+# (3, too much reading, is judged by the share of reading puzzles instead.)
+FRUSTRATION_TAGS = {1: ["find_tiny"], 5: ["code_math"], 8: ["space_split", "space_remote"],
+                    9: ["decoy", "combo_decoy_twist"], 11: ["combo_precise"]}
 
 
 # --- Loading -----------------------------------------------------------------------
@@ -273,8 +273,8 @@ def warnings(spec, survey, observed=None):
         if c >= 3:
             out.append(f"{LABEL[t]} {c} times")
     reading = sum(1 for p in spec if any(FAMILY.get(t) == "read" for t in p["tags"]))
-    if survey.get("general.text") == 1 and reading > len(spec) * 0.4:
-        out.append(f"{reading} of {len(spec)} puzzles need reading (the owner wants less)")
+    if (survey.get("general.text") == 1 or survey.get("general.frustration.3")) and reading > len(spec) * 0.5:
+        out.append(f"{reading} of {len(spec)} puzzles need reading (too much reading frustrates the owner)")
     for n, ts in FRUSTRATION_TAGS.items():
         if survey.get(f"general.frustration.{n}") and ts:
             hit = [i + 1 for i, p in enumerate(spec) if set(p["tags"]) & set(ts)]
@@ -372,12 +372,17 @@ def report(rooms, runs, survey):
               "| Room | Puzzles | Predicted | Owner | Label | Felt | Fun forecast | Fun rated |",
               "|---|---:|---:|---:|---|---:|---:|---:|"]
     notes = []
+    pairs = [(room_fun(spec, survey), survey.get(f"room.{room}.fun")) for room, spec in rooms.items()]
+    pairs = [(f, r) for f, r in pairs if f and isinstance(r, (int, float))]
+    offset = sum(r - f for f, r in pairs) / len(pairs) if pairs else 0.0
     for room, spec in rooms.items():
         pred = sum(predict(p, w) for p in spec)
         own = estimate.ROOMS.get(room, (None, None, ""))[1]
         pts = sum(POINTS.get(p["kind"], 0) for p in spec)
         felt = [v for v in (puzzle_taste(p, survey, "diff") for p in spec) if v is not None]
         fun = room_fun(spec, survey)
+        if fun:
+            fun = max(1.0, min(5.0, fun + offset))
         rated = survey.get(f"room.{room}.fun")
         lines.append(f"| {room} | {len(spec)} | {pred:.1f} | {own if own else '-'} | {label(pts)} | "
                      f"{sum(felt) / len(felt):.1f} | " if felt else f"| {room} | {len(spec)} | {pred:.1f} | "
@@ -395,7 +400,8 @@ def report(rooms, runs, survey):
         ws = warnings(spec, survey, observed)
         if ws:
             notes.append(f"- **{room}**: " + "; ".join(ws) + ".")
-    lines += ["", "## Warnings", "", *(notes or ["None."]), ""]
+    lines += ["", f"Fun forecasts are shifted by {offset:+.1f} to match the rooms the owner rated ({len(pairs)}).", ""]
+    lines += ["## Warnings", "", *(notes or ["None."]), ""]
     # Survey free text.
     texts = [(k, v) for k, v in survey.items() if isinstance(v, str) and v.strip() and not k.startswith("_")]
     if texts:
@@ -420,6 +426,10 @@ def plan(text, rooms, runs, survey):
     pred = sum(predict(p, w) for p in spec)
     pts = sum(POINTS.get(p["kind"], 0) for p in spec)
     fun = room_fun(spec, survey)
+    pairs = [(room_fun(s, survey), survey.get(f"room.{r}.fun")) for r, s in rooms.items()]
+    pairs = [(f, r) for f, r in pairs if f and isinstance(r, (int, float))]
+    if fun and pairs:
+        fun = max(1.0, min(5.0, fun + sum(r - f for f, r in pairs) / len(pairs)))
     print(f"{len(spec)} puzzles: about {pred:.0f} owner minutes (target {round(pred * 1.3)}), {label(pts)} ({pts} points)"
           + (f", fun forecast {fun:.1f} of 5" if fun else ""))
     for i, p in enumerate(spec, 1):

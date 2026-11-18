@@ -228,3 +228,24 @@ FAEEFEXM (hard, 26 min).
 Not chosen: Station X, Orbital Station Kepler, The Abbey Library; Gutenberg
 & Daughter, The Blue Pencil; Vanishing Act, Smoke & Mirrors; The Last
 Client, Room 4B.
+
+## Eighth set (owner, 2026-11-18)
+First set planned with the knowledge base (the owner's questionnaire: loves
+outstanding mechanisms with visible progress, sliding, tilting, paths, light,
+sound, cross-room puzzles, logic grids, talking, riddles, clever item uses;
+dislikes plain codes into locks, counting, mappings, logs, decoy twists; wants
+rooms of 20 to 30 minutes). Chosen in two rounds:
+- The Filter Hall (a Victorian pumping station, 1898; an inspector locked in
+  during the opening; make the fountain in the square run before the mayor's
+  speech ends; white tiles and water). Headline: water routed through pipes
+  and valves across two halls.
+- The 8:15 to Nowhere (a model railway club; the founder's last puzzle
+  layout; club room, warm lamp). Headline: points and signals so trains
+  deliver the right cargo, through a wall tunnel into the next room.
+- Harvest Moon (a windmill at the harvest festival; grind the first flour
+  before the moon rises; golden dusk). Headline: sails, gears and millstones
+  linked floor by floor; sacks down a chute.
+About 12 puzzles each, few plain code locks.
+Not chosen: The Shadow Theatre, Bathysphere Station, The Organ Loft;
+Pumping Station No. 3, Under the Reservoir; Night Run, Junction 9; The Last
+Grind, Miller's Daughter.
