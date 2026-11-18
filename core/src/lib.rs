@@ -26,6 +26,7 @@ pub mod alch;
 pub mod attic;
 pub mod beach;
 pub mod chess;
+pub mod filter;
 pub mod gondola;
 pub mod house;
 pub mod house1905;
@@ -36,6 +37,7 @@ pub mod hut;
 pub mod kit;
 pub mod light;
 pub mod magic;
+pub mod mill;
 pub mod museum;
 pub mod noir;
 pub mod obs;
@@ -43,6 +45,7 @@ pub mod orangery;
 pub mod polar;
 pub mod praline;
 pub mod press;
+pub mod railway;
 pub mod ship;
 pub mod theatre;
 pub mod toyshop;
@@ -59,7 +62,7 @@ pub mod zeppelin;
 /// deduction (one twist), X hard deduction (a longer chain or grid).
 /// The difficulty shown follows from the kinds ([`difficulty`]); the time
 /// is separate (`tools/estimate.py` estimates it from the kinds).
-pub const ROOMS: [(&str, &str, u32); 26] = [
+pub const ROOMS: [(&str, &str, u32); 29] = [
     ("hut", "ACABCDDBB", hut::PAR_MINUTES),
     ("light", "ACCBFMDEDA", light::PAR_MINUTES),
     ("obs", "CCMEEDXCAC", obs::PAR_MINUTES),
@@ -86,6 +89,9 @@ pub const ROOMS: [(&str, &str, u32); 26] = [
     ("press", "FXMFCDAEA", press::PAR_MINUTES),
     ("magic", "FAEFDMCA", magic::PAR_MINUTES),
     ("noir", "FAEEFEXM", noir::PAR_MINUTES),
+    ("filter", "FADCDFEEXMMF", filter::PAR_MINUTES),
+    ("railway", "FADDCCXFMEE", railway::PAR_MINUTES),
+    ("mill", "FAECFAMCXDEA", mill::PAR_MINUTES),
 ];
 
 /// 1 easy, 2 medium, 3 hard: how hard the thinking is, not how long it
@@ -263,6 +269,9 @@ impl Room {
                     Some("press") => *self = Room::Kit(kit::State::new(&press::SPEC)),
                     Some("magic") => *self = Room::Kit(kit::State::new(&magic::SPEC)),
                     Some("noir") => *self = Room::Kit(kit::State::new(&noir::SPEC)),
+                    Some("filter") => *self = Room::Kit(kit::State::new(&filter::SPEC)),
+                    Some("railway") => *self = Room::Kit(kit::State::new(&railway::SPEC)),
+                    Some("mill") => *self = Room::Kit(kit::State::new(&mill::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -314,6 +323,9 @@ mod tests {
             (&press::SPEC, ROOMS[23].1),
             (&magic::SPEC, ROOMS[24].1),
             (&noir::SPEC, ROOMS[25].1),
+            (&filter::SPEC, ROOMS[26].1),
+            (&railway::SPEC, ROOMS[27].1),
+            (&mill::SPEC, ROOMS[28].1),
         ] {
             assert_eq!(spec.puzzles.len(), kinds.len(), "{}", spec.id);
         }
@@ -347,6 +359,9 @@ mod tests {
             "press",
             "magic",
             "noir",
+            "filter",
+            "railway",
+            "mill",
         ] {
             assert!(r
                 .call(&format!("room {id}"))
@@ -509,6 +524,49 @@ mod tests {
                 vec!["use icarbon lamp".into(), "use iribbon lamp".into()],
                 vec![],
                 vec!["iribbon"],
+            ),
+            (
+                &filter::SPEC,
+                [
+                    digits("lever", 3),
+                    digits("bleed", 3),
+                    digits("layer", 3),
+                    digits("say", 3),
+                    vec![
+                        "empty".into(),
+                        "test".into(),
+                        "call".into(),
+                        "tap mainvalve".into(),
+                    ],
+                ]
+                .concat(),
+                vec![],
+                vec![],
+            ),
+            (
+                &railway::SPEC,
+                [
+                    digits("book", 8),
+                    digits("say", 3),
+                    ["0 1", "0 2", "1 0", "1 2", "2 0", "2 1"]
+                        .map(|m| format!("shunt {m}"))
+                        .to_vec(),
+                    vec!["run".into(), "call".into()],
+                ]
+                .concat(),
+                vec![],
+                vec![],
+            ),
+            (
+                &mill::SPEC,
+                [
+                    digits("hoist", 5),
+                    digits("say", 3),
+                    vec!["call".into(), "tap brakerope".into()],
+                ]
+                .concat(),
+                vec![],
+                vec![],
             ),
         ];
         let mut problems = vec![];

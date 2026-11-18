@@ -575,3 +575,95 @@ Someone wants the Ambassador case closed and locked you in. Kinds FAEEFEXM.
    the minute she left → **2258** → the ruby and a letter opener.
 8. M: the key is in the lock outside: carbon paper under the door, push the
    key out with the letter opener, pull the sheet back with the key, open.
+
+# Eighth set (0.11.0)
+
+## The Filter Hall (hard, `filter`, prefix wa, views WA1 engine hall, WA2 filter hall)
+An inspector locked in during the opening; the fountain in the square must
+run before the mayor's speech ends. Kinds FADCDFEEXMMF.
+1. F: the coal bunker hides the engineer's spanner.
+2. A: the spanner opens the jammed firebox; the matches (tin on the desk)
+   light the fire.
+3. D: the boiler's feed valve until the water glass stands between the red
+   marks (**5**).
+4. C: the speaking tube (once the boiler is right): the chief engineer asks
+   what the pressure gauge shows (**in the green**) and which flag flies over
+   the pump house across the square (window: **blue**); then he gives the
+   starting order.
+5. D: three levers (throttle, steam, drains on screen): **steam, drains,
+   throttle**; a wrong lever stalls the engine and starts over.
+6. F: one of three risers in the filter hall knocks and shakes (sound and
+   picture): the **third**; bleed it.
+7. E: the plaque's riddle names the layers the water passes, top to bottom:
+   gravel, sand, charcoal. Poured bottom first: **charcoal, sand, gravel**;
+   the test tap shows clear or muddy water.
+8. E: one pipe elbow is missing: the ceremony's curved brass horn fits the
+   socket.
+9. X: the engineer's notes on the six district valves (exactly three open;
+   market shut on Sundays; harbour and station never together; mill only
+   with hill; exactly one of harbour and mill; the square open; hill and
+   harbour never together) → **mill, hill, square** open, the rest shut.
+10. M: the pipe wall (4 by 4 tiles): from the inlet top left through the
+    filter tank to the fountain main bottom right; water fills the tiles it
+    reaches. Only a path through the filter can reach the main.
+11. M: the fountain's jets are the engine's speed (governor, engine hall)
+    times each jet's valve (filter hall); the programme shows 2, 6, 2 →
+    speed **2**, valves **1, 3, 1** (speed 3 cannot make the small jets).
+12. F: the mayor's speech (programme): the water rises when he raises his
+    glass; through the window he does it every 15 seconds: open the main
+    valve then.
+
+## The 8:15 to Nowhere (hard, `railway`, prefix rc, views RC1 club room, RC2 workshop)
+The founder Albert Finch's last layout. Kinds FADDCCXFMEE.
+1. F: the controller key is in the model station's clock tower.
+2. A: the key in the controller: power.
+3. D: the turntable: any engine onto the exit (tracks 1 to 4).
+4. D: points P1 to the main line, P2 to the dairy, run: the milk van
+   delivered.
+5. C: P2 to the tunnel, then in the workshop P3 to the post office, run: the
+   parcels delivered (points in both rooms).
+6. C: the telephone, speed dial Hollis: say you are a new member of Albert's
+   club; yes, four engines but the plates are gone → Duchess always ran the
+   7:30.
+7. X: Finch's notes (workbench): Comet is blue; Atlas ran the 6:40; black
+   later than red; green not Atlas and not the 7:05; Lark later than Comet;
+   green before black; plus Duchess 7:30 → the 8:15 is the **black engine,
+   track 4**: the 8:15 headboard (workbench) on it.
+8. F: during a run through the tunnel the engine's lamp lights a sign in
+   the workshop showing a book's spine: the **sixth book** on the shelf
+   opens the hidden branch to Nowhere (and comes out in your hand).
+9. M: the yard (tracks of 3, 3 and 2 wagons): Finch's letter wants the
+   passengers behind the engine, then the mail, the coal at the back: eleven
+   moves at best.
+10. E: a gap in the hidden branch: the book bridges it.
+11. E: the 8:15 itself: turntable to track 4, P1 main, P2 tunnel, P3 on, P4
+    to Nowhere, run → the little station: the door opens.
+
+## Harvest Moon (hard, `mill`, prefix mi, views MI1 meal floor, MI2 stone floor)
+The harvest festival; the first flour must reach the village before the
+moon rises. Kinds FAECFAMCXDEA.
+1. F: the cap's winding handle lies under the sacks.
+2. A: the handle on the winding wheel.
+3. E: the window: the poplars' leaves blow east in each gust, so the wind
+   comes from the **west**: wind the cap to face it.
+4. C: Greta at the door (once the cap faces the wind): say the sails face
+   the wind, ask about the festival → full cloth on the sails with the sun,
+   half on those with the moon.
+5. F: the sails' tips carry small suns and moons: sails 1 and 3 full, 2 and
+   4 half.
+6. A: the brake rope on the meal floor releases the brake above: the sails
+   turn.
+7. M: the miller's song: the stones turn eighteen times for every turn of
+   the sails; brake wheel 48, spur wheel 96, rack 12, 16, 24 → wallower
+   **16**, stone nut **16** (the only pair).
+8. C: the hoist: the clutch upstairs engaged and the trapdoors downstairs
+   open.
+9. X: the slate's clues (rye from the well farm; the barn's sack oats or
+   spelt; no wheat from oak or cow; oak not spelt or oats; cow no spelt) →
+   apple wheat, barn spelt, well rye: hoist **apple, barn, well** in the
+   bread's order (wheat, spelt, rye); a wrong sack starts over.
+10. D: the chute's three flaps: **right, left, right**: fine flour into the
+    festival sack, bran into the bran sack.
+11. E: the loading door's counterweight is missing: the full bran sack on
+    its hook.
+12. A: the festival sack onto the cart: it rolls down to the village.

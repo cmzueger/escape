@@ -15,56 +15,56 @@ answers (1 to 5). Rooms: puzzles using it across the catalogue.
 
 | Element | Group | Minutes | Hints | Fun | Difficulty | More? | Puzzles |
 |---|---|---:|---:|---:|---:|---|---:|
-| hidden in plain sight | find | -0.1 | 1.0 | 4 | 3 | more | 10 |
-| a tiny detail | find | -0.1 | 0.0 | 4 | 3 | more | 9 |
-| search inside things | find | -0.1 | - | 3 | 3 | same | 5 |
-| only visible at a moment | find | -0.1 | - | 5 | 3 | more | 5 |
+| hidden in plain sight | find | -0.1 | 1.0 | 4 | 3 | more | 11 |
+| a tiny detail | find | -0.1 | 0.0 | 4 | 3 | more | 11 |
+| search inside things | find | -0.1 | - | 3 | 3 | same | 7 |
+| only visible at a moment | find | -0.1 | - | 5 | 3 | more | 9 |
 | a decoy | find | -0.1 | 3.0 | 3 | 4 | same | 12 |
-| a letter that points somewhere | read | +0.1 | - | 5 | 3 | more | 13 |
+| a letter that points somewhere | read | +0.1 | - | 5 | 3 | more | 17 |
 | times in a log | read | +0.2 | 0.0 | 3 | 3 | less | 9 |
 | numbers hidden in a text | read | -0.0 | 0.0 | 3 | 3 | same | 3 |
-| a riddle or poem | read | +0.0 | - | 5 | 4 | more | 1 |
+| a riddle or poem | read | +0.0 | - | 5 | 4 | more | 3 |
 | statements where someone lies | read | +0.0 | - | 3 | 2 | same | 2 |
-| rules or instructions | read | +0.1 | 0.5 | 4 | 3 | more | 18 |
+| rules or instructions | read | +0.1 | 0.5 | 4 | 3 | more | 19 |
 | text mirrored or backwards | read | -0.0 | - | 3 | 2 | same | 12 |
 | a number straight into a lock | code | +0.1 | 0.0 | 1 | 1 | less | 8 |
 | two sources make one code | code | -0.0 | 0.0 | 3 | 2 | same | 7 |
 | count things | code | -0.0 | - | 2 | 1 | less | 4 |
-| a little arithmetic | code | -0.0 | - | 3 | 3 | same | 9 |
+| a little arithmetic | code | -0.0 | - | 3 | 3 | same | 10 |
 | a mapping | code | +0.1 | 0.0 | 3 | 2 | less | 27 |
-| the right order | code | +0.0 | - | 4 | 3 | more | 13 |
-| sliding blocks | mech | +0.0 | - | 5 | 2 | more | 2 |
-| rotate and align | mech | -0.2 | 0.5 | 4 | 3 | more | 12 |
+| the right order | code | +0.0 | - | 4 | 3 | more | 16 |
+| sliding blocks | mech | +0.0 | - | 5 | 2 | more | 3 |
+| rotate and align | mech | -0.2 | 0.5 | 4 | 3 | more | 14 |
 | a tilt maze | mech | -0.2 | 0.0 | 5 | 3 | more | 2 |
-| pouring and balancing | mech | +0.0 | - | 4 | 3 | same | 5 |
-| switches with feedback | mech | +0.1 | 1.0 | 4 | 3 | more | 11 |
-| thread a path | mech | -0.1 | - | 5 | 3 | more | 4 |
-| assemble pieces | mech | +0.0 | 0.0 | 4 | 2 | more | 3 |
+| pouring and balancing | mech | +0.0 | - | 4 | 3 | same | 6 |
+| switches with feedback | mech | +0.1 | 1.0 | 4 | 3 | more | 13 |
+| thread a path | mech | -0.1 | - | 5 | 3 | more | 9 |
+| assemble pieces | mech | +0.0 | 0.0 | 4 | 2 | more | 5 |
 | a special light reveals | sense | +0.0 | - | 5 | 2 | more | 6 |
 | reflections | sense | -0.0 | - | 4 | 4 | same | 4 |
 | play a melody | sense | +0.0 | - | 5 | 3 | more | 5 |
-| listen for a clue | sense | +0.0 | - | 5 | 3 | more | 2 |
-| one clue over two views | space | -0.1 | - | 5 | 4 | more | 13 |
-| look from one view into another | space | -0.2 | 0.0 | 4 | 3 | more | 9 |
-| change here, see there | space | +0.0 | - | 5 | 4 | more | 6 |
+| listen for a clue | sense | +0.0 | - | 5 | 3 | more | 3 |
+| one clue over two views | space | -0.1 | - | 5 | 4 | more | 15 |
+| look from one view into another | space | -0.2 | 0.0 | 4 | 3 | more | 12 |
+| change here, see there | space | +0.0 | - | 5 | 4 | more | 9 |
 | how the rooms lie | space | -0.1 | - | 4 | 4 | same | 5 |
-| a conversation with choices | people | +0.0 | - | 5 | 3 | more | 3 |
-| a logic grid | people | +0.0 | - | 5 | 4 | more | 6 |
-| obvious item, obvious place | items | -0.1 | 0.0 | 3 | 1 | same | 50 |
-| combine two items | items | -0.0 | - | 4 | 2 | same | 3 |
-| an unexpected use | items | +0.0 | - | 5 | 4 | more | 2 |
+| a conversation with choices | people | +0.0 | - | 5 | 3 | more | 6 |
+| a logic grid | people | +0.0 | - | 5 | 4 | more | 9 |
+| obvious item, obvious place | items | -0.1 | 0.0 | 3 | 1 | same | 53 |
+| combine two items | items | -0.0 | - | 4 | 2 | same | 4 |
+| an unexpected use | items | +0.0 | - | 5 | 4 | more | 5 |
 | a decoy only a twist exposes | combination | +0.0 | - | 2 | 4 | less | 3 |
-| a text explains a mechanism | combination | +0.0 | - | 3 | 3 | same | 1 |
+| a text explains a mechanism | combination | +0.0 | - | 3 | 3 | same | 2 |
 | a long chain | combination | +0.0 | - | 4 | 4 | same | 0 |
 | several puzzles open at once | combination | +0.0 | - | 3 | 4 | same | 0 |
-| a tool used again later | combination | +0.0 | - | 4 | 4 | same | 7 |
+| a tool used again later | combination | +0.0 | - | 4 | 4 | same | 8 |
 | seen early, needed late | combination | +0.0 | - | 3 | 3 | same | 2 |
 | a story note that is also a clue | combination | +0.0 | - | 4 | 3 | same | 8 |
 | atmosphere that leads nowhere | combination | +0.0 | - | 4 | 3 | more | 0 |
-| a puzzle that needs two rooms | combination | +0.0 | - | 5 | 4 | more | 4 |
-| trying is the way | combination | -0.1 | - | 3 | 2 | same | 6 |
+| a puzzle that needs two rooms | combination | +0.0 | - | 5 | 4 | more | 9 |
+| trying is the way | combination | -0.1 | - | 3 | 2 | same | 7 |
 | planning, or it resets | combination | -0.2 | 0.0 | 3 | 3 | same | 5 |
-| a finale that uses the whole room | combination | +0.1 | - | 4 | 4 | more | 11 |
+| a finale that uses the whole room | combination | +0.1 | - | 4 | 4 | more | 14 |
 
 Minutes per puzzle kind: action 0.3, lookup 0.7, combine 0.8, find 1.0, mechanism 0.4, hard mechanism 2.1, deduction 2.7, hard deduction 6.0; each extra clue source +0.0, each extra view +0.2.
 
@@ -102,6 +102,9 @@ answers). Fun: forecast from the elements, then the owner's rating if given.
 | press | 9 | 15.7 | - | hard | 2.7 | 3.5 | - |
 | magic | 8 | 9.1 | - | medium | 2.8 | 3.9 | - |
 | noir | 8 | 19.6 | - | hard | 3.0 | 3.8 | - |
+| filter | 12 | 21.5 | - | hard | 3.1 | 4.3 | - |
+| railway | 11 | 19.0 | - | hard | 3.1 | 4.4 | - |
+| mill | 12 | 19.4 | - | hard | 3.2 | 4.2 | - |
 
 Fun forecasts are shifted by -0.6 to match the rooms the owner rated (12).
 
@@ -125,6 +128,8 @@ Fun forecasts are shifted by -0.6 to match the rooms the owner rated (12).
 - **housenow**: 4 of 6 puzzles need reading (too much reading frustrates the owner).
 - **press**: a decoy 3 times; rules or instructions 3 times; 6 of 9 puzzles need reading (too much reading frustrates the owner).
 - **noir**: five or more puzzles in a row without a mechanism; 5 of 8 puzzles need reading (too much reading frustrates the owner).
+- **railway**: thread a path 3 times.
+- **mill**: five or more puzzles in a row without a mechanism.
 
 ## The owner's notes
 

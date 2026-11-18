@@ -234,3 +234,44 @@ coats: F | find_tiny decoy | 1 1
 radio: E | read_backwards decoy combo_decoy_twist read_rules | 2 2
 safe: X | read_witness read_log code_math combo_finale | 4 3
 door: M | item_clever item_combine | 2 1
+
+[filter]
+coal: F | find_container | 1 1
+fire: A | item_combine item_use | 2 1
+boiler: D | mech_pour | 1 1
+call: C | talk space_look | 3 2
+engine: D | code_order mech_switch | 2 1
+airlock: F | sense_listen find_moment | 1 1
+filter: E | read_riddle mech_assemble combo_text_mech | 2 2
+socket: E | item_clever | 1 2
+districts: X | logic_grid read_letter | 2 1
+network: M | mech_path | 1 1
+jets: M | space_remote combo_cross_room space_look | 2 3
+finale: F | find_moment read_letter combo_finale | 2 2
+
+[railway]
+key: F | find_tiny | 1 1
+power: A | item_use | 1 1
+turntable: D | mech_rotate | 1 1
+milk: D | mech_path combo_trial | 1 1
+post: C | mech_path space_split combo_cross_room | 2 3
+call: C | talk | 1 1
+engine: X | logic_grid read_letter | 3 3
+book: F | find_moment space_remote combo_cross_room find_hidden | 1 2
+yard: M | mech_slide read_riddle code_order | 2 2
+bridge: E | item_clever | 1 2
+finale: E | mech_path combo_reuse combo_finale | 3 3
+
+[mill]
+crank: F | find_container | 1 1
+handle: A | item_use | 1 2
+cap: E | find_moment space_look mech_rotate | 2 2
+call: C | talk | 1 1
+cloths: F | find_tiny read_rules | 2 2
+brake: A | space_remote combo_cross_room | 1 2
+gears: M | mech_assemble code_math read_letter | 2 2
+hoist: C | space_split combo_cross_room mech_switch | 2 3
+sacks: X | logic_grid code_order | 2 2
+chute: D | mech_path | 1 1
+counterweight: E | item_clever | 1 2
+cart: A | combo_finale | 1 1
