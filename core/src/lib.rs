@@ -33,12 +33,15 @@ pub mod light;
 pub mod museum;
 pub mod obs;
 pub mod orangery;
+pub mod polar;
 pub mod praline;
+pub mod ship;
 pub mod theatre;
 pub mod toyshop;
 pub mod train;
 pub mod tree;
 pub mod watch;
+pub mod zeppelin;
 
 /// The catalogue: id, the kind of each puzzle in order, target minutes for
 /// three stars. Kinds: A action (use the obvious item), B lookup (one clue
@@ -48,7 +51,7 @@ pub mod watch;
 /// deduction (one twist), X hard deduction (a longer chain or grid).
 /// The difficulty shown follows from the kinds ([`difficulty`]); the time
 /// is separate (`tools/estimate.py` estimates it from the kinds).
-pub const ROOMS: [(&str, &str, u32); 16] = [
+pub const ROOMS: [(&str, &str, u32); 19] = [
     ("hut", "ACABCDDBB", hut::PAR_MINUTES),
     ("light", "ACCBFMDEDA", light::PAR_MINUTES),
     ("obs", "CCMEEDXCAC", obs::PAR_MINUTES),
@@ -65,6 +68,9 @@ pub const ROOMS: [(&str, &str, u32); 16] = [
     ("gondola", "BDAAAE", gondola::PAR_MINUTES),
     ("praline", "BCMDBA", praline::PAR_MINUTES),
     ("toyshop", "FAAMAEA", toyshop::PAR_MINUTES),
+    ("zeppelin", "FFEMF", zeppelin::PAR_MINUTES),
+    ("ship", "FDMEA", ship::PAR_MINUTES),
+    ("polar", "XFMABE", polar::PAR_MINUTES),
 ];
 
 /// 1 easy, 2 medium, 3 hard: how hard the thinking is, not how long it
@@ -232,6 +238,9 @@ impl Room {
                     Some("gondola") => *self = Room::Kit(kit::State::new(&gondola::SPEC)),
                     Some("praline") => *self = Room::Kit(kit::State::new(&praline::SPEC)),
                     Some("toyshop") => *self = Room::Kit(kit::State::new(&toyshop::SPEC)),
+                    Some("zeppelin") => *self = Room::Kit(kit::State::new(&zeppelin::SPEC)),
+                    Some("ship") => *self = Room::Kit(kit::State::new(&ship::SPEC)),
+                    Some("polar") => *self = Room::Kit(kit::State::new(&polar::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -273,6 +282,9 @@ mod tests {
             (&gondola::SPEC, ROOMS[13].1),
             (&praline::SPEC, ROOMS[14].1),
             (&toyshop::SPEC, ROOMS[15].1),
+            (&zeppelin::SPEC, ROOMS[16].1),
+            (&ship::SPEC, ROOMS[17].1),
+            (&polar::SPEC, ROOMS[18].1),
         ] {
             assert_eq!(spec.puzzles.len(), kinds.len(), "{}", spec.id);
         }
@@ -284,7 +296,7 @@ mod tests {
         assert!(r.call("room obs").contains("\"room\":\"obs\""));
         for id in [
             "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum", "tree",
-            "gondola", "praline", "toyshop",
+            "gondola", "praline", "toyshop", "zeppelin", "ship", "polar",
         ] {
             assert!(r
                 .call(&format!("room {id}"))
@@ -378,6 +390,26 @@ mod tests {
             (
                 &toyshop::SPEC,
                 [tilts(), digits("drawer", 12)].concat(),
+                vec![],
+                vec![],
+            ),
+            (&zeppelin::SPEC, digits("slot", 4), vec![], vec![]),
+            (
+                &ship::SPEC,
+                ["pc", "cs", "flood", "pump"]
+                    .map(|o| format!("tank {o}"))
+                    .to_vec(),
+                vec![],
+                vec![],
+            ),
+            (
+                &polar::SPEC,
+                [
+                    digits("crate", 8),
+                    ["n", "e", "s", "w"].map(|w| format!("push {w}")).to_vec(),
+                    vec!["crate reset".into()],
+                ]
+                .concat(),
                 vec![],
                 vec![],
             ),
