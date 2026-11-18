@@ -15,7 +15,8 @@ Sidereal (`obs`, hard); second set The Orangery
 medium), The Alchemist's Cellar (`alch`, hard); fourth set The Attic (`attic`,
 easy), The Watchmaker (`watch`, medium), The Night Gallery (`museum`, hard);
 fifth set (owner's choice) Lookout (`tree`), Gondola 12 (`gondola`), Praline
-Works (`praline`), Tinker & Sons (`toyshop`).
+Works (`praline`), Tinker & Sons (`toyshop`); sixth set (owner's choice) Graf
+Alpina (`zeppelin`), Albatross (`ship`), Base 70° South (`polar`).
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
   `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
@@ -30,10 +31,10 @@ Works (`praline`), Tinker & Sons (`toyshop`).
   locks, dials, picks, uses, latching checks, a hook for the odd mechanism):
   see `orangery.rs`, `theatre.rs`, `chess.rs`, `beach.rs`, `train.rs`,
   `alch.rs`, `attic.rs`, `watch.rs`, `museum.rs`, `tree.rs`, `gondola.rs`,
-  `praline.rs`, `toyshop.rs`. Write new rooms this way. Their pictures are in
-  `art_set2.gd` … `art_set5.gd` (each art script extends the one before;
+  `praline.rs`, `toyshop.rs`, `zeppelin.rs`, `ship.rs`, `polar.rs`. Write new
+  rooms this way. Their pictures are in `art_set2.gd` … `art_set6.gd` (each art script extends the one before;
   constants and helpers must not reuse a parent's name), hotspots in
-  `views_set2.gd` … `views_set5.gd`. Item names are global (`item.<name>`
+  `views_set2.gd` … `views_set6.gd`. Item names are global (`item.<name>`
   in the texts): pick names no other room uses. Kit locks and
   dials are moved with `turn` and `flip`.
 - A new room: a kit spec in `core`, an entry in `ROOMS` and `Room::call`, views and
@@ -94,6 +95,14 @@ Works (`praline`), Tinker & Sons (`toyshop`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.8.0** (2026-11-18): sixth set, chosen by the owner in two rounds:
+  Graf Alpina (zeppelin; compass and magnets, a cipher rebuilt from a burnt
+  page, clues in a photo and through binoculars), Albatross (ship; ballast
+  tanks that settle level, coloured glass over an overprinted diagram,
+  lighthouses with a mirrored decoy), Base 70° South (polar; a logic grid in
+  pictures, UV ink, sliding crates, a message read through the grid). Text
+  prefixes z, s, r; views Z, V, R. Catalogue: 19 rooms in seven rows. After
+  changing strings.csv, re-import (`--import`) before the headless test.
 - **0.7.3** (2026-11-17): the owner asked for a "find" kind (clues that are
   easy to miss) and noted mechanisms and deductions vary in difficulty: kinds
   F, M (hard mechanism) and X (hard deduction) added, the label is now a
@@ -181,7 +190,7 @@ Works (`praline`), Tinker & Sons (`toyshop`).
 ## Open
 - An Android build, a custom domain.
 - The owner's play test of the fifth set (built 0.7.0) and its targets.
-- In progress: the sixth set (Graf Alpina, Albatross, Base 70° South), see SPEC.
+- The owner's play test of the sixth set (built 0.8.0) and its targets.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, whether the scrolling catalogue is, and an
   opinion on the sounds, which were made without anyone hearing them.

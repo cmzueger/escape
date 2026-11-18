@@ -369,3 +369,55 @@ reed 2, scarab 4. Everything else is read through it.
   lighting desk powered. Chess safe: the drawer's contents taken. Lookout
   hatch: the periscope's handle on. Praline kettle: the recipe whole. Night
   Train panel: the ticket punched.
+
+# Graf Alpina
+1. **Cabinet** (four wheels, a church on the lock). The photograph's church
+   clock shows 7:35 → **0735** (the wall clock's 4:20 is a decoy) → bar
+   magnet, binoculars.
+2. **Paperweight.** The horseshoe magnet holding down the chart.
+3. **Course** (three wheels on the compass). The telegram is in signs: a ring
+   with a notch at one of ten places, clockwise from the top; the burnt code
+   book keeps 3, 7 and 0 as samples. The telegram reads **2, 2, 5**.
+4. **Magnets** (both into the compass; each slot: empty, pulling, pushing).
+   Earth pulls north 3, the engines west 1, a magnet 2. Only **top slot
+   pushing, bottom slot pulling** makes the needle point at 225 (south-west).
+   The airship turns to the valley.
+5. **Valves** (three wheels). Binoculars on the window: the ground crew's
+   panels show **618**.
+
+# Albatross
+1. **Signal locker** (four wheels, a bell on the lock). The ship's bell has
+   **1938** engraved small (the plaque's 1951 is a decoy) → coloured glass.
+2. **Glass** onto the ballast diagram: each pane hides its own colour.
+3. **Ballast.** The log book's last pennant is blue: hide red and green, the
+   blue plan is port 4, centre 5, starboard 4 (the red 2 6 2 and green 5 3 5
+   are level too). Valves settle two tanks (an odd unit stays in the fuller),
+   the centre floods to 8 or pumps to 0. From 8 5 3: **port valve, pump,
+   starboard valve, port valve, pump, starboard valve, flood, starboard
+   valve** (eight is the fewest; no dead ends) → the cabinet: telegraph
+   handle.
+4. **Course** (three wheels). The window: left light 2 flashes, right 4. The
+   chart: positions (left, right, course) 4-2 095, **2-4 310**, 3-1 170; the
+   first is the mirror image, a decoy.
+5. **Telegraph.** The handle on the engine telegraph.
+
+# Base 70° South
+1. **Duty board** (a face under each shift). The log book: beard directly
+   before glasses; hat earlier than beard; hat not on day; scarf not at
+   night. Only one rota: **dawn hat, day scarf, dusk beard, night glasses**
+   → UV lamp.
+2. **UV.** The lamp on the wall map shows **746** by the radio mast (the
+   printed 21 and 58 are grid numbers).
+3. **Crates** (6 by 6; crates move along their length; the red one leaves on
+   the right of its row). 22 steps at best: crate numbers as in `polar.rs`:
+   1 w, 3 s, 4 e, 3 s, 1 w w w, 2 s, 3 n n, 4 w, 6 w, 2 s s, 7 e e, 3 n n,
+   then the red crate e e e e → the big fuse.
+4. **Generator.** The fuse.
+5. **Radio** (needs power and the UV numbers): **746** → the teleprinter
+   prints four faces: glasses, scarf, beard, hat.
+6. **Airlock.** Each face's shift counted from dawn: night 4, day 2, dusk 3,
+   dawn 1 → **4231**.
+
+## Balance notes (sixth set)
+- Estimated with tools/estimate.py: Graf Alpina 10, Albatross 8, Base 70°
+  South 14 minutes; targets 13, 10, 19. Untested by a person.

@@ -179,3 +179,6 @@ All four new mechanisms (sliding blocks, coloured filters, water levels,
 compass and magnets) and all four clue kinds (logic grid, rebuild a cipher,
 invisible ink, clues in details) were wanted. Not chosen: Grand Hotel,
 scriptorium, bank vault, detective's office, inventor's workshop.
+
+Built as 0.8.0: Graf Alpina (5 puzzles, kinds FFEMF, medium, 13 min),
+Albatross (FDMEA, medium, 10 min), Base 70° South (XFMABE, hard, 19 min).

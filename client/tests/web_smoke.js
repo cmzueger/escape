@@ -88,14 +88,15 @@ function check(ok, what) {
   // The second and third row, then the fourth, which is reached by scrolling.
   for (const [x, y, id, scroll] of [[173, 274, "orangery"], [475, 274, "theatre"], [777, 289, "chess"],
     [173, 408, "beach"], [475, 408, "train"], [777, 404, "alch"],
-    [173, 193, "attic", true], [475, 193, "watch", true], [777, 189, "museum", true],
-    [173, 312, "tree", true], [475, 312, "gondola", true], [777, 312, "praline", true], [475, 431, "toyshop", true]]) {
+    [173, 381, "attic", 100], [475, 381, "watch", 100], [777, 377, "museum", 100],
+    [173, 193, "tree", 4000], [475, 193, "gondola", 4000], [777, 193, "praline", 4000],
+    [173, 312, "toyshop", 4000], [475, 312, "zeppelin", 4000], [777, 312, "ship", 4000], [475, 431, "polar", 4000]]) {
     await page.reload();
     await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
     await page.waitForTimeout(500);
     if (scroll) {
       await page.mouse.move(480, 300);
-      await page.mouse.wheel(0, 4000);
+      await page.mouse.wheel(0, scroll);
       await page.waitForTimeout(500);
     }
     await tap(x, y);

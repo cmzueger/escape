@@ -12,12 +12,14 @@ const TITLES := {
 	"beach": "Low Tide", "train": "Night Train", "alch": "The Alchemist's Cellar",
 	"attic": "The Attic", "watch": "The Watchmaker", "museum": "The Night Gallery",
 	"tree": "Lookout", "gondola": "Gondola 12", "praline": "Praline Works", "toyshop": "Tinker & Sons",
+	"zeppelin": "Graf Alpina", "ship": "Albatross", "polar": "Base 70° South",
 }
 ## Texts of the lighthouse have their keys with an "l" in front, those of
 ## the observatory with an "o".
 const PREFIX := {"hut": "", "light": "l", "obs": "o", "orangery": "g", "theatre": "t", "chess": "c",
 	"beach": "b", "train": "n", "alch": "a", "attic": "k", "watch": "w", "museum": "m",
-	"tree": "e", "gondola": "q", "praline": "p", "toyshop": "y"}
+	"tree": "e", "gondola": "q", "praline": "p", "toyshop": "y",
+	"zeppelin": "z", "ship": "s", "polar": "r"}
 const SLOTS := 8
 const HINT_RECT := Rect2(800, 484, 136, 44)
 const MENU_RECT := Rect2(908, 8, 44, 44)
@@ -25,7 +27,8 @@ const LEFT_RECT := Rect2(6, 200, 52, 72)
 const RIGHT_RECT := Rect2(902, 200, 52, 72)
 const BACK_RECT := Rect2(10, 414, 100, 52)
 const UP_RECT := Rect2(490, 6, 100, 50)
-const UNLOCKS := ["emsg.chest_open", "emsg.hatch_open", "qmsg.bag_open", "qmsg.kit_open", "qmsg.cover_off",
+const UNLOCKS := ["zmsg.cab_open", "zmsg.course_set", "zmsg.aligned", "smsg.locker_open", "smsg.level", "smsg.course_set",
+	"rmsg.board_open", "rmsg.crates_done", "rmsg.printed", "rmsg.airlock_open", "emsg.chest_open", "emsg.hatch_open", "qmsg.bag_open", "qmsg.kit_open", "qmsg.cover_off",
 	"pmsg.locker_open", "pmsg.cab_open", "pmsg.recipe_ok", "pmsg.door_open", "ymsg.till_open", "ymsg.door_open", "ymsg.maze_done",
 	"pmsg.tray_done", "msg.cup_open", "msg.door2_unlocked", "msg.drawer_open", "msg.safe_open", "msg.baro_open",
 	"lmsg.hatch1_open", "lmsg.chest_open", "lmsg.hatch2_open", "lmsg.locker_open", "lmsg.hatch3_open",
@@ -39,7 +42,8 @@ const UNLOCKS := ["emsg.chest_open", "emsg.hatch_open", "qmsg.bag_open", "qmsg.k
 	"kmsg.trunk_open", "kmsg.ward_open", "kmsg.unlocked", "kmsg.trap_open", "wmsg.drawer_open", "wmsg.case_open",
 	"wmsg.door_open", "mmsg.case_open", "mmsg.sarc_open", "mmsg.balanced", "mmsg.niche_open", "mmsg.key_in",
 	"mmsg.door_open"]
-const WRONG := ["emsg.no_use", "qmsg.no_use", "pmsg.no_use", "ymsg.no_use", "qmsg.panel_dead", "qmsg.brake_on",
+const WRONG := ["zmsg.no_use", "smsg.no_use", "rmsg.no_use", "zmsg.no_magnet", "smsg.no_course", "smsg.diagram_blur",
+	"rmsg.crate_stuck", "emsg.no_use", "qmsg.no_use", "pmsg.no_use", "ymsg.no_use", "qmsg.panel_dead", "qmsg.brake_on",
 	"qmsg.too_far", "qmsg.cover_on", "emsg.peri_stuck", "ymsg.too_dark", "ymsg.maze_empty", "pmsg.piece_missing", "msg.no_use", "lmsg.no_use", "msg.signal_wrong", "lmsg.lamp_wrong", "lmsg.lamp_not_ready",
 	"lmsg.oil_little", "lmsg.oil_much", "lmsg.crank_free", "msg.stove_need", "msg.bucket_cold", "msg.key_wrong",
 	"omsg.no_use", "omsg.wheel_dead", "omsg.board_dead", "omsg.scope_sags", "omsg.see_dome", "omsg.see_stars", "omsg.bar_empty",
@@ -51,7 +55,7 @@ const WRONG := ["emsg.no_use", "qmsg.no_use", "pmsg.no_use", "ymsg.no_use", "qms
 	"mmsg.door_wrong", "mmsg.door_dead", "mmsg.scales_bare", "mmsg.dial_bare"]
 
 var link := RoomLink.new()
-var art := ArtSet5.new()
+var art := ArtSet6.new()
 var sound := Sound.new()
 var rooms: Array = []
 var room := "hut"
@@ -248,6 +252,15 @@ func _ambience() -> void:
 		levels["amb_sea"] = 0.55 + 0.15 * LightViews.FLOORS.find(floor_of)
 		if view == "L2":
 			levels["amb_fire"] = 0.25
+	elif mode != "load" and room == "zeppelin":
+		levels["amb_wind"] = 0.25
+		levels["amb_static"] = 0.03
+	elif mode != "load" and room == "ship":
+		levels["amb_sea"] = 0.7
+		levels["amb_wind"] = 0.5
+	elif mode != "load" and room == "polar":
+		levels["amb_wind"] = 0.8
+		levels["amb_static"] = 0.04 if "power" in st.get("flags", []) else 0.0
 	elif mode != "load" and room == "tree":
 		levels["amb_wind"] = 0.3
 	elif mode != "load" and room == "gondola":
@@ -552,7 +565,7 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 		sound.play("unlock")
 	elif msg in ["msg.lamp_lit", "msg.stove_lit"]:
 		sound.play("match")
-	elif msg in ["wmsg.part_in", "wmsg.watch_runs", "kmsg.wagon_on", "ymsg.train_on", "pmsg.tempered", "qmsg.going"]:
+	elif msg in ["wmsg.part_in", "wmsg.watch_runs", "kmsg.wagon_on", "ymsg.train_on", "pmsg.tempered", "qmsg.going", "rmsg.power", "smsg.ahead", "zmsg.descend"]:
 		sound.play("gear")
 	elif msg in ["kmsg.music_on", "ymsg.tree_lit", "emsg.beam_ok"]:
 		sound.play("chime")

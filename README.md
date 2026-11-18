@@ -20,6 +20,9 @@ Escape rooms played in the browser. Offline, no accounts.
 | Gondola 12 | easy | 12 min | A cable car stopped halfway on a snowy morning. Six puzzles; shadows matter. |
 | Praline Works | easy | 15 min | A 1920s chocolate factory at night. Six puzzles with a torn recipe and a tilting tray. |
 | Tinker & Sons | medium | 16 min | A toy shop on Christmas Eve, with a dollhouse copy of itself. Seven puzzles, a labyrinth and a deduction. |
+| Graf Alpina | medium | 13 min | A zeppelin's chart room over the Alps at dusk, drifting off course. Five puzzles with a compass, a cipher and things hidden in plain sight. |
+| Albatross | medium | 10 min | A 1950s steamer's wheelhouse in a storm. Five puzzles with ballast tanks, coloured glass and two lighthouses. |
+| Base 70° South | hard | 19 min | A polar station in a white-out. Six puzzles: a logic grid, invisible ink and a store full of crates. |
 
 Play: https://cmzueger.github.io/escape/
 
@@ -37,6 +40,6 @@ Play: https://cmzueger.github.io/escape/
 cargo test                                   # the rules
 client/build.sh debug                        # the extension for Godot
 godot --headless --path client --import
-godot --headless --path client --script res://tests/smoke_test.gd   # plays all sixteen rooms
+godot --headless --path client --script res://tests/smoke_test.gd   # plays all nineteen rooms
 GODOT=godot client/build-web.sh              # the web build in client/export/web
 ```

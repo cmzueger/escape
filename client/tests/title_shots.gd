@@ -12,7 +12,7 @@ func _initialize() -> void:
 	root.add_child(main)
 	for i in range(10):
 		await process_frame
-	for id in ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum", "tree", "gondola", "praline", "toyshop"]:
+	for id in ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum", "tree", "gondola", "praline", "toyshop", "zeppelin", "ship", "polar"]:
 		main.start_new(id)
 		main._close_panel()
 		main.seconds = 754.0
