@@ -129,7 +129,7 @@ func card(room: String, w: float, h: float) -> void:
 	match room:
 		"orangery":
 			r(0, 0, w, h, Color("f0b878"))
-			c(w * 0.78, h * 0.4, h * 0.34, Color(1, 0.85, 0.5, 0.9))
+			c(w * 0.78, h * 0.4, h * (0.34 + 0.03 * sin(t * 1.5)), Color(1, 0.85, 0.5, 0.9))
 			poly([0, h, 0, h * 0.45, w * 0.5, h * 0.08, w, h * 0.45, w, h], Color(1, 0.96, 0.85, 0.3))
 			for k in range(7):
 				ln(w * k / 6.0, h, w * k / 6.0, h * (0.45 - 0.37 * (1.0 - absf(k - 3) / 3.0)), GLASS_FRAME, 2)
@@ -137,11 +137,16 @@ func card(room: String, w: float, h: float) -> void:
 			ln(w, h * 0.45, w * 0.5, h * 0.08, GLASS_FRAME, 2)
 			for k in range(4):
 				_flower(w * 0.14 + k * w * 0.1, h * 0.96, h * 0.4, ["red", "yellow", "violet", "orange"][k], false)
+			var bx := w * (0.5 + 0.28 * sin(t * 0.7))
+			var by := h * (0.3 + 0.1 * sin(t * 2.1))
+			var flap := absf(sin(t * 9.0))
+			poly([bx, by, bx - 7, by - 1 - 7 * flap, bx - 6, by + 4], Color("4a8ad8"))
+			poly([bx, by, bx + 7, by - 1 - 7 * flap, bx + 6, by + 4], Color("4a8ad8"))
 		"theatre":
 			r(0, 0, w, h, Color("26222e"))
-			c(w * 0.3, h * 0.7, h * 0.6, Color(0.83, 0.31, 0.69, 0.35))
-			c(w * 0.55, h * 0.6, h * 0.6, Color(0.25, 0.75, 0.85, 0.3))
-			c(w * 0.42, h * 0.3, h * 0.5, Color(0.9, 0.76, 0.23, 0.25))
+			c(w * (0.3 + 0.12 * sin(t * 0.9)), h * 0.7, h * 0.6, Color(0.83, 0.31, 0.69, 0.35))
+			c(w * (0.55 + 0.12 * sin(t * 0.7 + 2.0)), h * 0.6, h * 0.6, Color(0.25, 0.75, 0.85, 0.3))
+			c(w * 0.42, h * (0.3 + 0.12 * sin(t * 1.1)), h * 0.5, Color(0.9, 0.76, 0.23, 0.25))
 			for k in range(5):
 				r(w * 0.76 + k * w * 0.05, 0, w * 0.05, h, Color("8a2a4a") if k % 2 == 0 else Color("6a1c38"))
 			face("happy", w * 0.2, h * 0.5, 0.5)
@@ -150,9 +155,9 @@ func card(room: String, w: float, h: float) -> void:
 			r(0, 0, w, h, Color("35503f"))
 			chessboard(w * 0.5 - h * 0.9, h * 0.52, h * 0.225, 8, 2)
 			piece("K", w * 0.5, h * 0.52, h / 110.0, CREAM)
-			piece("N", w * 0.3, h * 0.52, h / 130.0, Color("2a2018"))
+			piece("N", w * 0.3, h * (0.52 - 0.14 * absf(sin(t * 1.8))), h / 130.0, Color("2a2018"))
 			piece("R", w * 0.7, h * 0.52, h / 130.0, Color("2a2018"))
-			c(w * 0.86, h * 0.3, h * 0.5, Color(1, 0.8, 0.5, 0.18))
+			c(w * 0.86, h * 0.3, h * 0.5, Color(1, 0.8, 0.5, 0.14 + 0.06 * sin(t * 6.0)))
 		_:
 			super.card(room, w, h)
 

@@ -93,10 +93,19 @@ func card(room: String, w: float, h: float) -> void:
 	# The narrow house with its lit window, the year's light.
 	rr(w * 0.32, h * 0.12, w * 0.36, h * 0.88, Color("6a5a4a"), 3)
 	poly([w * 0.28, h * 0.14, w * 0.5, h * 0.0, w * 0.72, h * 0.14], Color("4a3a2a"))
+	var walker := int(t * 0.6) % 6
+	var glow := Color("ffd890") if era != "u" else Color("ffb870")
 	for k in range(3):
 		for j in range(2):
-			var lit := k == 1 and j == 0
-			r(w * (0.38 + j * 0.15), h * (0.22 + k * 0.24), w * 0.09, h * 0.14, Color("ffd890") if lit else Color("2a2a3a"))
+			var lit := (k == 1 and j == 0) or k * 2 + j == walker
+			var flicker := 0.85 + 0.15 * sin(t * 9.0 + k * 3.0 + j)
+			r(w * (0.38 + j * 0.15), h * (0.22 + k * 0.24), w * 0.09, h * 0.14, Color(glow, flicker) if lit else Color("2a2a3a"))
+	if era == "u":
+		# The television's blue light in the living room.
+		r(w * 0.38, h * 0.46, w * 0.09, h * 0.14, Color(0.5, 0.6, 1.0, 0.35 + 0.25 * sin(t * 11.0)))
+	for k in range(3):
+		var up := fmod(t * 6.0 + k * 9.0, 27.0)
+		c(w * 0.62 + 3.0 * sin(t + k), h * 0.08 - up, 3 + up * 0.15, Color(0.85, 0.85, 0.85, 0.35 * (1.0 - up / 27.0)))
 	txt(w * 0.5, h * 0.95, {"h": "1905", "j": "1938", "u": "1969", "x": "∞"}[era] if era != "x" else "", 12, CREAM)
 
 

@@ -110,18 +110,33 @@ func card(room: String, w: float, h: float) -> void:
 			r(0, 0, w, h, Z_DUSK)
 			r(0, 0, w, h * 0.4, Z_DUSK_HI)
 			poly([0, h, 0, h * 0.75, w * 0.3, h * 0.55, w * 0.55, h * 0.72, w * 0.8, h * 0.5, w, h * 0.68, w, h], Z_ICE)
-			ci.draw_set_transform(Vector2(w * 0.5, h * 0.32), 0.0, Vector2(1.0, 0.32))
+			var cloud := fmod(t * 9.0, w + 60) - 30
+			ci.draw_set_transform(Vector2(cloud, h * 0.2), 0.0, Vector2(1.0, 0.4))
+			c(0, 0, w * 0.12, Color(1, 1, 1, 0.5))
+			home()
+			var dx := w * 0.05 * sin(t * 0.6)
+			var dy := h * 0.03 * sin(t * 1.1)
+			ci.draw_set_transform(Vector2(w * 0.5 + dx, h * 0.32 + dy), 0.0, Vector2(1.0, 0.32))
 			c(0, 0, w * 0.36, Color("d8d0c0"))
 			home()
-			rr(w * 0.44, h * 0.42, w * 0.14, h * 0.07, Z_MAHOG, 2)
+			rr(w * 0.44 + dx, h * 0.42 + dy, w * 0.14, h * 0.07, Z_MAHOG, 2)
+			c(w * 0.86 + dx, h * 0.32 + dy, 2, Color(1, 0.9, 0.5, 0.5 + 0.5 * sin(t * 4.0)))
 		"ship":
 			r(0, 0, w, h, V_SKY)
-			poly([0, h * 0.6, w * 0.25, h * 0.5, w * 0.5, h * 0.62, w * 0.75, h * 0.48, w, h * 0.6, w, h, 0, h], V_SEA)
-			poly([w * 0.2, h * 0.62, w * 0.8, h * 0.56, w * 0.72, h * 0.75, w * 0.26, h * 0.78], Color("2a2a2a"))
-			r(w * 0.42, h * 0.38, w * 0.16, h * 0.2, CREAM)
-			r(w * 0.6, h * 0.3, w * 0.06, h * 0.26, Color("b0302a"))
-			for k in range(5):
-				ln(w * (0.1 + k * 0.2), 0, w * (0.05 + k * 0.2), h * 0.4, Color(1, 1, 1, 0.25), 1)
+			var sea := [0.0, h]
+			for k in range(13):
+				sea.append_array([w * k / 12.0, h * 0.66 + h * 0.06 * sin(k * 1.1 + t * 1.8)])
+			sea.append_array([w, h])
+			poly(sea, V_SEA)
+			at(w * 0.5, h * 0.62 + h * 0.03 * sin(t * 1.5), 0.06 * sin(t * 1.1))
+			poly([-w * 0.3, 0, w * 0.3, -h * 0.06, w * 0.22, h * 0.13, -w * 0.24, h * 0.16], Color("2a2a2a"))
+			r(-w * 0.08, -h * 0.24, w * 0.16, h * 0.2, CREAM)
+			r(w * 0.1, -h * 0.32, w * 0.06, h * 0.26, Color("b0302a"))
+			home()
+			for k in range(9):
+				var rx := fmod(k * 29.0 + t * 60.0, w + 20)
+				var ry := fmod(k * 17.0 + t * 90.0, h * 0.7)
+				ln(rx, ry, rx - 6, ry + 14, Color(1, 1, 1, 0.3), 1)
 		"polar":
 			r(0, 0, w, h, Color("e8ecf0"))
 			for k in range(14):

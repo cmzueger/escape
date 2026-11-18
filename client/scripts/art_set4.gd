@@ -107,8 +107,13 @@ func card(room: String, w: float, h: float) -> void:
 			poly([0, h, 0, h * 0.5, w * 0.5, 0, w, h * 0.5, w, h], ROOF)
 			for k in range(5):
 				ln(w * k / 4.0, h, w * 0.5, 0, ROOF_D, 2)
-			c(w * 0.5, h * 0.42, h * 0.18, Color("ffe9a8"))
-			r(w * 0.5 - 1, h * 0.24, 2, h * 0.36, ROOF_D)
+			var swing := 0.22 * sin(t * 1.4)
+			var bulb := Vector2(w * 0.5 + sin(swing) * h * 0.37, h * 0.05 + cos(swing) * h * 0.37)
+			ln(w * 0.5, h * 0.05, bulb.x, bulb.y, ROOF_D, 2)
+			c(bulb.x, bulb.y, h * 0.3, Color(1, 0.92, 0.66, 0.15))
+			c(bulb.x, bulb.y, h * 0.12, Color("ffe9a8"))
+			for k in range(8):
+				c(fmod(k * 23.0 + t * 4.0, w), h * 0.2 + fmod(k * 17.0 + t * (3.0 + k % 3), h * 0.5), 1.0, Color(1, 1, 0.9, 0.6))
 			rr(w * 0.14, h * 0.66, w * 0.3, h * 0.26, Color("7a3a34"), 4)
 			rr(w * 0.62, h * 0.7, w * 0.2, h * 0.2, paint("green"), 3)
 		"watch":
@@ -123,12 +128,15 @@ func card(room: String, w: float, h: float) -> void:
 				c(cx + 8 * sin(t * 3.0 + k), h * 0.9, 4, BRASS)
 		"museum":
 			r(0, 0, w, h, NIGHT_M)
-			poly([w * 0.3, 0, w * 0.7, 0, w * 0.8, h, w * 0.2, h], Color(0.7, 0.75, 1, 0.1))
+			var sweep := w * 0.18 * sin(t * 0.8)
+			poly([w * 0.42, 0, w * 0.58, 0, w * 0.8 + sweep, h, w * 0.2 + sweep, h], Color(0.7, 0.75, 1, 0.12))
 			for k in range(2):
 				r(w * (0.08 + k * 0.74), h * 0.1, w * 0.1, h * 0.9, STONE_MD)
 			rr(w * 0.3, h * 0.5, w * 0.4, h * 0.34, GOLD.darkened(0.25), 8)
 			c(w * 0.38, h * 0.5, h * 0.16, GOLD)
 			glyph_of("eye", w * 0.5, h * 0.24, h / 70.0, GOLD)
+			var glint := maxf(0.0, sin(t * 1.3)) ** 6
+			c(w * 0.5, h * 0.24, h * 0.12 * glint, Color(1, 1, 0.85, 0.8 * glint))
 		_:
 			super.card(room, w, h)
 

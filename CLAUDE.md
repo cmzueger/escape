@@ -44,7 +44,8 @@ set (owner's choice) The Night Edition (`press`), The Great Vaudini
   dials are moved with `turn` and `flip`.
 - A new room: a kit spec in `core`, an entry in `ROOMS` and `Room::call`, views and
   art, texts with their own key prefix (the lighthouse uses
-  `lmsg.`, `lhint.`, `lintro.`, `lend.`; the observatory `omsg.` and so on), a card picture, a play-through in
+  `lmsg.`, `lhint.`, `lintro.`, `lend.`; the observatory `omsg.` and so on), a card picture that moves (its `card` reads `t`;
+  `card_motion.gd` fails on a still one), a play-through in
   `smoke_test.gd`, and its solutions in `docs/PUZZLES.md`.
 - Hosted on GitHub Pages by `.github/workflows/ci.yml` (every push is tested;
   a push to `main` is then deployed to https://cmzueger.github.io/escape/).
@@ -100,6 +101,12 @@ set (owner's choice) The Night Edition (`press`), The Great Vaudini
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.10.1** (2026-11-18): every card picture in the catalogue moves (the
+  owner loves the moving ones; asked for all rooms and every future one):
+  new check `client/tests/card_motion.gd` (in CI) draws each card at two
+  moments and fails on a still one. Owner's times from the stats: Praline
+  Works 4:40 (target 15 → 6), Graf Alpina 10:46 with four hints (three for
+  its first puzzle), Lookout 0:48.
 - **0.10.0** (2026-11-18): seventh set, chosen by the owner in two rounds
   (asked for: more text clues, creative mechanisms, slightly hidden clues,
   a little longer): The Night Edition (print works, 1890), The Great Vaudini

@@ -127,24 +127,36 @@ func card(room: String, w: float, h: float) -> void:
 	match room:
 		"press":
 			r(0, 0, w, h, PR_WALL)
-			c(w * 0.5, h * 0.1, h * 0.5, Color(AMBER, 0.18))
+			c(w * 0.5, h * 0.1, h * 0.5, Color(AMBER, 0.14 + 0.06 * sin(t * 7.0) * sin(t * 3.0)))
+			var feed := fmod(t * 0.5, 1.0)
 			rr(w * 0.22, h * 0.25, w * 0.56, h * 0.6, PAPER, 2)
-			for k in range(5):
+			for k in range(int(feed * 6.0)):
 				r(w * 0.28, h * (0.35 + k * 0.1), w * 0.44, 2, INK)
-			ring(w * 0.55, h * 0.5, h * 0.09, RED, 2)
+			if feed > 0.5:
+				ring(w * 0.55, h * 0.5, h * 0.09, RED, 2)
+			r(w * 0.18, h * 0.85, w * 0.64, h * 0.06, PR_IRON_HI)
+			c(w * 0.5 + w * 0.2 * cos(t * 6.0), h * 0.88, 2, Color(1, 1, 1, 0.5))
 		"magic":
 			r(0, 0, w, h, F_VELVET)
 			for k in range(8):
 				r(k * w / 8.0, 0, w / 16.0, h, F_VELVET_D)
 			rr(w * 0.3, h * 0.15, w * 0.4, h * 0.7, Color("1e140e"), 3)
 			for k in range(5):
-				c(w * (0.34 + k * 0.08), h * 0.18, 3, AMBER)
-			c(w * 0.5, h * 0.5, h * 0.14, F_GOLD)
+				c(w * (0.34 + k * 0.08), h * 0.18, 3, AMBER if int(t * 5.0) % 5 != k else Color("fff8e0"))
+			ci.draw_set_transform(Vector2(w * 0.5, h * (0.5 - 0.08 * absf(sin(t * 1.5)))), 0.0, Vector2(maxf(0.08, absf(cos(t * 3.0))), 1.0))
+			c(0, 0, h * 0.14, F_GOLD)
+			c(0, 0, h * 0.1, F_GOLD_D)
+			home()
 		"noir":
 			r(0, 0, w, h, Color("222226"))
 			for k in range(7):
 				r(w * 0.45, h * (0.1 + k * 0.11), w * 0.45, h * 0.05, I_GREY)
-			c(w * 0.68, h * 0.45, h * 0.25, Color(I_NEON, 0.35))
+			var on := 0.35 if fmod(t, 3.4) < 2.9 or fmod(t * 9.0, 2.0) < 1.0 else 0.08
+			c(w * 0.68, h * 0.45, h * 0.25, Color(I_NEON, on))
+			for k in range(8):
+				var rx := w * 0.45 + fmod(k * 13.0, w * 0.45)
+				var ry := fmod(k * 23.0 + t * (30.0 + k * 3), h)
+				ln(rx, ry, rx, ry + 6, Color(0.8, 0.85, 1.0, 0.5), 1)
 			r(w * 0.08, h * 0.7, w * 0.5, h * 0.08, Color("111114"))
 		_:
 			super.card(room, w, h)

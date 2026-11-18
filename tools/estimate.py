@@ -32,8 +32,10 @@ TIMES = {
     "beach": (2.63, ""),
     "train": (4.73, ""),
     "attic": (3.13, ""),
-    "tree": (1.1, "before the map mattered"),
+    "tree": (0.8, "0:48 in 0.9.1, the map now needed"),
     "gondola": (4.28, ""),
+    "praline": (4.67, ""),
+    "zeppelin": (None, "10:46 with 4 hints (3 for the first puzzle)"),
 }
 _LIB = pathlib.Path(__file__).resolve().parent.parent / "core" / "src" / "lib.rs"
 ROOMS = {

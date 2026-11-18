@@ -78,6 +78,10 @@ jobs:
           command -v xvfb-run || (sudo apt-get update -q && sudo apt-get install -y -q xvfb)
           xvfb-run -a -s "-screen 0 1280x800x24" ~/godot/godot --path client --resolution 960x540 --script res://tests/layout_check.gd | tee layout.log
           grep -q "RESULT: PASS" layout.log
+      - name: Every card picture moves
+        run: |
+          xvfb-run -a -s "-screen 0 1280x800x24" ~/godot/godot --path client --script res://tests/card_motion.gd | tee cards.log
+          grep -q "RESULT: PASS" cards.log
       - name: Build the web client
         run: GODOT=~/godot/godot client/build-web.sh
       - uses: actions/setup-node@v5
