@@ -182,3 +182,22 @@ scriptorium, bank vault, detective's office, inventor's workshop.
 
 Built as 0.8.0: Graf Alpina (5 puzzles, kinds FFEMF, medium, 13 min),
 Albatross (FDMEA, medium, 10 min), Base 70° South (XFMABE, hard, 19 min).
+
+## Series: The Quiet House (owner, 2026-11-18)
+Four episodes, each playable alone, the story building across them, chosen
+by the owner in three rounds:
+- The same floor of an old town house (shop below, rooms stacked above, a
+  courtyard with windows facing each other) in 1905, 1938, 1969 and today.
+- The secret: Clara, 12, the pianist of the family, vanished in 1905; each
+  generation comes closer to what happened to her.
+- Linked by the housekeepers' notes: generations of housekeepers leave notes
+  for each other in a hidden place.
+- Difficulty rising: easy, medium, medium, hard.
+- Story through intro and ending texts, a recurring link (the notes) and
+  notes to find in the rooms.
+- Mechanics wanted: music and sound (with a visual twin, so it works muted),
+  one clue spread across views, how the rooms lie relative to each other,
+  multiple-choice interactions (talking to someone), looking from one view
+  into another, changing something in one view that shows in another.
+Not chosen: Grand Hotel Belvedere, The Missing Composer, Agency 13; the
+clockmaker's fortune, the inventor's machine; lakeside villa, mountain chalet.
