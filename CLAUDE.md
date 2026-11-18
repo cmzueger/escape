@@ -50,6 +50,21 @@ set (owner's choice) The Night Edition (`press`), The Great Vaudini
 - Hosted on GitHub Pages by `.github/workflows/ci.yml` (every push is tested;
   a push to `main` is then deployed to https://cmzueger.github.io/escape/).
 - `docs/SPEC.md` has the decision log.
+- **Knowledge base** (owner, 2026-11-18: what is perceived how hard and how
+  much fun, to judge times, labels and fun of existing and planned rooms):
+  `tools/knowledge.py` reads `tools/knowledge/tags.txt` (every puzzle of every
+  room: kind, element tags, clue sources, views; spoilers; `check` runs in CI,
+  a new room needs its block), `runs.txt` (paste every Stats export the owner
+  sends, as is), `survey.json` and the room times in `tools/estimate.py`. It
+  writes `docs/KNOWLEDGE.md` (no solutions): minutes and hints per element,
+  the owner's fun and difficulty per element, predicted minutes, label, felt
+  difficulty and fun per room, and warnings. `plan "F find_hidden; M
+  mech_slide; …"` judges a planned room: use it for every proposal. The
+  questionnaire is the artifact https://claude.ai/artifact/9ntdR1rQ1zfirEJxzyyixe
+  (source `tools/knowledge/survey.html`; element ids there = tags): read its
+  answers with ArtifactData `get` collection `survey`, doc `answers`, save the
+  fields as `survey.json`, rerun the report. New element kinds go into the
+  survey, `ELEMENTS` in knowledge.py and the tags together.
 - Target minutes: one `PAR_MINUTES` per room module (catalogue, score and the
   intro's `%d` all read it). Set per room from the owner's times (about 1.3
   times theirs). Estimate a planned room with `tools/estimate.py` (puzzle
@@ -101,6 +116,11 @@ set (owner's choice) The Night Edition (`press`), The Great Vaudini
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.10.2** (2026-11-18): the knowledge base (see The project): all 26
+  rooms tagged, a questionnaire with pictures for the owner (elements,
+  combinations, play style, frustrations, ratings per room), the report
+  `docs/KNOWLEDGE.md`. The Night Gallery's last two kinds were in the wrong
+  order in `ROOMS` (the new check found it).
 - **0.10.1** (2026-11-18): every card picture in the catalogue moves (the
   owner loves the moving ones; asked for all rooms and every future one):
   new check `client/tests/card_motion.gd` (in CI) draws each card at two

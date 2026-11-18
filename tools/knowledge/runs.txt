@@ -1,0 +1,21 @@
+# The owner's Stats exports, pasted as they come (newest at the end). Only
+# the "done" and "playing" lines carry per-puzzle times; best times are in
+# tools/estimate.py's TIMES.
+
+Locked In 0.9.1 stats, 2026-11-18
+hut (target 7 min): best 4:51, stars 3.0
+light (target 15 min): best 11:23, stars 3.0
+obs (target 30 min): best 39:04, stars 1.0
+orangery (target 5 min): best 2:53, stars 3.0
+theatre (target 10 min): best 7:15, stars 3.0
+chess (target 25 min): best 24:00, stars 1.0
+beach (target 5 min): best 2:38, stars 3.0
+train (target 7 min): best 4:44, stars 3.0
+attic (target 5 min): best 3:08, stars 3.0
+tree (target 3 min): best 0:48, stars 3.0
+  playing 0:40 taps 0 | 
+gondola (target 6 min): best 4:17, stars 3.0
+praline (target 15 min): best 4:40, stars 3.0
+  done 2026-11-18 4:40 hints 0 taps 134 stars 3.0 | p3@0:21 p1@3:22 p2@4:04 p4@4:25 p5@4:31 p6@4:40
+zeppelin (target 13 min): best 10:46, stars 1.0
+  done 2026-11-18 10:46 hints 4 taps 292 stars 1.0 | p2@1:04 p3@4:40 h1.1@6:35 h1.2@7:20 h1.3@7:43 p1@7:48 h4.1@9:26 p4@10:30 p5@10:46

@@ -37,6 +37,8 @@ jobs:
         run: python3 client/tests/strings_check.py
       - name: Views and pictures
         run: python3 client/tests/views_check.py
+      - name: Every puzzle tagged for the knowledge base
+        run: python3 tools/knowledge.py check
 
   client:
     # Playwright 1.56 installs Chromium only up to Ubuntu 24.04.

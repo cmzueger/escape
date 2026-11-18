@@ -1,0 +1,236 @@
+# What each puzzle of each room is made of. SPOILERS: the owner does not
+# read this file (like docs/PUZZLES.md).
+#
+# One line per puzzle, in the rules' `puzzles` order (the stats' p1, p2 …):
+#   label: KIND | element tags | sources views
+# KIND is the letter in lib.rs ROOMS (checked). Element tags are the ids of
+# the survey (find_*, read_*, code_*, mech_*, sense_*, space_*, talk,
+# logic_grid, item_*, decoy) and of its combinations (combo_*); the survey's
+# fun and difficulty answers attach to them. `sources` is how many separate
+# clues the puzzle needs, `views` how many views the player must visit for it.
+
+[hut]
+lamp: A | find_container item_use | 1 2
+cupboard: C | code_count space_split | 3 3
+stove: A | item_combine item_use | 2 2
+cuckoo: B | read_log code_map | 1 2
+map: C | item_use code_order space_split | 2 2
+barometer: D | mech_rotate read_log | 2 2
+power: D | mech_path mech_rotate item_use | 1 2
+frequency: B | find_hidden code_direct | 2 2
+signal: B | find_moment code_order | 1 1
+
+[light]
+grating: A | item_combine item_use | 1 1
+chest: C | code_order code_map space_split | 4 2
+hatch: C | read_log code_combine code_math | 3 2
+flags: B | code_map | 2 1
+bearing: F | find_moment space_look | 1 2
+oil: M | mech_pour space_split | 2 3
+gears: D | mech_assemble combo_reuse | 4 4
+drum: E | read_backwards code_map space_split | 2 2
+pressure: D | mech_switch combo_trial | 1 1
+light: A | item_use combo_finale | 1 1
+
+[obs]
+drawer: C | code_map code_combine space_split | 2 2
+cabinet: C | code_math find_hidden | 2 1
+switchboard: M | mech_switch | 1 1
+wallbox: E | code_map combo_reuse space_split | 2 2
+orrery: E | read_backwards combo_reuse read_letter | 2 2
+balance: D | mech_pour code_math | 1 1
+circles: X | mech_rotate read_letter code_combine code_map | 3 3
+slit: C | mech_rotate combo_reuse space_remote | 2 2
+photo: A | item_use | 1 1
+door: C | code_map combo_reuse combo_finale | 2 2
+
+[orangery]
+flower: A | item_use | 1 2
+cupboard: A | item_use | 1 1
+sundial: A | item_use find_moment | 1 1
+seeds: C | code_count code_combine space_split | 3 2
+pot: A | item_use code_order | 1 1
+pipes: D | mech_switch combo_trial | 1 1
+bottle: A | find_hidden read_letter | 1 1
+door: C | read_backwards code_map combo_finale | 2 1
+
+[theatre]
+plug: A | item_use | 1 2
+trunk: D | mech_switch code_map read_rules | 2 2
+winch: A | item_use | 1 1
+trap: C | space_layout mech_rotate read_letter | 2 2
+masks: C | code_order read_rules | 2 2
+mirror: M | mech_switch | 1 1
+key: A | item_use | 1 1
+door: C | code_map combo_finale | 2 2
+
+[chess]
+drawer: E | logic_grid read_rules | 2 1
+safe: C | code_map code_combine | 2 2
+clock: E | logic_grid read_rules | 2 1
+trophy: D | mech_path code_order | 1 1
+small: X | logic_grid | 1 1
+big: X | logic_grid mech_rotate | 1 1
+door: A | item_use | 1 1
+
+[beach]
+shells: C | code_count space_split | 3 3
+bottle: A | item_use read_letter | 1 1
+kites: C | mech_path find_tiny | 1 1
+tide: C | space_look item_use | 2 2
+sand: A | find_hidden item_use | 1 1
+door: A | item_use | 1 1
+
+[train]
+suitcase: B | read_log code_direct | 2 2
+seat: B | read_letter | 1 2
+briefcase: C | code_order read_log | 2 2
+punch: A | item_use | 1 1
+panel: B | code_map | 1 1
+handle: A | item_use | 1 1
+
+[alch]
+vials: D | code_map read_rules combo_trial | 2 2
+scales: M | mech_pour code_math | 1 1
+disc: C | mech_rotate read_rules | 1 2
+order: B | code_order read_rules | 1 1
+heat: C | code_math combo_precise | 2 1
+door: A | item_use | 1 1
+
+[attic]
+trunk: B | code_count | 1 2
+musicbox: A | item_use | 1 1
+train: A | item_use | 1 1
+wardrobe: B | read_numbers code_order | 1 2
+padlock: A | item_use | 1 1
+trapdoor: A | item_use | 1 1
+
+[watch]
+drawer: F | find_moment decoy | 1 1
+engraving: A | item_use find_tiny | 1 1
+tallclock: B | code_direct | 1 1
+watch: B | code_order read_rules mech_assemble | 1 2
+door: B | code_direct | 1 1
+
+[museum]
+case: C | code_map | 2 2
+scales: D | mech_pour code_math code_map | 2 2
+dial: C | mech_rotate sense_light code_map | 2 2
+sarcophagus: E | read_backwards code_map | 2 2
+key: A | item_use | 1 1
+door: C | read_backwards code_map combo_reuse combo_finale | 2 2
+
+[tree]
+chest: B | code_map | 1 1
+lamp: A | item_use | 1 1
+mirrors: D | mech_rotate combo_trial | 1 1
+periscope: A | item_use | 1 1
+hatch: C | space_look space_layout decoy | 2 2
+
+[gondola]
+backpack: B | code_map | 1 1
+firstaid: D | mech_rotate sense_mirror read_backwards | 1 1
+panel: A | item_use | 1 1
+fuse: A | item_use | 1 1
+brake: A | read_rules mech_switch | 1 1
+direction: E | space_layout read_rules code_math | 2 2
+
+[praline]
+locker: B | read_log code_direct | 1 2
+mould: C | code_map code_combine | 2 2
+tray: M | mech_tilt combo_precise | 1 1
+recipe: D | mech_assemble mech_rotate find_hidden | 1 2
+kettle: B | read_numbers code_direct | 1 1
+door: A | item_use | 1 1
+
+[toyshop]
+drawers: F | space_remote find_tiny | 1 2
+train: A | item_use | 1 1
+nutcracker: A | item_use | 1 1
+labyrinth: M | mech_tilt combo_precise | 1 1
+tree: A | item_use | 1 1
+presents: E | logic_grid | 1 1
+door: A | item_use | 1 1
+
+[zeppelin]
+cabinet: F | find_hidden decoy | 2 2
+paperweight: F | find_hidden | 1 1
+course: E | code_map read_rules | 2 2
+magnets: M | mech_switch mech_rotate read_rules | 1 1
+valves: F | space_look find_tiny | 1 2
+
+[ship]
+locker: F | find_tiny decoy | 1 1
+glass: D | sense_light item_use | 1 1
+ballast: M | mech_pour combo_precise read_log | 2 2
+course: E | space_look read_backwards decoy combo_decoy_twist | 2 2
+telegraph: A | item_use combo_finale | 1 1
+
+[polar]
+board: X | logic_grid | 1 1
+uv: F | sense_light decoy | 1 1
+crates: M | mech_slide combo_precise | 1 1
+generator: A | item_use | 1 1
+radio: B | code_direct combo_early_late | 1 2
+airlock: E | code_map combo_reuse combo_finale | 2 2
+
+[house1905]
+crank: F | find_container | 1 2
+musicbox: A | item_use sense_listen sense_music | 1 1
+piano: D | sense_music code_map space_split | 2 2
+wardrobe: A | item_use | 1 1
+hatbox: F | find_tiny space_split code_map | 3 3
+door: A | item_use read_letter combo_story_clue | 1 1
+
+[house1938]
+tile: F | find_hidden read_letter combo_story_clue | 1 1
+call: C | talk combo_story_clue | 2 2
+fuses: D | mech_switch combo_trial | 1 1
+panel: E | space_look sense_mirror space_remote combo_cross_room | 2 3
+door: A | item_use | 1 1
+
+[house1969]
+tile: F | find_hidden read_letter | 1 1
+record: D | sense_listen sense_music mech_switch | 2 1
+piano: C | sense_music code_combine space_split | 3 3
+drawer: E | space_layout space_look decoy combo_decoy_twist | 2 3
+intercom: C | talk combo_story_clue | 2 2
+
+[housenow]
+tile: F | find_hidden read_letter combo_story_clue | 1 1
+tune: E | read_backwards sense_music combo_story_clue | 2 2
+stove: D | mech_switch item_use read_rules | 1 1
+niche: X | space_layout read_backwards space_look combo_cross_room | 3 3
+call: E | talk combo_story_clue | 2 2
+box: B | code_math combo_early_late combo_story_clue combo_finale | 1 1
+
+[press]
+bin: F | find_container read_letter | 1 1
+locker: X | read_log read_witness decoy code_direct | 2 2
+stick: M | read_backwards code_order read_rules | 2 2
+reels: F | sense_light find_moment decoy read_rules | 2 2
+web: C | mech_path space_split combo_text_mech | 2 2
+ink: D | mech_switch combo_trial read_rules | 2 2
+cylinder: A | item_use | 1 1
+ads: E | read_numbers decoy | 2 2
+press: A | item_use combo_finale | 1 1
+
+[magic]
+lining: F | find_container find_tiny | 1 1
+trunk: A | item_use | 1 1
+cabinet: E | read_riddle code_order | 2 2
+deck: F | find_tiny code_order read_letter item_use | 2 2
+mirror: D | sense_mirror space_remote combo_cross_room | 2 2
+ghost: M | sense_mirror space_remote code_map combo_cross_room | 3 3
+saw: C | mech_slide space_look | 2 2
+chain: A | item_use combo_finale | 1 1
+
+[noir]
+bin: F | find_container | 1 1
+carbon: A | sense_light read_letter | 1 1
+pad: E | sense_light space_remote read_rules | 2 2
+ribbon: E | read_backwards item_clever | 1 1
+coats: F | find_tiny decoy | 1 1
+radio: E | read_backwards decoy combo_decoy_twist read_rules | 2 2
+safe: X | read_witness read_log code_math combo_finale | 4 3
+door: M | item_clever item_combine | 2 1

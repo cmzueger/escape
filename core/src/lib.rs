@@ -71,7 +71,7 @@ pub const ROOMS: [(&str, &str, u32); 26] = [
     ("alch", "DMCBCA", alch::PAR_MINUTES),
     ("attic", "BAABAA", attic::PAR_MINUTES),
     ("watch", "FABBB", watch::PAR_MINUTES),
-    ("museum", "CDCECA", museum::PAR_MINUTES),
+    ("museum", "CDCEAC", museum::PAR_MINUTES),
     ("tree", "BADAC", tree::PAR_MINUTES),
     ("gondola", "BDAAAE", gondola::PAR_MINUTES),
     ("praline", "BCMDBA", praline::PAR_MINUTES),

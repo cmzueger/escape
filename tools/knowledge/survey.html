@@ -1,0 +1,393 @@
+<title>Puzzle Taste Survey</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: one column of element cards, grouped like a locksmith's drawer; a sticky progress bar. */
+:root {
+  --bg: #f6f1e7; --panel: #fffaf0; --ink: #2a2118; --muted: #6f6253; --line: #e2d6c0;
+  --brass: #a8781e; --brass-soft: #f1e2bf; --pick: #2f5d50; --pick-fg: #ffffff;
+  --display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body: "Inter", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #17130f; --panel: #221c16; --ink: #f1e6cf; --muted: #b3a48a; --line: #3a3026;
+  --brass: #e0b252; --brass-soft: #3a2e1a; --pick: #7fc4a8; --pick-fg: #10231c; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #17130f; --panel: #221c16; --ink: #f1e6cf; --muted: #b3a48a; --line: #3a3026;
+  --brass: #e0b252; --brass-soft: #3a2e1a; --pick: #7fc4a8; --pick-fg: #10231c; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 860px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 24px 80px; display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: 34px; line-height: 1.1; }
+h2 { font-size: 24px; }
+h3 { font-size: 17px; }
+p { margin: 0; max-width: 65ch; }
+.lead { color: var(--muted); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); padding-block: 10px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.meter { flex: 1 1 200px; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.meter i { display: block; height: 100%; width: 0; background: var(--brass); transition: width .3s; }
+.status { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px; }
+nav.toc a { font-size: 13px; color: var(--ink); text-decoration: none; padding: 4px 10px; border: 1px solid var(--line); border-radius: 20px; }
+nav.toc a:focus-visible, button:focus-visible, textarea:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+section { display: grid; gap: 14px; }
+.sechead { display: grid; gap: 4px; padding-top: 8px; border-top: 2px solid var(--brass); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: grid; grid-template-columns: 132px 1fr; gap: 14px; align-items: start; }
+.card .pic { width: 132px; max-width: 100%; aspect-ratio: 3 / 2; color: var(--ink); }
+.card .pic svg { width: 100%; height: 100%; display: block; }
+.card .txt { display: grid; gap: 8px; min-width: 0; }
+.eg { color: var(--muted); font-size: 14px; }
+.scales { display: grid; gap: 6px; }
+.scale { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.scale .lab { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); width: 74px; flex: none; }
+.scale .opts { display: flex; flex-wrap: wrap; gap: 4px; }
+.scale button { font: inherit; font-size: 13px; padding: 4px 9px; border-radius: 6px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.scale button[aria-pressed="true"] { background: var(--pick); border-color: var(--pick); color: var(--pick-fg); }
+textarea { font: inherit; font-size: 14px; width: 100%; box-sizing: border-box; min-height: 44px; border: 1px solid var(--line); border-radius: 6px; background: transparent; color: var(--ink); padding: 6px 8px; resize: vertical; }
+.note { font-size: 13px; color: var(--muted); }
+.plain { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: grid; gap: 10px; }
+.rooms { display: grid; gap: 10px; }
+.room { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 8px; }
+.room[data-played="no"] .roomq { display: none; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.copy { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--brass); background: var(--brass-soft); color: var(--ink); cursor: pointer; }
+.ok { color: var(--pick); }
+@media (max-width: 560px) { .card { grid-template-columns: 1fr; } .card .pic { width: 120px; } .scale .lab { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .meter i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:10px">
+    <h1>Puzzle Taste Survey</h1>
+    <p class="lead">For Locked In: which kinds of puzzles, mechanisms and combinations feel easy or hard to you, and which are fun. The examples are general escape-room examples, not taken from our rooms, so nothing gets spoiled. Answer what you like and skip the rest. Everything saves as you go, and you can come back later.</p>
+  </header>
+
+  <div class="bar">
+    <div class="meter" aria-hidden="true"><i id="meter"></i></div>
+    <span class="status" id="status">Loading saved answers…</span>
+  </div>
+
+  <nav class="toc" id="toc" aria-label="Sections"></nav>
+  <main id="main" style="display:grid;gap:28px"></main>
+
+  <section class="plain" id="fallback" hidden>
+    <h3>Answers not saved online</h3>
+    <p class="note">This view cannot save to the shared store. Your answers stay in this browser; copy them and paste them into the chat.</p>
+    <div><button class="copy" id="copy" type="button">Copy answers</button> <span class="note" id="copied"></span></div>
+  </section>
+</div>
+
+<script>
+// --- The questions -----------------------------------------------------------
+const FUN = ["Dull", "Meh", "OK", "Fun", "Love it"];
+const DIFF = ["Trivial", "Easy", "Fair", "Tricky", "Too hard"];
+const MORE = ["Less", "Same", "More"];
+
+const GROUPS = [
+  { id: "find", title: "Finding things", intro: "Clues you have to spot before you can use them.", items: [
+    ["find_hidden", "Hidden in plain sight", "A number painted small on the back of a chair you passed five times.", "eye"],
+    ["find_tiny", "A tiny detail", "One picture frame of six has a small scratch; that one opens.", "magnifier"],
+    ["find_container", "Search inside things", "Pockets, drawers, a vase, the lining of a hat.", "drawer"],
+    ["find_moment", "Only visible at a moment", "A pattern appears on the wall only while the lamp is on.", "lamp"],
+    ["decoy", "A decoy", "Two nearly identical notes; only a detail you have to notice tells the real one.", "twins"],
+  ]},
+  { id: "read", title: "Reading", intro: "Clues in words: letters, logs, newspapers, verses.", items: [
+    ["read_letter", "A letter that points somewhere", "A diary entry says where the spare key was hidden.", "letter"],
+    ["read_log", "Times in a log", "A guest book with arrival times; work out who came last.", "clock"],
+    ["read_numbers", "Numbers hidden in a text", "A recipe: 2 eggs, 5 spoons of sugar, 1 cup of milk gives 251.", "list"],
+    ["read_riddle", "A riddle or a poem", "\"I have keys but open no door\" points to the piano.", "quill"],
+    ["read_witness", "Statements where someone lies", "Three people say where they were; two agree with a timetable, one does not.", "people"],
+    ["read_rules", "Rules or instructions", "A sign on the wall explains how a machine must be set.", "sign"],
+    ["read_backwards", "Text mirrored or backwards", "A message only reads right in a mirror.", "mirrortext"],
+  ]},
+  { id: "code", title: "Codes and locks", intro: "Turning what you found into the right numbers.", items: [
+    ["code_direct", "A number straight into a lock", "The note says 4711; the lock has four wheels.", "lock"],
+    ["code_combine", "Two sources make one code", "A list of names and a list of house numbers: match them.", "join"],
+    ["code_count", "Count things", "How many candles are lit in the painting?", "count"],
+    ["code_math", "A little arithmetic", "The train leaves at 9:40 and takes 25 minutes: 10:05.", "plus"],
+    ["code_map", "A mapping", "Colours on a chart stand for digits.", "palette"],
+    ["code_order", "The right order", "Press four tiles in the order the story names them.", "steps"],
+  ]},
+  { id: "mech", title: "Mechanisms", intro: "Things you move, turn, tilt or connect.", items: [
+    ["mech_slide", "Sliding blocks", "Push crates around a grid to free the red one.", "slide"],
+    ["mech_rotate", "Rotate and align", "Turn rings until the pattern lines up.", "rings"],
+    ["mech_tilt", "A tilt maze", "Tilt a board so a marble rolls to the hole.", "tilt"],
+    ["mech_pour", "Pouring and balancing", "Measure exactly 4 litres with a 3 and a 5 litre jug.", "jugs"],
+    ["mech_switch", "Switches with feedback", "Flip switches; a lamp shows when the combination is right.", "switches"],
+    ["mech_path", "Thread a path", "Lead a rope over and under pulleys as a diagram shows.", "path"],
+    ["mech_assemble", "Assemble pieces", "Put a torn photo back together.", "pieces"],
+  ]},
+  { id: "sense", title: "Light and sound", intro: "Seeing or hearing in a special way.", items: [
+    ["sense_light", "A special light reveals", "A UV torch shows writing on the wallpaper.", "torch"],
+    ["sense_mirror", "Reflections", "A mirror shows the clock behind you, reversed.", "reflect"],
+    ["sense_music", "Play a melody", "Play the tune from a music box on a piano.", "notes"],
+    ["sense_listen", "Listen for a clue", "A radio broadcast mentions a time (always with a written twin, so it works muted).", "wave"],
+  ]},
+  { id: "space", title: "Space and views", intro: "How the room's views and rooms relate to each other.", items: [
+    ["space_split", "One clue split over two views", "Half a map on each wall.", "split"],
+    ["space_look", "Look from one room into another", "Through a window you see what lies on the table next door.", "window"],
+    ["space_remote", "Change here, see there", "A switch in the hall lights a lamp in the kitchen.", "remote"],
+    ["space_layout", "How the rooms lie", "From the balcony, the house across the street is seen from the other side.", "plan"],
+  ]},
+  { id: "people", title: "People and logic", intro: "Talking and reasoning.", items: [
+    ["talk", "A conversation with choices", "Answer a porter's questions correctly to be let in.", "speech"],
+    ["logic_grid", "A logic grid", "Five guests, five rooms, five clues: who slept where?", "grid"],
+  ]},
+  { id: "items", title: "Using items", intro: "Taking things and using them on others.", items: [
+    ["item_use", "Obvious item, obvious place", "A key for the only keyhole.", "key"],
+    ["item_combine", "Combine two items", "Tie a magnet to a string.", "combine"],
+    ["item_clever", "An unexpected use", "Use a magnet on a string to fish a key out of a drain.", "spark"],
+  ]},
+];
+
+const COMBOS = [
+  ["combo_decoy_twist", "A decoy that only a twist exposes", "Of two maps, the one that looks wrong is right, because it is drawn from the other side.", "twins"],
+  ["combo_text_mech", "A text explains a mechanism", "A manual page tells how the dials of a machine must stand.", "sign"],
+  ["combo_chain", "A long chain", "Four or more steps where each answer opens the next clue.", "steps"],
+  ["combo_parallel", "Several puzzles open at once", "Two or three things to work on in parallel, rather than one strict line.", "split"],
+  ["combo_reuse", "A tool used again later", "A decoder wheel needed for three different locks.", "rings"],
+  ["combo_early_late", "Seen early, needed late", "A detail in the first view only matters at the very end.", "clock"],
+  ["combo_story_clue", "A story note that is also a clue", "A sentimental letter turns out to hold a number.", "letter"],
+  ["combo_flavour", "Atmosphere that leads nowhere", "Objects you can tap that only tell the story.", "eye"],
+  ["combo_cross_room", "A puzzle that needs two rooms", "Set something in one room, read the result in the other.", "remote"],
+  ["combo_trial", "Trying is the way", "A mechanism with clear feedback, where experimenting solves it.", "switches"],
+  ["combo_precise", "Planning, or it resets", "One wrong move and you start the mechanism over.", "tilt"],
+  ["combo_finale", "A finale that uses the whole room", "The last lock needs answers gathered all over the room.", "lock"],
+];
+
+const ROOMS = ["Hut 2847", "Gale Rock Light", "Col Sidereal", "The Orangery", "Curtain Call", "The Grandmaster's Study",
+  "Low Tide", "Night Train", "The Alchemist's Cellar", "The Attic", "The Watchmaker", "The Night Gallery",
+  "Lookout", "Gondola 12", "Praline Works", "Tinker & Sons", "Graf Alpina", "Albatross", "Base 70° South",
+  "The Quiet House · 1905", "The Quiet House · 1938", "The Quiet House · 1969", "The Quiet House · Today",
+  "The Night Edition", "The Great Vaudini", "Rain on Gale Street"];
+const ROOM_IDS = ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum",
+  "tree", "gondola", "praline", "toyshop", "zeppelin", "ship", "polar", "house1905", "house1938", "house1969", "housenow",
+  "press", "magic", "noir"];
+
+const GENERAL = [
+  ["players", "How do you usually play?", ["Alone", "As a couple", "Three or more"]],
+  ["len_easy", "Ideal length of an easy room", ["Under 5 min", "5–10 min", "10–15 min", "Longer"]],
+  ["len_medium", "Ideal length of a medium room", ["Under 10 min", "10–20 min", "20–30 min", "Longer"]],
+  ["len_hard", "Ideal length of a hard room", ["Under 20 min", "20–30 min", "30–45 min", "Longer"]],
+  ["hints", "Hints", ["We'd rather struggle", "Fine after a few minutes stuck", "Early, we want to keep moving"]],
+  ["story", "How much does the story matter?", ["Not at all", "A little", "Somewhat", "A lot", "It's half the fun"]],
+  ["text", "Amount of reading", ["Less", "As now", "More"]],
+  ["flow", "Room structure", ["Strictly one thing after another", "A bit of both", "Many open threads at once"]],
+];
+const FRUSTRATIONS = ["Searching for tiny spots to tap", "Not knowing what can be tapped", "Too much reading", "Guessing codes",
+  "Arithmetic", "Turning dials many times", "Not knowing whether something worked", "Walking back and forth between views",
+  "Decoys that feel unfair", "Puzzles that need outside knowledge", "Long mechanisms that reset"];
+
+// --- Pictures (simple line drawings, viewBox 120x80) -------------------------
+const A = "var(--brass)";
+const S = 'fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"';
+const PICS = {
+  eye: `<path ${S} d="M14 40 Q60 6 106 40 Q60 74 14 40Z"/><circle cx="60" cy="40" r="12" fill="${A}"/>`,
+  magnifier: `<rect ${S} x="14" y="14" width="34" height="26"/><rect ${S} x="54" y="14" width="34" height="26"/><circle ${S} cx="74" cy="48" r="16"/><path ${S} d="M86 60 L104 74"/><path stroke="${A}" stroke-width="3" d="M66 22 L72 30"/>`,
+  drawer: `<rect ${S} x="20" y="14" width="80" height="54"/><path ${S} d="M20 41 H100"/><rect x="50" y="24" width="20" height="5" fill="${A}"/><path ${S} d="M28 52 L44 60 L60 52"/>`,
+  lamp: `<path ${S} d="M40 14 H80 L90 36 H30Z"/><path ${S} d="M60 36 V70"/><path d="M30 36 L10 78 H110 L90 36Z" fill="${A}" opacity=".3"/><path stroke="${A}" stroke-width="3" fill="none" d="M52 62 h16 M56 70 h8"/>`,
+  twins: `<rect ${S} x="16" y="16" width="38" height="50" rx="3"/><rect ${S} x="66" y="16" width="38" height="50" rx="3"/><path ${S} d="M24 30h22M24 40h22M74 30h22M74 40h22"/><circle cx="96" cy="58" r="3" fill="${A}"/>`,
+  letter: `<rect ${S} x="22" y="10" width="76" height="60"/><path ${S} d="M32 24h56M32 34h56M32 44h40"/><path stroke="${A}" stroke-width="3" fill="none" d="M74 56 q8 -8 16 0"/>`,
+  clock: `<circle ${S} cx="60" cy="40" r="28"/><path ${S} d="M60 40 V22 M60 40 L74 48"/><circle cx="60" cy="40" r="4" fill="${A}"/>`,
+  list: `<path ${S} d="M26 18h68M26 34h68M26 50h68M26 66h40"/><text x="100" y="24" font-size="14" fill="${A}" font-family="Inter">2</text><text x="100" y="40" font-size="14" fill="${A}" font-family="Inter">5</text><text x="100" y="56" font-size="14" fill="${A}" font-family="Inter">1</text>`,
+  quill: `<path ${S} d="M90 10 Q60 30 40 64 L34 72"/><path ${S} d="M90 10 Q86 42 46 60"/><path stroke="${A}" stroke-width="3" fill="none" d="M20 74 q10 -6 20 0 q10 6 20 0"/>`,
+  people: `<circle ${S} cx="30" cy="28" r="9"/><circle ${S} cx="60" cy="28" r="9"/><circle cx="90" cy="28" r="9" fill="${A}"/><path ${S} d="M16 66 q14 -24 28 0 M46 66 q14 -24 28 0 M76 66 q14 -24 28 0"/>`,
+  sign: `<rect ${S} x="18" y="12" width="84" height="44"/><path ${S} d="M60 56 V72"/><path ${S} d="M28 26h40M28 38h56"/><circle cx="88" cy="26" r="5" fill="${A}"/>`,
+  mirrortext: `<path ${S} d="M60 8 V72"/><text x="16" y="48" font-size="22" font-family="Inter" fill="currentColor">AB</text><text x="0" y="0" font-size="22" font-family="Inter" fill="${A}" transform="translate(104 48) scale(-1 1)">AB</text>`,
+  lock: `<rect ${S} x="30" y="34" width="60" height="38" rx="6"/><path ${S} d="M42 34 V24 a18 18 0 0 1 36 0 V34"/><text x="40" y="60" font-size="16" fill="${A}" font-family="Inter">4711</text>`,
+  join: `<path ${S} d="M16 20h30M16 40h30M16 60h30M74 20h30M74 40h30M74 60h30"/><path stroke="${A}" stroke-width="3" fill="none" d="M48 20 L72 60 M48 60 L72 20"/>`,
+  count: `<path ${S} d="M24 70 V40 M44 70 V40 M64 70 V40 M84 70 V40"/><path fill="${A}" d="M24 30 q-5 6 0 10 q5 -4 0 -10Z M44 30 q-5 6 0 10 q5 -4 0 -10Z M64 30 q-5 6 0 10 q5 -4 0 -10Z"/>`,
+  plus: `<text x="12" y="50" font-size="20" font-family="Inter" fill="currentColor">9:40</text><text x="58" y="50" font-size="20" font-family="Inter" fill="${A}">+25</text>`,
+  palette: `<circle cx="30" cy="30" r="10" fill="#c8463a"/><circle cx="60" cy="30" r="10" fill="#3a7ac8"/><circle cx="90" cy="30" r="10" fill="#d8b22a"/><text x="26" y="66" font-size="16" fill="currentColor" font-family="Inter">3</text><text x="56" y="66" font-size="16" fill="currentColor" font-family="Inter">8</text><text x="86" y="66" font-size="16" fill="currentColor" font-family="Inter">1</text>`,
+  steps: `<rect ${S} x="10" y="30" width="20" height="20"/><rect ${S} x="38" y="30" width="20" height="20"/><rect ${S} x="66" y="30" width="20" height="20"/><rect x="94" y="30" width="20" height="20" fill="${A}"/><path ${S} d="M30 40h8M58 40h8M86 40h8"/>`,
+  slide: `<rect ${S} x="20" y="10" width="80" height="60"/><rect ${S} x="24" y="14" width="34" height="16"/><rect ${S} x="62" y="34" width="16" height="32"/><rect x="24" y="36" width="34" height="16" fill="${A}"/>`,
+  rings: `<circle ${S} cx="60" cy="40" r="30"/><circle ${S} cx="60" cy="40" r="18"/><path stroke="${A}" stroke-width="4" d="M60 10 V22 M60 58 V70"/>`,
+  tilt: `<path ${S} d="M12 52 L108 30"/><path ${S} d="M60 42 V70"/><circle cx="34" cy="40" r="7" fill="${A}"/>`,
+  jugs: `<path ${S} d="M22 20 h24 v50 h-24z"/><path ${S} d="M64 32 h34 v38 h-34z"/><rect x="66" y="50" width="30" height="18" fill="${A}" opacity=".7"/>`,
+  switches: `<rect ${S} x="14" y="40" width="16" height="30"/><rect ${S} x="38" y="40" width="16" height="30"/><rect ${S} x="62" y="40" width="16" height="30"/><path ${S} d="M22 52 v-8 M46 66 v-8 M70 52 v-8"/><circle cx="98" cy="30" r="12" fill="${A}"/>`,
+  path: `<circle ${S} cx="24" cy="40" r="9"/><circle ${S} cx="60" cy="40" r="9"/><circle ${S} cx="96" cy="40" r="9"/><path stroke="${A}" stroke-width="3" fill="none" d="M6 40 Q24 20 42 40 Q60 60 78 40 Q96 20 114 40"/>`,
+  pieces: `<path ${S} d="M16 14 h40 l-8 26 l8 26 h-40z"/><path ${S} d="M64 14 h40 v52 h-40 l8 -26z"/><circle cx="38" cy="38" r="6" fill="${A}"/>`,
+  torch: `<rect ${S} x="10" y="34" width="34" height="14" rx="3"/><path d="M44 30 L110 10 V74 L44 52Z" fill="${A}" opacity=".35"/><path stroke="${A}" stroke-width="3" fill="none" d="M76 36 h20 M76 46 h14"/>`,
+  reflect: `<rect ${S} x="54" y="8" width="12" height="64"/><circle ${S} cx="28" cy="40" r="14"/><path ${S} d="M28 40 V30 M28 40 L36 44"/><circle cx="92" cy="40" r="14" fill="none" stroke="${A}" stroke-width="3"/><path stroke="${A}" stroke-width="3" d="M92 40 V30 M92 40 L84 44"/>`,
+  notes: `<path ${S} d="M10 20h100M10 34h100M10 48h100M10 62h100"/><circle cx="30" cy="48" r="6" fill="${A}"/><circle cx="56" cy="34" r="6" fill="${A}"/><circle cx="82" cy="41" r="6" fill="${A}"/>`,
+  wave: `<path ${S} d="M8 40 q8 -26 16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0"/><rect x="40" y="60" width="40" height="6" fill="${A}"/>`,
+  split: `<rect ${S} x="10" y="14" width="46" height="52"/><rect ${S} x="64" y="14" width="46" height="52"/><path stroke="${A}" stroke-width="3" fill="none" d="M22 50 L56 30 M64 30 L98 20"/>`,
+  window: `<rect ${S} x="14" y="12" width="48" height="56"/><path ${S} d="M38 12 V68 M14 40 H62"/><rect x="76" y="44" width="30" height="10" fill="${A}"/><path ${S} d="M70 58 H112"/>`,
+  remote: `<rect ${S} x="12" y="40" width="20" height="30"/><path ${S} d="M22 54 v-8"/><path stroke="${A}" stroke-width="2" stroke-dasharray="5 4" fill="none" d="M34 50 Q60 20 84 30"/><circle cx="94" cy="32" r="12" fill="${A}"/>`,
+  plan: `<rect ${S} x="12" y="12" width="96" height="56"/><path ${S} d="M52 12 V68 M12 40 H52"/><rect x="66" y="22" width="12" height="12" fill="${A}"/>`,
+  speech: `<path ${S} d="M14 16 h60 v30 h-40 l-12 12 v-12 h-8z"/><path stroke="${A}" stroke-width="3" fill="none" d="M60 54 h46 v16 h-46z"/>`,
+  grid: `<path ${S} d="M20 10 V70 M40 10 V70 M60 10 V70 M80 10 V70 M100 10 V70 M20 10 H100 M20 30 H100 M20 50 H100 M20 70 H100"/><path stroke="${A}" stroke-width="3" d="M44 16 L56 26 M56 16 L44 26"/><circle cx="70" cy="60" r="5" fill="${A}"/>`,
+  key: `<circle ${S} cx="30" cy="40" r="12"/><path ${S} d="M42 40 H96 M84 40 V52 M94 40 V50"/><circle cx="30" cy="40" r="4" fill="${A}"/>`,
+  combine: `<circle ${S} cx="26" cy="40" r="12"/><path ${S} d="M38 40 Q60 20 82 40"/><rect x="82" y="30" width="22" height="20" fill="${A}"/>`,
+  spark: `<path ${S} d="M60 8 L68 32 L92 40 L68 48 L60 72 L52 48 L28 40 L52 32Z"/><circle cx="60" cy="40" r="6" fill="${A}"/>`,
+};
+const pic = (k) => `<svg viewBox="0 0 120 80" role="img" aria-hidden="true">${PICS[k] || PICS.spark}</svg>`;
+
+// --- State and saving ----------------------------------------------------------
+let answers = {};
+let db = null, ref = null, saveTimer = null, saving = false, dirty = false;
+const LS = "locked-in-survey";
+const statusEl = document.getElementById("status");
+function lsRead() { try { return JSON.parse(localStorage.getItem(LS) || "{}"); } catch (e) { return {}; } }
+function lsWrite() { try { localStorage.setItem(LS, JSON.stringify(answers)); } catch (e) {} }
+
+function setAnswer(key, value) {
+  if (value === "" || value === null) delete answers[key]; else answers[key] = value;
+  lsWrite(); progress(); queueSave();
+}
+function queueSave() {
+  dirty = true;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(flush, 1200);
+  statusEl.textContent = "Saving…";
+}
+async function flush() {
+  if (!ref) { statusEl.textContent = "Saved in this browser only"; return; }
+  if (saving) { saveTimer = setTimeout(flush, 600); return; }
+  saving = true; dirty = false;
+  try {
+    await ref.set({ ...answers, _updated: new Date().toISOString() });
+    statusEl.textContent = "All answers saved";
+  } catch (e) {
+    statusEl.textContent = "Could not save (" + (e && e.code || "error") + "); answers kept in this browser";
+    document.getElementById("fallback").hidden = false;
+  } finally { saving = false; if (dirty) queueSave(); }
+}
+
+// --- Rendering -------------------------------------------------------------------
+function scale(key, label, options) {
+  const wrap = document.createElement("div"); wrap.className = "scale";
+  const lab = document.createElement("span"); lab.className = "lab"; lab.textContent = label; wrap.appendChild(lab);
+  const opts = document.createElement("div"); opts.className = "opts"; opts.setAttribute("role", "group"); opts.setAttribute("aria-label", label);
+  options.forEach((o, i) => {
+    const b = document.createElement("button"); b.type = "button"; b.textContent = o; b.dataset.key = key; b.dataset.val = String(i + 1);
+    b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", () => {
+      const now = answers[key] === i + 1 ? "" : i + 1;
+      setAnswer(key, now); paintScale(opts, key);
+    });
+    opts.appendChild(b);
+  });
+  wrap.appendChild(opts); paintScale(opts, key);
+  return wrap;
+}
+function paintScale(opts, key) {
+  opts.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(answers[key] === Number(b.dataset.val))));
+}
+function note(key, placeholder) {
+  const t = document.createElement("textarea"); t.id = "t_" + key; t.placeholder = placeholder; t.value = answers[key] || "";
+  t.addEventListener("input", () => setAnswer(key, t.value.trim()));
+  return t;
+}
+function elementCard(id, name, eg, picKey, withMore) {
+  const c = document.createElement("article"); c.className = "card";
+  c.innerHTML = `<div class="pic">${pic(picKey)}</div>`;
+  const t = document.createElement("div"); t.className = "txt";
+  const h = document.createElement("h3"); h.textContent = name; t.appendChild(h);
+  const p = document.createElement("p"); p.className = "eg"; p.textContent = "For example: " + eg; t.appendChild(p);
+  const s = document.createElement("div"); s.className = "scales";
+  s.appendChild(scale(id + ".fun", "Fun", FUN));
+  s.appendChild(scale(id + ".diff", "Difficulty", DIFF));
+  if (withMore) s.appendChild(scale(id + ".more", "In rooms", MORE));
+  t.appendChild(s);
+  t.appendChild(note(id + ".note", "Anything else? (optional)"));
+  c.appendChild(t);
+  return c;
+}
+function section(id, title, intro) {
+  const s = document.createElement("section"); s.id = id;
+  s.innerHTML = `<div class="sechead"><h2></h2><p class="lead"></p></div>`;
+  s.querySelector("h2").textContent = title; s.querySelector("p").textContent = intro;
+  const a = document.createElement("a"); a.href = "#" + id; a.textContent = title; document.getElementById("toc").appendChild(a);
+  document.getElementById("main").appendChild(s);
+  return s;
+}
+
+function render() {
+  const main = document.getElementById("main"); main.innerHTML = ""; document.getElementById("toc").innerHTML = "";
+  const gen = section("general", "How you play", "A few questions about your taste in general.");
+  const box = document.createElement("div"); box.className = "plain";
+  GENERAL.forEach(([k, q, o]) => box.appendChild(scale("general." + k, q.length > 12 ? "" : q, o)));
+  box.querySelectorAll(".scale").forEach((el, i) => { el.querySelector(".lab").textContent = GENERAL[i][1]; el.querySelector(".lab").style.width = "100%"; el.querySelector(".lab").style.textTransform = "none"; el.querySelector(".lab").style.letterSpacing = "0"; el.querySelector(".lab").style.fontSize = "14px"; el.querySelector(".lab").style.color = "var(--ink)"; });
+  const fh = document.createElement("h3"); fh.textContent = "What frustrates you? (pick any)"; box.appendChild(fh);
+  const fr = document.createElement("div"); fr.className = "scale"; const fo = document.createElement("div"); fo.className = "opts";
+  FRUSTRATIONS.forEach((f, i) => {
+    const key = "general.frustration." + (i + 1);
+    const b = document.createElement("button"); b.type = "button"; b.textContent = f; b.setAttribute("aria-pressed", String(!!answers[key]));
+    b.addEventListener("click", () => { setAnswer(key, answers[key] ? "" : 1); b.setAttribute("aria-pressed", String(!!answers[key])); });
+    fo.appendChild(b);
+  });
+  fr.appendChild(fo); box.appendChild(fr);
+  const mh = document.createElement("h3"); mh.textContent = "What makes a room memorable for you?"; box.appendChild(mh);
+  box.appendChild(note("general.memorable", "A moment, a mechanism, a story…"));
+  gen.appendChild(box);
+
+  GROUPS.forEach((g) => {
+    const s = section(g.id, g.title, g.intro);
+    g.items.forEach(([id, name, eg, p]) => s.appendChild(elementCard("el." + id, name, eg, p, true)));
+  });
+
+  const cs = section("combos", "Combinations", "How things feel when they come together.");
+  COMBOS.forEach(([id, name, eg, p]) => cs.appendChild(elementCard("co." + id, name, eg, p, true)));
+
+  const rs = section("rooms", "Rooms you have played", "Only the rooms' names; tick the ones you have played and say how they felt.");
+  const list = document.createElement("div"); list.className = "rooms";
+  ROOMS.forEach((name, i) => {
+    const id = ROOM_IDS[i];
+    const r = document.createElement("div"); r.className = "room"; r.dataset.played = answers["room." + id + ".played"] ? "yes" : "no";
+    const row = document.createElement("div"); row.className = "row";
+    const h = document.createElement("h3"); h.textContent = name; row.appendChild(h);
+    const b = document.createElement("button"); b.type = "button"; b.className = "copy";
+    const paint = () => { const on = !!answers["room." + id + ".played"]; b.textContent = on ? "Played" : "Not played yet"; b.setAttribute("aria-pressed", String(on)); r.dataset.played = on ? "yes" : "no"; };
+    b.addEventListener("click", () => { setAnswer("room." + id + ".played", answers["room." + id + ".played"] ? "" : 1); paint(); });
+    paint(); row.appendChild(b); r.appendChild(row);
+    const q = document.createElement("div"); q.className = "roomq scales";
+    q.appendChild(scale("room." + id + ".fun", "Fun", FUN));
+    q.appendChild(scale("room." + id + ".diff", "Difficulty", DIFF));
+    q.appendChild(scale("room." + id + ".length", "Length", ["Too short", "Right", "Too long"]));
+    q.appendChild(note("room." + id + ".best", "Best moment (optional)"));
+    q.appendChild(note("room." + id + ".worst", "What was unclear or annoying (optional)"));
+    r.appendChild(q); list.appendChild(r);
+  });
+  rs.appendChild(list);
+  progress();
+}
+
+function progress() {
+  const scaleKeys = document.querySelectorAll(".scale button[data-key]");
+  const keys = new Set(); scaleKeys.forEach((b) => keys.add(b.dataset.key));
+  let done = 0; keys.forEach((k) => { if (answers[k] !== undefined) done++; });
+  const pct = keys.size ? Math.round(100 * done / keys.size) : 0;
+  document.getElementById("meter").style.width = pct + "%";
+  if (!saveTimer) statusEl.textContent = `${done} of ${keys.size} ratings`;
+}
+
+document.getElementById("copy").addEventListener("click", async () => {
+  const text = JSON.stringify(answers);
+  try { await navigator.clipboard.writeText(text); document.getElementById("copied").textContent = "Copied"; }
+  catch (e) { document.getElementById("copied").textContent = "Copy did not work here; select the text below."; const pre = document.createElement("pre"); pre.textContent = text; pre.style.whiteSpace = "pre-wrap"; document.getElementById("fallback").appendChild(pre); }
+});
+
+// --- Start -----------------------------------------------------------------------
+answers = lsRead();
+render();
+(async () => {
+  try { db = window.claude && window.claude.use ? await window.claude.use("db") : null; } catch (e) { db = null; }
+  if (!db) { document.getElementById("fallback").hidden = false; statusEl.textContent = "Saved in this browser only"; return; }
+  ref = db.doc("survey/answers");
+  const timer = setTimeout(() => { statusEl.textContent = "Saved answers can't be reached yet; new answers are kept here"; }, 10000);
+  try {
+    const snap = await ref.get();
+    clearTimeout(timer);
+    if (snap.exists) {
+      const stored = { ...snap.data() }; delete stored._updated;
+      answers = { ...stored, ...answers };
+      render();
+      if (Object.keys(lsRead()).length > Object.keys(stored).length) queueSave();
+    }
+    statusEl.textContent = "Answers save automatically";
+  } catch (e) { clearTimeout(timer); statusEl.textContent = "Saved answers can't be reached; new answers are kept here"; }
+})();
+</script>
