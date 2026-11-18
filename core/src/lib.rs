@@ -27,6 +27,11 @@ pub mod attic;
 pub mod beach;
 pub mod chess;
 pub mod gondola;
+pub mod house;
+pub mod house1905;
+pub mod house1938;
+pub mod house1969;
+pub mod housenow;
 pub mod hut;
 pub mod kit;
 pub mod light;
@@ -51,7 +56,7 @@ pub mod zeppelin;
 /// deduction (one twist), X hard deduction (a longer chain or grid).
 /// The difficulty shown follows from the kinds ([`difficulty`]); the time
 /// is separate (`tools/estimate.py` estimates it from the kinds).
-pub const ROOMS: [(&str, &str, u32); 19] = [
+pub const ROOMS: [(&str, &str, u32); 23] = [
     ("hut", "ACABCDDBB", hut::PAR_MINUTES),
     ("light", "ACCBFMDEDA", light::PAR_MINUTES),
     ("obs", "CCMEEDXCAC", obs::PAR_MINUTES),
@@ -71,6 +76,10 @@ pub const ROOMS: [(&str, &str, u32); 19] = [
     ("zeppelin", "FFEMF", zeppelin::PAR_MINUTES),
     ("ship", "FDMEA", ship::PAR_MINUTES),
     ("polar", "XFMABE", polar::PAR_MINUTES),
+    ("house1905", "FADAFA", house1905::PAR_MINUTES),
+    ("house1938", "FCDEA", house1938::PAR_MINUTES),
+    ("house1969", "FDCEC", house1969::PAR_MINUTES),
+    ("housenow", "FEDXEB", housenow::PAR_MINUTES),
 ];
 
 /// 1 easy, 2 medium, 3 hard: how hard the thinking is, not how long it
@@ -241,6 +250,10 @@ impl Room {
                     Some("zeppelin") => *self = Room::Kit(kit::State::new(&zeppelin::SPEC)),
                     Some("ship") => *self = Room::Kit(kit::State::new(&ship::SPEC)),
                     Some("polar") => *self = Room::Kit(kit::State::new(&polar::SPEC)),
+                    Some("house1905") => *self = Room::Kit(kit::State::new(&house1905::SPEC)),
+                    Some("house1938") => *self = Room::Kit(kit::State::new(&house1938::SPEC)),
+                    Some("house1969") => *self = Room::Kit(kit::State::new(&house1969::SPEC)),
+                    Some("housenow") => *self = Room::Kit(kit::State::new(&housenow::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -285,6 +298,10 @@ mod tests {
             (&zeppelin::SPEC, ROOMS[16].1),
             (&ship::SPEC, ROOMS[17].1),
             (&polar::SPEC, ROOMS[18].1),
+            (&house1905::SPEC, ROOMS[19].1),
+            (&house1938::SPEC, ROOMS[20].1),
+            (&house1969::SPEC, ROOMS[21].1),
+            (&housenow::SPEC, ROOMS[22].1),
         ] {
             assert_eq!(spec.puzzles.len(), kinds.len(), "{}", spec.id);
         }
@@ -295,8 +312,26 @@ mod tests {
         assert!(r.call("tap coat").starts_with("{\"ok\":false"));
         assert!(r.call("room obs").contains("\"room\":\"obs\""));
         for id in [
-            "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum", "tree",
-            "gondola", "praline", "toyshop", "zeppelin", "ship", "polar",
+            "orangery",
+            "theatre",
+            "chess",
+            "beach",
+            "train",
+            "alch",
+            "attic",
+            "watch",
+            "museum",
+            "tree",
+            "gondola",
+            "praline",
+            "toyshop",
+            "zeppelin",
+            "ship",
+            "polar",
+            "house1905",
+            "house1938",
+            "house1969",
+            "housenow",
         ] {
             assert!(r
                 .call(&format!("room {id}"))
@@ -410,6 +445,35 @@ mod tests {
                     vec!["crate reset".into()],
                 ]
                 .concat(),
+                vec![],
+                vec![],
+            ),
+            (
+                &house1905::SPEC,
+                [digits("key", 8), vec!["listen box".into()]].concat(),
+                vec![],
+                vec![],
+            ),
+            (
+                &house1938::SPEC,
+                [digits("panel", 6), digits("say", 3), vec!["call".into()]].concat(),
+                vec![],
+                vec![],
+            ),
+            (
+                &house1969::SPEC,
+                [
+                    digits("key", 8),
+                    digits("say", 3),
+                    vec!["call".into(), "listen box".into(), "listen record".into()],
+                ]
+                .concat(),
+                vec![],
+                vec![],
+            ),
+            (
+                &housenow::SPEC,
+                [digits("key", 8), digits("say", 3), vec!["call".into()]].concat(),
                 vec![],
                 vec![],
             ),
