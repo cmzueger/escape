@@ -4,6 +4,7 @@ noise and tones, so they belong to the project. Run it after changing a
 sound; it rewrites client/audio/*.ogg.
 
     python3 client/audio/generate.py      # needs numpy and ffmpeg
+    python3 client/audio/generate.py note0 note1   # only these
 
 Atmospheres (amb_*) are seamless mono loops: their noise is shaped in the
 frequency domain and every modulation has whole cycles in the loop.
@@ -206,6 +207,26 @@ SOUNDS = {
     "cuckoo": (lambda: place(1.0, [(0, tone(988, 0.3, 0.02, 0.2, (1, 0.3))), (0.38, tone(784, 0.5, 0.02, 0.3, (1, 0.3)))]), 0.6),
 }
 
+# The piano and the music box of The Quiet House: C major, C4 to C5.
+SCALE = [261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88, 523.25]
+
+
+def piano(freq):
+    return tone(freq, 1.2, 0.003, 0.45, (1.0, 0.45, 0.25, 0.12, 0.06))
+
+
+def music_box(freq):
+    return tone(freq * 2, 0.9, 0.001, 0.25, (1.0, 0.0, 0.35, 0.0, 0.15))
+
+
+for _k, _f in enumerate(SCALE):
+    SOUNDS["note%d" % _k] = (lambda f=_f: piano(f), 0.6)
+    SOUNDS["mbox%d" % _k] = (lambda f=_f: music_box(f), 0.45)
+
 if __name__ == "__main__":
+    import sys
+
+    wanted = sys.argv[1:]
     for name, (make, peak) in SOUNDS.items():
-        save(name, make(), peak)
+        if not wanted or name in wanted:
+            save(name, make(), peak)

@@ -89,15 +89,19 @@ function check(ok, what) {
   for (const [x, y, id, scroll] of [[173, 274, "orangery"], [475, 274, "theatre"], [777, 289, "chess"],
     [173, 408, "beach"], [475, 408, "train"], [777, 404, "alch"],
     [173, 381, "attic", 100], [475, 381, "watch", 100], [777, 377, "museum", 100],
-    [173, 193, "tree", 4000], [475, 193, "gondola", 4000], [777, 193, "praline", 4000],
-    [173, 312, "toyshop", 4000], [475, 312, "zeppelin", 4000], [777, 312, "ship", 4000], [475, 431, "polar", 4000]]) {
+    [173, 206, "tree", [4000, -100]], [475, 206, "gondola", [4000, -100]], [777, 206, "praline", [4000, -100]],
+    [173, 178, "toyshop", 4000], [475, 178, "zeppelin", 4000], [777, 178, "ship", 4000],
+    [173, 297, "polar", 4000], [475, 293, "house1905", 4000], [777, 293, "house1938", 4000],
+    [321, 412, "house1969", 4000], [623, 431, "housenow", 4000]]) {
     await page.reload();
     await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
     await page.waitForTimeout(500);
     if (scroll) {
       await page.mouse.move(480, 300);
-      await page.mouse.wheel(0, scroll);
-      await page.waitForTimeout(500);
+      for (const amount of [].concat(scroll)) {
+        await page.mouse.wheel(0, amount);
+        await page.waitForTimeout(500);
+      }
     }
     await tap(x, y);
     check((await page.evaluate(() => window.hut.room)) === id && (await state()).room === id, id + " starts");

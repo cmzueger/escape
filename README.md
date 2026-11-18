@@ -23,6 +23,10 @@ Escape rooms played in the browser. Offline, no accounts.
 | Graf Alpina | medium | 13 min | A zeppelin's chart room over the Alps at dusk, drifting off course. Five puzzles with a compass, a cipher and things hidden in plain sight. |
 | Albatross | medium | 10 min | A 1950s steamer's wheelhouse in a storm. Five puzzles with ballast tanks, coloured glass and two lighthouses. |
 | Base 70° South | hard | 19 min | A polar station in a white-out. Six puzzles: a logic grid, invisible ink and a store full of crates. |
+| The Quiet House · 1905 | easy | 5 min | Series, episode 1: the night the family's young pianist vanished. Six puzzles with a music box and a piano. |
+| The Quiet House · 1938 | medium | 8 min | Episode 2: the housekeeper before the house is sold. Five puzzles with a telephone and a fuse box. |
+| The Quiet House · 1969 | medium | 9 min | Episode 3: a student renting the old room. Five puzzles with a record player, opera glasses and the landlady. |
+| The Quiet House · Today | hard | 18 min | Episode 4: the heir renovating the house finds what was left behind. Six puzzles. |
 
 Play: https://cmzueger.github.io/escape/
 

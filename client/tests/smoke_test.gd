@@ -130,7 +130,7 @@ func _run() -> void:
 	print("Locked In smoke test")
 	for i in range(10):
 		await process_frame
-	check(main.mode == "title" and main.rooms.size() == 19, "the catalogue with nineteen rooms (mode %s)" % main.mode)
+	check(main.mode == "title" and main.rooms.size() == 23, "the catalogue with twenty-three rooms (mode %s)" % main.mode)
 	await shot("title")
 	main.start_new("hut")
 	await shot("intro")
@@ -288,6 +288,10 @@ func _run() -> void:
 	await _zeppelin()
 	await _ship()
 	await _polar()
+	await _house1905()
+	await _house1938()
+	await _house1969()
+	await _housenow()
 
 	check(main.errors.is_empty(), "no refused commands in the play-throughs %s" % [main.errors])
 	# The intro states the room's own target time.
@@ -315,7 +319,7 @@ func _run() -> void:
 	main._save()
 	main.continue_game("light")
 	check(main.view == "L1", "a saved view of another room is not restored (%s)" % main.view)
-	for id in ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum", "tree", "gondola", "praline", "toyshop", "zeppelin", "ship", "polar"]:
+	for id in ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum", "tree", "gondola", "praline", "toyshop", "zeppelin", "ship", "polar", "house1905", "house1938", "house1969", "housenow"]:
 		monkey(id, 1500)
 
 	# Every text exists in every language.
@@ -327,7 +331,8 @@ func _run() -> void:
 				"bhint.6.3", "bmsg.kite_down", "nhint.6.3", "nmsg.panel_open", "ahint.6.3", "amsg.gold", "item.brake",
 				"khint.6.3", "kmsg.trap_open", "whint.5.3", "wmsg.watch_runs", "mhint.6.3", "mmsg.door_open", "item.scarabkey", "mend.text",
 				"ehint.5.3", "qhint.6.3", "phint.6.3", "yhint.7.3", "item.okey", "yend.text",
-				"zhint.5.3", "shint.5.3", "rhint.6.3", "item.rfuse", "rend.text"]:
+				"zhint.5.3", "shint.5.3", "rhint.6.3", "item.rfuse", "rend.text",
+				"hhint.6.3", "jhint.5.3", "uhint.5.3", "xhint.6.3", "hstory.clara", "xstory.jost", "jsay.4a", "xsay.3a", "item.hammer", "xend.text"]:
 			if tr(key) == key:
 				missing.append(key)
 		check(missing.is_empty(), "texts in %s %s" % [lang, missing])
@@ -1557,4 +1562,182 @@ func _polar() -> void:
 	tap("airlock")
 	kit_dial("airlock", [4, 2, 3, 1])
 	await _finish("polar")
+	main._show_title()
+
+
+func keys(list: Array) -> void:
+	for k in list:
+		tap("key%d" % int(k))
+
+
+func say(list: Array) -> void:
+	tap("handset")
+	for c in list:
+		tap("say%d" % int(c))
+
+
+## The Quiet House · 1905.
+func _house1905() -> void:
+	main.start_new("house1905")
+	main._close_panel()
+	explore("start")
+	check(main.view == "H1", "1905 starts in the parlour")
+	await shot("H1")
+	main.go_view("H2")
+	await shot("H2")
+	tap("bed")
+	tap("pillow")
+	main.go_view("H2")
+	tap("desk")
+	use("hcrank", "musicbox")
+	await shot("hbox")
+	main.go_view("H1")
+	tap("piano")
+	keys([4, 2, 0, 2, 4])
+	check(flag("tune_ok"), "1905: the tune opens the piano")
+	await shot("hpiano")
+	tap("pianolid")
+	main.go_view("H2")
+	use("wkey", "wardrobe")
+	tap("wardrobe")
+	kit_dial("hat", [3, 7, 1])
+	check(flag("hat_open"), "1905: the hatbox opens")
+	tap("hatbox")
+	tap("note")
+	await shot("hnote")
+	main.go_view("H1")
+	use("hdoorkey", "door")
+	await _finish("house1905")
+	main._show_title()
+
+
+## The Quiet House · 1938.
+func _house1938() -> void:
+	main.start_new("house1938")
+	main._close_panel()
+	explore("start")
+	await shot("J1")
+	tap("stove")
+	tap("tile")
+	tap("note")
+	await shot("jnote")
+	main.go_view("J1")
+	tap("phone")
+	kit_dial("phone", [3, 8, 1, 5])
+	check(flag("dialled"), "1938: the call goes through")
+	say([1])
+	check(int(main.st["talk"][0]) == 0, "1938: a wrong answer ends the call")
+	say([0, 0])
+	await shot("jphone")
+	tap("say1")
+	check(flag("told"), "1938: Marie tells")
+	main.go_view("J1")
+	tap("fuses")
+	tap("fuse1")
+	tap("fuse2")
+	tap("fuse3")
+	check(flag("lamp_on"), "1938: the lamp is lit")
+	main.go_view("J2")
+	tap("window")
+	await shot("jcourt")
+	main.go_view("J1")
+	tap("panels")
+	tap("panel1")
+	main.go_view("J1")
+	use("jkey", "door")
+	await _finish("house1938")
+	main._show_title()
+
+
+## The Quiet House · 1969.
+func _house1969() -> void:
+	main.start_new("house1969")
+	main._close_panel()
+	explore("start")
+	await shot("U1")
+	tap("stove")
+	tap("tile")
+	tap("notes")
+	await shot("unotes")
+	main.go_view("U1")
+	tap("record")
+	tap("speed", 2)
+	tap("needle")
+	check(flag("heard"), "1969: the record plays")
+	await shot("urecord")
+	main.go_view("U1")
+	tap("box")
+	tap("box")
+	main.go_view("U1")
+	tap("piano")
+	keys([4, 2, 0, 2, 4, 5, 7, 4])
+	check(flag("tune_ok"), "1969: the whole tune")
+	tap("bench")
+	main.go_view("U2")
+	await shot("U2")
+	tap("window")
+	use("uglass", "court")
+	await shot("ucourt")
+	main.go_view("U2")
+	tap("desk")
+	kit_dial("drawer", [5, 2, 8])
+	check(flag("drawer_open"), "1969: the drawer opens")
+	tap("drawer")
+	main.go_view("U2")
+	tap("intercom")
+	use("handset", "intercom")
+	tap("intercom")
+	tap("say1")
+	tap("say2")
+	await shot("uintercom")
+	tap("say0")
+	tap("say0")
+	await _finish("house1969")
+	main._show_title()
+
+
+## The Quiet House · today.
+func _housenow() -> void:
+	main.start_new("housenow")
+	main._close_panel()
+	explore("start")
+	await shot("X1")
+	tap("stove")
+	tap("tile")
+	tap("notes")
+	await shot("xnotes")
+	main.go_view("X1")
+	tap("piano")
+	keys([4, 7, 5, 4, 2, 0, 2, 4])
+	check(flag("tune_ok"), "today: the tune backwards")
+	tap("pianolid")
+	main.go_view("X2")
+	await shot("X2")
+	use("xkey", "toolbox")
+	main.go_view("X1")
+	tap("stove")
+	tap("damper")
+	use("matches", "stove")
+	check(flag("fire"), "today: the stove burns")
+	main.go_view("X2")
+	tap("window")
+	await shot("xcourt")
+	main.go_view("X2")
+	tap("plan")
+	await shot("xplan")
+	main.go_view("X2")
+	tap("wall")
+	use("hammer", "wall3")
+	check(flag("niche_open"), "today: the niche")
+	main.go_view("X1")
+	tap("phone")
+	kit_dial("phone", [0, 1, 4, 2])
+	say([0, 1])
+	await shot("xphone")
+	tap("say0")
+	check(flag("told"), "today: the archive tells")
+	main.go_view("X2")
+	tap("wall")
+	kit_dial("box", [1, 8, 9, 3])
+	await _finish("housenow")
 	main._show_title()

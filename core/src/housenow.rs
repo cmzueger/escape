@@ -56,6 +56,15 @@ fn clues() -> String {
 }
 
 fn hook(s: &mut State, words: &[&str]) -> Option<Reply> {
+    if let ["tap", spot] = words {
+        if spot
+            .strip_prefix("wall")
+            .and_then(|i| i.parse::<usize>().ok())
+            .is_some_and(|i| i < WALLS)
+        {
+            return Some(Ok("xmsg.wall".into()));
+        }
+    }
     piano(s, words).or_else(|| talk(s, words, &LINES, "dialled", "x"))
 }
 

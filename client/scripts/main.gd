@@ -13,13 +13,16 @@ const TITLES := {
 	"attic": "The Attic", "watch": "The Watchmaker", "museum": "The Night Gallery",
 	"tree": "Lookout", "gondola": "Gondola 12", "praline": "Praline Works", "toyshop": "Tinker & Sons",
 	"zeppelin": "Graf Alpina", "ship": "Albatross", "polar": "Base 70° South",
+	"house1905": "The Quiet House · 1905", "house1938": "The Quiet House · 1938",
+	"house1969": "The Quiet House · 1969", "housenow": "The Quiet House · Today",
 }
 ## Texts of the lighthouse have their keys with an "l" in front, those of
 ## the observatory with an "o".
 const PREFIX := {"hut": "", "light": "l", "obs": "o", "orangery": "g", "theatre": "t", "chess": "c",
 	"beach": "b", "train": "n", "alch": "a", "attic": "k", "watch": "w", "museum": "m",
 	"tree": "e", "gondola": "q", "praline": "p", "toyshop": "y",
-	"zeppelin": "z", "ship": "s", "polar": "r"}
+	"zeppelin": "z", "ship": "s", "polar": "r",
+	"house1905": "h", "house1938": "j", "house1969": "u", "housenow": "x"}
 const SLOTS := 8
 const HINT_RECT := Rect2(800, 484, 136, 44)
 const MENU_RECT := Rect2(908, 8, 44, 44)
@@ -55,7 +58,7 @@ const WRONG := ["zmsg.no_use", "smsg.no_use", "rmsg.no_use", "zmsg.no_magnet", "
 	"mmsg.door_wrong", "mmsg.door_dead", "mmsg.scales_bare", "mmsg.dial_bare"]
 
 var link := RoomLink.new()
-var art := ArtSet6.new()
+var art := ArtHouse.new()
 var sound := Sound.new()
 var rooms: Array = []
 var room := "hut"
@@ -252,6 +255,11 @@ func _ambience() -> void:
 		levels["amb_sea"] = 0.55 + 0.15 * LightViews.FLOORS.find(floor_of)
 		if view == "L2":
 			levels["amb_fire"] = 0.25
+	elif mode != "load" and room.begins_with("house"):
+		levels["amb_tick"] = 0.35 if room == "house1905" else 0.2
+		levels["amb_wind"] = 0.12
+		if room == "housenow" and "fire" in st.get("flags", []):
+			levels["amb_fire"] = 0.4
 	elif mode != "load" and room == "zeppelin":
 		levels["amb_wind"] = 0.25
 		levels["amb_static"] = 0.03
@@ -552,6 +560,13 @@ func _apply(answer: Dictionary, command: String = "") -> void:
 	_refresh()
 
 
+## Plays notes one after another (sound names `<kind>0`..`<kind>7`).
+func _melody(notes: Array, kind: String) -> void:
+	for i in range(notes.size()):
+		var n := int(notes[i])
+		get_tree().create_timer(0.5 * i).timeout.connect(func() -> void: sound.play("%s%d" % [kind, n], 0.0, 0.0))
+
+
 func _sounds(before: Dictionary, msg: String, command: String) -> void:
 	var word := command.get_slice(" ", 0)
 	if st.get("done", false) and not before.get("done", false):
@@ -559,6 +574,14 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 			sound.play("match")
 		get_tree().create_timer(0.7).timeout.connect(func() -> void: sound.play("win"))
 		return
+	# The Quiet House: piano keys, and melodies played by a music box or a record.
+	if command.begins_with("key ") and command.get_slice(" ", 1).is_valid_int():
+		sound.play("note" + command.get_slice(" ", 1), 0.0, 0.0)
+		return
+	if msg.ends_with("box_plays"):
+		_melody(clues.get("box", []), "mbox")
+	elif msg.ends_with("record_plays"):
+		_melody(clues.get("record", []), "note")
 	if msg in WRONG:
 		sound.play("thud")
 	elif msg in UNLOCKS:

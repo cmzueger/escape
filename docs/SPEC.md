@@ -199,5 +199,10 @@ by the owner in three rounds:
   one clue spread across views, how the rooms lie relative to each other,
   multiple-choice interactions (talking to someone), looking from one view
   into another, changing something in one view that shows in another.
+Built as 0.9.0: four rooms on the house's two rooms per era (parlour and
+Clara's room); the piano, the tiled stove with its hidden notes and the
+courtyard recur in every era. Kinds and targets: 1905 FADAFA (easy, 5 min),
+1938 FCDEA (medium, 8 min), 1969 FDCEC (medium, 9 min), today FEDXEB (hard,
+18 min). Shared mechanisms in `core/src/house.rs` (piano, conversation).
 Not chosen: Grand Hotel Belvedere, The Missing Composer, Agency 13; the
 clockmaker's fortune, the inventor's machine; lakeside villa, mountain chalet.

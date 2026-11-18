@@ -16,7 +16,8 @@ medium), The Alchemist's Cellar (`alch`, hard); fourth set The Attic (`attic`,
 easy), The Watchmaker (`watch`, medium), The Night Gallery (`museum`, hard);
 fifth set (owner's choice) Lookout (`tree`), Gondola 12 (`gondola`), Praline
 Works (`praline`), Tinker & Sons (`toyshop`); sixth set (owner's choice) Graf
-Alpina (`zeppelin`), Albatross (`ship`), Base 70° South (`polar`).
+Alpina (`zeppelin`), Albatross (`ship`), Base 70° South (`polar`); the series
+The Quiet House (`house1905`, `house1938`, `house1969`, `housenow`).
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
   `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
@@ -95,6 +96,16 @@ Alpina (`zeppelin`), Albatross (`ship`), Base 70° South (`polar`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.9.0** (2026-11-18): the series The Quiet House, chosen by the owner in
+  three rounds (an old town house in 1905, 1938, 1969 and today; Clara, the
+  vanished pianist; the housekeepers' notes behind a stove tile link the
+  episodes). Rooms `house1905`, `house1938`, `house1969`, `housenow`; text
+  prefixes h, j, u, x (story notes `hstory.`, `jstory.` …); views H, J, U, X
+  (`views_house.gd`, `art_house.gd` extends ArtSet6). New in `house.rs`: a
+  piano (`key i`, the tune checked from the last keys played) and a
+  multiple-choice conversation (`call`, `say i`, a dial "talk" holds the
+  line; a wrong answer hangs up). Piano and music-box notes are sounds
+  `note0..7`, `mbox0..7` (`generate.py` takes names). Catalogue: 23 rooms.
 - **0.8.0** (2026-11-18): sixth set, chosen by the owner in two rounds:
   Graf Alpina (zeppelin; compass and magnets, a cipher rebuilt from a burnt
   page, clues in a photo and through binoculars), Albatross (ship; ballast
@@ -191,7 +202,7 @@ Alpina (`zeppelin`), Albatross (`ship`), Base 70° South (`polar`).
 - An Android build, a custom domain.
 - The owner's play test of the fifth set (built 0.7.0) and its targets.
 - The owner's play test of the sixth set (built 0.8.0) and its targets.
-- In progress: the series The Quiet House (four episodes), see SPEC.
+- The owner's play test of the series The Quiet House (built 0.9.0) and its targets.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, whether the scrolling catalogue is, and an
   opinion on the sounds, which were made without anyone hearing them.
