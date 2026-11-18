@@ -492,3 +492,86 @@ You renovate the house, the last of the family.
    **0142**): asked the right things, the archivist says Clara always used
    her birth year; the 1905 note says she was 12 that year → **1893**.
 6. B: open the box: her letter and a recording. The end.
+
+# Seventh set (0.10.0)
+
+## The Night Edition (hard, `press`, prefix d, views O1 composing room, O2 press hall)
+You, the reporter, are locked in an hour before the presses run; the
+foreman swapped your front page about Hale's bank. Kinds FXMFCDAEA.
+1. F: the waste bin under the case: the foreman's letter to H. (his locker
+   number is on his time card; the front page is in it; the watchman's
+   instructions are in Tuesday's small ads).
+2. X: the time cards (clock number, in, out) and the watchman's log: the
+   proofreader came in dry at 22:00 (card 951, 22:03, the decoy), the
+   foreman soaked at 22:05 (**263**, 22:07), two compositors left at 22:20
+   (418, 102), the apprentice at 22:30 (735, 22:31). Locker **263** → the
+   front-page forme (one line missing) and a manual page with the middle of
+   the paper path.
+3. M: the composing stick: the missing line is the sum in your notebook,
+   **47520**. Type prints mirrored: the sorts are mirror images and the line
+   reads backwards in the stick: set **0 2 5 7 4**; a proof shows the
+   result. Then the forme on the stick: the line goes in.
+4. F: the watchman's lantern held against the three paper reels shows their
+   watermarks; the house rules on the wall: only paper with the crown of
+   five points. Reel 1 has a crown of three (the decoy, met first), reel 2
+   an anchor, **reel 3** the right crown. Mount it.
+5. C: thread the paper: the wall chart (an ink splash hides rollers 3 and 4)
+   and the manual page (rollers 3 and 4): over, under, under, over, over,
+   under.
+6. D: the ink fountain: five keys; the test sheet shows each column's grey;
+   the house rules show the grey wanted (the middle one). All keys to the
+   middle.
+7. A: the full forme onto the plate cylinder.
+8. E: two papers with an ad signed H.: Monday's on the hook in the
+   composing room (5816, the decoy) and Tuesday's on the watchman's desk:
+   the lost parrot with **3** words, **1** blue feather, **4** toes, answers
+   to **2** whistles → the desk drawer **3142** → the press key.
+9. A: the key in the press: the edition rolls, the delivery door opens.
+
+## The Great Vaudini (medium, `magic`, prefix v, views F1 dressing room, F2 wings)
+Vaudini's apprentice test: out before his curtain call. Kinds FAEFDMCA.
+1. F: the costume rack: a small key sewn into the cape's lining.
+2. A: the key opens the trunk: the patter script and a letter to his rival.
+3. E: the Cabinet of Wonders, six panels; the script's incantation is five
+   riddles: **crown, moon, key, sun, eye** (the star is never named). A
+   wrong panel starts over. Inside: the marked deck.
+4. F: the deck spread on the dressing table: four of eight backs have a tiny
+   dot in a corner; the letter says the cards speak in the order a clock's
+   hand sweeps the corners, from the top left. Faces: top left 2, top right
+   7, bottom right 5, bottom left 8 → padlock **2758**.
+5. D: the dressing mirror is two-way: with its bulbs off and the alcove lamp
+   on (switch in the wings), you see into the alcove between the rooms: a
+   sketch of the sawing box with its three parts shifted.
+6. M: Pepper's ghost: the tilted glass in the wings reflects the alcove's
+   digit board (only when its lamp is lit) into three windows of the
+   backdrop. The handle has five positions marked by clock faces (10, 11,
+   12, 1, 2 o'clock); the poster on the dressing-room wall shows the Floating
+   Clock at **1 o'clock** → **583** (each other position shows another
+   number) → padlock 2.
+7. C: the sawing box: the three parts shifted as in the sketch (**2, 0, 3**)
+   → a drawer with the toy rabbit, the key of the last padlock inside.
+8. A: the last padlock once the other two are open: the chain falls.
+
+## Rain on Gale Street (hard, `noir`, prefix i, views I1 office, I2 reception)
+Someone wants the Ambassador case closed and locked you in. Kinds FAEEFEXM.
+1. F: the waste basket: a sheet of carbon paper.
+2. A: held against the desk lamp (lit): a copy of the intruder's note: the
+   cabinet is locked with the numbers on the detective's pad, scribbled over
+   in red.
+3. E: red light hides red ink: the desk lamp off and the blinds open, the
+   neon lights the room red and the pad shows **6047** → the filing cabinet:
+   two witness statements (the bartender: when the church clock struck
+   eleven; the taxi driver: the moment the rain began).
+4. E: the typewriter's ribbon held to the lamp: the last thing typed, read
+   backwards: the doorman's statement is in the coat with the red carnation.
+5. F: three coats; the pink carnation (met first) is the decoy; the red
+   carnation's pocket: the doorman: as the last tram passed the hotel.
+6. E: the radio's note: police band = our street number. The door's glass
+   reads it mirrored from inside (74, the decoy): **47** → the bulletin: the
+   rain began two minutes before eleven.
+7. X: the tram timetable (wall): the last tram leaves the depot at 22:41
+   and reaches the Ambassador 17 minutes later: 22:58; the rain 22:58; the
+   bartender lies (23:00). The note on the case board: the safe is set to
+   the minute she left → **2258** → the ruby and a letter opener.
+8. M: the key is in the lock outside: carbon paper under the door, push the
+   key out with the letter opener, pull the sheet back with the key, open.

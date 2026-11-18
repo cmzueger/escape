@@ -35,11 +35,14 @@ pub mod housenow;
 pub mod hut;
 pub mod kit;
 pub mod light;
+pub mod magic;
 pub mod museum;
+pub mod noir;
 pub mod obs;
 pub mod orangery;
 pub mod polar;
 pub mod praline;
+pub mod press;
 pub mod ship;
 pub mod theatre;
 pub mod toyshop;
@@ -56,7 +59,7 @@ pub mod zeppelin;
 /// deduction (one twist), X hard deduction (a longer chain or grid).
 /// The difficulty shown follows from the kinds ([`difficulty`]); the time
 /// is separate (`tools/estimate.py` estimates it from the kinds).
-pub const ROOMS: [(&str, &str, u32); 23] = [
+pub const ROOMS: [(&str, &str, u32); 26] = [
     ("hut", "ACABCDDBB", hut::PAR_MINUTES),
     ("light", "ACCBFMDEDA", light::PAR_MINUTES),
     ("obs", "CCMEEDXCAC", obs::PAR_MINUTES),
@@ -80,6 +83,9 @@ pub const ROOMS: [(&str, &str, u32); 23] = [
     ("house1938", "FCDEA", house1938::PAR_MINUTES),
     ("house1969", "FDCEC", house1969::PAR_MINUTES),
     ("housenow", "FEDXEB", housenow::PAR_MINUTES),
+    ("press", "FXMFCDAEA", press::PAR_MINUTES),
+    ("magic", "FAEFDMCA", magic::PAR_MINUTES),
+    ("noir", "FAEEFEXM", noir::PAR_MINUTES),
 ];
 
 /// 1 easy, 2 medium, 3 hard: how hard the thinking is, not how long it
@@ -254,6 +260,9 @@ impl Room {
                     Some("house1938") => *self = Room::Kit(kit::State::new(&house1938::SPEC)),
                     Some("house1969") => *self = Room::Kit(kit::State::new(&house1969::SPEC)),
                     Some("housenow") => *self = Room::Kit(kit::State::new(&housenow::SPEC)),
+                    Some("press") => *self = Room::Kit(kit::State::new(&press::SPEC)),
+                    Some("magic") => *self = Room::Kit(kit::State::new(&magic::SPEC)),
+                    Some("noir") => *self = Room::Kit(kit::State::new(&noir::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -302,6 +311,9 @@ mod tests {
             (&house1938::SPEC, ROOMS[20].1),
             (&house1969::SPEC, ROOMS[21].1),
             (&housenow::SPEC, ROOMS[22].1),
+            (&press::SPEC, ROOMS[23].1),
+            (&magic::SPEC, ROOMS[24].1),
+            (&noir::SPEC, ROOMS[25].1),
         ] {
             assert_eq!(spec.puzzles.len(), kinds.len(), "{}", spec.id);
         }
@@ -332,6 +344,9 @@ mod tests {
             "house1938",
             "house1969",
             "housenow",
+            "press",
+            "magic",
+            "noir",
         ] {
             assert!(r
                 .call(&format!("room {id}"))
@@ -476,6 +491,24 @@ mod tests {
                 [digits("key", 8), digits("say", 3), vec!["call".into()]].concat(),
                 vec![],
                 vec![],
+            ),
+            (
+                &press::SPEC,
+                [
+                    digits("sort", 10),
+                    digits("mount", 3),
+                    vec!["clear".into(), "proof".into()],
+                ]
+                .concat(),
+                vec![],
+                vec![],
+            ),
+            (&magic::SPEC, digits("panel", 6), vec![], vec!["vdeck"]),
+            (
+                &noir::SPEC,
+                vec!["use icarbon lamp".into(), "use iribbon lamp".into()],
+                vec![],
+                vec!["iribbon"],
             ),
         ];
         let mut problems = vec![];
