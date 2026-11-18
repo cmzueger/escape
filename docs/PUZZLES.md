@@ -421,3 +421,74 @@ reed 2, scarab 4. Everything else is read through it.
 ## Balance notes (sixth set)
 - Estimated with tools/estimate.py: Graf Alpina 10, Albatross 8, Base 70°
   South 14 minutes; targets 13, 10, 19. Untested by a person.
+
+# The Quiet House (series): design
+The same floor of Number 7 in four eras. Walls: the parlour (piano, tiled
+stove, door) and Clara's room (bed, window onto the courtyard, wardrobe).
+Piano keys 0..7 (C to C'), each with Clara's coloured sticker (red, orange,
+yellow, green, blue, indigo, violet, pink). Behind a loose stove tile the
+housekeepers keep their notes for each other (story).
+
+## 1905 (easy, `house1905`, prefix h, views H1 parlour, H2 Clara's room)
+You are Marie, the young maid, the night Clara vanished.
+1. F: the music box's crank is under Clara's pillow.
+2. A: crank on the music box: it plays (sound) and shows its pins in the
+   stickers' colours (visual twin).
+3. D: play the tune on the piano: keys **4 2 0 2 4** → the lid compartment:
+   the wardrobe key.
+4. A: key on the wardrobe → a hatbox with a lock of three wheels marked with
+   a small, a medium and a large treble clef.
+5. F: Clara stuck clef stickers in three views, each with dots: small clef on
+   the parlour clock (3), medium on a stove tile (7), large on the bed's
+   headboard (1) → **371** → Clara's farewell note and the door key.
+6. A: the key on the door.
+
+## 1938 (medium, `house1938`, prefix j, views J1 parlour, J2 Berta's room)
+You are Berta, housekeeper; the house is to be sold.
+1. F: the cracked stove tile → Marie's note of 1905 with her telephone
+   number **3815**.
+2. C: dial it; talk to old Marie (wrong answers end the call; dial again).
+   Right path: say who you are, then ask where the music box is. She hid it
+   behind the parlour panelling and painted a mark that only shows when the
+   parlour lamp is lit, seen from Clara's window.
+3. D: the fuse box (four switches: kitchen, parlour, stairs, shop; more than
+   two on blows them): **parlour on**, the lamp lights.
+4. E: from Berta's window across the courtyard: the stairwell window opposite
+   reflects the lit parlour: the mark on the second panel from the right in
+   the reflection, a mirror image: the **second panel from the left** (of
+   six) → the music box and the house key.
+5. A: the key on the door.
+
+## 1969 (medium, `house1969`, prefix u, views U1 living room, U2 student room)
+You rent Clara's old room from Mrs Jost.
+1. F: the stove tile: Marie's and Berta's notes, and Berta's sketch of the
+   courtyard with one window marked.
+2. D: the record player: an old shellac record only plays right at **78**;
+   the record (sound) and its sleeve (coloured dots) give the tune's first
+   half; the broken music box (pins) its second half.
+3. C: play the whole tune on the piano: **4 2 0 2 4 5 7 4** → the piano
+   bench: opera glasses.
+4. E: Berta's sketch was drawn from the other side of the courtyard (mirrored):
+   with the opera glasses, the marked window shows three flowerpots with
+   numbers: **528** (other windows show decoys) → the desk drawer: the
+   intercom handset.
+5. C: the handset on the intercom: Mrs Jost asks three questions about the
+   house's story (answers in the notes: Marie hid the box; behind the
+   panelling; Clara played the piano) → she opens the door.
+
+## Today (hard, `housenow`, prefix x, views X1 living room, X2 Clara's room)
+You renovate the house, the last of the family.
+1. F: the stove tile: all the notes; the 1969 one says Clara played her tune
+   backwards on her last night.
+2. E: the tune backwards: **4 7 5 4 2 0 2 4** → the piano: the toolbox key
+   (hammer, matches).
+3. D: light the stove (open the damper first): smoke rises from one of the
+   three chimneys seen from Clara's window.
+4. X: the renovation plan shows the floor from above with the flues; seen
+   from the courtyard the roof is mirrored. The chimney that never smokes
+   belongs to a flue behind a bricked-up niche: knock the **fourth wall
+   segment** (of six) with the hammer → Clara's box (four wheels).
+5. E: call the conservatory archive in Paris (number on the record sleeve,
+   **0142**): asked the right things, the archivist says Clara always used
+   her birth year; the 1905 note says she was 12 that year → **1893**.
+6. B: open the box: her letter and a recording. The end.
