@@ -206,3 +206,22 @@ courtyard recur in every era. Kinds and targets: 1905 FADAFA (easy, 5 min),
 18 min). Shared mechanisms in `core/src/house.rs` (piano, conversation).
 Not chosen: Grand Hotel Belvedere, The Missing Composer, Agency 13; the
 clockmaker's fortune, the inventor's machine; lakeside villa, mountain chalet.
+
+## Seventh set (owner, 2026-11-18)
+Asked for: more clues in text form, creative mechanisms, slightly hidden
+clues, rooms a little longer. Chosen in two rounds:
+- The Night Edition (a newspaper print works, 1890; a reporter locked in
+  before the presses run; gaslight, ink black, cream paper, red proof marks).
+- The Great Vaudini (an illusionist's dressing room, 1925; the apprentice's
+  test, out before his curtain call; red velvet and gold).
+- Rain on Gale Street (a detective's office, 1947; locked in by someone who
+  wants a case closed, three witnesses, one lies; black and white with red
+  neon through the blinds).
+- About 20 to 25 minutes each: 8 to 9 puzzles, at least two deductions and
+  two hard mechanisms.
+- Text clues of every kind: riddles and poems, statements to cross-check,
+  codes in documents, logs with times, and clues printed on a wall that are
+  one ingredient of another puzzle or of finding something hidden.
+Not chosen: Station X, Orbital Station Kepler, The Abbey Library; Gutenberg
+& Daughter, The Blue Pencil; Vanishing Act, Smoke & Mirrors; The Last
+Client, Room 4B.
