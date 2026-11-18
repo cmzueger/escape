@@ -181,6 +181,7 @@ Works (`praline`), Tinker & Sons (`toyshop`).
 ## Open
 - An Android build, a custom domain.
 - The owner's play test of the fifth set (built 0.7.0) and its targets.
+- In progress: the sixth set (Graf Alpina, Albatross, Base 70° South), see SPEC.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, whether the scrolling catalogue is, and an
   opinion on the sounds, which were made without anyone hearing them.

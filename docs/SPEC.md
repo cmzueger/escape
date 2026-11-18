@@ -165,3 +165,17 @@ Sons; the others easy.
 Added F find (a clue easy to miss), M hard mechanism (needs planning) and X
 hard deduction (a longer chain or grid) beside D and E. The label is a point
 score: F and D one, M and E two, X four; medium from 4, hard from 8.
+
+## Sixth set (owner, 2026-11-18)
+Medium to hard rooms with new mechanisms, deductions and hidden clues. Chosen
+by the owner in two rounds:
+| Room | Look | Difficulty | Planned puzzle types |
+|---|---|---|---|
+| Graf Alpina (zeppelin chart room) | Golden dusk over glaciers, brass and mahogany | medium | Compass and magnets, rebuild a cipher, clues in details |
+| Albatross (ship's bridge in a storm) | 1950s steamer: wooden wheelhouse, brass, oil lamps, grey storm light | medium | Water levels (ballast), coloured filters, clues in details, one deduction |
+| Base 70° South (polar research station) | White-out storm, grey and white, red emergency light, yellow gear | hard | Sliding blocks, invisible ink (UV), a hard logic grid |
+
+All four new mechanisms (sliding blocks, coloured filters, water levels,
+compass and magnets) and all four clue kinds (logic grid, rebuild a cipher,
+invisible ink, clues in details) were wanted. Not chosen: Grand Hotel,
+scriptorium, bank vault, detective's office, inventor's workshop.
