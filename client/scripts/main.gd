@@ -16,6 +16,7 @@ const TITLES := {
 	"house1905": "The Quiet House · 1905", "house1938": "The Quiet House · 1938",
 	"house1969": "The Quiet House · 1969", "housenow": "The Quiet House · Today",
 	"press": "The Night Edition", "magic": "The Great Vaudini", "noir": "Rain on Gale Street",
+	"filter": "The Filter Hall", "railway": "The 8:15 to Nowhere", "mill": "Harvest Moon",
 }
 ## Texts of the lighthouse have their keys with an "l" in front, those of
 ## the observatory with an "o".
@@ -24,7 +25,8 @@ const PREFIX := {"hut": "", "light": "l", "obs": "o", "orangery": "g", "theatre"
 	"tree": "e", "gondola": "q", "praline": "p", "toyshop": "y",
 	"zeppelin": "z", "ship": "s", "polar": "r",
 	"house1905": "h", "house1938": "j", "house1969": "u", "housenow": "x",
-	"press": "d", "magic": "v", "noir": "i"}
+	"press": "d", "magic": "v", "noir": "i",
+	"filter": "wa", "railway": "rc", "mill": "mi"}
 const SLOTS := 8
 const HINT_RECT := Rect2(800, 484, 136, 44)
 const MENU_RECT := Rect2(908, 8, 44, 44)
@@ -60,7 +62,7 @@ const WRONG := ["zmsg.no_use", "smsg.no_use", "rmsg.no_use", "zmsg.no_magnet", "
 	"mmsg.door_wrong", "mmsg.door_dead", "mmsg.scales_bare", "mmsg.dial_bare"]
 
 var link := RoomLink.new()
-var art := ArtSet7.new()
+var art := ArtSet8.new()
 var sound := Sound.new()
 var rooms: Array = []
 var room := "hut"
@@ -262,6 +264,14 @@ func _ambience() -> void:
 		levels["amb_wind"] = 0.12
 		if room == "housenow" and "fire" in st.get("flags", []):
 			levels["amb_fire"] = 0.4
+	elif mode != "load" and room == "filter":
+		levels["amb_sea"] = 0.2 if "engine_on" in st.get("flags", []) else 0.08
+		levels["amb_tick"] = 0.15
+	elif mode != "load" and room == "railway":
+		levels["amb_tick"] = 0.3
+	elif mode != "load" and room == "mill":
+		levels["amb_wind"] = 0.45
+		levels["amb_tick"] = 0.12 if "turning" in st.get("flags", []) else 0.0
 	elif mode != "load" and room == "press":
 		levels["amb_tick"] = 0.25
 		levels["amb_fire"] = 0.08

@@ -2058,3 +2058,520 @@ ihint.7.3,22:41 + 17 minutes = 22:58: 2258.,22:41 + 17 Minuten = 22:58: 2258.,22
 ihint.8.1,The key is in the lock outside. You need to bring it to your side.,Der Schlüssel steckt aussen. Du musst ihn auf deine Seite holen.,La clé est dans la serrure dehors. Il faut l'amener de ton côté.,La chiave è nella toppa fuori. Devi portarla dalla tua parte.,La llave está fuera. Tienes que traerla a tu lado.
 ihint.8.2,"Something flat under the door, something thin through the keyhole.","Etwas Flaches unter der Tür, etwas Dünnes durchs Schlüsselloch.","Quelque chose de plat sous la porte, quelque chose de fin dans la serrure.","Qualcosa di piatto sotto la porta, qualcosa di sottile nella toppa.","Algo plano bajo la puerta, algo fino por la cerradura."
 ihint.8.3,"Carbon paper under the door, letter opener into the keyhole, then pull the sheet back.","Kohlepapier unter die Tür, Brieföffner ins Schlüsselloch, dann das Blatt zurückziehen.","Carbone sous la porte, coupe-papier dans la serrure, puis retire la feuille.","Carta carbone sotto la porta, tagliacarte nella toppa, poi tira indietro il foglio.","Papel carbón bajo la puerta, abrecartas en la cerradura y tira de la hoja."
+waintro.1,"1898. You are the city's water inspector, here for the opening of the new filter hall. The mayor is speaking in the square outside.","1898. Du bist der städtische Wasserinspektor, hier zur Eröffnung der neuen Filterhalle. Draussen auf dem Platz hält der Bürgermeister seine Rede.","1898. Tu es l'inspecteur des eaux de la ville, venu pour l'inauguration de la nouvelle salle des filtres. Dehors, le maire fait son discours.","1898. Sei l'ispettore delle acque, qui per l'inaugurazione della nuova sala dei filtri. Fuori, in piazza, il sindaco tiene il suo discorso.","1898. Eres el inspector de aguas de la ciudad, aquí para la inauguración de la nueva sala de filtros. Fuera, en la plaza, el alcalde da su discurso."
+waintro.2,"The doors have swung shut behind you, the stokers are at the ceremony, and the chief engineer is stuck in his office upstairs. When the mayor finishes, the fountain is meant to rise. It will not, unless you start everything yourself.","Die Türen sind hinter dir zugefallen, die Heizer sind an der Feier, und der Chefingenieur sitzt oben in seinem Büro fest. Wenn der Bürgermeister fertig ist, soll der Brunnen steigen. Das tut er nur, wenn du alles selbst in Gang bringst.","Les portes se sont refermées derrière toi, les chauffeurs sont à la cérémonie et l'ingénieur en chef est coincé dans son bureau à l'étage. À la fin du discours, la fontaine doit jaillir. Elle ne le fera que si tu mets tout en marche toi-même.","Le porte si sono chiuse alle tue spalle, i fuochisti sono alla cerimonia e l'ingegnere capo è bloccato nel suo ufficio al piano di sopra. Alla fine del discorso la fontana deve zampillare. Lo farà solo se avvii tutto tu.","Las puertas se han cerrado tras de ti, los fogoneros están en la ceremonia y el ingeniero jefe está atrapado en su despacho de arriba. Cuando el alcalde termine, la fuente debe brotar. No lo hará a menos que lo pongas todo en marcha tú."
+waintro.3,This one is hard and long. A good time is %d minutes.,Dieser Raum ist schwer und lang. Eine gute Zeit sind %d Minuten.,Cette salle est difficile et longue. Un bon temps : %d minutes.,Questa stanza è difficile e lunga. Un buon tempo: %d minuti.,Esta sala es difícil y larga. Un buen tiempo: %d minutos.
+waend.title,The fountain rises,Der Brunnen steigt,La fontaine jaillit,La fontana zampilla,La fuente brota
+waend.text,"As the mayor raises his glass, three jets of clear water leap up in the square. The crowd cheers, the band strikes up, and somebody finally remembers to unlock the filter hall.","Als der Bürgermeister sein Glas hebt, springen auf dem Platz drei Strahlen klaren Wassers in die Höhe. Die Menge jubelt, die Musik spielt, und endlich denkt jemand daran, die Filterhalle aufzuschliessen.","Au moment où le maire lève son verre, trois jets d'eau claire jaillissent sur la place. La foule acclame, la fanfare joue, et quelqu'un pense enfin à ouvrir la salle des filtres.","Mentre il sindaco alza il bicchiere, tre getti d'acqua limpida si alzano in piazza. La folla applaude, la banda suona e finalmente qualcuno si ricorda di aprire la sala dei filtri.","Cuando el alcalde levanta su copa, tres chorros de agua clara saltan en la plaza. La gente aplaude, suena la banda y alguien se acuerda por fin de abrir la sala de filtros."
+item.waspanner,Spanner,Schraubenschlüssel,Clé plate,Chiave inglese,Llave inglesa
+item.wamatches,Matches,Streichhölzer,Allumettes,Fiammiferi,Cerillas
+item.wahorn,Brass horn,Messinghorn,Cor en laiton,Corno d'ottone,Cuerno de latón
+watext.programme,Opening programme: the fountain,Eröffnungsprogramm: der Brunnen,Programme d'inauguration : la fontaine,Programma dell'inaugurazione: la fontana,Programa de la inauguración: la fuente
+watext.plaque,"THE WATER'S WAY
+First it passes the stone that was a mountain,
+then the sand that was a stone,
+last the black that was a tree.
+Only then is it fit to drink.","DER WEG DES WASSERS
+Zuerst durchläuft es den Stein, der ein Berg war,
+dann den Sand, der ein Stein war,
+zuletzt das Schwarze, das ein Baum war.
+Erst dann ist es trinkbar.","LE CHEMIN DE L'EAU
+D'abord elle traverse la pierre qui fut montagne,
+puis le sable qui fut pierre,
+enfin le noir qui fut arbre.
+Alors seulement elle est bonne à boire.","LA VIA DELL'ACQUA
+Prima attraversa la pietra che fu montagna,
+poi la sabbia che fu pietra,
+infine il nero che fu albero.
+Solo allora è buona da bere.","EL CAMINO DEL AGUA
+Primero pasa por la piedra que fue montaña,
+luego por la arena que fue piedra,
+por último por lo negro que fue árbol.
+Solo entonces se puede beber."
+watext.notes,"Opening day, Sunday. District valves, for the fountain only:
+- Exactly three valves open.
+- The square open, of course.
+- The market is shut on Sundays.
+- Harbour and station never together.
+- The mill only when the hill is open too.
+- Of harbour and mill, exactly one.
+- The hill leaks when the harbour is open.
+Anything else and the cellars flood.","Eröffnungstag, Sonntag. Quartierschieber, nur für den Brunnen:
+- Genau drei Schieber offen.
+- Der Platz natürlich offen.
+- Der Markt ist sonntags zu.
+- Hafen und Bahnhof nie zusammen.
+- Die Mühle nur, wenn auch der Hügel offen ist.
+- Von Hafen und Mühle genau einer.
+- Der Hügel leckt, wenn der Hafen offen ist.
+Alles andere setzt die Keller unter Wasser.","Jour d'inauguration, dimanche. Vannes des quartiers, pour la fontaine seulement :
+- Exactement trois vannes ouvertes.
+- La place ouverte, bien sûr.
+- Le marché est fermé le dimanche.
+- Port et gare jamais ensemble.
+- Le moulin seulement si la colline est ouverte aussi.
+- Du port et du moulin, exactement un.
+- La colline fuit quand le port est ouvert.
+Tout le reste inonde les caves.","Giorno dell'inaugurazione, domenica. Valvole dei quartieri, solo per la fontana:
+- Esattamente tre valvole aperte.
+- La piazza aperta, naturalmente.
+- Il mercato la domenica è chiuso.
+- Porto e stazione mai insieme.
+- Il mulino solo se è aperta anche la collina.
+- Tra porto e mulino, esattamente uno.
+- La collina perde se il porto è aperto.
+Tutto il resto allaga le cantine.","Día de la inauguración, domingo. Válvulas de los barrios, solo para la fuente:
+- Exactamente tres válvulas abiertas.
+- La plaza abierta, claro.
+- El mercado cierra los domingos.
+- Puerto y estación nunca juntos.
+- El molino solo si la colina también está abierta.
+- Entre puerto y molino, exactamente uno.
+- La colina pierde agua cuando el puerto está abierto.
+Cualquier otra cosa inunda los sótanos."
+watext.speech,"The mayor's speech (programme, last page):
+""...and so, fellow citizens, clean water for every home! Let us drink to it. And as I raise my glass, the water shall rise!""
+
+Note for the engineer: open the main valve exactly when he raises his glass.","Die Rede des Bürgermeisters (Programm, letzte Seite):
+«...und so, liebe Mitbürger, sauberes Wasser für jedes Haus! Darauf wollen wir trinken. Und wenn ich mein Glas hebe, soll das Wasser steigen!»
+
+Notiz für den Ingenieur: den Hauptschieber genau öffnen, wenn er sein Glas hebt.","Le discours du maire (programme, dernière page) :
+« ... ainsi, chers concitoyens, de l'eau propre pour chaque foyer ! Buvons à cela. Et lorsque je lèverai mon verre, l'eau jaillira ! »
+
+Note pour l'ingénieur : ouvrir la vanne principale exactement quand il lève son verre.","Il discorso del sindaco (programma, ultima pagina):
+«...e così, cari concittadini, acqua pulita per ogni casa! Brindiamo. E quando alzerò il bicchiere, l'acqua salirà!»
+
+Nota per l'ingegnere: aprire la valvola principale esattamente quando alza il bicchiere.","El discurso del alcalde (programa, última página):
+«...y así, queridos conciudadanos, ¡agua limpia para cada hogar! Brindemos por ello. ¡Y cuando alce mi copa, el agua subirá!»
+
+Nota para el ingeniero: abrir la válvula principal justo cuando alce la copa."
+watext.harbour,Harbour,Hafen,Port,Porto,Puerto
+watext.market,Market,Markt,Marché,Mercato,Mercado
+watext.hill,Hill,Hügel,Colline,Collina,Colina
+watext.mill,Mill,Mühle,Moulin,Mulino,Molino
+watext.station,Station,Bahnhof,Gare,Stazione,Estación
+watext.square,Square,Platz,Place,Piazza,Plaza
+watalk.1,"A voice down the tube: ""Is somebody there? It's the chief engineer, I'm locked in upstairs! Quickly: what does the pressure gauge show?""","Eine Stimme durchs Rohr: «Ist da jemand? Hier der Chefingenieur, ich bin oben eingeschlossen! Schnell: Was zeigt das Manometer?»","Une voix dans le tuyau : « Il y a quelqu'un ? Ici l'ingénieur en chef, je suis enfermé en haut ! Vite : que montre le manomètre ? »","Una voce nel tubo: «C'è qualcuno? Sono l'ingegnere capo, sono chiuso di sopra! Presto: cosa segna il manometro?»","Una voz por el tubo: «¿Hay alguien? ¡Soy el ingeniero jefe, estoy encerrado arriba! Rápido: ¿qué marca el manómetro?»"
+wasay.1a,"""In the red.""",«Im Roten.»,« Dans le rouge. »,«Sul rosso.»,«En el rojo.»
+wasay.1b,"""In the green.""",«Im Grünen.»,« Dans le vert. »,«Sul verde.»,«En el verde.»
+wasay.1c,"""At zero.""",«Auf null.»,« À zéro. »,«A zero.»,«A cero.»
+watalk.2,"""Good, the boiler is ready. One more thing, so I know you can see the square: which flag flies on the pump house today?""","«Gut, der Kessel ist bereit. Noch etwas, damit ich weiss, dass du den Platz siehst: Welche Flagge weht heute auf dem Pumpenhaus?»","« Bien, la chaudière est prête. Encore une chose, que je sache que tu vois la place : quel drapeau flotte sur la maison des pompes aujourd'hui ? »","«Bene, la caldaia è pronta. Ancora una cosa, così so che vedi la piazza: quale bandiera sventola oggi sulla casa delle pompe?»","«Bien, la caldera está lista. Una cosa más, para saber que ves la plaza: ¿qué bandera ondea hoy en la casa de bombas?»"
+wasay.2a,"""A red one.""",«Eine rote.»,« Un rouge. »,«Una rossa.»,«Una roja.»
+wasay.2b,"""A white one.""",«Eine weisse.»,« Un blanc. »,«Una bianca.»,«Una blanca.»
+wasay.2c,"""A blue one.""",«Eine blaue.»,« Un bleu. »,«Una blu.»,«Una azul.»
+watalk.3,"""Blue, the opening flag. Then start her: steam valve first, then the cylinder drains, then the throttle. Any other order and she stalls.""","«Blau, die Eröffnungsflagge. Dann starte sie: zuerst das Dampfventil, dann die Zylinderablässe, dann den Regler. Jede andere Reihenfolge, und sie stirbt ab.»","« Bleu, le drapeau de l'inauguration. Alors démarre-la : d'abord la vanne de vapeur, puis les purges des cylindres, puis le régulateur. Tout autre ordre et elle cale. »","«Blu, la bandiera dell'inaugurazione. Allora avviala: prima la valvola del vapore, poi gli spurghi dei cilindri, poi la manetta. In qualsiasi altro ordine si spegne.»","«Azul, la bandera de la inauguración. Entonces arráncala: primero la válvula de vapor, luego las purgas de los cilindros, luego el regulador. En cualquier otro orden se cala.»"
+wasay.3a,"""Understood.""",«Verstanden.»,« Compris. »,«Capito.»,«Entendido.»
+wamsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+wamsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+wamsg.hangup,The engineer sighs and the tube goes quiet. Call again.,"Der Ingenieur seufzt, das Rohr verstummt. Ruf nochmals.",L'ingénieur soupire et le tuyau se tait. Rappelle.,L'ingegnere sospira e il tubo tace. Chiama di nuovo.,El ingeniero suspira y el tubo calla. Llama otra vez.
+wamsg.no_line,"You shout into the tube. ""Not yet! Fill the boiler first!"" comes back.",Du rufst ins Rohr. «Noch nicht! Zuerst den Kessel füllen!» kommt zurück.,Tu cries dans le tuyau. « Pas encore ! Remplis d'abord la chaudière ! » répond-on.,Gridi nel tubo. «Non ancora! Prima riempi la caldaia!» risponde.,"Gritas por el tubo. «¡Todavía no! ¡Llena primero la caldera!», contestan."
+wamsg.spanner,Deep in the coal: the engineer's spanner.,Tief in der Kohle: der Schraubenschlüssel des Ingenieurs.,Au fond du charbon : la clé de l'ingénieur.,Sotto il carbone: la chiave dell'ingegnere.,Bajo el carbón: la llave del ingeniero.
+wamsg.matches,A tin of matches.,Eine Dose Streichhölzer.,Une boîte d'allumettes.,Una scatola di fiammiferi.,Una lata de cerillas.
+wamsg.firebox,The firebox door is jammed shut.,Die Feuertür klemmt.,La porte du foyer est coincée.,La porta del focolare è bloccata.,La puerta del hogar está atascada.
+wamsg.firebox_open,The spanner frees the firebox door.,Der Schlüssel löst die Feuertür.,La clé débloque la porte du foyer.,La chiave sblocca la porta del focolare.,La llave libera la puerta del hogar.
+wamsg.firebox_shut,The firebox door is jammed.,Die Feuertür klemmt.,La porte du foyer est coincée.,La porta del focolare è bloccata.,La puerta del hogar está atascada.
+wamsg.fire,The coal catches. The fire roars.,Die Kohle fängt Feuer. Es lodert.,Le charbon prend. Le feu gronde.,Il carbone prende. Il fuoco ruggisce.,El carbón prende. El fuego ruge.
+wamsg.firebox_burns,The fire burns well.,Das Feuer brennt gut.,Le feu brûle bien.,Il fuoco arde bene.,El fuego arde bien.
+wamsg.feed_cold,No point filling a cold boiler.,"Einen kalten Kessel zu füllen, bringt nichts.",Inutile de remplir une chaudière froide.,Inutile riempire una caldaia fredda.,No sirve de nada llenar una caldera fría.
+wamsg.boiler,"The boiler, its water glass and the pressure gauge.",Der Kessel mit Wasserglas und Manometer.,"La chaudière, son niveau d'eau et le manomètre.","La caldaia, il livello e il manometro.","La caldera, su nivel de agua y el manómetro."
+wamsg.boiler_ok,The water stands between the red marks; the needle climbs into the green.,Das Wasser steht zwischen den roten Marken; die Nadel steigt ins Grüne.,L'eau est entre les repères rouges ; l'aiguille monte dans le vert.,L'acqua è tra i segni rossi; l'ago sale nel verde.,El agua está entre las marcas rojas; la aguja sube al verde.
+wamsg.lever_stiff,The levers are stiff. Better ask how to start her.,"Die Hebel sind schwergängig. Frag besser, wie man sie startet.",Les leviers sont durs. Mieux vaut demander comment la démarrer.,Le leve sono dure. Meglio chiedere come avviarla.,Las palancas están duras. Mejor pregunta cómo arrancarla.
+wamsg.lever,Clunk. The engine shudders.,Klonk. Die Maschine bebt.,Clonk. La machine frémit.,Clonk. La macchina trema.,Clonc. La máquina se estremece.
+wamsg.stall,The engine coughs and stalls. The levers fall back.,Die Maschine hustet und stirbt ab. Die Hebel fallen zurück.,La machine tousse et cale. Les leviers retombent.,La macchina tossisce e si spegne. Le leve tornano indietro.,La máquina tose y se cala. Las palancas vuelven atrás.
+wamsg.engine_on,"The engine runs! The flywheel turns, the pumps beat.","Die Maschine läuft! Das Schwungrad dreht, die Pumpen schlagen.","La machine tourne ! Le volant tourne, les pompes battent.","La macchina va! Il volano gira, le pompe battono.","¡La máquina funciona! El volante gira, las bombas laten."
+wamsg.engine_runs,The engine runs.,Die Maschine läuft.,La machine tourne.,La macchina va.,La máquina funciona.
+wamsg.engine,The flywheel.,Das Schwungrad.,Le volant.,Il volano.,El volante.
+wamsg.governor,The engine's governor: three speeds.,Der Fliehkraftregler der Maschine: drei Geschwindigkeiten.,Le régulateur à boules : trois vitesses.,Il regolatore della macchina: tre velocità.,El regulador de la máquina: tres velocidades.
+wamsg.governor_still,The governor only moves while the engine runs.,"Der Regler bewegt sich nur, wenn die Maschine läuft.",Le régulateur ne bouge que si la machine tourne.,Il regolatore si muove solo se la macchina va.,El regulador solo se mueve con la máquina en marcha.
+wamsg.programme,The opening programme.,Das Eröffnungsprogramm.,Le programme d'inauguration.,Il programma dell'inaugurazione.,El programa de la inauguración.
+wamsg.notes,The engineer's notes.,Die Notizen des Ingenieurs.,Les notes de l'ingénieur.,Gli appunti dell'ingegnere.,Las notas del ingeniero.
+wamsg.desk,The engineer's desk.,Der Schreibtisch des Ingenieurs.,Le bureau de l'ingénieur.,La scrivania dell'ingegnere.,La mesa del ingeniero.
+wamsg.board,"The district valves, with a small map of the town.","Die Quartierschieber, mit einem kleinen Stadtplan.","Les vannes des quartiers, avec un petit plan de la ville.","Le valvole dei quartieri, con una piccola mappa della città.","Las válvulas de los barrios, con un pequeño plano de la ciudad."
+wamsg.risers,Three risers carry the water up into the hall.,Drei Steigrohre führen das Wasser hinauf in die Halle.,Trois colonnes montent l'eau dans la salle.,Tre colonne portano l'acqua nella sala.,Tres tuberías suben el agua a la sala.
+wamsg.bleed_dry,Nothing comes out: no water in the pipes yet.,Nichts kommt heraus: noch kein Wasser in den Rohren.,Rien ne sort : pas encore d'eau dans les tuyaux.,Non esce niente: ancora niente acqua nei tubi.,No sale nada: aún no hay agua en las tuberías.
+wamsg.bleed_water,Only water hisses out. You close it again.,Nur Wasser zischt heraus. Du schliesst wieder.,Seule de l'eau siffle. Tu refermes.,Esce solo acqua sibilando. Richiudi.,Solo silba agua. Lo vuelves a cerrar.
+wamsg.air_out,"A long hiss of air, then water. The knocking stops.","Ein langes Zischen von Luft, dann Wasser. Das Klopfen hört auf.","Un long sifflement d'air, puis de l'eau. Les coups cessent.","Un lungo sibilo d'aria, poi acqua. I colpi cessano.","Un largo silbido de aire, luego agua. Los golpes cesan."
+wamsg.plaque,A brass plaque on the filter tank.,Ein Messingschild am Filterbecken.,Une plaque de laiton sur le bassin filtrant.,Una targa d'ottone sulla vasca filtrante.,Una placa de latón en el tanque de filtro.
+wamsg.tank,"The filter tank, filled layer by layer from the bins.","Das Filterbecken, Schicht für Schicht aus den Kästen gefüllt.","Le bassin filtrant, rempli couche par couche depuis les bacs.","La vasca filtrante, riempita strato per strato dai contenitori.","El tanque de filtro, llenado capa a capa desde los cajones."
+wamsg.bins,"Gravel, sand and charcoal.","Kies, Sand und Holzkohle.","Gravier, sable et charbon de bois.","Ghiaia, sabbia e carbone.","Grava, arena y carbón vegetal."
+wamsg.poured,A layer goes into the tank.,Eine Schicht kommt ins Becken.,Une couche va dans le bassin.,Uno strato entra nella vasca.,Una capa entra en el tanque.
+wamsg.tank_full,The tank is full.,Das Becken ist voll.,Le bassin est plein.,La vasca è piena.,El tanque está lleno.
+wamsg.emptied,You empty the tank.,Du leerst das Becken.,Tu vides le bassin.,Svuoti la vasca.,Vacías el tanque.
+wamsg.filter_done,The filter is right; leave it.,Der Filter stimmt; lass ihn.,Le filtre est bon ; n'y touche plus.,Il filtro è giusto; lascialo.,El filtro está bien; déjalo.
+wamsg.test_dry,No water to test with yet.,Noch kein Wasser zum Prüfen.,Pas encore d'eau pour tester.,Ancora niente acqua per provare.,Aún no hay agua para probar.
+wamsg.tank_short,The tank is not full yet.,Das Becken ist noch nicht voll.,Le bassin n'est pas encore plein.,La vasca non è ancora piena.,El tanque aún no está lleno.
+wamsg.muddy,The test tap runs muddy.,Der Prüfhahn läuft trüb.,Le robinet d'essai coule trouble.,Il rubinetto di prova esce torbido.,El grifo de prueba sale turbio.
+wamsg.clear,The test tap runs crystal clear.,Der Prüfhahn läuft kristallklar.,Le robinet d'essai coule limpide.,Il rubinetto di prova esce limpido.,El grifo de prueba sale cristalino.
+wamsg.pipes,The pipe wall: tiles you can turn.,"Die Rohrwand: Teile, die man drehen kann.",Le mur de tuyaux : des éléments qui tournent.,La parete dei tubi: pezzi da ruotare.,La pared de tubos: piezas que se giran.
+wamsg.socket,One elbow is missing from the pipe wall.,In der Rohrwand fehlt ein Bogen.,Il manque un coude au mur de tuyaux.,Nella parete dei tubi manca un gomito.,Falta un codo en la pared de tubos.
+wamsg.socket_in,The brass horn fits the gap exactly: a perfect elbow.,Das Messinghorn passt genau in die Lücke: ein perfekter Bogen.,Le cor en laiton s'ajuste parfaitement : un coude parfait.,Il corno d'ottone entra perfettamente: un gomito perfetto.,El cuerno de latón encaja justo: un codo perfecto.
+wamsg.horn,A curved brass horn from the ceremony table.,Ein gebogenes Messinghorn vom Festtisch.,"Un cor en laiton courbé, sur la table de la cérémonie.",Un corno d'ottone curvo dal tavolo della cerimonia.,Un cuerno de latón curvo de la mesa de la ceremonia.
+wamsg.table,"The ceremony table: glasses, a horn, the programme.","Der Festtisch: Gläser, ein Horn, das Programm.","La table de la cérémonie : verres, un cor, le programme.","Il tavolo della cerimonia: bicchieri, un corno, il programma.","La mesa de la ceremonia: copas, un cuerno, el programa."
+wamsg.speech,The mayor's speech.,Die Rede des Bürgermeisters.,Le discours du maire.,Il discorso del sindaco.,El discurso del alcalde.
+wamsg.net_ok,Clear water runs through the filter and down the main towards the square!,Klares Wasser läuft durch den Filter und die Hauptleitung hinunter zum Platz!,L'eau claire traverse le filtre et descend la conduite vers la place !,L'acqua limpida passa dal filtro e scende nella condotta verso la piazza!,¡El agua clara pasa por el filtro y baja por la tubería hacia la plaza!
+wamsg.window,"The square, the pump house, the fountain, the mayor.","Der Platz, das Pumpenhaus, der Brunnen, der Bürgermeister.","La place, la maison des pompes, la fontaine, le maire.","La piazza, la casa delle pompe, la fontana, il sindaco.","La plaza, la casa de bombas, la fuente, el alcalde."
+wamsg.window_jets,The jets stand exactly as in the programme.,Die Strahlen stehen genau wie im Programm.,Les jets sont exactement comme dans le programme.,I getti sono esattamente come nel programma.,Los chorros están justo como en el programa.
+wamsg.flag,A flag on the pump house.,Eine Flagge auf dem Pumpenhaus.,Un drapeau sur la maison des pompes.,Una bandiera sulla casa delle pompe.,Una bandera en la casa de bombas.
+wamsg.jets_ok,The three jets match the programme's drawing.,Die drei Strahlen gleichen der Zeichnung im Programm.,Les trois jets correspondent au dessin du programme.,I tre getti corrispondono al disegno del programma.,Los tres chorros coinciden con el dibujo del programa.
+wamsg.main_wait,The main valve. Not until the fountain is right.,Der Hauptschieber. Nicht bevor der Brunnen stimmt.,La vanne principale. Pas avant que la fontaine soit juste.,La valvola principale. Non prima che la fontana sia giusta.,La válvula principal. No hasta que la fuente esté bien.
+wamsg.not_yet,Not yet: the mayor is still talking.,Noch nicht: Der Bürgermeister redet noch.,Pas encore : le maire parle toujours.,Non ancora: il sindaco sta ancora parlando.,Aún no: el alcalde sigue hablando.
+wamsg.fountain,Now! The water rises!,Jetzt! Das Wasser steigt!,Maintenant ! L'eau jaillit !,Ora! L'acqua sale!,¡Ahora! ¡El agua sube!
+wamsg.door,Locked.,Abgeschlossen.,Fermée à clé.,Chiusa a chiave.,Cerrada con llave.
+wahint.1.1,Engineers keep their tools close to the work.,Ingenieure halten ihr Werkzeug nahe bei der Arbeit.,Les ingénieurs gardent leurs outils près du travail.,Gli ingegneri tengono gli attrezzi vicino al lavoro.,Los ingenieros guardan sus herramientas cerca del trabajo.
+wahint.1.2,Look into the coal bunker.,Schau in den Kohlenbunker.,Regarde dans la soute à charbon.,Guarda nel deposito del carbone.,Mira en la carbonera.
+wahint.1.3,Tap the coal: the spanner is in it.,Tippe auf die Kohle: Der Schlüssel steckt darin.,Touche le charbon : la clé y est.,Tocca il carbone: la chiave è lì.,Toca el carbón: la llave está dentro.
+wahint.2.1,The engine needs a fire.,Die Maschine braucht Feuer.,La machine a besoin de feu.,La macchina ha bisogno di fuoco.,La máquina necesita fuego.
+wahint.2.2,The firebox door is jammed; the matches are on the desk.,Die Feuertür klemmt; die Streichhölzer liegen auf dem Schreibtisch.,La porte du foyer est coincée ; les allumettes sont sur le bureau.,La porta del focolare è bloccata; i fiammiferi sono sulla scrivania.,La puerta del hogar está atascada; las cerillas están en la mesa.
+wahint.2.3,"Spanner on the firebox, then the matches.","Schlüssel an die Feuertür, dann die Streichhölzer.","La clé sur le foyer, puis les allumettes.","La chiave sul focolare, poi i fiammiferi.","La llave en el hogar, luego las cerillas."
+wahint.3.1,The boiler needs the right amount of water.,Der Kessel braucht die richtige Menge Wasser.,La chaudière a besoin de la bonne quantité d'eau.,La caldaia ha bisogno della giusta quantità d'acqua.,La caldera necesita la cantidad justa de agua.
+wahint.3.2,The water glass has two red marks.,Das Wasserglas hat zwei rote Marken.,Le niveau d'eau a deux repères rouges.,Il livello ha due segni rossi.,El nivel tiene dos marcas rojas.
+wahint.3.3,Turn the feed valve until the water stands between them (5).,"Dreh das Speiseventil, bis das Wasser dazwischen steht (5).",Tourne la vanne d'alimentation jusqu'à ce que l'eau soit entre eux (5).,Gira la valvola di alimentazione finché l'acqua sta tra i due (5).,Gira la válvula de alimentación hasta que el agua esté entre ellas (5).
+wahint.4.1,The chief engineer is upstairs: the speaking tube.,Der Chefingenieur ist oben: das Sprachrohr.,L'ingénieur en chef est en haut : le tuyau acoustique.,L'ingegnere capo è di sopra: il tubo portavoce.,El ingeniero jefe está arriba: el tubo acústico.
+wahint.4.2,He asks what you can see: look at the gauge and out of the filter hall's window.,"Er fragt, was du siehst: Schau aufs Manometer und aus dem Fenster der Filterhalle.",Il demande ce que tu vois : regarde le manomètre et par la fenêtre de la salle des filtres.,Chiede cosa vedi: guarda il manometro e dalla finestra della sala dei filtri.,Pregunta qué ves: mira el manómetro y por la ventana de la sala de filtros.
+wahint.4.3,In the green; a blue flag.,Im Grünen; eine blaue Flagge.,Dans le vert ; un drapeau bleu.,Sul verde; una bandiera blu.,En el verde; una bandera azul.
+wahint.5.1,The engineer told you the order of the levers.,Der Ingenieur hat dir die Reihenfolge der Hebel gesagt.,L'ingénieur t'a dit l'ordre des leviers.,L'ingegnere ti ha detto l'ordine delle leve.,El ingeniero te dijo el orden de las palancas.
+wahint.5.2,"The pictures under the levers: puffs are steam, drops are drains, arrows the throttle.","Die Bilder unter den Hebeln: Wolken sind Dampf, Tropfen die Ablässe, Pfeile der Regler.","Les dessins sous les leviers : nuages pour la vapeur, gouttes pour les purges, flèches pour le régulateur.","I disegni sotto le leve: nuvole il vapore, gocce gli spurghi, frecce la manetta.","Los dibujos bajo las palancas: nubes el vapor, gotas las purgas, flechas el regulador."
+wahint.5.3,"Middle lever, right lever, left lever.","Mittlerer Hebel, rechter Hebel, linker Hebel.","Levier du milieu, de droite, de gauche.","Leva centrale, destra, sinistra.","Palanca central, derecha, izquierda."
+wahint.6.1,Listen in the filter hall: something knocks.,Hör in der Filterhalle: Etwas klopft.,Écoute dans la salle des filtres : quelque chose cogne.,Ascolta nella sala dei filtri: qualcosa batte.,Escucha en la sala de filtros: algo golpea.
+wahint.6.2,An air lock knocks and shakes its riser.,Eine Luftblase klopft und schüttelt ihr Steigrohr.,Une bulle d'air cogne et secoue sa colonne.,Una bolla d'aria batte e scuote la sua colonna.,Una burbuja de aire golpea y sacude su tubería.
+wahint.6.3,Bleed the third riser.,Entlüfte das dritte Steigrohr.,Purge la troisième colonne.,Spurga la terza colonna.,Purga la tercera tubería.
+wahint.7.1,"The plaque's riddle says what the water passes, in order.","Das Rätsel auf dem Schild sagt, wodurch das Wasser läuft, der Reihe nach.","L'énigme de la plaque dit ce que l'eau traverse, dans l'ordre.","L'indovinello della targa dice cosa attraversa l'acqua, in ordine.","El acertijo de la placa dice por dónde pasa el agua, en orden."
+wahint.7.2,"A mountain's stone is gravel, a stone's sand is sand, a tree's black is charcoal. Water runs from the top down.","Der Stein des Bergs ist Kies, der Sand des Steins Sand, das Schwarze des Baums Holzkohle. Wasser läuft von oben nach unten.","La pierre de la montagne est le gravier, le sable de la pierre le sable, le noir de l'arbre le charbon. L'eau coule de haut en bas.","La pietra del monte è la ghiaia, la sabbia della pietra la sabbia, il nero dell'albero il carbone. L'acqua scende dall'alto.","La piedra del monte es la grava, la arena de la piedra la arena, lo negro del árbol el carbón. El agua baja de arriba abajo."
+wahint.7.3,"Pour charcoal first (bottom), then sand, then gravel, and test.","Zuerst Holzkohle (unten), dann Sand, dann Kies, dann prüfen.","D'abord le charbon (au fond), puis le sable, puis le gravier, et teste.","Prima il carbone (in fondo), poi la sabbia, poi la ghiaia, e prova.","Primero el carbón (abajo), luego arena, luego grava, y prueba."
+wahint.8.1,A piece of the pipe wall is missing.,Ein Stück der Rohrwand fehlt.,Il manque un morceau au mur de tuyaux.,Manca un pezzo della parete dei tubi.,Falta una pieza de la pared de tubos.
+wahint.8.2,Something curved and brass would do.,Etwas Gebogenes aus Messing würde gehen.,Quelque chose de courbe en laiton ferait l'affaire.,Andrebbe bene qualcosa di curvo e d'ottone.,Serviría algo curvo y de latón.
+wahint.8.3,Use the horn from the ceremony table on the gap.,Benutze das Horn vom Festtisch an der Lücke.,Utilise le cor de la table de la cérémonie sur le trou.,Usa il corno del tavolo della cerimonia sul buco.,Usa el cuerno de la mesa de la ceremonia en el hueco.
+wahint.9.1,The engineer's notes say which district valves may be open today.,"Die Notizen des Ingenieurs sagen, welche Quartierschieber heute offen sein dürfen.",Les notes de l'ingénieur disent quelles vannes peuvent être ouvertes aujourd'hui.,Gli appunti dell'ingegnere dicono quali valvole possono essere aperte oggi.,Las notas del ingeniero dicen qué válvulas pueden estar abiertas hoy.
+wahint.9.2,"The square is open and the market shut. With the harbour open, the station and the hill must be shut, and the mill too: that is one valve short.","Der Platz ist offen und der Markt zu. Mit offenem Hafen müssen Bahnhof und Hügel zu sein, und die Mühle auch: ein Schieber zu wenig.","La place est ouverte, le marché fermé. Avec le port ouvert, la gare et la colline doivent être fermées, et le moulin aussi : il manque une vanne.","La piazza è aperta e il mercato chiuso. Con il porto aperto, stazione e collina devono essere chiuse, e anche il mulino: manca una valvola.","La plaza abierta y el mercado cerrado. Con el puerto abierto, la estación y la colina cerradas, y el molino también: falta una válvula."
+wahint.9.3,"Open: hill, mill, square. Shut: harbour, market, station.","Offen: Hügel, Mühle, Platz. Zu: Hafen, Markt, Bahnhof.","Ouvertes : colline, moulin, place. Fermées : port, marché, gare.","Aperte: collina, mulino, piazza. Chiuse: porto, mercato, stazione.","Abiertas: colina, molino, plaza. Cerradas: puerto, mercado, estación."
+wahint.10.1,The pipe wall: water must run from the inlet top left to the main bottom right.,Die Rohrwand: Das Wasser muss vom Einlauf oben links zur Hauptleitung unten rechts.,Le mur de tuyaux : l'eau doit aller de l'entrée en haut à gauche à la conduite en bas à droite.,La parete dei tubi: l'acqua deve andare dall'ingresso in alto a sinistra alla condotta in basso a destra.,La pared de tubos: el agua debe ir de la entrada arriba a la izquierda a la tubería abajo a la derecha.
+wahint.10.2,It must pass through the filter tank tile; wet tiles turn blue as you go.,Sie muss durch das Filterbecken; nasse Teile werden blau.,Elle doit passer par le bassin filtrant ; les éléments mouillés bleuissent.,Deve passare dalla vasca filtrante; i pezzi bagnati diventano blu.,Debe pasar por el tanque de filtro; las piezas mojadas se vuelven azules.
+wahint.10.3,"From the inlet: one right, down, right into the filter, down out of it, right, then down to the outlet.","Vom Einlauf: eins nach rechts, hinunter, rechts in den Filter, unten hinaus, nach rechts, dann hinunter zum Auslauf.","Depuis l'entrée : un à droite, en bas, à droite dans le filtre, sortie en bas, à droite, puis en bas vers la sortie.","Dall'ingresso: uno a destra, giù, a destra nel filtro, fuori in basso, a destra, poi giù all'uscita.","Desde la entrada: uno a la derecha, abajo, a la derecha al filtro, salida por abajo, a la derecha y abajo a la salida."
+wahint.11.1,The fountain's jets: the programme shows how high each should be.,"Die Strahlen des Brunnens: Das Programm zeigt, wie hoch jeder sein soll.",Les jets de la fontaine : le programme montre leur hauteur.,I getti della fontana: il programma mostra quanto alto deve essere ciascuno.,Los chorros de la fuente: el programa muestra la altura de cada uno.
+wahint.11.2,A jet's height is the engine's speed (governor) times its valve.,Die Höhe eines Strahls ist die Geschwindigkeit der Maschine (Regler) mal sein Schieber.,La hauteur d'un jet est la vitesse de la machine (régulateur) fois sa vanne.,L'altezza di un getto è la velocità della macchina (regolatore) per la sua valvola.,La altura de un chorro es la velocidad de la máquina (regulador) por su válvula.
+wahint.11.3,"Governor to 2; jet valves 1, 3, 1.","Regler auf 2; Strahlschieber 1, 3, 1.","Régulateur sur 2 ; vannes 1, 3, 1.","Regolatore su 2; valvole 1, 3, 1.","Regulador en 2; válvulas 1, 3, 1."
+wahint.12.1,The speech says when the water should rise.,"Die Rede sagt, wann das Wasser steigen soll.",Le discours dit quand l'eau doit jaillir.,Il discorso dice quando l'acqua deve salire.,El discurso dice cuándo debe subir el agua.
+wahint.12.2,Watch the mayor through the window: he raises his glass now and then.,Beobachte den Bürgermeister durchs Fenster: Ab und zu hebt er sein Glas.,Observe le maire par la fenêtre : de temps en temps il lève son verre.,Guarda il sindaco dalla finestra: ogni tanto alza il bicchiere.,Mira al alcalde por la ventana: de vez en cuando alza la copa.
+wahint.12.3,Tap the main valve while his glass is up.,"Tippe auf den Hauptschieber, während sein Glas oben ist.",Touche la vanne principale pendant que son verre est levé.,Tocca la valvola principale mentre il bicchiere è alzato.,Toca la válvula principal mientras su copa está alzada.
+rcintro.1,"The model railway club, late evening. Albert Finch, who founded the club, has died, and left one last layout for whoever comes after him.","Der Modelleisenbahnclub, später Abend. Albert Finch, der Gründer des Clubs, ist gestorben und hat ein letztes Arrangement für seine Nachfolger hinterlassen.","Le club de modélisme ferroviaire, tard le soir. Albert Finch, fondateur du club, est mort et a laissé un dernier réseau à ceux qui viendront après lui.","Il club di fermodellismo, tarda sera. Albert Finch, fondatore del club, è morto e ha lasciato un ultimo plastico a chi verrà dopo di lui.","El club de modelismo ferroviario, de noche. Albert Finch, fundador del club, ha muerto y ha dejado un último trazado para quien venga detrás."
+rcintro.2,"His letter on the notice board says the club room stays locked until his 8:15 runs, the train that, in all his years, never left. The layout runs through the wall into the workshop.","Sein Brief am Anschlagbrett sagt, der Clubraum bleibe verschlossen, bis sein 8:15 fährt, der Zug, der in all seinen Jahren nie abgefahren ist. Die Anlage führt durch die Wand in die Werkstatt.","Sa lettre au tableau dit que la salle restera fermée tant que son 8 h 15 n'aura pas roulé, le train qui, en toutes ces années, n'est jamais parti. Le réseau traverse le mur jusqu'à l'atelier.","La sua lettera in bacheca dice che la sala resterà chiusa finché non partirà il suo 8:15, il treno che in tanti anni non è mai partito. Il plastico prosegue oltre il muro, nell'officina.","Su carta en el tablón dice que la sala seguirá cerrada hasta que circule su 8:15, el tren que en todos sus años nunca salió. El trazado atraviesa la pared hasta el taller."
+rcintro.3,This one is hard and long. A good time is %d minutes.,Dieser Raum ist schwer und lang. Eine gute Zeit sind %d Minuten.,Cette salle est difficile et longue. Un bon temps : %d minutes.,Questa stanza è difficile e lunga. Un buon tempo: %d minuti.,Esta sala es difícil y larga. Un buen tiempo: %d minutos.
+rcend.title,The 8:15 has arrived,Der 8:15 ist angekommen,Le 8 h 15 est arrivé,L'8:15 è arrivato,El 8:15 ha llegado
+rcend.text,"The black engine pulls its three coaches into the little station behind the bookcase, a place on no map. A tiny figure waits on the platform with a suitcase: Albert himself, in tin. Next to him, the key to the club room.","Die schwarze Lok zieht ihre drei Wagen in den kleinen Bahnhof hinter dem Bücherregal, einen Ort auf keiner Karte. Auf dem Perron wartet eine winzige Figur mit Koffer: Albert selbst, aus Blech. Daneben der Schlüssel zum Clubraum.","La locomotive noire tire ses trois voitures jusqu'à la petite gare derrière la bibliothèque, un lieu qui n'est sur aucune carte. Sur le quai attend une figurine avec une valise : Albert lui-même, en fer-blanc. À côté, la clé de la salle.","La locomotiva nera porta le sue tre carrozze nella piccola stazione dietro la libreria, un luogo che non è su nessuna mappa. Sul binario aspetta una figurina con la valigia: Albert in persona, di latta. Accanto, la chiave della sala.","La locomotora negra lleva sus tres coches a la pequeña estación tras la estantería, un lugar que no está en ningún mapa. En el andén espera una figurita con maleta: el propio Albert, de hojalata. A su lado, la llave de la sala."
+item.rckey,Controller key,Schlüssel zum Fahrpult,Clé du pupitre,Chiave del banco di comando,Llave del mando
+item.rcboard,8:15 headboard,Zugschild 8:15,Plaque 8 h 15,Targa 8:15,Placa 8:15
+item.rcbook,A red book,Ein rotes Buch,Un livre rouge,Un libro rosso,Un libro rojo
+rctext.letter,"To whoever keeps the club going,
+My 8:15 never left the shed. Make it up properly and send it where it was always meant to go.
+Behind the engine sit those who travel; then what carries their words; at the back, what keeps their homes warm.
+The rest you will find out on the way. Warm up with the milk.
+Albert","An alle, die den Club weiterführen,
+Mein 8:15 hat das Depot nie verlassen. Stellt ihn richtig zusammen und schickt ihn dorthin, wo er immer hin sollte.
+Hinter der Lok sitzen die Reisenden; dann, was ihre Worte trägt; ganz hinten, was ihre Häuser wärmt.
+Den Rest findet ihr unterwegs heraus. Wärmt euch mit der Milch auf.
+Albert","À qui fera vivre le club,
+Mon 8 h 15 n'a jamais quitté le dépôt. Formez-le comme il faut et envoyez-le là où il devait toujours aller.
+Derrière la locomotive, ceux qui voyagent ; puis ce qui porte leurs mots ; tout au bout, ce qui chauffe leurs maisons.
+Le reste, vous le trouverez en route. Échauffez-vous avec le lait.
+Albert","A chi manderà avanti il club,
+Il mio 8:15 non ha mai lasciato il deposito. Componetelo come si deve e mandatelo dove doveva sempre andare.
+Dietro la locomotiva chi viaggia; poi ciò che porta le loro parole; in fondo, ciò che scalda le loro case.
+Il resto lo scoprirete strada facendo. Scaldatevi con il latte.
+Albert","A quien mantenga vivo el club:
+Mi 8:15 nunca salió del depósito. Formadlo como es debido y mandadlo adonde siempre debió ir.
+Detrás de la locomotora, los que viajan; luego, lo que lleva sus palabras; al final, lo que calienta sus casas.
+El resto lo descubriréis por el camino. Calentad con la leche.
+Albert"
+rctext.notes,"Albert's notebook, the four engines:
+- Comet is the blue one.
+- Atlas ran the 6:40.
+- The black engine ran later than the red one.
+- The green one was never Atlas and never ran the 7:05.
+- Lark ran later than Comet.
+- The green one ran before the black one.
+(Hollis remembers Duchess.)","Alberts Notizbuch, die vier Loks:
+- Comet ist die blaue.
+- Atlas fuhr den 6:40.
+- Die schwarze Lok fuhr später als die rote.
+- Die grüne war nie Atlas und fuhr nie den 7:05.
+- Lark fuhr später als Comet.
+- Die grüne fuhr vor der schwarzen.
+(Hollis erinnert sich an Duchess.)","Le carnet d'Albert, les quatre locomotives :
+- Comet est la bleue.
+- Atlas faisait le 6 h 40.
+- La noire roulait plus tard que la rouge.
+- La verte n'a jamais été Atlas et n'a jamais fait le 7 h 05.
+- Lark roulait après Comet.
+- La verte roulait avant la noire.
+(Hollis se souvient de Duchess.)","Il taccuino di Albert, le quattro locomotive:
+- Comet è la blu.
+- Atlas faceva il 6:40.
+- La nera viaggiava più tardi della rossa.
+- La verde non è mai stata Atlas e non ha mai fatto il 7:05.
+- Lark viaggiava dopo Comet.
+- La verde viaggiava prima della nera.
+(Hollis ricorda Duchess.)","El cuaderno de Albert, las cuatro locomotoras:
+- Comet es la azul.
+- Atlas hacía el 6:40.
+- La negra salía más tarde que la roja.
+- La verde nunca fue Atlas ni hizo el 7:05.
+- Lark salía después de Comet.
+- La verde salía antes que la negra.
+(Hollis se acuerda de Duchess.)"
+rctext.p1,Yard | Main,Rangier | Strecke,Triage | Ligne,Scalo | Linea,Patio | Línea
+rctext.p2,Dairy | Tunnel,Molkerei | Tunnel,Laiterie | Tunnel,Caseificio | Galleria,Lechería | Túnel
+rctext.p3,Post | On,Post | Weiter,Poste | Suite,Posta | Avanti,Correos | Seguir
+rctext.p4,Shed | ?,Depot | ?,Dépôt | ?,Deposito | ?,Depósito | ?
+rctext.run,RUN,FAHRT,DÉPART,VIA,MARCHA
+rctext.yard,the yard,das Rangiergleis,le faisceau,lo scalo,el patio
+rctext.dairy,the dairy,die Molkerei,la laiterie,il caseificio,la lechería
+rctext.post,the post office,die Post,la poste,la posta,correos
+rctext.loop,back to the shed,zurück ins Depot,retour au dépôt,ritorno al deposito,vuelta al depósito
+rctext.nowhere,the end of the line,das Ende der Strecke,le bout de la ligne,la fine della linea,el final de la vía
+rctalk.1,"""Hollis speaking. Who's calling so late?""",«Hollis. Wer ruft so spät an?»,« Hollis. Qui appelle si tard ? »,«Hollis. Chi chiama così tardi?»,«Hollis al habla. ¿Quién llama tan tarde?»
+rcsay.1a,"""The telephone company.""",«Die Telefongesellschaft.»,« La compagnie du téléphone. »,«La compagnia telefonica.»,«La compañía telefónica.»
+rcsay.1b,"""A new member of Albert's club.""",«Ein neues Mitglied von Alberts Club.»,« Un nouveau membre du club d'Albert. »,«Un nuovo socio del club di Albert.»,«Un nuevo socio del club de Albert.»
+rcsay.1c,"""Wrong number, sorry.""","«Falsch verbunden, Verzeihung.»","« Mauvais numéro, pardon. »","«Numero sbagliato, scusi.»","«Me he equivocado, perdone.»"
+rctalk.2,"""Albert's last layout! So you found his four engines?""",«Alberts letzte Anlage! Du hast also seine vier Loks gefunden?»,« Le dernier réseau d'Albert ! Tu as donc trouvé ses quatre locomotives ? »,«L'ultimo plastico di Albert! Allora hai trovato le sue quattro locomotive?»,«¡El último trazado de Albert! ¿Así que encontraste sus cuatro locomotoras?»
+rcsay.2a,"""Yes, but their name plates are gone.""","«Ja, aber ihre Namensschilder fehlen.»","« Oui, mais leurs plaques de nom ont disparu. »","«Sì, ma le targhe con i nomi non ci sono più.»","«Sí, pero faltan las placas con sus nombres.»"
+rcsay.2b,"""No, there are none.""","«Nein, da sind keine.»","« Non, il n'y en a pas. »","«No, non ce ne sono.»","«No, no hay ninguna.»"
+rctalk.3,"""Oh, he took them off for the puzzle, of course. I only remember one thing: Duchess always ran the 7:30, never anything else. Good luck, dear.""","«Ach, die hat er für das Rätsel abgenommen, natürlich. Ich weiss nur eins: Duchess fuhr immer den 7:30, nie etwas anderes. Viel Glück, mein Lieber.»","« Oh, il les a enlevées pour l'énigme, bien sûr. Je ne me souviens que d'une chose : Duchess faisait toujours le 7 h 30, jamais autre chose. Bonne chance, mon petit. »","«Oh, le ha tolte per l'enigma, naturalmente. Ricordo solo una cosa: Duchess faceva sempre il 7:30, mai altro. Buona fortuna, caro.»","«Ay, las quitó para el acertijo, claro. Solo recuerdo una cosa: Duchess hacía siempre el 7:30, nunca otro. Suerte, querido.»"
+rcsay.3a,"""Thank you, Mrs Hollis.""","«Danke, Frau Hollis.»","« Merci, Madame Hollis. »","«Grazie, signora Hollis.»","«Gracias, señora Hollis.»"
+rcmsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+rcmsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+rcmsg.hangup,Click. Mrs Hollis has hung up. Call again.,Klick. Frau Hollis hat aufgelegt. Ruf nochmals an.,Clic. Madame Hollis a raccroché. Rappelle.,Clic. La signora Hollis ha riattaccato. Richiama.,Clic. La señora Hollis ha colgado. Llama otra vez.
+rcmsg.no_line,No dial tone without power: the club's switch is off.,Ohne Strom kein Freizeichen: Der Hauptschalter des Clubs ist aus.,Pas de tonalité sans courant : l'interrupteur du club est coupé.,Senza corrente niente linea: l'interruttore del club è spento.,Sin corriente no hay tono: el interruptor del club está apagado.
+rcmsg.key,Inside the station's little clock tower: a key.,In der kleinen Bahnhofsuhr: ein Schlüssel.,Dans la petite tour de l'horloge de la gare : une clé.,Nella torretta dell'orologio della stazione: una chiave.,En la torrecita del reloj de la estación: una llave.
+rcmsg.station,The model station.,Der Modellbahnhof.,La gare miniature.,La stazione in miniatura.,La estación en miniatura.
+rcmsg.controller,The controller: two point switches and a RUN button. A keyhole.,Das Fahrpult: zwei Weichenschalter und ein Fahrknopf. Ein Schlüsselloch.,Le pupitre : deux commandes d'aiguillage et un bouton de départ. Une serrure.,Il banco di comando: due deviatoi e un pulsante. Una serratura.,El mando: dos agujas y un botón de marcha. Una cerradura.
+rcmsg.powered,Power! The little houses light up.,Strom! Die kleinen Häuser leuchten.,Du courant ! Les petites maisons s'allument.,Corrente! Le casette si accendono.,¡Corriente! Las casitas se encienden.
+rcmsg.no_power,Nothing moves without power.,Ohne Strom bewegt sich nichts.,Rien ne bouge sans courant.,Senza corrente non si muove niente.,Sin corriente no se mueve nada.
+rcmsg.engine_out,The turntable lines up a track: an engine can roll out.,Die Drehscheibe richtet ein Gleis aus: Eine Lok kann hinausrollen.,Le pont tournant aligne une voie : une locomotive peut sortir.,La piattaforma allinea un binario: una locomotiva può uscire.,La placa giratoria alinea una vía: una locomotora puede salir.
+rcmsg.no_engine,No engine on the line.,Keine Lok auf der Strecke.,Aucune locomotive sur la ligne.,Nessuna locomotiva sulla linea.,Ninguna locomotora en la vía.
+rcmsg.to_yard,The train trundles into the yard and stops.,Der Zug zuckelt aufs Rangiergleis und hält.,Le train entre au faisceau et s'arrête.,Il treno entra nello scalo e si ferma.,El tren entra en el patio y se para.
+rcmsg.milk_ok,The milk van arrives at the dairy. Albert's warm-up is done.,Der Milchwagen erreicht die Molkerei. Alberts Aufwärmrunde ist geschafft.,Le wagon de lait arrive à la laiterie. L'échauffement d'Albert est fait.,Il carro del latte arriva al caseificio. Il riscaldamento di Albert è fatto.,El vagón de leche llega a la lechería. El calentamiento de Albert está hecho.
+rcmsg.dairy_again,The dairy already has its milk.,Die Molkerei hat ihre Milch schon.,La laiterie a déjà son lait.,Il caseificio ha già il latte.,La lechería ya tiene su leche.
+rcmsg.milk_lost,The milk van ends up at the post office. Nobody there wants milk.,Der Milchwagen landet bei der Post. Dort will niemand Milch.,Le wagon de lait finit à la poste. Personne n'y veut de lait.,Il carro del latte finisce alla posta. Lì nessuno vuole latte.,El vagón de leche acaba en correos. Allí nadie quiere leche.
+rcmsg.post_ok,Through the tunnel and into the workshop: the parcels reach the post office.,Durch den Tunnel in die Werkstatt: Die Pakete erreichen die Post.,À travers le tunnel jusqu'à l'atelier : les colis arrivent à la poste.,Attraverso la galleria fino all'officina: i pacchi arrivano alla posta.,Por el túnel hasta el taller: los paquetes llegan a correos.
+rcmsg.post_again,The post office has its parcels.,Die Post hat ihre Pakete.,La poste a ses colis.,La posta ha i suoi pacchi.,Correos ya tiene sus paquetes.
+rcmsg.loop,The train circles round and back to the shed.,Der Zug fährt im Kreis zurück ins Depot.,Le train fait le tour et revient au dépôt.,Il treno fa il giro e torna al deposito.,El tren da la vuelta y regresa al depósito.
+rcmsg.buffer,The line ends at a buffer stop by the bookcase.,Die Strecke endet an einem Prellbock beim Bücherregal.,La ligne finit sur un butoir près de la bibliothèque.,La linea finisce a un respingente vicino alla libreria.,La vía acaba en una topera junto a la estantería.
+rcmsg.gap,The train stops short: there is a gap in the line.,Der Zug hält an: Die Strecke hat eine Lücke.,Le train s'arrête : il y a un trou dans la ligne.,Il treno si ferma: c'è un buco nella linea.,El tren se detiene: hay un hueco en la vía.
+rcmsg.not_815,"Only the 8:15 itself may go to Nowhere: the right engine, the right train.","Nur der 8:15 selbst darf nach Nirgendwo: die richtige Lok, der richtige Zug.","Seul le vrai 8 h 15 peut aller à Nulle-Part : la bonne locomotive, le bon train.","Solo il vero 8:15 può andare a Nessundove: la locomotiva giusta, il treno giusto.","Solo el propio 8:15 puede ir a Ninguna Parte: la locomotora correcta, el tren correcto."
+rcmsg.nowhere,The 8:15 glides over the bridge into a station that is on no map.,"Der 8:15 gleitet über die Brücke in einen Bahnhof, der auf keiner Karte steht.",Le 8 h 15 glisse sur le pont jusqu'à une gare qui n'est sur aucune carte.,L'8:15 scivola sul ponte in una stazione che non è su nessuna mappa.,El 8:15 cruza el puente hacia una estación que no está en ningún mapa.
+rcmsg.track_empty,That track is empty.,Das Gleis ist leer.,Cette voie est vide.,Quel binario è vuoto.,Esa vía está vacía.
+rcmsg.track_full,That track is full.,Das Gleis ist voll.,Cette voie est pleine.,Quel binario è pieno.,Esa vía está llena.
+rcmsg.consist_ok,"Passengers, mail, coal: the 8:15 stands ready on track 1.","Reisende, Post, Kohle: Der 8:15 steht bereit auf Gleis 1.","Voyageurs, courrier, charbon : le 8 h 15 est prêt sur la voie 1.","Passeggeri, posta, carbone: l'8:15 è pronto sul binario 1.","Pasajeros, correo, carbón: el 8:15 está listo en la vía 1."
+rcmsg.consist_done,The 8:15 is made up. Leave it be.,Der 8:15 ist zusammengestellt. Lass ihn.,Le 8 h 15 est formé. Laisse-le.,L'8:15 è composto. Lascialo.,El 8:15 está formado. Déjalo.
+rcmsg.notes,Albert's notebook.,Alberts Notizbuch.,Le carnet d'Albert.,Il taccuino di Albert.,El cuaderno de Albert.
+rcmsg.board,An enamel headboard: 8:15.,Ein emailliertes Zugschild: 8:15.,Une plaque émaillée : 8 h 15.,Una targa smaltata: 8:15.,Una placa esmaltada: 8:15.
+rcmsg.not_sure,Which engine was the 8:15? You are not sure yet.,Welche Lok war der 8:15? Du bist dir noch nicht sicher.,Quelle locomotive était le 8 h 15 ? Tu n'es pas encore sûr.,Quale locomotiva era l'8:15? Non ne sei ancora sicuro.,¿Qué locomotora era el 8:15? Aún no estás seguro.
+rcmsg.wrong_engine,That engine never ran the 8:15. You take the board back.,Diese Lok fuhr nie den 8:15. Du nimmst das Schild zurück.,Cette locomotive n'a jamais fait le 8 h 15. Tu reprends la plaque.,Quella locomotiva non ha mai fatto l'8:15. Riprendi la targa.,Esa locomotora nunca hizo el 8:15. Recuperas la placa.
+rcmsg.board_on,The headboard clicks onto the black engine. It looks right.,Das Schild rastet an der schwarzen Lok ein. Es passt.,La plaque s'enclenche sur la locomotive noire. Elle lui va bien.,La targa si aggancia alla locomotiva nera. Le sta bene.,La placa encaja en la locomotora negra. Le queda bien.
+rcmsg.engine1,The green engine.,Die grüne Lok.,La locomotive verte.,La locomotiva verde.,La locomotora verde.
+rcmsg.engine2,The red engine.,Die rote Lok.,La locomotive rouge.,La locomotiva rossa.,La locomotora roja.
+rcmsg.engine3,The blue engine.,Die blaue Lok.,La locomotive bleue.,La locomotiva blu.,La locomotora azul.
+rcmsg.engine4,The black engine.,Die schwarze Lok.,La locomotive noire.,La locomotiva nera.,La locomotora negra.
+rcmsg.just_a_book,Just a book.,Nur ein Buch.,Juste un livre.,Solo un libro.,Solo un libro.
+rcmsg.branch,The red book comes out and the shelf swings aside: a hidden branch line!,"Das rote Buch kommt heraus, und das Regal schwenkt zur Seite: eine versteckte Nebenstrecke!",Le livre rouge sort et l'étagère pivote : une ligne secondaire cachée !,Il libro rosso esce e lo scaffale si sposta: una linea secondaria nascosta!,El libro rojo sale y la estantería gira: ¡un ramal escondido!
+rcmsg.shelf_open,The shelf stands open.,Das Regal steht offen.,L'étagère est ouverte.,Lo scaffale è aperto.,La estantería está abierta.
+rcmsg.gap_open,"A river on the layout, and no bridge across it.","Ein Fluss auf der Anlage, und keine Brücke darüber.","Une rivière sur le réseau, et aucun pont.","Un fiume sul plastico, e nessun ponte.",Un río en el trazado y ningún puente.
+rcmsg.gap_bridged,The red book bridges the river.,Das rote Buch überbrückt den Fluss.,Le livre rouge enjambe la rivière.,Il libro rosso scavalca il fiume.,El libro rojo cruza el río.
+rcmsg.bridge,The book is exactly long enough: a bridge.,Das Buch ist genau lang genug: eine Brücke.,Le livre est juste assez long : un pont.,Il libro è lungo quanto basta: un ponte.,El libro mide justo lo necesario: un puente.
+rcmsg.letter,Albert's letter.,Alberts Brief.,La lettre d'Albert.,La lettera di Albert.,La carta de Albert.
+rcmsg.portrait,"Albert Finch, in his conductor's cap.","Albert Finch, mit seiner Schaffnermütze.","Albert Finch, avec sa casquette de contrôleur.","Albert Finch, con il berretto da capotreno.","Albert Finch, con su gorra de revisor."
+rcmsg.phone,The club telephone: speed dial buttons with members' names.,Das Clubtelefon: Kurzwahltasten mit Namen der Mitglieder.,Le téléphone du club : des touches au nom des membres.,Il telefono del club: tasti rapidi con i nomi dei soci.,El teléfono del club: botones con los nombres de los socios.
+rcmsg.dairy,The dairy.,Die Molkerei.,La laiterie.,Il caseificio.,La lechería.
+rcmsg.post,The post office.,Die Post.,La poste.,La posta.,Correos.
+rcmsg.tunnel,The tunnel into the wall.,Der Tunnel in die Wand.,Le tunnel dans le mur.,La galleria nel muro.,El túnel en la pared.
+rcmsg.bookcase,A bookcase full of railway books.,Ein Regal voller Eisenbahnbücher.,Une bibliothèque pleine de livres sur le train.,Una libreria piena di libri sui treni.,Una estantería llena de libros de trenes.
+rcmsg.bench,The workbench.,Die Werkbank.,L'établi.,Il banco da lavoro.,El banco de trabajo.
+rcmsg.yardsign,The yard.,Das Rangiergleis.,Le faisceau.,Lo scalo.,El patio.
+rcmsg.sign,"A sign inside the tunnel mouth, too dark to read.","Ein Schild im Tunnelmund, zu dunkel zum Lesen.","Un panneau à l'entrée du tunnel, trop sombre pour être lu.","Un cartello all'imbocco della galleria, troppo buio per leggerlo.","Un letrero en la boca del túnel, demasiado oscuro para leerlo."
+rcmsg.clock,Ten past eight.,Zehn nach acht.,Huit heures dix.,Le otto e dieci.,Las ocho y diez.
+rchint.1.1,Albert hid things in his models.,Albert versteckte Dinge in seinen Modellen.,Albert cachait des choses dans ses maquettes.,Albert nascondeva cose nei suoi modelli.,Albert escondía cosas en sus maquetas.
+rchint.1.2,Look closely at the model station.,Schau dir den Modellbahnhof genau an.,Regarde bien la gare miniature.,Guarda bene la stazione in miniatura.,Mira bien la estación en miniatura.
+rchint.1.3,The key is in the little clock tower.,Der Schlüssel ist in der kleinen Bahnhofsuhr.,La clé est dans la petite tour de l'horloge.,La chiave è nella torretta dell'orologio.,La llave está en la torrecita del reloj.
+rchint.2.1,The controller has a keyhole.,Das Fahrpult hat ein Schlüsselloch.,Le pupitre a une serrure.,Il banco di comando ha una serratura.,El mando tiene una cerradura.
+rchint.2.2,The key from the clock tower fits.,Der Schlüssel aus der Uhr passt.,La clé de l'horloge convient.,La chiave dell'orologio entra.,La llave del reloj encaja.
+rchint.2.3,Use the key on the controller.,Benutze den Schlüssel am Fahrpult.,Utilise la clé sur le pupitre.,Usa la chiave sul banco di comando.,Usa la llave en el mando.
+rchint.3.1,The engines stand in the shed around the turntable.,Die Loks stehen im Depot um die Drehscheibe.,Les locomotives sont au dépôt autour du pont tournant.,Le locomotive sono nel deposito intorno alla piattaforma.,Las locomotoras están en el depósito alrededor de la placa giratoria.
+rchint.3.2,Turn the turntable to line it up with a track.,"Dreh die Scheibe, bis sie an einem Gleis steht.",Tourne le pont jusqu'à ce qu'il s'aligne avec une voie.,Gira la piattaforma finché è allineata con un binario.,Gira la placa hasta alinearla con una vía.
+rchint.3.3,One turn of the turntable is enough for now.,Eine Drehung der Scheibe genügt vorerst.,Un tour du pont suffit pour l'instant.,Per ora basta un giro della piattaforma.,De momento basta con un giro de la placa.
+rchint.4.1,Albert's letter: warm up with the milk.,Alberts Brief: zuerst mit der Milch aufwärmen.,La lettre d'Albert : s'échauffer avec le lait.,La lettera di Albert: scaldarsi con il latte.,La carta de Albert: calentar con la leche.
+rchint.4.2,The controller's screen says where a run would end.,"Die Anzeige am Fahrpult sagt, wo eine Fahrt endet.",L'écran du pupitre dit où finira le trajet.,Lo schermo del banco dice dove finirà la corsa.,La pantalla del mando dice dónde acabará el viaje.
+rchint.4.3,"First switch to the main line, second to the dairy, then RUN.","Erster Schalter auf Strecke, zweiter auf Molkerei, dann FAHRT.","Premier sur la ligne, second sur la laiterie, puis DÉPART.","Primo sulla linea, secondo sul caseificio, poi VIA.","Primera a la línea, segunda a la lechería y MARCHA."
+rchint.5.1,The next delivery goes through the tunnel into the workshop.,Die nächste Lieferung geht durch den Tunnel in die Werkstatt.,La prochaine livraison passe le tunnel jusqu'à l'atelier.,La prossima consegna passa dalla galleria all'officina.,La siguiente entrega pasa por el túnel al taller.
+rchint.5.2,The workshop has its own points.,Die Werkstatt hat eigene Weichen.,L'atelier a ses propres aiguillages.,L'officina ha i suoi deviatoi.,El taller tiene sus propias agujas.
+rchint.5.3,"Club room: main line, tunnel. Workshop: post office. Then RUN.","Clubraum: Strecke, Tunnel. Werkstatt: Post. Dann FAHRT.","Salle : ligne, tunnel. Atelier : poste. Puis DÉPART.","Sala: linea, galleria. Officina: posta. Poi VIA.","Sala: línea, túnel. Taller: correos. Luego MARCHA."
+rchint.6.1,Someone else knew Albert well.,Jemand anderes kannte Albert gut.,Quelqu'un d'autre connaissait bien Albert.,Qualcun altro conosceva bene Albert.,Alguien más conocía bien a Albert.
+rchint.6.2,The club telephone has a speed dial for Mrs Hollis.,Das Clubtelefon hat eine Kurzwahl für Frau Hollis.,Le téléphone du club a une touche pour Madame Hollis.,Il telefono del club ha un tasto per la signora Hollis.,El teléfono del club tiene un botón para la señora Hollis.
+rchint.6.3,Say you are a new member; say the name plates are gone.,"Sag, du seist neues Mitglied; sag, die Namensschilder fehlen.",Dis que tu es un nouveau membre ; dis que les plaques ont disparu.,Di' che sei un nuovo socio; di' che le targhe non ci sono.,Di que eres socio nuevo; di que faltan las placas.
+rchint.7.1,Which engine ran the 8:15? Albert's notebook (workbench) and Mrs Hollis tell you.,Welche Lok fuhr den 8:15? Alberts Notizbuch (Werkbank) und Frau Hollis sagen es dir.,Quelle locomotive faisait le 8 h 15 ? Le carnet d'Albert (établi) et Madame Hollis te le disent.,Quale locomotiva faceva l'8:15? Te lo dicono il taccuino di Albert (banco) e la signora Hollis.,¿Qué locomotora hacía el 8:15? Te lo dicen el cuaderno de Albert (banco) y la señora Hollis.
+rchint.7.2,"Comet is blue and Atlas ran the 6:40, so Comet and Lark share the 7:05 and the 8:15; Lark is later.","Comet ist blau und Atlas fuhr den 6:40, also teilen Comet und Lark den 7:05 und den 8:15; Lark ist später.","Comet est bleue et Atlas faisait le 6 h 40 ; Comet et Lark se partagent le 7 h 05 et le 8 h 15, Lark plus tard.","Comet è blu e Atlas faceva il 6:40; Comet e Lark si dividono il 7:05 e l'8:15, Lark più tardi.","Comet es azul y Atlas hacía el 6:40; Comet y Lark se reparten el 7:05 y el 8:15, Lark más tarde."
+rchint.7.3,"Lark, the 8:15, is the black engine on track 4: put the headboard on it.","Lark, der 8:15, ist die schwarze Lok auf Gleis 4: Häng das Schild daran.","Lark, le 8 h 15, est la locomotive noire de la voie 4 : mets-lui la plaque.","Lark, l'8:15, è la locomotiva nera del binario 4: mettile la targa.","Lark, el 8:15, es la locomotora negra de la vía 4: ponle la placa."
+rchint.8.1,A sign in the workshop's tunnel mouth is too dark to read.,Ein Schild im Tunnelmund der Werkstatt ist zu dunkel zum Lesen.,Un panneau à l'entrée du tunnel de l'atelier est trop sombre.,Un cartello all'imbocco della galleria dell'officina è troppo buio.,Un letrero en la boca del túnel del taller está demasiado oscuro.
+rchint.8.2,A passing engine's lamp lights it for a moment: run a train through the tunnel and watch the sign.,Die Lampe einer vorbeifahrenden Lok erhellt es kurz: Lass einen Zug durch den Tunnel fahren und schau aufs Schild.,La lampe d'une locomotive l'éclaire un instant : fais passer un train et regarde le panneau.,La lampada di una locomotiva lo illumina un attimo: fai passare un treno e guarda il cartello.,La lámpara de una locomotora lo ilumina un momento: haz pasar un tren y mira el letrero.
+rchint.8.3,It shows the sixth book on the shelf: pull it.,Es zeigt das sechste Buch im Regal: Zieh es heraus.,Il montre le sixième livre de l'étagère : tire-le.,Mostra il sesto libro dello scaffale: tiralo.,Muestra el sexto libro de la estantería: sácalo.
+rchint.9.1,Albert's letter says how the 8:15 is made up.,"Alberts Brief sagt, wie der 8:15 zusammengestellt ist.",La lettre d'Albert dit comment former le 8 h 15.,La lettera di Albert dice come si compone l'8:15.,La carta de Albert dice cómo se forma el 8:15.
+rchint.9.2,"Passengers behind the engine, then the mail, the coal at the back, all on track 1. The arrows move the front wagon of a track to another.","Reisende hinter der Lok, dann die Post, die Kohle hinten, alles auf Gleis 1. Die Pfeile setzen den vordersten Wagen auf ein anderes Gleis.","Voyageurs derrière la locomotive, puis le courrier, le charbon au bout, tout sur la voie 1. Les flèches déplacent le wagon de tête vers une autre voie.","Passeggeri dietro la locomotiva, poi la posta, il carbone in fondo, tutto sul binario 1. Le frecce spostano il primo carro su un altro binario.","Pasajeros tras la locomotora, luego el correo, el carbón al final, todo en la vía 1. Las flechas mueven el primer vagón a otra vía."
+rchint.9.3,"Clear track 1 first, keep the coal at its buffer end; eleven moves at best.","Räum zuerst Gleis 1, die Kohle bleibt beim Prellbock; elf Züge im besten Fall.","Libère d'abord la voie 1, le charbon reste côté butoir ; onze coups au mieux.","Libera prima il binario 1, il carbone resta al respingente; undici mosse al meglio.","Despeja primero la vía 1, el carbón se queda en la topera; once movimientos como mínimo."
+rchint.10.1,The hidden branch crosses a river with no bridge.,Die versteckte Strecke quert einen Fluss ohne Brücke.,La ligne cachée traverse une rivière sans pont.,La linea nascosta attraversa un fiume senza ponte.,El ramal escondido cruza un río sin puente.
+rchint.10.2,Something flat and long enough to lie across it.,"Etwas Flaches, lang genug, um darüber zu liegen.",Quelque chose de plat et assez long pour l'enjamber.,Qualcosa di piatto e abbastanza lungo da passarci sopra.,Algo plano y lo bastante largo para tenderlo encima.
+rchint.10.3,Use the red book on the gap.,Benutze das rote Buch an der Lücke.,Utilise le livre rouge sur le trou.,Usa il libro rosso sul buco.,Usa el libro rojo en el hueco.
+rchint.11.1,"Now the real 8:15: the right engine, the right train, the right road.","Jetzt der echte 8:15: die richtige Lok, der richtige Zug, der richtige Weg.","Maintenant le vrai 8 h 15 : la bonne locomotive, le bon train, la bonne voie.","Ora il vero 8:15: la locomotiva giusta, il treno giusto, la strada giusta.","Ahora el verdadero 8:15: la locomotora, el tren y el camino correctos."
+rchint.11.2,Turn the turntable to the black engine; the last workshop switch leads to Nowhere.,Dreh die Scheibe zur schwarzen Lok; der letzte Schalter der Werkstatt führt nach Nirgendwo.,Tourne le pont vers la locomotive noire ; la dernière commande de l'atelier mène à Nulle-Part.,Gira la piattaforma verso la locomotiva nera; l'ultimo deviatoio dell'officina porta a Nessundove.,Gira la placa hacia la locomotora negra; la última aguja del taller lleva a Ninguna Parte.
+rchint.11.3,"Turntable on track 4; main line, tunnel, on, and the fourth switch to ""?""; then RUN.","Scheibe auf Gleis 4; Strecke, Tunnel, weiter und der vierte Schalter auf «?»; dann FAHRT.","Pont sur la voie 4 ; ligne, tunnel, suite et la quatrième commande sur « ? » ; puis DÉPART.","Piattaforma sul binario 4; linea, galleria, avanti e il quarto deviatoio su «?»; poi VIA.","Placa en la vía 4; línea, túnel, seguir y la cuarta aguja en «?»; luego MARCHA."
+miintro.1,"Harvest festival. The whole village is down at the green, and the miller is in bed with a fever.","Erntefest. Das ganze Dorf ist unten auf der Wiese, und der Müller liegt mit Fieber im Bett.","Fête des moissons. Tout le village est sur la place, et le meunier est au lit avec de la fièvre.",Festa del raccolto. Tutto il paese è sul prato e il mugnaio è a letto con la febbre.,Fiesta de la cosecha. Todo el pueblo está en la pradera y el molinero está en cama con fiebre.
+miintro.2,"By custom, the festival bread is baked from the mill's first flour of the year, and it must reach the village before the harvest moon rises. You came up to help, and the door swung shut behind you.","Der Brauch will, dass das Festbrot aus dem ersten Mehl des Jahres gebacken wird, und es muss im Dorf sein, bevor der Erntemond aufgeht. Du bist hinaufgekommen, um zu helfen, und die Tür ist hinter dir zugefallen.","La coutume veut que le pain de la fête soit fait avec la première farine de l'année, et elle doit arriver au village avant que la lune des moissons se lève. Tu es monté aider, et la porte s'est refermée derrière toi.","Per tradizione, il pane della festa si fa con la prima farina dell'anno, e deve arrivare in paese prima che sorga la luna del raccolto. Sei salito ad aiutare e la porta si è chiusa alle tue spalle.","Por costumbre, el pan de la fiesta se hace con la primera harina del año, y debe llegar al pueblo antes de que salga la luna de la cosecha. Subiste a ayudar y la puerta se cerró tras de ti."
+miintro.3,This one is hard and long. A good time is %d minutes.,Dieser Raum ist schwer und lang. Eine gute Zeit sind %d Minuten.,Cette salle est difficile et longue. Un bon temps : %d minutes.,Questa stanza è difficile e lunga. Un buon tempo: %d minuti.,Esta sala es difícil y larga. Un buen tiempo: %d minutos.
+miend.title,The first flour,Das erste Mehl,La première farine,La prima farina,La primera harina
+miend.text,"The cart rattles down the lane with the festival sack just as the harvest moon lifts over the hill. By midnight the whole village is eating warm bread, and somebody has carried a loaf up to the miller.","Der Wagen rumpelt mit dem Festsack den Weg hinunter, gerade als der Erntemond über den Hügel steigt. Um Mitternacht isst das ganze Dorf warmes Brot, und jemand hat einen Laib zum Müller hinaufgetragen.","La charrette dévale le chemin avec le sac de la fête juste quand la lune des moissons se lève sur la colline. À minuit, tout le village mange du pain chaud, et quelqu'un a monté une miche au meunier.","Il carretto scende per il sentiero con il sacco della festa proprio mentre la luna del raccolto sale sulla collina. A mezzanotte tutto il paese mangia pane caldo, e qualcuno ne ha portato una pagnotta al mugnaio.","El carro baja por el camino con el saco de la fiesta justo cuando la luna de la cosecha asoma sobre la colina. A medianoche todo el pueblo come pan caliente, y alguien le ha subido una hogaza al molinero."
+item.micrank,Winding handle,Kurbel,Manivelle,Manovella,Manivela
+item.miflour,Festival flour,Festmehl,Farine de la fête,Farina della festa,Harina de la fiesta
+item.mibran,Bran sack,Kleiesack,Sac de son,Sacco di crusca,Saco de salvado
+mitext.slate,"The miller's slate, sacks for the festival:
+- Rye came from the farm with the well.
+- The barn's sack holds oats or spelt.
+- No wheat from the oak farm or the cow farm.
+- The oak farm grows no spelt and no oats.
+- The cow farm sent no spelt.
+Festival bread: wheat first, then spelt, then rye.","Die Schiefertafel des Müllers, Säcke fürs Fest:
+- Der Roggen kam vom Hof mit dem Brunnen.
+- Im Sack der Scheune ist Hafer oder Dinkel.
+- Kein Weizen vom Eichenhof und vom Kuhhof.
+- Der Eichenhof baut weder Dinkel noch Hafer an.
+- Der Kuhhof schickte keinen Dinkel.
+Festbrot: zuerst Weizen, dann Dinkel, dann Roggen.","L'ardoise du meunier, sacs pour la fête :
+- Le seigle vient de la ferme au puits.
+- Le sac de la grange contient de l'avoine ou de l'épeautre.
+- Pas de blé de la ferme au chêne ni de la ferme à la vache.
+- La ferme au chêne ne cultive ni épeautre ni avoine.
+- La ferme à la vache n'a pas envoyé d'épeautre.
+Pain de la fête : d'abord le blé, puis l'épeautre, puis le seigle.","La lavagna del mugnaio, sacchi per la festa:
+- La segale viene dalla fattoria del pozzo.
+- Nel sacco del fienile c'è avena o farro.
+- Niente frumento dalla fattoria della quercia né da quella della mucca.
+- La fattoria della quercia non coltiva farro né avena.
+- La fattoria della mucca non ha mandato farro.
+Pane della festa: prima il frumento, poi il farro, poi la segale.","La pizarra del molinero, sacos para la fiesta:
+- El centeno vino de la granja del pozo.
+- El saco del granero lleva avena o espelta.
+- Nada de trigo de la granja del roble ni de la de la vaca.
+- La granja del roble no cultiva espelta ni avena.
+- La granja de la vaca no mandó espelta.
+Pan de la fiesta: primero trigo, luego espelta, luego centeno."
+mitext.song,"The millers' song:
+""Once the sails go round,
+eighteen turns the stone,
+slow and fine the flour,
+for the bread of home.""","Das Lied der Müller:
+«Dreht das Flügelkreuz sich einmal,
+dreht der Stein sich achtzehnmal,
+langsam, fein wird so das Mehl
+für das Brot daheim.»","La chanson des meuniers :
+« Quand les ailes font un tour,
+dix-huit tours fait la meule,
+farine lente et fine
+pour le pain de chez nous. »","La canzone dei mugnai:
+«Quando le pale fanno un giro,
+diciotto giri fa la macina,
+lenta e fine la farina
+per il pane di casa.»","La canción de los molineros:
+«Cuando las aspas dan una vuelta,
+dieciocho da la muela,
+lenta y fina la harina
+para el pan de casa.»"
+mitext.wallower,"Wallower (on the brake wheel, 48)","Kronrad (am Kammrad, 48)","Lanterne (sur le rouet, 48)","Lanterna (sulla ruota del freno, 48)","Linterna (en la rueda del freno, 48)"
+mitext.nut,"Stone nut (on the spur wheel, 96)","Steinritzel (am Stirnrad, 96)","Pignon de meule (sur le hérisson, 96)","Pignone della macina (sulla ruota, 96)","Piñón de la muela (en la rueda, 96)"
+mitalk.1,"Greta, the miller's wife, leans in at the half-door: ""There you are! Are the sails facing the wind?""","Greta, die Frau des Müllers, lehnt sich über die halbe Tür: «Da bist du ja! Stehen die Flügel im Wind?»","Greta, la femme du meunier, se penche par la demi-porte : « Te voilà ! Les ailes sont face au vent ? »","Greta, la moglie del mugnaio, si affaccia alla mezza porta: «Eccoti! Le pale sono controvento?»","Greta, la mujer del molinero, se asoma por la media puerta: «¡Ahí estás! ¿Las aspas están de cara al viento?»"
+misay.1a,"""Yes, the cap faces the wind.""","«Ja, die Kappe steht im Wind.»","« Oui, le toit est face au vent. »","«Sì, il cappello è controvento.»","«Sí, el capitel está de cara al viento.»"
+misay.1b,"""There is no wind today.""",«Heute geht kein Wind.»,« Il n'y a pas de vent aujourd'hui. »,«Oggi non c'è vento.»,«Hoy no hay viento.»
+misay.1c,"""What is a cap?""",«Was ist eine Kappe?»,"« C'est quoi, le toit ? »",«Cos'è il cappello?»,«¿Qué es el capitel?»
+mitalk.2,"""Good. It's the festival, mind: the cloths aren't set like on a working day.""","«Gut. Es ist Fest, denk dran: Die Tücher werden nicht wie an einem Werktag gesetzt.»","« Bien. C'est la fête, attention : les toiles ne se mettent pas comme un jour ordinaire. »","«Bene. È festa, ricorda: le tele non si mettono come in un giorno qualsiasi.»","«Bien. Es la fiesta, ojo: las lonas no se ponen como un día normal.»"
+misay.2a,"""I'll set them all full.""",«Ich setze alle voll.»,« Je les mets toutes pleines. »,«Le metto tutte piene.»,«Las pondré todas llenas.»
+misay.2b,"""How are they set for the festival?""",«Wie setzt man sie fürs Fest?»,« Comment les met-on pour la fête ? »,«Come si mettono per la festa?»,«¿Cómo se ponen para la fiesta?»
+mitalk.3,"""Full cloth on the sails with the sun, half on the sails with the moon. The marks are on the sail tips. Then let off the brake, down here by the door.""","«Volles Tuch auf die Flügel mit der Sonne, halbes auf die mit dem Mond. Die Zeichen sind an den Flügelspitzen. Dann die Bremse lösen, hier unten bei der Tür.»","« Toile pleine sur les ailes au soleil, à moitié sur les ailes à la lune. Les signes sont au bout des ailes. Puis lâche le frein, ici en bas près de la porte. »","«Tela piena sulle pale con il sole, a metà su quelle con la luna. I segni sono sulle punte. Poi togli il freno, qui sotto vicino alla porta.»","«Lona llena en las aspas con el sol, media en las de la luna. Las marcas están en las puntas. Luego suelta el freno, aquí abajo junto a la puerta.»"
+misay.3a,"""Thank you, Greta.""","«Danke, Greta.»","« Merci, Greta. »","«Grazie, Greta.»","«Gracias, Greta.»"
+mimsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+mimsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+mimsg.hangup,Greta shakes her head and goes back to the house. Call her again.,Greta schüttelt den Kopf und geht zurück ins Haus. Ruf sie nochmals.,Greta secoue la tête et retourne à la maison. Rappelle-la.,Greta scuote la testa e torna in casa. Richiamala.,Greta niega con la cabeza y vuelve a casa. Llámala otra vez.
+mimsg.no_line,"You call out. ""Turn the mill into the wind first!"" Greta shouts from the house.",Du rufst. «Dreh die Mühle zuerst in den Wind!» ruft Greta vom Haus.,Tu appelles. « Tourne d'abord le moulin face au vent ! » crie Greta depuis la maison.,Chiami. «Prima gira il mulino controvento!» grida Greta da casa.,"Llamas. «¡Primero pon el molino de cara al viento!», grita Greta desde la casa."
+mimsg.crank,Under the sacks: the cap's winding handle.,Unter den Säcken: die Kurbel für die Kappe.,Sous les sacs : la manivelle du toit.,Sotto i sacchi: la manovella del cappello.,Bajo los sacos: la manivela del capitel.
+mimsg.crank_on,The handle fits the winding wheel.,Die Kurbel passt ans Haspelrad.,La manivelle s'adapte à la roue.,La manovella entra nella ruota.,La manivela encaja en la rueda.
+mimsg.no_handle,The winding wheel has no handle.,Das Haspelrad hat keine Kurbel.,La roue n'a pas de manivelle.,La ruota non ha la manovella.,La rueda no tiene manivela.
+mimsg.facing,The cap creaks round. The sails face the wind.,Die Kappe knarrt herum. Die Flügel stehen im Wind.,Le toit grince en tournant. Les ailes font face au vent.,Il cappello cigola girando. Le pale sono controvento.,El capitel cruje al girar. Las aspas miran al viento.
+mimsg.cloth_how,How should the cloths be set? Better ask.,Wie sollen die Tücher gesetzt werden? Frag besser.,Comment mettre les toiles ? Mieux vaut demander.,Come vanno messe le tele? Meglio chiedere.,¿Cómo se ponen las lonas? Mejor pregunta.
+mimsg.sails_still,"The brake comes off, but the sails do not face the wind.","Die Bremse löst sich, aber die Flügel stehen nicht im Wind.","Le frein se desserre, mais les ailes ne sont pas face au vent.","Il freno si allenta, ma le pale non sono controvento.","El freno se suelta, pero las aspas no miran al viento."
+mimsg.sails_flap,The sails catch the wind badly and the brake holds. The cloths are wrong.,"Die Flügel nehmen den Wind schlecht, die Bremse hält. Die Tücher stimmen nicht.",Les ailes prennent mal le vent et le frein tient. Les toiles ne vont pas.,Le pale prendono male il vento e il freno tiene. Le tele non vanno.,Las aspas cogen mal el viento y el freno aguanta. Las lonas están mal.
+mimsg.brake_off,"The brake lets go. The sails turn, the whole mill rumbles.","Die Bremse lässt los. Die Flügel drehen, die ganze Mühle rumpelt.","Le frein lâche. Les ailes tournent, tout le moulin gronde.","Il freno molla. Le pale girano, tutto il mulino rimbomba.","El freno suelta. Las aspas giran, todo el molino retumba."
+mimsg.turning,The sails are turning.,Die Flügel drehen.,Les ailes tournent.,Le pale girano.,Las aspas giran.
+mimsg.gears_still,The gears only matter once the mill turns.,"Die Zahnräder zählen erst, wenn die Mühle dreht.",Les engrenages ne comptent que si le moulin tourne.,Gli ingranaggi contano solo quando il mulino gira.,Los engranajes solo importan con el molino en marcha.
+mimsg.gears_ok,"The stones settle into a slow, even hum.","Die Steine finden ein langsames, gleichmässiges Summen.",Les meules trouvent un ronron lent et régulier.,Le macine trovano un ronzio lento e regolare.,Las muelas encuentran un zumbido lento y regular.
+mimsg.hoist_ready,The hoist chain runs: sacks can go up.,Die Kette des Aufzugs läuft: Säcke können hinauf.,La chaîne du monte-sacs tourne : les sacs peuvent monter.,La catena del montacarichi gira: i sacchi possono salire.,La cadena del montacargas gira: los sacos pueden subir.
+mimsg.hoist_still,"The hoist does not move: the clutch upstairs, the trapdoors here.","Der Aufzug bewegt sich nicht: die Kupplung oben, die Falltüren hier.","Le monte-sacs ne bouge pas : l'embrayage en haut, les trappes ici.","Il montacarichi non si muove: la frizione di sopra, le botole qui.","El montacargas no se mueve: el embrague arriba, las trampillas aquí."
+mimsg.sack_up,"Up goes the sack, through the trapdoors, into the hopper.","Hinauf geht der Sack, durch die Falltüren, in den Trichter.","Le sac monte, passe les trappes et tombe dans la trémie.","Su va il sacco, oltre le botole, nella tramoggia.","Sube el saco, por las trampillas, a la tolva."
+mimsg.wrong_sack,"Greta, from the door: ""Not that one for the festival bread!"" The hopper is emptied again.",Greta von der Tür: «Doch nicht den fürs Festbrot!» Der Trichter wird wieder geleert.,"Greta, depuis la porte : « Pas celui-là pour le pain de la fête ! » La trémie est vidée.","Greta, dalla porta: «Non quello per il pane della festa!» La tramoggia viene svuotata.","Greta, desde la puerta: «¡Ese no para el pan de la fiesta!» La tolva se vacía otra vez."
+mimsg.hoisted,The three sacks are in the hopper in the bread's order.,Die drei Säcke sind in der Reihenfolge des Brots im Trichter.,"Les trois sacs sont dans la trémie, dans l'ordre du pain.",I tre sacchi sono nella tramoggia nell'ordine del pane.,Los tres sacos están en la tolva en el orden del pan.
+mimsg.hopper_full,The hopper is full.,Der Trichter ist voll.,La trémie est pleine.,La tramoggia è piena.,La tolva está llena.
+mimsg.ground,"Fine flour pours into the festival sack, the bran into its own.","Feines Mehl rieselt in den Festsack, die Kleie in ihren eigenen.","La farine fine coule dans le sac de la fête, le son dans le sien.","La farina fine scende nel sacco della festa, la crusca nel suo.","La harina fina cae en el saco de la fiesta, el salvado en el suyo."
+mimsg.festival_empty,The festival sack is still empty.,Der Festsack ist noch leer.,Le sac de la fête est encore vide.,Il sacco della festa è ancora vuoto.,El saco de la fiesta sigue vacío.
+mimsg.bran_empty,The bran sack is empty.,Der Kleiesack ist leer.,Le sac de son est vide.,Il sacco della crusca è vuoto.,El saco del salvado está vacío.
+mimsg.flour,"The festival sack, full of fine flour.","Der Festsack, voll feinem Mehl.","Le sac de la fête, plein de farine fine.","Il sacco della festa, pieno di farina fine.","El saco de la fiesta, lleno de harina fina."
+mimsg.bran,"The bran sack, heavy.","Der Kleiesack, schwer.","Le sac de son, lourd.","Il sacco della crusca, pesante.","El saco del salvado, pesado."
+mimsg.door_open,The bran sack takes the counterweight's place: the loading door swings open.,Der Kleiesack ersetzt das Gegengewicht: Die Ladetür schwingt auf.,Le sac de son remplace le contrepoids : la porte de chargement s'ouvre.,Il sacco della crusca sostituisce il contrappeso: la porta di carico si apre.,El saco de salvado ocupa el lugar del contrapeso: la puerta de carga se abre.
+mimsg.door_shut,The loading door is shut: its counterweight is missing.,Die Ladetür ist zu: Ihr Gegengewicht fehlt.,La porte de chargement est fermée : il manque son contrepoids.,La porta di carico è chiusa: manca il contrappeso.,La puerta de carga está cerrada: falta su contrapeso.
+mimsg.door_wide,The loading door stands open onto the lane.,Die Ladetür steht offen zum Weg.,La porte de chargement est ouverte sur le chemin.,La porta di carico è aperta sul sentiero.,La puerta de carga está abierta al camino.
+mimsg.loadingdoor,"The loading door, heavy, on a chain.","Die Ladetür, schwer, an einer Kette.","La porte de chargement, lourde, sur une chaîne.","La porta di carico, pesante, su una catena.","La puerta de carga, pesada, en una cadena."
+mimsg.cart_rolls,"The sack goes on the cart, and the cart rolls down the lane!","Der Sack kommt auf den Wagen, und der Wagen rollt den Weg hinunter!","Le sac va sur la charrette, et la charrette dévale le chemin !","Il sacco va sul carretto, e il carretto scende per il sentiero!",¡El saco va al carro y el carro rueda camino abajo!
+mimsg.window,"Fields, poplars, the village, the sails.","Felder, Pappeln, das Dorf, die Flügel.","Des champs, des peupliers, le village, les ailes.","Campi, pioppi, il paese, le pale.","Campos, chopos, el pueblo, las aspas."
+mimsg.slate,The miller's slate.,Die Schiefertafel des Müllers.,L'ardoise du meunier.,La lavagna del mugnaio.,La pizarra del molinero.
+mimsg.song,A song painted on the beam.,"Ein Lied, auf den Balken gemalt.",Une chanson peinte sur la poutre.,Una canzone dipinta sulla trave.,Una canción pintada en la viga.
+mimsg.stones,The millstones and their gears.,Die Mühlsteine und ihre Zahnräder.,Les meules et leurs engrenages.,Le macine e i loro ingranaggi.,Las muelas y sus engranajes.
+mimsg.chute,The meal chute with its flaps.,Der Mehlschacht mit seinen Klappen.,La goulotte à farine et ses volets.,Lo scivolo della farina con i suoi sportelli.,La tolva de harina con sus trampillas.
+mimsg.bins,The festival sack and the bran sack.,Der Festsack und der Kleiesack.,Le sac de la fête et le sac de son.,Il sacco della festa e quello della crusca.,El saco de la fiesta y el del salvado.
+mimsg.door,The half-door to the yard.,Die halbe Tür zum Hof.,La demi-porte de la cour.,La mezza porta del cortile.,La media puerta del patio.
+mimsg.cart,The cart for the festival.,Der Wagen fürs Fest.,La charrette pour la fête.,Il carretto per la festa.,El carro de la fiesta.
+mimsg.counterweight,An empty hook on the loading door's chain: its counterweight is gone.,Ein leerer Haken an der Kette der Ladetür: Das Gegengewicht fehlt.,Un crochet vide sur la chaîne de la porte : le contrepoids a disparu.,Un gancio vuoto sulla catena della porta: il contrappeso non c'è.,Un gancho vacío en la cadena de la puerta: falta el contrapeso.
+mimsg.rack,Spare gears.,Ersatzzahnräder.,Des engrenages de rechange.,Ingranaggi di ricambio.,Engranajes de repuesto.
+mimsg.poplars,Poplars bend in the gusts.,Pappeln biegen sich im Wind.,Les peupliers ploient sous les rafales.,I pioppi si piegano alle raffiche.,Los chopos se doblan con las ráfagas.
+mimsg.sails,The four sails.,Die vier Flügel.,Les quatre ailes.,Le quattro pale.,Las cuatro aspas.
+mimsg.wheel,The winding wheel turns the whole cap.,Das Haspelrad dreht die ganze Kappe.,La roue fait tourner tout le toit.,La ruota fa girare tutto il cappello.,La rueda gira todo el capitel.
+mimsg.hopper,The hopper over the stones.,Der Trichter über den Steinen.,La trémie au-dessus des meules.,La tramoggia sopra le macine.,La tolva sobre las muelas.
+mimsg.hook,The hoist's hook and chain.,Haken und Kette des Aufzugs.,Le crochet et la chaîne du monte-sacs.,Il gancio e la catena del montacarichi.,El gancho y la cadena del montacargas.
+mihint.1.1,Something the cap needs is lying around downstairs.,"Etwas, das die Kappe braucht, liegt unten herum.",Quelque chose dont le toit a besoin traîne en bas.,Qualcosa che serve al cappello è da qualche parte di sotto.,Algo que necesita el capitel está abajo.
+mihint.1.2,Look under the sacks.,Schau unter den Säcken.,Regarde sous les sacs.,Guarda sotto i sacchi.,Mira bajo los sacos.
+mihint.1.3,Tap the sacks: the winding handle.,Tippe auf die Säcke: die Kurbel.,Touche les sacs : la manivelle.,Tocca i sacchi: la manovella.,Toca los sacos: la manivela.
+mihint.2.1,"Upstairs, the winding wheel turns the cap.",Oben dreht das Haspelrad die Kappe.,"En haut, la roue fait tourner le toit.","Di sopra, la ruota gira il cappello.","Arriba, la rueda gira el capitel."
+mihint.2.2,It is missing its handle.,Ihm fehlt die Kurbel.,Il lui manque sa manivelle.,Le manca la manovella.,Le falta la manivela.
+mihint.2.3,Use the handle on the winding wheel.,Benutze die Kurbel am Haspelrad.,Utilise la manivelle sur la roue.,Usa la manovella sulla ruota.,Usa la manivela en la rueda.
+mihint.3.1,The sails must face into the wind. Where does it come from?,Die Flügel müssen in den Wind schauen. Woher kommt er?,Les ailes doivent faire face au vent. D'où vient-il ?,Le pale devono guardare il vento. Da dove viene?,Las aspas deben mirar al viento. ¿De dónde viene?
+mihint.3.2,Watch the poplars from the window: in each gust their leaves fly away from the wind.,Beobachte die Pappeln vom Fenster aus: In jeder Böe fliegen die Blätter vom Wind weg.,"Observe les peupliers depuis la fenêtre : à chaque rafale, les feuilles s'envolent dans le sens du vent.",Guarda i pioppi dalla finestra: a ogni raffica le foglie volano via dal vento.,Mira los chopos por la ventana: en cada ráfaga las hojas se alejan del viento.
+mihint.3.3,"The leaves fly east, so the wind comes from the west: wind the cap to W.","Die Blätter fliegen nach Osten, der Wind kommt also aus Westen: Dreh die Kappe auf W.","Les feuilles filent vers l'est, le vent vient donc de l'ouest : tourne le toit sur W.","Le foglie volano a est, quindi il vento viene da ovest: gira il cappello su W.","Las hojas vuelan al este, así que el viento viene del oeste: gira el capitel a W."
+mihint.4.1,"Greta, the miller's wife, is at the half-door downstairs.","Greta, die Frau des Müllers, ist unten an der halben Tür.","Greta, la femme du meunier, est à la demi-porte en bas.","Greta, la moglie del mugnaio, è alla mezza porta di sotto.","Greta, la mujer del molinero, está en la media puerta de abajo."
+mihint.4.2,"She wants to know the mill is ready, then she will explain the festival custom.","Sie will wissen, ob die Mühle bereit ist; dann erklärt sie den Festbrauch.","Elle veut savoir si le moulin est prêt, puis elle explique la coutume.","Vuole sapere se il mulino è pronto, poi spiega l'usanza.",Quiere saber si el molino está listo; luego explica la costumbre.
+mihint.4.3,Say the cap faces the wind; ask how the cloths are set for the festival.,"Sag, die Kappe stehe im Wind; frag, wie man die Tücher fürs Fest setzt.",Dis que le toit est face au vent ; demande comment mettre les toiles pour la fête.,Di' che il cappello è controvento; chiedi come si mettono le tele per la festa.,Di que el capitel mira al viento; pregunta cómo se ponen las lonas para la fiesta.
+mihint.5.1,Each sail tip has a small mark.,Jede Flügelspitze hat ein kleines Zeichen.,Le bout de chaque aile porte un petit signe.,Ogni punta di pala ha un piccolo segno.,Cada punta de aspa tiene una pequeña marca.
+mihint.5.2,"Full cloth for the sun, half for the moon, as Greta said.","Volles Tuch für die Sonne, halbes für den Mond, wie Greta sagte.","Toile pleine pour le soleil, à moitié pour la lune, comme dit Greta.","Tela piena per il sole, a metà per la luna, come ha detto Greta.","Lona llena para el sol, media para la luna, como dijo Greta."
+mihint.5.3,"Sails 1 and 3 full, 2 and 4 half.","Flügel 1 und 3 voll, 2 und 4 halb.","Ailes 1 et 3 pleines, 2 et 4 à moitié.","Pale 1 e 3 piene, 2 e 4 a metà.","Aspas 1 y 3 llenas, 2 y 4 a medias."
+mihint.6.1,The sails are held by the brake.,Die Flügel hält die Bremse.,Le frein retient les ailes.,Il freno trattiene le pale.,El freno sujeta las aspas.
+mihint.6.2,Its rope hangs down to the meal floor.,Ihr Seil hängt bis hinunter auf den Mehlboden.,Sa corde pend jusqu'à l'étage de la farine.,La sua corda pende fino al piano della farina.,Su cuerda cuelga hasta el piso de la harina.
+mihint.6.3,Pull the brake rope downstairs.,Zieh unten am Bremsseil.,Tire la corde du frein en bas.,Tira la corda del freno di sotto.,Tira de la cuerda del freno abajo.
+mihint.7.1,The song on the beam says how fast the stones must turn.,"Das Lied auf dem Balken sagt, wie schnell die Steine drehen müssen.",La chanson sur la poutre dit à quelle vitesse les meules doivent tourner.,La canzone sulla trave dice quanto veloci devono girare le macine.,La canción de la viga dice lo rápido que deben girar las muelas.
+mihint.7.2,Eighteen stone turns per sail turn: 48 divided by the wallower times 96 divided by the stone nut.,Achtzehn Steinumdrehungen pro Flügelumdrehung: 48 geteilt durch das Kronrad mal 96 geteilt durch das Ritzel.,Dix-huit tours de meule par tour d'ailes : 48 divisé par la lanterne fois 96 divisé par le pignon.,Diciotto giri di macina per giro di pale: 48 diviso la lanterna per 96 diviso il pignone.,Dieciocho vueltas de muela por vuelta de aspas: 48 entre la linterna por 96 entre el piñón.
+mihint.7.3,Both gears with 16 teeth: 3 × 6 = 18.,Beide Räder mit 16 Zähnen: 3 × 6 = 18.,Les deux engrenages à 16 dents : 3 × 6 = 18.,Entrambi gli ingranaggi da 16 denti: 3 × 6 = 18.,Los dos engranajes de 16 dientes: 3 × 6 = 18.
+mihint.8.1,The grain must go up to the stones on the hoist.,Das Korn muss mit dem Aufzug zu den Steinen hinauf.,Le grain doit monter aux meules par le monte-sacs.,Il grano deve salire alle macine con il montacarichi.,El grano debe subir a las muelas con el montacargas.
+mihint.8.2,It needs the clutch upstairs and the trapdoors open downstairs.,Er braucht oben die Kupplung und unten offene Falltüren.,Il faut l'embrayage en haut et les trappes ouvertes en bas.,Servono la frizione di sopra e le botole aperte di sotto.,Necesita el embrague arriba y las trampillas abiertas abajo.
+mihint.8.3,"Throw the clutch lever upstairs, open the trapdoors at the hoist.","Leg oben den Kupplungshebel um, öffne beim Aufzug die Falltüren.","Bascule l'embrayage en haut, ouvre les trappes près du monte-sacs.","Sposta la leva della frizione di sopra, apri le botole al montacarichi.","Mueve la palanca del embrague arriba, abre las trampillas en el montacargas."
+mihint.9.1,"The slate says which grain the bread needs, in which order; the sacks only show their farm's mark.","Die Tafel sagt, welches Korn das Brot braucht und in welcher Reihenfolge; die Säcke zeigen nur das Zeichen ihres Hofs.",L'ardoise dit quel grain il faut et dans quel ordre ; les sacs ne portent que le signe de leur ferme.,La lavagna dice quale grano serve e in che ordine; i sacchi mostrano solo il segno della fattoria.,La pizarra dice qué grano y en qué orden; los sacos solo muestran la marca de su granja.
+mihint.9.2,"The well farm sent rye; wheat came neither from oak nor cow nor barn, so from the apple farm.","Der Brunnenhof schickte Roggen; Weizen kam weder von Eiche noch Kuh noch Scheune, also vom Apfelhof.","La ferme au puits a envoyé le seigle ; le blé ne vient ni du chêne, ni de la vache, ni de la grange : donc de la pomme.","La fattoria del pozzo ha mandato la segale; il frumento non viene da quercia, mucca o fienile: quindi dalla mela.","La granja del pozo mandó el centeno; el trigo no vino del roble, la vaca ni el granero: así que de la manzana."
+mihint.9.3,"Hoist the apple sack, then the barn sack, then the well sack.","Zieh den Apfelsack hinauf, dann den Scheunensack, dann den Brunnensack.","Monte le sac à la pomme, puis celui de la grange, puis celui du puits.","Fai salire il sacco della mela, poi quello del fienile, poi quello del pozzo.","Sube el saco de la manzana, luego el del granero, luego el del pozo."
+mihint.10.1,The meal chute has three flaps.,Der Mehlschacht hat drei Klappen.,La goulotte a trois volets.,Lo scivolo ha tre sportelli.,La tolva tiene tres trampillas.
+mihint.10.2,Lead the fine flour to the festival sack (left) and the bran to its sack (right).,Lenk das feine Mehl in den Festsack (links) und die Kleie in ihren Sack (rechts).,Dirige la farine fine vers le sac de la fête (à gauche) et le son vers le sien (à droite).,Porta la farina fine al sacco della festa (sinistra) e la crusca al suo (destra).,Lleva la harina fina al saco de la fiesta (izquierda) y el salvado al suyo (derecha).
+mihint.10.3,"Flaps: right, left, right.","Klappen: rechts, links, rechts.","Volets : droite, gauche, droite.","Sportelli: destra, sinistra, destra.","Trampillas: derecha, izquierda, derecha."
+mihint.11.1,The loading door is too heavy to open by hand.,"Die Ladetür ist zu schwer, um sie von Hand zu öffnen.",La porte de chargement est trop lourde à la main.,La porta di carico è troppo pesante a mano.,La puerta de carga pesa demasiado para abrirla a mano.
+mihint.11.2,Its counterweight is missing; something heavy could take its place.,Ihr Gegengewicht fehlt; etwas Schweres könnte seinen Platz einnehmen.,Son contrepoids manque ; quelque chose de lourd pourrait le remplacer.,Manca il contrappeso; qualcosa di pesante potrebbe sostituirlo.,Falta su contrapeso; algo pesado podría ocupar su lugar.
+mihint.11.3,Hang the bran sack on the counterweight hook.,Häng den Kleiesack an den Gegengewichthaken.,Accroche le sac de son au crochet du contrepoids.,Appendi il sacco della crusca al gancio del contrappeso.,Cuelga el saco de salvado del gancho del contrapeso.
+mihint.12.1,The flour must reach the village.,Das Mehl muss ins Dorf.,La farine doit arriver au village.,La farina deve arrivare in paese.,La harina debe llegar al pueblo.
+mihint.12.2,The cart waits at the loading door.,Der Wagen wartet an der Ladetür.,La charrette attend à la porte de chargement.,Il carretto aspetta alla porta di carico.,El carro espera en la puerta de carga.
+mihint.12.3,Put the festival flour on the cart.,Leg das Festmehl auf den Wagen.,Pose la farine de la fête sur la charrette.,Metti la farina della festa sul carretto.,Pon la harina de la fiesta en el carro.

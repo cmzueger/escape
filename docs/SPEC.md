@@ -245,7 +245,10 @@ rooms of 20 to 30 minutes). Chosen in two rounds:
 - Harvest Moon (a windmill at the harvest festival; grind the first flour
   before the moon rises; golden dusk). Headline: sails, gears and millstones
   linked floor by floor; sacks down a chute.
-About 12 puzzles each, few plain code locks.
+About 12 puzzles each, few plain code locks. Built as 0.11.0: The Filter
+Hall FADCDFEEXMMF (hard, 28 min), The 8:15 to Nowhere FADDCCXFMEE (hard, 25
+min), Harvest Moon FAECFAMCXDEA (hard, 25 min), each judged with
+`tools/knowledge.py plan` before it was built.
 Not chosen: The Shadow Theatre, Bathysphere Station, The Organ Loft;
 Pumping Station No. 3, Under the Reservoir; Night Run, Junction 9; The Last
 Grind, Miller's Daughter.

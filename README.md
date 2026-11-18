@@ -30,6 +30,9 @@ Escape rooms played in the browser. Offline, no accounts.
 | The Night Edition | hard | 21 min | A newspaper's print works in 1890, an hour before the presses run. Nine puzzles with type, paper and ink. |
 | The Great Vaudini | medium | 14 min | An illusionist's dressing room in 1925: the apprentice's test. Eight puzzles with tricks, cards and mirrors. |
 | Rain on Gale Street | hard | 26 min | A detective's office in 1947, locked from outside. Eight puzzles; three witnesses, one lies. |
+| The Filter Hall | hard | 28 min | A Victorian pumping station on opening day. Twelve puzzles; make the fountain in the square rise. |
+| The 8:15 to Nowhere | hard | 25 min | A model railway club and its founder's last layout. Eleven puzzles with points, a shunting yard and a phone call. |
+| Harvest Moon | hard | 25 min | A windmill at the harvest festival. Twelve puzzles; sails, gears, a sack hoist and the first flour. |
 
 Play: https://cmzueger.github.io/escape/
 

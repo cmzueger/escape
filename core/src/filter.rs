@@ -426,6 +426,7 @@ pub static SPEC: Spec = Spec {
         },
     ],
     flavour: &[
+        "governor",
         "boiler",
         "programme",
         "plaque",

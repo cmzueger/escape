@@ -19,7 +19,9 @@ Works (`praline`), Tinker & Sons (`toyshop`); sixth set (owner's choice) Graf
 Alpina (`zeppelin`), Albatross (`ship`), Base 70° South (`polar`); the series
 The Quiet House (`house1905`, `house1938`, `house1969`, `housenow`); seventh
 set (owner's choice) The Night Edition (`press`), The Great Vaudini
-(`magic`), Rain on Gale Street (`noir`).
+(`magic`), Rain on Gale Street (`noir`); eighth set (owner's choice) The
+Filter Hall (`filter`), The 8:15 to Nowhere (`railway`), Harvest Moon
+(`mill`).
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
   `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
@@ -35,11 +37,12 @@ set (owner's choice) The Night Edition (`press`), The Great Vaudini
   see `orangery.rs`, `theatre.rs`, `chess.rs`, `beach.rs`, `train.rs`,
   `alch.rs`, `attic.rs`, `watch.rs`, `museum.rs`, `tree.rs`, `gondola.rs`,
   `praline.rs`, `toyshop.rs`, `zeppelin.rs`, `ship.rs`, `polar.rs`, the
-  house rooms, `press.rs`, `magic.rs`, `noir.rs`. Write new
+  house rooms, `press.rs`, `magic.rs`, `noir.rs`, `filter.rs`, `railway.rs`,
+  `mill.rs`. Write new
   rooms this way. Their pictures are in `art_set2.gd` … `art_set6.gd`, `art_house.gd`,
-  `art_set7.gd` (each art script extends the one before;
+  `art_set7.gd`, `art_set8.gd` (each art script extends the one before;
   constants and helpers must not reuse a parent's name), hotspots in
-  `views_set2.gd` … `views_set6.gd`, `views_house.gd`, `views_set7.gd`. Item names are global (`item.<name>`
+  `views_set2.gd` … `views_set6.gd`, `views_house.gd`, `views_set7.gd`, `views_set8.gd`. Item names are global (`item.<name>`
   in the texts): pick names no other room uses. Kit locks and
   dials are moved with `turn` and `flip`.
 - A new room: a kit spec in `core`, an entry in `ROOMS` and `Room::call`, views and
@@ -116,6 +119,19 @@ set (owner's choice) The Night Edition (`press`), The Great Vaudini
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.11.0** (2026-11-18): eighth set, the first planned with the knowledge
+  base (owner's questionnaire answered; rooms of 20 to 30 minutes, big
+  mechanisms with visible progress, few plain codes), chosen in two rounds:
+  The Filter Hall (pumping station, 1898: water simulated through a pipe
+  wall, a filter layered from a riddle, fountain jets set across both
+  halls, the main valve opened at the mayor's toast, timed by `secs`), The
+  8:15 to Nowhere (model railway: runs follow points in both rooms, a
+  shunting yard, a logic grid for the right engine, a sign lit only by a
+  passing train), Harvest Moon (windmill: wind read from gusts, sail cloths,
+  a gear ratio, a hoist across floors, a logic slate, flour streams down a
+  chute). Text prefixes wa, rc, mi (two letters: every single letter is
+  taken); views WA, RC, MI. Catalogue: 29 rooms in ten rows. Low Tide's card
+  waves could cross themselves (triangulation errors): fixed.
 - **0.10.2** (2026-11-18): the knowledge base (see The project): all 26
   rooms tagged, a questionnaire with pictures for the owner (elements,
   combinations, play style, frustrations, ratings per room), the report
@@ -253,6 +269,7 @@ set (owner's choice) The Night Edition (`press`), The Great Vaudini
 - The owner's play test of the sixth set (built 0.8.0) and its targets.
 - The owner's play test of the series The Quiet House (built 0.9.0) and its targets.
 - The owner's play test of the seventh set (built 0.10.0) and its targets.
+- The owner's play test of the eighth set (built 0.11.0) and its targets.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, whether the scrolling catalogue is, and an
   opinion on the sounds, which were made without anyone hearing them.

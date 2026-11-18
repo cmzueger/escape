@@ -340,6 +340,7 @@ pub static SPEC: Spec = Spec {
         unset: "rcmsg.gap_open",
     }],
     flavour: &[
+        "station",
         "letter",
         "board",
         "portrait",

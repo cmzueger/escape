@@ -118,10 +118,10 @@ func card(room: String, w: float, h: float) -> void:
 			poly([w * 0.17, h * 0.3, w * 0.34, h * 0.1, w * 0.51, h * 0.3], RED)
 			star5(w * 0.66, h * 0.84, h * 0.09, Color("e8887a"))
 			var reach := h * (0.71 + 0.04 * sin(t * 1.6))
-			var foam := [0.0, h * 0.68]
+			var foam := [0.0, h * 0.5]
 			for k in range(13):
 				foam.append_array([w * k / 12.0, reach + 3.0 * sin(k * 1.7 + t * 2.4)])
-			foam.append_array([w, h * 0.68])
+			foam.append_array([w, h * 0.5])
 			poly(foam, Color(SEA_BLUE, 0.85))
 			for k in range(12):
 				ln(w * k / 12.0, reach + 3.0 * sin(k * 1.7 + t * 2.4), w * (k + 1) / 12.0, reach + 3.0 * sin((k + 1) * 1.7 + t * 2.4), Color(1, 1, 1, 0.8), 1.5)
