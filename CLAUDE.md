@@ -96,6 +96,13 @@ The Quiet House (`house1905`, `house1938`, `house1969`, `housenow`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.9.1** (2026-11-18): play statistics for tuning, asked for by the owner:
+  every finished run keeps its date, time, hints, taps, stars and a log of
+  when each puzzle was solved and each hint asked (`p3@4:10`, `h3.1@5:00`;
+  last ten runs per room, plus the game in progress). A Stats button on the
+  catalogue shows them as text with Copy (`stats_text()` in main.gd). No
+  solutions in it: the owner pastes it into the chat. Puzzle numbers are the
+  rules' `puzzles` order (1-based, as in the hint keys).
 - **0.9.0** (2026-11-18): the series The Quiet House, chosen by the owner in
   three rounds (an old town house in 1905, 1938, 1969 and today; Clara, the
   vanished pianist; the housekeepers' notes behind a stove tile link the

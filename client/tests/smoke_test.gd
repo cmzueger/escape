@@ -322,6 +322,13 @@ func _run() -> void:
 	for id in ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum", "tree", "gondola", "praline", "toyshop", "zeppelin", "ship", "polar", "house1905", "house1938", "house1969", "housenow"]:
 		monkey(id, 1500)
 
+	# The stats: finished runs with their puzzle times, nothing else.
+	var stats: String = main.stats_text()
+	check(stats.contains("house1905 (target") and stats.contains("  done ") and stats.contains("p6@"), "the stats list finished runs with puzzle times")
+	main._show_title()
+	main._show_stats()
+	await shot("stats")
+	main._show_title()
 	# Every text exists in every language.
 	for lang in main.LANGS:
 		TranslationServer.set_locale(lang)
@@ -332,7 +339,7 @@ func _run() -> void:
 				"khint.6.3", "kmsg.trap_open", "whint.5.3", "wmsg.watch_runs", "mhint.6.3", "mmsg.door_open", "item.scarabkey", "mend.text",
 				"ehint.5.3", "qhint.6.3", "phint.6.3", "yhint.7.3", "item.okey", "yend.text",
 				"zhint.5.3", "shint.5.3", "rhint.6.3", "item.rfuse", "rend.text",
-				"hhint.6.3", "jhint.5.3", "uhint.5.3", "xhint.6.3", "hstory.clara", "xstory.jost", "jsay.4a", "xsay.3a", "item.hammer", "xend.text"]:
+				"hhint.6.3", "jhint.5.3", "uhint.5.3", "xhint.6.3", "hstory.clara", "xstory.jost", "jsay.4a", "xsay.3a", "item.hammer", "xend.text", "ui.stats", "ui.stats_info", "ui.copy", "ui.copied"]:
 			if tr(key) == key:
 				missing.append(key)
 		check(missing.is_empty(), "texts in %s %s" % [lang, missing])

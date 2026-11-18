@@ -8,6 +8,10 @@ ui.restart,Start again,Neu beginnen,Recommencer,Ricomincia,Empezar de nuevo
 ui.to_title,Back to title,Zum Titel,Retour au titre,Torna al titolo,Volver al título
 ui.hint,Hint,Tipp,Indice,Aiuto,Pista
 ui.close,Close,Schliessen,Fermer,Chiudi,Cerrar
+ui.stats,Stats,Statistik,Stats,Statistiche,Estadísticas
+ui.stats_info,"Your times, hints and the order you solved the puzzles in, without solutions. Copy them and paste them into the chat to tune the rooms.","Deine Zeiten, Tipps und die Reihenfolge der gelösten Rätsel, ohne Lösungen. Kopiere sie und füge sie im Chat ein, um die Räume abzustimmen.","Tes temps, indices et l'ordre des énigmes résolues, sans solutions. Copie-les et colle-les dans le chat pour ajuster les salles.","I tuoi tempi, gli aiuti e l'ordine degli enigmi risolti, senza soluzioni. Copiali e incollali nella chat per regolare le stanze.","Tus tiempos, pistas y el orden de los acertijos resueltos, sin soluciones. Cópialos y pégalos en el chat para ajustar las salas."
+ui.copy,Copy,Kopieren,Copier,Copia,Copiar
+ui.copied,Copied,Kopiert,Copié,Copiato,Copiado
 ui.start,Begin,Los,Commencer,Inizia,Empezar
 ui.yes,Yes,Ja,Oui,Sì,Sí
 ui.no,No,Nein,Non,No,No

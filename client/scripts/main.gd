@@ -537,6 +537,7 @@ func _apply(answer: Dictionary, command: String = "") -> void:
 		return
 	var before := st
 	st = answer["state"]
+	_log_progress(before)
 	var msg: String = answer.get("msg", "")
 	if msg != "" and tr(msg) == msg:
 		errors.append("%s: no text for %s" % [room, msg])
@@ -650,7 +651,76 @@ func _finish() -> void:
 		_prefs.set_value(_key(room), "halves", halves)
 		_prefs.set_value(_key(room), "secs_best", secs)
 	_prefs.set_value(_key(room), "save", "")
+	var hints := 0
+	for h in st.get("hints", []):
+		hints += int(h)
+	var runs: Array = _prefs.get_value(_key(room), "runs", [])
+	runs.append("%s %s hints %d taps %d stars %.1f | %s" % [Time.get_date_string_from_system(), _clock_text(secs), hints,
+		int(_prefs.get_value(_key(room), "taps", 0)), halves / 2.0, _prefs.get_value(_key(room), "log", "")])
+	_prefs.set_value(_key(room), "runs", runs.slice(-10))
+	_prefs.set_value(_key(room), "log", "")
 	_prefs.save(SAVE_PATH)
+
+
+# --- Play statistics (for tuning difficulty and length) -----------------------
+
+## Each command counts as a tap; each puzzle solved is noted with its time.
+func _log_progress(before: Dictionary) -> void:
+	_prefs.set_value(_key(room), "taps", int(_prefs.get_value(_key(room), "taps", 0)) + 1)
+	var was: Array = before.get("solved", [])
+	var now: Array = st.get("solved", [])
+	for i in range(now.size()):
+		if now[i] and not (i < was.size() and was[i]):
+			_log("p%d" % (i + 1))
+
+
+func _log(event: String) -> void:
+	var so_far: String = _prefs.get_value(_key(room), "log", "")
+	_prefs.set_value(_key(room), "log", (so_far + " " if so_far != "" else "") + "%s@%s" % [event, _clock_text(int(seconds))])
+
+
+## Everything recorded, as plain text: no solutions, only times, hints and
+## the order puzzles were solved in (p3@4:10: puzzle 3 at 4:10; h3.1: hint 1
+## for puzzle 3).
+func stats_text() -> String:
+	var lines := ["Locked In %s stats, %s" % [ProjectSettings.get_setting("application/config/version", "?"), Time.get_date_string_from_system()]]
+	for entry in rooms:
+		var id: String = entry["id"]
+		var key := _key(id)
+		var runs: Array = _prefs.get_value(key, "runs", [])
+		var best := _best(id)
+		var open := _has_game(id)
+		if runs.is_empty() and best[0] == 0 and not open:
+			continue
+		lines.append("%s (target %d min): best %s, stars %.1f" % [id, int(entry["minutes"]), _clock_text(int(best[1])), best[0] / 2.0])
+		for run in runs:
+			lines.append("  done " + str(run))
+		if open:
+			lines.append("  playing %s taps %d | %s" % [_clock_text(int(_prefs.get_value(key, "secs", 0))), int(_prefs.get_value(key, "taps", 0)), _prefs.get_value(key, "log", "")])
+	if lines.size() == 1:
+		lines.append("(nothing played yet)")
+	return "\n".join(lines)
+
+
+func _show_stats() -> void:
+	var text := stats_text()
+	var box := _open_panel(780.0)
+	_label(box, tr("ui.stats"), 28, Art.AMBER)
+	_label(box, tr("ui.stats_info"), 17)
+	var field := TextEdit.new()
+	field.text = text
+	field.editable = false
+	field.custom_minimum_size = Vector2(740, 230)
+	field.add_theme_font_size_override("font_size", 13)
+	field.add_theme_color_override("font_readonly_color", Art.CREAM)
+	field.wrap_mode = TextEdit.LINE_WRAPPING_BOUNDARY
+	box.add_child(field)
+	var row := _row(box)
+	var copy: Button
+	copy = _button(row, tr("ui.copy"), func() -> void:
+		DisplayServer.clipboard_set(text)
+		copy.text = tr("ui.copied"))
+	_button(row, tr("ui.close"), _show_title)
 
 
 func _best(id: String) -> Array:
@@ -680,6 +750,8 @@ func start_new(id: String = "") -> void:
 	_enter(id if id != "" else room)
 	seconds = 0.0
 	_sent = 0
+	_prefs.set_value(_key(room), "log", "")
+	_prefs.set_value(_key(room), "taps", 0)
 	view = Views.first(room)
 	mode = "play"
 	_refresh()
@@ -856,8 +928,10 @@ func _stars(box: Container, halves: int, rad: float) -> void:
 			art.star(p.size.x / 2 + (i - 1) * rad * 2.3, rad * 1.15, rad, clampi(halves - i * 2, 0, 2)))
 
 
-func _languages(box: Container, again: Callable) -> void:
+func _languages(box: Container, again: Callable, stats: bool = false) -> void:
 	var row := _row(box)
+	if stats:
+		_button(row, tr("ui.stats"), _show_stats).add_theme_font_size_override("font_size", 16)
 	for lang in LANGS:
 		var button := _button(row, lang.to_upper(), func() -> void:
 			TranslationServer.set_locale(lang)
@@ -925,7 +999,7 @@ func _show_title() -> void:
 			var to := 0.0 if at_end.call() else bar.max_value
 			create_tween().tween_property(scroll, "scroll_vertical", int(to), 0.35).set_trans(Tween.TRANS_SINE))
 		page.add_child(more)
-	_languages(page, _show_title)
+	_languages(page, _show_title, true)
 	var window := DisplayServer.window_get_size()
 	if window.y > window.x:
 		_label(page, tr("ui.rotate"), 18, Art.AMBER)
@@ -1061,7 +1135,9 @@ func _hint_panel(info: Dictionary) -> void:
 	var row := _row(box)
 	if level < 3:
 		_button(row, tr("hint.show") if level == 0 else tr("hint.more"), func() -> void:
-			_hint_panel(link.send("hint " + view))
+			var asked := link.send("hint " + view)
+			_log("h%d.%d" % [int(asked.get("puzzle", 0)), int(asked.get("level", 0))])
+			_hint_panel(asked)
 			_save())
 	_button(row, tr("ui.close"), func() -> void:
 		_close_panel()
