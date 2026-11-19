@@ -121,6 +121,18 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.13.0** (2026-11-19): the catalogue reworked, asked for by the owner
+  (filter and sort, names on one line), layout A of three drafts: two
+  columns; status chips (All, Not finished, In progress, Finished: finished
+  means finished at least once), difficulty chips, a set chip (all, the
+  series, sets 1 to 9: `SETS` in main.gd, a new room goes into it), a sort
+  chip (newest, easiest, oldest); all remembered in the prefs
+  (`shown_rooms()` is what is listed). Full screen in the browser: a button
+  (hut-engine.js makes the request when the finger lifts; the button acts on
+  touch-down), on iPhones a tip to add the game to the home screen
+  (`manifest.webmanifest` and Apple meta tags: it then opens full screen).
+  A new room also needs `SETS`; `web_smoke.js` taps cards through the
+  filters (they are remembered between its steps).
 - **0.12.0** (2026-11-19): ninth set, asked for as longer rooms of easy to
   at most medium difficulty around animals, illusions and school, chosen in
   two rounds: The Glass Aviary (feed and settle every bird: a fish caught as
@@ -287,6 +299,7 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
 
 ## Open
 - An Android build, a custom domain.
+- The owner's opinion on the new catalogue and on full screen on their phone.
 - The owner's play test of the fifth set (built 0.7.0) and its targets.
 - The owner's play test of the sixth set (built 0.8.0) and its targets.
 - The owner's play test of the series The Quiet House (built 0.9.0) and its targets.
@@ -294,5 +307,5 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
 - The owner's play test of the eighth set (built 0.11.0) and its targets.
 - The owner's play test of the ninth set (built 0.12.0) and its targets.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
-  liked, whether the scrolling catalogue is, and an
+  liked, and an
   opinion on the sounds, which were made without anyone hearing them.

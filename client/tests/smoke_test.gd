@@ -331,6 +331,37 @@ func _run() -> void:
 	for id in ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum", "tree", "gondola", "praline", "toyshop", "zeppelin", "ship", "polar", "house1905", "house1938", "house1969", "housenow", "press", "magic", "noir", "filter", "railway", "mill", "aviary", "mirrors", "school"]:
 		monkey(id, 1500)
 
+	# The catalogue's filters and orders.
+	var pick := func(status: String, level: int, set_no: int, order: String) -> Array:
+		main._prefs.set_value("prefs", "status", status)
+		main._prefs.set_value("prefs", "level", level)
+		main._prefs.set_value("prefs", "set", set_no)
+		main._prefs.set_value("prefs", "sort", order)
+		return main.shown_rooms().map(func(e: Dictionary) -> String: return e["id"])
+	var ids: Array = pick.call("all", 0, -1, "old")
+	check(ids.size() == 32 and ids[0] == "hut" and ids[31] == "school", "oldest first")
+	ids = pick.call("all", 0, -1, "new")
+	check(ids[0] == "school" and ids[31] == "hut", "newest first")
+	ids = pick.call("all", 0, 0, "old")
+	check(ids == ["house1905", "house1938", "house1969", "housenow"], "the series as a set %s" % [ids])
+	ids = pick.call("all", 0, 9, "old")
+	check(ids == ["aviary", "mirrors", "school"], "the ninth set %s" % [ids])
+	ids = pick.call("all", 3, -1, "easy")
+	var hard_ok := true
+	for i in range(ids.size()):
+		var entry: Dictionary = main.rooms.filter(func(e: Dictionary) -> bool: return e["id"] == ids[i])[0]
+		hard_ok = hard_ok and int(entry["difficulty"]) == 3
+	check(not ids.is_empty() and hard_ok, "only the hard rooms")
+	ids = pick.call("all", 0, -1, "easy")
+	var easy_first: bool = int(main.rooms.filter(func(e: Dictionary) -> bool: return e["id"] == ids[0])[0]["difficulty"]) == 1
+	check(easy_first and ids.size() == 32, "easiest first")
+	var done: Array = pick.call("done", 0, -1, "old")
+	var open: Array = pick.call("open", 0, -1, "old")
+	check(done.has("hut") and not open.has("hut") and done.size() + open.size() == 32, "finished and not finished (%d, %d)" % [done.size(), open.size()])
+	pick.call("all", 0, -1, "new")
+	main._show_title()
+	await shot("catalogue")
+
 	# The stats: finished runs with their puzzle times, nothing else.
 	var stats: String = main.stats_text()
 	check(stats.contains("house1905 (target") and stats.contains("  done ") and stats.contains("p6@"), "the stats list finished runs with puzzle times")

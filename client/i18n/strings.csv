@@ -3148,3 +3148,17 @@ schint.23.3,Use the sharpener on the pencils.,Benutze den Spitzer an den Bleisti
 schint.24.1,All tasks done? The list ticks them off.,Alles erledigt? Die Liste hakt es ab.,Tout est fait ? La liste coche les tâches.,Tutto fatto? La lista spunta i compiti.,¿Todo hecho? La lista tacha las tareas.
 schint.24.2,The spare key is behind the class photo.,Der Ersatzschlüssel ist hinter dem Klassenfoto.,La clé de secours est derrière la photo de classe.,La chiave di riserva è dietro la foto di classe.,La llave de repuesto está tras la foto de clase.
 schint.24.3,Take the key from behind the photo and use it on the door.,Nimm den Schlüssel hinter dem Foto und benutze ihn an der Tür.,Prends la clé derrière la photo et utilise-la sur la porte.,Prendi la chiave dietro la foto e usala sulla porta.,Coge la llave de detrás de la foto y úsala en la puerta.
+ui.filter_all,All,Alle,Toutes,Tutte,Todas
+ui.filter_open,Not finished,Nicht gelöst,À finir,Da finire,Sin terminar
+ui.filter_going,In progress,Angefangen,En cours,In corso,En curso
+ui.filter_done,Finished,Gelöst,Terminées,Finite,Terminadas
+ui.all_levels,All levels,Alle Stufen,Tous niveaux,Tutti i livelli,Todos los niveles
+ui.all_sets,All sets,Alle Serien,Toutes les séries,Tutte le serie,Todas las series
+ui.set,Set %d,Serie %d,Série %d,Serie %d,Serie %d
+ui.sort_new,Newest first,Neueste zuerst,Récentes d'abord,Prima le nuove,Nuevas primero
+ui.sort_easy,Easiest first,Leichteste zuerst,Faciles d'abord,Prima le facili,Fáciles primero
+ui.sort_old,Oldest first,Älteste zuerst,Anciennes d'abord,Prima le vecchie,Antiguas primero
+ui.no_rooms,No rooms match these filters.,Keine Räume passen zu diesen Filtern.,Aucune salle ne correspond à ces filtres.,Nessuna stanza corrisponde a questi filtri.,Ninguna sala coincide con estos filtros.
+ui.fullscreen,Full screen,Vollbild,Plein écran,Schermo intero,Pantalla completa
+ui.fullscreen_exit,Leave full screen,Vollbild beenden,Quitter le plein écran,Esci da schermo intero,Salir de pantalla completa
+ui.ios_tip,"On an iPhone, Safari can't hide its bars. Tap Share, then “Add to Home Screen”: Locked In then opens from its own icon in full screen. (Games saved in Safari stay in Safari.)","Auf dem iPhone kann Safari seine Leisten nicht ausblenden. Tippe auf Teilen, dann «Zum Home-Bildschirm»: Locked In öffnet dann über sein eigenes Symbol im Vollbild. (In Safari gespeicherte Spiele bleiben in Safari.)","Sur iPhone, Safari ne peut pas masquer ses barres. Touche Partager, puis « Sur l'écran d'accueil » : Locked In s'ouvre alors en plein écran depuis sa propre icône. (Les parties enregistrées dans Safari restent dans Safari.)","Su iPhone Safari non può nascondere le sue barre. Tocca Condividi, poi «Aggiungi alla schermata Home»: Locked In si apre allora a schermo intero dalla sua icona. (Le partite salvate in Safari restano in Safari.)","En iPhone, Safari no puede ocultar sus barras. Toca Compartir y luego «Añadir a pantalla de inicio»: Locked In se abrirá a pantalla completa desde su propio icono. (Las partidas guardadas en Safari se quedan en Safari.)"

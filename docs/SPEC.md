@@ -277,3 +277,13 @@ knowledge base's prediction. Most puzzles are small (feed, fetch, combine),
 with a few mechanisms each and things seen only at a moment. A conversation
 that ends after its secret was told no longer shows the hang-up text (all
 rooms).
+
+## Catalogue, second layout (owner, 2026-11-19)
+Asked for: filter and sort (see unfinished rooms), grouping, names that do
+not wrap, maybe two columns; and full screen in the mobile browser. Of three
+drafts (A filter chips and a sort button in two columns, B a side list of
+groups, C shelves per group scrolling sideways) the owner chose A. Sorts:
+newest first, easiest first, catalogue order (oldest first). Filters:
+status, difficulty and set (the series counts as one). Full screen: a button
+where the browser allows it, and home-screen support with a tip on iPhones.
+Built as 0.13.0.

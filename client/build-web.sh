@@ -14,7 +14,7 @@ mkdir -p "$out"
 touch client/export/.gdignore # keep Godot from importing build output
 "$GODOT" --headless --path client --import >/dev/null 2>&1 || true
 "$GODOT" --headless --path client --export-release "Web" export/web/index.html
-cp client/web/hut-engine.js "$out/"
+cp client/web/hut-engine.js client/web/manifest.webmanifest "$out/"
 cp target/wasm32-unknown-unknown/release/hut_web.wasm "$out/"
 # Large files go compressed; hut-engine.js unpacks them in the browser.
 for f in "$out"/index.wasm "$out"/index.pck; do

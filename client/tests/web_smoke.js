@@ -51,7 +51,10 @@ function check(ok, what) {
 
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
   check(true, "the catalogue appears");
-  await tap(178, 150); // Play on the first card (Hut 2847)
+  // Sort chip: newest first, easiest first, oldest first (remembered).
+  await tap(776, 39);
+  await tap(776, 39);
+  await tap(402, 130); // Play on the first card (Hut 2847)
   check((await mode()) === "play", "Play starts a game");
   await tap(480, 406); // Begin (the story panel)
   await tap(281, 210); // the coat
@@ -71,44 +74,39 @@ function check(ok, what) {
   await page.reload();
   await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
   await page.waitForTimeout(500);
-  await tap(135, 155); // Continue on the first card
+  await tap(402, 118); // Continue on the first card
   check((await mode()) === "play" && (await state()).flags.includes("lamp_lit"), "the saved game continues after a reload");
-  // The second room.
-  await page.reload();
-  await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
-  await page.waitForTimeout(500);
-  await tap(475, 155); // Play on the second card (Gale Rock Light)
-  check((await page.evaluate(() => window.hut.room)) === "light" && (await state()).room === "light", "the lighthouse starts");
-  // The third room.
-  await page.reload();
-  await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
-  await page.waitForTimeout(500);
-  await tap(777, 155); // Play on the third card (Col Sidereal)
-  check((await page.evaluate(() => window.hut.room)) === "obs" && (await state()).room === "obs", "the observatory starts");
-  // The second and third row, then the fourth, which is reached by scrolling.
-  for (const [x, y, id, scroll] of [[173, 274, "orangery"], [475, 274, "theatre"], [777, 289, "chess"],
-    [173, 408, "beach"], [475, 408, "train"], [777, 404, "alch"],
-    [173, 381, "attic", 100], [475, 381, "watch", 100], [777, 377, "museum", 100],
-    [173, 286, "tree", [4000, -400]], [475, 286, "gondola", [4000, -400]], [777, 286, "praline", [4000, -400]],
-    [173, 260, "toyshop", [4000, -300]], [475, 260, "zeppelin", [4000, -300]], [777, 260, "ship", [4000, -300]],
-    [173, 232, "polar", [4000, -200]], [475, 228, "house1905", [4000, -200]], [777, 228, "house1938", [4000, -200]],
-    [173, 202, "house1969", [4000, -100]], [475, 220, "housenow", [4000, -100]], [777, 202, "press", [4000, -100]],
-    [173, 188, "magic", 4000], [475, 188, "noir", 4000], [777, 192, "filter", 4000],
-    [173, 308, "railway", 4000], [475, 312, "mill", 4000], [777, 312, "aviary", 4000],
-    [321, 430, "mirrors", 4000], [623, 430, "school", 4000]]) {
+  // Other cards, filters and orders: [chip taps after a reload, card button, room].
+  // The filters are remembered, so each step starts where the last one left
+  // off (sort: newest, easiest, oldest; set: all, the series, 1 to 9).
+  const SORT = [776, 39], HARD = [509, 74], LEVELS = [285, 74], SET = [630, 74], OPEN = [418, 39];
+  for (const [chips, x, y, id] of [
+    [[], 873, 130, "light"], [[], 402, 214, "obs"],
+    [[SORT], 402, 130, "school"], [[], 873, 130, "mirrors"],
+    [[HARD], 402, 130, "mill"], [[SET], 402, 130, "housenow"],
+    [[LEVELS], 873, 214, "house1905"], [[SET, SORT], 873, 130, "light"],
+    [[SET, SET, OPEN], 402, 130, "beach"]]) {
     await page.reload();
     await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
     await page.waitForTimeout(500);
-    if (scroll) {
-      await page.mouse.move(480, 300);
-      for (const amount of [].concat(scroll)) {
-        await page.mouse.wheel(0, amount);
-        await page.waitForTimeout(500);
-      }
+    for (const [cx, cy] of chips) {
+      await tap(cx, cy);
+      await page.waitForTimeout(500); // the catalogue is built again
     }
     await tap(x, y);
     check((await page.evaluate(() => window.hut.room)) === id && (await state()).room === id, id + " starts");
   }
+  // Full screen, asked for with the button and made when the finger lifts.
+  await page.reload();
+  await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
+  await page.waitForTimeout(500);
+  check((await page.evaluate(() => window.hutScreen.state())) === "off", "the browser offers full screen");
+  await page.mouse.move(774, 498);
+  await page.mouse.down();
+  await page.waitForTimeout(200);
+  await page.mouse.up();
+  await page.waitForTimeout(500);
+  check((await page.evaluate(() => window.hutScreen.state())) === "on", "the button turns full screen on");
   // On a phone: a swipe that starts on a Play button scrolls and starts nothing;
   // a tap still plays.
   {
@@ -128,11 +126,11 @@ function check(ok, what) {
     await touch("touchEnd");
     await phone.waitForTimeout(500);
     check((await phone.evaluate(() => window.hut.mode)) === "title", "a swipe over the cards starts no room");
-    await touch("touchStart", 173, 155);
+    await touch("touchStart", 402, 130);
     await touch("touchEnd");
     await phone.waitForTimeout(500);
     const after = await phone.evaluate(() => window.hut.room);
-    check((await phone.evaluate(() => window.hut.mode)) === "play" && after !== "hut", "the swipe scrolled the catalogue (" + after + ")");
+    check((await phone.evaluate(() => window.hut.mode)) === "play" && after !== "school", "the swipe scrolled the catalogue (" + after + ")");
     await ctx.close();
   }
   check(errors.length === 0, "no page errors " + JSON.stringify(errors));

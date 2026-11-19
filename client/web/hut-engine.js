@@ -70,3 +70,42 @@
     view: "",
   };
 })();
+
+// Full screen for the catalogue's button (main.gd). Browsers only allow it
+// during the player's own tap, so the game asks with toggle() when the
+// finger goes down and the request is made here when it lifts. iPhones have
+// no full screen for pages: there the game shows how to add it to the home
+// screen, which opens it without the browser's bars (manifest.webmanifest).
+(function () {
+  "use strict";
+  let wanted = false;
+  const root = document.documentElement;
+  const active = () => !!(document.fullscreenElement || document.webkitFullscreenElement);
+  const can = () => !!(root.requestFullscreen || root.webkitRequestFullscreen);
+  const app = () => !!(window.navigator.standalone || (window.matchMedia &&
+    window.matchMedia("(display-mode: fullscreen), (display-mode: standalone)").matches));
+  function go() {
+    if (!wanted) return;
+    wanted = false;
+    try {
+      if (active()) {
+        (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+        return;
+      }
+      const asked = (root.requestFullscreen || root.webkitRequestFullscreen).call(root);
+      const turn = () => {
+        if (screen.orientation && screen.orientation.lock) screen.orientation.lock("landscape").catch(() => {});
+      };
+      if (asked && asked.then) asked.then(turn).catch(() => {});
+    } catch (e) {
+      // Not allowed here; the button simply does nothing.
+    }
+  }
+  for (const type of ["pointerup", "touchend", "mouseup", "click"]) {
+    document.addEventListener(type, go, true);
+  }
+  window.hutScreen = {
+    state: () => (active() ? "on" : app() ? "app" : can() ? "off" : "ios"),
+    toggle: () => { wanted = true; },
+  };
+})();

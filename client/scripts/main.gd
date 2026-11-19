@@ -989,7 +989,101 @@ func _languages(box: Container, again: Callable, stats: bool = false) -> void:
 	mute.add_theme_font_size_override("font_size", 16)
 
 
-## The catalogue: a card per room, three to a row.
+## The sets the rooms were built in (the series counts as one).
+const SETS := [["hut", "light", "obs"], ["orangery", "theatre", "chess"], ["beach", "train", "alch"],
+	["attic", "watch", "museum"], ["tree", "gondola", "praline", "toyshop"], ["zeppelin", "ship", "polar"],
+	["house1905", "house1938", "house1969", "housenow"], ["press", "magic", "noir"], ["filter", "railway", "mill"],
+	["aviary", "mirrors", "school"]]
+const STATUSES := ["all", "open", "going", "done"]
+const SORTS := ["new", "easy", "old"]
+
+
+## The set a room belongs to: 1..9 for the sets, 0 for the series.
+func _set_of(id: String) -> int:
+	var number := 0
+	for i in range(SETS.size()):
+		if SETS[i][0] == "house1905":
+			if id in SETS[i]:
+				return 0
+			continue
+		number += 1
+		if id in SETS[i]:
+			return number
+	return -1
+
+
+func _set_name(n: int) -> String:
+	if n == -1:
+		return tr("ui.all_sets")
+	return "The Quiet House" if n == 0 else tr("ui.set") % n
+
+
+func _matches(entry: Dictionary, status: String, level: int, set_no: int) -> bool:
+	var id: String = entry["id"]
+	# Finished means finished at least once, also when played again.
+	var finished: bool = _best(id)[0] > 0
+	if (status == "open" and finished) or (status == "done" and not finished):
+		return false
+	if status == "going" and not _has_game(id):
+		return false
+	if level > 0 and int(entry.get("difficulty", 1)) != level:
+		return false
+	return set_no == -1 or _set_of(id) == set_no
+
+
+## The rooms shown with the chosen filters, in the chosen order.
+func shown_rooms() -> Array:
+	var status: String = _prefs.get_value("prefs", "status", "all")
+	var level := int(_prefs.get_value("prefs", "level", 0))
+	var set_no := int(_prefs.get_value("prefs", "set", -1))
+	var order: String = _prefs.get_value("prefs", "sort", "new")
+	var list := []
+	for i in range(rooms.size()):
+		if _matches(rooms[i], status, level, set_no):
+			list.append([i, rooms[i]])
+	match order:
+		"new":
+			list.reverse()
+		"easy":
+			list.sort_custom(func(a: Array, b: Array) -> bool:
+				var da := int(a[1].get("difficulty", 1))
+				var db := int(b[1].get("difficulty", 1))
+				if da != db:
+					return da < db
+				var ma := int(a[1].get("minutes", 30))
+				var mb := int(b[1].get("minutes", 30))
+				return ma < mb if ma != mb else a[0] < b[0])
+	return list.map(func(pair: Array) -> Dictionary: return pair[1])
+
+
+func _set_pref(key: String, value: Variant) -> void:
+	_prefs.set_value("prefs", key, value)
+	_prefs.set_value("prefs", "scroll", 0)
+	_prefs.save(SAVE_PATH)
+	_show_title()
+
+
+## A small round button for a filter; the chosen one is filled.
+func _chip(box: Container, text: String, on: bool, pressed: Callable) -> Button:
+	var chip := _button(box, text, pressed)
+	chip.add_theme_font_size_override("font_size", 14)
+	for state in ["normal", "hover", "pressed", "disabled"]:
+		var look := StyleBoxFlat.new()
+		look.bg_color = Art.BRASS if on else Color(0.085, 0.058, 0.045, 0.9)
+		look.border_color = Color(Art.BRASS, 0.6)
+		look.set_border_width_all(2)
+		look.set_corner_radius_all(13)
+		look.content_margin_left = 11
+		look.content_margin_right = 11
+		look.content_margin_top = 2
+		look.content_margin_bottom = 2
+		chip.add_theme_stylebox_override(state, look)
+	for colour in ["font_color", "font_hover_color", "font_pressed_color"]:
+		chip.add_theme_color_override(colour, Color("2a1a10") if on else Art.CREAM)
+	return chip
+
+
+## The catalogue: filters on top, a card per room in two columns.
 func _show_title() -> void:
 	mode = "title"
 	_refresh()
@@ -998,56 +1092,94 @@ func _show_title() -> void:
 	var page := VBoxContainer.new()
 	page.set_anchors_preset(Control.PRESET_FULL_RECT)
 	page.alignment = BoxContainer.ALIGNMENT_CENTER
-	page.add_theme_constant_override("separation", 6)
-	_panels.add_child(page)
 	page.add_theme_constant_override("separation", 5)
-	_label(page, "LOCKED IN", 30, Art.AMBER, false)
-	# Three rows are in view; further rooms are reached by scrolling.
+	_panels.add_child(page)
+	var status: String = _prefs.get_value("prefs", "status", "all")
+	var level := int(_prefs.get_value("prefs", "level", 0))
+	var set_no := int(_prefs.get_value("prefs", "set", -1))
+	var order: String = _prefs.get_value("prefs", "sort", "new")
+	# Title, how far along, and the order.
+	var head := _row(page, 8)
+	_label(head, "LOCKED IN", 26, Art.AMBER, false).custom_minimum_size.x = 170
+	for key in STATUSES:
+		var count := 0
+		for entry in rooms:
+			if _matches(entry, key, 0, -1):
+				count += 1
+		_chip(head, "%s %d" % [tr("ui.filter_" + key), count], key == status, func() -> void: _set_pref("status", key))
+	var sorting := _chip(head, tr("ui.sort_" + order), false, func() -> void:
+		_set_pref("sort", SORTS[(SORTS.find(order) + 1) % SORTS.size()]))
+	sorting.custom_minimum_size.x = 150
+	# Difficulty and set.
+	var narrow := _row(page, 8)
+	for n in [0, 1, 2, 3]:
+		_chip(narrow, tr("ui.all_levels") if n == 0 else tr("diff.%d" % n), n == level, func() -> void: _set_pref("level", n))
+	var sets := _chip(narrow, _set_name(set_no), set_no != -1, func() -> void:
+		# All sets, the series, then the sets in order.
+		var next: int = {-1: 0, 0: 1}.get(set_no, set_no + 1)
+		_set_pref("set", -1 if next > SETS.size() - 1 else next))
+	sets.custom_minimum_size.x = 170
+	# The rooms, two to a row; more by scrolling.
 	var scroll := ScrollContainer.new()
 	_scroll = scroll
-	scroll.custom_minimum_size = Vector2(952, 390)
+	scroll.custom_minimum_size = Vector2(952, 380)
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	scroll.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	page.add_child(scroll)
 	var rows := VBoxContainer.new()
 	rows.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	rows.add_theme_constant_override("separation", 5)
+	rows.add_theme_constant_override("separation", 6)
 	scroll.add_child(rows)
+	var list := shown_rooms()
+	var cards: HBoxContainer = null
+	for i in range(list.size()):
+		if i % 2 == 0:
+			cards = _row(rows, 10)
+		_card(cards, list[i])
+	if list.size() % 2 == 1:
+		# A lone last card keeps to the left column.
+		var gap := Control.new()
+		gap.custom_minimum_size.x = 462
+		cards.add_child(gap)
+	if list.is_empty():
+		_label(rows, tr("ui.no_rooms"), 18, Color(Art.CREAM, 0.7)).custom_minimum_size.y = 120
 	scroll.scroll_vertical = int(_prefs.get_value("prefs", "scroll", 0))
 	scroll.get_v_scroll_bar().value_changed.connect(func(v: float) -> void: _prefs.set_value("prefs", "scroll", int(v)))
-	var cards: HBoxContainer = null
-	for i in range(rooms.size()):
-		if i % 3 == 0:
-			cards = _row(rows, 10)
-		_card(cards, rooms[i])
-	if rooms.size() > 9:
-		# A wide strip with an arrow (drawn: the font has none): down to the
-		# last row, and from there back up.
-		var more := Button.new()
-		more.flat = true
-		more.focus_mode = Control.FOCUS_NONE
-		more.custom_minimum_size = Vector2(420, 22)
-		more.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-		var bar := scroll.get_v_scroll_bar()
-		var at_end := func() -> bool: return bar.value >= bar.max_value - bar.page - 2
-		more.draw.connect(func() -> void:
-			var c := more.size / 2
-			var tip := 6.0 if not at_end.call() else -6.0
-			more.draw_colored_polygon(PackedVector2Array([c + Vector2(-14, -tip), c + Vector2(14, -tip), c + Vector2(0, tip)]), Color(Art.CREAM, 0.7)))
-		bar.value_changed.connect(func(_v: float) -> void: more.queue_redraw())
-		more.pressed.connect(func() -> void:
-			sound.play("tap")
-			var to := 0.0 if at_end.call() else bar.max_value
-			create_tween().tween_property(scroll, "scroll_vertical", int(to), 0.35).set_trans(Tween.TRANS_SINE))
-		page.add_child(more)
-	_languages(page, _show_title, true)
+	var foot := _row(page)
+	_languages(foot, _show_title, true)
+	_fullscreen_button(foot)
 	var window := DisplayServer.window_get_size()
 	if window.y > window.x:
 		_label(page, tr("ui.rotate"), 18, Art.AMBER)
 
 
-## One room: picture on the left, name, difficulty and best result on the
-## right, the buttons below.
+## Full screen in the browser: a button where the browser allows it (the
+## request is made by hut-engine.js when the finger lifts), a tip on
+## iPhones (only a home-screen app runs without the browser's bars).
+func _fullscreen_button(box: Container) -> void:
+	if not OS.has_feature("web"):
+		return
+	var how := str(JavaScriptBridge.eval("window.hutScreen ? window.hutScreen.state() : ''"))
+	if how in ["", "app"]:
+		return
+	var button := _button(box, tr("ui.fullscreen_exit") if how == "on" else tr("ui.fullscreen"), func() -> void:
+		if how == "ios":
+			var tip := _open_panel(560.0)
+			_label(tip, tr("ui.ios_tip"), 18)
+			_button(tip, tr("ui.close"), _show_title)
+		else:
+			JavaScriptBridge.eval("window.hutScreen.toggle()")
+			get_tree().create_timer(0.6).timeout.connect(func() -> void:
+				if mode == "title":
+					_show_title()))
+	button.add_theme_font_size_override("font_size", 16)
+	# Pressed on touch-down, so the browser's request on lift counts as the
+	# player's own gesture.
+	button.action_mode = BaseButton.ACTION_MODE_BUTTON_PRESS
+
+
+## One room: picture on the left, name, difficulty and best result in the
+## middle, the buttons on the right.
 func _card(row: Container, entry: Dictionary) -> void:
 	var id: String = entry["id"]
 	var card := PanelContainer.new()
@@ -1055,52 +1187,47 @@ func _card(row: Container, entry: Dictionary) -> void:
 	style.bg_color = Color(0.085, 0.058, 0.045, 0.96)
 	style.border_color = Color(Art.BRASS, 0.5)
 	style.set_border_width_all(2)
-	style.set_corner_radius_all(14)
-	style.set_content_margin_all(7)
+	style.set_corner_radius_all(12)
+	style.set_content_margin_all(6)
 	card.add_theme_stylebox_override("panel", style)
 	row.add_child(card)
-	var box := VBoxContainer.new()
-	box.custom_minimum_size.x = 278
-	box.add_theme_constant_override("separation", 4)
-	card.add_child(box)
 	var top := HBoxContainer.new()
+	top.custom_minimum_size = Vector2(446, 64)
 	top.add_theme_constant_override("separation", 9)
-	box.add_child(top)
-	_picture(top, Vector2(96, 66), func(p: Control) -> void: art.card(id, p.size.x, p.size.y), true)
+	card.add_child(top)
+	_picture(top, Vector2(84, 58), func(p: Control) -> void: art.card(id, p.size.x, p.size.y), true)
 	var facts := VBoxContainer.new()
 	facts.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	facts.add_theme_constant_override("separation", 0)
 	top.add_child(facts)
-	var title: String = TITLES.get(id, id)
-	if title.length() > 16:
-		# A long name takes two lines instead of being cut.
-		var long_name := _label(facts, title, 15, Art.AMBER, true)
-		long_name.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-		long_name.add_theme_constant_override("line_spacing", -3)
-	else:
-		_fit(_label(facts, title, 18, Art.AMBER, false))
+	_fit(_label(facts, TITLES.get(id, id), 17, Art.AMBER, false))
 	var level := int(entry.get("difficulty", 1))
 	var line := HBoxContainer.new()
 	line.add_theme_constant_override("separation", 3)
 	facts.add_child(line)
-	_picture(line, Vector2(64, 24), func(_p: Control) -> void:
+	_picture(line, Vector2(64, 22), func(_p: Control) -> void:
 		for i in range(3):
 			art.padlock(10.0 + i * 21.0, 11, i < level))
-	_fit(_label(line, "%s · %s" % [tr("diff.%d" % level), tr("ui.minutes") % int(entry.get("minutes", 30))], 12, Art.CREAM, false))
+	_fit(_label(line, "%s · %s" % [tr("diff.%d" % level), tr("ui.minutes") % int(entry.get("minutes", 30))], 13, Art.CREAM, false))
 	var result := HBoxContainer.new()
 	result.add_theme_constant_override("separation", 6)
 	facts.add_child(result)
 	var best := _best(id)
-	_stars(result, best[0], 8)
-	_fit(_label(result, _clock_text(best[1]) if best[0] > 0 else "", 14, Color(Art.CREAM, 0.8), false))
-	var buttons := HBoxContainer.new()
-	buttons.add_theme_constant_override("separation", 6)
-	box.add_child(buttons)
+	_stars(result, best[0], 7)
 	if _has_game(id):
-		_slim(_button(buttons, "%s  %s" % [tr("ui.continue"), _clock_text(int(_prefs.get_value(_key(id), "secs", 0)))], func() -> void: continue_game(id)), 15, 2.4)
-		_slim(_button(buttons, tr("ui.new_short"), func() -> void: start_new(id)), 13, 1.0)
+		_fit(_label(result, "%s · %s" % [tr("ui.filter_going"), _clock_text(int(_prefs.get_value(_key(id), "secs", 0)))], 13, Color("8fc0f0"), false))
 	else:
-		_slim(_button(buttons, tr("ui.play"), func() -> void: start_new(id)), 15, 1.0)
+		_fit(_label(result, _clock_text(best[1]) if best[0] > 0 else "", 13, Color(Art.CREAM, 0.8), false))
+	var buttons := VBoxContainer.new()
+	buttons.custom_minimum_size.x = 104
+	buttons.alignment = BoxContainer.ALIGNMENT_CENTER
+	buttons.add_theme_constant_override("separation", 4)
+	top.add_child(buttons)
+	if _has_game(id):
+		_slim(_button(buttons, tr("ui.continue"), func() -> void: continue_game(id)), 13, 1.0)
+		_slim(_button(buttons, tr("ui.new_short"), func() -> void: start_new(id)), 12, 1.0)
+	else:
+		_slim(_button(buttons, tr("ui.play"), func() -> void: start_new(id)), 16, 1.0)
 
 
 ## A low button that shares its row and never widens the card.
