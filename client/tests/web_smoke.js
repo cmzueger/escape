@@ -95,6 +95,8 @@ function check(ok, what) {
     }
     await tap(x, y);
     check((await page.evaluate(() => window.hut.room)) === id && (await state()).room === id, id + " starts");
+    // The browser stores the remembered filters a moment later.
+    await page.waitForTimeout(2000);
   }
   // Full screen, asked for with the button and made when the finger lifts.
   await page.reload();
