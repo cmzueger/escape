@@ -252,3 +252,19 @@ min), Harvest Moon FAECFAMCXDEA (hard, 25 min), each judged with
 Not chosen: The Shadow Theatre, Bathysphere Station, The Organ Loft;
 Pumping Station No. 3, Under the Reservoir; Night Run, Junction 9; The Last
 Grind, Miller's Daughter.
+
+## Ninth set (owner, 2026-11-19)
+Asked for: longer rooms of easy to at most medium difficulty, themes animals,
+illusions and school. The knowledge base shows the owner's time goes mostly
+into deductions, so easy and medium rooms grow long through more puzzles and
+more space: about 24 puzzles over four views each. Chosen in two rounds:
+- The Glass Aviary (a glass bird house in sunshine; the keeper has gone for
+  seed; every bird fed and settled before the doors open).
+- Hall of Mirrors (a funfair's mirror maze at night, neon; find the way out
+  and start the carousel to call the attendant).
+- Detention (a village school in 1925, chalkboard, warm afternoon; the
+  teacher's list of tasks, the door opens when all are done).
+Not chosen: The Night Zoo, Noah's Workshop; Museum of Illusions, Camera
+Obscura; Science Lab After Hours, Midnight at the Boarding School; The
+Songbird Dome, Field Notes; Reflections, The Mirror Salon; The Snow Day,
+Class of 1925.
