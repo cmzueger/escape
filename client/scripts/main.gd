@@ -17,6 +17,7 @@ const TITLES := {
 	"house1969": "The Quiet House · 1969", "housenow": "The Quiet House · Today",
 	"press": "The Night Edition", "magic": "The Great Vaudini", "noir": "Rain on Gale Street",
 	"filter": "The Filter Hall", "railway": "The 8:15 to Nowhere", "mill": "Harvest Moon",
+	"aviary": "The Glass Aviary", "mirrors": "Hall of Mirrors", "school": "Detention",
 }
 ## Texts of the lighthouse have their keys with an "l" in front, those of
 ## the observatory with an "o".
@@ -26,7 +27,8 @@ const PREFIX := {"hut": "", "light": "l", "obs": "o", "orangery": "g", "theatre"
 	"zeppelin": "z", "ship": "s", "polar": "r",
 	"house1905": "h", "house1938": "j", "house1969": "u", "housenow": "x",
 	"press": "d", "magic": "v", "noir": "i",
-	"filter": "wa", "railway": "rc", "mill": "mi"}
+	"filter": "wa", "railway": "rc", "mill": "mi",
+	"aviary": "av", "mirrors": "hm", "school": "sc"}
 const SLOTS := 8
 const HINT_RECT := Rect2(800, 484, 136, 44)
 const MENU_RECT := Rect2(908, 8, 44, 44)
@@ -62,7 +64,7 @@ const WRONG := ["zmsg.no_use", "smsg.no_use", "rmsg.no_use", "zmsg.no_magnet", "
 	"mmsg.door_wrong", "mmsg.door_dead", "mmsg.scales_bare", "mmsg.dial_bare"]
 
 var link := RoomLink.new()
-var art := ArtSet8.new()
+var art := ArtSet9.new()
 var sound := Sound.new()
 var rooms: Array = []
 var room := "hut"
@@ -167,6 +169,8 @@ func _process(delta: float) -> void:
 		if int(seconds) > _sent:
 			_sent = int(seconds)
 			link.send("time %d" % _sent)
+			# Pictures that show something only now and then read the time.
+			st["secs"] = _sent
 			_hud.queue_redraw()
 			if _sent % 5 == 0:
 				_save()
@@ -272,6 +276,17 @@ func _ambience() -> void:
 	elif mode != "load" and room == "mill":
 		levels["amb_wind"] = 0.45
 		levels["amb_tick"] = 0.12 if "turning" in st.get("flags", []) else 0.0
+	elif mode != "load" and room == "aviary":
+		levels["amb_wind"] = 0.1
+		levels["amb_sea"] = 0.12
+	elif mode != "load" and room == "mirrors":
+		levels["amb_tick"] = 0.2 if "music" in st.get("flags", []) else 0.08
+		levels["amb_static"] = 0.02
+	elif mode != "load" and room == "school":
+		levels["amb_tick"] = 0.3 if "clock_ok" in st.get("flags", []) else 0.0
+		levels["amb_wind"] = 0.08
+		if "lit" in st.get("flags", []):
+			levels["amb_fire"] = 0.25
 	elif mode != "load" and room == "press":
 		levels["amb_tick"] = 0.25
 		levels["amb_fire"] = 0.08
@@ -602,6 +617,9 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 	if command.begins_with("key ") and command.get_slice(" ", 1).is_valid_int():
 		sound.play("note" + command.get_slice(" ", 1), 0.0, 0.0)
 		return
+	# The aviary's canary sings its song when fed or looked at.
+	if msg in ["avmsg.fed_canary", "avmsg.canary"] and "fed_canary" in st.get("flags", []):
+		_melody(clues.get("song", []), "note")
 	if msg.ends_with("box_plays"):
 		_melody(clues.get("box", []), "mbox")
 	elif msg.ends_with("record_plays"):

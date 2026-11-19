@@ -667,3 +667,114 @@ moon rises. Kinds FAECFAMCXDEA.
 11. E: the loading door's counterweight is missing: the full bran sack on
     its hook.
 12. A: the festival sack onto the cart: it rolls down to the village.
+
+## The Glass Aviary (medium, `aviary`, prefix av, views AV1 entrance, AV2 tropical corner, AV3 pond, AV4 seed store)
+The keeper has gone for seed; every bird fed and settled before the doors
+open. Kinds FAAFAAACACCAAACADDACACCA.
+1. F: the keys lie in the nest box on the entrance post.
+2. A: the keys open the seed store.
+3. A: the net in the store.
+4. F: the fish only jumps now and then (last 3 s of every 9): the net on the
+   pond while it is out of the water.
+5. A: the fish to the kingfisher.
+6. A: an apple from the tree.
+7. A: the knife in the store.
+8. C: knife on apple: slices.
+9. A: slices to the parrot.
+10. C: the parrot starts the keeper's greeting; the keeper's note on the
+    desk has it: "Good morning, my **feathered friends**" → the parrot
+    squawks that the singer's seed is in the **sun** jar.
+11. C: the jars (star, moon, sun): the **sun** jar (a wrong one is refused;
+    before the parrot says it, no jar is taken).
+12. A: seed to the canary; it sings its song (five notes drawn).
+13. A: the watering can by the tap.
+14. A: can on the tap: water.
+15. C: sugar (store) and water: nectar.
+16. A: nectar in the hummingbird feeder.
+17. D: the orchid's three misting valves (0 to 2): the gauge's green mark
+    is **5** in all → it blooms; its label shows the plan's second half.
+18. D: the shade crank at the entrance: fully closed (**3**) darkens the
+    owl's corner; the owl wakes and flies up.
+19. A: the whistle on the owl's empty perch.
+20. C: scoop (store) on the grain sack: grain.
+21. A: grain to the peacock.
+22. C: the whistle at the canary's cage: the canary's song, holes
+    **3 1 4 2 3** (left to right, 1 to 4).
+23. C: the perch stand's six sliders (0 bottom to 3 top): the desk plan
+    gives perches 1 to 3, the orchid's label 4 to 6: **3 1 2 0 2 3**.
+24. A: the bell once every bird is fed, the song played and the perches set.
+
+## Hall of Mirrors (medium, `mirrors`, prefix hm, views HM1 entrance, HM2 maze, HM3 funhouse, HM4 carousel)
+The fair has closed with the lights still on: start the carousel to call
+the attendant. Kinds FACAAFACCCCADCCADAFCAACA.
+1. F: a coin glints under the ticket booth.
+2. A: the coin in the turnstile.
+3. C: the maze plan on the booth: from the entrance (bottom middle) to the
+   centre: **E N E N N N W S S W**; a wall is a mirror (bump).
+4. A: the brass key at the centre.
+5. A: the key opens the prize cabinet: mallet and a cylinder mirror.
+6. F: the strength tester only rings when its lamp blinks (last 2 s of
+   every 7): hit then → a token.
+7. A: the token in Zelda.
+8. C: Zelda: ask about **the carousel**, the stars are in **the crooked
+   picture** → each horse rises as high as its star is big.
+9. C: the cylinder mirror on the smeared drawing: four coloured stars of
+   different sizes.
+10. C: the horses (red, blue, green, gold) to heights **2 0 3 1**.
+11. C: behind the curtain a periscope looks down on the generator's chalk
+    mark.
+12. A: the generator's dial to the mark (**4**).
+13. D: fuses (motor, lights, music, popcorn, fan; more than three trips
+    them all): the carousel's sign shows motor, lights, music → those three.
+14. C: the squat funhouse mirror shows darts on top of the stall's shelf.
+15. C: the balloons in the poster's colour order (**blue, red, purple,
+    yellow, green**); a wrong one refills them → prize: a small mirror.
+16. A: the mirror into the empty spotlight.
+17. D: the two spotlight mirrors (angles **5** and **2**) put the beam on
+    the sensor.
+18. A: the brake lever (horses, fuses and beam done): the carousel turns.
+19. F: as it turns, the golden horse's saddle shows a sign for a moment
+    (last 2 s of every 6): the **star**.
+20. C: the organ's card with the star, then the crank: music.
+21. A: sugar at the candy-floss cart.
+22. A: a stick.
+23. C: sugar into the machine (power on), then the stick: candy floss.
+24. A: candy floss to the clown while the music plays: it honks, the
+    attendant comes.
+
+## Detention (medium, `school`, prefix sc, views SC1 blackboard, SC2 desks, SC3 teacher's desk, SC4 back of the room)
+Kept in after school in 1925; Miss Keller's list of fifteen tasks; the
+door opens when all are done. Kinds FAAACACACDCACAFCDCCCMCAA.
+1. F: the cupboard key under the flower pot.
+2. A: the key opens the cupboard.
+3. A: its shelves: sponge, ink, carrot, pencils.
+4. A: the watering can at the pump outside the window: water.
+5. C: sponge in the water: wet sponge (before the plant gets it).
+6. A: the wet sponge cleans the board: three sums.
+7. C: the abacus: **7, 6, 8** (3+4, 9−3, 2×4) → the teacher's drawer opens
+   (clock key, matches, sharpener).
+8. A: ink in the inkwells.
+9. C: name cards on the desks as in the register's plan: **Emil, Anna,
+   Fritz, Dora, Ben** (front left to right…).
+10. D: clock key on the clock, then set it to the church clock: **3:45**.
+11. C: (after the seating) Dora's desk has her pen-friend's letter, the
+    stamp's outline → globe to outline **6** (of 8).
+12. A: the rest of the water on the plant.
+13. C: the books by their numerals (chart on the wall): I II III IV V.
+14. A: carrot to the rabbit.
+15. F: the rabbit hops aside: a map pin in the straw.
+16. C: the pin on the map, then the trip diary's stops in order (castle,
+    lake, bridge): towns **5, 2, 6**.
+17. D: the stove's damper fully open, then a match (closed: smoke).
+18. C: the school song on the harmonium: keys **1 3 5 6 5 3 1**.
+19. C: the bell rope as the bell board shows: **long short short long
+    long**.
+20. C: the janitor at the window (after the smoke): **a pupil kept in**,
+    the teacher is **Miss Keller** (door plate) → the spare key is behind
+    the class photo.
+21. M: the class photo's sliding pieces put right (14 moves at best).
+22. C: lost property to the pegs by the embroidered initials: scarf E →
+    Emil, cap A → Anna, mitten F → Fritz.
+23. A: pencils and sharpener.
+24. A: the door key from behind the photo, in the door (all tasks done;
+    the task list ticks them off).

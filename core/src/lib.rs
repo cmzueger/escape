@@ -24,6 +24,7 @@
 
 pub mod alch;
 pub mod attic;
+pub mod aviary;
 pub mod beach;
 pub mod chess;
 pub mod filter;
@@ -38,6 +39,7 @@ pub mod kit;
 pub mod light;
 pub mod magic;
 pub mod mill;
+pub mod mirrors;
 pub mod museum;
 pub mod noir;
 pub mod obs;
@@ -46,6 +48,8 @@ pub mod polar;
 pub mod praline;
 pub mod press;
 pub mod railway;
+pub mod school;
+pub mod set9;
 pub mod ship;
 pub mod theatre;
 pub mod toyshop;
@@ -62,7 +66,7 @@ pub mod zeppelin;
 /// deduction (one twist), X hard deduction (a longer chain or grid).
 /// The difficulty shown follows from the kinds ([`difficulty`]); the time
 /// is separate (`tools/estimate.py` estimates it from the kinds).
-pub const ROOMS: [(&str, &str, u32); 29] = [
+pub const ROOMS: [(&str, &str, u32); 32] = [
     ("hut", "ACABCDDBB", hut::PAR_MINUTES),
     ("light", "ACCBFMDEDA", light::PAR_MINUTES),
     ("obs", "CCMEEDXCAC", obs::PAR_MINUTES),
@@ -92,6 +96,9 @@ pub const ROOMS: [(&str, &str, u32); 29] = [
     ("filter", "FADCDFEEXMMF", filter::PAR_MINUTES),
     ("railway", "FADDCCXFMEE", railway::PAR_MINUTES),
     ("mill", "FAECFAMCXDEA", mill::PAR_MINUTES),
+    ("aviary", "FAAFAAACACCAAACADDACACCA", aviary::PAR_MINUTES),
+    ("mirrors", "FACAAFACCCCADCCADAFCAACA", mirrors::PAR_MINUTES),
+    ("school", "FAAACACACDCACAFCDCCCMCAA", school::PAR_MINUTES),
 ];
 
 /// 1 easy, 2 medium, 3 hard: how hard the thinking is, not how long it
@@ -272,6 +279,9 @@ impl Room {
                     Some("filter") => *self = Room::Kit(kit::State::new(&filter::SPEC)),
                     Some("railway") => *self = Room::Kit(kit::State::new(&railway::SPEC)),
                     Some("mill") => *self = Room::Kit(kit::State::new(&mill::SPEC)),
+                    Some("aviary") => *self = Room::Kit(kit::State::new(&aviary::SPEC)),
+                    Some("mirrors") => *self = Room::Kit(kit::State::new(&mirrors::SPEC)),
+                    Some("school") => *self = Room::Kit(kit::State::new(&school::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -326,6 +336,9 @@ mod tests {
             (&filter::SPEC, ROOMS[26].1),
             (&railway::SPEC, ROOMS[27].1),
             (&mill::SPEC, ROOMS[28].1),
+            (&aviary::SPEC, ROOMS[29].1),
+            (&mirrors::SPEC, ROOMS[30].1),
+            (&school::SPEC, ROOMS[31].1),
         ] {
             assert_eq!(spec.puzzles.len(), kinds.len(), "{}", spec.id);
         }
@@ -362,6 +375,9 @@ mod tests {
             "filter",
             "railway",
             "mill",
+            "aviary",
+            "mirrors",
+            "school",
         ] {
             assert!(r
                 .call(&format!("room {id}"))
@@ -567,6 +583,75 @@ mod tests {
                 .concat(),
                 vec![],
                 vec![],
+            ),
+            (
+                &aviary::SPEC,
+                [
+                    digits("jar", 3),
+                    digits("key", 4),
+                    digits("say", 3),
+                    vec![
+                        "call".into(),
+                        "time 8".into(),
+                        "time 17".into(),
+                        "use avnet pond".into(),
+                        "tap bell".into(),
+                    ],
+                ]
+                .concat(),
+                vec![],
+                vec!["avnet", "avapple", "avknife", "avsugar", "avwater", "avwhistle"],
+            ),
+            (
+                &mirrors::SPEC,
+                [
+                    digits("balloon", 5),
+                    digits("flip fuses", 5),
+                    digits("say", 3),
+                    ["n", "e", "s", "w"].map(|d| format!("step {d}")).to_vec(),
+                    vec![
+                        "call".into(),
+                        "time 6".into(),
+                        "time 11".into(),
+                        "tap periscope".into(),
+                        "tap squatmirror".into(),
+                        "tap carousel".into(),
+                        "tap crank".into(),
+                        "use hmmallet tester".into(),
+                    ],
+                ]
+                .concat(),
+                vec![],
+                vec!["hmmallet", "hmdarts"],
+            ),
+            (
+                &school::SPEC,
+                [
+                    digits("slide", 9),
+                    digits("ring", 2),
+                    digits("key", 8),
+                    digits("say", 3),
+                    vec![
+                        "call".into(),
+                        "use scmatches stove".into(),
+                        "use scdoorkey door".into(),
+                        "use scpencils scsharpener".into(),
+                        "use scfull scsponge".into(),
+                        "use scsponge scfull".into(),
+                    ],
+                ]
+                .concat(),
+                vec!["peg0", "peg1", "peg2", "peg3", "peg4", "door", "stove"],
+                vec![
+                    "scsponge",
+                    "scmatches",
+                    "scdoorkey",
+                    "scscarf",
+                    "sccap",
+                    "scmitten",
+                    "scsharpener",
+                    "scpencils",
+                ],
             ),
         ];
         let mut problems = vec![];

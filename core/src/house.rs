@@ -63,7 +63,10 @@ pub fn talk(s: &mut State, words: &[&str], lines: &[Line], can_call: &str, prefi
                 None => Err(bad("say")),
                 Some((_, next)) => {
                     s.val_mut("talk")[0] = *next;
-                    if *next == 0 {
+                    if *next == 0 && !line.sets.is_empty() && s.flag(line.sets) {
+                        // The end of a conversation that told its secret.
+                        Ok(String::new())
+                    } else if *next == 0 {
                         Ok(format!("{prefix}msg.hangup"))
                     } else {
                         let reached = &lines[usize::from(*next) - 1];

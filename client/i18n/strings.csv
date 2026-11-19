@@ -2592,3 +2592,559 @@ mihint.11.3,Hang the bran sack on the counterweight hook.,Häng den Kleiesack an
 mihint.12.1,The flour must reach the village.,Das Mehl muss ins Dorf.,La farine doit arriver au village.,La farina deve arrivare in paese.,La harina debe llegar al pueblo.
 mihint.12.2,The cart waits at the loading door.,Der Wagen wartet an der Ladetür.,La charrette attend à la porte de chargement.,Il carretto aspetta alla porta di carico.,El carro espera en la puerta de carga.
 mihint.12.3,Put the festival flour on the cart.,Leg das Festmehl auf den Wagen.,Pose la farine de la fête sur la charrette.,Metti la farina della festa sul carretto.,Pon la harina de la fiesta en el carro.
+avintro.1,"The Glass Aviary, Sunday morning. The keeper has gone into town for seed and asked you to look after the birds.","Das Glashaus der Vögel, Sonntagmorgen. Der Wärter ist in die Stadt gegangen, um Futter zu holen, und hat dich gebeten, auf die Vögel aufzupassen.","La volière de verre, dimanche matin. Le gardien est parti en ville chercher des graines et t'a demandé de veiller sur les oiseaux.","La voliera di vetro, domenica mattina. Il custode è andato in città a prendere i semi e ti ha chiesto di badare agli uccelli.","El aviario de cristal, domingo por la mañana. El cuidador ha ido al pueblo a por semillas y te ha pedido que cuides de los pájaros."
+avintro.2,The glass doors are chained from outside until the keeper is back. Every bird must be fed and settled on its own perch; then ring the bell.,"Die Glastüren sind von aussen angekettet, bis der Wärter zurück ist. Jeder Vogel muss gefüttert sein und auf seiner Stange sitzen; dann läutest du die Glocke.","Les portes vitrées sont enchaînées de l'extérieur jusqu'au retour du gardien. Chaque oiseau doit être nourri et installé sur son perchoir ; ensuite, sonne la cloche.",Le porte di vetro sono incatenate da fuori finché il custode non torna. Ogni uccello deve essere nutrito e sistemato sul suo trespolo; poi suona la campana.,Las puertas de cristal están encadenadas por fuera hasta que vuelva el cuidador. Cada pájaro debe comer y quedar en su percha; luego toca la campana.
+avintro.3,"This one is long, of medium difficulty. A good time is %d minutes.",Dieser Raum ist lang und mittelschwer. Eine gute Zeit sind %d Minuten.,"Cette salle est longue, de difficulté moyenne. Un bon temps : %d minutes.","Questa stanza è lunga, di media difficoltà. Un buon tempo: %d minuti.",Esta sala es larga y de dificultad media. Un buen tiempo: %d minutos.
+avend.title,Every bird settled,Alle Vögel versorgt,Tous les oiseaux installés,Tutti gli uccelli sistemati,Todos los pájaros en su sitio
+avend.text,"The bell rings out over the glass dome. The keeper hurries in with a sack of seed and finds every bird fed, singing and on its perch. “Same time next Sunday?”","Die Glocke klingt über die Glaskuppel. Der Wärter eilt mit einem Sack Futter herein und findet jeden Vogel satt, singend und auf seiner Stange. «Nächsten Sonntag wieder?»","La cloche résonne sous la coupole de verre. Le gardien arrive en hâte avec un sac de graines et trouve chaque oiseau nourri, chantant, sur son perchoir. « Même heure dimanche prochain ? »","La campana risuona sotto la cupola di vetro. Il custode entra di corsa con un sacco di semi e trova ogni uccello sazio, che canta, sul suo trespolo. «Stessa ora domenica prossima?»","La campana resuena bajo la cúpula de cristal. El cuidador entra deprisa con un saco de semillas y encuentra a cada pájaro comido, cantando y en su percha. «¿Misma hora el domingo que viene?»"
+item.avkeys,Keeper's keys,Schlüssel des Wärters,Clés du gardien,Chiavi del custode,Llaves del cuidador
+item.avnet,Net,Kescher,Épuisette,Retino,Red
+item.avfish,Fish,Fisch,Poisson,Pesce,Pez
+item.avapple,Apple,Apfel,Pomme,Mela,Manzana
+item.avknife,Knife,Messer,Couteau,Coltello,Cuchillo
+item.avslices,Apple slices,Apfelschnitze,Tranches de pomme,Fettine di mela,Rodajas de manzana
+item.avseed,Canary seed,Kanarienfutter,Graines de canari,Semi per canarini,Alpiste
+item.avcan,Watering can,Giesskanne,Arrosoir,Annaffiatoio,Regadera
+item.avwater,Can of water,Volle Giesskanne,Arrosoir plein,Annaffiatoio pieno,Regadera llena
+item.avsugar,Sugar,Zucker,Sucre,Zucchero,Azúcar
+item.avnectar,Nectar,Nektar,Nectar,Nettare,Néctar
+item.avscoop,Scoop,Schaufel,Pelle,Paletta,Pala
+item.avgrain,Grain,Körner,Grains,Granaglie,Grano
+item.avwhistle,Bird whistle,Vogelpfeife,Appeau,Fischietto,Silbato de pájaro
+avtext.note,"Morning round:
+Greet everyone as always:
+“Good morning, my feathered friends!”
+Each bird its own food.
+Whistle the canary's song.
+Perches as on the plan.
+Then ring the bell.","Morgenrunde:
+Alle begrüssen wie immer:
+«Guten Morgen, meine gefiederten Freunde!»
+Jedem Vogel sein Futter.
+Das Lied des Kanarienvogels pfeifen.
+Stangen wie auf dem Plan.
+Dann die Glocke läuten.","Tournée du matin :
+Saluer tout le monde comme toujours :
+« Bonjour, mes amis à plumes ! »
+À chaque oiseau sa nourriture.
+Siffler la chanson du canari.
+Perchoirs comme sur le plan.
+Puis sonner la cloche.","Giro del mattino:
+Salutare tutti come sempre:
+«Buongiorno, miei amici pennuti!»
+A ogni uccello il suo cibo.
+Fischiare la canzone del canarino.
+Trespoli come sul piano.
+Poi suonare la campana.","Ronda de la mañana:
+Saludar a todos como siempre:
+«¡Buenos días, mis amigos emplumados!»
+A cada pájaro su comida.
+Silbar la canción del canario.
+Perchas como en el plano.
+Luego tocar la campana."
+avtext.plan,"Perch plan, 1 to 3
+(4 to 6 on the orchid's label)","Stangenplan, 1 bis 3
+(4 bis 6 am Schild der Orchidee)","Plan des perchoirs, 1 à 3
+(4 à 6 sur l'étiquette de l'orchidée)","Piano dei trespoli, da 1 a 3
+(da 4 a 6 sull'etichetta dell'orchidea)","Plano de perchas, 1 a 3
+(4 a 6 en la etiqueta de la orquídea)"
+avtalk.1,"The parrot cocks its head and croaks: “Good morning, my…!”","Der Papagei legt den Kopf schief und krächzt: «Guten Morgen, meine…!»","Le perroquet penche la tête et croasse : « Bonjour, mes… ! »","Il pappagallo piega la testa e gracchia: «Buongiorno, miei…!»","El loro ladea la cabeza y grazna: «¡Buenos días, mis…!»"
+avsay.1a,“…little darlings!”,«…kleinen Lieblinge!»,« …petits chéris ! »,«…piccoli tesori!»,«…pequeños tesoros!»
+avsay.1b,“…feathered friends!”,«…gefiederten Freunde!»,« …amis à plumes ! »,«…amici pennuti!»,«…amigos emplumados!»
+avsay.1c,“…noisy rascals!”,«…lauten Racker!»,« …bruyants coquins ! »,«…rumorosi birbanti!»,«…ruidosos granujas!»
+avtalk.2,“Feathered friends! Feathered friends! The singer eats from the sun jar! The sun jar!”,«Gefiederte Freunde! Gefiederte Freunde! Der Sänger frisst aus dem Sonnenglas! Dem Sonnenglas!»,« Amis à plumes ! Amis à plumes ! Le chanteur mange dans le bocal au soleil ! Le bocal au soleil ! »,«Amici pennuti! Amici pennuti! Il cantante mangia dal barattolo del sole! Il barattolo del sole!»,«¡Amigos emplumados! ¡Amigos emplumados! ¡El cantor come del tarro del sol! ¡Del tarro del sol!»
+avsay.2a,"“Thank you, Polly.”","«Danke, Polly.»","« Merci, Polly. »","«Grazie, Polly.»","«Gracias, Polly.»"
+avmsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+avmsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+avmsg.hangup,The parrot fluffs up and falls silent. Try again.,Der Papagei plustert sich auf und schweigt. Versuch es nochmals.,Le perroquet se gonfle et se tait. Réessaie.,Il pappagallo si gonfia e tace. Riprova.,El loro se esponja y se calla. Inténtalo otra vez.
+avmsg.no_line,The parrot ignores you and eyes the apple tree.,Der Papagei beachtet dich nicht und schielt zum Apfelbaum.,Le perroquet t'ignore et lorgne le pommier.,Il pappagallo ti ignora e guarda il melo.,El loro te ignora y mira el manzano.
+avmsg.keys,In the nest box: the keeper's keys!,Im Nistkasten: die Schlüssel des Wärters!,Dans le nichoir : les clés du gardien !,Nella casetta: le chiavi del custode!,En la caja nido: ¡las llaves del cuidador!
+avmsg.store_open,The keys turn. The seed store is open.,Die Schlüssel drehen. Das Futterlager ist offen.,Les clés tournent. La réserve de graines est ouverte.,Le chiavi girano. Il magazzino dei semi è aperto.,Las llaves giran. El almacén de semillas está abierto.
+avmsg.store_shut,"That's in the seed store, which is locked.","Das ist im Futterlager, und das ist abgeschlossen.","C'est dans la réserve de graines, qui est fermée à clé.","È nel magazzino dei semi, che è chiuso a chiave.","Está en el almacén de semillas, que está cerrado."
+avmsg.net,A net with a long handle.,Ein Kescher mit langem Stiel.,Une épuisette à long manche.,Un retino dal manico lungo.,Una red con mango largo.
+avmsg.fish,Swish! You catch the fish as it jumps.,Zack! Du fängst den Fisch im Sprung.,Hop ! Tu attrapes le poisson en plein saut.,Zac! Prendi il pesce mentre salta.,¡Zas! Atrapas el pez en pleno salto.
+avmsg.pond_still,The water is still. The fish is down at the bottom.,Das Wasser ist ruhig. Der Fisch ist unten am Grund.,L'eau est calme. Le poisson est au fond.,L'acqua è ferma. Il pesce è sul fondo.,El agua está quieta. El pez está en el fondo.
+avmsg.fed_king,The kingfisher gulps the fish and settles on its branch.,Der Eisvogel schluckt den Fisch und setzt sich zufrieden auf seinen Ast.,Le martin-pêcheur avale le poisson et se pose sur sa branche.,Il martin pescatore inghiotte il pesce e si posa sul suo ramo.,El martín pescador se traga el pez y se posa en su rama.
+avmsg.apple,You pick a red apple.,Du pflückst einen roten Apfel.,Tu cueilles une pomme rouge.,Cogli una mela rossa.,Coges una manzana roja.
+avmsg.knife,A small knife.,Ein kleines Messer.,Un petit couteau.,Un piccolo coltello.,Un cuchillo pequeño.
+avmsg.slices,Apple slices.,Apfelschnitze.,Des tranches de pomme.,Fettine di mela.,Rodajas de manzana.
+avmsg.fed_parrot,The parrot crunches the slices and looks at you expectantly.,Der Papagei knabbert die Schnitze und schaut dich erwartungsvoll an.,"Le perroquet croque les tranches et te regarde, plein d'attente.",Il pappagallo sgranocchia le fettine e ti guarda in attesa.,El loro se come las rodajas y te mira expectante.
+avmsg.jars_worn,Three seed jars. Which one is the canary's? Better not guess.,Drei Futtergläser. Welches gehört dem Kanarienvogel? Besser nicht raten.,Trois bocaux de graines. Lequel est celui du canari ? Mieux vaut ne pas deviner.,Tre barattoli di semi. Qual è quello del canarino? Meglio non tirare a indovinare.,Tres tarros de semillas. ¿Cuál es el del canario? Mejor no adivinar.
+avmsg.wrong_jar,That seed is for the bigger birds.,Dieses Futter ist für die grösseren Vögel.,Ces graines sont pour les gros oiseaux.,Questi semi sono per gli uccelli più grandi.,Esas semillas son para los pájaros grandes.
+avmsg.seed,"Canary seed, from the jar with the sun.",Kanarienfutter aus dem Glas mit der Sonne.,"Des graines de canari, du bocal au soleil.","Semi per canarini, dal barattolo con il sole.","Alpiste, del tarro con el sol."
+avmsg.fed_canary,"The canary pecks at the seed, then begins to sing.",Der Kanarienvogel pickt das Futter und beginnt zu singen.,"Le canari picore les graines, puis se met à chanter.","Il canarino becca i semi, poi comincia a cantare.",El canario picotea las semillas y empieza a cantar.
+avmsg.can,"A watering can, empty.","Eine Giesskanne, leer.","Un arrosoir, vide.","Un annaffiatoio, vuoto.","Una regadera, vacía."
+avmsg.water,The can fills with fresh water.,Die Kanne füllt sich mit frischem Wasser.,L'arrosoir se remplit d'eau fraîche.,L'annaffiatoio si riempie d'acqua fresca.,La regadera se llena de agua fresca.
+avmsg.nectar,Sugar water: nectar.,Zuckerwasser: Nektar.,De l'eau sucrée : du nectar.,Acqua e zucchero: nettare.,Agua con azúcar: néctar.
+avmsg.fed_humming,"The hummingbird hovers at the feeder, drinking.",Der Kolibri schwirrt vor der Tränke und trinkt.,Le colibri vole sur place devant l'abreuvoir et boit.,Il colibrì si libra davanti all'abbeveratoio e beve.,El colibrí revolotea ante el bebedero y bebe.
+avmsg.bloom,Mist settles on the orchid. It opens its flowers; a label hangs among them.,Nebel legt sich auf die Orchidee. Sie öffnet ihre Blüten; dazwischen hängt ein Schild.,La brume se dépose sur l'orchidée. Elle ouvre ses fleurs ; une étiquette pend parmi elles.,La nebbia si posa sull'orchidea. Apre i fiori; tra loro pende un'etichetta.,La niebla se posa sobre la orquídea. Abre sus flores; entre ellas cuelga una etiqueta.
+avmsg.owl_awake,Darkness falls over the corner. The owl opens its eyes and flies up to the beam.,Es wird dunkel in der Ecke. Die Eule öffnet die Augen und fliegt auf den Balken.,L'ombre tombe sur le coin. La chouette ouvre les yeux et s'envole vers la poutre.,L'angolo si fa buio. La civetta apre gli occhi e vola sulla trave.,La esquina se oscurece. El búho abre los ojos y vuela a la viga.
+avmsg.owl_asleep,The owl is asleep on its perch.,Die Eule schläft auf ihrer Stange.,La chouette dort sur son perchoir.,La civetta dorme sul suo trespolo.,El búho duerme en su percha.
+avmsg.whistle,On the owl's perch: a wooden bird whistle with four holes.,Auf der Stange der Eule: eine hölzerne Vogelpfeife mit vier Löchern.,Sur le perchoir de la chouette : un appeau en bois à quatre trous.,Sul trespolo della civetta: un fischietto di legno con quattro fori.,En la percha del búho: un silbato de madera con cuatro agujeros.
+avmsg.no_whistle,You have nothing to play.,Du hast nichts zum Spielen.,Tu n'as rien pour jouer.,Non hai niente da suonare.,No tienes nada que tocar.
+avmsg.scoop,A metal scoop.,Eine Metallschaufel.,Une pelle en métal.,Una paletta di metallo.,Una pala de metal.
+avmsg.sugar,A bag of sugar.,Ein Sack Zucker.,Un sac de sucre.,Un sacchetto di zucchero.,Una bolsa de azúcar.
+avmsg.grain,A scoop of grain.,Eine Schaufel Körner.,Une pelletée de grains.,Una paletta di granaglie.,Una pala de grano.
+avmsg.fed_peacock,The peacock eats and spreads its tail.,Der Pfau frisst und schlägt ein Rad.,Le paon mange et fait la roue.,Il pavone mangia e fa la ruota.,El pavo real come y despliega la cola.
+avmsg.song_ok,"The whistle sings the canary's song. All over the aviary, birds flutter to their perches.",Die Pfeife singt das Lied des Kanarienvogels. Überall im Glashaus flattern die Vögel zu ihren Stangen.,"L'appeau chante la chanson du canari. Dans toute la volière, les oiseaux volettent vers leurs perchoirs.",Il fischietto canta la canzone del canarino. In tutta la voliera gli uccelli svolazzano verso i trespoli.,El silbato canta la canción del canario. Por todo el aviario los pájaros revolotean hacia sus perchas.
+avmsg.perched,Every perch is where the plan wants it.,"Jede Stange ist dort, wo der Plan sie will.",Chaque perchoir est là où le plan le veut.,Ogni trespolo è dove lo vuole il piano.,Cada percha está donde la quiere el plano.
+avmsg.plan_half,Which heights? The plan has only perches 1 to 3.,Welche Höhen? Der Plan zeigt nur die Stangen 1 bis 3.,Quelles hauteurs ? Le plan n'indique que les perchoirs 1 à 3.,Quali altezze? Il piano mostra solo i trespoli da 1 a 3.,¿Qué alturas? El plano solo tiene las perchas 1 a 3.
+avmsg.bell_wait,"The bell rings, but nobody comes. Not every bird is fed and settled yet.","Die Glocke läutet, aber niemand kommt. Noch sind nicht alle Vögel versorgt.","La cloche sonne, mais personne ne vient. Tous les oiseaux ne sont pas encore installés.","La campana suona, ma non viene nessuno. Non tutti gli uccelli sono ancora sistemati.","La campana suena, pero no viene nadie. Aún no están todos los pájaros atendidos."
+avmsg.doors,"The bell rings out. Footsteps: the keeper is back with the seed, and the glass doors swing open.","Die Glocke klingt. Schritte: Der Wärter ist mit dem Futter zurück, und die Glastüren schwingen auf.","La cloche retentit. Des pas : le gardien revient avec les graines, et les portes vitrées s'ouvrent.",La campana risuona. Passi: il custode torna con i semi e le porte di vetro si aprono.,La campana resuena. Pasos: el cuidador vuelve con las semillas y las puertas de cristal se abren.
+avmsg.desk,The keeper's desk: a note and a plan.,Das Pult des Wärters: ein Zettel und ein Plan.,Le bureau du gardien : une note et un plan.,La scrivania del custode: un biglietto e un piano.,La mesa del cuidador: una nota y un plano.
+avmsg.plan,The perch plan.,Der Stangenplan.,Le plan des perchoirs.,Il piano dei trespoli.,El plano de perchas.
+avmsg.pond,A pond with water lilies. Something moves below.,Ein Teich mit Seerosen. Darunter bewegt sich etwas.,Un bassin aux nénuphars. Quelque chose bouge dessous.,Uno stagno con le ninfee. Sotto si muove qualcosa.,Un estanque con nenúfares. Algo se mueve debajo.
+avmsg.kingfisher,"A kingfisher, watching the water hungrily.","Ein Eisvogel, der hungrig ins Wasser schaut.","Un martin-pêcheur qui fixe l'eau, affamé.",Un martin pescatore che guarda l'acqua affamato.,Un martín pescador que mira el agua con hambre.
+avmsg.parrot,A red-and-blue parrot. It eyes the apple tree.,Ein rot-blauer Papagei. Er schielt zum Apfelbaum.,Un perroquet rouge et bleu. Il lorgne le pommier.,Un pappagallo rosso e blu. Guarda il melo.,Un loro rojo y azul. Mira el manzano.
+avmsg.canary,A yellow canary in its cage.,Ein gelber Kanarienvogel in seinem Käfig.,Un canari jaune dans sa cage.,Un canarino giallo nella sua gabbia.,Un canario amarillo en su jaula.
+avmsg.cage,The canary's cage.,Der Käfig des Kanarienvogels.,La cage du canari.,La gabbia del canarino.,La jaula del canario.
+avmsg.feeder,A hummingbird feeder.,Eine Kolibri-Tränke.,Un abreuvoir à colibris.,Un abbeveratoio per colibrì.,Un bebedero de colibríes.
+avmsg.orchid,An orchid. Three misting valves and a gauge beside it.,Eine Orchidee. Daneben drei Nebelventile und eine Anzeige.,"Une orchidée. À côté, trois vannes de brume et un cadran.","Un'orchidea. Accanto, tre valvole di nebulizzazione e un indicatore.","Una orquídea. Al lado, tres válvulas de niebla y un indicador."
+avmsg.peacock,"A peacock, its tail folded, pecking at nothing.",Ein Pfau mit zusammengelegtem Schwanz pickt ins Leere.,"Un paon, la queue repliée, picore dans le vide.","Un pavone, con la coda chiusa, becca il nulla.","Un pavo real, con la cola plegada, picotea el suelo."
+avmsg.owl,An owl in the dark corner.,Eine Eule in der dunklen Ecke.,Une chouette dans le coin sombre.,Una civetta nell'angolo buio.,Un búho en la esquina oscura.
+avmsg.storedoor,"The seed store's door, locked.","Die Tür des Futterlagers, abgeschlossen.","La porte de la réserve de graines, fermée à clé.","La porta del magazzino dei semi, chiusa a chiave.","La puerta del almacén de semillas, cerrada."
+avmsg.sack,A sack of grain.,Ein Sack Körner.,Un sac de grains.,Un sacco di granaglie.,Un saco de grano.
+avmsg.stand,The perch stand: one perch for each bird.,Das Stangengestell: eine Stange für jeden Vogel.,Le support des perchoirs : un perchoir par oiseau.,Il supporto dei trespoli: uno per ogni uccello.,El soporte de perchas: una para cada pájaro.
+avmsg.dome,"Glass doors, chained from outside.","Glastüren, von aussen angekettet.","Des portes vitrées, enchaînées de l'extérieur.","Porte di vetro, incatenate da fuori.","Puertas de cristal, encadenadas por fuera."
+avmsg.tap,A water tap.,Ein Wasserhahn.,Un robinet.,Un rubinetto.,Un grifo.
+avmsg.jars,Seed jars.,Futtergläser.,Des bocaux de graines.,Barattoli di semi.,Tarros de semillas.
+avmsg.crank,A crank: it lowers the shade over the dome's corner by the pond.,Eine Kurbel: Sie senkt die Beschattung über der Ecke beim Teich.,Une manivelle : elle baisse le store au-dessus du coin près du bassin.,Una manovella: abbassa la tenda sopra l'angolo vicino allo stagno.,Una manivela: baja el toldo sobre la esquina junto al estanque.
+avhint.1.1,The keeper keeps spare keys where a bird might live.,"Der Wärter bewahrt Ersatzschlüssel dort auf, wo ein Vogel wohnen könnte.",Le gardien range ses clés de secours là où un oiseau pourrait vivre.,Il custode tiene le chiavi di riserva dove potrebbe vivere un uccello.,El cuidador guarda llaves de repuesto donde podría vivir un pájaro.
+avhint.1.2,Look at the nest box on the post at the entrance.,Schau dir den Nistkasten am Pfosten beim Eingang an.,Regarde le nichoir sur le poteau à l'entrée.,Guarda la casetta sul palo all'ingresso.,Mira la caja nido del poste de la entrada.
+avhint.1.3,Tap the nest box: the keys are inside.,Tippe auf den Nistkasten: Die Schlüssel sind darin.,Touche le nichoir : les clés sont dedans.,Tocca la casetta: le chiavi sono dentro.,Toca la caja nido: las llaves están dentro.
+avhint.2.1,The keys belong to a door.,Die Schlüssel gehören zu einer Tür.,Les clés vont à une porte.,Le chiavi sono di una porta.,Las llaves son de una puerta.
+avhint.2.2,The seed store.,Das Futterlager.,La réserve de graines.,Il magazzino dei semi.,El almacén de semillas.
+avhint.2.3,Use the keys on the seed store's door.,Benutze die Schlüssel an der Tür des Futterlagers.,Utilise les clés sur la porte de la réserve.,Usa le chiavi sulla porta del magazzino.,Usa las llaves en la puerta del almacén.
+avhint.3.1,Something in the store catches things in water.,Etwas im Lager fängt Dinge im Wasser.,Quelque chose dans la réserve attrape ce qui est dans l'eau.,Qualcosa nel magazzino cattura le cose nell'acqua.,Algo del almacén atrapa cosas en el agua.
+avhint.3.2,A net hangs in the store.,Im Lager hängt ein Kescher.,Une épuisette pend dans la réserve.,Nel magazzino è appeso un retino.,En el almacén cuelga una red.
+avhint.3.3,Take the net from the seed store.,Nimm den Kescher aus dem Futterlager.,Prends l'épuisette dans la réserve.,Prendi il retino dal magazzino.,Coge la red del almacén.
+avhint.4.1,The kingfisher is hungry. Watch the pond.,Der Eisvogel hat Hunger. Beobachte den Teich.,Le martin-pêcheur a faim. Observe le bassin.,Il martin pescatore ha fame. Osserva lo stagno.,El martín pescador tiene hambre. Observa el estanque.
+avhint.4.2,The fish only jumps out now and then.,Der Fisch springt nur ab und zu heraus.,Le poisson ne saute que de temps en temps.,Il pesce salta fuori solo ogni tanto.,El pez solo salta de vez en cuando.
+avhint.4.3,Use the net on the pond while the fish is out of the water.,"Benutze den Kescher am Teich, während der Fisch aus dem Wasser springt.",Utilise l'épuisette sur le bassin pendant que le poisson est hors de l'eau.,Usa il retino sullo stagno mentre il pesce è fuori dall'acqua.,Usa la red en el estanque mientras el pez está fuera del agua.
+avhint.5.1,Who eats fish?,Wer frisst Fisch?,Qui mange du poisson ?,Chi mangia pesce?,¿Quién come pescado?
+avhint.5.2,The kingfisher on the branch by the pond.,Der Eisvogel auf dem Ast beim Teich.,Le martin-pêcheur sur la branche près du bassin.,Il martin pescatore sul ramo vicino allo stagno.,El martín pescador en la rama junto al estanque.
+avhint.5.3,Give the fish to the kingfisher.,Gib den Fisch dem Eisvogel.,Donne le poisson au martin-pêcheur.,Dai il pesce al martin pescatore.,Dale el pez al martín pescador.
+avhint.6.1,Fruit grows in the tropical corner.,In der tropischen Ecke wächst Obst.,Des fruits poussent dans le coin tropical.,Nell'angolo tropicale cresce la frutta.,En el rincón tropical crece fruta.
+avhint.6.2,The apple tree.,Der Apfelbaum.,Le pommier.,Il melo.,El manzano.
+avhint.6.3,Tap the apple tree.,Tippe auf den Apfelbaum.,Touche le pommier.,Tocca il melo.,Toca el manzano.
+avhint.7.1,You will need something to cut with.,Du brauchst etwas zum Schneiden.,Il te faudra de quoi couper.,Ti servirà qualcosa per tagliare.,Necesitarás algo para cortar.
+avhint.7.2,There is a knife in the seed store.,Im Futterlager liegt ein Messer.,Il y a un couteau dans la réserve.,Nel magazzino c'è un coltello.,Hay un cuchillo en el almacén.
+avhint.7.3,Take the knife from the store.,Nimm das Messer aus dem Lager.,Prends le couteau dans la réserve.,Prendi il coltello dal magazzino.,Coge el cuchillo del almacén.
+avhint.8.1,The parrot will not take a whole apple.,Einen ganzen Apfel nimmt der Papagei nicht.,Le perroquet ne prend pas une pomme entière.,Il pappagallo non prende una mela intera.,El loro no acepta una manzana entera.
+avhint.8.2,Cut it.,Schneide ihn.,Coupe-la.,Tagliala.,Córtala.
+avhint.8.3,Use the knife on the apple.,Benutze das Messer am Apfel.,Utilise le couteau sur la pomme.,Usa il coltello sulla mela.,Usa el cuchillo en la manzana.
+avhint.9.1,Who eats fruit?,Wer frisst Obst?,Qui mange des fruits ?,Chi mangia frutta?,¿Quién come fruta?
+avhint.9.2,The parrot in the tropical corner.,Der Papagei in der tropischen Ecke.,Le perroquet du coin tropical.,Il pappagallo nell'angolo tropicale.,El loro del rincón tropical.
+avhint.9.3,Give the apple slices to the parrot.,Gib die Apfelschnitze dem Papagei.,Donne les tranches de pomme au perroquet.,Dai le fettine di mela al pappagallo.,Dale las rodajas de manzana al loro.
+avhint.10.1,The parrot greets everyone the way the keeper does.,Der Papagei grüsst alle so wie der Wärter.,Le perroquet salue tout le monde comme le gardien.,Il pappagallo saluta tutti come il custode.,El loro saluda a todos como el cuidador.
+avhint.10.2,The keeper's note on the desk has the morning greeting.,Auf dem Zettel am Pult steht der Morgengruss.,La note sur le bureau donne le salut du matin.,Il biglietto sulla scrivania ha il saluto del mattino.,La nota de la mesa tiene el saludo de la mañana.
+avhint.10.3,Talk to the parrot and finish with “feathered friends”.,Sprich mit dem Papagei und ende mit «gefiederten Freunde».,Parle au perroquet et termine par « amis à plumes ».,Parla al pappagallo e finisci con «amici pennuti».,Habla con el loro y termina con «amigos emplumados».
+avhint.11.1,The canary is fussy about its seed.,Der Kanarienvogel ist heikel mit seinem Futter.,Le canari est difficile avec ses graines.,Il canarino è esigente con i semi.,El canario es exigente con sus semillas.
+avhint.11.2,The parrot told you which jar.,Der Papagei hat dir das Glas verraten.,Le perroquet t'a dit quel bocal.,Il pappagallo ti ha detto quale barattolo.,El loro te dijo qué tarro.
+avhint.11.3,Open the jar with the sun.,Öffne das Glas mit der Sonne.,Ouvre le bocal au soleil.,Apri il barattolo con il sole.,Abre el tarro del sol.
+avhint.12.1,Who eats seed?,Wer frisst Samen?,Qui mange des graines ?,Chi mangia semi?,¿Quién come semillas?
+avhint.12.2,The canary's cage hangs by the pond.,Der Käfig des Kanarienvogels hängt beim Teich.,La cage du canari pend près du bassin.,La gabbia del canarino è appesa vicino allo stagno.,La jaula del canario cuelga junto al estanque.
+avhint.12.3,Give the seed to the canary.,Gib das Futter dem Kanarienvogel.,Donne les graines au canari.,Dai i semi al canarino.,Dale las semillas al canario.
+avhint.13.1,Something to carry water.,"Etwas, um Wasser zu tragen.",De quoi porter de l'eau.,Qualcosa per portare l'acqua.,Algo para llevar agua.
+avhint.13.2,A watering can stands by the tap at the pond.,Beim Wasserhahn am Teich steht eine Giesskanne.,Un arrosoir est posé près du robinet du bassin.,C'è un annaffiatoio vicino al rubinetto dello stagno.,Hay una regadera junto al grifo del estanque.
+avhint.13.3,Take the watering can.,Nimm die Giesskanne.,Prends l'arrosoir.,Prendi l'annaffiatoio.,Coge la regadera.
+avhint.14.1,The can is empty.,Die Kanne ist leer.,L'arrosoir est vide.,L'annaffiatoio è vuoto.,La regadera está vacía.
+avhint.14.2,The tap at the pond.,Der Wasserhahn am Teich.,Le robinet du bassin.,Il rubinetto dello stagno.,El grifo del estanque.
+avhint.14.3,Use the can on the tap.,Benutze die Kanne am Wasserhahn.,Utilise l'arrosoir sur le robinet.,Usa l'annaffiatoio sul rubinetto.,Usa la regadera en el grifo.
+avhint.15.1,Hummingbirds drink nectar.,Kolibris trinken Nektar.,Les colibris boivent du nectar.,I colibrì bevono nettare.,Los colibríes beben néctar.
+avhint.15.2,Sugar from the store and water.,Zucker aus dem Lager und Wasser.,Du sucre de la réserve et de l'eau.,Zucchero dal magazzino e acqua.,Azúcar del almacén y agua.
+avhint.15.3,Use the sugar on the water.,Benutze den Zucker mit dem Wasser.,Utilise le sucre sur l'eau.,Usa lo zucchero con l'acqua.,Usa el azúcar con el agua.
+avhint.16.1,The feeder is empty.,Die Tränke ist leer.,L'abreuvoir est vide.,L'abbeveratoio è vuoto.,El bebedero está vacío.
+avhint.16.2,The hummingbird feeder in the tropical corner.,Die Kolibri-Tränke in der tropischen Ecke.,L'abreuvoir à colibris du coin tropical.,L'abbeveratoio dei colibrì nell'angolo tropicale.,El bebedero de colibríes del rincón tropical.
+avhint.16.3,Put the nectar in the feeder.,Fülle den Nektar in die Tränke.,Mets le nectar dans l'abreuvoir.,Metti il nettare nell'abbeveratoio.,Pon el néctar en el bebedero.
+avhint.17.1,The orchid needs moist air to bloom.,"Die Orchidee braucht feuchte Luft, um zu blühen.",L'orchidée a besoin d'air humide pour fleurir.,L'orchidea ha bisogno di aria umida per fiorire.,La orquídea necesita aire húmedo para florecer.
+avhint.17.2,Its three valves add mist; the gauge shows how much in all. Aim for the green mark.,"Die drei Ventile geben Nebel; die Anzeige zeigt, wie viel insgesamt. Ziel ist die grüne Marke.",Ses trois vannes ajoutent de la brume ; le cadran montre le total. Vise la marque verte.,Le tre valvole aggiungono nebbia; l'indicatore mostra il totale. Punta al segno verde.,Sus tres válvulas añaden niebla; el indicador muestra el total. Apunta a la marca verde.
+avhint.17.3,"The three valves together must make 5, for example 2, 2 and 1.","Die drei Ventile zusammen müssen 5 ergeben, zum Beispiel 2, 2 und 1.","Les trois vannes ensemble doivent faire 5, par exemple 2, 2 et 1.","Le tre valvole insieme devono fare 5, per esempio 2, 2 e 1.","Las tres válvulas juntas deben sumar 5, por ejemplo 2, 2 y 1."
+avhint.18.1,The owl sleeps through the bright day.,Die Eule verschläft den hellen Tag.,La chouette dort en plein jour.,La civetta dorme di giorno.,El búho duerme durante el día.
+avhint.18.2,The crank at the entrance lowers the shade over the owl's corner.,Die Kurbel beim Eingang senkt die Beschattung über der Ecke der Eule.,La manivelle de l'entrée baisse le store sur le coin de la chouette.,La manovella all'ingresso abbassa la tenda sull'angolo della civetta.,La manivela de la entrada baja el toldo sobre la esquina del búho.
+avhint.18.3,Turn the shade all the way down.,Kurble die Beschattung ganz hinunter.,Baisse le store jusqu'en bas.,Abbassa la tenda del tutto.,Baja el toldo del todo.
+avhint.19.1,The owl was sitting on something.,Die Eule sass auf etwas.,La chouette était assise sur quelque chose.,La civetta era seduta su qualcosa.,El búho estaba sentado sobre algo.
+avhint.19.2,"Its perch, now that it has flown up.","Auf ihrer Stange, jetzt wo sie hochgeflogen ist.","Son perchoir, maintenant qu'elle s'est envolée.","Il suo trespolo, ora che è volata su.","Su percha, ahora que ha volado."
+avhint.19.3,Take the whistle from the owl's perch.,Nimm die Pfeife von der Stange der Eule.,Prends l'appeau sur le perchoir de la chouette.,Prendi il fischietto dal trespolo della civetta.,Coge el silbato de la percha del búho.
+avhint.20.1,The peacock eats grain.,Der Pfau frisst Körner.,Le paon mange des grains.,Il pavone mangia granaglie.,El pavo real come grano.
+avhint.20.2,The sack in the store; you need something to scoop with.,Der Sack im Lager; du brauchst etwas zum Schöpfen.,Le sac de la réserve ; il te faut de quoi puiser.,Il sacco nel magazzino; serve qualcosa per prenderle.,El saco del almacén; necesitas algo para sacarlo.
+avhint.20.3,Use the scoop on the grain sack.,Benutze die Schaufel am Kornsack.,Utilise la pelle sur le sac de grains.,Usa la paletta sul sacco.,Usa la pala en el saco de grano.
+avhint.21.1,Who eats grain?,Wer frisst Körner?,Qui mange des grains ?,Chi mangia granaglie?,¿Quién come grano?
+avhint.21.2,The peacock.,Der Pfau.,Le paon.,Il pavone.,El pavo real.
+avhint.21.3,Give the grain to the peacock.,Gib die Körner dem Pfau.,Donne les grains au paon.,Dai le granaglie al pavone.,Dale el grano al pavo real.
+avhint.22.1,The keeper calls the birds home with the canary's song on a whistle.,Der Wärter ruft die Vögel mit dem Lied des Kanarienvogels auf einer Pfeife.,Le gardien rappelle les oiseaux en sifflant la chanson du canari.,Il custode richiama gli uccelli fischiando la canzone del canarino.,El cuidador llama a los pájaros con la canción del canario en un silbato.
+avhint.22.2,"Once fed, the canary sings: its notes have the colours of the whistle's holes.",Gefüttert singt der Kanarienvogel: Seine Noten haben die Farben der Pfeifenlöcher.,"Une fois nourri, le canari chante : ses notes ont les couleurs des trous de l'appeau.","Una volta nutrito, il canarino canta: le sue note hanno i colori dei fori.","Una vez comido, el canario canta: sus notas tienen los colores de los agujeros."
+avhint.22.3,"At the cage, play the holes 3, 1, 4, 2, 3 (counted from the left).","Spiele beim Käfig die Löcher 3, 1, 4, 2, 3 (von links gezählt).","Près de la cage, joue les trous 3, 1, 4, 2, 3 (depuis la gauche).","Alla gabbia, suona i fori 3, 1, 4, 2, 3 (da sinistra).","En la jaula, toca los agujeros 3, 1, 4, 2, 3 (desde la izquierda)."
+avhint.23.1,Every bird has its own perch height.,Jeder Vogel hat seine eigene Stangenhöhe.,Chaque oiseau a sa hauteur de perchoir.,Ogni uccello ha la sua altezza di trespolo.,Cada pájaro tiene su altura de percha.
+avhint.23.2,The plan on the desk gives perches 1 to 3; the orchid's label gives 4 to 6.,"Der Plan auf dem Pult zeigt die Stangen 1 bis 3, das Schild der Orchidee 4 bis 6.","Le plan du bureau donne les perchoirs 1 à 3 ; l'étiquette de l'orchidée, 4 à 6.",Il piano sulla scrivania dà i trespoli da 1 a 3; l'etichetta dell'orchidea da 4 a 6.,"El plano de la mesa da las perchas 1 a 3; la etiqueta de la orquídea, 4 a 6."
+avhint.23.3,"From the bottom (1) to the top (4), the perches are 4, 2, 3, 1, 3, 4.","Von unten (1) bis oben (4): 4, 2, 3, 1, 3, 4.","Du bas (1) au haut (4) : 4, 2, 3, 1, 3, 4.","Dal basso (1) all'alto (4): 4, 2, 3, 1, 3, 4.","De abajo (1) a arriba (4): 4, 2, 3, 1, 3, 4."
+avhint.24.1,"Every bird fed, the song played, the perches set?","Alle Vögel gefüttert, das Lied gespielt, die Stangen gesetzt?","Tous les oiseaux nourris, la chanson jouée, les perchoirs réglés ?","Uccelli nutriti, canzone suonata, trespoli sistemati?","¿Todos los pájaros comidos, la canción tocada, las perchas listas?"
+avhint.24.2,Then the keeper's note says what comes last.,"Dann sagt der Zettel des Wärters, was zuletzt kommt.",Alors la note du gardien dit ce qui vient en dernier.,Allora il biglietto del custode dice cosa viene per ultimo.,Entonces la nota del cuidador dice lo último.
+avhint.24.3,Ring the bell at the entrance.,Läute die Glocke beim Eingang.,Sonne la cloche à l'entrée.,Suona la campana all'ingresso.,Toca la campana de la entrada.
+hmintro.1,"The fair has closed for the night, but somebody forgot the lights. You stayed too long in the hall of mirrors.","Der Jahrmarkt hat für heute geschlossen, aber jemand hat das Licht vergessen. Du bist zu lange im Spiegelkabinett geblieben.","La fête foraine a fermé pour la nuit, mais quelqu'un a oublié les lumières. Tu es resté trop longtemps au palais des glaces.","Il luna park ha chiuso per la notte, ma qualcuno ha dimenticato le luci. Sei rimasto troppo nel labirinto degli specchi.","La feria ha cerrado por esta noche, pero alguien olvidó las luces. Te quedaste demasiado en la casa de los espejos."
+hmintro.2,"The gates are locked. The attendant does his rounds, but he only comes when the carousel plays. Get through the maze, wake the carousel and call him.","Die Tore sind zu. Der Wärter macht seine Runde, aber er kommt nur, wenn das Karussell spielt. Finde durchs Labyrinth, weck das Karussell und ruf ihn.","Les grilles sont fermées. Le gardien fait sa ronde, mais il ne vient que si le manège joue. Traverse le labyrinthe, réveille le manège et appelle-le.","I cancelli sono chiusi. Il guardiano fa il giro, ma arriva solo se la giostra suona. Attraversa il labirinto, sveglia la giostra e chiamalo.","Las verjas están cerradas. El vigilante hace su ronda, pero solo viene si suena el tiovivo. Cruza el laberinto, despierta el tiovivo y llámalo."
+hmintro.3,"This one is long, of medium difficulty. A good time is %d minutes.",Dieser Raum ist lang und mittelschwer. Eine gute Zeit sind %d Minuten.,"Cette salle est longue, de difficulté moyenne. Un bon temps : %d minutes.","Questa stanza è lunga, di media difficoltà. Un buon tempo: %d minuti.",Esta sala es larga y de dificultad media. Un buen tiempo: %d minutos.
+hmend.title,The attendant arrives,Der Wärter kommt,Le gardien arrive,Arriva il guardiano,Llega el vigilante
+hmend.text,"The attendant blinks at the turning carousel, the honking clown and you. “Locked in? Happens every summer.” He laughs, unlocks the gate, and the organ plays you out.","Der Wärter blinzelt das drehende Karussell an, den hupenden Clown und dich. «Eingeschlossen? Passiert jeden Sommer.» Er lacht, schliesst das Tor auf, und die Orgel spielt dich hinaus.","Le gardien regarde, ébahi, le manège qui tourne, le clown qui klaxonne et toi. « Enfermé ? Ça arrive chaque été. » Il rit, ouvre la grille, et l'orgue te raccompagne.","Il guardiano guarda stupito la giostra che gira, il clown che strombazza e te. «Chiuso dentro? Succede ogni estate.» Ride, apre il cancello e l'organo ti accompagna fuori.","El vigilante mira el tiovivo girando, el payaso que pita y a ti. «¿Encerrado? Pasa cada verano.» Se ríe, abre la verja y el organillo te despide."
+item.hmcoin,Coin,Münze,Pièce,Moneta,Moneda
+item.hmkey,Brass key,Messingschlüssel,Clé en laiton,Chiave d'ottone,Llave de latón
+item.hmmallet,Mallet,Holzhammer,Maillet,Mazza,Mazo
+item.hmcylinder,Cylinder mirror,Zylinderspiegel,Miroir cylindrique,Specchio cilindrico,Espejo cilíndrico
+item.hmtoken,Token,Jeton,Jeton,Gettone,Ficha
+item.hmdarts,Darts,Wurfpfeile,Fléchettes,Freccette,Dardos
+item.hmmirror,Small mirror,Kleiner Spiegel,Petit miroir,Specchietto,Espejito
+item.hmsugar,Sugar,Zucker,Sucre,Zucchero,Azúcar
+item.hmstick,Stick,Stäbchen,Bâtonnet,Bastoncino,Palito
+item.hmfloss,Candy floss,Zuckerwatte,Barbe à papa,Zucchero filato,Algodón de azúcar
+hmtalk.1,“Zelda sees what you seek. Speak!”,"«Zelda sieht, was du suchst. Sprich!»",« Zelda voit ce que tu cherches. Parle ! »,«Zelda vede ciò che cerchi. Parla!»,«Zelda ve lo que buscas. ¡Habla!»
+hmsay.1a,“My fortune.”,«Meine Zukunft.»,« Mon avenir. »,«Il mio futuro.»,«Mi futuro.»
+hmsay.1b,“How to start the carousel.”,«Wie man das Karussell startet.»,« Comment lancer le manège. »,«Come far partire la giostra.»,«Cómo poner en marcha el tiovivo.»
+hmsay.1c,“The way out.”,«Den Ausgang.»,« La sortie. »,«L'uscita.»,«La salida.»
+hmtalk.2,“The horses sleep. Each must rise as high as its star is big. But where are the stars?”,"«Die Pferde schlafen. Jedes muss so hoch steigen, wie sein Stern gross ist. Doch wo sind die Sterne?»",« Les chevaux dorment. Chacun doit monter aussi haut que son étoile est grande. Mais où sont les étoiles ? »,«I cavalli dormono. Ognuno deve salire tanto quanto è grande la sua stella. Ma dove sono le stelle?»,«Los caballos duermen. Cada uno debe subir tanto como grande es su estrella. ¿Pero dónde están las estrellas?»
+hmsay.2a,“In the sky.”,«Am Himmel.»,« Dans le ciel. »,«In cielo.»,«En el cielo.»
+hmsay.2b,“On the horses.”,«Auf den Pferden.»,« Sur les chevaux. »,«Sui cavalli.»,«En los caballos.»
+hmsay.2c,“In the crooked picture.”,«Im verzerrten Bild.»,« Dans l'image tordue. »,«Nell'immagine storta.»,«En el dibujo torcido.»
+hmtalk.3,“Yes… A crooked picture comes straight in a curved mirror. Go!”,«Ja… Ein verzerrtes Bild wird in einem gebogenen Spiegel gerade. Geh!»,« Oui… Une image tordue se redresse dans un miroir courbe. Va ! »,«Sì… Un'immagine storta si raddrizza in uno specchio curvo. Va'!»,«Sí… Un dibujo torcido se endereza en un espejo curvo. ¡Ve!»
+hmsay.3a,"“Thank you, Zelda.”","«Danke, Zelda.»","« Merci, Zelda. »","«Grazie, Zelda.»","«Gracias, Zelda.»"
+hmmsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+hmmsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+hmmsg.hangup,Zelda's eyes close. “The cards are clouded.” Talk to her again.,Zeldas Augen schliessen sich. «Die Karten sind trüb.» Sprich nochmals mit ihr.,Les yeux de Zelda se ferment. « Les cartes sont troubles. » Parle-lui à nouveau.,Gli occhi di Zelda si chiudono. «Le carte sono confuse.» Riparlale.,Los ojos de Zelda se cierran. «Las cartas están turbias.» Háblale otra vez.
+hmmsg.no_line,Zelda is asleep.,Zelda schläft.,Zelda dort.,Zelda dorme.,Zelda duerme.
+hmmsg.coin,"A coin, under the booth!",Eine Münze unter dem Häuschen!,Une pièce sous la cabine !,Una moneta sotto il gabbiotto!,¡Una moneda bajo la taquilla!
+hmmsg.turnstile,Clunk. The turnstile turns. The mirror maze is open.,Klonk. Das Drehkreuz dreht sich. Das Spiegellabyrinth ist offen.,Clonk. Le tourniquet tourne. Le labyrinthe des glaces est ouvert.,Clonk. Il tornello gira. Il labirinto di specchi è aperto.,Clonc. El torniquete gira. El laberinto de espejos está abierto.
+hmmsg.turnstile_shut,The turnstile is locked.,Das Drehkreuz ist gesperrt.,Le tourniquet est bloqué.,Il tornello è bloccato.,El torniquete está bloqueado.
+hmmsg.bump,Bonk. A mirror. Your reflection rubs its nose.,Bong. Ein Spiegel. Dein Spiegelbild reibt sich die Nase.,Bong. Un miroir. Ton reflet se frotte le nez.,Bong. Uno specchio. Il tuo riflesso si strofina il naso.,Bong. Un espejo. Tu reflejo se frota la nariz.
+hmmsg.centre,The centre of the maze: a little pedestal under a pink neon star.,Die Mitte des Labyrinths: ein kleiner Sockel unter einem rosa Neonstern.,Le centre du labyrinthe : un petit socle sous une étoile de néon rose.,Il centro del labirinto: un piedistallo sotto una stella al neon rosa.,El centro del laberinto: un pedestal bajo una estrella de neón rosa.
+hmmsg.key,A brass key.,Ein Messingschlüssel.,Une clé en laiton.,Una chiave d'ottone.,Una llave de latón.
+hmmsg.cabinet,"The prize cabinet, locked.","Die Preisvitrine, abgeschlossen.","La vitrine des lots, fermée à clé.","La vetrina dei premi, chiusa a chiave.","La vitrina de premios, cerrada."
+hmmsg.token,"DING! The bell at the top rings, and a token drops out.","DING! Oben klingelt die Glocke, und ein Jeton fällt heraus.","DING ! La cloche sonne en haut, et un jeton tombe.",DING! In cima suona la campana e cade un gettone.,¡DING! Suena la campana de arriba y cae una ficha.
+hmmsg.tester_weak,The puck barely moves. The lamp at the bottom isn't blinking.,Der Schlitten bewegt sich kaum. Die Lampe unten blinkt nicht.,Le palet bouge à peine. La lampe du bas ne clignote pas.,Il disco si muove appena. La lampadina in basso non lampeggia.,El disco apenas se mueve. La lámpara de abajo no parpadea.
+hmmsg.zelda_on,Zelda's crystal ball lights up. Her eyes open.,Zeldas Kristallkugel leuchtet auf. Ihre Augen öffnen sich.,La boule de cristal de Zelda s'allume. Ses yeux s'ouvrent.,La sfera di cristallo di Zelda si accende. I suoi occhi si aprono.,La bola de cristal de Zelda se ilumina. Abre los ojos.
+hmmsg.unwarped,"In the curved mirror, the smeared colours become four stars, all of different sizes.","Im gebogenen Spiegel werden die verschmierten Farben zu vier Sternen, alle verschieden gross.","Dans le miroir courbe, les couleurs étalées deviennent quatre étoiles de tailles différentes.",Nello specchio curvo i colori sbavati diventano quattro stelle di grandezze diverse.,"En el espejo curvo, los colores borrosos se vuelven cuatro estrellas de distintos tamaños."
+hmmsg.horses_stuck,The horses won't budge. Which height for which?,Die Pferde rühren sich nicht. Welche Höhe für welches?,Les chevaux ne bougent pas. Quelle hauteur pour lequel ?,I cavalli non si muovono. Che altezza per quale?,Los caballos no se mueven. ¿Qué altura para cuál?
+hmmsg.horses_ok,The horses click into place.,Die Pferde rasten ein.,Les chevaux s'enclenchent.,I cavalli scattano al loro posto.,Los caballos encajan en su sitio.
+hmmsg.curtain,Behind the curtain: a periscope.,Hinter dem Vorhang: ein Periskop.,Derrière le rideau : un périscope.,Dietro la tenda: un periscopio.,Tras la cortina: un periscopio.
+hmmsg.periscope,"You look through the periscope, down onto the generator: a chalk cross marks its dial.",Du schaust durchs Periskop auf den Generator hinunter: Ein Kreidekreuz markiert seine Scheibe.,"Tu regardes dans le périscope, sur le générateur : une croix à la craie marque son cadran.",Guardi nel periscopio giù sul generatore: una croce di gesso segna il quadrante.,Miras por el periscopio hacia el generador: una cruz de tiza marca su dial.
+hmmsg.gen_ok,The generator coughs and starts to chug.,Der Generator hustet und beginnt zu tuckern.,Le générateur tousse et se met à ronronner.,Il generatore tossisce e comincia a borbottare.,El generador tose y empieza a traquetear.
+hmmsg.no_power,No power. The generator is off.,Kein Strom. Der Generator ist aus.,Pas de courant. Le générateur est arrêté.,Niente corrente. Il generatore è spento.,No hay corriente. El generador está apagado.
+hmmsg.trip,Too many! Every fuse trips back out.,Zu viele! Alle Sicherungen springen heraus.,Trop ! Tous les fusibles sautent.,Troppi! Tutti i fusibili saltano.,¡Demasiados! Saltan todos los fusibles.
+hmmsg.fuses_ok,"Motor, lights, music: the carousel's bulbs flicker on.","Motor, Licht, Musik: Die Lämpchen des Karussells flackern auf.","Moteur, lumières, musique : les ampoules du manège s'allument.","Motore, luci, musica: le lampadine della giostra si accendono.","Motor, luces, música: las bombillas del tiovivo se encienden."
+hmmsg.squatmirror,A squat mirror.,Ein gestauchter Spiegel.,Un miroir écrasé.,Uno specchio schiacciato.,Un espejo achatado.
+hmmsg.shelf_high,The shelf is too high to see on top.,"Das Regal ist zu hoch, um oben draufzusehen.",L'étagère est trop haute pour voir dessus.,Lo scaffale è troppo alto per vedere sopra.,El estante es demasiado alto para ver encima.
+hmmsg.darts,Three darts.,Drei Wurfpfeile.,Trois fléchettes.,Tre freccette.,Tres dardos.
+hmmsg.no_darts,You need something to throw.,Du brauchst etwas zum Werfen.,Il te faut quelque chose à lancer.,Ti serve qualcosa da lanciare.,Necesitas algo para lanzar.
+hmmsg.pop,Pop!,Peng!,Pan !,Bum!,¡Pum!
+hmmsg.refill,Wrong colour! A pump hisses and all the balloons fill up again.,"Falsche Farbe! Eine Pumpe zischt, und alle Ballone füllen sich wieder.",Mauvaise couleur ! Une pompe siffle et tous les ballons se regonflent.,Colore sbagliato! Una pompa sibila e tutti i palloncini si gonfiano di nuovo.,¡Color equivocado! Una bomba silba y todos los globos se vuelven a inflar.
+hmmsg.prize,Pop! The last balloon. A prize drops out: a small round mirror.,Peng! Der letzte Ballon. Ein Preis fällt heraus: ein kleiner runder Spiegel.,Pan ! Le dernier ballon. Un lot tombe : un petit miroir rond.,Bum! L'ultimo palloncino. Cade un premio: uno specchietto rotondo.,¡Pum! El último globo. Cae un premio: un espejito redondo.
+hmmsg.mirror_in,The mirror fits into the empty spotlight.,Der Spiegel passt in den leeren Scheinwerfer.,Le miroir s'emboîte dans le projecteur vide.,Lo specchio entra nel faro vuoto.,El espejo encaja en el foco vacío.
+hmmsg.spot_empty,One spotlight has no mirror.,Einem Scheinwerfer fehlt der Spiegel.,Il manque un miroir à un projecteur.,A un faro manca lo specchio.,A un foco le falta el espejo.
+hmmsg.beam_ok,The beam hits the sensor. Something clicks in the carousel.,Der Strahl trifft den Sensor. Im Karussell klickt etwas.,Le faisceau touche le capteur. Quelque chose fait clic dans le manège.,Il raggio colpisce il sensore. Nella giostra scatta qualcosa.,El rayo da en el sensor. Algo hace clic en el tiovivo.
+hmmsg.brake_held,The brake won't release. Not everything is ready.,Die Bremse löst sich nicht. Noch ist nicht alles bereit.,Le frein ne se desserre pas. Tout n'est pas prêt.,Il freno non si sblocca. Non è tutto pronto.,El freno no se suelta. No está todo listo.
+hmmsg.turning,The brake releases. Slowly the carousel begins to turn.,Die Bremse löst sich. Langsam beginnt sich das Karussell zu drehen.,"Le frein lâche. Lentement, le manège se met à tourner.",Il freno si sblocca. Lentamente la giostra comincia a girare.,"El freno se suelta. Despacio, el tiovivo empieza a girar."
+hmmsg.carousel_still,The carousel stands still.,Das Karussell steht still.,Le manège est immobile.,La giostra è ferma.,El tiovivo está parado.
+hmmsg.carousel_turns,The horses glide past.,Die Pferde gleiten vorbei.,Les chevaux défilent.,I cavalli scivolano via.,Los caballos pasan deslizándose.
+hmmsg.saddle,There! For a moment a sign shows on the golden horse's saddle.,Da! Für einen Moment zeigt sich ein Zeichen auf dem Sattel des goldenen Pferds.,"Là ! Un instant, un signe apparaît sur la selle du cheval doré.",Ecco! Per un attimo appare un segno sulla sella del cavallo d'oro.,¡Ahí! Por un momento aparece un signo en la silla del caballo dorado.
+hmmsg.organ_silent,The organ waits for a card. Which one?,Die Orgel wartet auf eine Karte. Welche?,L'orgue attend une carte. Laquelle ?,L'organo aspetta una scheda. Quale?,El organillo espera una tarjeta. ¿Cuál?
+hmmsg.organ_wrong,The organ plays a sour tune and stops.,Die Orgel spielt eine schiefe Melodie und verstummt.,L'orgue joue un air faux et s'arrête.,L'organo suona una melodia stonata e si ferma.,El organillo toca una melodía desafinada y se para.
+hmmsg.music,The organ plays a merry waltz!,Die Orgel spielt einen fröhlichen Walzer!,L'orgue joue une valse joyeuse !,L'organo suona un valzer allegro!,¡El organillo toca un vals alegre!
+hmmsg.sugar,A bag of sugar.,Ein Sack Zucker.,Un sac de sucre.,Un sacchetto di zucchero.,Una bolsa de azúcar.
+hmmsg.stick,A stick.,Ein Stäbchen.,Un bâtonnet.,Un bastoncino.,Un palito.
+hmmsg.machine_cold,The machine is cold. No power.,Die Maschine ist kalt. Kein Strom.,La machine est froide. Pas de courant.,La macchina è fredda. Niente corrente.,La máquina está fría. No hay corriente.
+hmmsg.sugar_in,Sugar in. The bowl spins.,Zucker hinein. Die Schüssel dreht sich.,Le sucre est dedans. La cuve tourne.,Zucchero dentro. La vasca gira.,Azúcar dentro. El cuenco gira.
+hmmsg.machine_empty,Nothing to wind up.,Nichts zum Aufwickeln.,Rien à enrouler.,Niente da arrotolare.,No hay nada que enrollar.
+hmmsg.floss,Pink candy floss on a stick.,Rosa Zuckerwatte am Stäbchen.,Une barbe à papa rose sur un bâtonnet.,Zucchero filato rosa su un bastoncino.,Algodón de azúcar rosa en un palito.
+hmmsg.clown_still,The clown doesn't move.,Der Clown bewegt sich nicht.,Le clown ne bouge pas.,Il clown non si muove.,El payaso no se mueve.
+hmmsg.attendant,"The clown takes the floss and honks its horn, loud. A torch comes bobbing through the fair: the attendant!",Der Clown nimmt die Zuckerwatte und hupt laut. Eine Taschenlampe kommt über den Platz: der Wärter!,Le clown prend la barbe à papa et klaxonne fort. Une lampe approche à travers la fête : le gardien !,Il clown prende lo zucchero filato e strombazza forte. Una torcia avanza nel luna park: il guardiano!,El payaso coge el algodón y pita fuerte. Una linterna se acerca por la feria: ¡el vigilante!
+hmmsg.booth,The ticket booth. A plan of the maze is pinned to it.,Das Kassenhäuschen. Ein Plan des Labyrinths hängt daran.,La cabine des billets. Un plan du labyrinthe y est épinglé.,Il gabbiotto dei biglietti. C'è appesa una pianta del labirinto.,La taquilla. Tiene clavado un plano del laberinto.
+hmmsg.plan,The plan of the mirror maze.,Der Plan des Spiegellabyrinths.,Le plan du labyrinthe des glaces.,La pianta del labirinto di specchi.,El plano del laberinto de espejos.
+hmmsg.poster,"A poster for the balloon stall: five balloons, numbered.",Ein Plakat des Ballonstands: fünf nummerierte Ballone.,Une affiche du stand de ballons : cinq ballons numérotés.,Un manifesto delle freccette: cinque palloncini numerati.,Un cartel del puesto de globos: cinco globos numerados.
+hmmsg.zelda,"Zelda, the fortune-telling machine. A slot for a token.","Zelda, der Wahrsageautomat. Ein Schlitz für einen Jeton.","Zelda, la machine à prédire l'avenir. Une fente pour un jeton.","Zelda, la macchina della fortuna. Una fessura per un gettone.","Zelda, la máquina adivina. Una ranura para una ficha."
+hmmsg.tester,The strength tester. A little lamp at its foot.,Der Hau-den-Lukas. Unten ein Lämpchen.,Le test de force. Une petite lampe à sa base.,Il test di forza. Una lampadina alla base.,El medidor de fuerza. Una lamparita en la base.
+hmmsg.drawing,"A smeared, crooked picture. Something is drawn there, bent out of shape.","Ein verschmiertes, verzerrtes Bild. Da ist etwas gezeichnet, ganz verbogen.","Une image étalée, tordue. Quelque chose y est dessiné, tout déformé.","Un'immagine sbavata e storta. C'è qualcosa disegnato, tutto deformato.","Un dibujo borroso y torcido. Hay algo dibujado, todo deformado."
+hmmsg.wavymirror,A wavy mirror. You look like a noodle.,Ein welliger Spiegel. Du siehst aus wie eine Nudel.,Un miroir ondulé. Tu ressembles à une nouille.,Uno specchio ondulato. Sembri una tagliatella.,Un espejo ondulado. Pareces un fideo.
+hmmsg.machine,A candy-floss machine.,Eine Zuckerwattemaschine.,Une machine à barbe à papa.,Una macchina dello zucchero filato.,Una máquina de algodón de azúcar.
+hmmsg.clown,"A clown figure by the carousel, one hand held out.","Eine Clownfigur beim Karussell, eine Hand ausgestreckt.","Un clown près du manège, une main tendue.","Un clown vicino alla giostra, con una mano tesa.","Un payaso junto al tiovivo, con una mano tendida."
+hmmsg.organ,The fairground organ. It plays from cards.,Die Jahrmarktorgel. Sie spielt ab Karten.,L'orgue de foire. Il joue avec des cartes.,L'organo della fiera. Suona dalle schede.,El organillo. Toca con tarjetas.
+hmmsg.fusebox,The fuse box.,Der Sicherungskasten.,Le boîtier à fusibles.,La scatola dei fusibili.,La caja de fusibles.
+hmmsg.spotlight,A spotlight.,Ein Scheinwerfer.,Un projecteur.,Un faro.,Un foco.
+hmmsg.sensor,A light sensor on the carousel's roof.,Ein Lichtsensor auf dem Dach des Karussells.,Un capteur de lumière sur le toit du manège.,Un sensore di luce sul tetto della giostra.,Un sensor de luz en el techo del tiovivo.
+hmmsg.generator,The generator. Its dial has six dots.,Der Generator. Seine Scheibe hat sechs Punkte.,Le générateur. Son cadran a six points.,Il generatore. Il quadrante ha sei punti.,El generador. Su dial tiene seis puntos.
+hmmsg.horses,The carousel's horses.,Die Pferde des Karussells.,Les chevaux du manège.,I cavalli della giostra.,Los caballos del tiovivo.
+hmmsg.stall,The balloon stall.,Der Ballonstand.,Le stand de ballons.,Il banco dei palloncini.,El puesto de globos.
+hmmsg.maze,"The mirror maze, behind the turnstile.",Das Spiegellabyrinth hinter dem Drehkreuz.,"Le labyrinthe des glaces, derrière le tourniquet.","Il labirinto di specchi, dietro il tornello.","El laberinto de espejos, tras el torniquete."
+hmhint.1.1,The turnstile wants a coin.,Das Drehkreuz will eine Münze.,Le tourniquet veut une pièce.,Il tornello vuole una moneta.,El torniquete quiere una moneda.
+hmhint.1.2,Something glints in the dark under the ticket booth.,Unter dem Kassenhäuschen glitzert etwas.,Quelque chose brille sous la cabine des billets.,Qualcosa luccica sotto il gabbiotto.,Algo brilla bajo la taquilla.
+hmhint.1.3,Tap the coin under the booth.,Tippe auf die Münze unter dem Häuschen.,Touche la pièce sous la cabine.,Tocca la moneta sotto il gabbiotto.,Toca la moneda bajo la taquilla.
+hmhint.2.1,The maze is behind the turnstile.,Das Labyrinth liegt hinter dem Drehkreuz.,Le labyrinthe est derrière le tourniquet.,Il labirinto è dietro il tornello.,El laberinto está tras el torniquete.
+hmhint.2.2,It takes coins.,Es nimmt Münzen.,Il prend des pièces.,Prende monete.,Acepta monedas.
+hmhint.2.3,Use the coin on the turnstile.,Benutze die Münze am Drehkreuz.,Utilise la pièce sur le tourniquet.,Usa la moneta sul tornello.,Usa la moneda en el torniquete.
+hmhint.3.1,"Inside, every wall is a mirror.",Drinnen ist jede Wand ein Spiegel.,"Dedans, chaque mur est un miroir.","Dentro, ogni parete è uno specchio.","Dentro, cada pared es un espejo."
+hmhint.3.2,The plan on the ticket booth shows the way from the entrance (bottom) to the star in the middle.,Der Plan am Kassenhäuschen zeigt den Weg vom Eingang (unten) zum Stern in der Mitte.,Le plan sur la cabine montre le chemin de l'entrée (en bas) à l'étoile au centre.,La pianta sul gabbiotto mostra la via dall'ingresso (in basso) alla stella al centro.,El plano de la taquilla muestra el camino de la entrada (abajo) a la estrella del centro.
+hmhint.3.3,"Right, up, right, up, up, up, left, down, down, left.","Rechts, hoch, rechts, hoch, hoch, hoch, links, runter, runter, links.","Droite, haut, droite, haut, haut, haut, gauche, bas, bas, gauche.","Destra, su, destra, su, su, su, sinistra, giù, giù, sinistra.","Derecha, arriba, derecha, arriba, arriba, arriba, izquierda, abajo, abajo, izquierda."
+hmhint.4.1,Something waits at the centre of the maze.,In der Mitte des Labyrinths wartet etwas.,Quelque chose attend au centre du labyrinthe.,Qualcosa aspetta al centro del labirinto.,Algo espera en el centro del laberinto.
+hmhint.4.2,On the pedestal.,Auf dem Sockel.,Sur le socle.,Sul piedistallo.,En el pedestal.
+hmhint.4.3,Take the brass key at the centre.,Nimm den Messingschlüssel in der Mitte.,Prends la clé en laiton au centre.,Prendi la chiave d'ottone al centro.,Coge la llave de latón del centro.
+hmhint.5.1,The brass key fits a lock in the funhouse.,Der Messingschlüssel passt in ein Schloss im Lachkabinett.,La clé en laiton ouvre une serrure dans la maison du rire.,La chiave d'ottone apre una serratura nella casa delle risate.,La llave de latón abre una cerradura en la casa de la risa.
+hmhint.5.2,The prize cabinet.,Die Preisvitrine.,La vitrine des lots.,La vetrina dei premi.,La vitrina de premios.
+hmhint.5.3,Use the brass key on the prize cabinet.,Benutze den Messingschlüssel an der Preisvitrine.,Utilise la clé en laiton sur la vitrine.,Usa la chiave d'ottone sulla vetrina.,Usa la llave de latón en la vitrina.
+hmhint.6.1,The strength tester only counts when its lamp blinks.,"Der Hau-den-Lukas zählt nur, wenn sein Lämpchen blinkt.",Le test de force ne compte que quand sa lampe clignote.,Il test di forza conta solo quando la lampadina lampeggia.,El medidor solo cuenta cuando su lámpara parpadea.
+hmhint.6.2,Watch the lamp at its foot.,Achte auf das Lämpchen unten.,Surveille la lampe à sa base.,Guarda la lampadina alla base.,Mira la lámpara de la base.
+hmhint.6.3,Hit the tester with the mallet while the lamp blinks.,"Schlag mit dem Hammer zu, während das Lämpchen blinkt.",Frappe avec le maillet pendant que la lampe clignote.,Colpisci con la mazza mentre la lampadina lampeggia.,Golpea con el mazo mientras la lámpara parpadea.
+hmhint.7.1,Zelda wants a token.,Zelda will einen Jeton.,Zelda veut un jeton.,Zelda vuole un gettone.,Zelda quiere una ficha.
+hmhint.7.2,The fortune machine at the entrance.,Der Wahrsageautomat beim Eingang.,La machine à l'entrée.,La macchina della fortuna all'ingresso.,La máquina adivina de la entrada.
+hmhint.7.3,Put the token into Zelda.,Wirf den Jeton in Zelda.,Mets le jeton dans Zelda.,Metti il gettone in Zelda.,Mete la ficha en Zelda.
+hmhint.8.1,Zelda knows about the carousel.,Zelda weiss etwas über das Karussell.,Zelda sait quelque chose sur le manège.,Zelda sa qualcosa della giostra.,Zelda sabe algo del tiovivo.
+hmhint.8.2,Ask about the carousel. The stars are in a crooked picture.,Frag nach dem Karussell. Die Sterne sind in einem verzerrten Bild.,Demande le manège. Les étoiles sont dans une image tordue.,Chiedi della giostra. Le stelle sono in un'immagine storta.,Pregunta por el tiovivo. Las estrellas están en un dibujo torcido.
+hmhint.8.3,"Choose the carousel, then the crooked picture, then thank her.","Wähle das Karussell, dann das verzerrte Bild, dann bedanke dich.","Choisis le manège, puis l'image tordue, puis remercie-la.","Scegli la giostra, poi l'immagine storta, poi ringraziala.","Elige el tiovivo, luego el dibujo torcido, luego dale las gracias."
+hmhint.9.1,The smeared drawing in the funhouse looks wrong.,Das verschmierte Bild im Lachkabinett sieht falsch aus.,Le dessin étalé de la maison du rire a l'air faux.,Il disegno sbavato nella casa delle risate sembra sbagliato.,El dibujo borroso de la casa de la risa parece raro.
+hmhint.9.2,A curved mirror straightens it.,Ein gebogener Spiegel macht es gerade.,Un miroir courbe le redresse.,Uno specchio curvo lo raddrizza.,Un espejo curvo lo endereza.
+hmhint.9.3,Use the cylinder mirror on the drawing.,Benutze den Zylinderspiegel auf dem Bild.,Utilise le miroir cylindrique sur le dessin.,Usa lo specchio cilindrico sul disegno.,Usa el espejo cilíndrico en el dibujo.
+hmhint.10.1,Zelda said: each horse rises as high as its star is big.,"Zelda sagte: Jedes Pferd steigt so hoch, wie sein Stern gross ist.",Zelda l'a dit : chaque cheval monte aussi haut que son étoile est grande.,Zelda l'ha detto: ogni cavallo sale quanto è grande la sua stella.,Zelda lo dijo: cada caballo sube tanto como grande es su estrella.
+hmhint.10.2,The stars in the cylinder mirror have the horses' colours.,Die Sterne im Zylinderspiegel haben die Farben der Pferde.,Les étoiles du miroir ont les couleurs des chevaux.,Le stelle nello specchio hanno i colori dei cavalli.,Las estrellas del espejo tienen los colores de los caballos.
+hmhint.10.3,"Red, blue, green, gold to heights 3, 1, 4, 2 (1 the lowest).","Rot, Blau, Grün, Gold auf die Höhen 3, 1, 4, 2 (1 ganz unten).","Rouge, bleu, vert, or aux hauteurs 3, 1, 4, 2 (1 tout en bas).","Rosso, blu, verde, oro alle altezze 3, 1, 4, 2 (1 la più bassa).","Rojo, azul, verde, oro a las alturas 3, 1, 4, 2 (1 la más baja)."
+hmhint.11.1,Behind the curtain in the funhouse.,Hinter dem Vorhang im Lachkabinett.,Derrière le rideau de la maison du rire.,Dietro la tenda nella casa delle risate.,Tras la cortina de la casa de la risa.
+hmhint.11.2,A periscope looks down onto the carousel's generator.,Ein Periskop schaut auf den Generator des Karussells hinunter.,Un périscope donne sur le générateur du manège.,Un periscopio guarda giù sul generatore della giostra.,Un periscopio mira hacia el generador del tiovivo.
+hmhint.11.3,Open the curtain and look through the periscope: a chalk cross on the generator's dial.,Öffne den Vorhang und schau durchs Periskop: ein Kreidekreuz auf der Scheibe des Generators.,Ouvre le rideau et regarde dans le périscope : une croix sur le cadran du générateur.,Apri la tenda e guarda nel periscopio: una croce sul quadrante del generatore.,Abre la cortina y mira por el periscopio: una cruz en el dial del generador.
+hmhint.12.1,The generator's dial must point where the chalk cross is.,Die Scheibe des Generators muss aufs Kreidekreuz zeigen.,Le cadran du générateur doit pointer vers la croix.,Il quadrante del generatore deve puntare alla croce.,El dial del generador debe apuntar a la cruz.
+hmhint.12.2,"Count the dots from the top, clockwise.",Zähl die Punkte von oben im Uhrzeigersinn.,"Compte les points depuis le haut, dans le sens des aiguilles.",Conta i punti dall'alto in senso orario.,Cuenta los puntos desde arriba en el sentido del reloj.
+hmhint.12.3,Set the generator to the fifth dot (the top one is the first).,Stell den Generator auf den fünften Punkt (der oberste ist der erste).,Règle le générateur sur le cinquième point (celui du haut est le premier).,Metti il generatore sul quinto punto (quello in alto è il primo).,Pon el generador en el quinto punto (el de arriba es el primero).
+hmhint.13.1,The fuse box takes only three at once.,Der Sicherungskasten erträgt nur drei auf einmal.,Le boîtier n'en supporte que trois à la fois.,La scatola ne regge solo tre alla volta.,La caja solo aguanta tres a la vez.
+hmhint.13.2,The sign on the carousel shows what it needs.,"Das Schild am Karussell zeigt, was es braucht.",Le panneau du manège montre ce qu'il lui faut.,Il cartello sulla giostra mostra cosa le serve.,El cartel del tiovivo muestra lo que necesita.
+hmhint.13.3,"Switch on the motor, the lights and the music only.","Schalte nur Motor, Licht und Musik ein.","N'allume que le moteur, les lumières et la musique.","Accendi solo motore, luci e musica.","Enciende solo el motor, las luces y la música."
+hmhint.14.1,The balloon stall needs darts.,Der Ballonstand braucht Wurfpfeile.,Le stand de ballons demande des fléchettes.,Al banco dei palloncini servono freccette.,El puesto de globos necesita dardos.
+hmhint.14.2,They are out of sight on top of the stall; a mirror shows high places.,Sie liegen unsichtbar oben auf dem Stand; ein Spiegel zeigt hohe Stellen.,Elles sont hors de vue sur le stand ; un miroir montre les endroits élevés.,Sono fuori vista in cima al banco; uno specchio mostra i posti alti.,Están fuera de la vista encima del puesto; un espejo muestra lo alto.
+hmhint.14.3,"Look into the squat mirror, then take the darts from the stall's shelf.","Schau in den gestauchten Spiegel, dann nimm die Pfeile vom Regal des Stands.","Regarde dans le miroir écrasé, puis prends les fléchettes sur l'étagère.","Guarda nello specchio schiacciato, poi prendi le freccette dallo scaffale.",Mira el espejo achatado y coge los dardos del estante.
+hmhint.15.1,Pop the balloons in the right order.,Bring die Ballone in der richtigen Reihenfolge zum Platzen.,Éclate les ballons dans le bon ordre.,Scoppia i palloncini nell'ordine giusto.,Revienta los globos en el orden correcto.
+hmhint.15.2,The poster at the entrance numbers them by colour.,Das Plakat beim Eingang nummeriert sie nach Farbe.,L'affiche de l'entrée les numérote par couleur.,Il manifesto all'ingresso li numera per colore.,El cartel de la entrada los numera por color.
+hmhint.15.3,"Blue, red, purple, yellow, green.","Blau, Rot, Violett, Gelb, Grün.","Bleu, rouge, violet, jaune, vert.","Blu, rosso, viola, giallo, verde.","Azul, rojo, morado, amarillo, verde."
+hmhint.16.1,One spotlight is missing its mirror.,Einem Scheinwerfer fehlt der Spiegel.,Il manque le miroir d'un projecteur.,A un faro manca lo specchio.,A un foco le falta el espejo.
+hmhint.16.2,The prize from the balloon stall.,Der Preis vom Ballonstand.,Le lot du stand de ballons.,Il premio del banco dei palloncini.,El premio del puesto de globos.
+hmhint.16.3,Put the small mirror into the empty spotlight.,Setz den kleinen Spiegel in den leeren Scheinwerfer.,Mets le petit miroir dans le projecteur vide.,Metti lo specchietto nel faro vuoto.,Pon el espejito en el foco vacío.
+hmhint.17.1,The beam must reach the sensor above.,Der Strahl muss den Sensor oben erreichen.,Le faisceau doit atteindre le capteur en haut.,Il raggio deve arrivare al sensore in alto.,El rayo debe llegar al sensor de arriba.
+hmhint.17.2,Turn each mirror until the beam goes on to the next.,"Dreh jeden Spiegel, bis der Strahl zum nächsten weitergeht.",Tourne chaque miroir jusqu'à ce que le faisceau aille au suivant.,Gira ogni specchio finché il raggio passa al successivo.,Gira cada espejo hasta que el rayo pase al siguiente.
+hmhint.17.3,"Turn the first mirror until the beam hits the second, then the second until it hits the sensor.","Dreh den ersten Spiegel, bis der Strahl den zweiten trifft, dann den zweiten, bis er den Sensor trifft.","Tourne le premier miroir jusqu'à toucher le second, puis le second jusqu'au capteur.","Gira il primo specchio finché il raggio colpisce il secondo, poi il secondo fino al sensore.","Gira el primer espejo hasta dar en el segundo, y el segundo hasta dar en el sensor."
+hmhint.18.1,"Horses, fuses and beam done?","Pferde, Sicherungen und Strahl erledigt?","Chevaux, fusibles et faisceau réglés ?","Cavalli, fusibili e raggio a posto?","¿Caballos, fusibles y rayo listos?"
+hmhint.18.2,The brake lever by the carousel.,Der Bremshebel beim Karussell.,Le levier de frein près du manège.,La leva del freno vicino alla giostra.,La palanca del freno junto al tiovivo.
+hmhint.18.3,Pull the brake lever.,Zieh den Bremshebel.,Tire le levier de frein.,Tira la leva del freno.,Tira de la palanca del freno.
+hmhint.19.1,"As it turns, watch the golden horse.",Achte beim Drehen auf das goldene Pferd.,"Pendant qu'il tourne, observe le cheval doré.","Mentre gira, guarda il cavallo d'oro.","Mientras gira, mira el caballo dorado."
+hmhint.19.2,A sign shows on its saddle for a moment.,Auf seinem Sattel zeigt sich kurz ein Zeichen.,Un signe apparaît un instant sur sa selle.,Sulla sella appare per un attimo un segno.,En su silla aparece un momento un signo.
+hmhint.19.3,Tap the carousel while the sign shows: a star.,"Tippe aufs Karussell, während das Zeichen zu sehen ist: ein Stern.",Touche le manège quand le signe apparaît : une étoile.,Tocca la giostra mentre si vede il segno: una stella.,Toca el tiovivo mientras se ve el signo: una estrella.
+hmhint.20.1,The organ needs the right card.,Die Orgel braucht die richtige Karte.,L'orgue a besoin de la bonne carte.,All'organo serve la scheda giusta.,El organillo necesita la tarjeta correcta.
+hmhint.20.2,"The card with the sign from the saddle, then the crank.","Die Karte mit dem Zeichen vom Sattel, dann die Kurbel.","La carte au signe de la selle, puis la manivelle.","La scheda con il segno della sella, poi la manovella.","La tarjeta con el signo de la silla, luego la manivela."
+hmhint.20.3,Choose the star card and turn the crank.,Wähl die Sternkarte und dreh die Kurbel.,Choisis la carte à l'étoile et tourne la manivelle.,Scegli la scheda con la stella e gira la manovella.,Elige la tarjeta de la estrella y gira la manivela.
+hmhint.21.1,Candy floss starts with sugar.,Zuckerwatte beginnt mit Zucker.,La barbe à papa commence par du sucre.,Lo zucchero filato comincia con lo zucchero.,El algodón de azúcar empieza con azúcar.
+hmhint.21.2,At the candy-floss cart.,Beim Zuckerwattewagen.,Au chariot à barbe à papa.,Al carretto dello zucchero filato.,En el carrito del algodón.
+hmhint.21.3,Take the sugar.,Nimm den Zucker.,Prends le sucre.,Prendi lo zucchero.,Coge el azúcar.
+hmhint.22.1,You need something to wind it on.,Du brauchst etwas zum Aufwickeln.,Il faut de quoi l'enrouler.,Serve qualcosa su cui arrotolarlo.,Necesitas algo para enrollarlo.
+hmhint.22.2,The sticks at the cart.,Die Stäbchen beim Wagen.,Les bâtonnets du chariot.,I bastoncini al carretto.,Los palitos del carrito.
+hmhint.22.3,Take a stick.,Nimm ein Stäbchen.,Prends un bâtonnet.,Prendi un bastoncino.,Coge un palito.
+hmhint.23.1,The machine needs power.,Die Maschine braucht Strom.,La machine a besoin de courant.,La macchina ha bisogno di corrente.,La máquina necesita corriente.
+hmhint.23.2,"Sugar in first, then the stick.","Zuerst Zucker hinein, dann das Stäbchen.","D'abord le sucre, puis le bâtonnet.","Prima lo zucchero, poi il bastoncino.","Primero el azúcar, luego el palito."
+hmhint.23.3,"Use the sugar, then the stick, on the machine.","Benutze den Zucker, dann das Stäbchen an der Maschine.","Utilise le sucre, puis le bâtonnet, sur la machine.","Usa lo zucchero, poi il bastoncino, sulla macchina.",Usa el azúcar y luego el palito en la máquina.
+hmhint.24.1,The clown at the carousel holds out a hand.,Der Clown beim Karussell streckt die Hand aus.,Le clown du manège tend la main.,Il clown della giostra tende la mano.,El payaso del tiovivo tiende la mano.
+hmhint.24.2,It only moves while the music plays.,"Er bewegt sich nur, wenn die Musik spielt.",Il ne bouge que quand la musique joue.,Si muove solo quando suona la musica.,Solo se mueve cuando suena la música.
+hmhint.24.3,Give the candy floss to the clown.,Gib dem Clown die Zuckerwatte.,Donne la barbe à papa au clown.,Dai lo zucchero filato al clown.,Dale el algodón de azúcar al payaso.
+scintro.1,"Village school, 1925. You were caught passing notes, so Miss Keller kept you in after lessons.","Dorfschule, 1925. Du wurdest beim Zettelchenschreiben erwischt, also hat dich Fräulein Keller nachsitzen lassen.","École de village, 1925. On t'a surpris à passer des petits mots, alors Mlle Keller t'a mis en retenue.","Scuola di paese, 1925. Ti hanno sorpreso a passare bigliettini, così la maestra Keller ti ha messo in castigo.","Escuela del pueblo, 1925. Te pillaron pasando notas, así que la señorita Keller te dejó castigado."
+scintro.2,"She pinned a list of tasks to the wall and locked the door. Once every task is done, you may go home.","Sie hat eine Liste mit Aufgaben an die Wand geheftet und die Tür abgeschlossen. Wenn alles erledigt ist, darfst du nach Hause.","Elle a épinglé une liste de tâches au mur et fermé la porte à clé. Quand tout sera fait, tu pourras rentrer.","Ha appeso al muro una lista di compiti e chiuso la porta a chiave. Quando avrai fatto tutto, potrai tornare a casa.","Clavó una lista de tareas en la pared y cerró la puerta con llave. Cuando todo esté hecho, podrás irte a casa."
+scintro.3,"This one is long, of medium difficulty. A good time is %d minutes.",Dieser Raum ist lang und mittelschwer. Eine gute Zeit sind %d Minuten.,"Cette salle est longue, de difficulté moyenne. Un bon temps : %d minutes.","Questa stanza è lunga, di media difficoltà. Un buon tempo: %d minuti.",Esta sala es larga y de dificultad media. Un buen tiempo: %d minutos.
+scend.title,Free at last,Endlich frei,Enfin libre,Finalmente liberi,Por fin libre
+scend.text,"The door swings open onto a warm afternoon. Behind you the clock ticks, the stove crackles and the rabbit chews. Tomorrow Miss Keller will find every task done, and perhaps say nothing more about the notes.","Die Tür geht auf in einen warmen Nachmittag. Hinter dir tickt die Uhr, knistert der Ofen und kaut das Kaninchen. Morgen findet Fräulein Keller jede Aufgabe erledigt und sagt vielleicht nichts mehr über die Zettelchen.","La porte s'ouvre sur un après-midi tiède. Derrière toi, l'horloge tictaque, le poêle crépite et le lapin mâchonne. Demain, Mlle Keller trouvera tout fait, et ne parlera peut-être plus des petits mots.","La porta si apre su un pomeriggio tiepido. Dietro di te l'orologio ticchetta, la stufa scoppietta e il coniglio rosicchia. Domani la maestra Keller troverà tutto fatto e forse non parlerà più dei bigliettini.","La puerta se abre a una tarde templada. Detrás, el reloj hace tictac, la estufa crepita y el conejo mastica. Mañana la señorita Keller encontrará todo hecho y quizá no diga nada más de las notas."
+item.sckey,Small key,Kleiner Schlüssel,Petite clé,Chiavetta,Llave pequeña
+item.scsponge,Sponge,Schwamm,Éponge,Spugna,Esponja
+item.scink,Ink,Tinte,Encre,Inchiostro,Tinta
+item.sccarrot,Carrot,Rüebli,Carotte,Carota,Zanahoria
+item.scpencils,Pencils,Bleistifte,Crayons,Matite,Lápices
+item.sccan,Watering can,Giesskanne,Arrosoir,Annaffiatoio,Regadera
+item.scfull,Full watering can,Volle Giesskanne,Arrosoir plein,Annaffiatoio pieno,Regadera llena
+item.scwet,Wet sponge,Nasser Schwamm,Éponge mouillée,Spugna bagnata,Esponja mojada
+item.scclockkey,Clock key,Uhrenschlüssel,Clé de l'horloge,Chiave dell'orologio,Llave del reloj
+item.scmatches,Matches,Streichhölzer,Allumettes,Fiammiferi,Cerillas
+item.scsharpener,Sharpener,Spitzer,Taille-crayon,Temperamatite,Sacapuntas
+item.scpin,Map pin,Kartennadel,Punaise,Puntina,Chincheta
+item.scscarf,Scarf,Schal,Écharpe,Sciarpa,Bufanda
+item.sccap,Cap,Mütze,Casquette,Berretto,Gorra
+item.scmitten,Mitten,Fäustling,Moufle,Muffola,Manopla
+item.scdoorkey,Door key,Türschlüssel,Clé de la porte,Chiave della porta,Llave de la puerta
+sctext.tasks,Before you go home (M. Keller):,Bevor du heimgehst (M. Keller):,Avant de rentrer (M. Keller) :,Prima di tornare a casa (M. Keller):,Antes de irte a casa (M. Keller):
+sctext.letter,"Dear Dora,
+thank you for your letter! Here it is warm and the sea is close. I stuck a stamp from my country on the envelope, so you can find us on your school globe.
+Your pen-friend","Liebe Dora
+Danke für deinen Brief! Hier ist es warm, und das Meer ist nah. Ich habe eine Marke aus meinem Land auf den Umschlag geklebt, so findest du uns auf eurem Schulglobus.
+Deine Brieffreundin","Chère Dora,
+merci pour ta lettre ! Ici il fait chaud et la mer est tout près. J'ai collé un timbre de mon pays sur l'enveloppe : tu nous trouveras sur le globe de ton école.
+Ton amie","Cara Dora,
+grazie della tua lettera! Qui fa caldo e il mare è vicino. Ho incollato sulla busta un francobollo del mio paese, così ci trovi sul mappamondo della scuola.
+La tua amica di penna","Querida Dora:
+¡gracias por tu carta! Aquí hace calor y el mar está cerca. He pegado un sello de mi país en el sobre, así nos encontrarás en el globo de tu escuela.
+Tu amiga por carta"
+sctext.seating,"Seating plan, front row, from the left:","Sitzordnung, vorderste Reihe, von links:","Plan de classe, premier rang, depuis la gauche :","Disposizione dei banchi, prima fila, da sinistra:","Plano de asientos, primera fila, desde la izquierda:"
+sctext.diary,"Class trip, our stops in order:","Schulreise, unsere Halte der Reihe nach:","Course d'école, nos étapes dans l'ordre :","Gita scolastica, le tappe in ordine:","Excursión, nuestras paradas en orden:"
+sctask.1,Clean the board,Wandtafel putzen,Nettoyer le tableau,Pulire la lavagna,Limpiar la pizarra
+sctask.2,Do the sums on the abacus,Die Rechnungen am Zählrahmen lösen,Faire les calculs sur le boulier,Fare i conti sul pallottoliere,Hacer las cuentas en el ábaco
+sctask.3,Fill the inkwells,Tintenfässer füllen,Remplir les encriers,Riempire i calamai,Llenar los tinteros
+sctask.4,Name cards on the right desks,Namenskarten an die richtigen Pulte,Les cartes de nom aux bons pupitres,Cartellini dei nomi sui banchi giusti,Las tarjetas de nombre en los pupitres correctos
+sctask.5,Wind and set the clock,Uhr aufziehen und stellen,Remonter et régler l'horloge,Caricare e regolare l'orologio,Dar cuerda y poner en hora el reloj
+sctask.6,Globe to Dora's pen-friend,Globus zu Doras Brieffreundin,Le globe chez l'amie de Dora,Mappamondo sull'amica di Dora,El globo al país de la amiga de Dora
+sctask.7,Water the plant,Pflanze giessen,Arroser la plante,Annaffiare la pianta,Regar la planta
+sctask.8,Books in order,Bücher ordnen,Ranger les livres,Libri in ordine,Ordenar los libros
+sctask.9,Feed the rabbit,Kaninchen füttern,Nourrir le lapin,Dare da mangiare al coniglio,Dar de comer al conejo
+sctask.10,Class trip on the map,Schulreise auf der Karte,La course d'école sur la carte,La gita sulla carta,La excursión en el mapa
+sctask.11,Light the stove,Ofen anfeuern,Allumer le poêle,Accendere la stufa,Encender la estufa
+sctask.12,Practise the school song,Schullied üben,Répéter la chanson de l'école,Esercitarsi con l'inno della scuola,Ensayar la canción de la escuela
+sctask.13,Ring the Sunday peal,Das Sonntagsgeläut läuten,Sonner le carillon du dimanche,Suonare le campane della domenica,Tocar el repique del domingo
+sctask.14,Lost property onto the pegs,Fundsachen an die Haken,Les objets trouvés aux patères,Oggetti smarriti sugli attaccapanni,Objetos perdidos en las perchas
+sctask.15,Sharpen the pencils,Bleistifte spitzen,Tailler les crayons,Temperare le matite,Sacar punta a los lápices
+sctalk.1,“Who's lit the stove in there? Who are you?”,«Wer hat da drin den Ofen angefeuert? Wer bist du?»,« Qui a allumé le poêle là-dedans ? Qui es-tu ? »,«Chi ha acceso la stufa là dentro? Chi sei?»,«¿Quién ha encendido la estufa ahí dentro? ¿Quién eres?»
+scsay.1a,“The teacher.”,«Die Lehrerin.»,« La maîtresse. »,«La maestra.»,«La maestra.»
+scsay.1b,"“A pupil, kept in after school.”","«Ein Schüler, der nachsitzen muss.»",« Un élève en retenue. »,«Uno scolaro in castigo.»,«Un alumno castigado.»
+scsay.1c,“Nobody.”,«Niemand.»,« Personne. »,«Nessuno.»,«Nadie.»
+sctalk.2,"“Kept in, eh? Then tell me your teacher's name, so I know you're not fibbing.”","«Nachsitzen, so so. Dann sag mir den Namen deiner Lehrerin, damit ich weiss, dass du nicht flunkerst.»","« En retenue, hein ? Alors dis-moi le nom de ta maîtresse, que je sache que tu ne mens pas. »","«In castigo, eh? Allora dimmi il nome della tua maestra, così so che non racconti frottole.»","«Castigado, ¿eh? Entonces dime el nombre de tu maestra, para saber que no mientes.»"
+scsay.2a,“Miss Huber.”,«Fräulein Huber.»,« Mlle Huber. »,«La maestra Huber.»,«La señorita Huber.»
+scsay.2b,“Miss Brunner.”,«Fräulein Brunner.»,« Mlle Brunner. »,«La maestra Brunner.»,«La señorita Brunner.»
+scsay.2c,“Miss Keller.”,«Fräulein Keller.»,« Mlle Keller. »,«La maestra Keller.»,«La señorita Keller.»
+sctalk.3,“Right you are. Miss Keller keeps the spare door key behind the class photo. But the little ones have jumbled the photo again.”,«Stimmt. Fräulein Keller bewahrt den Ersatzschlüssel hinter dem Klassenfoto auf. Aber die Kleinen haben das Foto wieder durcheinandergebracht.»,« C'est ça. Mlle Keller garde la clé de secours derrière la photo de classe. Mais les petits ont encore mélangé la photo. »,«Giusto. La maestra Keller tiene la chiave di riserva dietro la foto di classe. Ma i piccoli hanno di nuovo mescolato la foto.»,«Así es. La señorita Keller guarda la llave de repuesto tras la foto de clase. Pero los pequeños han vuelto a desordenar la foto.»
+scsay.3a,“Thank you!”,«Danke!»,« Merci ! »,«Grazie!»,«¡Gracias!»
+scmsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+scmsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+scmsg.hangup,The janitor shrugs and wanders off. Call him again.,Der Abwart zuckt die Schultern und geht. Ruf ihn nochmals.,Le concierge hausse les épaules et s'en va. Rappelle-le.,Il bidello alza le spalle e se ne va. Richiamalo.,El conserje se encoge de hombros y se va. Llámalo otra vez.
+scmsg.no_line,Nobody outside.,Draussen ist niemand.,Personne dehors.,Fuori non c'è nessuno.,No hay nadie fuera.
+scmsg.key,Under the pot: a small key.,Unter dem Topf: ein kleiner Schlüssel.,Sous le pot : une petite clé.,Sotto il vaso: una chiavetta.,Bajo la maceta: una llave pequeña.
+scmsg.cupboard,A cupboard.,Ein Schrank.,Une armoire.,Un armadio.,Un armario.
+scmsg.cupboard_locked,The cupboard is locked.,Der Schrank ist abgeschlossen.,L'armoire est fermée à clé.,L'armadio è chiuso a chiave.,El armario está cerrado con llave.
+scmsg.cupboard_things,"A sponge, ink, a carrot and pencils.","Ein Schwamm, Tinte, ein Rüebli und Bleistifte.","Une éponge, de l'encre, une carotte et des crayons.","Una spugna, inchiostro, una carota e delle matite.","Una esponja, tinta, una zanahoria y lápices."
+scmsg.can,"A watering can, empty.","Eine Giesskanne, leer.","Un arrosoir, vide.","Un annaffiatoio, vuoto.","Una regadera, vacía."
+scmsg.water,"Squeak, squeak: the can fills with water.","Quietsch, quietsch: Die Kanne füllt sich mit Wasser.","Couic, couic : l'arrosoir se remplit d'eau.","Cigolio, cigolio: l'annaffiatoio si riempie d'acqua.","Ñic, ñic: la regadera se llena de agua."
+scmsg.wet,The sponge soaks up some water.,Der Schwamm saugt sich mit Wasser voll.,L'éponge s'imbibe d'eau.,La spugna si imbeve d'acqua.,La esponja se empapa de agua.
+scmsg.save_water,Better wet the sponge first; the rest is for the plant.,Mach lieber zuerst den Schwamm nass; der Rest ist für die Pflanze.,Mouille d'abord l'éponge ; le reste est pour la plante.,Meglio bagnare prima la spugna; il resto è per la pianta.,Mejor moja primero la esponja; el resto es para la planta.
+scmsg.board_clean,The board is clean. Underneath: three sums.,Die Tafel ist sauber. Darunter: drei Rechnungen.,Le tableau est propre. Dessous : trois calculs.,La lavagna è pulita. Sotto: tre conti.,La pizarra está limpia. Debajo: tres cuentas.
+scmsg.no_sums,Nothing to count yet; the board is all scribbles.,Noch nichts zu rechnen; die Tafel ist voller Gekritzel.,Rien à calculer encore ; le tableau est plein de gribouillis.,Ancora niente da contare; la lavagna è piena di scarabocchi.,Aún nada que contar; la pizarra está llena de garabatos.
+scmsg.abacus_ok,The answers are right. Click: the teacher's drawer unlocks.,Die Antworten stimmen. Klick: Die Schublade der Lehrerin geht auf.,Les réponses sont justes. Clic : le tiroir de la maîtresse se déverrouille.,Le risposte sono giuste. Clic: il cassetto della maestra si sblocca.,Las respuestas son correctas. Clic: el cajón de la maestra se abre.
+scmsg.drawer_locked,The drawer is locked. A note on it: “Sums first!”,Die Schublade ist zu. Ein Zettel: «Zuerst rechnen!»,Le tiroir est fermé. Un mot dessus : « D'abord les calculs ! »,Il cassetto è chiuso. Un biglietto: «Prima i conti!»,El cajón está cerrado. Una nota: «¡Primero las cuentas!»
+scmsg.drawer,"In the drawer: the clock key, matches and a sharpener.","In der Schublade: der Uhrenschlüssel, Streichhölzer und ein Spitzer.","Dans le tiroir : la clé de l'horloge, des allumettes et un taille-crayon.","Nel cassetto: la chiave dell'orologio, fiammiferi e un temperamatite.","En el cajón: la llave del reloj, cerillas y un sacapuntas."
+scmsg.inked,The inkwells are filled.,Die Tintenfässer sind gefüllt.,Les encriers sont remplis.,I calamai sono pieni.,Los tinteros están llenos.
+scmsg.seats_ok,Every card on its desk. In Dora's desk there's a letter.,Jede Karte auf ihrem Pult. In Doras Pult liegt ein Brief.,"Chaque carte à son pupitre. Dans celui de Dora, il y a une lettre.",Ogni cartellino al suo banco. Nel banco di Dora c'è una lettera.,Cada tarjeta en su pupitre. En el de Dora hay una carta.
+scmsg.globe_why,"Turn it where? “Dora's pen-friend”, the list says. Whose desk is Dora's?","Wohin drehen? «Doras Brieffreundin», steht auf der Liste. Welches Pult gehört Dora?","Le tourner où ? « L'amie de Dora », dit la liste. Quel pupitre est celui de Dora ?","Girarlo dove? «L'amica di Dora», dice la lista. Qual è il banco di Dora?","¿Girarlo adónde? «La amiga de Dora», dice la lista. ¿Cuál es el pupitre de Dora?"
+scmsg.globe_ok,The globe shows the pen-friend's country.,Der Globus zeigt das Land der Brieffreundin.,Le globe montre le pays de l'amie.,Il mappamondo mostra il paese dell'amica.,El globo muestra el país de la amiga.
+scmsg.wound,"Tick, tock. The clock runs again.","Tick, tack. Die Uhr läuft wieder.","Tic, tac. L'horloge repart.","Tic, tac. L'orologio riparte.","Tic, tac. El reloj vuelve a andar."
+scmsg.clock_stopped,The clock has stopped. It needs winding.,Die Uhr steht. Sie muss aufgezogen werden.,L'horloge est arrêtée. Il faut la remonter.,L'orologio è fermo. Va caricato.,El reloj está parado. Hay que darle cuerda.
+scmsg.clock_ok,The clock shows the same time as the church.,Die Uhr zeigt dieselbe Zeit wie die Kirche.,L'horloge marque la même heure que l'église.,L'orologio segna la stessa ora della chiesa.,El reloj marca la misma hora que la iglesia.
+scmsg.watered,The plant drinks up the water.,Die Pflanze trinkt das Wasser.,La plante boit l'eau.,La pianta beve l'acqua.,La planta se bebe el agua.
+scmsg.books_ok,The books stand in order.,Die Bücher stehen in der richtigen Reihenfolge.,Les livres sont dans l'ordre.,I libri sono in ordine.,Los libros están en orden.
+scmsg.fed_rabbit,The rabbit hops over and munches the carrot.,Das Kaninchen hoppelt herbei und knabbert das Rüebli.,Le lapin bondit et grignote la carotte.,Il coniglio salta qui e sgranocchia la carota.,El conejo salta y mordisquea la zanahoria.
+scmsg.rabbit_sits,The rabbit sits on the straw.,Das Kaninchen sitzt auf dem Stroh.,Le lapin est assis sur la paille.,Il coniglio è seduto sulla paglia.,El conejo está sentado en la paja.
+scmsg.pin,In the straw: a map pin.,Im Stroh: eine Kartennadel.,Dans la paille : une punaise.,Nella paglia: una puntina.,En la paja: una chincheta.
+scmsg.pin_missing,One pin is missing.,Eine Nadel fehlt.,Il manque une punaise.,Manca una puntina.,Falta una chincheta.
+scmsg.pin_route,The pin goes on the map with the others.,Die Nadel kommt zu den anderen auf die Karte.,La punaise rejoint les autres sur la carte.,La puntina va sulla carta con le altre.,La chincheta va al mapa con las otras.
+scmsg.route_ok,The trip is pinned on the map.,Die Schulreise ist auf der Karte gesteckt.,La course d'école est sur la carte.,La gita è appuntata sulla carta.,La excursión está en el mapa.
+scmsg.smoke,Cough! Smoke pours out of the stove. The damper is closed.,Hust! Rauch quillt aus dem Ofen. Die Klappe ist zu.,Kof ! La fumée sort du poêle. La clé de tirage est fermée.,Coff! Esce fumo dalla stufa. La valvola è chiusa.,¡Cof! Sale humo de la estufa. El tiro está cerrado.
+scmsg.lit,The fire catches. Smoke rises from the chimney outside.,Das Feuer brennt. Draussen steigt Rauch aus dem Kamin.,Le feu prend. De la fumée monte de la cheminée.,Il fuoco prende. Fuori sale fumo dal camino.,El fuego prende. Fuera sale humo de la chimenea.
+scmsg.song_ok,The harmonium wheezes out the school song.,Das Harmonium keucht das Schullied.,L'harmonium souffle la chanson de l'école.,L'armonium ansima l'inno della scuola.,El armonio resopla la canción de la escuela.
+scmsg.peal,"Dong, ding, ding, dong, dong! The Sunday peal.","Dong, ding, ding, dong, dong! Das Sonntagsgeläut.","Dong, ding, ding, dong, dong ! Le carillon du dimanche.","Dong, din, din, dong, dong! Le campane della domenica.","¡Dong, din, din, dong, dong! El repique del domingo."
+scmsg.photo_fixed,"A jumbled class photo. The pieces could slide, but why bother?","Ein durcheinandergebrachtes Klassenfoto. Die Teile liessen sich schieben, aber wozu?","Une photo de classe mélangée. Les pièces pourraient glisser, mais à quoi bon ?","Una foto di classe mescolata. I pezzi scorrerebbero, ma perché?","Una foto de clase desordenada. Las piezas se podrían deslizar, pero ¿para qué?"
+scmsg.photo_ok,The photo is right again. The frame wobbles.,Das Foto stimmt wieder. Der Rahmen wackelt.,La photo est remise en ordre. Le cadre bouge.,La foto è di nuovo a posto. La cornice traballa.,La foto vuelve a estar bien. El marco se mueve.
+scmsg.frame_tight,The frame hangs tight on the wall.,Der Rahmen hängt fest an der Wand.,Le cadre est bien fixé au mur.,La cornice è ben fissata al muro.,El marco está bien sujeto a la pared.
+scmsg.doorkey,Behind the photo: the spare door key!,Hinter dem Foto: der Ersatzschlüssel der Tür!,Derrière la photo : la clé de secours de la porte !,Dietro la foto: la chiave di riserva della porta!,¡Tras la foto: la llave de repuesto de la puerta!
+scmsg.lost,"Lost property: a scarf, a cap and a mitten.","Fundsachen: ein Schal, eine Mütze und ein Fäustling.","Objets trouvés : une écharpe, une casquette et une moufle.","Oggetti smarriti: una sciarpa, un berretto e una muffola.","Objetos perdidos: una bufanda, una gorra y una manopla."
+scmsg.hung,Hung on its owner's peg.,An den Haken des Besitzers gehängt.,Accroché à la patère de son propriétaire.,Appeso all'attaccapanni del proprietario.,Colgado en la percha de su dueño.
+scmsg.wrong_peg,The initial sewn into it doesn't match that name.,Die eingenähte Initiale passt nicht zu diesem Namen.,L'initiale cousue ne correspond pas à ce nom.,L'iniziale cucita non corrisponde a quel nome.,La inicial cosida no coincide con ese nombre.
+scmsg.peg,A coat peg with a name.,Ein Kleiderhaken mit einem Namen.,Une patère avec un nom.,Un attaccapanni con un nome.,Una percha con un nombre.
+scmsg.sharpened,The pencils are sharp.,Die Bleistifte sind gespitzt.,Les crayons sont taillés.,Le matite sono temperate.,Los lápices tienen punta.
+scmsg.door_tasks,"The key fits, but you wouldn't dare leave before every task is ticked off.","Der Schlüssel passt, aber du traust dich nicht zu gehen, bevor alle Aufgaben abgehakt sind.","La clé va, mais tu n'oserais pas partir avant d'avoir tout coché.","La chiave entra, ma non oseresti andartene prima di aver spuntato tutto.","La llave entra, pero no te atreves a irte antes de tachar todas las tareas."
+scmsg.door_open,"Every task ticked off. The key turns, and you're free to go home.","Alle Aufgaben abgehakt. Der Schlüssel dreht, und du darfst nach Hause.","Tout est coché. La clé tourne, et tu peux rentrer.",Tutto spuntato. La chiave gira e puoi tornare a casa.,Todo tachado. La llave gira y puedes irte a casa.
+scmsg.abacus,"An abacus, three rows of beads.",Ein Zählrahmen mit drei Reihen Kugeln.,Un boulier à trois rangées.,Un pallottoliere a tre file.,Un ábaco de tres filas.
+scmsg.chart,"Roman numerals, I to V, each with its dots.","Römische Zahlen, I bis V, jede mit ihren Punkten.","Chiffres romains, de I à V, chacun avec ses points.","Numeri romani, da I a V, ognuno con i suoi punti.","Números romanos, de I a V, cada uno con sus puntos."
+scmsg.register,Miss Keller's register.,Das Klassenbuch von Fräulein Keller.,Le registre de Mlle Keller.,Il registro della maestra Keller.,El registro de la señorita Keller.
+scmsg.tasks,The teacher's list of tasks.,Die Aufgabenliste der Lehrerin.,La liste de tâches de la maîtresse.,La lista dei compiti della maestra.,La lista de tareas de la maestra.
+scmsg.harmonium,A harmonium with the school song on it.,"Ein Harmonium, darauf das Schullied.","Un harmonium, la chanson de l'école dessus.",Un armonium con sopra l'inno della scuola.,Un armonio con la canción de la escuela.
+scmsg.globe,A globe.,Ein Globus.,Un globe.,Un mappamondo.,Un globo terráqueo.
+scmsg.bellrope,The bell rope and the bell board.,Das Glockenseil und die Glockentafel.,La corde de la cloche et son tableau.,La corda della campana e la sua tabella.,La cuerda de la campana y su tablilla.
+scmsg.window,"The window: the pump, the church, the fields.","Das Fenster: die Pumpe, die Kirche, die Felder.","La fenêtre : la pompe, l'église, les champs.","La finestra: la pompa, la chiesa, i campi.","La ventana: la bomba, la iglesia, los campos."
+scmsg.church,The church clock across the fields.,Die Kirchenuhr drüben über den Feldern.,"L'horloge de l'église, au-delà des champs.",L'orologio della chiesa oltre i campi.,"El reloj de la iglesia, tras los campos."
+scmsg.hutch,The class rabbit's hutch.,Der Stall des Klassenkaninchens.,Le clapier du lapin de la classe.,La gabbia del coniglio della classe.,La conejera del conejo de la clase.
+scmsg.books,Five books.,Fünf Bücher.,Cinq livres.,Cinque libri.,Cinco libros.
+scmsg.cards,Name cards.,Namenskarten.,Cartes de nom.,Cartellini dei nomi.,Tarjetas de nombre.
+scmsg.desks,The pupils' desks.,Die Schülerpulte.,Les pupitres des élèves.,I banchi degli scolari.,Los pupitres de los alumnos.
+scmsg.photo,The class photo; beside it the photographer's proof.,Das Klassenfoto; daneben der Abzug des Fotografen.,"La photo de classe ; à côté, l'épreuve du photographe.",La foto di classe; accanto la prova del fotografo.,"La foto de clase; al lado, la prueba del fotógrafo."
+scmsg.door,The classroom door. A plate: M. Keller.,Die Schulzimmertür. Ein Schild: M. Keller.,La porte de la classe. Une plaque : M. Keller.,La porta dell'aula. Una targhetta: M. Keller.,La puerta del aula. Una placa: M. Keller.
+scmsg.pump,The pump outside.,Die Pumpe draussen.,La pompe dehors.,La pompa fuori.,La bomba de fuera.
+scmsg.plant,A drooping plant.,Eine welke Pflanze.,Une plante qui pique du nez.,Una pianta avvizzita.,Una planta mustia.
+scmsg.map,The wall map.,Die Wandkarte.,La carte murale.,La carta murale.,El mapa mural.
+scmsg.stove,The stove. A damper on its flue.,Der Ofen. Eine Klappe im Rohr.,Le poêle. Une clé de tirage sur le tuyau.,La stufa. Una valvola sul tubo.,La estufa. Un tiro en el tubo.
+scmsg.damper,The damper.,Die Ofenklappe.,La clé de tirage.,La valvola.,El tiro.
+scmsg.board,The blackboard.,Die Wandtafel.,Le tableau noir.,La lavagna.,La pizarra.
+scmsg.clock,The clock.,Die Uhr.,L'horloge.,L'orologio.,El reloj.
+scmsg.inkwells,Inkwells.,Tintenfässer.,Des encriers.,Calamai.,Tinteros.
+scmsg.pegs,Coat pegs.,Kleiderhaken.,Des patères.,Attaccapanni.,Perchas.
+scmsg.letter,"A letter from a pen-friend abroad, with a stamp.","Ein Brief einer Brieffreundin aus dem Ausland, mit Marke.","Une lettre d'une amie de l'étranger, avec un timbre.","Una lettera di un'amica dall'estero, con francobollo.","Una carta de una amiga del extranjero, con sello."
+schint.1.1,The cupboard is locked; a key is hidden somewhere.,Der Schrank ist zu; irgendwo ist ein Schlüssel versteckt.,L'armoire est fermée ; une clé est cachée quelque part.,L'armadio è chiuso; da qualche parte c'è una chiave.,El armario está cerrado; hay una llave escondida.
+schint.1.2,Teachers hide spare keys under things on the windowsill.,Lehrerinnen verstecken Ersatzschlüssel unter Dingen auf dem Fenstersims.,Les maîtresses cachent des clés sous des objets du rebord.,Le maestre nascondono le chiavi sotto le cose sul davanzale.,Las maestras esconden llaves bajo cosas del alféizar.
+schint.1.3,Lift the flower pot on the windowsill.,Heb den Blumentopf auf dem Fenstersims hoch.,Soulève le pot de fleurs sur le rebord.,Solleva il vaso sul davanzale.,Levanta la maceta del alféizar.
+schint.2.1,The key fits the cupboard.,Der Schlüssel passt zum Schrank.,La clé va à l'armoire.,La chiave è dell'armadio.,La llave es del armario.
+schint.2.2,At the back of the room.,Hinten im Zimmer.,Au fond de la classe.,In fondo all'aula.,Al fondo del aula.
+schint.2.3,Use the key on the cupboard.,Benutze den Schlüssel am Schrank.,Utilise la clé sur l'armoire.,Usa la chiave sull'armadio.,Usa la llave en el armario.
+schint.3.1,Look inside the cupboard.,Schau in den Schrank.,Regarde dans l'armoire.,Guarda nell'armadio.,Mira dentro del armario.
+schint.3.2,Things for the tasks are on the shelves.,Auf den Tablaren liegt Material für die Aufgaben.,Il y a de quoi faire les tâches sur les étagères.,Sui ripiani c'è il necessario per i compiti.,En las baldas hay cosas para las tareas.
+schint.3.3,Tap the cupboard's shelves.,Tippe auf die Tablare im Schrank.,Touche les étagères de l'armoire.,Tocca i ripiani dell'armadio.,Toca las baldas del armario.
+schint.4.1,You need water.,Du brauchst Wasser.,Il te faut de l'eau.,Ti serve acqua.,Necesitas agua.
+schint.4.2,The pump outside the window; the watering can is on the floor.,Die Pumpe vor dem Fenster; die Giesskanne steht am Boden.,La pompe derrière la fenêtre ; l'arrosoir est par terre.,La pompa fuori dalla finestra; l'annaffiatoio è per terra.,La bomba tras la ventana; la regadera está en el suelo.
+schint.4.3,Use the watering can on the pump at the window.,Benutze die Giesskanne an der Pumpe beim Fenster.,"Utilise l'arrosoir sur la pompe, à la fenêtre.",Usa l'annaffiatoio sulla pompa alla finestra.,Usa la regadera en la bomba de la ventana.
+schint.5.1,The board needs a wet sponge.,Die Tafel braucht einen nassen Schwamm.,Le tableau demande une éponge mouillée.,La lavagna vuole una spugna bagnata.,La pizarra necesita una esponja mojada.
+schint.5.2,The can holds water.,In der Kanne ist Wasser.,L'arrosoir contient de l'eau.,L'annaffiatoio contiene acqua.,La regadera tiene agua.
+schint.5.3,Use the sponge on the full can.,Benutze den Schwamm mit der vollen Kanne.,Utilise l'éponge sur l'arrosoir plein.,Usa la spugna sull'annaffiatoio pieno.,Usa la esponja con la regadera llena.
+schint.6.1,The board is scribbled over.,Die Tafel ist vollgekritzelt.,Le tableau est couvert de gribouillis.,La lavagna è piena di scarabocchi.,La pizarra está llena de garabatos.
+schint.6.2,Wipe it with the wet sponge.,Wisch sie mit dem nassen Schwamm.,Essuie-le avec l'éponge mouillée.,Puliscila con la spugna bagnata.,Límpiala con la esponja mojada.
+schint.6.3,Use the wet sponge on the blackboard.,Benutze den nassen Schwamm an der Wandtafel.,Utilise l'éponge mouillée sur le tableau.,Usa la spugna bagnata sulla lavagna.,Usa la esponja mojada en la pizarra.
+schint.7.1,The board shows three sums.,Die Tafel zeigt drei Rechnungen.,Le tableau montre trois calculs.,La lavagna mostra tre conti.,La pizarra muestra tres cuentas.
+schint.7.2,Each row of beads is one answer.,Jede Kugelreihe ist eine Antwort.,Chaque rangée de perles est une réponse.,Ogni fila di palline è una risposta.,Cada fila de cuentas es una respuesta.
+schint.7.3,"7, 6 and 8.","7, 6 und 8.","7, 6 et 8.","7, 6 e 8.","7, 6 y 8."
+schint.8.1,The inkwells are dry.,Die Tintenfässer sind trocken.,Les encriers sont secs.,I calamai sono secchi.,Los tinteros están secos.
+schint.8.2,The ink is in the cupboard.,Die Tinte ist im Schrank.,L'encre est dans l'armoire.,L'inchiostro è nell'armadio.,La tinta está en el armario.
+schint.8.3,Use the ink on the inkwells.,Benutze die Tinte an den Tintenfässern.,Utilise l'encre sur les encriers.,Usa l'inchiostro sui calamai.,Usa la tinta en los tinteros.
+schint.9.1,The name cards are on the wrong desks.,Die Namenskarten stehen auf den falschen Pulten.,Les cartes de nom sont aux mauvais pupitres.,I cartellini sono sui banchi sbagliati.,Las tarjetas están en pupitres equivocados.
+schint.9.2,The register has the seating plan.,Im Klassenbuch steht die Sitzordnung.,Le registre contient le plan de classe.,Il registro ha la disposizione dei banchi.,El registro tiene el plano de asientos.
+schint.9.3,"From the left: Emil, Anna, Fritz, Dora, Ben.","Von links: Emil, Anna, Fritz, Dora, Ben.","Depuis la gauche : Emil, Anna, Fritz, Dora, Ben.","Da sinistra: Emil, Anna, Fritz, Dora, Ben.","Desde la izquierda: Emil, Anna, Fritz, Dora, Ben."
+schint.10.1,The clock has stopped.,Die Uhr steht.,L'horloge est arrêtée.,L'orologio è fermo.,El reloj está parado.
+schint.10.2,"Wind it with the key from the teacher's drawer, then set it by the church clock.",Zieh sie mit dem Schlüssel aus der Schublade auf und stell sie nach der Kirchenuhr.,"Remonte-la avec la clé du tiroir, puis règle-la sur l'horloge de l'église.","Caricalo con la chiave del cassetto, poi regolalo sull'orologio della chiesa.",Dale cuerda con la llave del cajón y ponlo en hora con el reloj de la iglesia.
+schint.10.3,"Wind it, then set it to quarter to four.","Aufziehen, dann auf Viertel vor vier stellen.","Remonte-la, puis règle-la sur quatre heures moins le quart.",Caricalo e mettilo alle quattro meno un quarto.,Dale cuerda y ponlo a las cuatro menos cuarto.
+schint.11.1,The task: turn the globe to the pen-friend's country.,Die Aufgabe: den Globus zum Land der Brieffreundin drehen.,La tâche : tourner le globe vers le pays de l'amie.,Il compito: girare il mappamondo sul paese dell'amica.,La tarea: girar el globo al país de la amiga.
+schint.11.2,"Once the cards are right, Dora's desk has a letter; look at the stamp.","Wenn die Karten stimmen, liegt in Doras Pult ein Brief; schau dir die Marke an.","Une fois les cartes en place, le pupitre de Dora contient une lettre ; regarde le timbre.","Con i cartellini a posto, nel banco di Dora c'è una lettera; guarda il francobollo.","Con las tarjetas bien, en el pupitre de Dora hay una carta; mira el sello."
+schint.11.3,Turn the globe until its shape matches the stamp.,"Dreh den Globus, bis die Form der Marke entspricht.",Tourne le globe jusqu'à ce que la forme corresponde au timbre.,Gira il mappamondo finché la forma corrisponde al francobollo.,Gira el globo hasta que la forma coincida con el sello.
+schint.12.1,The plant is thirsty.,Die Pflanze hat Durst.,La plante a soif.,La pianta ha sete.,La planta tiene sed.
+schint.12.2,There is water left in the can.,In der Kanne ist noch Wasser.,Il reste de l'eau dans l'arrosoir.,Nell'annaffiatoio è rimasta acqua.,Queda agua en la regadera.
+schint.12.3,Use the can on the plant.,Benutze die Kanne an der Pflanze.,Utilise l'arrosoir sur la plante.,Usa l'annaffiatoio sulla pianta.,Usa la regadera en la planta.
+schint.13.1,The books should stand in order.,Die Bücher sollen geordnet stehen.,Les livres doivent être rangés dans l'ordre.,I libri vanno messi in ordine.,Los libros deben estar en orden.
+schint.13.2,Their spines have Roman numerals; the chart by the board explains them.,Auf den Rücken stehen römische Zahlen; die Tabelle bei der Tafel erklärt sie.,Leurs dos portent des chiffres romains ; le tableau près du tableau noir les explique.,Sui dorsi ci sono numeri romani; la tabella vicino alla lavagna li spiega.,Sus lomos tienen números romanos; la tabla junto a la pizarra los explica.
+schint.13.3,"I, II, III, IV, V from left to right.","I, II, III, IV, V von links nach rechts.","I, II, III, IV, V de gauche à droite.","I, II, III, IV, V da sinistra a destra.","I, II, III, IV, V de izquierda a derecha."
+schint.14.1,The rabbit is hungry.,Das Kaninchen hat Hunger.,Le lapin a faim.,Il coniglio ha fame.,El conejo tiene hambre.
+schint.14.2,There was a carrot in the cupboard.,Im Schrank war ein Rüebli.,Il y avait une carotte dans l'armoire.,Nell'armadio c'era una carota.,En el armario había una zanahoria.
+schint.14.3,Give the carrot to the rabbit.,Gib dem Kaninchen das Rüebli.,Donne la carotte au lapin.,Dai la carota al coniglio.,Dale la zanahoria al conejo.
+schint.15.1,The rabbit has moved.,Das Kaninchen hat sich bewegt.,Le lapin a bougé.,Il coniglio si è spostato.,El conejo se ha movido.
+schint.15.2,Something glints in the straw.,Im Stroh glitzert etwas.,Quelque chose brille dans la paille.,Qualcosa luccica nella paglia.,Algo brilla en la paja.
+schint.15.3,Tap the straw: a map pin.,Tippe aufs Stroh: eine Kartennadel.,Touche la paille : une punaise.,Tocca la paglia: una puntina.,Toca la paja: una chincheta.
+schint.16.1,The map is missing a pin.,Der Karte fehlt eine Nadel.,Il manque une punaise à la carte.,Alla carta manca una puntina.,Al mapa le falta una chincheta.
+schint.16.2,The diary in the register shows the trip's stops in order.,Das Tagebuch im Klassenbuch zeigt die Halte der Reise der Reihe nach.,Le journal du registre montre les étapes dans l'ordre.,Il diario nel registro mostra le tappe in ordine.,El diario del registro muestra las paradas en orden.
+schint.16.3,"Pin 1 on the castle, 2 on the lake, 3 on the bridge.","Nadel 1 auf die Burg, 2 auf den See, 3 auf die Brücke.","Punaise 1 sur le château, 2 sur le lac, 3 sur le pont.","Puntina 1 sul castello, 2 sul lago, 3 sul ponte.","Chincheta 1 en el castillo, 2 en el lago, 3 en el puente."
+schint.17.1,The stove must be lit.,Der Ofen muss brennen.,Il faut allumer le poêle.,La stufa va accesa.,Hay que encender la estufa.
+schint.17.2,"Open the damper first, or it smokes.","Zuerst die Klappe öffnen, sonst raucht er.","Ouvre d'abord la clé de tirage, sinon il fume.","Prima apri la valvola, o fa fumo.","Abre primero el tiro, o echará humo."
+schint.17.3,"Turn the damper fully open, then use the matches on the stove.","Öffne die Klappe ganz, dann benutze die Streichhölzer am Ofen.","Ouvre la clé en grand, puis utilise les allumettes sur le poêle.","Apri del tutto la valvola, poi usa i fiammiferi sulla stufa.",Abre el tiro del todo y usa las cerillas en la estufa.
+schint.18.1,The school song lies on the harmonium.,Das Schullied liegt auf dem Harmonium.,La chanson de l'école est posée sur l'harmonium.,L'inno della scuola è sull'armonium.,La canción de la escuela está en el armonio.
+schint.18.2,The notes are coloured like the keys.,Die Noten haben die Farben der Tasten.,Les notes ont les couleurs des touches.,Le note hanno i colori dei tasti.,Las notas tienen los colores de las teclas.
+schint.18.3,"Keys 1, 3, 5, 6, 5, 3, 1 from the left.","Tasten 1, 3, 5, 6, 5, 3, 1 von links.","Touches 1, 3, 5, 6, 5, 3, 1 depuis la gauche.","Tasti 1, 3, 5, 6, 5, 3, 1 da sinistra.","Teclas 1, 3, 5, 6, 5, 3, 1 desde la izquierda."
+schint.19.1,The bell board shows how it is rung.,"Die Glockentafel zeigt, wie man läutet.",Le tableau montre comment sonner.,La tabella mostra come suonare.,La tablilla muestra cómo se toca.
+schint.19.2,Long and short pulls.,Lange und kurze Züge.,Des coups longs et courts.,Tiri lunghi e corti.,Tirones largos y cortos.
+schint.19.3,"Long, short, short, long, long.","Lang, kurz, kurz, lang, lang.","Long, court, court, long, long.","Lungo, corto, corto, lungo, lungo.","Largo, corto, corto, largo, largo."
+schint.20.1,The smoke from the chimney brings someone.,Der Rauch aus dem Kamin lockt jemanden an.,La fumée de la cheminée attire quelqu'un.,Il fumo dal camino attira qualcuno.,El humo de la chimenea atrae a alguien.
+schint.20.2,The janitor at the window wants to know who you are and who your teacher is.,"Der Abwart am Fenster will wissen, wer du bist und wer deine Lehrerin ist.",Le concierge à la fenêtre veut savoir qui tu es et qui est ta maîtresse.,Il bidello alla finestra vuole sapere chi sei e chi è la tua maestra.,El conserje de la ventana quiere saber quién eres y quién es tu maestra.
+schint.20.3,"Say you're a pupil kept in, then Miss Keller (her name is on the door).","Sag, du musst nachsitzen, dann Fräulein Keller (ihr Name steht an der Tür).","Dis que tu es en retenue, puis Mlle Keller (son nom est sur la porte).","Di' che sei in castigo, poi la maestra Keller (il nome è sulla porta).",Di que estás castigado y luego la señorita Keller (su nombre está en la puerta).
+schint.21.1,The class photo is jumbled.,Das Klassenfoto ist durcheinander.,La photo de classe est mélangée.,La foto di classe è mescolata.,La foto de clase está desordenada.
+schint.21.2,The proof beside it shows how it should look.,"Der Abzug daneben zeigt, wie es aussehen soll.",L'épreuve à côté montre à quoi elle doit ressembler.,La prova accanto mostra come deve essere.,La prueba de al lado muestra cómo debe quedar.
+schint.21.3,Slide the pieces until they match the proof; the gap ends at the bottom right.,"Schieb die Teile, bis sie dem Abzug entsprechen; die Lücke landet unten rechts.",Fais glisser les pièces jusqu'à imiter l'épreuve ; le trou finit en bas à droite.,Fai scorrere i pezzi finché corrispondono alla prova; il buco finisce in basso a destra.,Desliza las piezas hasta que coincidan con la prueba; el hueco acaba abajo a la derecha.
+schint.22.1,Lost things belong to pupils.,Die Fundsachen gehören Schülern.,Les objets trouvés appartiennent à des élèves.,Gli oggetti smarriti sono degli scolari.,Los objetos perdidos son de alumnos.
+schint.22.2,Each has an initial sewn in; the pegs have names.,In jedem ist eine Initiale eingenäht; die Haken tragen Namen.,Chacun porte une initiale cousue ; les patères ont des noms.,Ognuno ha un'iniziale cucita; gli attaccapanni hanno nomi.,Cada uno lleva una inicial cosida; las perchas tienen nombres.
+schint.22.3,"Scarf to Emil, cap to Anna, mitten to Fritz.","Schal zu Emil, Mütze zu Anna, Fäustling zu Fritz.","Écharpe à Emil, casquette à Anna, moufle à Fritz.","Sciarpa a Emil, berretto ad Anna, muffola a Fritz.","Bufanda a Emil, gorra a Anna, manopla a Fritz."
+schint.23.1,The pencils are blunt.,Die Bleistifte sind stumpf.,Les crayons sont émoussés.,Le matite sono spuntate.,Los lápices no tienen punta.
+schint.23.2,The sharpener is in the drawer.,Der Spitzer ist in der Schublade.,Le taille-crayon est dans le tiroir.,Il temperamatite è nel cassetto.,El sacapuntas está en el cajón.
+schint.23.3,Use the sharpener on the pencils.,Benutze den Spitzer an den Bleistiften.,Utilise le taille-crayon sur les crayons.,Usa il temperamatite sulle matite.,Usa el sacapuntas en los lápices.
+schint.24.1,All tasks done? The list ticks them off.,Alles erledigt? Die Liste hakt es ab.,Tout est fait ? La liste coche les tâches.,Tutto fatto? La lista spunta i compiti.,¿Todo hecho? La lista tacha las tareas.
+schint.24.2,The spare key is behind the class photo.,Der Ersatzschlüssel ist hinter dem Klassenfoto.,La clé de secours est derrière la photo de classe.,La chiave di riserva è dietro la foto di classe.,La llave de repuesto está tras la foto de clase.
+schint.24.3,Take the key from behind the photo and use it on the door.,Nimm den Schlüssel hinter dem Foto und benutze ihn an der Tür.,Prends la clé derrière la photo et utilise-la sur la porte.,Prendi la chiave dietro la foto e usala sulla porta.,Coge la llave de detrás de la foto y úsala en la puerta.

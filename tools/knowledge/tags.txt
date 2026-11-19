@@ -275,3 +275,81 @@ sacks: X | logic_grid code_order | 2 2
 chute: D | mech_path | 1 1
 counterweight: E | item_clever | 1 2
 cart: A | combo_finale | 1 1
+
+[aviary]
+nestbox: F | find_container | 1 1
+store: A | item_use | 1 2
+net: A | item_use | 1 1
+fish: F | find_moment item_use | 1 1
+kingfisher: A | item_use | 1 1
+apple: A | item_use | 1 1
+knife: A | item_use | 1 1
+slices: C | item_combine | 1 1
+parrot: A | item_use | 1 1
+greeting: C | talk read_letter | 2 2
+jars: C | combo_story_clue | 1 1
+canary: A | item_use | 1 1
+can: A | item_use | 1 1
+tap: A | item_use | 1 1
+nectar: C | item_combine | 1 1
+humming: A | item_use | 1 1
+mist: D | mech_switch | 1 1
+shade: D | mech_rotate space_remote | 1 2
+whistle: A | item_use | 1 1
+scoop: C | item_use | 1 1
+peacock: A | item_use | 1 1
+song: C | sense_music sense_listen | 1 1
+perches: C | code_combine space_split | 2 2
+bell: A | combo_finale | 1 1
+
+[mirrors]
+coin: F | find_tiny | 1 1
+turnstile: A | item_use | 1 1
+maze: C | space_layout | 1 2
+brasskey: A | item_use | 1 1
+cabinet: A | item_use | 1 1
+tester: F | find_moment | 1 1
+token: A | item_use | 1 1
+zelda: C | talk read_riddle | 1 1
+cylinder: C | sense_mirror item_clever | 1 1
+horses: C | code_combine combo_story_clue | 2 2
+periscope: C | sense_mirror space_look | 1 2
+generator: A | mech_rotate | 1 1
+fuses: D | mech_switch read_rules | 1 1
+darts: C | sense_mirror find_hidden | 1 1
+balloons: C | code_order | 1 1
+mirror: A | item_use | 1 1
+spotlights: D | sense_light mech_rotate | 1 1
+lever: A | item_use | 1 1
+saddle: F | find_moment | 1 1
+organ: C | sense_music | 1 1
+sugar: A | item_use | 1 1
+stick: A | item_use | 1 1
+floss: C | item_combine | 1 1
+clown: A | combo_finale | 1 1
+
+[school]
+pot: F | find_container | 1 1
+cupboard: A | item_use | 1 1
+shelves: A | item_use | 1 1
+pump: A | item_use space_look | 1 2
+sponge: C | item_combine | 1 1
+board: A | item_use | 1 1
+abacus: C | code_math | 1 1
+ink: A | item_use | 1 2
+seats: C | code_map | 1 2
+clock: D | mech_rotate space_look | 1 2
+globe: C | combo_story_clue | 1 2
+plant: A | item_use | 1 1
+books: C | code_order read_numbers | 1 2
+rabbit: A | item_use | 1 1
+straw: F | find_hidden | 1 1
+map: C | code_order read_letter | 1 2
+stove: D | mech_switch | 1 1
+song: C | sense_music | 1 1
+bell: C | code_order | 1 1
+janitor: C | talk | 2 2
+photo: M | mech_slide | 1 1
+pegs: C | code_map | 1 2
+pencils: A | item_combine | 1 1
+door: A | combo_finale | 1 1

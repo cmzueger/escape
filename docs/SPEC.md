@@ -268,3 +268,12 @@ Not chosen: The Night Zoo, Noah's Workshop; Museum of Illusions, Camera
 Obscura; Science Lab After Hours, Midnight at the Boarding School; The
 Songbird Dome, Field Notes; Reflections, The Mirror Salon; The Snow Day,
 Class of 1925.
+Built as 0.12.0 (looks: green glass and sunshine; night funfair with neon;
+chalkboard and a warm afternoon): The Glass Aviary
+FAAFAAACACCAAACADDACACCA (medium, 14 min), Hall of Mirrors
+FACAAFACCCCADCCADAFCAACA (medium, 16 min), Detention
+FAAACACACDCACAFCDCCCMCAA (medium, 20 min); targets about 1.3 times the
+knowledge base's prediction. Most puzzles are small (feed, fetch, combine),
+with a few mechanisms each and things seen only at a moment. A conversation
+that ends after its secret was told no longer shows the hang-up text (all
+rooms).

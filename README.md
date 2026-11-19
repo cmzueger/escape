@@ -33,6 +33,9 @@ Escape rooms played in the browser. Offline, no accounts.
 | The Filter Hall | hard | 28 min | A Victorian pumping station on opening day. Twelve puzzles; make the fountain in the square rise. |
 | The 8:15 to Nowhere | hard | 25 min | A model railway club and its founder's last layout. Eleven puzzles with points, a shunting yard and a phone call. |
 | Harvest Moon | hard | 25 min | A windmill at the harvest festival. Twelve puzzles; sails, gears, a sack hoist and the first flour. |
+| The Glass Aviary | medium | 14 min | A glass bird house on a sunny Sunday, the keeper away. Twenty-four small puzzles: feed every bird and settle it on its perch. |
+| Hall of Mirrors | medium | 16 min | A funfair at night with the lights still on. Twenty-four puzzles: a mirror maze, crooked mirrors and a carousel to wake. |
+| Detention | medium | 20 min | A village school in 1925, kept in after lessons. Twenty-four puzzles from the teacher's list of tasks. |
 
 Play: https://cmzueger.github.io/escape/
 

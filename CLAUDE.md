@@ -21,7 +21,8 @@ The Quiet House (`house1905`, `house1938`, `house1969`, `housenow`); seventh
 set (owner's choice) The Night Edition (`press`), The Great Vaudini
 (`magic`), Rain on Gale Street (`noir`); eighth set (owner's choice) The
 Filter Hall (`filter`), The 8:15 to Nowhere (`railway`), Harvest Moon
-(`mill`).
+(`mill`); ninth set (owner's choice, long and easy to medium) The Glass
+Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
   `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
@@ -38,11 +39,12 @@ Filter Hall (`filter`), The 8:15 to Nowhere (`railway`), Harvest Moon
   `alch.rs`, `attic.rs`, `watch.rs`, `museum.rs`, `tree.rs`, `gondola.rs`,
   `praline.rs`, `toyshop.rs`, `zeppelin.rs`, `ship.rs`, `polar.rs`, the
   house rooms, `press.rs`, `magic.rs`, `noir.rs`, `filter.rs`, `railway.rs`,
-  `mill.rs`. Write new
+  `mill.rs`, `aviary.rs`, `mirrors.rs`, `school.rs` (helpers for these three in
+  `set9.rs`: two items combined, taps in an order, a moment). Write new
   rooms this way. Their pictures are in `art_set2.gd` … `art_set6.gd`, `art_house.gd`,
-  `art_set7.gd`, `art_set8.gd` (each art script extends the one before;
+  `art_set7.gd`, `art_set8.gd`, `art_set9.gd` (each art script extends the one before;
   constants and helpers must not reuse a parent's name), hotspots in
-  `views_set2.gd` … `views_set6.gd`, `views_house.gd`, `views_set7.gd`, `views_set8.gd`. Item names are global (`item.<name>`
+  `views_set2.gd` … `views_set6.gd`, `views_house.gd`, `views_set7.gd`, `views_set8.gd`, `views_set9.gd`. Item names are global (`item.<name>`
   in the texts): pick names no other room uses. Kit locks and
   dials are moved with `turn` and `flip`.
 - A new room: a kit spec in `core`, an entry in `ROOMS` and `Room::call`, views and
@@ -119,6 +121,20 @@ Filter Hall (`filter`), The 8:15 to Nowhere (`railway`), Harvest Moon
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.12.0** (2026-11-19): ninth set, asked for as longer rooms of easy to
+  at most medium difficulty around animals, illusions and school, chosen in
+  two rounds: The Glass Aviary (feed and settle every bird: a fish caught as
+  it jumps, a parrot that finishes the keeper's greeting, a whistled song,
+  perches from a plan in two halves), Hall of Mirrors (a mirror maze stepped
+  through cell by cell, a cylinder mirror that straightens a picture, a
+  periscope, fuses with a limit, a beam over two mirrors, a sign seen on a
+  turning horse), Detention (fifteen tasks on the teacher's list, ticked off
+  as they are done; a sliding photo, a harmonium, a bell peal, a janitor at
+  the window). About 24 puzzles over four views each; text prefixes av, hm,
+  sc; views AV, HM, SC. Things seen only at a moment read the time (the
+  client now keeps `secs` in its state each second). Catalogue: 32 rooms in
+  eleven rows. A conversation that ends after its secret no longer shows the
+  hang-up text.
 - **0.11.1** (2026-11-18): the end screen asks three quick ratings (fun 1 to
   5, difficulty 1 to 5, length too short / right / too long), asked for by
   the owner so they are given while memory is fresh. They are written onto
@@ -276,6 +292,7 @@ Filter Hall (`filter`), The 8:15 to Nowhere (`railway`), Harvest Moon
 - The owner's play test of the series The Quiet House (built 0.9.0) and its targets.
 - The owner's play test of the seventh set (built 0.10.0) and its targets.
 - The owner's play test of the eighth set (built 0.11.0) and its targets.
+- The owner's play test of the ninth set (built 0.12.0) and its targets.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, whether the scrolling catalogue is, and an
   opinion on the sounds, which were made without anyone hearing them.
