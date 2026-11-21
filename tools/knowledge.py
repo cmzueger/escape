@@ -195,7 +195,7 @@ def solve(a, b):
 
 
 # Minutes a hint stands for: the time the owner would still have needed.
-HINT_MINUTES = 1.5
+HINT_MINUTES = estimate.HINT_MINUTES
 
 
 def fit(rooms, runs):
@@ -225,7 +225,7 @@ def fit(rooms, runs):
         for p in rooms[room]:
             for k, v in features(p).items():
                 total[k] = total.get(k, 0) + v
-        rows.append((total, t, 0.6))
+        rows.append((total, t, 0.6 * (0.7 if room in estimate.HINTED else 1.0)))
     n = len(names)
     a = [[0.0] * n for _ in range(n)]
     b = [0.0] * n

@@ -134,7 +134,7 @@ fn hook(s: &mut State, words: &[&str]) -> Option<Reply> {
 }
 
 /// Minutes for three stars: set by `tools/knowledge.py targets --write` (0.8 times the learned model's prediction).
-pub const PAR_MINUTES: u32 = 6;
+pub const PAR_MINUTES: u32 = 7;
 
 pub static SPEC: Spec = Spec {
     id: "theatre",

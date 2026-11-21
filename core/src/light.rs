@@ -14,7 +14,7 @@
 
 use crate::{bad, digits, digits_text, names_json, nums_json, step, strs_json};
 
-pub const PAR_MINUTES: u32 = 9;
+pub const PAR_MINUTES: u32 = 11;
 
 pub const FLAGS: [&str; 20] = [
     "got_magnet",

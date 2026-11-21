@@ -138,6 +138,11 @@ Serenissima (`carnival`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.17.1** (2026-11-21): Col Sidereal and the Grandmaster's Study teach
+  the time model too, as told by the owner (each needed the second hint on
+  one puzzle): their whole-room times count with 2 hints (`HINTED` in
+  `tools/estimate.py`) at a little less weight. Deductions now take longer
+  in the model; targets follow (Col Sidereal 29, Grandmaster's Study 21).
 - **0.17.0** (2026-11-21): the city room Midnight in Serenissima, chosen by
   the owner in two rounds (carnival night in a canal city; walking street
   by street plus a map; about 20 places; easy to medium; the look "lanterns

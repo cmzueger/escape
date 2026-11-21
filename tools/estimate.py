@@ -25,10 +25,10 @@ import sys
 TIMES = {
     "hut": (4.85, ""),
     "light": (11.4, "a bug cost time"),
-    "obs": (None, "39 min with a bug and hints"),
+    "obs": (39.07, "a bug cost time; the second hint on one puzzle"),
     "orangery": (2.88, ""),
     "theatre": (7.25, ""),
-    "chess": (None, "24 min with hints"),
+    "chess": (24.0, "the second hint on one puzzle"),
     "beach": (2.63, ""),
     "train": (4.73, ""),
     "attic": (3.13, ""),
@@ -39,9 +39,16 @@ TIMES = {
     "aviary": (12.28, ""),
     "mirrors": (16.53, ""),
 }
+# Hints asked in a room timed only as a whole (owner, 2026-11-21: Col
+# Sidereal and the Grandmaster's Study each needed the second hint on one
+# puzzle). Each hint stands for HINT_MINUTES the owner would still have
+# needed; such a room's time counts a little less.
+HINTED = {"obs": 2, "chess": 2}
+HINT_MINUTES = 1.5
 _LIB = pathlib.Path(__file__).resolve().parent.parent / "core" / "src" / "lib.rs"
 ROOMS = {
-    room: (kinds,) + TIMES.get(room, (None, ""))
+    room: (kinds, None if TIMES.get(room, (None,))[0] is None else TIMES[room][0] + HINT_MINUTES * HINTED.get(room, 0),
+           TIMES.get(room, (None, ""))[1])
     for room, kinds in re.findall(r'\("(\w+)", "([A-Z]+)", \w+::PAR_MINUTES\)', _LIB.read_text())
 }
 KINDS = "ABCFDMEX"
