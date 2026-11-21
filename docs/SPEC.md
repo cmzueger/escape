@@ -344,3 +344,7 @@ Built as 0.17.0: twenty places (`SR0` … `SR19`) and twelve close-ups, 23
 puzzles (medium by its kinds), every place with its own lantern colour.
 The client tells the rules each step (`walk i`), so the map's knowledge is
 saved with the game.
+
+## Targets at least 5 minutes (owner, 2026-11-21)
+The smallest rooms got targets of 2 to 4 minutes from the model; the owner
+asked for reasonable values: every target is now at least 5 minutes.

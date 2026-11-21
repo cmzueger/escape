@@ -488,9 +488,9 @@ def plan(text, rooms, runs, survey):
 
 def target(minutes):
     """A room's target from its predicted owner minutes (owner, 2026-11-21):
-    0.8 times, rounded up below 5 minutes, else to the nearest minute."""
-    t = 0.8 * minutes
-    return max(1, math.ceil(t) if t < 5 else round(t))
+    0.8 times to the nearest minute, and never under 5 minutes (owner,
+    2026-11-21: the smallest rooms' targets were too short to be fair)."""
+    return max(5, round(0.8 * minutes))
 
 
 def targets(rooms, runs):

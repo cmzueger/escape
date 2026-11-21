@@ -86,7 +86,7 @@ Serenissima (`carnival`).
   intro's `%d` all read it). Every target comes from the learned time model
   (owner, 2026-11-21: the owner's stats only teach the model, no room's
   target is taken from its own time): 0.8 times the predicted owner
-  minutes, rounded up below 5 minutes. `tools/knowledge.py targets --write`
+  minutes, at least 5 minutes. `tools/knowledge.py targets --write`
   sets them; `check` (in CI) fails when one differs, so after pasting new
   stats or tagging a new room, run it. Half a star is lost per started 15 %
   of the target over it (`halves` in lib.rs, `score` in main.gd). Estimate a planned room with `tools/estimate.py` (puzzle
@@ -138,6 +138,9 @@ Serenissima (`carnival`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.17.2** (2026-11-21): no target under 5 minutes, asked for by the owner
+  (the smallest rooms' targets were not reasonable): `target` in
+  knowledge.py takes at least 5.
 - **0.17.1** (2026-11-21): Col Sidereal and the Grandmaster's Study teach
   the time model too, as told by the owner (each needed the second hint on
   one puzzle): their whole-room times count with 2 hints (`HINTED` in
