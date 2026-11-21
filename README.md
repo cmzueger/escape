@@ -40,6 +40,7 @@ Escape rooms played in the browser. Offline, no accounts.
 | Puffin Island · Summer | easy | 9 min | Episode 2: a storm rolls in. Twenty puzzles; a kite in the gusts, the lighthouse beam and the hay. |
 | Puffin Island · Autumn | medium | 9 min | Episode 3: market day. Nineteen puzzles; apples, cider, a pie and the regatta. |
 | Puffin Island · Winter | easy | 9 min | Episode 4: the longest night. Nineteen puzzles; skating on thin ice, an ice cave and the lighthouse lamp. |
+| Midnight in Serenissima | medium | 16 min | Carnival night in a city of canals: twenty places walked street by street, with a map. Twenty-three puzzles; a ring toss, glass blown at the furnace, a gondola through the canals and the fireworks. |
 
 Play: https://cmzueger.github.io/escape/
 

@@ -326,3 +326,21 @@ Built as 0.16.0: Spring (23 puzzles, easy), Summer (20, easy), Autumn (19,
 medium), Winter (19, easy); targets from the learned model. Carry-overs:
 the jetty mended in spring holds in summer, the spring patch is harvested
 in autumn, Pip returns each season, the almanac gains a page.
+
+## A city room: Midnight in Serenissima (owner, 2026-11-21)
+Asked for: a room in a city with many views, much of it decoration or
+small helps, clues that lead straight to the places that matter, and a map
+for orientation. Chosen by the owner in two rounds: carnival night in a
+canal city (not the other settings offered); walking street by street with
+arrows plus a map that shows where you are and the places seen, a seen
+place tapped on the map to go there; about 20 places; easy to medium; the
+name Midnight in Serenissima; the look "lanterns and gold" (deep blue
+night, warm lanterns, gold masks, canal reflections, fireworks at the
+end); the small games "steering a gondola" (the route from the boatman's
+song) and "fireworks finale". From layout drafts: a full map plus a small
+map in every place's corner, and arrows to the neighbouring places (each
+names its place once seen).
+Built as 0.17.0: twenty places (`SR0` … `SR19`) and twelve close-ups, 23
+puzzles (medium by its kinds), every place with its own lantern colour.
+The client tells the rules each step (`walk i`), so the map's knowledge is
+saved with the game.

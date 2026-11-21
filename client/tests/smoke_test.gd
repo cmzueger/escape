@@ -130,7 +130,7 @@ func _run() -> void:
 	print("Locked In smoke test")
 	for i in range(10):
 		await process_frame
-	check(main.mode == "title" and main.rooms.size() == 36, "the catalogue with thirty-six rooms (mode %s)" % main.mode)
+	check(main.mode == "title" and main.rooms.size() == 37, "the catalogue with thirty-seven rooms (mode %s)" % main.mode)
 	await shot("title")
 	main.start_new("hut")
 	await shot("intro")
@@ -305,6 +305,7 @@ func _run() -> void:
 	await _summer()
 	await _autumn()
 	await _winter()
+	await _carnival()
 
 	check(main.errors.is_empty(), "no refused commands in the play-throughs %s" % [main.errors])
 	# The intro states the room's own target time.
@@ -332,7 +333,7 @@ func _run() -> void:
 	main._save()
 	main.continue_game("light")
 	check(main.view == "L1", "a saved view of another room is not restored (%s)" % main.view)
-	for id in ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum", "tree", "gondola", "praline", "toyshop", "zeppelin", "ship", "polar", "house1905", "house1938", "house1969", "housenow", "press", "magic", "noir", "filter", "railway", "mill", "aviary", "mirrors", "school", "spring", "summer", "autumn", "winter"]:
+	for id in ["hut", "light", "obs", "orangery", "theatre", "chess", "beach", "train", "alch", "attic", "watch", "museum", "tree", "gondola", "praline", "toyshop", "zeppelin", "ship", "polar", "house1905", "house1938", "house1969", "housenow", "press", "magic", "noir", "filter", "railway", "mill", "aviary", "mirrors", "school", "spring", "summer", "autumn", "winter", "carnival"]:
 		monkey(id, 1500)
 
 	# The catalogue's filters and orders.
@@ -343,9 +344,9 @@ func _run() -> void:
 		main._prefs.set_value("prefs", "sort", order)
 		return main.shown_rooms().map(func(e: Dictionary) -> String: return e["id"])
 	var ids: Array = pick.call("all", 0, -1, "old")
-	check(ids.size() == 36 and ids[0] == "hut" and ids[35] == "winter", "oldest first")
+	check(ids.size() == 37 and ids[0] == "hut" and ids[36] == "carnival", "oldest first")
 	ids = pick.call("all", 0, -1, "new")
-	check(ids[0] == "winter" and ids[35] == "hut", "newest first")
+	check(ids[0] == "carnival" and ids[36] == "hut", "newest first")
 	ids = pick.call("all", 0, 6, "old")
 	check(ids == ["house1905", "house1938", "house1969", "housenow"] and main._set_name(6) == "The Quiet House" and main._set_name(7) == tr("ui.set") % 7, "the series as a set %s" % [ids])
 	ids = pick.call("all", 0, 9, "old")
@@ -358,10 +359,10 @@ func _run() -> void:
 	check(not ids.is_empty() and hard_ok, "only the hard rooms")
 	ids = pick.call("all", 0, -1, "easy")
 	var easy_first: bool = int(main.rooms.filter(func(e: Dictionary) -> bool: return e["id"] == ids[0])[0]["difficulty"]) == 1
-	check(easy_first and ids.size() == 36, "easiest first")
+	check(easy_first and ids.size() == 37, "easiest first")
 	var done: Array = pick.call("done", 0, -1, "old")
 	var open: Array = pick.call("open", 0, -1, "old")
-	check(done.has("hut") and not open.has("hut") and done.size() + open.size() == 36, "finished and not finished (%d, %d)" % [done.size(), open.size()])
+	check(done.has("hut") and not open.has("hut") and done.size() + open.size() == 37, "finished and not finished (%d, %d)" % [done.size(), open.size()])
 	pick.call("all", 0, -1, "new")
 	main._show_title()
 	await shot("catalogue")
@@ -2876,4 +2877,126 @@ func _winter() -> void:
 	main.go_view("PW3")
 	use("pwlit", "lamp")
 	await _finish("winter")
+	main._show_title()
+
+
+## Midnight in Serenissima: a city walked street by street, with a map.
+func _carnival() -> void:
+	main.start_new("carnival")
+	main._close_panel()
+	explore("start")
+	await shot("SR0")
+	# Walking: each step is told to the rules, the map knows what was seen.
+	tap("walk_l")
+	check(main.view == "SR4" and int(main.st["at"][0]) == 4 and int(main.st["seen"][4]) == 1, "carnival: a step to the café")
+	await shot("SR4")
+	tap("minimap")
+	check(main.view == "srmap", "carnival: the map opens")
+	await shot("srmap")
+	tap("place0")
+	check(main.view == "SR0" and int(main.st["at"][0]) == 0, "carnival: travel by the map")
+	main.go_view("srmap")
+	main.go_view(Views.back("srmap"))
+	check(main.view == "SR0", "carnival: the map returns to where you stand")
+	tap("stage")
+	tap("cushion")
+	check(flag("got_card"), "carnival: the Cat's card")
+	await shot("srstage")
+	main.go_view("SR4")
+	tap("cup")
+	tap("tables")
+	tap("ticket")
+	await shot("srcafe")
+	main.go_view("SR14")
+	use("srticket", "doorman")
+	tap("door")
+	await shot("srfoyer")
+	main.go_view("SR13")
+	await shot("SR13")
+	use("srcoffee", "ringer")
+	tap("tapers")
+	use("srtaper", "candles")
+	main.go_view("SR2")
+	use("srbellkey", "towerdoor")
+	tap("towerdoor")
+	tap("scope_right", 2)
+	tap("reveller")
+	check(main._message == tr("srmsg.reveller") and not flag("saw_barge"), "carnival: only a reveller")
+	tap("scope_right", 3)
+	tap("thief")
+	check(flag("saw_barge"), "carnival: the thief seen on the barge")
+	await shot("srtop")
+	main.go_view("SR7")
+	tap("baker")
+	main.go_view("SR0")
+	use("srbread", "pigeons")
+	main.go_view("SR5")
+	tap("wall")
+	await shot("srmasks")
+	use("srfeather", "mask0")
+	check(main._message == tr("srmsg.not_that_mask"), "carnival: not that mask")
+	use("srfeather", "mask2")
+	check(flag("got_slip"), "carnival: the thief's mask found")
+	main.go_view("SR16")
+	use("srslip", "porter")
+	tap("door")
+	tap("diary")
+	await shot("srcourt")
+	tap("casket")
+	kit_dial("casket", [2, 0, 5, 1], 6)
+	tap("casketkey")
+	check(flag("got_cratekey"), "carnival: the casket opened")
+	main.go_view("SR10")
+	await shot("SR10")
+	# The ring toss and the glass: a tap at the right moment, each turn once.
+	main.go_view("SR11")
+	tap("toss")
+	var t := 30
+	while not flag("got_coin") and t < 120:
+		main.link.send("time %d" % t)
+		main.st["secs"] = t
+		if t % 5 == 4:
+			tap("stand")
+		t += 1
+	check(flag("got_coin"), "carnival: the ring toss won")
+	await shot("srtoss")
+	main.go_view("SR8")
+	tap("furnace")
+	while not flag("got_lantern") and t < 200:
+		main.link.send("time %d" % t)
+		main.st["secs"] = t
+		if t % 6 == 5:
+			tap("gather")
+		t += 1
+	check(flag("got_lantern"), "carnival: the lantern blown")
+	await shot("srglass")
+	combine("srflame", "srlantern")
+	check(flag("lamp_lit"), "carnival: the lantern lit")
+	main.go_view("SR15")
+	tap("oars")
+	main.go_view("SR3")
+	use("srcoin", "gondolier")
+	use("sroar", "gondola")
+	use("srlamp", "gondola")
+	await shot("SR3")
+	tap("song")
+	await shot("srsong")
+	main.go_view("SR3")
+	tap("gondola")
+	t = (t / 7 + 1) * 7
+	main.link.send("time %d" % t)
+	main.st["secs"] = t
+	for d in ["e", "n", "n", "e", "e", "s", "s", "e", "e", "s", "e", "e", "s"]:
+		tap("pole_" + d)
+	check(flag("at_barge"), "carnival: the gondola at the barge")
+	await shot("srlagoon")
+	tap("tobarge")
+	check(main.view == "SR19", "carnival: on the barge")
+	use("srcratekey", "crate")
+	use("srmask", "pole")
+	var lanterns: Array = main.clues["lanterns"]
+	for place in main.clues["route"]:
+		tap("rocket%d" % int(lanterns[int(place)]))
+	await shot("SR19")
+	await _finish("carnival")
 	main._show_title()

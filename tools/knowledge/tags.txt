@@ -442,3 +442,28 @@ crank: A | item_use | 1 1
 wind: A | item_use | 1 1
 pattern: C | read_rules | 1 1
 lamp: A | combo_finale | 1 2
+
+[carnival]
+card: A | read_letter combo_story_clue | 1 1
+ticket: F | find_tiny | 1 2
+foyer: A | item_use | 1 2
+coffee: A | item_use | 1 1
+bellkey: A | item_use | 1 2
+tower: A | item_use | 1 2
+telescope: F | find_hidden space_look decoy | 1 2
+bread: A | item_use | 1 1
+pigeons: A | item_use | 1 2
+mask: E | code_combine combo_story_clue | 4 4
+porter: A | item_use | 1 2
+casket: B | code_direct space_layout | 2 3
+toss: D | game_skill find_moment | 1 2
+taper: A | item_use | 1 1
+flame: A | item_use | 1 1
+glass: D | game_skill find_moment | 1 2
+lamp: C | item_combine | 1 1
+oar: A | item_use | 1 1
+boat: A | item_use combo_parallel | 1 2
+gondola: D | game_skill read_riddle space_layout | 2 2
+crate: A | item_use | 1 2
+raise: A | item_use | 1 1
+fireworks: B | code_order combo_finale space_layout | 3 3

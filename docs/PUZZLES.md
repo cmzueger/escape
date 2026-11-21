@@ -870,3 +870,52 @@ in the lamp.
 16. A: the crank. 17. A: wound into the clockwork.
 18. C: the chart of lights: this light's character, **pattern 5** of 6.
 19. A: the lit lantern to the lamp: the light shines, the northern lights.
+
+## Midnight in Serenissima (medium, `carnival`, prefix sr, places SR0 … SR19, map srmap)
+Carnival night in a city of canals; the golden mask is stolen from the
+piazza's stage and must be back before the midnight fireworks. Twenty
+places walked street by street (`walk i` keeps `at` and `seen`; the map
+shows seen places and travels to them); most places are only for the walk.
+Places: 0 piazza, 1 clock tower, 2 bell tower, 3 molo, 4 café, 5 mask maker,
+6 Golden Bridge, 7 market, 8 glassworks, 9 bookshop, 10 Arsenale, 11 campo,
+12 washing lane, 13 church, 14 theatre, 15 boatyard, 16 palazzo, 17 dark
+passage, 18 fish quay, 19 fireworks barge (by gondola only).
+1. A: the stage (piazza): the Cat's card on the cushion ("the gold flies
+   with the fireworks").
+2. F: the café's tables: a ticket under a chair (bottom right).
+3. A: the ticket to the theatre's doorman → the foyer and its poster.
+4. A: the coffee paid in advance on the café's counter.
+5. A: the coffee to the bell-ringer dozing at the church → bell tower key.
+6. A: the key on the bell tower's door → the top.
+7. F: the telescope turned (8 directions): at direction 3 a cat-masked
+   reveller (decoy), at direction **6** the thief climbing onto the
+   fireworks barge (tap him).
+8. A: yesterday's bread from the baker (market).
+9. A: the bread on the piazza's pigeons → a green feather.
+10. E: the mask maker's wall, six masks. The card shows cat's ears, the
+    feather is green, the waiter: "pale as the moon" (silver); musicians
+    repeat the ears. Only **the top right mask** (silver, ears, green
+    feathers): the feather on it → delivery slip to the palazzo.
+11. A: the slip to the palazzo's porter → courtyard.
+12. B: the diary: the casket keeps its secret like the Arsenale's lions,
+    left to right: **crown, book, fish, sword**; the small iron key inside.
+    (The piazza's lion with a book is no part of it.)
+13. D: the ring toss (campo): throw when the gold-necked bottle faces you
+    (last 2 s of every 5), three hits on three turns; a miss starts again
+    → silver coin.
+14. A: a taper (church). 15. A: lit at the votive candles.
+16. D: the glassworks: blow when the glass glows orange like the sunset
+    (last 2 s of every 6), three times; a blow at another colour cracks it
+    → glass lantern.
+17. C: lit taper and lantern → lit lantern (the taper stays lit).
+18. A: the spare oar at the boatyard.
+19. A: at the molo: the coin to the gondolier (only once the barge was
+    seen: "where to?"), the oar and the lantern on the gondola; the song.
+20. D: the gondola (8 by 5 canals, a wall or the edge sends you back to the
+    molo; the steamer on the broad canal, last 3 s of every 7, too). The
+    song: **E, N N, E E, S S, E E** (after the steamer), **S, E E, S**.
+21. A: the small iron key on the crate → the golden mask.
+22. A: the mask on the barge's pole.
+23. B: the rockets in the procession's order: the poster numbers five
+    places (theatre, piazza, clock tower, molo, Arsenale), each place's
+    lantern gives the colour: **green, gold, violet, red, blue**.

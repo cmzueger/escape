@@ -20,6 +20,7 @@ const TITLES := {
 	"aviary": "The Glass Aviary", "mirrors": "Hall of Mirrors", "school": "Detention",
 	"spring": "Puffin Island · Spring", "summer": "Puffin Island · Summer",
 	"autumn": "Puffin Island · Autumn", "winter": "Puffin Island · Winter",
+	"carnival": "Midnight in Serenissima",
 }
 ## Texts of the lighthouse have their keys with an "l" in front, those of
 ## the observatory with an "o".
@@ -31,7 +32,8 @@ const PREFIX := {"hut": "", "light": "l", "obs": "o", "orangery": "g", "theatre"
 	"press": "d", "magic": "v", "noir": "i",
 	"filter": "wa", "railway": "rc", "mill": "mi",
 	"aviary": "av", "mirrors": "hm", "school": "sc",
-	"spring": "ps", "summer": "pu", "autumn": "pa", "winter": "pw"}
+	"spring": "ps", "summer": "pu", "autumn": "pa", "winter": "pw",
+	"carnival": "sr"}
 const SLOTS := 8
 const HINT_RECT := Rect2(800, 484, 136, 44)
 const MENU_RECT := Rect2(908, 8, 44, 44)
@@ -67,7 +69,7 @@ const WRONG := ["zmsg.no_use", "smsg.no_use", "rmsg.no_use", "zmsg.no_magnet", "
 	"mmsg.door_wrong", "mmsg.door_dead", "mmsg.scales_bare", "mmsg.dial_bare"]
 
 var link := RoomLink.new()
-var art := ArtIsland.new()
+var art := ArtCity.new()
 var sound := Sound.new()
 var rooms: Array = []
 var room := "hut"
@@ -339,6 +341,14 @@ func _ambience() -> void:
 		levels["amb_wind"] = 0.6 if room == "summer" and not "done" in st.get("flags", []) else (0.4 if room == "winter" else 0.15)
 		if room == "winter" and "dried" in st.get("flags", []):
 			levels["amb_fire"] = 0.2
+	elif mode != "load" and room == "carnival":
+		var out_on_water: bool = view in ["SR3", "SR18", "SR19", "srlagoon"]
+		levels["amb_sea"] = 0.3 if out_on_water else 0.1
+		levels["amb_wind"] = 0.12 if view == "srtop" else 0.04
+		if view in ["SR8", "srglass"]:
+			levels["amb_fire"] = 0.6
+		if view in ["SR1"]:
+			levels["amb_tick"] = 0.4
 	elif mode != "load" and room == "aviary":
 		levels["amb_wind"] = 0.1
 		levels["amb_sea"] = 0.12
@@ -589,9 +599,20 @@ func select_item(item: String) -> void:
 func go_view(next: String) -> void:
 	if next == "":
 		return
+	if CityViews.is_place(next) and mode == "play":
+		var answer := link.send("walk %d" % CityViews.place_index(next))
+		if answer.get("ok", false):
+			st = answer["state"]
+			var said := str(answer.get("msg", ""))
+			if said != "":
+				_say(tr(said))
+				return
+	CityViews.note(next)
 	sound.play("tap" if Views.is_closeup(next) or Views.is_closeup(view) else "step")
 	view = next
 	_refresh()
+	if CityViews.is_place(next):
+		_save()
 
 
 ## Taps the hotspot with this id in the current view; false if there is none.
@@ -687,6 +708,13 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 		_melody(clues.get("box", []), "mbox")
 	elif msg.ends_with("record_plays"):
 		_melody(clues.get("record", []), "note")
+	# Serenissima: the gondolier's song, the rockets, the fair and the furnace.
+	if msg in ["srmsg.paid", "srmsg.song"]:
+		_melody([4, 2, 4, 5, 4, 2, 0], "note")
+	if msg in ["srmsg.rocket_up", "srmsg.finale"]:
+		sound.play("match")
+		get_tree().create_timer(0.6).timeout.connect(func() -> void: sound.play("thud"))
+		return
 	if msg in WRONG:
 		sound.play("thud")
 	elif msg in UNLOCKS:
@@ -874,6 +902,7 @@ func continue_game(id: String = "") -> void:
 	st = answer["state"]
 	seconds = float(st.get("secs", 0))
 	_sent = int(seconds)
+	CityViews.here = "SR%d" % int(st.get("at", [0])[0])
 	var saved_view: String = _prefs.get_value(_key(room), "view", "")
 	# A view of another room (a save from before 0.6.1) starts at the room's first view.
 	var fits := Views.room_of(saved_view) == room and Views.reachable(saved_view, st)
@@ -1059,7 +1088,7 @@ func _languages(box: Container, again: Callable, stats: bool = false) -> void:
 const SETS := [["hut", "light", "obs"], ["orangery", "theatre", "chess"], ["beach", "train", "alch"],
 	["attic", "watch", "museum"], ["tree", "gondola", "praline", "toyshop"], ["zeppelin", "ship", "polar"],
 	["house1905", "house1938", "house1969", "housenow"], ["press", "magic", "noir"], ["filter", "railway", "mill"],
-	["aviary", "mirrors", "school"], ["spring", "summer", "autumn", "winter"]]
+	["aviary", "mirrors", "school"], ["spring", "summer", "autumn", "winter"], ["carnival"]]
 const SERIES := {"house1905": "The Quiet House", "spring": "Puffin Island"}
 const STATUSES := ["all", "open", "going", "done"]
 const SORTS := ["new", "easy", "old"]

@@ -24,7 +24,8 @@ Filter Hall (`filter`), The 8:15 to Nowhere (`railway`), Harvest Moon
 (`mill`); ninth set (owner's choice, long and easy to medium) The Glass
 Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`); the
 series Puffin Island (owner's choice: one island in four seasons) `spring`,
-`summer`, `autumn`, `winter`.
+`summer`, `autumn`, `winter`; a city room (owner's choice) Midnight in
+Serenissima (`carnival`).
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
   `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
@@ -44,13 +45,16 @@ series Puffin Island (owner's choice: one island in four seasons) `spring`,
   `mill.rs`, `aviary.rs`, `mirrors.rs`, `school.rs` (helpers for these three in
   `set9.rs`: two items combined, taps in an order, a moment), `spring.rs`,
   `summer.rs`, `autumn.rs`, `winter.rs` (small games in `island.rs`: rowing
-  with a tide, skating that slides, a kite in gusts, strokes on a beat).
+  with a tide, skating that slides, a kite in gusts, strokes on a beat),
+  `carnival.rs` (a city of twenty places: the client sends `walk i` on each
+  step, the rules keep `at` and `seen` for the map; views and the map in
+  `views_city.gd`, whose rectangles `art_city.gd` reads).
   A dial may not be named like a key of the state (`flags`, `inv`, …: a
   test checks it; a dial "flags" once hid every flag). Write new
   rooms this way. Their pictures are in `art_set2.gd` … `art_set6.gd`, `art_house.gd`,
-  `art_set7.gd`, `art_set8.gd`, `art_set9.gd`, `art_island.gd` (each art script extends the one before;
+  `art_set7.gd`, `art_set8.gd`, `art_set9.gd`, `art_island.gd`, `art_city.gd` (each art script extends the one before;
   constants and helpers must not reuse a parent's name), hotspots in
-  `views_set2.gd` … `views_set6.gd`, `views_house.gd`, `views_set7.gd`, `views_set8.gd`, `views_set9.gd`, `views_island.gd`. Item names are global (`item.<name>`
+  `views_set2.gd` … `views_set6.gd`, `views_house.gd`, `views_set7.gd`, `views_set8.gd`, `views_set9.gd`, `views_island.gd`, `views_city.gd`. Item names are global (`item.<name>`
   in the texts): pick names no other room uses. Kit locks and
   dials are moved with `turn` and `flip`.
 - A new room: a kit spec in `core`, an entry in `ROOMS` and `Room::call`, views and
@@ -134,6 +138,18 @@ series Puffin Island (owner's choice: one island in four seasons) `spring`,
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.17.0** (2026-11-21): the city room Midnight in Serenissima, chosen by
+  the owner in two rounds (carnival night in a canal city; walking street
+  by street plus a map; about 20 places; easy to medium; the look "lanterns
+  and gold"; a gondola steered by the boatman's song and a fireworks
+  finale) and from layout drafts (a full map plus a small map in each
+  place's corner; arrows to neighbours, named once seen). Twenty places
+  `SR0` … `SR19` (most only for the walk), close-ups `sr…`, the map
+  `srmap`; text prefix sr. Each step sends `walk i` (dials `at`, `seen`);
+  the map goes back to `CityViews.here`. 23 puzzles: a ring toss and glass
+  blown at a moment, a mask found from three witnesses, a casket from the
+  Arsenale's lions, a gondola course with a steamer, rockets in the
+  procession's colours. Catalogue: 37 rooms (a twelfth set).
 - **0.16.1** (2026-11-21): runs with hints teach the time model too, asked
   for by the owner: a puzzle solved with hints counts as its time plus
   `HINT_MINUTES` (1.5) per hint, at a little less weight; targets follow.
@@ -364,6 +380,8 @@ series Puffin Island (owner's choice: one island in four seasons) `spring`,
 - The owner's play test of the eighth set (built 0.11.0) and its targets.
 - The owner's play test of Detention (built 0.12.0) and its target.
 - The owner's play test of the series Puffin Island (built 0.16.0).
+- The owner's play test of Midnight in Serenissima (built 0.17.0): is the
+  walking and the map clear, is the length right.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, and an
   opinion on the sounds, which were made without anyone hearing them.

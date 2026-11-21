@@ -36,7 +36,7 @@ kits = {"g": "orangery", "t": "theatre", "c": "chess", "b": "beach", "n": "train
         "d": "press", "v": "magic", "i": "noir",
         "wa": "filter", "rc": "railway", "mi": "mill",
         "av": "aviary", "hm": "mirrors", "sc": "school",
-        "ps": "spring", "pu": "summer", "pa": "autumn", "pw": "winter"}
+        "ps": "spring", "pu": "summer", "pa": "autumn", "pw": "winter", "sr": "carnival"}
 kit_text = {pre: (root / ("core/src/%s.rs" % name)).read_text() for pre, name in kits.items()}
 wanted = set(re.findall(r'"([lo]?msg\.\w+)"', hut + light + obs))
 for pre, text in kit_text.items():

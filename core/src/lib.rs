@@ -27,6 +27,7 @@ pub mod attic;
 pub mod autumn;
 pub mod aviary;
 pub mod beach;
+pub mod carnival;
 pub mod chess;
 pub mod filter;
 pub mod gondola;
@@ -71,7 +72,7 @@ pub mod zeppelin;
 /// deduction (one twist), X hard deduction (a longer chain or grid).
 /// The difficulty shown follows from the kinds ([`difficulty`]); the time
 /// is separate (`tools/estimate.py` estimates it from the kinds).
-pub const ROOMS: [(&str, &str, u32); 36] = [
+pub const ROOMS: [(&str, &str, u32); 37] = [
     ("hut", "ACABCDDBB", hut::PAR_MINUTES),
     ("light", "ACCBFMDEDA", light::PAR_MINUTES),
     ("obs", "CCMEEDXCAC", obs::PAR_MINUTES),
@@ -108,6 +109,7 @@ pub const ROOMS: [(&str, &str, u32); 36] = [
     ("summer", "FAAAFAAAADAACACCCCCA", summer::PAR_MINUTES),
     ("autumn", "FAAFADAACACCAFAAACA", autumn::PAR_MINUTES),
     ("winter", "FAAAAACCCACAAAMAACA", winter::PAR_MINUTES),
+    ("carnival", "AFAAAAFAAEABDAADCAADAAB", carnival::PAR_MINUTES),
 ];
 
 /// 1 easy, 2 medium, 3 hard: how hard the thinking is, not how long it
@@ -295,6 +297,7 @@ impl Room {
                     Some("summer") => *self = Room::Kit(kit::State::new(&summer::SPEC)),
                     Some("autumn") => *self = Room::Kit(kit::State::new(&autumn::SPEC)),
                     Some("winter") => *self = Room::Kit(kit::State::new(&winter::SPEC)),
+                    Some("carnival") => *self = Room::Kit(kit::State::new(&carnival::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -357,6 +360,7 @@ mod tests {
             (&summer::SPEC, ROOMS[33].1),
             (&autumn::SPEC, ROOMS[34].1),
             (&winter::SPEC, ROOMS[35].1),
+            (&carnival::SPEC, ROOMS[36].1),
         ] {
             assert_eq!(spec.puzzles.len(), kinds.len(), "{}", spec.id);
             // A dial's name is a key of the state: it may not hide the
@@ -411,6 +415,7 @@ mod tests {
             "summer",
             "autumn",
             "winter",
+            "carnival",
         ] {
             assert!(r
                 .call(&format!("room {id}"))
@@ -764,6 +769,27 @@ mod tests {
                 .concat(),
                 vec![],
                 vec!["pwlantern", "pwdry", "pwskates"],
+            ),
+            (
+                &carnival::SPEC,
+                [
+                    digits("walk", 20),
+                    digits("rocket", 5),
+                    ["n", "e", "s", "w"].map(|d| format!("pole {d}")).to_vec(),
+                    vec![
+                        "throw".into(),
+                        "blow".into(),
+                        "time 4".into(),
+                        "time 9".into(),
+                        "time 16".into(),
+                        "tap thief".into(),
+                        "tap reveller".into(),
+                        "use srflame srlantern".into(),
+                    ],
+                ]
+                .concat(),
+                vec!["mask0", "mask1", "mask2", "mask3", "mask4", "mask5", "casketkey"],
+                vec!["srflame", "srlantern"],
             ),
         ];
         let mut problems = vec![];
