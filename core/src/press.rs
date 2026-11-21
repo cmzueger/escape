@@ -100,8 +100,8 @@ fn hook(s: &mut State, words: &[&str]) -> Option<Reply> {
     }
 }
 
-/// Minutes for three stars (from tools/estimate.py, 2026-11-18).
-pub const PAR_MINUTES: u32 = 13;
+/// Minutes for three stars: set by `tools/knowledge.py targets --write` (0.8 times the learned model's prediction).
+pub const PAR_MINUTES: u32 = 12;
 
 macro_rules! mark {
     ($spot:literal, $msg:literal, $set:literal, $keep:literal) => {

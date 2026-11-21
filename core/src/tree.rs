@@ -84,7 +84,7 @@ fn extra(s: &State) -> String {
     format!(",\"beam\":[{cells}],\"hit\":{hit}")
 }
 
-/// Minutes for three stars (planned with the owner, 2026-11-17).
+/// Minutes for three stars: set by `tools/knowledge.py targets --write` (0.8 times the learned model's prediction).
 pub const PAR_MINUTES: u32 = 2;
 
 pub static SPEC: Spec = Spec {

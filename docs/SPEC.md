@@ -302,3 +302,8 @@ owner's time and half a star lost per started 15 % of the target over it
 (before: per 10 minutes). Also noted: in big rooms the easy steps take
 longer (finding the right spot among many), and the setting matters a lot
 for the fun.
+
+## Targets from the model (owner, 2026-11-21)
+No room's target is set from the owner's own time any more: the owner's
+stats only teach the time model in the knowledge base, and every target is
+0.8 times the model's predicted owner minutes, rounded up below 5 minutes.

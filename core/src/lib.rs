@@ -305,9 +305,10 @@ mod tests {
     #[test]
     fn catalogue_and_rooms() {
         let mut r = Room::new();
-        assert!(r
-            .call("rooms")
-            .contains("{\"id\":\"light\",\"difficulty\":2,\"minutes\":9,\"puzzles\":10}"));
+        assert!(r.call("rooms").contains(&format!(
+            "{{\"id\":\"light\",\"difficulty\":2,\"minutes\":{},\"puzzles\":10}}",
+            light::PAR_MINUTES
+        )));
         // Every kit room lists one kind per puzzle.
         for (spec, kinds) in [
             (&orangery::SPEC, ROOMS[3].1),

@@ -99,8 +99,8 @@ fn extra(s: &State) -> String {
     format!(",\"needle\":{}", needle(s.val("slots")).unwrap_or(0))
 }
 
-/// Minutes for three stars (from tools/estimate.py, 2026-11-18).
-pub const PAR_MINUTES: u32 = 8;
+/// Minutes for three stars: set by `tools/knowledge.py targets --write` (0.8 times the learned model's prediction).
+pub const PAR_MINUTES: u32 = 6;
 
 pub static SPEC: Spec = Spec {
     id: "zeppelin",

@@ -70,8 +70,8 @@ fn hook(s: &mut State, words: &[&str]) -> Option<Reply> {
     .into()))
 }
 
-/// Minutes for three stars (planned with the owner, 2026-11-17).
-pub const PAR_MINUTES: u32 = 3;
+/// Minutes for three stars: set by `tools/knowledge.py targets --write` (0.8 times the learned model's prediction).
+pub const PAR_MINUTES: u32 = 4;
 
 pub static SPEC: Spec = Spec {
     id: "gondola",

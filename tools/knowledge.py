@@ -19,6 +19,7 @@ plus the room-level times in tools/estimate.py (TIMES).
 docs/KNOWLEDGE.md names elements and puzzle kinds only, never solutions.
 """
 import json
+import math
 import pathlib
 import re
 import sys
@@ -470,7 +471,7 @@ def plan(text, rooms, runs, survey):
     pairs = [(f, r) for f, r in pairs if f and isinstance(r, (int, float))]
     if fun and pairs:
         fun = max(1.0, min(5.0, fun + sum(r - f for f, r in pairs) / len(pairs)))
-    print(f"{len(spec)} puzzles: about {pred:.0f} owner minutes (target {round(pred * 0.8)}), {label(pts)} ({pts} points)"
+    print(f"{len(spec)} puzzles: about {pred:.0f} owner minutes (target {target(pred)}), {label(pts)} ({pts} points)"
           + (f", fun forecast {fun:.1f} of 5" if fun else ""))
     for i, p in enumerate(spec, 1):
         print(f"  {i}. {KIND_NAME[p['kind']]:15} {predict(p, w):4.1f} min  {' '.join(p['tags'])}")
@@ -478,16 +479,59 @@ def plan(text, rooms, runs, survey):
         print("  warning:", x)
 
 
+def target(minutes):
+    """A room's target from its predicted owner minutes (owner, 2026-11-21):
+    0.8 times, rounded up below 5 minutes, else to the nearest minute."""
+    t = 0.8 * minutes
+    return max(1, math.ceil(t) if t < 5 else round(t))
+
+
+def targets(rooms, runs):
+    """Each room's target from the learned model (the owner's stats only
+    teach the model; no room's target is taken from its own time)."""
+    w, _ = fit(rooms, runs)
+    return {room: target(sum(predict(p, w) for p in spec)) for room, spec in rooms.items()}
+
+
+def par_files():
+    out = {}
+    for f in sorted((ROOT / "core/src").glob("*.rs")):
+        m = re.search(r"pub const PAR_MINUTES: u32 = (\d+);", f.read_text())
+        if m:
+            out[f.stem] = (f, int(m.group(1)))
+    return out
+
+
+def sync_targets(rooms, runs, write):
+    """Compares (or with write, sets) every room's PAR_MINUTES to the model."""
+    wanted, have, problems = targets(rooms, runs), par_files(), []
+    for room, t in sorted(wanted.items()):
+        if room not in have:
+            continue
+        f, now = have[room]
+        if now != t:
+            if write:
+                f.write_text(re.sub(r"pub const PAR_MINUTES: u32 = \d+;", f"pub const PAR_MINUTES: u32 = {t};", f.read_text()))
+                print(f"{room}: {now} -> {t} min")
+            else:
+                problems.append(f"{room}: target {now} min, the model says {t} (run tools/knowledge.py targets --write)")
+    return problems
+
+
 if __name__ == "__main__":
     rooms = load_tags()
     if len(sys.argv) > 1 and sys.argv[1] == "check":
-        problems = check(rooms)
+        problems = check(rooms) + sync_targets(rooms, load_runs(), False)
         for p in problems:
             print("FAIL", p)
         print("RESULT:", "PASS" if not problems else f"FAIL ({len(problems)})")
         sys.exit(1 if problems else 0)
     runs, survey = load_runs(), load_survey()
-    if len(sys.argv) > 2 and sys.argv[1] == "plan":
+    if len(sys.argv) > 1 and sys.argv[1] == "targets":
+        sync_targets(rooms, runs, "--write" in sys.argv)
+        for room, t in sorted(targets(rooms, runs).items()):
+            print(f"  {room}: {t} min")
+    elif len(sys.argv) > 2 and sys.argv[1] == "plan":
         plan(sys.argv[2], rooms, runs, survey)
     else:
         print(report(rooms, runs, survey))

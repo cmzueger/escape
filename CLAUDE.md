@@ -73,10 +73,13 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
   says in the chat about elements and rooms goes into `notes.json`.
   Plan future rooms with small games of skill (owner, 2026-11-21).
 - Target minutes: one `PAR_MINUTES` per room module (catalogue, score and the
-  intro's `%d` all read it). Set per room at about 0.8 times the owner's
-  time (2026-11-21: three stars should mean a really good run; before that
-  1.3 times); unplayed rooms at 0.8 times the predicted owner minutes. Half a
-  star is lost per started 15 % of the target over it (`halves` in lib.rs). Estimate a planned room with `tools/estimate.py` (puzzle
+  intro's `%d` all read it). Every target comes from the learned time model
+  (owner, 2026-11-21: the owner's stats only teach the model, no room's
+  target is taken from its own time): 0.8 times the predicted owner
+  minutes, rounded up below 5 minutes. `tools/knowledge.py targets --write`
+  sets them; `check` (in CI) fails when one differs, so after pasting new
+  stats or tagging a new room, run it. Half a star is lost per started 15 %
+  of the target over it (`halves` in lib.rs, `score` in main.gd). Estimate a planned room with `tools/estimate.py` (puzzle
   kinds A action, B lookup, C combine, F find, D mechanism, M hard mechanism,
   E deduction, X hard deduction, fitted to the owner's times; add each new
   time to its table). The label: points F/D 1, M/E 2, X 4; medium from 4,
@@ -125,6 +128,10 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.15.0** (2026-11-21): every target from the learned model, asked for by
+  the owner ("my stats should only help to learn and tune that model"):
+  0.8 times the predicted owner minutes, rounded up below 5 minutes;
+  `knowledge.py targets --write` sets them, `check` enforces them.
 - **0.14.1** (2026-11-21): best results are counted again at every start
   with today's targets and score (`_rescore` and `score` in main.gd, the
   same rule as `halves` in lib.rs): every run kept in the stats, and the best

@@ -309,7 +309,7 @@ func _run() -> void:
 	var intro := ""
 	for label in main._panels.find_children("*", "Label", true, false):
 		intro += label.text
-	check(intro.contains("2 Minuten") and not intro.contains("%d"), "the intro names the target time")
+	check(intro.contains("%d Minuten" % main._minutes("orangery")) and not intro.contains("%d"), "the intro names the target time")
 	main._close_panel()
 	TranslationServer.set_locale("en")
 	# A hint asked at a puzzle that is not ready yet says it is for another one.
@@ -362,7 +362,7 @@ func _run() -> void:
 	main._show_title()
 	await shot("catalogue")
 
-	# Best results are counted again with today's targets (aviary: 10 min).
+	# Best results are counted again with today's targets.
 	check(main.score(0, 600, 10) == 6 and main.score(0, 690, 10) == 5 and main.score(0, 691, 10) == 4 and main.score(3, 99999, 10) == 2, "the score as the rules count it")
 	var akey: String = main._key("aviary")
 	main._prefs.set_value(akey, "halves", 6)
@@ -370,7 +370,8 @@ func _run() -> void:
 	main._prefs.erase_section_key(akey, "hints_best")
 	main._prefs.set_value(akey, "runs", ["2026-11-20 12:17 hints 0 taps 305 stars 3.0 | p1@0:00"])
 	main._rescore()
-	check(int(main._prefs.get_value(akey, "halves", 0)) == 4, "an old result counted with today's target (%d)" % int(main._prefs.get_value(akey, "halves", 0)))
+	var expected: int = main.score(0, 737, main._minutes("aviary"))
+	check(expected < 6 and int(main._prefs.get_value(akey, "halves", 0)) == expected, "an old result counted with today's target (%d)" % int(main._prefs.get_value(akey, "halves", 0)))
 
 	# The stats: finished runs with their puzzle times, nothing else.
 	var stats: String = main.stats_text()
