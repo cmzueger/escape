@@ -194,9 +194,15 @@ def solve(a, b):
     return b
 
 
+# Minutes a hint stands for: the time the owner would still have needed.
+HINT_MINUTES = 1.5
+
+
 def fit(rooms, runs):
-    """Ridge regression on minutes: puzzle-level rows from runs without hints
-    for that puzzle, room-level rows (sums) from the owner's best times.
+    """Ridge regression on minutes: puzzle-level rows from the runs, room-level
+    rows (sums) from the owner's best times. A puzzle solved with hints
+    counts too (owner, 2026-11-21): each hint stands for HINT_MINUTES more
+    the owner would still have needed, and the row weighs a little less.
     Kinds pull towards estimate.py's priors, everything else towards 0."""
     names = ["k:" + k for k in KINDS] + ["t:" + t for t in sorted(VOCAB)] + ["sources", "views", "big_room"]
     idx = {n: i for i, n in enumerate(names)}
@@ -208,8 +214,9 @@ def fit(rooms, runs):
             continue
         mins, hints = puzzle_times(run)
         for p, m in mins.items():
-            if 1 <= p <= len(spec) and not hints.get(p):
-                rows.append((features(spec[p - 1]), m, 1.0))
+            if 1 <= p <= len(spec):
+                h = hints.get(p, 0)
+                rows.append((features(spec[p - 1]), m + HINT_MINUTES * h, 1.0 if h == 0 else 0.7))
         split_rooms.add(run["room"])
     for room, (kinds, t, _) in estimate.ROOMS.items():
         if t is None or room in split_rooms or room not in rooms:

@@ -134,6 +134,9 @@ series Puffin Island (owner's choice: one island in four seasons) `spring`,
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.16.1** (2026-11-21): runs with hints teach the time model too, asked
+  for by the owner: a puzzle solved with hints counts as its time plus
+  `HINT_MINUTES` (1.5) per hint, at a little less weight; targets follow.
 - **0.16.0** (2026-11-21): the series Puffin Island, chosen by the owner
   from four series ideas (one island in four seasons, episodes like the
   aviary, each playable alone; a running story with carry-overs; the
