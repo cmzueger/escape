@@ -21,3 +21,25 @@ praline (target 15 min): best 4:40, stars 3.0
   done 2026-11-18 4:40 hints 0 taps 134 stars 3.0 | p3@0:21 p1@3:22 p2@4:04 p4@4:25 p5@4:31 p6@4:40
 zeppelin (target 13 min): best 10:46, stars 1.0
   done 2026-11-18 10:46 hints 4 taps 292 stars 1.0 | p2@1:04 p3@4:40 h1.1@6:35 h1.2@7:20 h1.3@7:43 p1@7:48 h4.1@9:26 p4@10:30 p5@10:46
+
+Locked In 0.13.0 stats, 2026-11-21
+hut (target 7 min): best 4:51, stars 3.0
+light (target 15 min): best 11:23, stars 3.0
+obs (target 30 min): best 39:04, stars 1.0
+orangery (target 5 min): best 2:53, stars 3.0
+theatre (target 10 min): best 7:15, stars 3.0
+chess (target 25 min): best 24:00, stars 1.0
+beach (target 5 min): best 2:38, stars 3.0
+train (target 7 min): best 4:44, stars 3.0
+attic (target 5 min): best 3:08, stars 3.0
+tree (target 3 min): best 0:48, stars 3.0
+  playing 0:40 taps 0 | 
+gondola (target 6 min): best 4:17, stars 3.0
+praline (target 6 min): best 4:40, stars 3.0
+  done 2026-11-18 4:40 hints 0 taps 134 stars 3.0 | p3@0:21 p1@3:22 p2@4:04 p4@4:25 p5@4:31 p6@4:40
+zeppelin (target 13 min): best 10:46, stars 1.0
+  done 2026-11-18 10:46 hints 4 taps 292 stars 1.0 | p2@1:04 p3@4:40 h1.1@6:35 h1.2@7:20 h1.3@7:43 p1@7:48 h4.1@9:26 p4@10:30 p5@10:46
+aviary (target 14 min): best 12:17, stars 3.0
+  done 2026-11-20 12:17 hints 0 taps 305 stars 3.0 | p1@0:00 p18@0:56 p6@1:08 p13@1:51 p19@2:01 p2@2:27 p3@2:30 p7@2:33 p14@3:46 p20@4:38 p17@6:06 p23@7:03 p21@7:39 p8@9:54 p9@9:59 p15@10:30 p4@10:38 p5@10:42 p10@10:59 p11@11:20 p12@11:31 p22@11:39 p16@12:13 p24@12:17 | rated fun 5 difficulty 4 length 2
+mirrors (target 16 min): best 16:32, stars 2.5
+  done 2026-11-20 16:32 hints 0 taps 512 stars 2.5 | p14@0:57 p15@1:28 p11@1:38 p21@1:49 p22@1:50 p12@2:11 p16@2:42 p23@4:24 p13@4:45 p17@5:16 p1@7:54 p2@8:25 p3@11:27 p4@11:31 p5@12:52 p9@13:03 p6@13:23 p7@13:31 p8@13:48 p10@14:35 p18@14:40 p19@15:22 p20@16:24 p24@16:32 | rated fun 5 difficulty 3 length 2

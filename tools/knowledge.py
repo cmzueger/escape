@@ -44,6 +44,7 @@ ELEMENTS = {
     "space": ["space_split", "space_look", "space_remote", "space_layout"],
     "people": ["talk", "logic_grid"],
     "items": ["item_use", "item_combine", "item_clever"],
+    "game": ["game_skill"],
 }
 COMBOS = ["combo_decoy_twist", "combo_text_mech", "combo_chain", "combo_parallel", "combo_reuse",
           "combo_early_late", "combo_story_clue", "combo_flavour", "combo_cross_room", "combo_trial",
@@ -65,6 +66,7 @@ LABEL = {
     "space_look": "look from one view into another", "space_remote": "change here, see there",
     "space_layout": "how the rooms lie", "talk": "a conversation with choices", "logic_grid": "a logic grid",
     "item_use": "obvious item, obvious place", "item_combine": "combine two items", "item_clever": "an unexpected use",
+    "game_skill": "a small game of skill (walk a maze, play a tune, a well-timed tap)",
     "combo_decoy_twist": "a decoy only a twist exposes", "combo_text_mech": "a text explains a mechanism",
     "combo_chain": "a long chain", "combo_parallel": "several puzzles open at once",
     "combo_reuse": "a tool used again later", "combo_early_late": "seen early, needed late",
@@ -132,8 +134,15 @@ def load_runs():
 
 
 def load_survey():
+    """The questionnaire's answers, plus what the owner said in the chat
+    (notes.json; a questionnaire answer wins)."""
     p = KB / "survey.json"
-    return json.loads(p.read_text()) if p.exists() else {}
+    survey = json.loads(p.read_text()) if p.exists() else {}
+    notes = KB / "notes.json"
+    if notes.exists():
+        for k, v in json.loads(notes.read_text()).items():
+            survey.setdefault(k, v)
+    return survey
 
 
 # --- Per-puzzle observations ----------------------------------------------------------

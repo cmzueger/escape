@@ -36,6 +36,8 @@ TIMES = {
     "gondola": (4.28, ""),
     "praline": (4.67, ""),
     "zeppelin": (None, "10:46 with 4 hints (3 for the first puzzle)"),
+    "aviary": (12.28, ""),
+    "mirrors": (16.53, ""),
 }
 _LIB = pathlib.Path(__file__).resolve().parent.parent / "core" / "src" / "lib.rs"
 ROOMS = {

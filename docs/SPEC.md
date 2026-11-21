@@ -287,3 +287,10 @@ newest first, easiest first, catalogue order (oldest first). Filters:
 status, difficulty and set (the series counts as one). Full screen: a button
 where the browser allows it, and home-screen support with a tip on iPhones.
 Built as 0.13.0.
+
+## Small games (owner, 2026-11-21)
+After The Glass Aviary ("the best room so far") and Hall of Mirrors: small
+games of skill, like playing a tune or walking a maze, are "super fun".
+Future rooms should have more of them, easy coordination combined with
+knowledge from the clues. Recorded as the knowledge base's element
+`game_skill`.

@@ -69,7 +69,9 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
   (source `tools/knowledge/survey.html`; element ids there = tags): read its
   answers with ArtifactData `get` collection `survey`, doc `answers`, save the
   fields as `survey.json`, rerun the report. New element kinds go into the
-  survey, `ELEMENTS` in knowledge.py and the tags together.
+  survey, `ELEMENTS` in knowledge.py and the tags together. What the owner
+  says in the chat about elements and rooms goes into `notes.json`.
+  Plan future rooms with small games of skill (owner, 2026-11-21).
 - Target minutes: one `PAR_MINUTES` per room module (catalogue, score and the
   intro's `%d` all read it). Set per room from the owner's times (about 1.3
   times theirs). Estimate a planned room with `tools/estimate.py` (puzzle
@@ -121,6 +123,14 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.13.1** (2026-11-21): owner's play test of two ninth-set rooms: The
+  Glass Aviary 12:17 (fun 5, "the best room so far"), Hall of Mirrors 16:32
+  (fun 5), no hints, length right; targets 16 and 21. The owner loves small
+  games of skill (playing a tune, walking the maze) and wants more "gaming"
+  in future rooms: easy coordination guided by clues. New element
+  `game_skill` (family "game") in the knowledge base, tagged where it
+  occurs; answers given in the chat go into `tools/knowledge/notes.json`
+  (same keys as the questionnaire, which wins).
 - **0.13.0** (2026-11-19): the catalogue reworked, asked for by the owner
   (filter and sort, names on one line), layout A of three drafts: two
   columns; status chips (All, Not finished, In progress, Finished: finished
@@ -305,7 +315,7 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
 - The owner's play test of the series The Quiet House (built 0.9.0) and its targets.
 - The owner's play test of the seventh set (built 0.10.0) and its targets.
 - The owner's play test of the eighth set (built 0.11.0) and its targets.
-- The owner's play test of the ninth set (built 0.12.0) and its targets.
+- The owner's play test of Detention (built 0.12.0) and its target.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, and an
   opinion on the sounds, which were made without anyone hearing them.

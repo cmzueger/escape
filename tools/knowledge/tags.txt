@@ -138,7 +138,7 @@ direction: E | space_layout read_rules code_math | 2 2
 [praline]
 locker: B | read_log code_direct | 1 2
 mould: C | code_map code_combine | 2 2
-tray: M | mech_tilt combo_precise | 1 1
+tray: M | mech_tilt combo_precise game_skill | 1 1
 recipe: D | mech_assemble mech_rotate find_hidden | 1 2
 kettle: B | read_numbers code_direct | 1 1
 door: A | item_use | 1 1
@@ -147,7 +147,7 @@ door: A | item_use | 1 1
 drawers: F | space_remote find_tiny | 1 2
 train: A | item_use | 1 1
 nutcracker: A | item_use | 1 1
-labyrinth: M | mech_tilt combo_precise | 1 1
+labyrinth: M | mech_tilt combo_precise game_skill | 1 1
 tree: A | item_use | 1 1
 presents: E | logic_grid | 1 1
 door: A | item_use | 1 1
@@ -280,7 +280,7 @@ cart: A | combo_finale | 1 1
 nestbox: F | find_container | 1 1
 store: A | item_use | 1 2
 net: A | item_use | 1 1
-fish: F | find_moment item_use | 1 1
+fish: F | find_moment item_use game_skill | 1 1
 kingfisher: A | item_use | 1 1
 apple: A | item_use | 1 1
 knife: A | item_use | 1 1
@@ -298,17 +298,17 @@ shade: D | mech_rotate space_remote | 1 2
 whistle: A | item_use | 1 1
 scoop: C | item_use | 1 1
 peacock: A | item_use | 1 1
-song: C | sense_music sense_listen | 1 1
+song: C | sense_music sense_listen game_skill | 1 1
 perches: C | code_combine space_split | 2 2
 bell: A | combo_finale | 1 1
 
 [mirrors]
 coin: F | find_tiny | 1 1
 turnstile: A | item_use | 1 1
-maze: C | space_layout | 1 2
+maze: C | space_layout game_skill | 1 2
 brasskey: A | item_use | 1 1
 cabinet: A | item_use | 1 1
-tester: F | find_moment | 1 1
+tester: F | find_moment game_skill | 1 1
 token: A | item_use | 1 1
 zelda: C | talk read_riddle | 1 1
 cylinder: C | sense_mirror item_clever | 1 1
@@ -346,7 +346,7 @@ rabbit: A | item_use | 1 1
 straw: F | find_hidden | 1 1
 map: C | code_order read_letter | 1 2
 stove: D | mech_switch | 1 1
-song: C | sense_music | 1 1
+song: C | sense_music game_skill | 1 1
 bell: C | code_order | 1 1
 janitor: C | talk | 2 2
 photo: M | mech_slide | 1 1
