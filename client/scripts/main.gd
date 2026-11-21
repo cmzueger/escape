@@ -18,6 +18,8 @@ const TITLES := {
 	"press": "The Night Edition", "magic": "The Great Vaudini", "noir": "Rain on Gale Street",
 	"filter": "The Filter Hall", "railway": "The 8:15 to Nowhere", "mill": "Harvest Moon",
 	"aviary": "The Glass Aviary", "mirrors": "Hall of Mirrors", "school": "Detention",
+	"spring": "Puffin Island · Spring", "summer": "Puffin Island · Summer",
+	"autumn": "Puffin Island · Autumn", "winter": "Puffin Island · Winter",
 }
 ## Texts of the lighthouse have their keys with an "l" in front, those of
 ## the observatory with an "o".
@@ -28,7 +30,8 @@ const PREFIX := {"hut": "", "light": "l", "obs": "o", "orangery": "g", "theatre"
 	"house1905": "h", "house1938": "j", "house1969": "u", "housenow": "x",
 	"press": "d", "magic": "v", "noir": "i",
 	"filter": "wa", "railway": "rc", "mill": "mi",
-	"aviary": "av", "mirrors": "hm", "school": "sc"}
+	"aviary": "av", "mirrors": "hm", "school": "sc",
+	"spring": "ps", "summer": "pu", "autumn": "pa", "winter": "pw"}
 const SLOTS := 8
 const HINT_RECT := Rect2(800, 484, 136, 44)
 const MENU_RECT := Rect2(908, 8, 44, 44)
@@ -64,7 +67,7 @@ const WRONG := ["zmsg.no_use", "smsg.no_use", "rmsg.no_use", "zmsg.no_magnet", "
 	"mmsg.door_wrong", "mmsg.door_dead", "mmsg.scales_bare", "mmsg.dial_bare"]
 
 var link := RoomLink.new()
-var art := ArtSet9.new()
+var art := ArtIsland.new()
 var sound := Sound.new()
 var rooms: Array = []
 var room := "hut"
@@ -331,6 +334,11 @@ func _ambience() -> void:
 	elif mode != "load" and room == "mill":
 		levels["amb_wind"] = 0.45
 		levels["amb_tick"] = 0.12 if "turning" in st.get("flags", []) else 0.0
+	elif mode != "load" and room in ["spring", "summer", "autumn", "winter"]:
+		levels["amb_sea"] = 0.35 if room != "winter" else 0.1
+		levels["amb_wind"] = 0.6 if room == "summer" and not "done" in st.get("flags", []) else (0.4 if room == "winter" else 0.15)
+		if room == "winter" and "dried" in st.get("flags", []):
+			levels["amb_fire"] = 0.2
 	elif mode != "load" and room == "aviary":
 		levels["amb_wind"] = 0.1
 		levels["amb_sea"] = 0.12
@@ -1046,33 +1054,36 @@ func _languages(box: Container, again: Callable, stats: bool = false) -> void:
 	mute.add_theme_font_size_override("font_size", 16)
 
 
-## The sets the rooms were built in (the series counts as one).
+## The sets the rooms were built in, in order; a series counts as one set
+## (named by `SERIES`, the others numbered).
 const SETS := [["hut", "light", "obs"], ["orangery", "theatre", "chess"], ["beach", "train", "alch"],
 	["attic", "watch", "museum"], ["tree", "gondola", "praline", "toyshop"], ["zeppelin", "ship", "polar"],
 	["house1905", "house1938", "house1969", "housenow"], ["press", "magic", "noir"], ["filter", "railway", "mill"],
-	["aviary", "mirrors", "school"]]
+	["aviary", "mirrors", "school"], ["spring", "summer", "autumn", "winter"]]
+const SERIES := {"house1905": "The Quiet House", "spring": "Puffin Island"}
 const STATUSES := ["all", "open", "going", "done"]
 const SORTS := ["new", "easy", "old"]
 
 
-## The set a room belongs to: 1..9 for the sets, 0 for the series.
+## The set a room belongs to (its index in `SETS`), -1 if none.
 func _set_of(id: String) -> int:
-	var number := 0
 	for i in range(SETS.size()):
-		if SETS[i][0] == "house1905":
-			if id in SETS[i]:
-				return 0
-			continue
-		number += 1
 		if id in SETS[i]:
-			return number
+			return i
 	return -1
 
 
+## "All sets", a series' name, or "Set n" (counting only the sets).
 func _set_name(n: int) -> String:
-	if n == -1:
+	if n < 0 or n >= SETS.size():
 		return tr("ui.all_sets")
-	return "The Quiet House" if n == 0 else tr("ui.set") % n
+	if SERIES.has(SETS[n][0]):
+		return SERIES[SETS[n][0]]
+	var number := 0
+	for i in range(n + 1):
+		if not SERIES.has(SETS[i][0]):
+			number += 1
+	return tr("ui.set") % number
 
 
 func _matches(entry: Dictionary, status: String, level: int, set_no: int) -> bool:
@@ -1173,7 +1184,7 @@ func _show_title() -> void:
 		_chip(narrow, tr("ui.all_levels") if n == 0 else tr("diff.%d" % n), n == level, func() -> void: _set_pref("level", n))
 	var sets := _chip(narrow, _set_name(set_no), set_no != -1, func() -> void:
 		# All sets, the series, then the sets in order.
-		var next: int = {-1: 0, 0: 1}.get(set_no, set_no + 1)
+		var next := set_no + 1
 		_set_pref("set", -1 if next > SETS.size() - 1 else next))
 	sets.custom_minimum_size.x = 170
 	# The rooms, two to a row; more by scrolling.

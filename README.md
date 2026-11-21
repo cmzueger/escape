@@ -36,6 +36,10 @@ Escape rooms played in the browser. Offline, no accounts.
 | The Glass Aviary | medium | 11 min | A glass bird house on a sunny Sunday, the keeper away. Twenty-four small puzzles: feed every bird and settle it on its perch. |
 | Hall of Mirrors | medium | 11 min | A funfair at night with the lights still on. Twenty-four puzzles: a mirror maze, crooked mirrors and a carousel to wake. |
 | Detention | medium | 14 min | A village school in 1925, kept in after lessons. Twenty-four puzzles from the teacher's list of tasks. |
+| Puffin Island · Spring | easy | 11 min | Series, episode 1: an island keeper laid up at nesting time. Twenty-three puzzles; rowing through the fog, a puffin chick, a lamb and the supply boat. |
+| Puffin Island · Summer | easy | 9 min | Episode 2: a storm rolls in. Twenty puzzles; a kite in the gusts, the lighthouse beam and the hay. |
+| Puffin Island · Autumn | medium | 8 min | Episode 3: market day. Nineteen puzzles; apples, cider, a pie and the regatta. |
+| Puffin Island · Winter | easy | 8 min | Episode 4: the longest night. Nineteen puzzles; skating on thin ice, an ice cave and the lighthouse lamp. |
 
 Play: https://cmzueger.github.io/escape/
 

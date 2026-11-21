@@ -322,3 +322,7 @@ games for it: rowing and the regatta, skating on thin ice, a kite in the
 gusts. Name: Puffin Island.
 Not chosen: Night at the Museum Annex, The Wildlife Rescue Station, The
 Travelling Circus Train; the names Maggie's Island, A Year on Skerry Isle.
+Built as 0.16.0: Spring (23 puzzles, easy), Summer (20, easy), Autumn (19,
+medium), Winter (19, easy); targets from the learned model. Carry-overs:
+the jetty mended in spring holds in summer, the spring patch is harvested
+in autumn, Pip returns each season, the almanac gains a page.

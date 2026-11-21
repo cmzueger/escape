@@ -3162,3 +3162,677 @@ ui.no_rooms,No rooms match these filters.,Keine Räume passen zu diesen Filtern.
 ui.fullscreen,Full screen,Vollbild,Plein écran,Schermo intero,Pantalla completa
 ui.fullscreen_exit,Leave full screen,Vollbild beenden,Quitter le plein écran,Esci da schermo intero,Salir de pantalla completa
 ui.ios_tip,"On an iPhone, Safari can't hide its bars. Tap Share, then “Add to Home Screen”: Locked In then opens from its own icon in full screen. (Games saved in Safari stay in Safari.)","Auf dem iPhone kann Safari seine Leisten nicht ausblenden. Tippe auf Teilen, dann «Zum Home-Bildschirm»: Locked In öffnet dann über sein eigenes Symbol im Vollbild. (In Safari gespeicherte Spiele bleiben in Safari.)","Sur iPhone, Safari ne peut pas masquer ses barres. Touche Partager, puis « Sur l'écran d'accueil » : Locked In s'ouvre alors en plein écran depuis sa propre icône. (Les parties enregistrées dans Safari restent dans Safari.)","Su iPhone Safari non può nascondere le sue barre. Tocca Condividi, poi «Aggiungi alla schermata Home»: Locked In si apre allora a schermo intero dalla sua icona. (Le partite salvate in Safari restano in Safari.)","En iPhone, Safari no puede ocultar sus barras. Toca Compartir y luego «Añadir a pantalla de inicio»: Locked In se abrirá a pantalla completa desde su propio icono. (Las partidas guardadas en Safari se quedan en Safari.)"
+psintro.1,"Puffin Island, spring. You have come to help Maggie, the island's keeper, for a year; on your first morning she twists her ankle and is stuck in bed.","Papageitaucher-Insel, Frühling. Du bist gekommen, um Maggie, der Hüterin der Insel, ein Jahr lang zu helfen; am ersten Morgen verstaucht sie sich den Knöchel und liegt im Bett.","L'île aux Macareux, printemps. Tu es venu aider Maggie, la gardienne de l'île, pendant un an ; dès le premier matin, elle se tord la cheville et reste au lit.","L'isola delle pulcinelle, primavera. Sei venuto ad aiutare Maggie, la custode dell'isola, per un anno; il primo mattino si storce la caviglia ed è bloccata a letto.","La isla de los frailecillos, primavera. Has venido a ayudar a Maggie, la guardiana de la isla, durante un año; la primera mañana se tuerce el tobillo y se queda en cama."
+psintro.2,"The puffins land at dusk and the supply boat is due. Mend the jetty, look after the chick on the bird rock, plant the patch, bring the lamb in and signal the boat; then ring the jetty bell.","Die Papageitaucher landen in der Dämmerung, und das Versorgungsboot wird erwartet. Flick den Steg, kümmere dich um das Küken auf dem Vogelfelsen, bepflanze das Beet, hol das Lamm herein und gib dem Boot ein Zeichen; dann läute die Glocke am Steg.","Les macareux arrivent au crépuscule et le bateau de ravitaillement est attendu. Répare la jetée, occupe-toi du poussin du rocher aux oiseaux, plante le potager, rentre l'agneau et fais signe au bateau ; puis sonne la cloche de la jetée.","Le pulcinelle arrivano al tramonto e la barca dei rifornimenti è attesa. Ripara il pontile, occupati del pulcino sullo scoglio degli uccelli, semina l'orto, porta dentro l'agnello e fai segnale alla barca; poi suona la campana del pontile.","Los frailecillos llegan al anochecer y se espera el barco de suministros. Arregla el muelle, cuida del polluelo de la roca de las aves, siembra el huerto, mete al cordero y haz señales al barco; luego toca la campana del muelle."
+psintro.3,"This one is long, of easy to medium difficulty. A good time is %d minutes.",Dieser Raum ist lang und leicht bis mittelschwer. Eine gute Zeit sind %d Minuten.,"Cette salle est longue, de difficulté facile à moyenne. Un bon temps : %d minutes.","Questa stanza è lunga, da facile a media. Un buon tempo: %d minuti.","Esta sala es larga, de dificultad fácil a media. Un buen tiempo: %d minutos."
+psend.title,The puffins are home,Die Papageitaucher sind zurück,Les macareux sont rentrés,Le pulcinelle sono a casa,Los frailecillos han vuelto
+psend.text,"The supply boat bumps against the new planks just as the first puffins whirr in over the cliffs. Maggie hobbles to the window. ""Well done. Write it in the almanac: spring."" By the stove, Pip is asleep.","Das Versorgungsboot stösst an die neuen Bretter, gerade als die ersten Papageitaucher über die Klippen schwirren. Maggie humpelt ans Fenster. «Gut gemacht. Schreib es in den Almanach: Frühling.» Beim Ofen schläft Pip.","Le bateau de ravitaillement touche les planches neuves au moment où les premiers macareux passent les falaises. Maggie clopine jusqu'à la fenêtre. « Bravo. Note-le dans l'almanach : printemps. » Près du poêle, Pip dort.","La barca dei rifornimenti tocca le assi nuove proprio mentre le prime pulcinelle sfrecciano sulle scogliere. Maggie zoppica fino alla finestra. «Bravo. Scrivilo nell'almanacco: primavera.» Vicino alla stufa, Pip dorme.","El barco de suministros toca las tablas nuevas justo cuando los primeros frailecillos pasan zumbando sobre los acantilados. Maggie cojea hasta la ventana. «Bien hecho. Escríbelo en el almanaque: primavera.» Junto a la estufa, Pip duerme."
+item.pskey,Boathouse key,Bootshausschlüssel,Clé du hangar,Chiave della rimessa,Llave del cobertizo
+item.psoars,Oars,Ruder,Rames,Remi,Remos
+item.pstools,Toolbox,Werkzeugkiste,Caisse à outils,Cassetta degli attrezzi,Caja de herramientas
+item.psspade,Spade,Spaten,Bêche,Vanga,Pala
+item.psplanks,Planks,Bretter,Planches,Assi,Tablas
+item.pspip,"Pip, the puffin chick","Pip, das Papageitaucher-Küken","Pip, le poussin macareux","Pip, il pulcino di pulcinella","Pip, el polluelo de frailecillo"
+item.psworms,Worms,Würmer,Vers,Vermi,Gusanos
+item.psline,Fishing line,Angelschnur,Ligne de pêche,Lenza,Sedal
+item.psrod,Baited line,Beköderte Schnur,Ligne appâtée,Lenza con l'esca,Sedal con cebo
+item.psfish,Fish,Fisch,Poisson,Pesce,Pez
+item.psseeds,Seed packets,Samentütchen,Sachets de graines,Bustine di semi,Sobres de semillas
+item.pscan,Watering can,Giesskanne,Arrosoir,Annaffiatoio,Regadera
+item.pswater,Full watering can,Volle Giesskanne,Arrosoir plein,Annaffiatoio pieno,Regadera llena
+item.pswhistle,Bone whistle,Knochenpfeife,Sifflet en os,Fischietto d'osso,Silbato de hueso
+pstext.almanac,"Spring.
+
+Beans want the sun,
+cabbage the cool of the wall,
+carrots grow between.
+
+Call the puffins home at dusk:
+the old call on the bone whistle.","Frühling.
+
+Bohnen wollen Sonne,
+der Kohl den Schatten der Mauer,
+Rüebli wachsen dazwischen.
+
+Ruf die Papageitaucher in der Dämmerung heim:
+der alte Ruf auf der Knochenpfeife.","Printemps.
+
+Les haricots veulent le soleil,
+le chou la fraîcheur du mur,
+les carottes poussent entre les deux.
+
+Appelle les macareux au crépuscule :
+le vieil appel au sifflet d'os.","Primavera.
+
+I fagioli vogliono il sole,
+il cavolo il fresco del muro,
+le carote crescono in mezzo.
+
+Richiama le pulcinelle al tramonto:
+il vecchio richiamo col fischietto d'osso.","Primavera.
+
+Las judías quieren sol,
+la col el fresco del muro,
+las zanahorias crecen en medio.
+
+Llama a los frailecillos al anochecer:
+la vieja llamada con el silbato de hueso."
+pstalk.1,"Maggie, propped up on her pillows: ""Is that chick safe and warm?""","Maggie, in ihre Kissen gestützt: «Ist das Küken sicher und warm?»","Maggie, calée dans ses oreillers : « Ce poussin est-il au chaud et en sécurité ? »","Maggie, appoggiata ai cuscini: «Quel pulcino è al sicuro e al caldo?»","Maggie, recostada en sus almohadas: «¿Está ese polluelo a salvo y calentito?»"
+pssay.1a,"""Yes, in the box by the stove.""","«Ja, in der Kiste beim Ofen.»","« Oui, dans la caisse près du poêle. »","«Sì, nella cassetta vicino alla stufa.»","«Sí, en la caja junto a la estufa.»"
+pssay.1b,"""Which chick?""",«Welches Küken?»,« Quel poussin ? »,«Quale pulcino?»,«¿Qué polluelo?»
+pssay.1c,"""He flew off.""",«Er ist weggeflogen.»,« Il s'est envolé. »,«È volato via.»,«Se fue volando.»
+pstalk.2,"""Good. Now the boat: the skipper won't come in blind. What does he need to know first?""",«Gut. Jetzt das Boot: Der Schiffer kommt nicht blind herein. Was muss er zuerst wissen?»,« Bien. Maintenant le bateau : le patron n'accostera pas à l'aveugle. Que doit-il savoir d'abord ? »,«Bene. Ora la barca: il padrone non entra alla cieca. Cosa deve sapere prima di tutto?»,«Bien. Ahora el barco: el patrón no entrará a ciegas. ¿Qué necesita saber primero?»
+pssay.2a,"""That the weather is fine.""",«Dass das Wetter gut ist.»,« Qu'il fait beau. »,«Che il tempo è bello.»,«Que hace buen tiempo.»
+pssay.2b,"""That the jetty is mended.""",«Dass der Steg geflickt ist.»,« Que la jetée est réparée. »,«Che il pontile è riparato.»,«Que el muelle está arreglado.»
+pssay.2c,"""That we have fish.""",«Dass wir Fisch haben.»,« Que nous avons du poisson. »,«Che abbiamo del pesce.»,«Que tenemos pescado.»
+pstalk.3,"""Right. Fly three flags, top to bottom: the jetty is mended, the chick is safe, all is well. The signal book hangs by the flagpole.""","«Richtig. Hiss drei Flaggen, von oben nach unten: Der Steg ist geflickt, das Küken ist sicher, alles ist gut. Das Signalbuch hängt beim Fahnenmast.»","« C'est ça. Hisse trois drapeaux, de haut en bas : la jetée est réparée, le poussin est sauf, tout va bien. Le livre des signaux pend près du mât. »","«Giusto. Issa tre bandiere, dall'alto in basso: il pontile è riparato, il pulcino è salvo, va tutto bene. Il libro dei segnali è appeso vicino all'asta.»","«Eso es. Iza tres banderas, de arriba abajo: el muelle está arreglado, el polluelo está a salvo, todo va bien. El libro de señales cuelga junto al mástil.»"
+pssay.3a,"""I'll see to it.""",«Ich kümmere mich darum.»,« Je m'en occupe. »,«Ci penso io.»,«Me encargo.»
+psmsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+psmsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+psmsg.hangup,Maggie sighs and closes her eyes. Ask her again.,Maggie seufzt und schliesst die Augen. Frag sie nochmals.,Maggie soupire et ferme les yeux. Redemande-lui.,Maggie sospira e chiude gli occhi. Chiediglielo di nuovo.,Maggie suspira y cierra los ojos. Pregúntale otra vez.
+psmsg.no_line,"Maggie is dozing. ""Is the chick safe?"" she mumbles.","Maggie döst. «Ist das Küken sicher?», murmelt sie.",Maggie somnole. « Le poussin est-il à l'abri ? » marmonne-t-elle.,Maggie sonnecchia. «Il pulcino è al sicuro?» borbotta.,"Maggie dormita. «¿Está a salvo el polluelo?», murmura."
+psmsg.key,In Maggie's boot: the boathouse key.,In Maggies Stiefel: der Bootshausschlüssel.,Dans la botte de Maggie : la clé du hangar.,Nello stivale di Maggie: la chiave della rimessa.,En la bota de Maggie: la llave del cobertizo.
+psmsg.boathouse,"The boathouse opens: oars, a toolbox and a spade.","Das Bootshaus geht auf: Ruder, eine Werkzeugkiste und ein Spaten.","Le hangar s'ouvre : des rames, une caisse à outils et une bêche.","La rimessa si apre: remi, una cassetta degli attrezzi e una vanga.","El cobertizo se abre: remos, una caja de herramientas y una pala."
+psmsg.planks,A few good planks.,Ein paar gute Bretter.,Quelques bonnes planches.,Qualche asse buona.,Unas buenas tablas.
+psmsg.planks_laid,"The planks lie across the gap, loose.",Die Bretter liegen lose über der Lücke.,"Les planches couvrent le trou, sans être fixées.","Le assi coprono il buco, ma sono sciolte.","Las tablas cubren el hueco, sueltas."
+psmsg.no_planks,Nothing to nail yet: the gap needs planks.,Noch nichts zu nageln: Die Lücke braucht Bretter.,Rien à clouer : il faut des planches.,Ancora niente da inchiodare: servono assi.,Aún no hay nada que clavar: faltan tablas.
+psmsg.jetty_fixed,"Hammer, nails: the jetty is whole again.","Hammer, Nägel: Der Steg ist wieder ganz.","Marteau, clous : la jetée est réparée.","Martello, chiodi: il pontile è di nuovo intero.","Martillo, clavos: el muelle vuelve a estar entero."
+psmsg.oars_in,The oars sit in their locks.,Die Ruder sitzen in den Dollen.,Les rames sont dans leurs dames.,I remi sono negli scalmi.,Los remos están en sus toletes.
+psmsg.no_oars,No oars in the boat.,Keine Ruder im Boot.,Pas de rames dans la barque.,Niente remi nella barca.,No hay remos en el bote.
+psmsg.row_back,Crunch! A rock in the fog. You row back to the jetty and start again.,Knirsch! Ein Felsen im Nebel. Du ruderst zurück zum Steg und beginnst von vorn.,Crac ! Un rocher dans la brume. Tu rentres à la jetée et recommences.,Crac! Uno scoglio nella nebbia. Torni al pontile e ricominci.,¡Crac! Una roca en la niebla. Vuelves al muelle y empiezas de nuevo.
+psmsg.row_there,"The boat grinds onto the bird rock. In a nest: a small, grey, fluffy chick.","Das Boot knirscht an den Vogelfelsen. In einem Nest: ein kleines, graues, flauschiges Küken.",La barque touche le rocher aux oiseaux. Dans un nid : un petit poussin gris et duveteux.,"La barca tocca lo scoglio degli uccelli. In un nido: un pulcino piccolo, grigio e soffice.","El bote toca la roca de las aves. En un nido: un polluelo pequeño, gris y esponjoso."
+psmsg.rowed,You have been to the rock; no need to row again.,Du warst beim Felsen; du musst nicht nochmals rudern.,Tu es allé au rocher ; inutile d'y retourner.,Sei stato allo scoglio; non serve tornarci.,Ya fuiste a la roca; no hace falta volver.
+psmsg.nest_far,The nest is out on the bird rock.,Das Nest ist draussen auf dem Vogelfelsen.,"Le nid est là-bas, sur le rocher aux oiseaux.",Il nido è laggiù sullo scoglio degli uccelli.,"El nido está allí, en la roca de las aves."
+psmsg.pip,You lift the chick into your jacket. Maggie will call him Pip.,Du hebst das Küken in deine Jacke. Maggie wird es Pip nennen.,Tu glisses le poussin dans ta veste. Maggie l'appellera Pip.,Metti il pulcino nella giacca. Maggie lo chiamerà Pip.,Metes el polluelo en tu chaqueta. Maggie lo llamará Pip.
+psmsg.pip_home,Pip settles into the warm box by the stove.,Pip macht es sich in der warmen Kiste beim Ofen bequem.,Pip s'installe dans la caisse chaude près du poêle.,Pip si sistema nella cassetta calda vicino alla stufa.,Pip se acomoda en la caja calentita junto a la estufa.
+psmsg.dug,You turn the soil. Worms!,Du gräbst die Erde um. Würmer!,Tu retournes la terre. Des vers !,Rivolti la terra. Vermi!,Remueves la tierra. ¡Gusanos!
+psmsg.line,In Maggie's coat pocket: a fishing line with a hook.,In Maggies Manteltasche: eine Angelschnur mit Haken.,Dans la poche du manteau de Maggie : une ligne avec un hameçon.,Nella tasca del cappotto di Maggie: una lenza con l'amo.,En el bolsillo del abrigo de Maggie: un sedal con anzuelo.
+psmsg.rod,A worm on the hook.,Ein Wurm am Haken.,Un ver à l'hameçon.,Un verme sull'amo.,Un gusano en el anzuelo.
+psmsg.gap_first,The end of the jetty can't be reached: the gap is in the way.,Das Ende des Stegs ist nicht erreichbar: Die Lücke ist im Weg.,Impossible d'atteindre le bout de la jetée : le trou barre le passage.,La punta del pontile è irraggiungibile: c'è il buco.,No se llega al final del muelle: el hueco lo impide.
+psmsg.no_bite,The float lies still. Nothing bites.,Der Schwimmer liegt still. Nichts beisst.,Le flotteur ne bouge pas. Rien ne mord.,Il galleggiante è fermo. Non abbocca niente.,El flotador está quieto. No pica nada.
+psmsg.fish,"The float bobs, you pull: a fish!","Der Schwimmer zuckt, du ziehst: ein Fisch!","Le flotteur plonge, tu tires : un poisson !","Il galleggiante va giù, tiri: un pesce!","El flotador se hunde, tiras: ¡un pez!"
+psmsg.pip_fed,"Pip gulps the fish down whole and fluffs up, content.",Pip schluckt den Fisch ganz hinunter und plustert sich zufrieden auf.,"Pip avale le poisson d'un coup et se gonfle, content.","Pip ingoia il pesce intero e si gonfia, contento.","Pip se traga el pez entero y se esponja, satisfecho."
+psmsg.lamb_garden,The lamb trots off into the garden and nibbles the cabbages. You fetch it back.,Das Lamm trabt in den Garten und knabbert am Kohl. Du holst es zurück.,L'agneau file au jardin grignoter les choux. Tu le ramènes.,L'agnello corre nell'orto a brucare i cavoli. Lo riporti indietro.,El cordero se va al huerto a mordisquear las coles. Lo traes de vuelta.
+psmsg.lamb_bog,"The lamb ends up in the bog, bleating. You pull it out and start again.",Das Lamm landet im Sumpf und blökt. Du ziehst es heraus und beginnst von vorn.,L'agneau finit dans la tourbière en bêlant. Tu le sors et recommences.,L'agnello finisce nella palude belando. Lo tiri fuori e ricominci.,"El cordero acaba en la ciénaga, balando. Lo sacas y empiezas de nuevo."
+psmsg.lamb_cliff,The lamb heads for the cliff path! You catch it just in time.,Das Lamm läuft zum Klippenweg! Du fängst es gerade noch.,L'agneau file vers le sentier des falaises ! Tu le rattrapes de justesse.,L'agnello va verso il sentiero delle scogliere! Lo prendi appena in tempo.,¡El cordero va hacia el sendero del acantilado! Lo atrapas justo a tiempo.
+psmsg.lamb_pen,The lamb trots through the gates and into its pen.,Das Lamm trabt durch die Gatter in sein Gehege.,L'agneau passe les barrières et entre dans son enclos.,L'agnello passa i cancelli ed entra nel recinto.,El cordero cruza las puertas y entra en su redil.
+psmsg.seeds,"A tin of seed packets: carrots, beans, cabbage, onions.","Eine Dose mit Samentütchen: Rüebli, Bohnen, Kohl, Zwiebeln.","Une boîte de sachets : carottes, haricots, chou, oignons.","Una latta di bustine: carote, fagioli, cavolo, cipolle.","Una lata de sobres: zanahorias, judías, col, cebollas."
+psmsg.rows_wait,"The ground must be dug, and you need seeds.","Die Erde muss umgegraben sein, und du brauchst Samen.",Il faut bêcher la terre et avoir des graines.,Bisogna vangare la terra e avere i semi.,Hay que cavar la tierra y tener semillas.
+psmsg.which_rows,Which seed in which row? Set each row in the patch.,Welcher Samen in welche Reihe? Stell jede Reihe im Beet ein.,Quelle graine dans quel rang ? Règle chaque rang du potager.,Quale seme in quale fila? Imposta ogni fila dell'orto.,¿Qué semilla en qué fila? Ajusta cada fila del huerto.
+psmsg.sown,Every row sown in its place.,Jede Reihe am richtigen Ort gesät.,Chaque rang est semé à sa place.,Ogni fila seminata al suo posto.,Cada fila sembrada en su sitio.
+psmsg.can,A watering can.,Eine Giesskanne.,Un arrosoir.,Un annaffiatoio.,Una regadera.
+psmsg.water,Cold water from the well.,Kaltes Wasser aus dem Brunnen.,De l'eau fraîche du puits.,Acqua fresca dal pozzo.,Agua fría del pozo.
+psmsg.sow_first,"Sow first, then water.","Zuerst säen, dann giessen.","D'abord semer, puis arroser.","Prima semina, poi annaffia.","Primero siembra, luego riega."
+psmsg.watered,The patch drinks in the water.,Das Beet trinkt das Wasser.,Le potager boit l'eau.,L'orto beve l'acqua.,El huerto bebe el agua.
+psmsg.flags_which,Which flags? Maggie knows the signals.,Welche Flaggen? Maggie kennt die Signale.,Quels drapeaux ? Maggie connaît les signaux.,Quali bandiere? Maggie conosce i segnali.,¿Qué banderas? Maggie conoce las señales.
+psmsg.flags_ok,The three flags snap in the wind.,Die drei Flaggen knattern im Wind.,Les trois drapeaux claquent au vent.,Le tre bandiere schioccano al vento.,Las tres banderas restallan al viento.
+psmsg.whistle,"A small bone whistle, worn smooth.","Eine kleine, glatt gegriffene Knochenpfeife.","Un petit sifflet en os, poli par l'usage.","Un fischietto d'osso, liscio per l'uso.","Un silbato de hueso, gastado y liso."
+psmsg.no_whistle,You have nothing to call with.,Du hast nichts zum Rufen.,Tu n'as rien pour appeler.,Non hai niente per chiamare.,No tienes con qué llamar.
+psmsg.puffins,"Out of the dusk they come: puffins, dozens of them, landing on the ledge.","Aus der Dämmerung kommen sie: Papageitaucher, Dutzende, und landen auf dem Felsband.",Ils sortent du crépuscule : des macareux par dizaines se posent sur la corniche.,"Arrivano dal crepuscolo: pulcinelle a decine, che si posano sulla cengia.","Salen del crepúsculo: frailecillos, docenas, posándose en la cornisa."
+psmsg.not_ready,"The bell rings, but the boat waits offshore. Something is still not done.","Die Glocke läutet, aber das Boot wartet draussen. Etwas ist noch nicht erledigt.","La cloche sonne, mais le bateau attend au large. Il reste quelque chose à faire.","La campana suona, ma la barca aspetta al largo. Manca ancora qualcosa.","La campana suena, pero el barco espera mar adentro. Aún falta algo."
+psmsg.boat_comes,The bell rings out. The supply boat turns for the jetty.,Die Glocke klingt. Das Versorgungsboot hält auf den Steg zu.,La cloche résonne. Le bateau de ravitaillement met le cap sur la jetée.,La campana risuona. La barca dei rifornimenti punta sul pontile.,La campana resuena. El barco de suministros pone rumbo al muelle.
+psmsg.maggie,"Maggie, laid up with her ankle.","Maggie, mit ihrem Knöchel im Bett.","Maggie, clouée au lit par sa cheville.","Maggie, a letto per la caviglia.","Maggie, en cama por su tobillo."
+psmsg.stove,The stove is warm.,Der Ofen ist warm.,Le poêle est chaud.,La stufa è calda.,La estufa está caliente.
+psmsg.chart,Maggie's chart of the rocks between the jetty and the bird rock.,Maggies Karte der Felsen zwischen Steg und Vogelfelsen.,La carte de Maggie : les rochers entre la jetée et le rocher aux oiseaux.,La carta di Maggie degli scogli tra il pontile e lo scoglio degli uccelli.,La carta de Maggie de las rocas entre el muelle y la roca de las aves.
+psmsg.tideclock,The tide clock: its arrow shows which way the tide runs today.,"Die Gezeitenuhr: Ihr Pfeil zeigt, wohin die Strömung heute läuft.",L'horloge des marées : sa flèche montre le sens du courant aujourd'hui.,L'orologio delle maree: la freccia mostra dove va la corrente oggi.,El reloj de mareas: su flecha muestra hacia dónde corre hoy la marea.
+psmsg.almanac,Maggie's almanac: a page for every season.,Maggies Almanach: eine Seite für jede Jahreszeit.,L'almanach de Maggie : une page par saison.,L'almanacco di Maggie: una pagina per stagione.,El almanaque de Maggie: una página por estación.
+psmsg.shelf,A shelf.,Ein Regal.,Une étagère.,Una mensola.,Un estante.
+psmsg.jetty,The jetty. Its end is a good spot to fish.,Der Steg. Sein Ende ist ein guter Platz zum Fischen.,La jetée. Son bout est un bon coin de pêche.,Il pontile. La punta è un buon posto per pescare.,El muelle. Su extremo es buen sitio para pescar.
+psmsg.boat,Maggie's rowing boat.,Maggies Ruderboot.,La barque de Maggie.,La barca a remi di Maggie.,El bote de remos de Maggie.
+psmsg.gap,"A gap in the jetty, where planks were washed away.","Eine Lücke im Steg, wo Bretter weggeschwemmt wurden.","Un trou dans la jetée, là où des planches sont parties.","Un buco nel pontile, dove le assi sono state portate via.","Un hueco en el muelle, donde el mar se llevó las tablas."
+psmsg.bell,The jetty bell.,Die Glocke am Steg.,La cloche de la jetée.,La campana del pontile.,La campana del muelle.
+psmsg.cliffs,The cliffs.,Die Klippen.,Les falaises.,Le scogliere.,Los acantilados.
+psmsg.rock,"The bird rock, out in the fog.",Der Vogelfelsen draussen im Nebel.,"Le rocher aux oiseaux, au loin dans la brume.","Lo scoglio degli uccelli, laggiù nella nebbia.","La roca de las aves, a lo lejos en la niebla."
+psmsg.flagpole,The flagpole.,Der Fahnenmast.,Le mât.,L'asta.,El mástil.
+psmsg.signals,The signal book: each flag and what it says.,Das Signalbuch: jede Flagge und was sie bedeutet.,Le livre des signaux : chaque drapeau et son message.,Il libro dei segnali: ogni bandiera e il suo messaggio.,El libro de señales: cada bandera y lo que dice.
+psmsg.well,The well.,Der Brunnen.,Le puits.,Il pozzo.,El pozo.
+psmsg.patch,The vegetable patch.,Das Gemüsebeet.,Le potager.,L'orto.,El huerto.
+psmsg.pen,The sheep pen.,Das Schafgehege.,L'enclos à moutons.,Il recinto delle pecore.,El redil.
+psmsg.gates,Three gates between the stile and the pen.,Drei Gatter zwischen Zauntritt und Gehege.,Trois barrières entre l'échalier et l'enclos.,Tre cancelli tra la scaletta e il recinto.,Tres puertas entre la escalerilla y el redil.
+psmsg.box,"A box with straw, by the stove.",Eine Kiste mit Stroh beim Ofen.,"Une caisse avec de la paille, près du poêle.","Una cassetta con la paglia, vicino alla stufa.","Una caja con paja, junto a la estufa."
+psmsg.sea,"Grey sea, fog drifting in.","Graues Meer, Nebel zieht herein.","Mer grise, la brume arrive.","Mare grigio, arriva la nebbia.","Mar gris, entra la niebla."
+pshint.1.1,A key is somewhere in the cottage.,Im Häuschen ist irgendwo ein Schlüssel.,Une clé se cache dans la maison.,C'è una chiave da qualche parte nella casa.,Hay una llave en algún lugar de la casa.
+pshint.1.2,Look in what Maggie wears outdoors.,"Schau in das, was Maggie draussen trägt.",Regarde dans ce que Maggie porte dehors.,Guarda in ciò che Maggie indossa fuori.,Mira en lo que Maggie lleva fuera.
+pshint.1.3,Tap Maggie's boots.,Tippe auf Maggies Stiefel.,Touche les bottes de Maggie.,Tocca gli stivali di Maggie.,Toca las botas de Maggie.
+pshint.2.1,The key fits a door by the jetty.,Der Schlüssel passt zu einer Tür beim Steg.,La clé ouvre une porte près de la jetée.,La chiave apre una porta vicino al pontile.,La llave abre una puerta junto al muelle.
+pshint.2.2,The boathouse.,Das Bootshaus.,Le hangar à bateaux.,La rimessa.,El cobertizo.
+pshint.2.3,Use the key on the boathouse.,Benutze den Schlüssel am Bootshaus.,Utilise la clé sur le hangar.,Usa la chiave sulla rimessa.,Usa la llave en el cobertizo.
+pshint.3.1,The jetty needs wood.,Der Steg braucht Holz.,La jetée a besoin de bois.,Il pontile ha bisogno di legno.,El muelle necesita madera.
+pshint.3.2,There is a woodpile in the meadow.,In der Wiese liegt ein Holzstapel.,Il y a un tas de bois dans le pré.,C'è una catasta nel prato.,Hay una pila de leña en el prado.
+pshint.3.3,Tap the woodpile.,Tippe auf den Holzstapel.,Touche le tas de bois.,Tocca la catasta.,Toca la pila de leña.
+pshint.4.1,The gap in the jetty.,Die Lücke im Steg.,Le trou de la jetée.,Il buco nel pontile.,El hueco del muelle.
+pshint.4.2,Lay the planks across it.,Leg die Bretter darüber.,Pose les planches dessus.,Posa le assi sopra.,Pon las tablas encima.
+pshint.4.3,Use the planks on the gap.,Benutze die Bretter an der Lücke.,Utilise les planches sur le trou.,Usa le assi sul buco.,Usa las tablas en el hueco.
+pshint.5.1,Loose planks won't hold.,Lose Bretter halten nicht.,Des planches libres ne tiennent pas.,Le assi sciolte non reggono.,Las tablas sueltas no aguantan.
+pshint.5.2,The boathouse had tools.,Im Bootshaus war Werkzeug.,Le hangar avait des outils.,Nella rimessa c'erano gli attrezzi.,En el cobertizo había herramientas.
+pshint.5.3,Use the toolbox on the gap.,Benutze die Werkzeugkiste an der Lücke.,Utilise la caisse à outils sur le trou.,Usa la cassetta degli attrezzi sul buco.,Usa la caja de herramientas en el hueco.
+pshint.6.1,The boat can't go without them.,Ohne sie fährt das Boot nicht.,La barque n'avance pas sans elles.,La barca non va senza.,El bote no va sin ellos.
+pshint.6.2,The oars from the boathouse.,Die Ruder aus dem Bootshaus.,Les rames du hangar.,I remi della rimessa.,Los remos del cobertizo.
+pshint.6.3,Use the oars on the boat.,Benutze die Ruder am Boot.,Utilise les rames sur la barque.,Usa i remi sulla barca.,Usa los remos en el bote.
+pshint.7.1,In the fog you only see the rocks right next to you. The chart in the cottage shows them all.,Im Nebel siehst du nur die Felsen direkt neben dir. Die Karte im Häuschen zeigt alle.,"Dans la brume, tu ne vois que les rochers tout proches. La carte de la maison les montre tous.",Nella nebbia vedi solo gli scogli vicini. La carta in casa li mostra tutti.,En la niebla solo ves las rocas de al lado. La carta de la casa las muestra todas.
+pshint.7.2,After each stroke the tide pushes the boat one more square; the tide clock shows which way.,Nach jedem Ruderschlag schiebt die Strömung das Boot ein Feld weiter; die Gezeitenuhr zeigt wohin.,"Après chaque coup de rame, le courant pousse la barque d'une case ; l'horloge des marées montre le sens.",Dopo ogni colpo di remo la corrente spinge la barca di una casella; l'orologio delle maree dice dove.,Tras cada palada la marea empuja el bote una casilla más; el reloj de mareas indica hacia dónde.
+pshint.7.3,"East once, then north four times.","Einmal Osten, dann viermal Norden.","Une fois est, puis quatre fois nord.","Una volta est, poi quattro volte nord.","Una vez este, luego cuatro veces norte."
+pshint.8.1,Something waits on the bird rock.,Auf dem Vogelfelsen wartet etwas.,Quelque chose attend sur le rocher.,Qualcosa aspetta sullo scoglio.,Algo espera en la roca.
+pshint.8.2,"A chick, alone in its nest.","Ein Küken, allein im Nest.","Un poussin, seul dans son nid.","Un pulcino, solo nel nido.","Un polluelo, solo en su nido."
+pshint.8.3,Tap the nest on the rock.,Tippe auf das Nest auf dem Felsen.,Touche le nid sur le rocher.,Tocca il nido sullo scoglio.,Toca el nido de la roca.
+pshint.9.1,The chick needs warmth.,Das Küken braucht Wärme.,Le poussin a besoin de chaleur.,Il pulcino ha bisogno di calore.,El polluelo necesita calor.
+pshint.9.2,The box by the stove.,Die Kiste beim Ofen.,La caisse près du poêle.,La cassetta vicino alla stufa.,La caja junto a la estufa.
+pshint.9.3,Use Pip on the box.,Benutze Pip an der Kiste.,Utilise Pip sur la caisse.,Usa Pip sulla cassetta.,Usa a Pip en la caja.
+pshint.10.1,Bait lives in the soil.,Köder lebt in der Erde.,L'appât vit dans la terre.,L'esca vive nella terra.,El cebo vive en la tierra.
+pshint.10.2,Dig the vegetable patch.,Grab das Gemüsebeet um.,Bêche le potager.,Vanga l'orto.,Cava el huerto.
+pshint.10.3,Use the spade on the patch.,Benutze den Spaten am Beet.,Utilise la bêche sur le potager.,Usa la vanga sull'orto.,Usa la pala en el huerto.
+pshint.11.1,Something to fish with.,Etwas zum Fischen.,De quoi pêcher.,Qualcosa per pescare.,Algo para pescar.
+pshint.11.2,Maggie's coat hangs by the door.,Maggies Mantel hängt bei der Tür.,Le manteau de Maggie pend près de la porte.,Il cappotto di Maggie è appeso vicino alla porta.,El abrigo de Maggie cuelga junto a la puerta.
+pshint.11.3,Tap the coat.,Tippe auf den Mantel.,Touche le manteau.,Tocca il cappotto.,Toca el abrigo.
+pshint.12.1,A bare hook catches nothing.,Ein leerer Haken fängt nichts.,Un hameçon nu ne prend rien.,Un amo vuoto non prende niente.,Un anzuelo vacío no pesca nada.
+pshint.12.2,Worms make good bait.,Würmer sind guter Köder.,Les vers font un bon appât.,I vermi sono una buona esca.,Los gusanos son buen cebo.
+pshint.12.3,Use the worms on the line.,Benutze die Würmer an der Schnur.,Utilise les vers sur la ligne.,Usa i vermi sulla lenza.,Usa los gusanos en el sedal.
+pshint.13.1,Fish from the end of the jetty.,Fische am Ende des Stegs.,Pêche au bout de la jetée.,Pesca dalla punta del pontile.,Pesca desde el final del muelle.
+pshint.13.2,Watch the float: it bobs now and then.,Achte auf den Schwimmer: Er zuckt ab und zu.,Surveille le flotteur : il plonge de temps en temps.,Guarda il galleggiante: ogni tanto va giù.,Mira el flotador: de vez en cuando se hunde.
+pshint.13.3,Use the baited line on the jetty's end while the float bobs.,"Benutze die beköderte Schnur am Stegende, wenn der Schwimmer zuckt.",Utilise la ligne appâtée au bout de la jetée quand le flotteur plonge.,Usa la lenza con l'esca sulla punta del pontile quando il galleggiante va giù.,Usa el sedal con cebo al final del muelle cuando el flotador se hunda.
+pshint.14.1,Pip is hungry.,Pip hat Hunger.,Pip a faim.,Pip ha fame.,Pip tiene hambre.
+pshint.14.2,Puffins eat fish.,Papageitaucher fressen Fisch.,Les macareux mangent du poisson.,Le pulcinelle mangiano pesce.,Los frailecillos comen pescado.
+pshint.14.3,Use the fish on Pip's box.,Benutze den Fisch an Pips Kiste.,Utilise le poisson sur la caisse de Pip.,Usa il pesce sulla cassetta di Pip.,Usa el pez en la caja de Pip.
+pshint.15.1,The lamb must reach its pen.,Das Lamm muss in sein Gehege.,L'agneau doit rejoindre son enclos.,L'agnello deve arrivare al recinto.,El cordero debe llegar a su redil.
+pshint.15.2,Each gate sends it one way or the other.,Jedes Gatter schickt es in die eine oder andere Richtung.,Chaque barrière l'envoie d'un côté ou de l'autre.,Ogni cancello lo manda da una parte o dall'altra.,Cada puerta lo manda a un lado o al otro.
+pshint.15.3,"First gate down, the lower gate up, then send the lamb.","Erstes Gatter nach unten, das untere nach oben, dann schick das Lamm los.","Première barrière vers le bas, celle du bas vers le haut, puis lâche l'agneau.","Primo cancello in giù, quello in basso in su, poi manda l'agnello.","Primera puerta hacia abajo, la de abajo hacia arriba, y suelta al cordero."
+pshint.16.1,Seeds and a dug patch.,Samen und ein umgegrabenes Beet.,Des graines et un potager bêché.,Semi e un orto vangato.,Semillas y un huerto cavado.
+pshint.16.2,The almanac's verse says what grows where.,"Der Vers im Almanach sagt, was wo wächst.",Le vers de l'almanach dit ce qui pousse où.,Il verso dell'almanacco dice cosa cresce dove.,El verso del almanaque dice qué crece dónde.
+pshint.16.3,"By the wall cabbage, then carrots, beans in the sun.","An der Mauer Kohl, dann Rüebli, Bohnen in der Sonne.","Près du mur le chou, puis les carottes, les haricots au soleil.","Vicino al muro il cavolo, poi le carote, i fagioli al sole.","Junto al muro la col, luego zanahorias, judías al sol."
+pshint.17.1,Plants need water.,Pflanzen brauchen Wasser.,Les plantes ont besoin d'eau.,Le piante hanno bisogno d'acqua.,Las plantas necesitan agua.
+pshint.17.2,A can lies by the well.,Beim Brunnen liegt eine Kanne.,Un arrosoir traîne près du puits.,C'è un annaffiatoio vicino al pozzo.,Hay una regadera junto al pozo.
+pshint.17.3,Tap the watering can.,Tippe auf die Giesskanne.,Touche l'arrosoir.,Tocca l'annaffiatoio.,Toca la regadera.
+pshint.18.1,The can is empty.,Die Kanne ist leer.,L'arrosoir est vide.,L'annaffiatoio è vuoto.,La regadera está vacía.
+pshint.18.2,The well.,Der Brunnen.,Le puits.,Il pozzo.,El pozo.
+pshint.18.3,Use the can on the well.,Benutze die Kanne am Brunnen.,Utilise l'arrosoir sur le puits.,Usa l'annaffiatoio sul pozzo.,Usa la regadera en el pozo.
+pshint.19.1,The sown patch is dry.,Das gesäte Beet ist trocken.,Le potager semé est sec.,L'orto seminato è asciutto.,El huerto sembrado está seco.
+pshint.19.2,Water it.,Giess es.,Arrose-le.,Annaffialo.,Riégalo.
+pshint.19.3,Use the full can on the patch.,Benutze die volle Kanne am Beet.,Utilise l'arrosoir plein sur le potager.,Usa l'annaffiatoio pieno sull'orto.,Usa la regadera llena en el huerto.
+pshint.20.1,Maggie knows how to signal the boat.,"Maggie weiss, wie man dem Boot Zeichen gibt.",Maggie sait comment faire signe au bateau.,Maggie sa come fare segnale alla barca.,Maggie sabe cómo hacer señales al barco.
+pshint.20.2,She will talk once the chick is safe.,"Sie redet, sobald das Küken sicher ist.",Elle parlera quand le poussin sera à l'abri.,Parlerà quando il pulcino sarà al sicuro.,Hablará cuando el polluelo esté a salvo.
+pshint.20.3,"Say Pip is by the stove, then that the jetty is mended.","Sag, Pip ist beim Ofen, dann, dass der Steg geflickt ist.","Dis que Pip est près du poêle, puis que la jetée est réparée.","Di' che Pip è vicino alla stufa, poi che il pontile è riparato.",Di que Pip está junto a la estufa y luego que el muelle está arreglado.
+pshint.21.1,Three flags on the pole.,Drei Flaggen am Mast.,Trois drapeaux au mât.,Tre bandiere sull'asta.,Tres banderas en el mástil.
+pshint.21.2,Maggie named the messages; the signal book shows each message's flag.,Maggie nannte die Botschaften; das Signalbuch zeigt die Flagge jeder Botschaft.,Maggie a donné les messages ; le livre montre le drapeau de chacun.,Maggie ha detto i messaggi; il libro mostra la bandiera di ognuno.,Maggie dijo los mensajes; el libro muestra la bandera de cada uno.
+pshint.21.3,"Top: the jetty flag, then the chick, then the sun.","Oben: die Steg-Flagge, dann das Küken, dann die Sonne.","En haut : le drapeau de la jetée, puis le poussin, puis le soleil.","In alto: la bandiera del pontile, poi il pulcino, poi il sole.","Arriba: la bandera del muelle, luego el polluelo, luego el sol."
+pshint.22.1,The puffins land when called.,"Die Papageitaucher landen, wenn man sie ruft.",Les macareux se posent quand on les appelle.,Le pulcinelle atterrano se le chiami.,Los frailecillos aterrizan si los llamas.
+pshint.22.2,The bone whistle on the shelf; the almanac shows the call.,Die Knochenpfeife im Regal; der Almanach zeigt den Ruf.,Le sifflet d'os sur l'étagère ; l'almanach montre l'appel.,Il fischietto d'osso sulla mensola; l'almanacco mostra il richiamo.,El silbato de hueso del estante; el almanaque muestra la llamada.
+pshint.22.3,"On the cliff ledge: long, short, long, long.","Auf dem Felsband: lang, kurz, lang, lang.","Sur la corniche : long, court, long, long.","Sulla cengia: lungo, corto, lungo, lungo.","En la cornisa: largo, corto, largo, largo."
+pshint.23.1,All done?,Alles erledigt?,Tout est fait ?,Tutto fatto?,¿Todo hecho?
+pshint.23.2,"Jetty, Pip, lamb, patch, flags and puffins.","Steg, Pip, Lamm, Beet, Flaggen und Papageitaucher.","Jetée, Pip, agneau, potager, drapeaux et macareux.","Pontile, Pip, agnello, orto, bandiere e pulcinelle.","Muelle, Pip, cordero, huerto, banderas y frailecillos."
+pshint.23.3,Ring the jetty bell.,Läute die Glocke am Steg.,Sonne la cloche de la jetée.,Suona la campana del pontile.,Toca la campana del muelle.
+puintro.1,"Puffin Island, summer. The hay is cut, Pip is fledged, and black clouds are rolling in from the west.","Papageitaucher-Insel, Sommer. Das Heu ist gemäht, Pip ist flügge, und von Westen ziehen schwarze Wolken auf.","L'île aux Macareux, été. Le foin est coupé, Pip a pris son envol, et de gros nuages noirs arrivent de l'ouest.","L'isola delle pulcinelle, estate. Il fieno è tagliato, Pip ha messo le ali e da ovest arrivano nuvole nere.","La isla de los frailecillos, verano. El heno está segado, Pip ya vuela y llegan nubes negras del oeste."
+puintro.2,"Tom's dinghy is caught at the sea stack, Maggie's son Ewan is still out in his fishing boat, and the hay lies in the field. Get them all home before the storm; then sound the harbour horn.","Toms Beiboot hängt an der Felsnadel fest, Maggies Sohn Ewan ist noch mit dem Fischerboot draussen, und das Heu liegt auf dem Feld. Bring alles heim vor dem Sturm; dann blas das Hafenhorn.","Le canot de Tom est coincé contre l'aiguille rocheuse, Ewan, le fils de Maggie, est encore en mer sur son bateau de pêche, et le foin est dans le champ. Ramène tout le monde avant la tempête ; puis sonne la corne du port.","Il gommone di Tom è bloccato al faraglione, Ewan, il figlio di Maggie, è ancora fuori col peschereccio, e il fieno è nel campo. Porta tutti a casa prima della tempesta; poi suona la sirena del porto.","La lancha de Tom está atrapada en el farallón, Ewan, el hijo de Maggie, sigue fuera con su pesquero y el heno está en el campo. Ponlo todo a salvo antes de la tormenta; luego toca la bocina del puerto."
+puintro.3,"This one is long, of easy to medium difficulty. A good time is %d minutes.",Dieser Raum ist lang und leicht bis mittelschwer. Eine gute Zeit sind %d Minuten.,"Cette salle est longue, de difficulté facile à moyenne. Un bon temps : %d minutes.","Questa stanza è lunga, da facile a media. Un buon tempo: %d minuti.","Esta sala es larga, de dificultad fácil a media. Un buen tiempo: %d minutos."
+puend.title,Safe harbour,Sicherer Hafen,Port sûr,Porto sicuro,Puerto seguro
+puend.text,"Ewan's boat noses in past the harbour wall on the lighthouse's beam, Tom hauls himself along the line, and the first drops fall on a barn full of hay. Maggie writes a second page in the almanac: summer.","Ewans Boot schiebt sich im Strahl des Leuchtturms an der Hafenmauer vorbei, Tom zieht sich an der Leine herüber, und die ersten Tropfen fallen auf eine Scheune voller Heu. Maggie schreibt eine zweite Seite in den Almanach: Sommer.","Le bateau d'Ewan passe la digue dans le faisceau du phare, Tom se hale le long de la ligne et les premières gouttes tombent sur une grange pleine de foin. Maggie écrit une deuxième page dans l'almanach : été.","La barca di Ewan supera il molo nel fascio del faro, Tom si tira lungo la cima e le prime gocce cadono su un fienile pieno. Maggie scrive una seconda pagina nell'almanacco: estate.","El barco de Ewan pasa el espigón guiado por el haz del faro, Tom se arrastra por el cabo y las primeras gotas caen sobre un granero lleno de heno. Maggie escribe una segunda página en el almanaque: verano."
+item.pukey,Lighthouse key,Leuchtturmschlüssel,Clé du phare,Chiave del faro,Llave del faro
+item.puoil,Lamp oil,Lampenöl,Huile à lampe,Olio per lampada,Aceite de lámpara
+item.puscrew,Brass screw,Messingschraube,Vis en laiton,Vite d'ottone,Tornillo de latón
+item.pumatches,Matches,Streichhölzer,Allumettes,Fiammiferi,Cerillas
+item.pukite,Torn kite,Zerrissener Drachen,Cerf-volant déchiré,Aquilone strappato,Cometa rota
+item.pusewing,Sewing kit,Nähzeug,Nécessaire à couture,Kit da cucito,Costurero
+item.pumended,Mended kite,Geflickter Drachen,Cerf-volant réparé,Aquilone riparato,Cometa arreglada
+item.putwine,Twine,Schnur,Ficelle,Spago,Cordel
+item.puflyer,Kite on its line,Drachen an der Schnur,Cerf-volant et sa ficelle,Aquilone col suo filo,Cometa con su cordel
+putext.almanac,"Summer.
+
+A kite climbs on the gust
+and falls in the calm:
+let the line out as the wind blows,
+hold it fast when it drops.","Sommer.
+
+Ein Drachen steigt mit der Böe
+und fällt in der Flaute:
+lass die Schnur aus, wenn der Wind bläst,
+halt sie fest, wenn er nachlässt.","Été.
+
+Un cerf-volant monte avec la rafale
+et tombe dans le calme :
+lâche la ficelle quand le vent souffle,
+tiens-la quand il retombe.","Estate.
+
+Un aquilone sale con la raffica
+e cade nella calma:
+molla il filo quando soffia il vento,
+tienilo fermo quando cala.","Verano.
+
+Una cometa sube con la ráfaga
+y cae en la calma:
+suelta el cordel cuando sopla el viento,
+sujétalo cuando amaina."
+putalk.1,"Tom, across the water: ""Got your line! Tied fast. Is Ewan back yet?""","Tom, über das Wasser: «Hab deine Leine! Festgemacht. Ist Ewan schon zurück?»","Tom, de l'autre côté de l'eau : « J'ai ta ligne ! Bien amarrée. Ewan est rentré ? »","Tom, al di là dell'acqua: «Presa la tua cima! Legata. Ewan è tornato?»","Tom, al otro lado del agua: «¡Tengo tu cabo! Bien atado. ¿Ha vuelto Ewan?»"
+pusay.1a,"""Yes, he's home.""","«Ja, er ist daheim.»","« Oui, il est rentré. »","«Sì, è a casa.»","«Sí, está en casa.»"
+pusay.1b,"""Not yet. The lighthouse is lit for him.""",«Noch nicht. Der Leuchtturm brennt für ihn.»,« Pas encore. Le phare est allumé pour lui. »,«Non ancora. Il faro è acceso per lui.»,«Todavía no. El faro está encendido para él.»
+pusay.1c,"""Who's Ewan?""",«Wer ist Ewan?»,« Qui est Ewan ? »,«Chi è Ewan?»,«¿Quién es Ewan?»
+putalk.2,"""Then tell him it's safe to come in! He'll be watching for the lamp's flashes.""","«Dann sag ihm, dass er sicher hereinkommen kann! Er achtet auf die Blinkzeichen der Lampe.»",« Alors dis-lui qu'il peut rentrer sans risque ! Il guettera les éclats de la lampe. »,«Allora digli che può entrare tranquillo! Guarderà i lampi della lanterna.»,«¡Entonces dile que puede entrar seguro! Estará atento a los destellos de la lámpara.»
+pusay.2a,"""Harbour safe. I'll flash it from the lamp.""",«Hafen sicher. Ich blinke es mit der Lampe.»,« Port sûr. Je le lui envoie avec la lampe. »,«Porto sicuro. Lo mando con la lanterna.»,«Puerto seguro. Se lo mando con la lámpara.»
+pusay.2b,"""Storm coming, stay out.""","«Sturm kommt, bleib draussen.»","« Tempête, reste au large. »","«Arriva la tempesta, resta fuori.»","«Viene tormenta, quédate fuera.»"
+pusay.2c,"""I'll shout really loud.""",«Ich rufe ganz laut.»,« Je vais crier très fort. »,«Griderò fortissimo.»,«Gritaré muy fuerte.»
+putalk.3,"""That's it: harbour safe. The code card's by the shutter. Go!""",«Genau: Hafen sicher. Die Codekarte ist beim Verschluss. Los!»,« C'est ça : port sûr. La carte des codes est près du volet. Vas-y ! »,«Esatto: porto sicuro. La scheda dei codici è vicino all'otturatore. Vai!»,«Eso es: puerto seguro. La tarjeta de códigos está junto a la persiana. ¡Ve!»
+pusay.3a,"""On my way!""",«Bin unterwegs!»,« J'y vais ! »,«Vado!»,«¡Voy!»
+pumsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+pumsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+pumsg.hangup,The wind tears Tom's words away. Call to him again.,Der Wind reisst Toms Worte fort. Ruf ihn nochmals.,Le vent emporte les mots de Tom. Rappelle-le.,Il vento porta via le parole di Tom. Richiamalo.,El viento se lleva las palabras de Tom. Llámalo otra vez.
+pumsg.no_line,"Tom waves from the stack, but he is too far to hear you.","Tom winkt von der Felsnadel, aber er ist zu weit weg, um dich zu hören.","Tom fait signe depuis l'aiguille, mais il est trop loin pour t'entendre.","Tom saluta dal faraglione, ma è troppo lontano per sentirti.","Tom saluda desde el farallón, pero está demasiado lejos para oírte."
+pumsg.key,In a lobster pot: the lighthouse key.,In einer Hummerreuse: der Leuchtturmschlüssel.,Dans un casier à homards : la clé du phare.,In una nassa: la chiave del faro.,En una nasa: la llave del faro.
+pumsg.door_open,The lighthouse door opens.,Die Leuchtturmtür geht auf.,La porte du phare s'ouvre.,La porta del faro si apre.,La puerta del faro se abre.
+pumsg.door_locked,The lighthouse is locked.,Der Leuchtturm ist abgeschlossen.,Le phare est fermé à clé.,Il faro è chiuso a chiave.,El faro está cerrado con llave.
+pumsg.oil,A can of lamp oil.,Eine Kanne Lampenöl.,Un bidon d'huile à lampe.,Una tanica d'olio per lampada.,Una lata de aceite de lámpara.
+pumsg.oiled,The lamp is filled.,Die Lampe ist gefüllt.,La lampe est remplie.,La lanterna è piena.,La lámpara está llena.
+pumsg.no_oil,The lamp is dry.,Die Lampe ist leer.,La lampe est vide.,La lanterna è vuota.,La lámpara está seca.
+pumsg.wall,The harbour wall. Pip likes to perch here now and then.,Die Hafenmauer. Pip sitzt hier gern ab und zu.,La digue. Pip aime s'y poser de temps en temps.,Il molo. A Pip piace posarsi qui ogni tanto.,El espigón. A Pip le gusta posarse aquí de vez en cuando.
+pumsg.pip_screw,Pip drops something shiny at your feet: a brass screw!,Pip lässt etwas Glänzendes vor deine Füsse fallen: eine Messingschraube!,Pip laisse tomber quelque chose de brillant à tes pieds : une vis en laiton !,Pip lascia cadere ai tuoi piedi qualcosa di lucido: una vite d'ottone!,Pip deja caer algo brillante a tus pies: ¡un tornillo de latón!
+pumsg.screwed,The screw fits the lens's bracket; now it turns.,Die Schraube passt in die Halterung der Linse; jetzt dreht sie.,La vis va dans le support de la lentille ; elle tourne maintenant.,La vite entra nel supporto della lente; ora gira.,El tornillo encaja en el soporte de la lente; ahora gira.
+pumsg.lens_stuck,The lens hangs loose and the lamp is dark.,"Die Linse hängt lose, und die Lampe ist dunkel.",La lentille pend et la lampe est éteinte.,La lente penzola e la lanterna è spenta.,La lente cuelga suelta y la lámpara está apagada.
+pumsg.barn,The barn door swings open.,Das Scheunentor schwingt auf.,La porte de la grange s'ouvre.,La porta del fienile si apre.,La puerta del granero se abre.
+pumsg.barn_shut,That's in the barn.,Das ist in der Scheune.,C'est dans la grange.,È nel fienile.,Eso está en el granero.
+pumsg.matches,A box of matches.,Eine Schachtel Streichhölzer.,Une boîte d'allumettes.,Una scatola di fiammiferi.,Una caja de cerillas.
+pumsg.lit,"The lamp flares up, bright.",Die Lampe flammt hell auf.,"La lampe s'embrase, éclatante.","La lanterna si accende, luminosa.","La lámpara se enciende, brillante."
+pumsg.beam_ok,The beam sweeps the water and finds Ewan's boat.,Der Strahl streicht übers Wasser und findet Ewans Boot.,Le faisceau balaie l'eau et trouve le bateau d'Ewan.,Il fascio spazza l'acqua e trova la barca di Ewan.,El haz barre el agua y encuentra el barco de Ewan.
+pumsg.kite,"An old kite, its sail torn.",Ein alter Drachen mit zerrissenem Segel.,"Un vieux cerf-volant, la toile déchirée.",Un vecchio aquilone con la vela strappata.,Una cometa vieja con la vela rota.
+pumsg.sewing,Maggie's sewing kit.,Maggies Nähzeug.,Le nécessaire à couture de Maggie.,Il kit da cucito di Maggie.,El costurero de Maggie.
+pumsg.mended,A few stitches: the kite is whole.,Ein paar Stiche: Der Drachen ist ganz.,Quelques points : le cerf-volant est réparé.,Qualche punto: l'aquilone è intero.,Unas puntadas: la cometa está entera.
+pumsg.twine,A ball of strong twine.,Ein Knäuel starke Schnur.,Une pelote de ficelle solide.,Un gomitolo di spago robusto.,Un ovillo de cordel resistente.
+pumsg.rigged,The twine is tied to the kite.,Die Schnur ist am Drachen festgebunden.,La ficelle est nouée au cerf-volant.,Lo spago è legato all'aquilone.,El cordel está atado a la cometa.
+pumsg.no_kite,You have no kite.,Du hast keinen Drachen.,Tu n'as pas de cerf-volant.,Non hai un aquilone.,No tienes cometa.
+pumsg.kite_dips,In the calm the kite dips.,In der Flaute sinkt der Drachen.,"Dans le calme, le cerf-volant plonge.",Nella calma l'aquilone scende.,En la calma la cometa baja.
+pumsg.line_across,The kite drops over the stack; Tom grabs the line and ties his dinghy to it.,Der Drachen sinkt über die Felsnadel; Tom packt die Leine und bindet sein Beiboot fest.,Le cerf-volant retombe sur l'aiguille ; Tom attrape la ligne et y amarre son canot.,L'aquilone scende sul faraglione; Tom afferra la cima e ci lega il gommone.,La cometa cae sobre el farallón; Tom agarra el cabo y ata su lancha.
+pumsg.lamp_dark,The lamp is dark; there's nothing to flash.,Die Lampe ist dunkel; es gibt nichts zu blinken.,La lampe est éteinte ; rien à faire clignoter.,La lanterna è spenta; niente da far lampeggiare.,La lámpara está apagada; no hay nada que destellar.
+pumsg.what_message,Which message? Better ask what Ewan needs to hear.,"Welche Botschaft? Frag lieber, was Ewan hören muss.",Quel message ? Mieux vaut demander ce qu'Ewan doit savoir.,Quale messaggio? Meglio chiedere cosa deve sapere Ewan.,¿Qué mensaje? Mejor pregunta qué necesita saber Ewan.
+pumsg.signalled,"Far out, a lamp blinks back: Ewan has seen it.",Weit draussen blinkt eine Lampe zurück: Ewan hat es gesehen.,"Au loin, une lampe répond : Ewan a vu.","Lontano, una luce risponde: Ewan ha visto.","A lo lejos, una luz responde: Ewan lo ha visto."
+pumsg.bale_up,The bale goes up into the loft.,Der Ballen geht hinauf auf den Heuboden.,La botte monte au grenier.,La balla sale nel fienile.,La paca sube al pajar.
+pumsg.stack_falls,"The stack wobbles and tumbles down. Start again, as the sign shows.","Der Stapel wackelt und fällt um. Fang von vorn an, wie das Schild zeigt.",La pile vacille et s'écroule. Recommence comme le montre le panneau.,La pila traballa e crolla. Ricomincia come mostra il cartello.,La pila se tambalea y se cae. Empieza de nuevo como muestra el letrero.
+pumsg.hay_in,All four bales are in the loft. Let it rain.,Alle vier Ballen sind auf dem Heuboden. Soll es regnen.,Les quatre bottes sont au grenier. Qu'il pleuve.,Tutte e quattro le balle sono su. Che piova pure.,Las cuatro pacas están en el pajar. Que llueva.
+pumsg.not_ready,"The horn booms over the bay, but not everyone is safe yet.","Das Horn dröhnt über die Bucht, aber noch sind nicht alle in Sicherheit.","La corne gronde sur la baie, mais tout le monde n'est pas encore à l'abri.","La sirena tuona sulla baia, ma non tutti sono al sicuro.","La bocina retumba en la bahía, pero aún no están todos a salvo."
+pumsg.ewan_home,The horn booms; Ewan's boat answers and turns for the harbour.,Das Horn dröhnt; Ewans Boot antwortet und hält auf den Hafen zu.,La corne gronde ; le bateau d'Ewan répond et met le cap sur le port.,La sirena tuona; la barca di Ewan risponde e punta al porto.,La bocina retumba; el barco de Ewan responde y pone rumbo al puerto.
+pumsg.jetty,The jetty you mended in spring holds firm.,"Der Steg, den du im Frühling geflickt hast, hält.",La jetée réparée au printemps tient bon.,Il pontile riparato in primavera tiene.,El muelle que arreglaste en primavera aguanta.
+pumsg.horn,The harbour horn.,Das Hafenhorn.,La corne du port.,La sirena del porto.,La bocina del puerto.
+pumsg.clouds,Black clouds.,Schwarze Wolken.,Des nuages noirs.,Nuvole nere.,Nubes negras.
+pumsg.lighthouse,The lighthouse.,Der Leuchtturm.,Le phare.,Il faro.,El faro.
+pumsg.door,The lighthouse door.,Die Leuchtturmtür.,La porte du phare.,La porta del faro.,La puerta del faro.
+pumsg.lamp,The great lamp.,Die grosse Lampe.,La grande lampe.,La grande lanterna.,La gran lámpara.
+pumsg.lens,The lens throws the beam; it turns on its bracket.,Die Linse wirft den Strahl; sie dreht in ihrer Halterung.,La lentille projette le faisceau ; elle tourne sur son support.,La lente proietta il fascio; gira sul supporto.,La lente proyecta el haz; gira en su soporte.
+pumsg.shutter,The shutter: short and long flashes.,Der Verschluss: kurze und lange Blitze.,Le volet : éclats courts et longs.,L'otturatore: lampi brevi e lunghi.,La persiana: destellos cortos y largos.
+pumsg.codecard,The code card: messages and their flashes.,Die Codekarte: Botschaften und ihre Blitze.,La carte des codes : messages et éclats.,La scheda dei codici: messaggi e lampi.,La tarjeta de códigos: mensajes y destellos.
+pumsg.bales,Bales of hay in the field.,Heuballen auf dem Feld.,Des bottes de foin dans le champ.,Balle di fieno nel campo.,Pacas de heno en el campo.
+pumsg.sign,A sign: how the bales are stacked in the loft.,Ein Schild: wie die Ballen auf dem Heuboden gestapelt werden.,Un panneau : comment empiler les bottes au grenier.,Un cartello: come impilare le balle nel fienile.,Un letrero: cómo apilar las pacas en el pajar.
+pumsg.windsock,The wind sock: it stands out when a gust blows.,"Der Windsack: Er steht ab, wenn eine Böe kommt.",La manche à air : elle se tend quand souffle une rafale.,La manica a vento: si gonfia quando arriva una raffica.,La manga de viento: se hincha cuando sopla una ráfaga.
+pumsg.stack,"The sea stack, Tom's dinghy at its foot.","Die Felsnadel, Toms Beiboot an ihrem Fuss.","L'aiguille rocheuse, le canot de Tom à son pied.","Il faraglione, il gommone di Tom ai suoi piedi.","El farallón, la lancha de Tom a sus pies."
+pumsg.tom,"Tom, waving from his dinghy.",Tom winkt aus seinem Beiboot.,Tom fait signe depuis son canot.,Tom saluta dal gommone.,Tom saluda desde su lancha.
+pumsg.sea,"A grey, heaving sea.","Ein graues, wogendes Meer.",Une mer grise et houleuse.,Un mare grigio e mosso.,Un mar gris y agitado.
+pumsg.headland,The headland.,Die Landzunge.,Le promontoire.,Il promontorio.,El promontorio.
+pumsg.almanac,"Maggie's almanac, the summer page.","Maggies Almanach, die Sommerseite.","L'almanach de Maggie, page d'été.","L'almanacco di Maggie, pagina d'estate.","El almanaque de Maggie, página de verano."
+puhint.1.1,The lighthouse is locked.,Der Leuchtturm ist abgeschlossen.,Le phare est fermé.,Il faro è chiuso.,El faro está cerrado.
+puhint.1.2,Fishermen hide things in what they fish with.,Fischer verstecken Dinge in ihrem Fanggerät.,Les pêcheurs cachent des choses dans leur matériel.,I pescatori nascondono le cose nell'attrezzatura.,Los pescadores esconden cosas en sus aparejos.
+puhint.1.3,Tap the lobster pots.,Tippe auf die Hummerreusen.,Touche les casiers à homards.,Tocca le nasse.,Toca las nasas.
+puhint.2.1,A key for the lighthouse.,Ein Schlüssel für den Leuchtturm.,Une clé pour le phare.,Una chiave per il faro.,Una llave para el faro.
+puhint.2.2,Its door.,Seine Tür.,Sa porte.,La sua porta.,Su puerta.
+puhint.2.3,Use the key on the lighthouse door.,Benutze den Schlüssel an der Leuchtturmtür.,Utilise la clé sur la porte du phare.,Usa la chiave sulla porta del faro.,Usa la llave en la puerta del faro.
+puhint.3.1,The lamp needs fuel.,Die Lampe braucht Brennstoff.,La lampe a besoin de combustible.,La lanterna ha bisogno di combustibile.,La lámpara necesita combustible.
+puhint.3.2,The lighthouse store.,Das Lager im Leuchtturm.,La réserve du phare.,Il magazzino del faro.,El almacén del faro.
+puhint.3.3,Tap the store.,Tippe auf das Lager.,Touche la réserve.,Tocca il magazzino.,Toca el almacén.
+puhint.4.1,The lamp is dry.,Die Lampe ist leer.,La lampe est vide.,La lanterna è vuota.,La lámpara está seca.
+puhint.4.2,Up in the lamp room.,Oben im Lampenraum.,"En haut, dans la salle de la lampe.",Su nella stanza della lanterna.,"Arriba, en la sala de la lámpara."
+puhint.4.3,Use the oil on the lamp.,Benutze das Öl an der Lampe.,Utilise l'huile sur la lampe.,Usa l'olio sulla lanterna.,Usa el aceite en la lámpara.
+puhint.5.1,The lens is missing a screw.,Der Linse fehlt eine Schraube.,Il manque une vis à la lentille.,Alla lente manca una vite.,A la lente le falta un tornillo.
+puhint.5.2,Pip likes shiny things and visits the harbour wall now and then.,Pip mag Glänzendes und kommt ab und zu auf die Hafenmauer.,Pip aime ce qui brille et vient parfois sur la digue.,A Pip piacciono le cose lucide e ogni tanto va sul molo.,A Pip le gustan las cosas brillantes y a veces visita el espigón.
+puhint.5.3,Tap the wall while Pip is sitting on it.,"Tippe auf die Mauer, wenn Pip darauf sitzt.",Touche la digue quand Pip y est posé.,Tocca il molo quando Pip ci è sopra.,Toca el espigón cuando Pip esté posado.
+puhint.6.1,The lens hangs loose.,Die Linse hängt lose.,La lentille pend.,La lente penzola.,La lente cuelga suelta.
+puhint.6.2,The screw from Pip.,Die Schraube von Pip.,La vis de Pip.,La vite di Pip.,El tornillo de Pip.
+puhint.6.3,Use the screw on the lens.,Benutze die Schraube an der Linse.,Utilise la vis sur la lentille.,Usa la vite sulla lente.,Usa el tornillo en la lente.
+puhint.7.1,The barn may hold useful things.,In der Scheune ist vielleicht Nützliches.,La grange contient peut-être des choses utiles.,Il fienile potrebbe avere cose utili.,El granero puede tener cosas útiles.
+puhint.7.2,Its door is only latched.,Das Tor ist nur eingeklinkt.,Sa porte n'est que loquetée.,La porta è solo chiusa col chiavistello.,La puerta solo tiene el pestillo.
+puhint.7.3,Tap the barn door.,Tippe auf das Scheunentor.,Touche la porte de la grange.,Tocca la porta del fienile.,Toca la puerta del granero.
+puhint.8.1,Something to light the lamp with.,"Etwas, um die Lampe anzuzünden.",De quoi allumer la lampe.,Qualcosa per accendere la lanterna.,Algo para encender la lámpara.
+puhint.8.2,In the barn.,In der Scheune.,Dans la grange.,Nel fienile.,En el granero.
+puhint.8.3,Tap the matchbox in the barn.,Tippe auf die Streichholzschachtel in der Scheune.,Touche la boîte d'allumettes dans la grange.,Tocca la scatola di fiammiferi nel fienile.,Toca la caja de cerillas del granero.
+puhint.9.1,"An oiled lamp, unlit.","Eine gefüllte Lampe, nicht angezündet.","Une lampe remplie, éteinte.","Una lanterna piena, spenta.","Una lámpara llena, apagada."
+puhint.9.2,Matches.,Streichhölzer.,Des allumettes.,Fiammiferi.,Cerillas.
+puhint.9.3,Use the matches on the lamp.,Benutze die Streichhölzer an der Lampe.,Utilise les allumettes sur la lampe.,Usa i fiammiferi sulla lanterna.,Usa las cerillas en la lámpara.
+puhint.10.1,The beam must find Ewan's boat.,Der Strahl muss Ewans Boot finden.,Le faisceau doit trouver le bateau d'Ewan.,Il fascio deve trovare la barca di Ewan.,El haz debe encontrar el barco de Ewan.
+puhint.10.2,Turn the lens and watch the window.,Dreh die Linse und schau zum Fenster.,Tourne la lentille en regardant la fenêtre.,Gira la lente e guarda la finestra.,Gira la lente y mira la ventana.
+puhint.10.3,Turn it until the beam falls on the boat.,"Dreh, bis der Strahl auf das Boot fällt.",Tourne jusqu'à ce que le faisceau tombe sur le bateau.,Gira finché il fascio cade sulla barca.,Gírala hasta que el haz caiga sobre el barco.
+puhint.11.1,Tom needs a line across the water.,Tom braucht eine Leine übers Wasser.,Tom a besoin d'une ligne au-dessus de l'eau.,Tom ha bisogno di una cima sull'acqua.,Tom necesita un cabo sobre el agua.
+puhint.11.2,Something that flies; in the barn.,"Etwas, das fliegt; in der Scheune.",Quelque chose qui vole ; dans la grange.,Qualcosa che vola; nel fienile.,Algo que vuela; en el granero.
+puhint.11.3,Tap the old kite.,Tippe auf den alten Drachen.,Touche le vieux cerf-volant.,Tocca il vecchio aquilone.,Toca la cometa vieja.
+puhint.12.1,The kite is torn.,Der Drachen ist zerrissen.,Le cerf-volant est déchiré.,L'aquilone è strappato.,La cometa está rota.
+puhint.12.2,Needle and thread are in the lighthouse.,Nadel und Faden sind im Leuchtturm.,Aiguille et fil sont au phare.,Ago e filo sono nel faro.,Aguja e hilo están en el faro.
+puhint.12.3,Tap the sewing box.,Tippe auf die Nähschachtel.,Touche la boîte à couture.,Tocca la scatola da cucito.,Toca el costurero.
+puhint.13.1,Mend the kite.,Flick den Drachen.,Répare le cerf-volant.,Ripara l'aquilone.,Arregla la cometa.
+puhint.13.2,Sewing kit and kite.,Nähzeug und Drachen.,Nécessaire et cerf-volant.,Kit da cucito e aquilone.,Costurero y cometa.
+puhint.13.3,Use the sewing kit on the kite.,Benutze das Nähzeug am Drachen.,Utilise le nécessaire sur le cerf-volant.,Usa il kit sull'aquilone.,Usa el costurero en la cometa.
+puhint.14.1,A kite needs a line.,Ein Drachen braucht eine Schnur.,Un cerf-volant a besoin d'une ficelle.,Un aquilone ha bisogno di un filo.,Una cometa necesita cordel.
+puhint.14.2,In the barn.,In der Scheune.,Dans la grange.,Nel fienile.,En el granero.
+puhint.14.3,Tap the twine.,Tippe auf die Schnur.,Touche la ficelle.,Tocca lo spago.,Toca el cordel.
+puhint.15.1,Tie it on.,Bind sie fest.,Attache-la.,Legalo.,Átalo.
+puhint.15.2,Twine and mended kite.,Schnur und geflickter Drachen.,Ficelle et cerf-volant réparé.,Spago e aquilone riparato.,Cordel y cometa arreglada.
+puhint.15.3,Use the twine on the mended kite.,Benutze die Schnur am geflickten Drachen.,Utilise la ficelle sur le cerf-volant réparé.,Usa lo spago sull'aquilone riparato.,Usa el cordel en la cometa arreglada.
+puhint.16.1,Fly the kite from the headland.,Lass den Drachen auf der Landzunge steigen.,Fais voler le cerf-volant depuis le promontoire.,Fai volare l'aquilone dal promontorio.,Vuela la cometa desde el promontorio.
+puhint.16.2,"The almanac: let out with the gust, hold in the calm. The wind sock shows the gusts.","Der Almanach: bei Böen auslassen, in der Flaute halten. Der Windsack zeigt die Böen.","L'almanach : lâcher avec la rafale, tenir dans le calme. La manche à air montre les rafales.","L'almanacco: molla con la raffica, tieni nella calma. La manica a vento mostra le raffiche.","El almanaque: suelta con la ráfaga, sujeta en la calma. La manga muestra las ráfagas."
+puhint.16.3,"Tap 'let out' only while the sock stands out, 'hold' otherwise, five times.","Tippe nur dann auf «Auslassen», wenn der Windsack absteht, sonst «Halten», fünfmal.","Touche « lâcher » seulement quand la manche est tendue, sinon « tenir », cinq fois.","Tocca «molla» solo quando la manica è gonfia, altrimenti «tieni», cinque volte.","Toca «soltar» solo cuando la manga está hinchada, si no «sujetar», cinco veces."
+puhint.17.1,Tom has news.,Tom hat Neuigkeiten.,Tom a des nouvelles.,Tom ha notizie.,Tom tiene noticias.
+puhint.17.2,Talk to him once the line is across.,"Sprich mit ihm, sobald die Leine drüben ist.",Parle-lui une fois la ligne passée.,Parlagli quando la cima è passata.,Habla con él cuando el cabo esté al otro lado.
+puhint.17.3,"Say the lamp is lit for Ewan, then 'harbour safe'.","Sag, der Leuchtturm brennt für Ewan, dann «Hafen sicher».","Dis que le phare est allumé pour Ewan, puis « port sûr ».","Di' che il faro è acceso per Ewan, poi «porto sicuro».",Di que el faro está encendido para Ewan y luego «puerto seguro».
+puhint.18.1,Flash the message to Ewan.,Blinke Ewan die Botschaft.,Envoie le message à Ewan.,Manda il messaggio a Ewan.,Envía el mensaje a Ewan.
+puhint.18.2,The code card: the harbour picture.,Die Codekarte: das Hafenbild.,La carte des codes : l'image du port.,La scheda: l'immagine del porto.,La tarjeta: el dibujo del puerto.
+puhint.18.3,"Short, long, long, short, long.","Kurz, lang, lang, kurz, lang.","Court, long, long, court, long.","Corto, lungo, lungo, corto, lungo.","Corto, largo, largo, corto, largo."
+puhint.19.1,The hay must go in before the rain.,Das Heu muss rein vor dem Regen.,Le foin doit rentrer avant la pluie.,Il fieno deve entrare prima della pioggia.,El heno debe entrar antes de la lluvia.
+puhint.19.2,"The sign in the barn shows the stack, bale by bale.","Das Schild in der Scheune zeigt den Stapel, Ballen für Ballen.","Le panneau de la grange montre la pile, botte par botte.","Il cartello nel fienile mostra la pila, balla per balla.","El letrero del granero muestra la pila, paca a paca."
+puhint.19.3,"By their marks: 3, 1, 4, 2.","Nach ihren Zeichen: 3, 1, 4, 2.","Par leurs marques : 3, 1, 4, 2.","Per i loro segni: 3, 1, 4, 2.","Por sus marcas: 3, 1, 4, 2."
+puhint.20.1,All safe?,Alle in Sicherheit?,Tout le monde à l'abri ?,Tutti al sicuro?,¿Todos a salvo?
+puhint.20.2,"Tom, Ewan's beam and message, the hay.","Tom, Ewans Strahl und Botschaft, das Heu.","Tom, le faisceau et le message d'Ewan, le foin.","Tom, il fascio e il messaggio di Ewan, il fieno.","Tom, el haz y el mensaje de Ewan, el heno."
+puhint.20.3,Sound the harbour horn.,Blas das Hafenhorn.,Sonne la corne du port.,Suona la sirena del porto.,Toca la bocina del puerto.
+paintro.1,"Puffin Island, autumn: market day. The whole island is on the jetty, and in the afternoon there is the regatta.","Papageitaucher-Insel, Herbst: Markttag. Die ganze Insel ist auf dem Steg, und am Nachmittag ist die Regatta.","L'île aux Macareux, automne : jour de marché. Toute l'île est sur la jetée, et l'après-midi a lieu la régate.","L'isola delle pulcinelle, autunno: giorno di mercato. Tutta l'isola è sul pontile, e nel pomeriggio c'è la regata.","La isla de los frailecillos, otoño: día de mercado. Toda la isla está en el muelle y por la tarde es la regata."
+paintro.2,"Maggie wants a ribbon for her apple pie and the regatta cup for the island. Pick, press, bake, trade, row; then lift the cup.","Maggie will eine Schleife für ihren Apfelkuchen und den Regattapokal für die Insel. Pflücken, pressen, backen, tauschen, rudern; dann heb den Pokal.","Maggie veut un ruban pour sa tarte aux pommes et la coupe de la régate pour l'île. Cueille, presse, cuis, troque, rame ; puis soulève la coupe.","Maggie vuole un nastro per la sua torta di mele e la coppa della regata per l'isola. Raccogli, spremi, cuoci, baratta, rema; poi alza la coppa.","Maggie quiere un lazo para su tarta de manzana y la copa de la regata para la isla. Recoge, prensa, hornea, trueca, rema; luego levanta la copa."
+paintro.3,"This one is long, of easy to medium difficulty. A good time is %d minutes.",Dieser Raum ist lang und leicht bis mittelschwer. Eine gute Zeit sind %d Minuten.,"Cette salle est longue, de difficulté facile à moyenne. Un bon temps : %d minutes.","Questa stanza è lunga, da facile a media. Un buon tempo: %d minuti.","Esta sala es larga, de dificultad fácil a media. Un buen tiempo: %d minutos."
+paend.title,The cup comes home,Der Pokal kommt heim,La coupe rentre,La coppa torna a casa,La copa vuelve a casa
+paend.text,"A blue ribbon on the pie, the regatta cup on Maggie's table, and Pip, grown and sleek, fishing in the bay. Maggie writes the third page in the almanac: autumn.","Eine blaue Schleife am Kuchen, der Regattapokal auf Maggies Tisch, und Pip, gross und glänzend, fischt in der Bucht. Maggie schreibt die dritte Seite in den Almanach: Herbst.","Un ruban bleu sur la tarte, la coupe de la régate sur la table de Maggie, et Pip, grand et lisse, qui pêche dans la baie. Maggie écrit la troisième page de l'almanach : automne.","Un nastro blu sulla torta, la coppa della regata sul tavolo di Maggie e Pip, cresciuto e lucido, che pesca nella baia. Maggie scrive la terza pagina dell'almanacco: autunno.","Un lazo azul en la tarta, la copa de la regata en la mesa de Maggie y Pip, crecido y lustroso, pescando en la bahía. Maggie escribe la tercera página del almanaque: otoño."
+item.pakey,Shed key,Schuppenschlüssel,Clé de la remise,Chiave del capanno,Llave del cobertizo
+item.panet,Net,Netz,Filet,Rete,Red
+item.pabasket,Basket,Korb,Panier,Cesto,Cesta
+item.paapples,Apples,Äpfel,Pommes,Mele,Manzanas
+item.pabottles,Empty bottles,Leere Flaschen,Bouteilles vides,Bottiglie vuote,Botellas vacías
+item.pacider,Cider,Most,Cidre,Sidro,Sidra
+item.paflour,Flour,Mehl,Farine,Farina,Harina
+item.paeggs,Eggs,Eier,Œufs,Uova,Huevos
+item.padough,Pastry,Teig,Pâte,Pasta frolla,Masa
+item.papie,Unbaked pie,Ungebackener Kuchen,Tarte crue,Torta cruda,Tarta sin hornear
+item.pabaked,Golden pie,Goldener Kuchen,Tarte dorée,Torta dorata,Tarta dorada
+item.paveg,Basket of vegetables,Korb mit Gemüse,Panier de légumes,Cesto di verdure,Cesta de verduras
+patext.almanac,"Autumn.
+
+Shake the tree when the wind does,
+never against it.
+Take the pie out when it glows gold.
+Row with the drum, not with your heart.","Herbst.
+
+Schüttle den Baum, wenn der Wind es tut,
+nie gegen ihn.
+Nimm den Kuchen heraus, wenn er golden glänzt.
+Rudere mit der Trommel, nicht mit dem Herzen.","Automne.
+
+Secoue l'arbre quand le vent le fait,
+jamais contre lui.
+Sors la tarte quand elle brille d'or.
+Rame avec le tambour, pas avec ton cœur.","Autunno.
+
+Scuoti l'albero quando lo fa il vento,
+mai contro.
+Togli la torta quando splende d'oro.
+Rema col tamburo, non col cuore.","Otoño.
+
+Sacude el árbol cuando lo hace el viento,
+nunca en contra.
+Saca la tarta cuando brille dorada.
+Rema con el tambor, no con el corazón."
+patalk.1,"The trader holds a bottle to the light: ""Fine cider! What do you want for a bottle?""",Der Händler hält eine Flasche ins Licht: «Feiner Most! Was willst du für eine Flasche?»,Le marchand lève une bouteille vers la lumière : « Beau cidre ! Que veux-tu pour une bouteille ? »,Il mercante alza una bottiglia alla luce: «Bel sidro! Cosa vuoi per una bottiglia?»,El comerciante alza una botella a la luz: «¡Buena sidra! ¿Qué quieres por una botella?»
+pasay.1a,"""Your hat.""",«Deinen Hut.»,« Ton chapeau. »,«Il tuo cappello.»,«Tu sombrero.»
+pasay.1b,"""Nothing, it's a gift.""","«Nichts, es ist ein Geschenk.»","« Rien, c'est un cadeau. »","«Niente, è un regalo.»","«Nada, es un regalo.»"
+pasay.1c,"""A bag of flour.""",«Einen Sack Mehl.»,« Un sac de farine. »,«Un sacco di farina.»,«Un saco de harina.»
+patalk.2,"""Flour for cider... fair enough, if it's this year's apples.""","«Mehl gegen Most... einverstanden, wenn es diesjährige Äpfel sind.»","« De la farine contre du cidre... d'accord, si ce sont les pommes de l'année. »","«Farina per sidro... va bene, se sono mele di quest'anno.»","«Harina por sidra... de acuerdo, si son manzanas de este año.»"
+pasay.2a,"""Pressed this morning.""",«Heute morgen gepresst.»,« Pressé ce matin. »,«Spremuto stamattina.»,«Prensada esta mañana.»
+pasay.2b,"""Last year's.""",«Vom letzten Jahr.»,« De l'an dernier. »,«Dell'anno scorso.»,«Del año pasado.»
+pasay.2c,"""Bought in town.""",«In der Stadt gekauft.»,« Acheté en ville. »,«Comprato in città.»,«Comprada en el pueblo.»
+patalk.3,"""Done! Here's your flour. Good luck with the pie.""",«Abgemacht! Hier dein Mehl. Viel Glück mit dem Kuchen.»,« Marché conclu ! Voici ta farine. Bonne chance pour la tarte. »,«Affare fatto! Ecco la farina. Buona fortuna con la torta.»,«¡Trato hecho! Aquí tienes la harina. Suerte con la tarta.»
+pasay.3a,"""Thank you!""",«Danke!»,« Merci ! »,«Grazie!»,«¡Gracias!»
+pamsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+pamsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+pamsg.hangup,The trader shrugs and turns to the next customer. Try again.,Der Händler zuckt die Schultern und wendet sich dem nächsten Kunden zu. Versuch es nochmals.,Le marchand hausse les épaules et passe au client suivant. Réessaie.,Il mercante alza le spalle e passa al cliente dopo. Riprova.,El comerciante se encoge de hombros y atiende al siguiente. Inténtalo otra vez.
+pamsg.no_line,"""Bring me something worth trading,"" says the trader.","«Bring mir etwas, das sich lohnt», sagt der Händler.","« Apporte-moi quelque chose qui vaille le troc », dit le marchand.","«Portami qualcosa che valga lo scambio», dice il mercante.","«Tráeme algo que valga la pena», dice el comerciante."
+pamsg.key,Under the scarecrow's hat: the shed key.,Unter dem Hut der Vogelscheuche: der Schuppenschlüssel.,Sous le chapeau de l'épouvantail : la clé de la remise.,Sotto il cappello dello spaventapasseri: la chiave del capanno.,Bajo el sombrero del espantapájaros: la llave del cobertizo.
+pamsg.shed,The shed.,Der Schuppen.,La remise.,Il capanno.,El cobertizo.
+pamsg.net,The net is spread under the tree.,Das Netz ist unter dem Baum ausgebreitet.,Le filet est étendu sous l'arbre.,La rete è stesa sotto l'albero.,La red está extendida bajo el árbol.
+pamsg.no_net,Apples falling on the ground would bruise.,"Äpfel, die auf den Boden fallen, würden zerdrückt.",Des pommes tombant par terre s'abîmeraient.,Le mele cadendo a terra si ammaccherebbero.,Las manzanas que cayeran al suelo se magullarían.
+pamsg.tree_still,"You shake, but the branches hold their apples tight. Wait for the wind.","Du schüttelst, aber die Äste halten die Äpfel fest. Warte auf den Wind.","Tu secoues, mais les branches gardent leurs pommes. Attends le vent.","Scuoti, ma i rami tengono strette le mele. Aspetta il vento.","Sacudes, pero las ramas sujetan las manzanas. Espera al viento."
+pamsg.apples,"With the gust, the apples tumble into the net.",Mit der Böe purzeln die Äpfel ins Netz.,"Avec la rafale, les pommes tombent dans le filet.","Con la raffica, le mele cadono nella rete.","Con la ráfaga, las manzanas caen en la red."
+pamsg.tree,"The apple tree, picked clean.","Der Apfelbaum, abgeerntet.","Le pommier, cueilli.","Il melo, raccolto.","El manzano, recogido."
+pamsg.in_press,The apples go into the press.,Die Äpfel kommen in die Presse.,Les pommes vont dans le pressoir.,Le mele vanno nel torchio.,Las manzanas van a la prensa.
+pamsg.press_empty,The press is empty.,Die Presse ist leer.,Le pressoir est vide.,Il torchio è vuoto.,La prensa está vacía.
+pamsg.too_loose,Barely a drip. Screw it tighter.,Kaum ein Tropfen. Dreh die Schraube fester.,À peine une goutte. Serre davantage.,Appena una goccia. Stringi di più.,Apenas una gota. Aprieta más.
+pamsg.too_tight,Crack! Too tight: the press bursts its boards. You loosen it right off.,Krach! Zu fest: Die Presse sprengt ihre Bretter. Du lockerst sie ganz.,Crac ! Trop serré : le pressoir éclate. Tu desserres tout.,Crac! Troppo stretto: il torchio si spacca. Allenti tutto.,¡Crac! Demasiado apretado: la prensa revienta. La aflojas del todo.
+pamsg.juice,Golden juice runs from the press.,Goldener Saft läuft aus der Presse.,Un jus doré coule du pressoir.,Un succo dorato esce dal torchio.,Un zumo dorado sale de la prensa.
+pamsg.bottles,Empty bottles.,Leere Flaschen.,Des bouteilles vides.,Bottiglie vuote.,Botellas vacías.
+pamsg.no_juice,Nothing to fill them with yet.,Noch nichts zum Abfüllen.,Rien à mettre dedans pour l'instant.,Ancora niente da metterci.,Aún no hay con qué llenarlas.
+pamsg.cider,Bottled: fresh cider.,Abgefüllt: frischer Most.,En bouteille : du cidre frais.,Imbottigliato: sidro fresco.,Embotellada: sidra fresca.
+pamsg.eggs,Three warm eggs.,Drei warme Eier.,Trois œufs tièdes.,Tre uova tiepide.,Tres huevos tibios.
+pamsg.dough,Flour and eggs: pastry.,Mehl und Eier: Teig.,Farine et œufs : de la pâte.,Farina e uova: la pasta.,Harina y huevos: masa.
+pamsg.pie,"Apples in the pastry: a pie, ready for the oven.","Äpfel in den Teig: ein Kuchen, bereit für den Ofen.",Les pommes dans la pâte : une tarte prête à cuire.,Le mele nella pasta: una torta pronta per il forno.,Manzanas en la masa: una tarta lista para el horno.
+pamsg.baking,The pie goes into the oven. Watch the window.,Der Kuchen kommt in den Ofen. Schau durchs Fenster.,La tarte entre au four. Surveille la vitre.,La torta va in forno. Guarda dal vetro.,La tarta entra al horno. Mira por el cristal.
+pamsg.not_yet,Not golden yet.,Noch nicht golden.,Pas encore dorée.,Non ancora dorata.,Todavía no está dorada.
+pamsg.golden,Golden! You take it out just right.,Golden! Du nimmst ihn genau richtig heraus.,Dorée ! Tu la sors juste à temps.,Dorata! La togli al punto giusto.,¡Dorada! La sacas justo a tiempo.
+pamsg.ribbon,"The judges taste, nod, and pin a blue ribbon on the pie.","Die Jury probiert, nickt und heftet eine blaue Schleife an den Kuchen.","Les juges goûtent, hochent la tête et épinglent un ruban bleu sur la tarte.","I giudici assaggiano, annuiscono e appuntano un nastro blu sulla torta.","El jurado prueba, asiente y prende un lazo azul en la tarta."
+pamsg.veg,"From the spring patch: carrots, beans and a cabbage.","Aus dem Frühlingsbeet: Rüebli, Bohnen und ein Kohl.","Du potager du printemps : carottes, haricots et un chou.","Dall'orto di primavera: carote, fagioli e un cavolo.","Del huerto de primavera: zanahorias, judías y una col."
+pamsg.aboard,The crew take the vegetables for their soup and give you a seat at an oar.,Die Crew nimmt das Gemüse für ihre Suppe und gibt dir einen Platz am Ruder.,L'équipage prend les légumes pour sa soupe et te donne une place à la rame.,L'equipaggio prende le verdure per la zuppa e ti dà un posto al remo.,La tripulación se queda las verduras para su sopa y te da un sitio al remo.
+pamsg.not_aboard,You have no seat in a boat yet.,Du hast noch keinen Platz in einem Boot.,Tu n'as pas encore de place dans un bateau.,Non hai ancora un posto in barca.,Aún no tienes sitio en un barco.
+pamsg.on_beat,On the beat: the boat surges forward.,Im Takt: Das Boot schiesst vorwärts.,Dans le rythme : le bateau bondit.,A tempo: la barca scatta avanti.,Al ritmo: el bote sale disparado.
+pamsg.off_beat,Off the beat: the oars clash and you lose ground.,"Aus dem Takt: Die Ruder schlagen aneinander, ihr fallt zurück.","Hors rythme : les rames s'entrechoquent, vous perdez du terrain.",Fuori tempo: i remi si scontrano e perdete terreno.,Fuera de ritmo: los remos chocan y perdéis terreno.
+pamsg.lost,The blue boat crosses the line first. Back to the start for another race.,Das blaue Boot ist zuerst im Ziel. Zurück an den Start für ein neues Rennen.,Le bateau bleu passe la ligne le premier. Retour au départ pour une nouvelle course.,La barca blu taglia il traguardo per prima. Si torna al via per un'altra gara.,El bote azul cruza primero la meta. Vuelta a la salida para otra carrera.
+pamsg.won,Over the line first! The whole jetty cheers.,Zuerst im Ziel! Der ganze Steg jubelt.,Premiers sur la ligne ! Toute la jetée applaudit.,Primi al traguardo! Tutto il pontile esulta.,¡Primeros en la meta! Todo el muelle aplaude.
+pamsg.not_ready,Not yet: the cup goes to the island that wins the pie ribbon and the regatta.,"Noch nicht: Der Pokal geht an die Insel, die die Kuchenschleife und die Regatta gewinnt.",Pas encore : la coupe va à l'île qui gagne le ruban de la tarte et la régate.,Non ancora: la coppa va a chi vince il nastro della torta e la regata.,Todavía no: la copa es para quien gane el lazo de la tarta y la regata.
+pamsg.cup,You lift the cup. The island is yours this year!,Du hebst den Pokal. Dieses Jahr gehört die Insel euch!,Tu soulèves la coupe. L'île l'emporte cette année !,Alzi la coppa. Quest'anno l'isola vince!,Levantas la copa. ¡Este año gana la isla!
+pamsg.orchard,The orchard.,Der Obstgarten.,Le verger.,Il frutteto.,El huerto de frutales.
+pamsg.press,The cider press.,Die Mostpresse.,Le pressoir à cidre.,Il torchio per il sidro.,La prensa de sidra.
+pamsg.screwgauge,"A gauge on the press: green, then red.","Eine Anzeige an der Presse: grün, dann rot.","Une jauge sur le pressoir : vert, puis rouge.","Un indicatore sul torchio: verde, poi rosso.","Un indicador en la prensa: verde, luego rojo."
+pamsg.oven,The oven.,Der Ofen.,Le four.,Il forno.,El horno.
+pamsg.patch,"The vegetable patch from spring, ready to harvest.","Das Gemüsebeet vom Frühling, reif zur Ernte.","Le potager du printemps, prêt à récolter.","L'orto di primavera, pronto per il raccolto.","El huerto de primavera, listo para cosechar."
+pamsg.trader,The trader from the mainland.,Der Händler vom Festland.,Le marchand du continent.,Il mercante della terraferma.,El comerciante de tierra firme.
+pamsg.judges,The judges' table.,Der Tisch der Jury.,La table des juges.,Il tavolo dei giudici.,La mesa del jurado.
+pamsg.crew,A crew short of one oar.,"Eine Crew, der ein Ruderer fehlt.",Un équipage à qui il manque un rameur.,Un equipaggio senza un rematore.,Una tripulación a la que le falta un remero.
+pamsg.boats,The regatta boats at the line.,Die Regattaboote an der Startlinie.,Les bateaux de la régate sur la ligne.,Le barche della regata alla partenza.,Los botes de la regata en la salida.
+pamsg.drum,The drummer keeps the beat.,Der Trommler gibt den Takt.,Le tambour donne le rythme.,Il tamburino dà il ritmo.,El tamborilero marca el ritmo.
+pamsg.pip,"Pip, grown and sleek, fishing in the bay.","Pip, gross und glänzend, fischt in der Bucht.","Pip, grand et lisse, pêche dans la baie.","Pip, cresciuto e lucido, pesca nella baia.","Pip, crecido y lustroso, pesca en la bahía."
+pamsg.bay,The bay.,Die Bucht.,La baie.,La baia.,La bahía.
+pamsg.market,The market on the jetty.,Der Markt auf dem Steg.,Le marché sur la jetée.,Il mercato sul pontile.,El mercado en el muelle.
+pamsg.almanac,"Maggie's almanac, the autumn page.","Maggies Almanach, die Herbstseite.","L'almanach de Maggie, page d'automne.","L'almanacco di Maggie, pagina d'autunno.","El almanaque de Maggie, página de otoño."
+pamsg.maggie,"Maggie, busy at the stalls.","Maggie, beschäftigt an den Ständen.","Maggie, affairée aux étals.","Maggie, indaffarata alle bancarelle.","Maggie, atareada en los puestos."
+pahint.1.1,The shed is locked.,Der Schuppen ist zu.,La remise est fermée.,Il capanno è chiuso.,El cobertizo está cerrado.
+pahint.1.2,Someone in the orchard keeps a key under their hat.,Jemand im Obstgarten hat einen Schlüssel unter dem Hut.,Quelqu'un dans le verger garde une clé sous son chapeau.,Qualcuno nel frutteto tiene una chiave sotto il cappello.,Alguien del huerto guarda una llave bajo el sombrero.
+pahint.1.3,Tap the scarecrow.,Tippe auf die Vogelscheuche.,Touche l'épouvantail.,Tocca lo spaventapasseri.,Toca el espantapájaros.
+pahint.2.1,The key fits the shed.,Der Schlüssel passt zum Schuppen.,La clé ouvre la remise.,La chiave apre il capanno.,La llave abre el cobertizo.
+pahint.2.2,At the orchard's edge.,Am Rand des Obstgartens.,Au bord du verger.,Al bordo del frutteto.,Al borde del huerto.
+pahint.2.3,Use the key on the shed.,Benutze den Schlüssel am Schuppen.,Utilise la clé sur la remise.,Usa la chiave sul capanno.,Usa la llave en el cobertizo.
+pahint.3.1,Apples bruise when they hit the ground.,"Äpfel werden zerdrückt, wenn sie auf den Boden fallen.",Les pommes s'abîment en tombant.,Le mele si ammaccano cadendo.,Las manzanas se magullan al caer.
+pahint.3.2,Catch them.,Fang sie auf.,Rattrape-les.,Prendile.,Atrápalas.
+pahint.3.3,Use the net on the tree.,Benutze das Netz am Baum.,Utilise le filet sur l'arbre.,Usa la rete sull'albero.,Usa la red en el árbol.
+pahint.4.1,The apples hold on tight.,Die Äpfel halten fest.,Les pommes tiennent bon.,Le mele resistono.,Las manzanas se aferran.
+pahint.4.2,The almanac: shake when the wind does. The branches sway in a gust.,"Der Almanach: schütteln, wenn der Wind es tut. In einer Böe schwanken die Äste.",L'almanach : secoue quand le vent le fait. Les branches bougent dans une rafale.,L'almanacco: scuoti quando lo fa il vento. I rami ondeggiano nella raffica.,El almanaque: sacude cuando lo hace el viento. Las ramas se mecen con la ráfaga.
+pahint.4.3,Tap the tree while its branches sway.,"Tippe auf den Baum, wenn seine Äste schwanken.",Touche l'arbre quand ses branches bougent.,Tocca l'albero quando i rami ondeggiano.,Toca el árbol cuando se mezan las ramas.
+pahint.5.1,Apples make cider.,Aus Äpfeln wird Most.,Les pommes font le cidre.,Dalle mele si fa il sidro.,Con manzanas se hace sidra.
+pahint.5.2,The press in the cider house.,Die Presse im Mosthaus.,Le pressoir de la cidrerie.,Il torchio nella casa del sidro.,La prensa de la casa de la sidra.
+pahint.5.3,Use the apples on the press.,Benutze die Äpfel an der Presse.,Utilise les pommes sur le pressoir.,Usa le mele sul torchio.,Usa las manzanas en la prensa.
+pahint.6.1,"Tighten the screw, then turn the crank.","Zieh die Schraube an, dann dreh die Kurbel.","Serre la vis, puis tourne la manivelle.","Stringi la vite, poi gira la manovella.",Aprieta el tornillo y gira la manivela.
+pahint.6.2,"The gauge: green is right, red bursts.","Die Anzeige: Grün stimmt, Rot platzt.","La jauge : le vert va, le rouge éclate.","L'indicatore: verde va bene, rosso scoppia.","El indicador: verde está bien, rojo revienta."
+pahint.6.3,"The last green notch (the sixth), then the crank.","Die letzte grüne Kerbe (die sechste), dann die Kurbel.","Le dernier cran vert (le sixième), puis la manivelle.","L'ultima tacca verde (la sesta), poi la manovella.","La última muesca verde (la sexta), y la manivela."
+pahint.7.1,Juice needs bottles.,Saft braucht Flaschen.,Le jus a besoin de bouteilles.,Il succo ha bisogno di bottiglie.,El zumo necesita botellas.
+pahint.7.2,In the cider house.,Im Mosthaus.,Dans la cidrerie.,Nella casa del sidro.,En la casa de la sidra.
+pahint.7.3,Tap the bottles.,Tippe auf die Flaschen.,Touche les bouteilles.,Tocca le bottiglie.,Toca las botellas.
+pahint.8.1,Fill them.,Füll sie.,Remplis-les.,Riempile.,Llénalas.
+pahint.8.2,At the press.,An der Presse.,Au pressoir.,Al torchio.,En la prensa.
+pahint.8.3,Use the bottles on the press.,Benutze die Flaschen an der Presse.,Utilise les bouteilles sur le pressoir.,Usa le bottiglie sul torchio.,Usa las botellas en la prensa.
+pahint.9.1,A pie needs flour.,Ein Kuchen braucht Mehl.,Une tarte demande de la farine.,Una torta richiede farina.,Una tarta necesita harina.
+pahint.9.2,The trader at the market will deal for cider.,Der Händler auf dem Markt tauscht gegen Most.,Le marchand troque contre du cidre.,Il mercante scambia col sidro.,El comerciante cambia por sidra.
+pahint.9.3,"Ask for flour, say it was pressed this morning.","Verlang Mehl, sag, er sei heute morgen gepresst.","Demande de la farine, dis qu'il a été pressé ce matin.","Chiedi farina, di' che è stato spremuto stamattina.","Pide harina, di que se prensó esta mañana."
+pahint.10.1,A pie needs eggs too.,Ein Kuchen braucht auch Eier.,Une tarte demande aussi des œufs.,Una torta richiede anche uova.,Una tarta también necesita huevos.
+pahint.10.2,The hens in the orchard.,Die Hühner im Obstgarten.,Les poules du verger.,Le galline nel frutteto.,Las gallinas del huerto.
+pahint.10.3,Tap the hen house.,Tippe auf den Hühnerstall.,Touche le poulailler.,Tocca il pollaio.,Toca el gallinero.
+pahint.11.1,Pastry first.,Zuerst der Teig.,D'abord la pâte.,Prima la pasta.,Primero la masa.
+pahint.11.2,Flour and eggs.,Mehl und Eier.,Farine et œufs.,Farina e uova.,Harina y huevos.
+pahint.11.3,Use the flour on the eggs.,Benutze das Mehl mit den Eiern.,Utilise la farine sur les œufs.,Usa la farina con le uova.,Usa la harina con los huevos.
+pahint.12.1,Fill the pastry.,Füll den Teig.,Garnis la pâte.,Farcisci la pasta.,Rellena la masa.
+pahint.12.2,With apples.,Mit Äpfeln.,Avec des pommes.,Con le mele.,Con manzanas.
+pahint.12.3,Use the apples on the pastry.,Benutze die Äpfel mit dem Teig.,Utilise les pommes sur la pâte.,Usa le mele sulla pasta.,Usa las manzanas con la masa.
+pahint.13.1,Bake it.,Back ihn.,Fais-la cuire.,Cuocila.,Hornéala.
+pahint.13.2,The oven.,Der Ofen.,Le four.,Il forno.,El horno.
+pahint.13.3,Use the pie on the oven.,Benutze den Kuchen am Ofen.,Utilise la tarte sur le four.,Usa la torta sul forno.,Usa la tarta en el horno.
+pahint.14.1,Watch through the oven's window.,Schau durchs Ofenfenster.,Regarde par la vitre du four.,Guarda dal vetro del forno.,Mira por el cristal del horno.
+pahint.14.2,It glows golden now and then.,Ab und zu glänzt er golden.,Elle brille d'or par moments.,Ogni tanto splende dorata.,De vez en cuando brilla dorada.
+pahint.14.3,Tap the oven while the pie glows golden.,"Tippe auf den Ofen, wenn der Kuchen golden glänzt.",Touche le four quand la tarte brille d'or.,Tocca il forno quando la torta è dorata.,Toca el horno cuando la tarta brille dorada.
+pahint.15.1,The pie competition.,Der Kuchenwettbewerb.,Le concours de tartes.,Il concorso di torte.,El concurso de tartas.
+pahint.15.2,The judges at the market.,Die Jury auf dem Markt.,Les juges au marché.,I giudici al mercato.,El jurado del mercado.
+pahint.15.3,Use the golden pie on the judges' table.,Benutze den goldenen Kuchen am Jurytisch.,Utilise la tarte dorée sur la table des juges.,Usa la torta dorata sul tavolo dei giudici.,Usa la tarta dorada en la mesa del jurado.
+pahint.16.1,Something you planted in spring.,"Etwas, das du im Frühling gepflanzt hast.",Quelque chose que tu as planté au printemps.,Qualcosa piantato in primavera.,Algo que plantaste en primavera.
+pahint.16.2,"The patch, seen from the cider house window.","Das Beet, vom Fenster des Mosthauses aus.","Le potager, vu de la fenêtre de la cidrerie.","L'orto, visto dalla finestra della casa del sidro.","El huerto, visto desde la ventana de la casa de la sidra."
+pahint.16.3,Use the basket on the patch.,Benutze den Korb am Beet.,Utilise le panier sur le potager.,Usa il cesto sull'orto.,Usa la cesta en el huerto.
+pahint.17.1,A crew is short of one oar.,Einer Crew fehlt ein Ruderer.,Il manque un rameur à un équipage.,A un equipaggio manca un rematore.,A una tripulación le falta un remero.
+pahint.17.2,They are hungry.,Sie haben Hunger.,Ils ont faim.,Hanno fame.,Tienen hambre.
+pahint.17.3,Give the vegetables to the crew.,Gib der Crew das Gemüse.,Donne les légumes à l'équipage.,Dai le verdure all'equipaggio.,Dale las verduras a la tripulación.
+pahint.18.1,The regatta.,Die Regatta.,La régate.,La regata.,La regata.
+pahint.18.2,Row with the drum.,Rudere mit der Trommel.,Rame avec le tambour.,Rema col tamburo.,Rema con el tambor.
+pahint.18.3,Tap 'stroke' each time the drum lights up; six good strokes win.,"Tippe auf «Schlag», jedes Mal wenn die Trommel aufleuchtet; sechs gute Schläge gewinnen.",Touche « coup » chaque fois que le tambour s'allume ; six bons coups gagnent.,Tocca «colpo» ogni volta che il tamburo si illumina; sei buoni colpi vincono.,Toca «palada» cada vez que se ilumine el tambor; seis buenas paladas ganan.
+pahint.19.1,Ribbon and race.,Schleife und Rennen.,Ruban et course.,Nastro e gara.,Lazo y carrera.
+pahint.19.2,The cup on the market table.,Der Pokal auf dem Markttisch.,La coupe sur la table du marché.,La coppa sul tavolo del mercato.,La copa en la mesa del mercado.
+pahint.19.3,Tap the cup.,Tippe auf den Pokal.,Touche la coupe.,Tocca la coppa.,Toca la copa.
+pwintro.1,"Puffin Island, winter: the longest night. Snow has buried the cottage door, the lake is frozen, and the lighthouse lamp has gone out.","Papageitaucher-Insel, Winter: die längste Nacht. Der Schnee hat die Tür des Häuschens begraben, der See ist gefroren, und die Lampe im Leuchtturm ist erloschen.","L'île aux Macareux, hiver : la nuit la plus longue. La neige a enseveli la porte, le lac est gelé et la lampe du phare s'est éteinte.","L'isola delle pulcinelle, inverno: la notte più lunga. La neve ha sepolto la porta, il lago è ghiacciato e la lanterna del faro si è spenta.","La isla de los frailecillos, invierno: la noche más larga. La nieve ha enterrado la puerta, el lago está helado y la lámpara del faro se ha apagado."
+pwintro.2,A ship is due past the island tonight. The spare oil is in the ice cave across the lake. Light the lighthouse again.,Heute Nacht fährt ein Schiff an der Insel vorbei. Das Ersatzöl ist in der Eishöhle jenseits des Sees. Bring den Leuchtturm wieder zum Leuchten.,"Un navire doit passer ce soir. L'huile de réserve est dans la grotte de glace, de l'autre côté du lac. Rallume le phare.",Stanotte una nave passerà vicino all'isola. L'olio di riserva è nella grotta di ghiaccio oltre il lago. Riaccendi il faro.,"Esta noche pasa un barco junto a la isla. El aceite de repuesto está en la cueva de hielo, al otro lado del lago. Vuelve a encender el faro."
+pwintro.3,"This one is long, of easy to medium difficulty. A good time is %d minutes.",Dieser Raum ist lang und leicht bis mittelschwer. Eine gute Zeit sind %d Minuten.,"Cette salle est longue, de difficulté facile à moyenne. Un bon temps : %d minutes.","Questa stanza è lunga, da facile a media. Un buon tempo: %d minuti.","Esta sala es larga, de dificultad fácil a media. Un buen tiempo: %d minutos."
+pwend.title,The northern lights,Das Nordlicht,Les aurores boréales,L'aurora boreale,La aurora boreal
+pwend.text,"The beam sweeps out over the dark sea, and far off a ship's lights turn safely past. Above the island, green and violet curtains of light ripple across the sky. Maggie closes the almanac: a whole year, four pages.","Der Strahl streicht über das dunkle Meer, und weit draussen zieht ein Schiff sicher vorbei. Über der Insel wogen grüne und violette Lichtvorhänge über den Himmel. Maggie schliesst den Almanach: ein ganzes Jahr, vier Seiten.","Le faisceau balaie la mer sombre, et au loin les feux d'un navire passent sans danger. Au-dessus de l'île, des rideaux de lumière verts et violets ondulent dans le ciel. Maggie ferme l'almanach : une année entière, quatre pages.","Il fascio spazza il mare scuro e lontano le luci di una nave passano sicure. Sopra l'isola, tende di luce verde e viola ondeggiano nel cielo. Maggie chiude l'almanacco: un anno intero, quattro pagine.","El haz barre el mar oscuro y a lo lejos las luces de un barco pasan a salvo. Sobre la isla, cortinas de luz verde y violeta ondean en el cielo. Maggie cierra el almanaque: un año entero, cuatro páginas."
+item.pwshovel,Shovel,Schaufel,Pelle,Pala,Pala
+item.pwskates,Skates,Schlittschuhe,Patins,Pattini,Patines
+item.pwwet,Damp matches,Feuchte Streichhölzer,Allumettes humides,Fiammiferi umidi,Cerillas húmedas
+item.pwdry,Dry matches,Trockene Streichhölzer,Allumettes sèches,Fiammiferi asciutti,Cerillas secas
+item.pwlantern,Lantern,Laterne,Lanterne,Lanterna,Farol
+item.pwlit,Lit lantern,Brennende Laterne,Lanterne allumée,Lanterna accesa,Farol encendido
+item.pwcan,Oil can,Ölkanne,Bidon,Tanica,Bidón
+item.pwoil,Can of oil,Volle Ölkanne,Bidon d'huile,Tanica d'olio,Bidón de aceite
+item.pwcrank,Crank,Kurbel,Manivelle,Manovella,Manivela
+pwtext.almanac,"Winter.
+
+The springs never freeze hard:
+crossed out on the lake.
+
+The old carol, rung on ice:","Winter.
+
+Die Quellen frieren nie ganz:
+auf dem See durchgestrichen.
+
+Das alte Weihnachtslied, auf Eis geläutet:","Hiver.
+
+Les sources ne gèlent jamais bien :
+barrées sur le lac.
+
+Le vieux chant de Noël, sonné sur la glace :","Inverno.
+
+Le sorgenti non gelano mai del tutto:
+sbarrate sul lago.
+
+Il vecchio canto di Natale, suonato sul ghiaccio:","Invierno.
+
+Los manantiales nunca se hielan del todo:
+tachados en el lago.
+
+El viejo villancico, tocado en el hielo:"
+pwtalk.1,"Maggie, wrapped in blankets: ""You dug us out! The lamp is dark and the oil is gone. What do you need?""","Maggie, in Decken gehüllt: «Du hast uns ausgegraben! Die Lampe ist dunkel, und das Öl ist aus. Was brauchst du?»","Maggie, emmitouflée : « Tu nous as dégagés ! La lampe est éteinte et l'huile épuisée. De quoi as-tu besoin ? »","Maggie, avvolta nelle coperte: «Ci hai liberati! La lanterna è spenta e l'olio è finito. Di cosa hai bisogno?»","Maggie, envuelta en mantas: «¡Nos has desenterrado! La lámpara está apagada y no queda aceite. ¿Qué necesitas?»"
+pwsay.1a,"""Oil for the lamp.""",«Öl für die Lampe.»,« De l'huile pour la lampe. »,«Olio per la lanterna.»,«Aceite para la lámpara.»
+pwsay.1b,"""A cup of tea.""",«Eine Tasse Tee.»,« Une tasse de thé. »,«Una tazza di tè.»,«Una taza de té.»
+pwsay.1c,"""Nothing.""",«Nichts.»,« Rien. »,«Niente.»,«Nada.»
+pwtalk.2,"""There's a barrel in the ice cave across the lake. Skate round the springs; the almanac marks them. Anything else?""",«In der Eishöhle jenseits des Sees steht ein Fass. Fahr um die Quellen herum; der Almanach zeigt sie. Sonst noch etwas?»,"« Il y a un tonneau dans la grotte de glace, de l'autre côté du lac. Contourne les sources ; l'almanach les indique. Autre chose ? »",«C'è un barile nella grotta di ghiaccio oltre il lago. Gira attorno alle sorgenti; l'almanacco le segna. Altro?»,"«Hay un barril en la cueva de hielo, al otro lado del lago. Rodea los manantiales; el almanaque los marca. ¿Algo más?»"
+pwsay.2a,"""Where are my skates?""",«Wo sind meine Schlittschuhe?»,« Où sont mes patins ? »,«Dove sono i miei pattini?»,«¿Dónde están mis patines?»
+pwsay.2b,"""Is the cave locked?""",«Ist die Höhle verschlossen?»,« La grotte est-elle fermée ? »,«La grotta è chiusa?»,«¿La cueva está cerrada?»
+pwsay.2c,"""Isn't the cave full of icicles?""",«Ist die Höhle nicht voller Eiszapfen?»,« La grotte n'est-elle pas pleine de stalactites de glace ? »,«La grotta non è piena di ghiaccioli?»,«¿No está la cueva llena de carámbanos?»
+pwtalk.3,"""Ring them with the old carol from the almanac, as we did as children, and they let go.""","«Läute sie mit dem alten Weihnachtslied aus dem Almanach, wie wir als Kinder, dann lassen sie los.»","« Fais-les sonner avec le vieux chant de l'almanach, comme nous enfants, et ils lâchent. »","«Suonali col vecchio canto dell'almanacco, come facevamo da bambini, e si staccano.»","«Tócalos con el viejo villancico del almanaque, como hacíamos de niños, y se sueltan.»"
+pwsay.3a,"""I'll try.""",«Ich versuche es.»,« J'essaierai. »,«Ci proverò.»,«Lo intentaré.»
+pwmsg.nothing,Nothing more to find here.,Hier gibt es nichts mehr zu finden.,Plus rien à trouver ici.,Qui non c'è altro da trovare.,Aquí no hay nada más.
+pwmsg.no_use,That does not work.,Das geht nicht.,Ça ne marche pas.,Così non funziona.,Eso no funciona.
+pwmsg.hangup,Maggie dozes off by the stove. Ask her again.,Maggie nickt beim Ofen ein. Frag sie nochmals.,Maggie s'assoupit près du poêle. Redemande-lui.,Maggie si appisola vicino alla stufa. Chiedile ancora.,Maggie se adormece junto a la estufa. Pregúntale otra vez.
+pwmsg.no_line,"Maggie shivers: ""First get that door open!""",Maggie fröstelt: «Mach zuerst die Tür auf!»,Maggie frissonne : « Ouvre d'abord cette porte ! »,Maggie rabbrividisce: «Prima apri quella porta!»,Maggie tirita: «¡Primero abre esa puerta!»
+pwmsg.shovel,In the coal scuttle: a small shovel.,Im Kohleneimer: eine kleine Schaufel.,Dans le seau à charbon : une petite pelle.,Nel secchio del carbone: una piccola pala.,En el cubo del carbón: una pala pequeña.
+pwmsg.dug_out,You dig and dig: the door swings open onto the snow.,Du gräbst und gräbst: Die Tür schwingt auf in den Schnee.,Tu creuses encore et encore : la porte s'ouvre sur la neige.,Scavi e scavi: la porta si apre sulla neve.,Cavas y cavas: la puerta se abre a la nieve.
+pwmsg.snowed_in,You can't get out: snow blocks the door.,Du kommst nicht hinaus: Schnee versperrt die Tür.,Impossible de sortir : la neige bloque la porte.,Non si esce: la neve blocca la porta.,No puedes salir: la nieve bloquea la puerta.
+pwmsg.skates,Maggie's old skates.,Maggies alte Schlittschuhe.,Les vieux patins de Maggie.,I vecchi pattini di Maggie.,Los viejos patines de Maggie.
+pwmsg.wet,"Matches, damp from the cold.","Streichhölzer, feucht von der Kälte.","Des allumettes, humides de froid.","Fiammiferi, umidi per il freddo.","Cerillas, húmedas por el frío."
+pwmsg.dried,Dried by the stove: they strike now.,Am Ofen getrocknet: Jetzt zünden sie.,Séchées près du poêle : elles s'allument.,Asciugati vicino alla stufa: ora si accendono.,Secadas junto a la estufa: ahora prenden.
+pwmsg.lantern,A storm lantern.,Eine Sturmlaterne.,Une lanterne tempête.,Una lanterna da tempesta.,Un farol de tormenta.
+pwmsg.lantern_lit,The lantern glows.,Die Laterne leuchtet.,La lanterne brille.,La lanterna brilla.,El farol brilla.
+pwmsg.no_skates,You'd slip and fall without skates.,Ohne Schlittschuhe würdest du ausrutschen.,"Sans patins, tu glisserais.",Senza pattini scivoleresti.,Sin patines te resbalarías.
+pwmsg.skate_back,Crack! The ice gives way over a spring. You scramble out and back to the shore.,Krach! Über einer Quelle bricht das Eis. Du kriechst heraus und zurück ans Ufer.,Crac ! La glace cède au-dessus d'une source. Tu ressors et regagnes la rive.,Crac! Il ghiaccio cede su una sorgente. Esci e torni a riva.,¡Crac! El hielo cede sobre un manantial. Sales como puedes y vuelves a la orilla.
+pwmsg.skate_there,You glide up to the far shore: the mouth of the ice cave.,Du gleitest ans andere Ufer: zum Eingang der Eishöhle.,Tu glisses jusqu'à l'autre rive : l'entrée de la grotte de glace.,Scivoli fino all'altra riva: l'ingresso della grotta di ghiaccio.,Te deslizas hasta la otra orilla: la entrada de la cueva de hielo.
+pwmsg.skated,You know the way across now.,Du kennst den Weg hinüber jetzt.,Tu connais le chemin maintenant.,Ora conosci la strada.,Ya conoces el camino.
+pwmsg.cave_far,The cave is across the lake.,Die Höhle ist jenseits des Sees.,La grotte est de l'autre côté du lac.,La grotta è oltre il lago.,La cueva está al otro lado del lago.
+pwmsg.cave_lit,The lantern lights the cave: icicles hang like a curtain before an old barrel.,Die Laterne erhellt die Höhle: Eiszapfen hängen wie ein Vorhang vor einem alten Fass.,La lanterne éclaire la grotte : des stalactites de glace pendent comme un rideau devant un vieux tonneau.,La lanterna illumina la grotta: ghiaccioli pendono come una tenda davanti a un vecchio barile.,El farol ilumina la cueva: carámbanos cuelgan como una cortina ante un viejo barril.
+pwmsg.too_dark,It's pitch dark in here.,Hier ist es stockdunkel.,Il fait noir comme dans un four.,È buio pesto qui.,Aquí está oscuro como boca de lobo.
+pwmsg.icicles_fall,"The carol rings through the cave, and the icicles drop away, tinkling.","Das Lied klingt durch die Höhle, und die Eiszapfen fallen klirrend ab.","Le chant résonne dans la grotte, et les stalactites tombent en tintant.",Il canto risuona nella grotta e i ghiaccioli cadono tintinnando.,El villancico resuena en la cueva y los carámbanos caen tintineando.
+pwmsg.behind_ice,That's behind the icicles.,Das ist hinter den Eiszapfen.,C'est derrière les stalactites.,È dietro i ghiaccioli.,Está detrás de los carámbanos.
+pwmsg.can,An empty oil can.,Eine leere Ölkanne.,Un bidon vide.,Una tanica vuota.,Un bidón vacío.
+pwmsg.oil,Oil from the barrel.,Öl aus dem Fass.,De l'huile du tonneau.,Olio dal barile.,Aceite del barril.
+pwmsg.oiled,The lamp is filled.,Die Lampe ist gefüllt.,La lampe est remplie.,La lanterna è piena.,La lámpara está llena.
+pwmsg.lamp_cold,No point setting the flashes on a dry lamp.,"Die Blitze an einer leeren Lampe einzustellen, bringt nichts.",Inutile de régler les éclats sur une lampe vide.,Inutile regolare i lampi di una lanterna vuota.,No sirve ajustar los destellos de una lámpara seca.
+pwmsg.lens_ok,The last frost clears: the lens is bright.,Der letzte Frost verschwindet: Die Linse ist klar.,Le dernier givre s'efface : la lentille est claire.,L'ultima brina sparisce: la lente è limpida.,La última escarcha desaparece: la lente está limpia.
+pwmsg.crank,The clockwork's crank.,Die Kurbel des Uhrwerks.,La manivelle du mécanisme.,La manovella del meccanismo.,La manivela del mecanismo.
+pwmsg.wound,You wind the clockwork; the lamp's table begins to turn.,Du ziehst das Uhrwerk auf; der Lampentisch beginnt sich zu drehen.,Tu remontes le mécanisme ; la table de la lampe se met à tourner.,Carichi il meccanismo; il piano della lanterna comincia a girare.,Das cuerda al mecanismo; la plataforma de la lámpara empieza a girar.
+pwmsg.pattern_ok,The flashes now match this island's light on the chart.,Die Blitze passen jetzt zum Licht dieser Insel auf der Karte.,Les éclats correspondent maintenant au feu de l'île sur la carte.,I lampi ora corrispondono alla luce dell'isola sulla carta.,Los destellos ya coinciden con la luz de la isla en la carta.
+pwmsg.not_ready,"The lamp isn't ready: oil, lens, clockwork and flashes.","Die Lampe ist nicht bereit: Öl, Linse, Uhrwerk und Blitze.","La lampe n'est pas prête : huile, lentille, mécanisme et éclats.","La lanterna non è pronta: olio, lente, meccanismo e lampi.","La lámpara no está lista: aceite, lente, mecanismo y destellos."
+pwmsg.light,The lamp catches. Its beam sweeps out over the sea.,Die Lampe brennt. Ihr Strahl streicht über das Meer.,La lampe s'allume. Son faisceau balaie la mer.,La lanterna si accende. Il fascio spazza il mare.,La lámpara prende. Su haz barre el mar.
+pwmsg.maggie,"Maggie, wrapped in blankets by the stove.","Maggie, in Decken gehüllt beim Ofen.","Maggie, emmitouflée près du poêle.","Maggie, avvolta nelle coperte vicino alla stufa.","Maggie, envuelta en mantas junto a la estufa."
+pwmsg.stove,"The stove, warm.","Der Ofen, warm.","Le poêle, chaud.","La stufa, calda.","La estufa, caliente."
+pwmsg.door,"The cottage door, snowed in.","Die Tür des Häuschens, eingeschneit.","La porte de la maison, enneigée.","La porta della casa, sepolta dalla neve.","La puerta de la casa, nevada."
+pwmsg.almanac,"Maggie's almanac, the winter page.","Maggies Almanach, die Winterseite.","L'almanach de Maggie, page d'hiver.","L'almanacco di Maggie, pagina d'inverno.","El almanaque de Maggie, página de invierno."
+pwmsg.window,Snow against the window.,Schnee am Fenster.,De la neige contre la vitre.,Neve contro la finestra.,Nieve contra la ventana.
+pwmsg.lake,The frozen lake. Snowbanks here and there.,Der gefrorene See. Hier und dort Schneewälle.,Le lac gelé. Des congères çà et là.,Il lago ghiacciato. Cumuli di neve qua e là.,El lago helado. Ventisqueros aquí y allá.
+pwmsg.shore,The shore.,Das Ufer.,La rive.,La riva.,La orilla.
+pwmsg.lamp,"The lighthouse lamp, dark.","Die Leuchtturmlampe, dunkel.","La lampe du phare, éteinte.","La lanterna del faro, spenta.","La lámpara del faro, apagada."
+pwmsg.lens,"The lens panels, white with frost.","Die Linsenfelder, weiss vom Frost.","Les panneaux de la lentille, blancs de givre.","I pannelli della lente, bianchi di brina.","Los paneles de la lente, blancos de escarcha."
+pwmsg.clockwork,The clockwork that turns the lamp.,"Das Uhrwerk, das die Lampe dreht.",Le mécanisme qui fait tourner la lampe.,Il meccanismo che fa girare la lanterna.,El mecanismo que hace girar la lámpara.
+pwmsg.chart,The chart of lights: every lighthouse and its flashes.,Die Karte der Leuchtfeuer: jeder Leuchtturm und seine Blitze.,La carte des feux : chaque phare et ses éclats.,La carta dei fari: ogni faro e i suoi lampi.,La carta de faros: cada faro y sus destellos.
+pwmsg.aurora,Faint green light in the north.,Schwaches grünes Licht im Norden.,Une faible lueur verte au nord.,Una debole luce verde a nord.,Una tenue luz verde al norte.
+pwmsg.cave,The ice cave.,Die Eishöhle.,La grotte de glace.,La grotta di ghiaccio.,La cueva de hielo.
+pwmsg.icicles,"Icicles, long and short.","Eiszapfen, lange und kurze.","Des stalactites de glace, longues et courtes.","Ghiaccioli, lunghi e corti.","Carámbanos, largos y cortos."
+pwmsg.barrel,An old oil barrel.,Ein altes Ölfass.,Un vieux tonneau d'huile.,Un vecchio barile d'olio.,Un viejo barril de aceite.
+pwmsg.ship,"A ship's lights, far out.","Die Lichter eines Schiffs, weit draussen.","Les feux d'un navire, au large.","Le luci di una nave, al largo.","Las luces de un barco, a lo lejos."
+pwhint.1.1,The door is snowed in.,Die Tür ist eingeschneit.,La porte est enneigée.,La porta è sepolta dalla neve.,La puerta está nevada.
+pwhint.1.2,"Something to dig with, by the stove.","Etwas zum Graben, beim Ofen.","De quoi creuser, près du poêle.","Qualcosa per scavare, vicino alla stufa.","Algo para cavar, junto a la estufa."
+pwhint.1.3,Tap the coal scuttle.,Tippe auf den Kohleneimer.,Touche le seau à charbon.,Tocca il secchio del carbone.,Toca el cubo del carbón.
+pwhint.2.1,Dig out.,Grab dich hinaus.,Dégage-toi.,Scava per uscire.,Cava para salir.
+pwhint.2.2,The door.,Die Tür.,La porte.,La porta.,La puerta.
+pwhint.2.3,Use the shovel on the door.,Benutze die Schaufel an der Tür.,Utilise la pelle sur la porte.,Usa la pala sulla porta.,Usa la pala en la puerta.
+pwhint.3.1,The lake is frozen.,Der See ist gefroren.,Le lac est gelé.,Il lago è ghiacciato.,El lago está helado.
+pwhint.3.2,Maggie's skates hang on the wall.,Maggies Schlittschuhe hängen an der Wand.,Les patins de Maggie pendent au mur.,I pattini di Maggie sono appesi al muro.,Los patines de Maggie cuelgan de la pared.
+pwhint.3.3,Tap the skates.,Tippe auf die Schlittschuhe.,Touche les patins.,Tocca i pattini.,Toca los patines.
+pwhint.4.1,You will need light.,Du wirst Licht brauchen.,Il te faudra de la lumière.,Ti servirà luce.,Necesitarás luz.
+pwhint.4.2,Matches in the drawer.,Streichhölzer in der Schublade.,Des allumettes dans le tiroir.,Fiammiferi nel cassetto.,Cerillas en el cajón.
+pwhint.4.3,Tap the drawer.,Tippe auf die Schublade.,Touche le tiroir.,Tocca il cassetto.,Toca el cajón.
+pwhint.5.1,Damp matches won't strike.,Feuchte Streichhölzer zünden nicht.,Des allumettes humides ne s'allument pas.,I fiammiferi umidi non si accendono.,Las cerillas húmedas no prenden.
+pwhint.5.2,Dry them somewhere warm.,Trockne sie an einem warmen Ort.,Sèche-les au chaud.,Asciugali al caldo.,Sécalas en un sitio caliente.
+pwhint.5.3,Use the damp matches on the stove.,Benutze die feuchten Streichhölzer am Ofen.,Utilise les allumettes humides sur le poêle.,Usa i fiammiferi umidi sulla stufa.,Usa las cerillas húmedas en la estufa.
+pwhint.6.1,Something to carry light.,"Etwas, um Licht zu tragen.",De quoi porter de la lumière.,Qualcosa per portare la luce.,Algo para llevar luz.
+pwhint.6.2,A lantern hangs on a hook.,Eine Laterne hängt an einem Haken.,Une lanterne pend à un crochet.,Una lanterna è appesa a un gancio.,Un farol cuelga de un gancho.
+pwhint.6.3,Tap the lantern.,Tippe auf die Laterne.,Touche la lanterne.,Tocca la lanterna.,Toca el farol.
+pwhint.7.1,Light the lantern.,Zünde die Laterne an.,Allume la lanterne.,Accendi la lanterna.,Enciende el farol.
+pwhint.7.2,Dry matches.,Trockene Streichhölzer.,Des allumettes sèches.,Fiammiferi asciutti.,Cerillas secas.
+pwhint.7.3,Use the dry matches on the lantern.,Benutze die trockenen Streichhölzer an der Laterne.,Utilise les allumettes sèches sur la lanterne.,Usa i fiammiferi asciutti sulla lanterna.,Usa las cerillas secas en el farol.
+pwhint.8.1,Maggie knows where the oil is.,"Maggie weiss, wo das Öl ist.",Maggie sait où est l'huile.,Maggie sa dov'è l'olio.,Maggie sabe dónde está el aceite.
+pwhint.8.2,Ask her once the door is open.,"Frag sie, wenn die Tür offen ist.",Demande-lui une fois la porte ouverte.,Chiedile quando la porta è aperta.,Pregúntale cuando la puerta esté abierta.
+pwhint.8.3,"Ask for oil, then about the icicles.","Frag nach Öl, dann nach den Eiszapfen.","Demande de l'huile, puis parle des stalactites.","Chiedi l'olio, poi dei ghiaccioli.",Pide aceite y luego pregunta por los carámbanos.
+pwhint.9.1,Skate to the cave across the lake.,Fahr über den See zur Höhle.,Patine jusqu'à la grotte.,Patina fino alla grotta.,Patina hasta la cueva.
+pwhint.9.2,You slide until a snowbank stops you; the almanac crosses out the thin ice.,"Du gleitest, bis dich ein Schneewall stoppt; der Almanach streicht das dünne Eis durch.",Tu glisses jusqu'à une congère ; l'almanach barre la glace mince.,Scivoli finché un cumulo ti ferma; l'almanacco sbarra il ghiaccio sottile.,Te deslizas hasta que un ventisquero te para; el almanaque tacha el hielo fino.
+pwhint.9.3,"North, east, south, west, north, east.","Norden, Osten, Süden, Westen, Norden, Osten.","Nord, est, sud, ouest, nord, est.","Nord, est, sud, ovest, nord, est.","Norte, este, sur, oeste, norte, este."
+pwhint.10.1,The cave is pitch dark.,Die Höhle ist stockdunkel.,La grotte est toute noire.,La grotta è buia.,La cueva está oscura.
+pwhint.10.2,Bring light.,Bring Licht.,Apporte de la lumière.,Porta luce.,Lleva luz.
+pwhint.10.3,Use the lit lantern on the cave.,Benutze die brennende Laterne in der Höhle.,Utilise la lanterne allumée sur la grotte.,Usa la lanterna accesa sulla grotta.,Usa el farol encendido en la cueva.
+pwhint.11.1,The icicles hide the barrel.,Die Eiszapfen verdecken das Fass.,Les stalactites cachent le tonneau.,I ghiaccioli nascondono il barile.,Los carámbanos ocultan el barril.
+pwhint.11.2,Ring them with the carol from the almanac.,Läute sie mit dem Lied aus dem Almanach.,Fais-les sonner avec le chant de l'almanach.,Suonali col canto dell'almanacco.,Tócalos con el villancico del almanaque.
+pwhint.11.3,"Icicles 3, 5, 2, 4, 1 (from the left).","Eiszapfen 3, 5, 2, 4, 1 (von links).","Stalactites 3, 5, 2, 4, 1 (depuis la gauche).","Ghiaccioli 3, 5, 2, 4, 1 (da sinistra).","Carámbanos 3, 5, 2, 4, 1 (desde la izquierda)."
+pwhint.12.1,Behind the ice.,Hinter dem Eis.,Derrière la glace.,Dietro il ghiaccio.,Detrás del hielo.
+pwhint.12.2,An oil can.,Eine Ölkanne.,Un bidon.,Una tanica.,Un bidón.
+pwhint.12.3,Tap the oil can.,Tippe auf die Ölkanne.,Touche le bidon.,Tocca la tanica.,Toca el bidón.
+pwhint.13.1,Fill it.,Füll sie.,Remplis-le.,Riempila.,Llénalo.
+pwhint.13.2,The barrel.,Das Fass.,Le tonneau.,Il barile.,El barril.
+pwhint.13.3,Use the can on the barrel.,Benutze die Kanne am Fass.,Utilise le bidon sur le tonneau.,Usa la tanica sul barile.,Usa el bidón en el barril.
+pwhint.14.1,The lamp is dry.,Die Lampe ist leer.,La lampe est vide.,La lanterna è vuota.,La lámpara está seca.
+pwhint.14.2,In the lamp room.,Im Lampenraum.,Dans la salle de la lampe.,Nella stanza della lanterna.,En la sala de la lámpara.
+pwhint.14.3,Use the oil on the lamp.,Benutze das Öl an der Lampe.,Utilise l'huile sur la lampe.,Usa l'olio sulla lanterna.,Usa el aceite en la lámpara.
+pwhint.15.1,The lens is frosted.,Die Linse ist vereist.,La lentille est givrée.,La lente è brinata.,La lente está escarchada.
+pwhint.15.2,Turning one panel turns its right-hand neighbour too (the last turns the first).,Ein Feld zu drehen dreht auch seinen rechten Nachbarn (das letzte das erste).,Tourner un panneau tourne aussi son voisin de droite (le dernier tourne le premier).,Girare un pannello gira anche quello a destra (l'ultimo gira il primo).,Girar un panel gira también su vecino derecho (el último gira el primero).
+pwhint.15.3,"Panel 1 once, panel 3 twice.","Feld 1 einmal, Feld 3 zweimal.","Panneau 1 une fois, panneau 3 deux fois.","Pannello 1 una volta, pannello 3 due volte.","Panel 1 una vez, panel 3 dos veces."
+pwhint.16.1,The clockwork needs winding.,Das Uhrwerk muss aufgezogen werden.,Le mécanisme doit être remonté.,Il meccanismo va caricato.,Hay que dar cuerda al mecanismo.
+pwhint.16.2,A crank lies nearby.,Eine Kurbel liegt in der Nähe.,Une manivelle traîne à côté.,C'è una manovella lì vicino.,Hay una manivela cerca.
+pwhint.16.3,Tap the crank.,Tippe auf die Kurbel.,Touche la manivelle.,Tocca la manovella.,Toca la manivela.
+pwhint.17.1,Wind it up.,Zieh es auf.,Remonte-le.,Caricalo.,Dale cuerda.
+pwhint.17.2,The clockwork.,Das Uhrwerk.,Le mécanisme.,Il meccanismo.,El mecanismo.
+pwhint.17.3,Use the crank on the clockwork.,Benutze die Kurbel am Uhrwerk.,Utilise la manivelle sur le mécanisme.,Usa la manovella sul meccanismo.,Usa la manivela en el mecanismo.
+pwhint.18.1,Every lighthouse flashes its own way.,Jeder Leuchtturm blinkt auf seine Art.,Chaque phare a ses propres éclats.,Ogni faro lampeggia a modo suo.,Cada faro destella a su manera.
+pwhint.18.2,"The chart shows this island's light, marked with a puffin.","Die Karte zeigt das Licht dieser Insel, mit einem Papageitaucher markiert.","La carte montre le feu de l'île, marqué d'un macareux.","La carta mostra la luce dell'isola, segnata con una pulcinella.","La carta muestra la luz de la isla, marcada con un frailecillo."
+pwhint.18.3,"Short, short, long: pattern 5.","Kurz, kurz, lang: Muster 5.","Court, court, long : motif 5.","Corto, corto, lungo: schema 5.","Corto, corto, largo: patrón 5."
+pwhint.19.1,All set?,Alles bereit?,Tout est prêt ?,Tutto pronto?,¿Todo listo?
+pwhint.19.2,"Oil, clear lens, wound clockwork, the right flashes.","Öl, klare Linse, aufgezogenes Uhrwerk, die richtigen Blitze.","Huile, lentille claire, mécanisme remonté, bons éclats.","Olio, lente pulita, meccanismo carico, lampi giusti.","Aceite, lente limpia, mecanismo con cuerda, destellos correctos."
+pwhint.19.3,Use the lit lantern on the lamp.,Benutze die brennende Laterne an der Lampe.,Utilise la lanterne allumée sur la lampe.,Usa la lanterna accesa sulla lanterna del faro.,Usa el farol encendido en la lámpara.

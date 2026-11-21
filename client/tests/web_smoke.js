@@ -78,14 +78,14 @@ function check(ok, what) {
   check((await mode()) === "play" && (await state()).flags.includes("lamp_lit"), "the saved game continues after a reload");
   // Other cards, filters and orders: [chip taps after a reload, card button, room].
   // The filters are remembered, so each step starts where the last one left
-  // off (sort: newest, easiest, oldest; set: all, the series, 1 to 9).
+  // off (sort: newest, easiest, oldest; set: all, then each set in order).
   const SORT = [776, 39], HARD = [509, 74], LEVELS = [285, 74], SET = [630, 74], OPEN = [418, 39];
   for (const [chips, x, y, id] of [
     [[], 873, 130, "light"], [[], 402, 214, "obs"],
-    [[SORT], 402, 130, "school"], [[], 873, 130, "mirrors"],
-    [[HARD], 402, 130, "mill"], [[SET], 402, 130, "housenow"],
-    [[LEVELS], 873, 214, "house1905"], [[SET, SORT], 873, 130, "light"],
-    [[SET, SET, OPEN], 402, 130, "beach"]]) {
+    [[SORT], 402, 130, "winter"], [[], 873, 130, "autumn"],
+    [[HARD], 402, 130, "mill"], [[SET], 402, 130, "obs"],
+    [[LEVELS], 873, 130, "light"], [[SET, SET, SET, SET, SET, SET], 873, 214, "house1905"],
+    [[SET, SET, SET, SET, OPEN], 402, 214, "summer"]]) {
     await page.reload();
     await page.waitForFunction(() => window.hut && window.hut.mode === "title", null, { timeout: 60000 });
     await page.waitForTimeout(500);

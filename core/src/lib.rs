@@ -24,6 +24,7 @@
 
 pub mod alch;
 pub mod attic;
+pub mod autumn;
 pub mod aviary;
 pub mod beach;
 pub mod chess;
@@ -35,6 +36,7 @@ pub mod house1938;
 pub mod house1969;
 pub mod housenow;
 pub mod hut;
+pub mod island;
 pub mod kit;
 pub mod light;
 pub mod magic;
@@ -51,11 +53,14 @@ pub mod railway;
 pub mod school;
 pub mod set9;
 pub mod ship;
+pub mod spring;
+pub mod summer;
 pub mod theatre;
 pub mod toyshop;
 pub mod train;
 pub mod tree;
 pub mod watch;
+pub mod winter;
 pub mod zeppelin;
 
 /// The catalogue: id, the kind of each puzzle in order, target minutes for
@@ -66,7 +71,7 @@ pub mod zeppelin;
 /// deduction (one twist), X hard deduction (a longer chain or grid).
 /// The difficulty shown follows from the kinds ([`difficulty`]); the time
 /// is separate (`tools/estimate.py` estimates it from the kinds).
-pub const ROOMS: [(&str, &str, u32); 32] = [
+pub const ROOMS: [(&str, &str, u32); 36] = [
     ("hut", "ACABCDDBB", hut::PAR_MINUTES),
     ("light", "ACCBFMDEDA", light::PAR_MINUTES),
     ("obs", "CCMEEDXCAC", obs::PAR_MINUTES),
@@ -99,6 +104,10 @@ pub const ROOMS: [(&str, &str, u32); 32] = [
     ("aviary", "FAAFAAACACCAAACADDACACCA", aviary::PAR_MINUTES),
     ("mirrors", "FACAAFACCCCADCCADAFCAACA", mirrors::PAR_MINUTES),
     ("school", "FAAACACACDCACAFCDCCCMCAA", school::PAR_MINUTES),
+    ("spring", "FAAACACAAAACFADCAAACCCA", spring::PAR_MINUTES),
+    ("summer", "FAAAFAAAADAACACCCCCA", summer::PAR_MINUTES),
+    ("autumn", "FAAFADAACACCAFAAACA", autumn::PAR_MINUTES),
+    ("winter", "FAAAAACCCACAAAMAACA", winter::PAR_MINUTES),
 ];
 
 /// 1 easy, 2 medium, 3 hard: how hard the thinking is, not how long it
@@ -282,6 +291,10 @@ impl Room {
                     Some("aviary") => *self = Room::Kit(kit::State::new(&aviary::SPEC)),
                     Some("mirrors") => *self = Room::Kit(kit::State::new(&mirrors::SPEC)),
                     Some("school") => *self = Room::Kit(kit::State::new(&school::SPEC)),
+                    Some("spring") => *self = Room::Kit(kit::State::new(&spring::SPEC)),
+                    Some("summer") => *self = Room::Kit(kit::State::new(&summer::SPEC)),
+                    Some("autumn") => *self = Room::Kit(kit::State::new(&autumn::SPEC)),
+                    Some("winter") => *self = Room::Kit(kit::State::new(&winter::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -340,8 +353,23 @@ mod tests {
             (&aviary::SPEC, ROOMS[29].1),
             (&mirrors::SPEC, ROOMS[30].1),
             (&school::SPEC, ROOMS[31].1),
+            (&spring::SPEC, ROOMS[32].1),
+            (&summer::SPEC, ROOMS[33].1),
+            (&autumn::SPEC, ROOMS[34].1),
+            (&winter::SPEC, ROOMS[35].1),
         ] {
             assert_eq!(spec.puzzles.len(), kinds.len(), "{}", spec.id);
+            // A dial's name is a key of the state: it may not hide the
+            // state's own fields.
+            for d in spec.dials {
+                assert!(
+                    !["room", "flags", "inv", "hints", "solved", "act", "secs", "done", "halves"]
+                        .contains(&d.name),
+                    "{}: dial {}",
+                    spec.id,
+                    d.name
+                );
+            }
         }
         assert_eq!(hut::Hut::new().solved().len(), ROOMS[0].1.len());
         assert!(r.call("tap coat").contains("msg.coat_matches"));
@@ -379,6 +407,10 @@ mod tests {
             "aviary",
             "mirrors",
             "school",
+            "spring",
+            "summer",
+            "autumn",
+            "winter",
         ] {
             assert!(r
                 .call(&format!("room {id}"))
@@ -653,6 +685,85 @@ mod tests {
                     "scsharpener",
                     "scpencils",
                 ],
+            ),
+            (
+                &spring::SPEC,
+                [
+                    digits("call", 2),
+                    digits("say", 3),
+                    ["n", "e", "s", "w"].map(|d| format!("row {d}")).to_vec(),
+                    vec![
+                        "call".into(),
+                        "lamb".into(),
+                        "time 7".into(),
+                        "use psrod jetty".into(),
+                        "use psline psworms".into(),
+                        "tap bell".into(),
+                    ],
+                ]
+                .concat(),
+                vec![],
+                vec!["psline", "psworms", "psrod", "pswhistle"],
+            ),
+            (
+                &summer::SPEC,
+                [
+                    digits("flash", 2),
+                    digits("bale", 4),
+                    digits("say", 3),
+                    vec![
+                        "call".into(),
+                        "kite out".into(),
+                        "kite in".into(),
+                        "time 9".into(),
+                        "time 14".into(),
+                        "tap wall".into(),
+                        "tap horn".into(),
+                        "use pusewing pukite".into(),
+                        "use putwine pumended".into(),
+                    ],
+                ]
+                .concat(),
+                vec![],
+                vec!["pukite", "pusewing", "pumended", "putwine", "puflyer"],
+            ),
+            (
+                &autumn::SPEC,
+                [
+                    digits("say", 3),
+                    vec![
+                        "call".into(),
+                        "stroke".into(),
+                        "time 5".into(),
+                        "time 17".into(),
+                        "tap tree".into(),
+                        "tap oven".into(),
+                        "tap crank".into(),
+                        "tap cup".into(),
+                        "use paflour paeggs".into(),
+                        "use paapples padough".into(),
+                    ],
+                ]
+                .concat(),
+                vec![],
+                vec!["paflour", "paeggs", "padough", "pacider"],
+            ),
+            (
+                &winter::SPEC,
+                [
+                    digits("key", 5),
+                    digits("panel", 3),
+                    digits("say", 3),
+                    ["n", "e", "s", "w"].map(|d| format!("skate {d}")).to_vec(),
+                    vec![
+                        "call".into(),
+                        "use pwdry pwlantern".into(),
+                        "use pwlit lamp".into(),
+                    ],
+                ]
+                .concat(),
+                vec![],
+                vec!["pwlantern", "pwdry", "pwskates"],
             ),
         ];
         let mut problems = vec![];

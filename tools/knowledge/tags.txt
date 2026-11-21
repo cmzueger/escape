@@ -353,3 +353,92 @@ photo: M | mech_slide | 1 1
 pegs: C | code_map | 1 2
 pencils: A | item_combine | 1 1
 door: A | combo_finale | 1 1
+
+[spring]
+boots: F | find_container | 1 1
+boathouse: A | item_use | 1 2
+woodpile: A | item_use | 1 1
+planks: A | item_use | 1 2
+tools: C | item_use combo_chain | 1 1
+oars: A | item_use | 1 1
+row: C | game_skill code_combine space_split | 2 2
+nest: A | item_use | 1 1
+pip: A | item_use | 1 2
+spade: A | item_use | 1 2
+line: A | item_use | 1 1
+rod: C | item_combine | 1 1
+fish: F | find_moment game_skill | 1 1
+feed: A | item_use | 1 2
+lamb: D | mech_path combo_trial | 1 1
+rows: C | read_riddle code_map | 1 2
+can: A | item_use | 1 1
+well: A | item_use | 1 1
+water: A | item_use | 1 1
+maggie: C | talk | 1 1
+flags: C | code_combine combo_text_mech | 2 2
+call: C | sense_music game_skill | 1 2
+bell: A | combo_finale | 1 1
+
+[summer]
+pots: F | find_container | 1 1
+door: A | item_use | 1 2
+oil: A | item_use | 1 1
+oiled: A | item_use | 1 1
+pipscrew: F | find_moment | 1 1
+screw: A | item_use | 1 2
+barn: A | item_use | 1 1
+matches: A | item_use | 1 1
+lit: A | item_use | 1 2
+lens: D | mech_rotate space_look | 1 1
+kite: A | item_use | 1 1
+sewing: A | item_use | 1 2
+mend: C | item_combine | 1 1
+twine: A | item_use | 1 1
+rig: C | item_combine | 1 1
+fly: C | game_skill read_rules | 2 2
+tom: C | talk | 1 1
+signal: C | code_order combo_cross_room | 2 2
+hay: C | code_order | 1 1
+horn: A | combo_finale | 1 1
+
+[autumn]
+scarecrow: F | find_hidden | 1 1
+shed: A | item_use | 1 1
+net: A | item_use | 1 1
+shake: F | find_moment game_skill | 1 1
+press: A | item_use | 1 2
+screw: D | mech_rotate combo_trial | 1 1
+bottles: A | item_use | 1 1
+cider: A | item_use | 1 1
+trader: C | talk | 1 2
+eggs: A | item_use | 1 2
+dough: C | item_combine | 1 1
+pie: C | item_combine | 1 1
+oven: A | item_use | 1 1
+golden: F | find_moment game_skill | 1 1
+judges: A | item_use | 1 2
+veg: A | item_use combo_early_late | 1 1
+crew: A | item_use | 1 2
+race: C | game_skill sense_listen | 1 1
+cup: A | combo_finale | 1 1
+
+[winter]
+scuttle: F | find_container | 1 1
+door: A | item_use | 1 1
+skates: A | item_use | 1 1
+matches: A | item_use | 1 1
+dry: A | item_use | 1 1
+lantern: A | item_use | 1 1
+light: C | item_combine | 1 1
+maggie: C | talk | 1 1
+skate: C | game_skill code_combine space_split | 2 2
+cave: A | item_use | 1 2
+carol: C | sense_music game_skill | 1 2
+can: A | item_use | 1 1
+oil: A | item_use | 1 1
+oiled: A | item_use | 1 2
+lens: M | mech_rotate combo_precise | 1 1
+crank: A | item_use | 1 1
+wind: A | item_use | 1 1
+pattern: C | read_rules | 1 1
+lamp: A | combo_finale | 1 2

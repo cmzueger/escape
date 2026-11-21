@@ -778,3 +778,95 @@ door opens when all are done. Kinds FAAACACACDCACAFCDCCCMCAA.
 23. A: pencils and sharpener.
 24. A: the door key from behind the photo, in the door (all tasks done;
     the task list ticks them off).
+
+## Puffin Island · Spring (easy, `spring`, prefix ps, views PS1 jetty, PS2 cottage, PS3 cliffs, PS4 meadow)
+Maggie is laid up; the puffins land at dusk and the supply boat is due.
+1. F: the boathouse key in Maggie's boots.
+2. A: key on the boathouse: oars, toolbox, spade.
+3. A: planks from the woodpile.
+4. A: planks across the jetty's gap.
+5. C: the toolbox on the gap: the jetty is mended.
+6. A: oars in the boat.
+7. C: rowing to the bird rock on the chart (6 by 5; rocks), the tide clock
+   says the tide runs east (each stroke drifts one cell east): **E N N N N**.
+   Straight north from the jetty drifts onto a rock.
+8. A: Pip in the nest on the rock.
+9. A: Pip into the box by the stove.
+10. A: spade on the patch: worms.
+11. A: the fishing line in Maggie's coat.
+12. C: worms on the line.
+13. F: the line from the mended jetty while the float bobs (last 3 s of 8).
+14. A: fish to Pip.
+15. D: the meadow gates: **right, any, left** lead the lamb to its pen
+    (other ways: garden, bog, cliff path).
+16. C: the almanac's verse (beans want sun, cabbage the wall's shade,
+    carrots between): rows shade to sun **cabbage, carrot, bean**.
+17. A: the watering can at the well. 18. A: filled. 19. A: on the sown patch.
+20. C: Maggie (once Pip is home): Pip is safe, then **the jetty is mended**
+    → she names the signals.
+21. C: the flagpole: her three messages looked up in the signal book: flags
+    **5, 2, 4** (top to bottom).
+22. C: the bone whistle from the shelf, the almanac's puffin call on the
+    cliff ledge: **long, short, long, long**.
+23. A: the jetty bell once all is done: the supply boat comes.
+
+## Puffin Island · Summer (easy, `summer`, prefix pu, views PU1 harbour, PU2 lighthouse, PU3 barn, PU4 headland)
+A squall; Tom's dinghy is caught at the sea stack; Ewan's boat is out.
+1. F: the lighthouse key in a lobster pot. 2. A: the door. 3. A: oil from
+the store. 4. A: oil in the lamp.
+5. F: Pip lands on the harbour wall now and then (last 3 s of 10) with
+   something shiny: tap him then → the lens screw.
+6. A: the screw in the lens. 7. A: the barn door. 8. A: matches in the barn.
+9. A: matches on the oiled lamp.
+10. D: the lens turned until the beam falls on Ewan's boat (**7th** stop).
+11. A: the old kite (barn). 12. A: the sewing box (lighthouse). 13. C: mend
+the kite. 14. A: twine (barn). 15. C: twine on the mended kite.
+16. C: at the headland: let out with the gusts (last 2 s of 5, the wind sock
+    stands out), hold in the calm (letting out in the calm drops it two);
+    five gusts carry the line to Tom.
+17. C: Tom shouts across: say the line is fast, ask what to send Ewan →
+    "harbour safe".
+18. C: the shutter, the code card's "harbour safe": **short, long, long,
+    short, long**.
+19. C: the bales into the loft as the barn's sign shows the stack: marks
+    **3, 1, 4, 2**; a wrong one and the stack falls.
+20. A: the harbour horn: Ewan comes home.
+
+## Puffin Island · Autumn (medium, `autumn`, prefix pa, views PA1 orchard, PA2 cider house, PA3 market, PA4 bay)
+Market day and the regatta.
+1. F: the shed key under the scarecrow's hat. 2. A: the shed: net and
+basket. 3. A: the net under the apple tree.
+4. F: shake the tree while the wind blows (last 2 s of 6): apples.
+5. A: apples in the press.
+6. D: the press screw to **6th** notch (0 to 7): looser gives nothing,
+   tighter bursts (back to the start).
+7. A: bottles. 8. A: bottles at the press: cider.
+9. C: the trader: "**cider for flour**", then accept his fair offer → flour.
+10. A: eggs from the hen house. 11. C: flour and eggs: dough. 12. C: dough
+and apples: the pie. 13. A: pie in the oven.
+14. F: take it out while it glows golden (last 3 s of 9).
+15. A: pie to the judges: a ribbon.
+16. A: the basket at the spring patch: vegetables (carry-over).
+17. A: vegetables to the crew: a seat in the boat.
+18. C: the regatta: a stroke on each drum beat (1 s in 2); six lengths
+    ahead within ten strokes; off-beat loses a length.
+19. A: the cup (ribbon and race won).
+
+## Puffin Island · Winter (easy, `winter`, prefix pw, views PW1 lake, PW2 cottage, PW3 lamp room, PW4 ice cave)
+The longest night; the lamp is out; a ship is due.
+1. F: the shovel in the coal scuttle. 2. A: dig out the door. 3. A: skates.
+4. A: wet matches (drawer). 5. A: dried at the stove. 6. A: the lantern.
+7. C: matches and lantern: lit.
+8. C: Maggie (once dug out): ask about **the oil**, then **the icicles**
+   → she tells of the almanac's carol.
+9. C: skating to the cave (7 by 6; snowbanks stop you, thin ice marked only
+   in the almanac): **N E S W N E**. North, east, north breaks the ice.
+10. A: the lit lantern in the cave.
+11. C: the icicles (left to right 1 to 5), the carol: **3 5 2 4 1**.
+12. A: the oil can behind the ice. 13. A: filled at the barrel. 14. A: oil
+in the lamp.
+15. M: the lens panels (each turn moves its right neighbour too, the last
+    the first): turn panel 1 once and panel 3 twice.
+16. A: the crank. 17. A: wound into the clockwork.
+18. C: the chart of lights: this light's character, **pattern 5** of 6.
+19. A: the lit lantern to the lamp: the light shines, the northern lights.

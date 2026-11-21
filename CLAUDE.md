@@ -22,7 +22,9 @@ set (owner's choice) The Night Edition (`press`), The Great Vaudini
 (`magic`), Rain on Gale Street (`noir`); eighth set (owner's choice) The
 Filter Hall (`filter`), The 8:15 to Nowhere (`railway`), Harvest Moon
 (`mill`); ninth set (owner's choice, long and easy to medium) The Glass
-Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
+Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`); the
+series Puffin Island (owner's choice: one island in four seasons) `spring`,
+`summer`, `autumn`, `winter`.
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
   `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
@@ -40,11 +42,15 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
   `praline.rs`, `toyshop.rs`, `zeppelin.rs`, `ship.rs`, `polar.rs`, the
   house rooms, `press.rs`, `magic.rs`, `noir.rs`, `filter.rs`, `railway.rs`,
   `mill.rs`, `aviary.rs`, `mirrors.rs`, `school.rs` (helpers for these three in
-  `set9.rs`: two items combined, taps in an order, a moment). Write new
+  `set9.rs`: two items combined, taps in an order, a moment), `spring.rs`,
+  `summer.rs`, `autumn.rs`, `winter.rs` (small games in `island.rs`: rowing
+  with a tide, skating that slides, a kite in gusts, strokes on a beat).
+  A dial may not be named like a key of the state (`flags`, `inv`, …: a
+  test checks it; a dial "flags" once hid every flag). Write new
   rooms this way. Their pictures are in `art_set2.gd` … `art_set6.gd`, `art_house.gd`,
-  `art_set7.gd`, `art_set8.gd`, `art_set9.gd` (each art script extends the one before;
+  `art_set7.gd`, `art_set8.gd`, `art_set9.gd`, `art_island.gd` (each art script extends the one before;
   constants and helpers must not reuse a parent's name), hotspots in
-  `views_set2.gd` … `views_set6.gd`, `views_house.gd`, `views_set7.gd`, `views_set8.gd`, `views_set9.gd`. Item names are global (`item.<name>`
+  `views_set2.gd` … `views_set6.gd`, `views_house.gd`, `views_set7.gd`, `views_set8.gd`, `views_set9.gd`, `views_island.gd`. Item names are global (`item.<name>`
   in the texts): pick names no other room uses. Kit locks and
   dials are moved with `turn` and `flip`.
 - A new room: a kit spec in `core`, an entry in `ROOMS` and `Room::call`, views and
@@ -128,6 +134,21 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.16.0** (2026-11-21): the series Puffin Island, chosen by the owner
+  from four series ideas (one island in four seasons, episodes like the
+  aviary, each playable alone; a running story with carry-overs; the
+  owner's favourite small games: rowing and the regatta, skating on thin
+  ice, a kite in the gusts). Spring (rowing through fog with a tide, Pip the
+  puffin chick, a lamb led through gates, a patch sown from a verse, flags,
+  a puffin call), Summer (a kite carried by gusts to the sea stack, the
+  lighthouse beam turned onto a boat, a signal flashed, Pip bringing a
+  screw), Autumn (apples shaken in the wind, a cider press, a trade, a pie
+  taken out when golden, the regatta rowed on the drum's beat, the spring
+  patch harvested), Winter (skating round thin ice marked only in the
+  almanac, icicles rung with a carol, coupled lens panels, the light's
+  character from a chart). Text prefixes ps, pu, pa, pw; views PS, PU, PA,
+  PW. The catalogue's set chip now counts each set by its index in `SETS`
+  (series named by `SERIES`). Catalogue: 36 rooms.
 - **0.15.0** (2026-11-21): every target from the learned model, asked for by
   the owner ("my stats should only help to learn and tune that model"):
   0.8 times the predicted owner minutes, rounded up below 5 minutes;
@@ -339,6 +360,7 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
 - The owner's play test of the seventh set (built 0.10.0) and its targets.
 - The owner's play test of the eighth set (built 0.11.0) and its targets.
 - The owner's play test of Detention (built 0.12.0) and its target.
+- The owner's play test of the series Puffin Island (built 0.16.0).
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, and an
   opinion on the sounds, which were made without anyone hearing them.
