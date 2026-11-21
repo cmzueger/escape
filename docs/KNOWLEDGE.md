@@ -15,57 +15,57 @@ answers (1 to 5). Rooms: puzzles using it across the catalogue.
 
 | Element | Group | Minutes | Hints | Fun | Difficulty | More? | Puzzles |
 |---|---|---:|---:|---:|---:|---|---:|
-| hidden in plain sight | find | +0.7 | 0.9 | 4 | 3 | more | 15 |
-| a tiny detail | find | -0.1 | 0.0 | 4 | 3 | more | 13 |
-| search inside things | find | -0.3 | 0.0 | 3 | 3 | same | 12 |
-| only visible at a moment | find | -0.5 | 0.0 | 5 | 3 | more | 18 |
+| hidden in plain sight | find | +0.7 | 0.9 | 4 | 3 | more | 16 |
+| a tiny detail | find | -0.1 | 0.0 | 4 | 3 | more | 15 |
+| search inside things | find | -0.3 | 0.0 | 3 | 3 | same | 14 |
+| only visible at a moment | find | -0.5 | 0.0 | 5 | 3 | more | 21 |
 | a decoy | find | +0.9 | 3.0 | 3 | 4 | same | 13 |
 | a letter that points somewhere | read | +0.5 | 0.0 | 5 | 3 | more | 20 |
 | times in a log | read | +0.2 | 0.0 | 3 | 3 | less | 9 |
-| numbers hidden in a text | read | -0.0 | 0.0 | 3 | 3 | same | 4 |
+| numbers hidden in a text | read | -0.0 | 0.0 | 3 | 3 | same | 5 |
 | a riddle or poem | read | -0.1 | 0.0 | 5 | 4 | more | 6 |
-| statements where someone lies | read | +0.0 | - | 3 | 2 | same | 2 |
-| rules or instructions | read | -0.2 | 0.4 | 4 | 3 | more | 22 |
+| statements where someone lies | read | +0.0 | - | 3 | 2 | same | 3 |
+| rules or instructions | read | -0.2 | 0.4 | 4 | 3 | more | 24 |
 | text mirrored or backwards | read | +0.1 | - | 3 | 2 | same | 12 |
 | a number straight into a lock | code | +0.3 | 0.0 | 1 | 1 | less | 9 |
 | two sources make one code | code | +0.2 | 0.0 | 3 | 2 | same | 13 |
 | count things | code | -0.0 | - | 2 | 1 | less | 4 |
 | a little arithmetic | code | +0.5 | - | 3 | 3 | same | 11 |
-| a mapping | code | +0.2 | 0.0 | 3 | 2 | less | 30 |
-| the right order | code | -0.3 | 0.0 | 4 | 3 | more | 23 |
+| a mapping | code | +0.2 | 0.0 | 3 | 2 | less | 31 |
+| the right order | code | -0.3 | 0.0 | 4 | 3 | more | 26 |
 | sliding blocks | mech | +0.0 | - | 5 | 2 | more | 4 |
-| rotate and align | mech | +0.4 | 0.3 | 4 | 3 | more | 21 |
+| rotate and align | mech | +0.4 | 0.3 | 4 | 3 | more | 24 |
 | a tilt maze | mech | -0.4 | 0.0 | 5 | 3 | more | 2 |
 | pouring and balancing | mech | +0.2 | - | 4 | 3 | same | 6 |
 | switches with feedback | mech | +0.4 | 0.5 | 4 | 3 | more | 16 |
 | thread a path | mech | -0.1 | - | 5 | 3 | more | 10 |
 | assemble pieces | mech | -0.4 | 0.0 | 4 | 2 | more | 5 |
 | a special light reveals | sense | +0.0 | 0.0 | 5 | 2 | more | 7 |
-| reflections | sense | -0.3 | 0.0 | 4 | 4 | same | 7 |
-| play a melody | sense | -0.1 | 0.0 | 5 | 3 | more | 10 |
+| reflections | sense | -0.3 | 0.0 | 4 | 4 | same | 8 |
+| play a melody | sense | -0.1 | 0.0 | 5 | 3 | more | 11 |
 | listen for a clue | sense | -0.1 | 0.0 | 5 | 3 | more | 5 |
-| one clue over two views | space | -0.2 | 0.0 | 5 | 4 | more | 18 |
-| look from one view into another | space | -0.7 | 0.0 | 4 | 3 | more | 17 |
+| one clue over two views | space | -0.2 | 0.0 | 5 | 4 | more | 19 |
+| look from one view into another | space | -0.7 | 0.0 | 4 | 3 | more | 18 |
 | change here, see there | space | +0.4 | 0.0 | 5 | 4 | more | 10 |
-| how the rooms lie | space | -0.0 | 0.0 | 4 | 4 | same | 9 |
+| how the rooms lie | space | -0.0 | 0.0 | 4 | 4 | same | 13 |
 | a conversation with choices | people | -0.3 | 0.0 | 5 | 3 | more | 13 |
-| a logic grid | people | +0.3 | - | 5 | 4 | more | 9 |
-| obvious item, obvious place | items | -0.1 | 0.0 | 3 | 1 | same | 139 |
-| combine two items | items | -0.1 | 0.0 | 4 | 2 | same | 16 |
+| a logic grid | people | +0.3 | - | 5 | 4 | more | 10 |
+| obvious item, obvious place | items | -0.1 | 0.0 | 3 | 1 | same | 163 |
+| combine two items | items | -0.1 | 0.0 | 4 | 2 | same | 17 |
 | an unexpected use | items | -0.1 | 0.0 | 5 | 4 | more | 6 |
-| a small game of skill (walk a maze, play a tune, a well-timed tap) | game | -0.3 | 0.0 | 5 | 2 | more | 19 |
+| a small game of skill (walk a maze, play a tune, a well-timed tap) | game | -0.3 | 0.0 | 5 | 2 | more | 28 |
 | a decoy only a twist exposes | combination | +0.0 | - | 2 | 4 | less | 3 |
 | a text explains a mechanism | combination | +0.0 | - | 3 | 3 | same | 3 |
 | a long chain | combination | +0.0 | - | 4 | 4 | same | 1 |
 | several puzzles open at once | combination | +0.0 | - | 3 | 4 | same | 1 |
 | a tool used again later | combination | +1.6 | - | 4 | 4 | same | 8 |
 | seen early, needed late | combination | +0.0 | - | 3 | 3 | same | 3 |
-| a story note that is also a clue | combination | -0.2 | 0.0 | 4 | 3 | same | 13 |
+| a story note that is also a clue | combination | -0.2 | 0.0 | 4 | 3 | same | 14 |
 | atmosphere that leads nowhere | combination | +0.0 | - | 4 | 3 | more | 0 |
 | a puzzle that needs two rooms | combination | +0.0 | - | 5 | 4 | more | 10 |
 | trying is the way | combination | -0.4 | - | 3 | 2 | same | 9 |
-| planning, or it resets | combination | -0.4 | 0.0 | 3 | 3 | same | 6 |
-| a finale that uses the whole room | combination | +0.1 | 0.0 | 4 | 4 | more | 22 |
+| planning, or it resets | combination | -0.4 | 0.0 | 3 | 3 | same | 7 |
+| a finale that uses the whole room | combination | +0.1 | 0.0 | 4 | 4 | more | 25 |
 
 Minutes per puzzle kind: action 0.1, lookup 0.6, combine 0.9, find 1.4, mechanism -0.2, hard mechanism 2.5, deduction 3.9, hard deduction 7.8; each extra clue source -0.0, each extra view +0.3, an easy step in a big room (24 puzzles) +0.2.
 
@@ -114,6 +114,9 @@ answers). Fun: forecast from the elements, then the owner's rating if given.
 | autumn | 19 | 9.7 | - | medium | 1.8 | 3.8 | - |
 | winter | 19 | 10.6 | - | easy | 1.8 | 3.6 | - |
 | carnival | 23 | 17.9 | - | medium | 1.9 | 3.6 | - |
+| moon | 20 | 12.5 | - | medium | 1.9 | 3.7 | - |
+| balloon | 16 | 13.0 | - | medium | 2.2 | 3.7 | - |
+| dragon | 15 | 10.3 | - | medium | 2.1 | 3.9 | - |
 
 Fun forecasts are shifted by -0.4 to match the rooms the owner rated (14).
 
@@ -147,6 +150,9 @@ Fun forecasts are shifted by -0.4 to match the rooms the owner rated (14).
 - **autumn**: 3 simple steps (actions or lookups) in a row; five or more puzzles in a row without a mechanism; a small game of skill (walk a maze, play a tune, a well-timed tap) 3 times.
 - **winter**: 5 simple steps (actions or lookups) in a row; five or more puzzles in a row without a mechanism.
 - **carnival**: 4 simple steps (actions or lookups) in a row; five or more puzzles in a row without a mechanism; a small game of skill (walk a maze, play a tune, a well-timed tap) 3 times; how the rooms lie 3 times.
+- **moon**: 5 simple steps (actions or lookups) in a row; five or more puzzles in a row without a mechanism; a small game of skill (walk a maze, play a tune, a well-timed tap) 3 times.
+- **balloon**: 4 simple steps (actions or lookups) in a row; five or more puzzles in a row without a mechanism.
+- **dragon**: five or more puzzles in a row without a mechanism; a small game of skill (walk a maze, play a tune, a well-timed tap) 4 times.
 
 ## The owner's notes
 

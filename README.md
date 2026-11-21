@@ -41,6 +41,9 @@ Escape rooms played in the browser. Offline, no accounts.
 | Puffin Island · Autumn | medium | 8 min | Episode 3: market day. Nineteen puzzles; apples, cider, a pie and the regatta. |
 | Puffin Island · Winter | easy | 9 min | Episode 4: the longest night. Nineteen puzzles; skating on thin ice, an ice cave and the lighthouse lamp. |
 | Midnight in Serenissima | medium | 14 min | Carnival night in a city of canals: twenty places walked street by street, with a map. Twenty-three puzzles; a ring toss, glass blown at the furnace, a gondola through the canals and the fireworks. |
+| The Moon-Viewing Garden | medium | 10 min | A tea garden on the night of the harvest moon. Twenty puzzles; gravel to rake, koi to feed, tea to make, a paper boat fanned to a lantern. |
+| The Great Balloon Race | medium | 10 min | 1909: fly the mail to the right farm. Sixteen puzzles; winds at three heights, two bags of sand, a hook and a carrier pigeon. |
+| The Dragon's Egg | medium | 8 min | Bring a stolen egg back to a sleeping dragon's nest. Fifteen puzzles; a lullaby on bells, steps between snores, a sliding obsidian floor. |
 
 Play: https://cmzueger.github.io/escape/
 

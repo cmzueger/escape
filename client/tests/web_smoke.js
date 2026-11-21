@@ -82,7 +82,7 @@ function check(ok, what) {
   const SORT = [776, 39], HARD = [509, 74], LEVELS = [285, 74], SET = [630, 74], OPEN = [418, 39];
   for (const [chips, x, y, id] of [
     [[], 873, 130, "light"], [[], 402, 214, "obs"],
-    [[SORT], 402, 130, "carnival"], [[], 873, 130, "winter"],
+    [[SORT], 402, 130, "dragon"], [[], 873, 130, "balloon"],
     [[HARD], 402, 130, "mill"], [[SET], 402, 130, "obs"],
     [[LEVELS], 873, 130, "light"], [[SET, SET, SET, SET, SET, SET], 873, 214, "house1905"],
     [[SET, SET, SET, SET, OPEN], 402, 214, "summer"]]) {

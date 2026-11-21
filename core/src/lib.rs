@@ -26,9 +26,11 @@ pub mod alch;
 pub mod attic;
 pub mod autumn;
 pub mod aviary;
+pub mod balloon;
 pub mod beach;
 pub mod carnival;
 pub mod chess;
+pub mod dragon;
 pub mod filter;
 pub mod gondola;
 pub mod house;
@@ -43,6 +45,7 @@ pub mod light;
 pub mod magic;
 pub mod mill;
 pub mod mirrors;
+pub mod moon;
 pub mod museum;
 pub mod noir;
 pub mod obs;
@@ -72,7 +75,7 @@ pub mod zeppelin;
 /// deduction (one twist), X hard deduction (a longer chain or grid).
 /// The difficulty shown follows from the kinds ([`difficulty`]); the time
 /// is separate (`tools/estimate.py` estimates it from the kinds).
-pub const ROOMS: [(&str, &str, u32); 37] = [
+pub const ROOMS: [(&str, &str, u32); 40] = [
     ("hut", "ACABCDDBB", hut::PAR_MINUTES),
     ("light", "ACCBFMDEDA", light::PAR_MINUTES),
     ("obs", "CCMEEDXCAC", obs::PAR_MINUTES),
@@ -110,6 +113,9 @@ pub const ROOMS: [(&str, &str, u32); 37] = [
     ("autumn", "FAAFADAACACCAFAAACA", autumn::PAR_MINUTES),
     ("winter", "FAAAAACCCACAAAMAACA", winter::PAR_MINUTES),
     ("carnival", "AFAAAAFAAEABDAADCAADAAB", carnival::PAR_MINUTES),
+    ("moon", "FCAAFCAADAAAAACAADMA", moon::PAR_MINUTES),
+    ("balloon", "AFAAAFCAAEDMAAAB", balloon::PAR_MINUTES),
+    ("dragon", "AACCDEAFCADDADA", dragon::PAR_MINUTES),
 ];
 
 /// 1 easy, 2 medium, 3 hard: how hard the thinking is, not how long it
@@ -298,6 +304,9 @@ impl Room {
                     Some("autumn") => *self = Room::Kit(kit::State::new(&autumn::SPEC)),
                     Some("winter") => *self = Room::Kit(kit::State::new(&winter::SPEC)),
                     Some("carnival") => *self = Room::Kit(kit::State::new(&carnival::SPEC)),
+                    Some("moon") => *self = Room::Kit(kit::State::new(&moon::SPEC)),
+                    Some("balloon") => *self = Room::Kit(kit::State::new(&balloon::SPEC)),
+                    Some("dragon") => *self = Room::Kit(kit::State::new(&dragon::SPEC)),
                     other => {
                         return format!("{{\"ok\":false,\"error\":\"no room {}\"}}", other.unwrap_or(""))
                     }
@@ -361,6 +370,9 @@ mod tests {
             (&autumn::SPEC, ROOMS[34].1),
             (&winter::SPEC, ROOMS[35].1),
             (&carnival::SPEC, ROOMS[36].1),
+            (&moon::SPEC, ROOMS[37].1),
+            (&balloon::SPEC, ROOMS[38].1),
+            (&dragon::SPEC, ROOMS[39].1),
         ] {
             assert_eq!(spec.puzzles.len(), kinds.len(), "{}", spec.id);
             // A dial's name is a key of the state: it may not hide the
@@ -416,6 +428,9 @@ mod tests {
             "autumn",
             "winter",
             "carnival",
+            "moon",
+            "balloon",
+            "dragon",
         ] {
             assert!(r
                 .call(&format!("room {id}"))
@@ -790,6 +805,63 @@ mod tests {
                 .concat(),
                 vec!["mask0", "mask1", "mask2", "mask3", "mask4", "mask5", "casketkey"],
                 vec!["srflame", "srlantern"],
+            ),
+            (
+                &moon::SPEC,
+                [
+                    digits("koi", 4),
+                    digits("tea", 5),
+                    digits("ring", 3),
+                    ["n", "e", "s", "w"].map(|d| format!("fan {d}")).to_vec(),
+                    vec![
+                        "catch".into(),
+                        "time 6".into(),
+                        "time 13".into(),
+                        "tap gong".into(),
+                    ],
+                ]
+                .concat(),
+                vec![],
+                vec!["mgrake", "mgfood", "mgladle", "mgfan"],
+            ),
+            (
+                &balloon::SPEC,
+                [
+                    digits("rope", 4),
+                    vec![
+                        "drift".into(),
+                        "drift".into(),
+                        "drift".into(),
+                        "sand".into(),
+                        "valve".into(),
+                        "hook".into(),
+                        "send".into(),
+                    ],
+                ]
+                .concat(),
+                vec!["field0", "field1", "field2", "field3"],
+                vec!["blpigeon"],
+            ),
+            (
+                &dragon::SPEC,
+                [
+                    digits("bell", 4),
+                    digits("key", 4),
+                    ["n", "e", "s", "w"].map(|d| format!("slide {d}")).to_vec(),
+                    vec![
+                        "step".into(),
+                        "step".into(),
+                        "hold".into(),
+                        "time 5".into(),
+                        "time 11".into(),
+                        "time 15".into(),
+                        "tap scale".into(),
+                        "use dgegg dgscale".into(),
+                    ],
+                ]
+                .concat(),
+                vec![],
+                vec!["dglit", "dgegg", "dgscale", "dgwrapped"],
             ),
         ];
         let mut problems = vec![];

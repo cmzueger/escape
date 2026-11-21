@@ -21,6 +21,7 @@ const TITLES := {
 	"spring": "Puffin Island · Spring", "summer": "Puffin Island · Summer",
 	"autumn": "Puffin Island · Autumn", "winter": "Puffin Island · Winter",
 	"carnival": "Midnight in Serenissima",
+	"moon": "The Moon-Viewing Garden", "balloon": "The Great Balloon Race", "dragon": "The Dragon's Egg",
 }
 ## Texts of the lighthouse have their keys with an "l" in front, those of
 ## the observatory with an "o".
@@ -33,7 +34,7 @@ const PREFIX := {"hut": "", "light": "l", "obs": "o", "orangery": "g", "theatre"
 	"filter": "wa", "railway": "rc", "mill": "mi",
 	"aviary": "av", "mirrors": "hm", "school": "sc",
 	"spring": "ps", "summer": "pu", "autumn": "pa", "winter": "pw",
-	"carnival": "sr"}
+	"carnival": "sr", "moon": "mg", "balloon": "bl", "dragon": "dg"}
 const SLOTS := 8
 const HINT_RECT := Rect2(800, 484, 136, 44)
 const MENU_RECT := Rect2(908, 8, 44, 44)
@@ -69,7 +70,7 @@ const WRONG := ["zmsg.no_use", "smsg.no_use", "rmsg.no_use", "zmsg.no_magnet", "
 	"mmsg.door_wrong", "mmsg.door_dead", "mmsg.scales_bare", "mmsg.dial_bare"]
 
 var link := RoomLink.new()
-var art := ArtCity.new()
+var art := ArtSet10.new()
 var sound := Sound.new()
 var rooms: Array = []
 var room := "hut"
@@ -349,6 +350,17 @@ func _ambience() -> void:
 			levels["amb_fire"] = 0.6
 		if view in ["SR1"]:
 			levels["amb_tick"] = 0.4
+	elif mode != "load" and room == "moon":
+		levels["amb_wind"] = 0.08
+		levels["amb_sea"] = 0.15 if view in ["MG2", "mgkoi", "mgpond", "MG4"] else 0.05
+		if "fire_lit" in st.get("flags", []) and view == "MG1":
+			levels["amb_fire"] = 0.4
+	elif mode != "load" and room == "balloon":
+		levels["amb_wind"] = 0.5 if "ropes_free" in st.get("flags", []) and not "landed" in st.get("flags", []) else 0.15
+	elif mode != "load" and room == "dragon":
+		levels["amb_wind"] = 0.4 if view in ["DG1", "dgrunes", "dgcart", "DG4"] else 0.05
+		if not view in ["DG1", "dgrunes", "dgcart"]:
+			levels["amb_fire"] = 0.5 if view in ["DG3", "dgmirrors", "dgfloor", "DG4"] else 0.15
 	elif mode != "load" and room == "aviary":
 		levels["amb_wind"] = 0.1
 		levels["amb_sea"] = 0.12
@@ -708,6 +720,12 @@ func _sounds(before: Dictionary, msg: String, command: String) -> void:
 		_melody(clues.get("box", []), "mbox")
 	elif msg.ends_with("record_plays"):
 		_melody(clues.get("record", []), "note")
+	# The dragon's bells and the garden's koi and gong.
+	if command.begins_with("bell ") and room == "dragon":
+		sound.play("note" + str([0, 2, 4, 7][int(command.get_slice(" ", 1)) % 4]), 0.0, 0.0)
+		return
+	if msg == "mgmsg.moonrise":
+		_melody([0, 4, 7], "mbox")
 	# Serenissima: the gondolier's song, the rockets, the fair and the furnace.
 	if msg in ["srmsg.paid", "srmsg.song"]:
 		_melody([4, 2, 4, 5, 4, 2, 0], "note")
@@ -1088,7 +1106,8 @@ func _languages(box: Container, again: Callable, stats: bool = false) -> void:
 const SETS := [["hut", "light", "obs"], ["orangery", "theatre", "chess"], ["beach", "train", "alch"],
 	["attic", "watch", "museum"], ["tree", "gondola", "praline", "toyshop"], ["zeppelin", "ship", "polar"],
 	["house1905", "house1938", "house1969", "housenow"], ["press", "magic", "noir"], ["filter", "railway", "mill"],
-	["aviary", "mirrors", "school"], ["spring", "summer", "autumn", "winter"], ["carnival"]]
+	["aviary", "mirrors", "school"], ["spring", "summer", "autumn", "winter"], ["carnival"],
+	["moon", "balloon", "dragon"]]
 const SERIES := {"house1905": "The Quiet House", "spring": "Puffin Island"}
 const STATUSES := ["all", "open", "going", "done"]
 const SORTS := ["new", "easy", "old"]

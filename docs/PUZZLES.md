@@ -919,3 +919,54 @@ passage, 18 fish quay, 19 fireworks barge (by gondola only).
 23. B: the rockets in the procession's order: the poster numbers five
     places (theatre, piazza, clock tower, molo, Arsenale), each place's
     lantern gives the colour: **green, gold, violet, red, blue**.
+
+## The Moon-Viewing Garden (medium, `moon`, prefix mg, views MG1 veranda, MG2 koi pond, MG3 dry garden, MG4 bamboo grove)
+A tea garden on the harvest moon's night; Ms Aoki has sprained her wrist.
+1. F: the rake among the bamboo stalks (MG4). 2. C: the six gravel beds
+(close-up: tap to cycle lines, rings, waves) as the alcove's first scroll:
+**rings, lines, waves / waves, rings, lines**. 3. A: the glint in the raked
+gravel → small key. 4. A: key on the tea chest. 5. F: koi food in the fox
+shrine's offering bowl. 6. C: the koi fed in the order of the painted
+screen: **gold, red, black, white** (a wrong one starts over). 7. A: the
+candle box that surfaces. 8. A: the bamboo ladle. 9. D: catch water at the
+deer scarer's spout while it tips (last 2 s of every 7). 10. A: charcoal
+(shed). 11. A: matches (shelf). 12. A: charcoal in the brazier. 13. A: lit
+with the matches. 14. A: water in the kettle. 15. C: the tea in the second
+scroll's order: **cloth, scoop, ladle, whisk, bowl** (tools lie shuffled)
+→ Ms Aoki's fan. 16. A: candles lit at the brazier. 17. A: into the paper
+boat. 18. D: the boat fanned across the pond (7 by 5; the current pushes
+east after each wave; lily pads or the edge send it back): **N N N E S**
+→ the stone lantern lit. 19. M: the moon gate's three rings (each turns
+its right neighbour too, the last the first) to three full moons: **left
+ring ×3, right ring ×6**. 20. A: the gong.
+
+## The Great Balloon Race (medium, `balloon`, prefix bl, views BL1 launch field, BL2 basket, BL3 looking down, BL4 the sky)
+1909; fly the mail to the right farm. 1. A: the race card (judge's table).
+2. F: the valve wrench in the tent's toolbox. 3. A: wrench on the gas cart.
+4. A: sandbags. 5. A: into the basket. 6. F: a horseshoe magnet hidden in
+the map case pulls the compass. 7. C: the mooring ropes let go in the
+rigging card's order: **yellow, red, green, blue**. 8. A: binoculars.
+9. A: binoculars on the ground (in the air) → the fields' surroundings.
+10. E: the race card: no cows, no river → **the cross with bees and a mill
+(G2)**; tap it on the map. 11. D: the hook over the church at height 1 →
+mail. 12. M: the flight (8 by 6, winds: low east, middle north, high west,
+seen as chimney smoke, a kite, clouds; two bags of sand; a landing
+elsewhere or a drift off the map resets): **drift 3, sand, drift 2, valve,
+hook, drift 3, sand, drift 2, valve, valve**. 13. A: champagne (hamper).
+14. A: to the farmer. 15. A: the pigeon. 16. B: the note set to **G 2**,
+send.
+
+## The Dragon's Egg (medium, `dragon`, prefix dg, views DG1 the door, then DG2 hoard, DG3 lava hall, DG4 nest ledge)
+Return the stolen egg, warm, to the nest. 1. A: a torch. 2. A: lit at the
+lantern. 3. C: the rune door: each rune's tally marks on the cart: **3 1 4
+2**. 4. C: the bells (smallest left) in the carving's order over the door:
+**1 3 2 4 3**. 5. D: across the hoard: step only while the dragon snores
+(last 3 s of every 6), else back to the start. 6. E: the cage's key ring;
+of Ned ("the crown"), Moll ("Ned lies"), Fitch ("not the skull") only one
+is true → Moll → **the skull key** (a wrong key: back to the start).
+7. A: the egg. 8. F: the shed warm scale by the cage. 9. C: scale and egg.
+10. A: the rope from the cart. 11. D: two mirrors throw the lava's glow
+onto the crystal: **left once, right three times** → the floor's cracks.
+12. D: slide over the obsidian (stops at pillars; cracks break): **E N W S
+E N**. 13. A: rope on the crag. 14. D: hold the egg at the steam vent while
+it puffs (last 2 s of every 8). 15. A: the warm egg in the nest.

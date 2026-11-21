@@ -25,7 +25,9 @@ Filter Hall (`filter`), The 8:15 to Nowhere (`railway`), Harvest Moon
 Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`); the
 series Puffin Island (owner's choice: one island in four seasons) `spring`,
 `summer`, `autumn`, `winter`; a city room (owner's choice) Midnight in
-Serenissima (`carnival`).
+Serenissima (`carnival`); tenth set (Claude's choice, asked for as a
+surprise) The Moon-Viewing Garden (`moon`), The Great Balloon Race
+(`balloon`), The Dragon's Egg (`dragon`).
 - `core/` rules in Rust (text commands in, JSON out; all solutions live here):
   `lib.rs` the catalogue and dispatch, one module per room (`hut.rs`,
   `light.rs`, `obs.rs`). `web/` the same as WASM, `godot/` as GDExtension (`HutRoom`).
@@ -48,13 +50,15 @@ Serenissima (`carnival`).
   with a tide, skating that slides, a kite in gusts, strokes on a beat),
   `carnival.rs` (a city of twenty places: the client sends `walk i` on each
   step, the rules keep `at` and `seen` for the map; views and the map in
-  `views_city.gd`, whose rectangles `art_city.gd` reads).
+  `views_city.gd`, whose rectangles `art_city.gd` reads), `moon.rs`,
+  `balloon.rs`, `dragon.rs` (views `views_set10.gd`, art `art_set10.gd`;
+  the dragon's halls open one from the other through `PARENT`).
   A dial may not be named like a key of the state (`flags`, `inv`, …: a
   test checks it; a dial "flags" once hid every flag). Write new
   rooms this way. Their pictures are in `art_set2.gd` … `art_set6.gd`, `art_house.gd`,
-  `art_set7.gd`, `art_set8.gd`, `art_set9.gd`, `art_island.gd`, `art_city.gd` (each art script extends the one before;
+  `art_set7.gd`, `art_set8.gd`, `art_set9.gd`, `art_island.gd`, `art_city.gd`, `art_set10.gd` (each art script extends the one before;
   constants and helpers must not reuse a parent's name), hotspots in
-  `views_set2.gd` … `views_set6.gd`, `views_house.gd`, `views_set7.gd`, `views_set8.gd`, `views_set9.gd`, `views_island.gd`, `views_city.gd`. Item names are global (`item.<name>`
+  `views_set2.gd` … `views_set6.gd`, `views_house.gd`, `views_set7.gd`, `views_set8.gd`, `views_set9.gd`, `views_island.gd`, `views_city.gd`, `views_set10.gd`. Item names are global (`item.<name>`
   in the texts): pick names no other room uses. Kit locks and
   dials are moved with `turn` and `flip`.
 - A new room: a kit spec in `core`, an entry in `ROOMS` and `Room::call`, views and
@@ -138,6 +142,18 @@ Serenissima (`carnival`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.18.0** (2026-11-21): tenth set, three rooms of Claude's choice (the
+  owner asked for a surprise, no proposals): The Moon-Viewing Garden (tea
+  garden on the harvest moon: gravel beds from a scroll, koi fed in order,
+  water caught from a deer scarer, a tea ceremony, a paper boat fanned
+  against a current, coupled moon-gate rings), The Great Balloon Race
+  (1909: winds at three heights read from smoke, a kite and clouds, two
+  bags of sand, mail hooked from a church spire, a field from the race
+  card, a pigeon with the square), The Dragon's Egg (a rune door from
+  tally marks, a lullaby on bells, steps while the dragon snores, three
+  thieves' notes, mirrors onto a crystal, a sliding obsidian floor, a
+  steam vent). Text prefixes mg, bl, dg; views MG, BL, DG. Catalogue: 40
+  rooms.
 - **0.17.2** (2026-11-21): no target under 5 minutes, asked for by the owner
   (the smallest rooms' targets were not reasonable): `target` in
   knowledge.py takes at least 5.
@@ -390,6 +406,8 @@ Serenissima (`carnival`).
 - The owner's play test of the series Puffin Island (built 0.16.0).
 - The owner's play test of Midnight in Serenissima (built 0.17.0): is the
   walking and the map clear, is the length right.
+- The owner's play test of the tenth set (built 0.18.0), and whether the
+  surprise suits.
 - The owner's play test of the remaining rooms (time, what was unclear), whether the third and fourth sets' settings, looks and names are
   liked, and an
   opinion on the sounds, which were made without anyone hearing them.

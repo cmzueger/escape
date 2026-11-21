@@ -14,6 +14,8 @@ const PARENT := {
 
 
 static func is_closeup(view: String) -> bool:
+	if Set10Views.has(view):
+		return not Set10Views.is_wall(view)
 	if CityViews.has(view):
 		return not CityViews.is_wall(view)
 	if IslandViews.has(view):
@@ -45,7 +47,7 @@ static func is_closeup(view: String) -> bool:
 
 ## The view to the left (-1) or right (+1), or "" in a close-up.
 static func beside(view: String, dir: int) -> String:
-	for ring in [MAIN_ROOM, WARDEN_ROOM, ObsViews.STUDY, ObsViews.DOME] + Set2Views.RINGS + Set3Views.RINGS + Set4Views.RINGS + Set5Views.RINGS + Set6Views.RINGS + HouseViews.RINGS + Set7Views.RINGS + Set8Views.RINGS + Set9Views.RINGS + IslandViews.RINGS:
+	for ring in [MAIN_ROOM, WARDEN_ROOM, ObsViews.STUDY, ObsViews.DOME] + Set2Views.RINGS + Set3Views.RINGS + Set4Views.RINGS + Set5Views.RINGS + Set6Views.RINGS + HouseViews.RINGS + Set7Views.RINGS + Set8Views.RINGS + Set9Views.RINGS + IslandViews.RINGS + Set10Views.RINGS:
 		var i: int = ring.find(view)
 		if i >= 0:
 			return ring[posmod(i + dir, ring.size())]
@@ -53,6 +55,8 @@ static func beside(view: String, dir: int) -> String:
 
 
 static func back(view: String) -> String:
+	if Set10Views.has(view):
+		return Set10Views.PARENT.get(view, "")
 	if CityViews.has(view):
 		return CityViews.back(view)
 	if IslandViews.has(view):
@@ -92,6 +96,8 @@ static func up(view: String, st: Dictionary) -> String:
 static func room_of(view: String) -> String:
 	if CityViews.has(view):
 		return CityViews.ROOM
+	if Set10Views.has(view):
+		return Set10Views.room_of(view)
 	var seen := 0
 	while back(view) != "" and seen < 20:
 		view = back(view)
@@ -114,6 +120,8 @@ static func room_of(view: String) -> String:
 static func first(room: String) -> String:
 	if room == CityViews.ROOM:
 		return "SR0"
+	if Set10Views.FIRST.has(room):
+		return Set10Views.FIRST[room]
 	return {"light": "L1", "obs": "S1"}.get(room, Set2Views.FIRST.get(room, Set3Views.FIRST.get(room, Set4Views.FIRST.get(room, Set5Views.FIRST.get(room, Set6Views.FIRST.get(room, HouseViews.FIRST.get(room, Set7Views.FIRST.get(room, Set8Views.FIRST.get(room, Set9Views.FIRST.get(room, IslandViews.FIRST.get(room, "A")))))))))))
 
 
@@ -121,6 +129,8 @@ static func first(room: String) -> String:
 static func reachable(view: String, st: Dictionary) -> bool:
 	if CityViews.has(view):
 		return CityViews.reachable(view, st)
+	if Set10Views.has(view):
+		return Set10Views.reachable(view, st)
 	var flags: Array = st.get("flags", [])
 	if Set2Views.has(view) or Set3Views.has(view) or Set4Views.has(view) or Set5Views.has(view) or Set6Views.has(view) or HouseViews.has(view) or Set7Views.has(view) or Set8Views.has(view) or Set9Views.has(view) or IslandViews.has(view):
 		return true
@@ -142,7 +152,7 @@ static func reachable(view: String, st: Dictionary) -> bool:
 
 ## Views that move even when nothing is tapped.
 static func animated(view: String) -> bool:
-	return CityViews.has(view) or view in ["A", "radio", "baro"] or LightViews.has(view) or view in ObsViews.DOME or view in ["G1", "G2", "pond", "C1", "T3", "mirror", "B2", "bwindow", "N1", "A1", "furnace", "K1", "K2", "W1", "W2", "wclocks", "wwatch", "Y1", "Y2", "ytrain", "ydoll", "P1", "ebeam", "E2", "V1", "V2", "vwindow", "vballast", "R1", "R2", "Z1", "zcompass", "hbox", "ubox", "xcourt", "xstove", "jcourt", "O1", "F1", "F2", "fmirror", "fglass", "WA1", "WA2", "warisers", "wafirebox", "wagov", "wawindow", "RC1", "RC2", "rcsign", "MI1", "MI2", "miwindow", "migears", "AV1", "AV2", "AV3", "AV4", "avcage", "avorchid", "HM1", "HM2", "HM3", "HM4", "hmzelda", "hmspots", "hmstall", "SC1", "SC3", "SC4", "scwindow", "schutch", "scstove", "scclock", "PS1", "PS2", "PS3", "PS4", "psboat", "psledge", "psflags", "PU1", "PU2", "PU3", "PU4", "pulamp", "pukite", "pualmanac", "PA1", "PA2", "PA3", "PA4", "papress", "parace", "PW1", "PW2", "PW3", "PW4", "pwlake", "pwicicles", "pwlens"]
+	return CityViews.has(view) or Set10Views.has(view) or view in ["A", "radio", "baro"] or LightViews.has(view) or view in ObsViews.DOME or view in ["G1", "G2", "pond", "C1", "T3", "mirror", "B2", "bwindow", "N1", "A1", "furnace", "K1", "K2", "W1", "W2", "wclocks", "wwatch", "Y1", "Y2", "ytrain", "ydoll", "P1", "ebeam", "E2", "V1", "V2", "vwindow", "vballast", "R1", "R2", "Z1", "zcompass", "hbox", "ubox", "xcourt", "xstove", "jcourt", "O1", "F1", "F2", "fmirror", "fglass", "WA1", "WA2", "warisers", "wafirebox", "wagov", "wawindow", "RC1", "RC2", "rcsign", "MI1", "MI2", "miwindow", "migears", "AV1", "AV2", "AV3", "AV4", "avcage", "avorchid", "HM1", "HM2", "HM3", "HM4", "hmzelda", "hmspots", "hmstall", "SC1", "SC3", "SC4", "scwindow", "schutch", "scstove", "scclock", "PS1", "PS2", "PS3", "PS4", "psboat", "psledge", "psflags", "PU1", "PU2", "PU3", "PU4", "pulamp", "pukite", "pualmanac", "PA1", "PA2", "PA3", "PA4", "papress", "parace", "PW1", "PW2", "PW3", "PW4", "pwlake", "pwicicles", "pwlens"]
 
 
 static func _wheels(lock: String, count: int, x0: float, y0: float) -> Array:
@@ -158,6 +168,8 @@ static func _wheels(lock: String, count: int, x0: float, y0: float) -> Array:
 static func spots(view: String, st: Dictionary, art: ArtLight = null) -> Array:
 	if CityViews.has(view):
 		return CityViews.spots(view, st, art)
+	if Set10Views.has(view):
+		return Set10Views.spots(view, st, art as ArtSet10)
 	if IslandViews.has(view):
 		return IslandViews.spots(view, st, art as ArtIsland)
 	if Set9Views.has(view):
@@ -275,6 +287,8 @@ static func spots(view: String, st: Dictionary, art: ArtLight = null) -> Array:
 static func lights(view: String, st: Dictionary) -> Dictionary:
 	if CityViews.has(view):
 		return CityViews.lights(view, st)
+	if Set10Views.has(view):
+		return Set10Views.lights(view, st)
 	if IslandViews.has(view):
 		return IslandViews.lights(view, st)
 	if Set9Views.has(view):

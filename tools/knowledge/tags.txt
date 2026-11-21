@@ -467,3 +467,60 @@ gondola: D | game_skill read_riddle space_layout | 2 2
 crate: A | item_use | 1 2
 raise: A | item_use | 1 1
 fireworks: B | code_order combo_finale space_layout | 3 3
+
+[moon]
+rake: F | find_hidden | 1 1
+gravel: C | mech_rotate space_split | 2 2
+chestkey: A | item_use | 1 1
+chest: A | item_use | 1 2
+food: F | find_container | 1 1
+koi: C | code_order game_skill | 1 2
+candles: A | item_use | 1 1
+ladle: A | item_use | 1 1
+water: D | game_skill find_moment | 1 1
+charcoal: A | item_use | 1 1
+matches: A | item_use | 1 1
+coal: A | item_use | 1 2
+fire: A | item_use | 1 1
+kettle: A | item_use | 1 2
+tea: C | code_order read_rules | 1 2
+litcandles: A | item_use | 1 1
+boat: A | item_use | 1 2
+pond: D | game_skill space_layout | 1 1
+gate: M | mech_rotate | 1 1
+gong: A | combo_finale | 1 1
+
+[balloon]
+card: A | read_rules combo_story_clue | 1 1
+wrench: F | find_container | 1 1
+inflate: A | item_use | 1 1
+sand: A | item_use | 1 1
+ballast: A | item_use | 1 2
+magnet: F | find_tiny | 1 1
+ropes: C | code_order | 1 2
+binoculars: A | item_use | 1 1
+look: A | item_use space_look | 1 2
+field: E | logic_grid | 2 2
+mail: D | game_skill space_layout | 1 2
+flight: M | game_skill combo_precise space_layout | 3 3
+champagne: A | item_use | 1 1
+toast: A | item_use | 1 2
+pigeon: A | item_use | 1 1
+send: B | read_numbers combo_finale | 1 2
+
+[dragon]
+torch: A | item_use | 1 1
+lit: A | item_use | 1 1
+runes: C | code_map | 1 2
+lullaby: C | sense_music game_skill | 1 2
+sneak: D | game_skill find_moment | 1 1
+cage: E | read_witness | 1 2
+egg: A | item_use | 1 1
+scale: F | find_tiny | 1 1
+wrap: C | item_combine | 1 1
+rope: A | item_use | 1 1
+mirrors: D | sense_mirror mech_rotate | 1 1
+floor: D | game_skill space_layout | 2 2
+climb: A | item_use | 1 2
+vent: D | game_skill find_moment | 1 1
+nest: A | combo_finale | 1 1
