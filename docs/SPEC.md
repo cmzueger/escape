@@ -307,3 +307,18 @@ for the fun.
 No room's target is set from the owner's own time any more: the owner's
 stats only teach the time model in the knowledge base, and every target is
 0.8 times the model's predicted owner minutes, rounded up below 5 minutes.
+
+## Second series: Puffin Island (owner, 2026-11-21)
+Asked for: a new series. Of four ideas (Night at the Museum Annex, The
+Wildlife Rescue Station, The Travelling Circus Train, Four Seasons on Puffin
+Island) the owner chose Puffin Island: one small island in four seasons,
+episodes like the aviary (about 20 puzzles over four views, easy to
+medium), each playable alone, a running story with a few carry-overs. The
+frame: the player helps old Maggie, the island keeper; her almanac gains a
+page per episode; Pip, a puffin chick raised in spring, returns each
+season. Episodes: Spring (nesting time), Summer (the storm), Autumn (harvest
+and the regatta), Winter (the northern lights). The owner's favourite small
+games for it: rowing and the regatta, skating on thin ice, a kite in the
+gusts. Name: Puffin Island.
+Not chosen: Night at the Museum Annex, The Wildlife Rescue Station, The
+Travelling Circus Train; the names Maggie's Island, A Year on Skerry Isle.
