@@ -218,7 +218,62 @@ func strike() -> void:
 
 func _boot() -> void:
 	rooms = link.send("rooms").get("rooms", [])
+	_rescore()
 	_show_title()
+
+
+## The score in half stars, as the rules count it (`halves` in lib.rs): six
+## within the target without hints, one less per hint and per started 15 %
+## of the target over it, at least two.
+static func score(hints: int, secs: int, minutes: int) -> int:
+	var par := minutes * 60
+	var step := maxi(par * 15 / 100, 1)
+	var over := maxi(secs - par, 0)
+	return maxi(6 - hints - ceili(float(over) / step), 2)
+
+
+## Best results counted again with today's targets and score (they change
+## as rooms are tuned): every finished run kept in the stats, and the best
+## time with its hints. Results from before the hints were kept (0.14.0)
+## take theirs from the matching run, or else from the stars they had.
+func _rescore() -> void:
+	for entry in rooms:
+		var key := _key(entry["id"])
+		var old := int(_prefs.get_value(key, "halves", 0))
+		if old == 0:
+			continue
+		var minutes := int(entry.get("minutes", 30))
+		var runs: Array = _prefs.get_value(key, "runs", [])
+		var best_secs := int(_prefs.get_value(key, "secs_best", 0))
+		if not _prefs.has_section_key(key, "hints_best"):
+			var guess := 0 if old == 6 else 6 - old
+			for run in runs:
+				var parsed := _run_numbers(str(run))
+				if parsed[0] == best_secs:
+					guess = parsed[1]
+			_prefs.set_value(key, "hints_best", guess)
+		var best := [score(int(_prefs.get_value(key, "hints_best", 0)), best_secs, minutes), best_secs, int(_prefs.get_value(key, "hints_best", 0))]
+		for run in runs:
+			var parsed := _run_numbers(str(run))
+			if parsed[0] < 0:
+				continue
+			var halves := score(parsed[1], parsed[0], minutes)
+			if halves > best[0] or (halves == best[0] and parsed[0] < best[1]):
+				best = [halves, parsed[0], parsed[1]]
+		_prefs.set_value(key, "halves", best[0])
+		_prefs.set_value(key, "secs_best", best[1])
+		_prefs.set_value(key, "hints_best", best[2])
+	_prefs.save(SAVE_PATH)
+
+
+## A run's time in seconds and its hints ("2026-11-20 12:17 hints 0 …"), or
+## [-1, 0] if it cannot be read.
+static func _run_numbers(run: String) -> Array:
+	var words := run.split(" ")
+	if words.size() < 4 or words[2] != "hints" or not words[1].contains(":"):
+		return [-1, 0]
+	var parts := words[1].split(":")
+	return [int(parts[0]) * 60 + int(parts[1]), int(words[3])]
 
 
 func _key(section: String) -> String:
@@ -695,6 +750,8 @@ func _finish() -> void:
 	var hints := 0
 	for h in st.get("hints", []):
 		hints += int(h)
+	if better:
+		_prefs.set_value(_key(room), "hints_best", hints)
 	var runs: Array = _prefs.get_value(_key(room), "runs", [])
 	runs.append("%s %s hints %d taps %d stars %.1f | %s" % [Time.get_date_string_from_system(), _clock_text(secs), hints,
 		int(_prefs.get_value(_key(room), "taps", 0)), halves / 2.0, _prefs.get_value(_key(room), "log", "")])

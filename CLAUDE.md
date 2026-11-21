@@ -125,6 +125,12 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.14.1** (2026-11-21): best results are counted again at every start
+  with today's targets and score (`_rescore` and `score` in main.gd, the
+  same rule as `halves` in lib.rs): every run kept in the stats, and the best
+  time with its hints (`hints_best`, kept since this version; older results
+  take it from the matching run or from the stars they had). Asked for by
+  the owner to see the old runs under the stricter stars.
 - **0.14.0** (2026-11-21): stricter stars, asked for by the owner ("I
   shouldn't three-star everything"): every target is about 0.8 times the
   owner's time (unplayed rooms: 0.8 times the predicted owner minutes), and
