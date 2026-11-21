@@ -85,7 +85,7 @@ fn extra(s: &State) -> String {
 }
 
 /// Minutes for three stars (planned with the owner, 2026-11-17).
-pub const PAR_MINUTES: u32 = 3;
+pub const PAR_MINUTES: u32 = 2;
 
 pub static SPEC: Spec = Spec {
     id: "tree",

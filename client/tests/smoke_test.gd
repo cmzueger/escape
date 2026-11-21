@@ -309,7 +309,7 @@ func _run() -> void:
 	var intro := ""
 	for label in main._panels.find_children("*", "Label", true, false):
 		intro += label.text
-	check(intro.contains("5 Minuten") and not intro.contains("%d"), "the intro names the target time")
+	check(intro.contains("2 Minuten") and not intro.contains("%d"), "the intro names the target time")
 	main._close_panel()
 	TranslationServer.set_locale("en")
 	# A hint asked at a puzzle that is not ready yet says it is for another one.

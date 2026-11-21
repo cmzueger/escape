@@ -84,7 +84,7 @@ macro_rules! wall {
 }
 
 /// Minutes for three stars (from tools/estimate.py, 2026-11-18).
-pub const PAR_MINUTES: u32 = 18;
+pub const PAR_MINUTES: u32 = 11;
 
 pub static SPEC: Spec = Spec {
     id: "housenow",

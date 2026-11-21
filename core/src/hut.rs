@@ -102,7 +102,7 @@ const WIRE_SOLVED: [u8; 15] = [2, 1, 1, 1, 2, 0, 1, 3, 2, 0, 1, 3, 0, 0, 0];
 pub const SIGNAL: &str = "lsslsl";
 
 const FREQ_START: u16 = 3150;
-pub const PAR_MINUTES: u32 = 7;
+pub const PAR_MINUTES: u32 = 4;
 
 /// Hotspots that only say something.
 const FLAVOUR: [&str; 12] = [
@@ -1044,11 +1044,11 @@ mod tests {
     fn score() {
         let mut r = Hut::new();
         assert_eq!(r.halves(), 6);
-        r.call("time 420");
+        r.call("time 240");
         assert_eq!(r.halves(), 6);
-        r.call("time 421");
+        r.call("time 241");
         assert_eq!(r.halves(), 5);
-        r.call("time 1021");
+        r.call("time 277");
         assert_eq!(r.halves(), 4);
         let a = r.call("hint A");
         assert!(a.contains("\"puzzle\":1,\"level\":1"), "{a}");

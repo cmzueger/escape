@@ -294,3 +294,11 @@ games of skill, like playing a tune or walking a maze, are "super fun".
 Future rooms should have more of them, easy coordination combined with
 knowledge from the clues. Recorded as the knowledge base's element
 `game_skill`.
+
+## Stricter stars (owner, 2026-11-21)
+Targets of 1.3 times the owner's time gave three stars to almost every run.
+Of four options the owner chose "strict": a target of about 0.8 times the
+owner's time and half a star lost per started 15 % of the target over it
+(before: per 10 minutes). Also noted: in big rooms the easy steps take
+longer (finding the right spot among many), and the setting matters a lot
+for the fun.

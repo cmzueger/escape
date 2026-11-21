@@ -73,8 +73,10 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
   says in the chat about elements and rooms goes into `notes.json`.
   Plan future rooms with small games of skill (owner, 2026-11-21).
 - Target minutes: one `PAR_MINUTES` per room module (catalogue, score and the
-  intro's `%d` all read it). Set per room from the owner's times (about 1.3
-  times theirs). Estimate a planned room with `tools/estimate.py` (puzzle
+  intro's `%d` all read it). Set per room at about 0.8 times the owner's
+  time (2026-11-21: three stars should mean a really good run; before that
+  1.3 times); unplayed rooms at 0.8 times the predicted owner minutes. Half a
+  star is lost per started 15 % of the target over it (`halves` in lib.rs). Estimate a planned room with `tools/estimate.py` (puzzle
   kinds A action, B lookup, C combine, F find, D mechanism, M hard mechanism,
   E deduction, X hard deduction, fitted to the owner's times; add each new
   time to its table). The label: points F/D 1, M/E 2, X 4; medium from 4,
@@ -123,6 +125,14 @@ Aviary (`aviary`), Hall of Mirrors (`mirrors`), Detention (`school`).
   script never ends. The catalogue's font has no arrow glyphs: draw them.
 
 ## History (latest first)
+- **0.14.0** (2026-11-21): stricter stars, asked for by the owner ("I
+  shouldn't three-star everything"): every target is about 0.8 times the
+  owner's time (unplayed rooms: 0.8 times the predicted owner minutes), and
+  half a star goes per started 15 % of the target over it instead of per 10
+  minutes. Owner's notes in the knowledge base: easy steps take longer in
+  big rooms (finding the spots, building an overview; new time-model
+  feature `big_room`), and the setting matters a lot for the fun (the
+  aviary's above all). Earlier best stars stay as they were recorded.
 - **0.13.1** (2026-11-21): owner's play test of two ninth-set rooms: The
   Glass Aviary 12:17 (fun 5, "the best room so far"), Hall of Mirrors 16:32
   (fun 5), no hints, length right; targets 16 and 21. The owner loves small

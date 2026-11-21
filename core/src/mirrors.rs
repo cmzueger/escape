@@ -179,7 +179,7 @@ fn hook(s: &mut State, words: &[&str]) -> Option<Reply> {
 }
 
 /// Minutes for three stars (about 1.3 times the owner's time, 2026-11-21).
-pub const PAR_MINUTES: u32 = 21;
+pub const PAR_MINUTES: u32 = 13;
 
 pub static SPEC: Spec = Spec {
     id: "mirrors",

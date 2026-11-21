@@ -121,14 +121,14 @@ pub fn difficulty(kinds: &str) -> u8 {
     }
 }
 
-/// A further 10 minutes over the target cost half a star each.
-const OVERTIME_STEP: u32 = 10 * 60;
-
 /// The score in half stars: 6 within the target without hints, one less for
-/// each hint and each started 10 minutes over; at least one star.
+/// each hint and for each started 15 % of the target over it (owner,
+/// 2026-11-21: not everything should get three stars); at least one star.
 pub fn halves(hints: &[u8], secs: u32, par_minutes: u32) -> u8 {
     let hints: u32 = hints.iter().map(|h| u32::from(*h)).sum();
-    let over = secs.saturating_sub(par_minutes * 60).div_ceil(OVERTIME_STEP);
+    let par = par_minutes * 60;
+    let step = (par * 15 / 100).max(1);
+    let over = secs.saturating_sub(par).div_ceil(step);
     6u32.saturating_sub(hints + over).max(2) as u8
 }
 
@@ -307,7 +307,7 @@ mod tests {
         let mut r = Room::new();
         assert!(r
             .call("rooms")
-            .contains("{\"id\":\"light\",\"difficulty\":2,\"minutes\":15,\"puzzles\":10}"));
+            .contains("{\"id\":\"light\",\"difficulty\":2,\"minutes\":9,\"puzzles\":10}"));
         // Every kit room lists one kind per puzzle.
         for (spec, kinds) in [
             (&orangery::SPEC, ROOMS[3].1),
@@ -668,6 +668,9 @@ mod tests {
     fn scores() {
         assert_eq!(halves(&[0; 9], 900, 15), 6);
         assert_eq!(halves(&[0; 9], 901, 15), 5);
+        // 15 % of 10 minutes is 90 seconds a half star.
+        assert_eq!(halves(&[0; 9], 600 + 90, 10), 5);
+        assert_eq!(halves(&[0; 9], 600 + 91, 10), 4);
         assert_eq!(halves(&[1, 0, 2], 0, 25), 3);
         assert_eq!(halves(&[3, 3, 3], 99999, 25), 2);
     }

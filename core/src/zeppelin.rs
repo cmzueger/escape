@@ -100,7 +100,7 @@ fn extra(s: &State) -> String {
 }
 
 /// Minutes for three stars (from tools/estimate.py, 2026-11-18).
-pub const PAR_MINUTES: u32 = 13;
+pub const PAR_MINUTES: u32 = 8;
 
 pub static SPEC: Spec = Spec {
     id: "zeppelin",

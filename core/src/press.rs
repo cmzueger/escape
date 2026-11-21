@@ -101,7 +101,7 @@ fn hook(s: &mut State, words: &[&str]) -> Option<Reply> {
 }
 
 /// Minutes for three stars (from tools/estimate.py, 2026-11-18).
-pub const PAR_MINUTES: u32 = 21;
+pub const PAR_MINUTES: u32 = 13;
 
 macro_rules! mark {
     ($spot:literal, $msg:literal, $set:literal, $keep:literal) => {

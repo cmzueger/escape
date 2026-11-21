@@ -98,6 +98,9 @@ def load_tags():
             raise SystemExit(f"tags.txt:{n}: cannot read {line!r}")
         rooms[room].append({"label": m.group(1), "kind": m.group(2), "tags": m.group(3).split(),
                             "sources": int(m.group(4)), "views": int(m.group(5))})
+    for spec in rooms.values():
+        for p in spec:
+            p["room_size"] = len(spec)
     return rooms
 
 
@@ -167,6 +170,10 @@ def features(puzzle):
         f["t:" + t] = 1.0
     f["sources"] = max(0, puzzle["sources"] - 1)
     f["views"] = max(0, puzzle["views"] - 1)
+    # The owner (2026-11-21): in a big room the easy steps take longer, the
+    # right spot has to be found among many and an overview built first.
+    if puzzle["kind"] in "ABCF":
+        f["big_room"] = max(0, puzzle.get("room_size", 6) - 8) / 8
     return f
 
 
@@ -190,7 +197,7 @@ def fit(rooms, runs):
     """Ridge regression on minutes: puzzle-level rows from runs without hints
     for that puzzle, room-level rows (sums) from the owner's best times.
     Kinds pull towards estimate.py's priors, everything else towards 0."""
-    names = ["k:" + k for k in KINDS] + ["t:" + t for t in sorted(VOCAB)] + ["sources", "views"]
+    names = ["k:" + k for k in KINDS] + ["t:" + t for t in sorted(VOCAB)] + ["sources", "views", "big_room"]
     idx = {n: i for i, n in enumerate(names)}
     rows = []
     split_rooms = set()
@@ -384,10 +391,10 @@ def report(rooms, runs, survey):
             lines.append(f"| {LABEL[t]} | {g} | {w['t:' + t]:+.1f} | {h} | {fun or '-'} | {diff or '-'} | "
                          f"{more_word.get(more, '-')} | {use.get(t, 0)} |")
     lines += ["", "Minutes per puzzle kind: " + ", ".join(f"{KIND_NAME[k]} {w['k:' + k]:.1f}" for k in KINDS)
-              + f"; each extra clue source {w['sources']:+.1f}, each extra view {w['views']:+.1f}.", ""]
+              + f"; each extra clue source {w['sources']:+.1f}, each extra view {w['views']:+.1f}, an easy step in a big room (24 puzzles) {w['big_room'] * 2:+.1f}.", ""]
     # Rooms.
     lines += ["## Rooms", "",
-              "Predicted: owner minutes from the tags (the target is about 1.3 times that).",
+              "Predicted: owner minutes from the tags (the target is about 0.8 times that).",
               "Label: from the kinds (lib.rs). Felt: mean difficulty of the elements (owner's",
               "answers). Fun: forecast from the elements, then the owner's rating if given.", "",
               "| Room | Puzzles | Predicted | Owner | Label | Felt | Fun forecast | Fun rated |",
@@ -454,6 +461,8 @@ def plan(text, rooms, runs, survey):
         if kind not in KIND_NAME or bad:
             raise SystemExit(f"cannot read {part!r} (kind {kind}, unknown tags {bad})")
         spec.append({"label": "", "kind": kind, "tags": tags, "sources": 1, "views": 1})
+    for p in spec:
+        p["room_size"] = len(spec)
     pred = sum(predict(p, w) for p in spec)
     pts = sum(POINTS.get(p["kind"], 0) for p in spec)
     fun = room_fun(spec, survey)
@@ -461,7 +470,7 @@ def plan(text, rooms, runs, survey):
     pairs = [(f, r) for f, r in pairs if f and isinstance(r, (int, float))]
     if fun and pairs:
         fun = max(1.0, min(5.0, fun + sum(r - f for f, r in pairs) / len(pairs)))
-    print(f"{len(spec)} puzzles: about {pred:.0f} owner minutes (target {round(pred * 1.3)}), {label(pts)} ({pts} points)"
+    print(f"{len(spec)} puzzles: about {pred:.0f} owner minutes (target {round(pred * 0.8)}), {label(pts)} ({pts} points)"
           + (f", fun forecast {fun:.1f} of 5" if fun else ""))
     for i, p in enumerate(spec, 1):
         print(f"  {i}. {KIND_NAME[p['kind']]:15} {predict(p, w):4.1f} min  {' '.join(p['tags'])}")

@@ -40,7 +40,7 @@ fn clues() -> String {
 }
 
 /// Minutes for three stars (set from the owner's play tests, 2026-11-17).
-pub const PAR_MINUTES: u32 = 5;
+pub const PAR_MINUTES: u32 = 2;
 
 pub static SPEC: Spec = Spec {
     id: "orangery",

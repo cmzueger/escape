@@ -194,7 +194,7 @@ fn hook(s: &mut State, words: &[&str]) -> Option<Reply> {
 }
 
 /// Minutes for three stars (from tools/knowledge.py, 2026-11-19).
-pub const PAR_MINUTES: u32 = 20;
+pub const PAR_MINUTES: u32 = 12;
 
 pub static SPEC: Spec = Spec {
     id: "school",
